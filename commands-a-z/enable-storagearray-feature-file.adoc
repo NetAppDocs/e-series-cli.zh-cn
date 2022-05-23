@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/enable-storagearray-feature-file.html 
+sidebar: sidebar 
+keywords: enable, storage, array, feature, file, command, permanent, upgrade, trial period 
+summary: enable storageArray feature file命令可启用永久升级到存储阵列或在试用期间使用的功能。 
+---
+= 启用存储阵列功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`enable storageArray feature file`命令可以永久升级到存储阵列或在试用期间启用一项功能。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+此命令将执行以下操作之一：
+
+* 启用功能密钥以永久升级功能
+* 启用功能密钥以永久升级功能包
+* 在试用期间启用某个功能
+
+
+功能包是一组预定义的功能、例如存储分区和同步镜像。为了方便用户使用、这些功能结合使用。用户安装功能包时、功能包中的所有功能将同时安装。
+
+每个功能都由为特定功能或功能包以及特定存储阵列生成的许可证密钥管理。许可证密钥以文件的形式提供、您可以运行该文件来为此功能应用许可证。
+
+要确定存储阵列上加载的功能、请运行`show storageArray features`命令。`sstorageArray features`命令可列出存储阵列上安装的所有功能、哪些功能可在试用期间进行评估、哪些功能已启用以及哪些功能已禁用。
+
+
+
+== 用于启用功能密钥的语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray feature file="_filename_"]
+----
+`file`参数用于标识有效功能密钥文件的文件路径和文件名。将文件路径和文件名用双引号（ "" ）括起来。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\dnld\ftrkey.key"
+----
+功能密钥文件的有效文件名以`.key`扩展名结尾。
+
+要启用的每个功能都需要一个功能密钥文件。
+
+
+
+== 用于启用功能包的语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray featurePack file="_filename_"]
+----
+`file`参数用于标识有效功能包文件的文件路径和文件名。将文件路径和文件名用双引号（ "" ）括起来。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\dnld\ftrpk.key"
+----
+功能密钥文件的有效文件名以`.key`扩展名结尾。
+
+
+
+== 在试用期间启用某个功能的语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray feature=_featureAttributeList_]
+----
+要评估某个功能的试用期、您可以为`featureAttributeList`输入以下一个或多个属性值。如果输入多个属性值、请使用空格分隔这些值。
+
+* `d驱动器安全性`
+
+
+
+
+== 最低固件级别
+
+8.25删除不再有效的所有属性。

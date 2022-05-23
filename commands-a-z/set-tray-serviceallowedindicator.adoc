@@ -1,0 +1,150 @@
+---
+permalink: commands-a-z/set-tray-serviceallowedindicator.html 
+sidebar: sidebar 
+keywords: set, tray, service, action, allowed, indicator 
+summary: 'set tray serviceAllowedindicator命令用于打开或关闭电源风扇箱、互连电池箱或环境服务模块(ESM)箱上的"Service Action Allowedindicator"指示灯。' 
+---
+= 设置允许托盘维护操作指示符
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set tray serviceAllowedindicator`命令可打开或关闭电源风扇箱、互连电池箱或环境服务模块(ESM)箱上的"Service Action Allowedindicator"指示灯。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+如果存储阵列不支持允许服务操作指示灯功能、则此命令将返回错误。如果存储阵列支持命令、但无法打开或关闭指示灯、则此命令将返回错误。
+
+要打开或关闭控制器箱上的"Service Action Allowedindicator"指示灯、请使用`set controller serviceAllowedindicator`命令。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set tray pass:quotes[[_trayID_]]
+(powerFan [(left | right | top | bottom)] |
+interconnect |
+esm [(left | right | top | bottom)]) |
+battery [(left | right)] |
+fanCanister [(left | right)]  |
+powerCanister [(top | bottom)] |
+serviceAllowedIndicator=(on | off)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`托盘`
+ a| 
+电源风扇箱、互连箱、ESM箱或电池箱所在的托盘。托盘ID值为`0`到`99`。将托盘ID值用方括号()括起来。如果不输入托盘ID值、则控制器托盘的托盘ID为默认值。
+
+
+
+ a| 
+`PowerFan`
+ a| 
+要打开或关闭的电源风扇箱上的"Service Action Allow"指示灯。有效的电源风扇箱标识符为`Left`、`right`、`Top`或`Bottom`。将电源风扇箱标识符括在方括号([])中。
+
+
+
+ a| 
+`互连`
+ a| 
+互连电池箱的"Service Action"(允许维修操作)指示灯。
+
+
+
+ a| 
+`ESM`
+ a| 
+ESM箱的"Service Action Allow"指示灯。有效的ESM箱标识符为`Left`、`right`、`Top`或`Bottom`。
+
+
+
+ a| 
+`电池`
+ a| 
+电池的"Service Action Allow"指示灯。有效电池标识符为`左`或`右`。
+
+
+
+ a| 
+`风扇箱`
+ a| 
+风扇箱的"Service Action Allow"指示灯。有效的风扇箱标识符为`左`或`右`。
+
+
+
+ a| 
+`PowerCanister`
+ a| 
+电源箱的"Service Action Allow"指示灯。有效的功率箱标识符为`顶部`或`底部`。
+
+
+
+ a| 
+`s服务Allowed指标`
+ a| 
+用于打开或关闭允许服务操作指示灯的设置。要打开允许服务操作指示灯、请将此参数设置为`on`。要关闭允许服务操作指示灯、请将此参数设置为`off`。
+
+|===
+
+
+== 注释：
+
+此命令最初是为CE6998控制器托盘定义的在推出CE6998控制器托盘之前发售的控制器托盘不支持此命令
+
+
+
+== 示例
+
+此命令将打开托盘5中IP地址为155.155.155.155的左侧ESM的"Service Action Allow"指示灯。
+
+[listing]
+----
+SMcli 123.145.167.214 123.145.167.215 -c "set tray [5]
+ESM [left] serviceAllowedIndicator=on;"
+----
+
+
+== 最低固件级别
+
+6.14添加了以下参数：
+
+* `PowerFan`
+* `互连`
+
+
+6.16添加了以下参数：
+
+* `托盘`
+* `ESM`
+
+
+7.60会添加标识符`Top`和`Bottom`。
+
+7.60增加了`powerCanister`和`fan箱`参数。

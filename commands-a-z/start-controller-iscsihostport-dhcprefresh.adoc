@@ -1,0 +1,131 @@
+---
+permalink: commands-a-z/start-controller-iscsihostport-dhcprefresh.html 
+sidebar: sidebar 
+keywords: start, iscsi, dhcp, refresh 
+summary: start controller iscsiHostPort dhcpRefresh命令用于刷新iSCSI接口的DHCP参数。 
+---
+= 启动iSCSI DHCP刷新
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sStart controller iscsiHostPort dhcpRefresh`命令可刷新iSCSI接口的DHCP参数。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+如果接口的配置方法未设置为DHCP、则操作步骤 将返回错误。
+
+
+
+== 语法
+
+[listing]
+----
+start controller [(a|b)] iscsiHostPort [portLabel] dhcpRefresh
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+具有iSCSI主机端口的控制器的标识符字母。有效控制器标识符值为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器
+
+
+
+ a| 
+`iscsiHostPort`
+ a| 
+要刷新DHCP参数的iSCSI主机端口标签或端口编号。
+
+有关详细信息，请参见以下内容：
+
+<<Identifying an iSCSI host port label,"确定iSCSI主机端口标签">>
+
+|===
+
+
+== 确定iSCSI主机端口标签
+
+您必须为主机端口指定一个标签。请按照以下步骤指定主机端口标签：
+
+.步骤
+. 如果您不知道iSCSI主机端口的端口标签、请运行`show controller`命令。
+. 在结果的主机接口部分中、找到要选择的主机端口。
++
+[NOTE]
+====
+端口标签是为`Port`字段返回的完整值。
+
+====
+. 将端口标签的整个值用引号和方括起来："portLabel"。例如、如果端口标签为`Ch2`、请按如下所示指定iSCSI主机端口：
++
+[listing]
+----
+iscsiHostPort[\"ch 2\"]
+----
++
+[NOTE]
+====
+如果您使用的是Windows命令行、并且标签包含管道(我们)、则应转义此字符(使用｛caret｝)；否则、此字符将被解释为命令。例如、如果端口标签为`e0b\0b`、请按如下所示指定iSCSI主机端口：
+
+====
++
+[listing]
+----
+iscsiHostPort[\"e0b^|0b\"]
+----
+
+
+[NOTE]
+====
+为实现向后兼容性、E2700、E5600或EF560控制器(以及以前其他几代E系列或EF系列控制器)仍可使用带花括号(而不是引号和花括号)的iscsiPortNumber。对于这些控制器、iscsiPortNumber的有效值如下所示：
+
+* 对于具有集成主机端口的控制器、编号为3、4、5或6。
+* 对于仅在主机接口卡上具有主机端口的控制器、编号为1、2、3或4。
+
+
+以下是先前语法的示例：
+
+[listing]
+----
+iscsiHostPort[3]
+----
+====
+
+
+== 注释：
+
+此操作将结束此门户的iSCSI连接、并临时关闭此门户。
+
+
+
+== 最低固件级别
+
+7.10.
+
+8.10修改了iSCSI主机端口的编号系统。
+
+8.30修改了E2800中iSCSI主机端口的标识方法。

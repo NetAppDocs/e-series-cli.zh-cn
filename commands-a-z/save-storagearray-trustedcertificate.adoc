@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/save-storagearray-trustedcertificate.html 
+sidebar: sidebar 
+keywords: retrieve, installed, trusted, ca, certificates 
+summary: save storageArray trustedCertificate命令检索已为阵列安装的受信任CA证书。检索到的文件包含从阵列的Web服务器请求的任何CA证书。 
+---
+= 检索已安装的可信CA证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray trustedCertificate`命令可检索已为阵列安装的可信CA证书。检索到的文件包含从阵列的Web服务器请求的任何CA证书。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+save storageArray trustedCertificate [allUserInstalled |
+aliases=pass:quotes[("_alias1_" ... "_aliasN_")]] path=pass:quotes["_fileLocation_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有用户安装`
+ a| 
+用于指定用户安装的证书的检索。如果未指定任何别名、则默认选项为`allUserInstalled`。
+
+
+
+ a| 
+`别名`
+ a| 
+用于指定用户安装的受信任证书以按别名检索。将所有别名括在圆括号中。如果输入多个别名、请使用空格将其分隔开。
+
+
+
+ a| 
+`路径`
+ a| 
+用于指定保存控制器的可信证书的本地位置。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save storageArray trustedCertificate allUserInstalled path="C:\";"
+
+SMcli -n Array1 -c "save storageArray trustedCertificate aliases=("myAlias" "anotherAlias") path="C:\";"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

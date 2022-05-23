@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/check-syncmirror.html 
+sidebar: sidebar 
+keywords: check, synchronous, mirroring status 
+summary: check SyncMirror 命令将返回远程镜像卷的状态。使用此命令可确定何时远程镜像卷的状态变为最佳状态。 
+---
+= 检查同步镜像状态
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`check SyncMirror`命令可返回远程镜像卷的状态。使用此命令可确定何时远程镜像卷的状态变为最佳状态。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+在先前版本的此命令中、功能标识符为`remoteMirror`。此功能标识符不再有效、并替换为`SyncMirror`。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+check syncMirror localVolume pass:quotes[[_volumeName_]] optimalStatus timeout=pass:quotes[_timeoutValue_]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`localVolume`
+ a| 
+任何远程镜像卷的名称。远程镜像卷可以是远程镜像对的主卷或二级卷。将卷名称括在方括号([])中。如果卷名称包含特殊字符、则必须将卷名称用双引号("")括起来。
+
+
+
+ a| 
+`超时`
+ a| 
+软件可返回远程镜像卷状态的时间间隔。超时值以分钟为单位。
+
+|===
+
+
+== 注释：
+
+此命令将一直等待、直到状态变为最佳或超时间隔到期为止。运行异步同步镜像实用程序时、请使用此命令。

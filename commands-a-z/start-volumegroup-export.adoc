@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/start-volumegroup-export.html 
+sidebar: sidebar 
+keywords: start, volume, group, export 
+summary: start VolumeGroup export命令可将卷组移至已导出状态。 
+---
+= 启动卷组导出
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sStart VolumeGroup export`命令可将卷组移至已导出状态。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+然后、您可以删除构成卷组的驱动器、并将这些驱动器重新安装到其他存储阵列中。
+
+[CAUTION]
+====
+如果未先执行中列出的步骤、请勿执行这些步骤 xref:../commands-category/learn-about-volume-group-migration.adoc[了解卷组迁移。]
+
+====
+[NOTE]
+====
+在卷组中、不能将与功能关联的卷从一个存储阵列移动到另一个存储阵列。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup [_volumeGroupName_]] export
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`VolumeGroup`
+ a| 
+要导出的卷组的名称。将卷组名称用方括号([])括起来。
+
+|===
+
+
+== 注释：
+
+此命令成功后、您可以运行`sStart VolumeGroup import`命令完成将卷组移至完整状态的操作、从而使卷组可供新存储阵列使用。
+
+如果此命令因硬件问题而无法完成导出、请使用`set VolumeGroup forceState`命令。使用`set VolumeGroup forceState`命令可以使用`sStart VolumeGroup import`命令导入卷组。
+
+在卷组处于导出状态或强制状态后、您可以从存储阵列中删除构成卷组的驱动器。您可以在其他存储阵列中重新安装驱动器。
+
+
+
+== 最低固件级别
+
+7.10.

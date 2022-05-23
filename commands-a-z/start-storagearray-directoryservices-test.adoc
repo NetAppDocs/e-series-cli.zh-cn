@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-storagearray-directoryservices-test.html 
+sidebar: sidebar 
+keywords: test, storage, array, directory, server 
+summary: start storageArray DirectoryServices test命令可检查与所有已配置目录服务器的通信并验证服务器域配置。 
+---
+= 测试存储阵列目录服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sStart storageArray DirectoryServices test`命令可检查与所有已配置目录服务器的通信并验证服务器域配置。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+如果至少有一个目录服务器尚未添加到域中、则此命令将返回错误。
+
+
+
+== 语法
+
+[listing]
+----
+
+start storageArray directoryServices test
+----
+
+
+== Parameters
+
+无
+
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "start storageArray directoryServices test;"
+
+<test results for each domain configured are returned>
+
+SMcli completed successfully.
+----

@@ -1,0 +1,89 @@
+---
+permalink: get-started/formatting-rules-for-script-commands.html 
+sidebar: sidebar 
+keywords: format, rules, script, commands 
+summary: 每个脚本命令问题描述 末尾的注释部分介绍了特定脚本命令特有的语法。 
+---
+= 脚本命令的格式规则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+每个脚本命令问题描述 末尾的注释部分介绍了特定脚本命令特有的语法。
+
+*区分大小写*—脚本命令不区分大小写。您可以使用小写、大写或混合大小写键入脚本命令。(在以下命令说明中、混合大小写可帮助您读取命令名称并了解命令的用途。)
+
+*空格*—必须在脚本命令中输入空格、如命令说明中所示。
+
+*方括号*-方括号有两种使用方式：
+
+* 作为命令语法的一部分。
+* 以指示这些参数是可选的。每个参数的问题描述 用于指示是否需要将参数值括在方括号中。
+
+
+*圆括号*—命令语法中显示的圆括号包含参数的特定选项。也就是说、如果要使用参数、则必须输入括在圆括号中的值之一。通常、脚本命令中不包含圆括号；但是、在某些情况下、输入列表时、必须将列表括在圆括号中。此列表可能是托盘ID值和插槽ID值的列表。每个参数的问题描述 用于指示是否需要将参数值括在圆括号中。
+
+*垂直条*-脚本命令中的垂直条指示"`或`"并分隔参数的有效值。例如、命令问题描述 中`raidLevel`参数的语法如下所示：
+
+[listing]
+----
+ raidLevel=(0 | 1 | 3 | 5 | 6)
+----
+要使用`raidLevel`参数设置RAID级别5、请输入以下值：
+
+[listing]
+----
+ raidLevel=5
+----
+*驱动器位置*—用于标识驱动器位置的命令行界面命令既支持高容量驱动器托盘、也支持低容量驱动器托盘。高容量驱动器托盘具有用于容纳驱动器的抽盒。抽盒滑出驱动器托盘、以便可以访问驱动器。低容量驱动器托盘没有抽屉。对于大容量驱动器托盘、您必须指定驱动器托盘的标识符(ID)、抽盒ID以及驱动器所在插槽的ID。对于低容量驱动器托盘、只需指定驱动器托盘的ID以及驱动器所在插槽的ID即可。对于低容量驱动器托盘、确定驱动器位置的另一种方法是指定驱动器托盘的ID、将抽盒的ID设置为0、并指定驱动器所在插槽的ID。使用逗号分隔ID值。如果输入多组ID值、请使用空格将每组值分隔开。
+
+在命令行界面中指定驱动器有两种约定。应使用的约定在每个命令中指定。一种约定使用等号和圆括号：
+
+[listing]
+----
+
+        drive=\(trayID,[drawerID,]slotID\)
+----
+第二种约定不使用等号、而是在指定驱动器周围使用一对花括号：
+
+[listing]
+----
+
+        drive \[trayID,[drawerID,]slotID\]
+----
+下面是使用圆括号的一些示例：
+
+[listing]
+----
+(1,1 1,2 1,3 1,4 2,1 2,2 2,3 2,4)
+----
+或者、对于大容量驱动器托盘、以下示例：
+
+[listing]
+----
+(1,1,1 1,2,2 1,3,3 1,4,4 2,1,1 2,2,2 2,3,3 2,4,4)
+----
+*斜体术语*—命令中的斜体术语表示需要提供的值或信息。例如、当您遇到斜体术语时：
+
+[listing]
+----
+
+          *numberOfDrives*
+----
+将斜体术语替换为要包含在脚本命令中的驱动器数量值。
+
+*分号*-脚本命令必须以分号(`；`)结尾。您可以在命令行或脚本文件中输入多个脚本命令。例如、使用分号分隔以下脚本文件中的每个脚本命令。
+
+[listing]
+----
+create volume drives=(0,2 0,3 1,4 1,5 2,6 2,7) raidLevel=5 userLabel=”v1” capacity=2gb owner=a;
+create volume volumeGroup=2 userLabel=”v2” capacity=1gb owner=b;
+create volume volumeGroup=2 userLabel=”v3” capacity=1gb owner=a;
+----
+[listing]
+----
+create volume drives=(0,4 0,5 1,6 1,7 2,8 2,9) raidLevel=5 userLabel=”v4” capacity=2gb owner=b;
+create volume volumeGroup=3 userLabel=”v5” capacity=1gb owner=a;
+create volume volumeGroup=3 userLabel=”v6” capacity=1gb owner=b;
+----

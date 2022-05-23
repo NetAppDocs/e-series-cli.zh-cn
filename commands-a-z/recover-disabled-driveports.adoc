@@ -1,0 +1,43 @@
+---
+permalink: commands-a-z/recover-disabled-driveports.html 
+sidebar: sidebar 
+keywords: recover, disable, drive ports 
+summary: recover disabled drivePorts命令可恢复已禁用的驱动器端口。 
+---
+= 恢复已禁用的驱动器端口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`re封面已禁用驱动器端口`命令可恢复已禁用的驱动器端口。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+recover disabled drivePorts;
+----
+
+
+== 示例
+
+[listing]
+----
+recover disabled drivePorts;
+----

@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/show-controller-cacertificate.html 
+sidebar: sidebar 
+keywords: show, installed, root, intermediate, ca, certificates, summary 
+summary: show controller caCertificate命令可显示指定控制器中已安装的CA证书摘要。在执行delete controller caCertificate命令之前、可以使用此命令、以便您知道要删除的证书的别名。 
+---
+= 显示已安装的根/中间CA证书摘要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show controller caCertificate`命令可显示指定控制器中已安装的CA证书摘要。在执行`delete controller caCertificate`命令之前、可以使用此命令、以便您知道要删除的证书的别名。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show controller [(a|b)] caCertificate [all | aliases=pass:quotes[("_alias1_" ... "_aliasN_")]] summary
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+允许用户指定要检索根/中间证书的控制器。有效的控制器标识符为a或b、其中a是插槽A中的控制器、b是插槽B中的控制器将控制器标识符括在方括号()中。
+
+
+
+ a| 
+`全部`
+ a| 
+允许用户指定所有根/中间证书的检索。
+
+
+
+ a| 
+`别名`
+ a| 
+允许用户指定要按别名检索的根/中间证书。将所有别名括在圆括号中。如果输入多个别名、请使用空格将其分隔开。
+
+|===
+
+
+== 示例
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "show controller[a] caCertificate all summary;"
+
+SMcli -n Array1 -c "show controller[b] caCertificate alias=("myAlias" "anotherAlias") summary;"
+============================
+Controller A Authority Certificates
+============================
+Alias:        19527b38-8d26-44e5-8c7f-5bf2ca9db7cf
+Subject DN:   CN=My Corp Issuing CA 1
+Issuer DN:    CN=My Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+---------------------
+Alias:        myAliasName
+Subject DN:   CN=My Corp Issuing CA 1
+Issuer DN:    CN=My Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

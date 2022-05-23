@@ -1,0 +1,132 @@
+---
+permalink: commands-a-z/show-volume-performancestats.html 
+sidebar: sidebar 
+keywords: show, volume, performance, statistics 
+summary: show volume performanceStats命令可返回有关卷性能的信息。 
+---
+= 显示卷性能统计信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`svolume performanceStats`命令可返回有关卷性能的信息。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+对于存储阵列中的每个卷、此命令将返回以下信息：
+
+* 存储阵列
+* IOS/s总数
+* 读取%
+* 主读取缓存命中%
+* 主写入缓存命中%
+* SSD缓存命中率
+* 当前MBs
+* 最大MBs/s
+* 当前IOS/s
+* 最大IOS/s
+* 最小IOS/s
+* 平均IOS/s
+* 最小MBs/s
+* 平均MBs /秒
+* 当前IO延迟
+* 最大IO延迟
+* 最小IO延迟
+* 平均IO延迟
+
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show (allVolumes | volume pass:quotes[["_volumeName_"]]
+volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]]) performanceStats
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有卷`
+ a| 
+用于返回有关存储阵列中所有卷的性能统计信息的参数。
+
+
+
+ a| 
+`卷`
+ a| 
+要检索其信息的卷的名称。将卷名称括在方括号([])中。如果卷名称包含特殊字符或数字、则必须将名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`卷`
+ a| 
+要检索其信息的多个卷的名称。使用以下规则输入卷的名称：
+
+* 请将所有名称用方括号([])括起来。
+* 使用空格分隔每个名称。
+
+
+如果卷名称包含特殊字符或数字、请使用以下规则输入名称：
+
+* 请将所有名称用方括号([])括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+|===
+
+
+== 注释：
+
+在运行`show volume performanceStat`命令之前、请运行`set session performanceMonitorInterval`命令和`set session performanceMonitorIterations`命令以定义收集统计信息的频率。
+
+`svolume performanceStat`命令返回卷性能统计信息、如以下示例所示：
+
+[listing]
+----
+Performance Monitor Statistics for Storage Array: Tyler -
+Date/Time: 11/6/12 10:00: 34 AM - Polling interval in seconds: 5
+
+
+"Storage Arrays","Total IOs","Read %","Primary Read Cache Hit %",
+"Primary Write Cache Hit %","SSD Read Cache Hit %","Current MBs/sec",
+"Maximum MBs/sec","Current IOs/sec","Maximum IOs/sec","Minimum IOs/sec",
+"Average IOs/sec","Minimum MBs/sec","Average MBs/sec","Current IO Latency",
+"Maximum IO Latency","Minimum IO Latency","Average IO Latency"
+
+"Capture Iteration: 1","","","","","","","","","","","","","","","","",""
+"Date/Time: 11/6/12 10:00:34 AM","","","","","","","","","","","","","","",
+   "","","""Volume Unnamed","0.0","","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0",
+   "0.0","0.0","0.0","0.0","0.0","0.0","0.0"
+----
+
+
+== 最低固件级别
+
+6.10

@@ -1,0 +1,99 @@
+---
+permalink: commands-a-z/stop-snapimage-rollback.html 
+sidebar: sidebar 
+keywords: stop, snapshot, image, rollback 
+summary: stop SnapImage rollback命令可停止由start SnapImage rollback命令启动的快照映像回滚操作。 
+---
+= 停止快照映像回滚
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`stop SnapImage rollback`命令可停止由`sStart SnapImage rollback`命令启动的快照映像回滚操作。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+取消快照映像回滚操作会使基础卷处于不确定状态、并可能存在无效或不一致的数据。相关的Snapshot映像卷将被禁用且无法使用。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[stop snapImage [_snapCGID:imageID_] rollback]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`snapImage`
+ a| 
+要停止回滚操作的快照映像的名称。快照映像的名称由两部分组成：
+
+* 快照组的名称
+* 快照组中快照映像的标识符
+
+
+快照映像的标识符可以是以下项之一：
+
+* 一个整数值、是快照组中快照的序列号。
+* `latest`—要显示在快照组中创建的最新快照映像、请使用此选项。
+* `oldest`—如果要显示在快照组中创建的最早快照映像、请使用此选项。
+
+
+将快照映像名称用双引号("")括在方括号([])内。
+
+|===
+
+
+== 注释：
+
+快照映像的名称包含两个部分、并用冒号(：)分隔：
+
+* 快照组的标识符
+* 快照映像的标识符
+
+
+例如、如果要停止名为snapGroup1的快照组中快照映像12345的回滚操作、则应使用以下命令：
+
+[listing]
+----
+stop snapImage ["snapGroup1:12345"] rollback;
+----
+要停止对名为snapGroup1的快照组中的最新快照映像执行回滚操作、应使用以下命令：
+
+[listing]
+----
+stop snapImage ["snapGroup1:newest"] rollback;
+----
+
+
+== 最低固件级别
+
+7.83.

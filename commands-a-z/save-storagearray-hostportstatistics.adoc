@@ -1,0 +1,136 @@
+---
+permalink: commands-a-z/save-storagearray-hostportstatistics.html 
+sidebar: sidebar 
+keywords: save, storage, array, host, port, statistics 
+summary: save storageArray hostPortStatistics命令用于保存存储阵列主机端口统计信息。 
+---
+= 保存存储阵列主机端口统计信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sstorage storageArray hostPortStatistics`命令可保存存储阵列主机端口统计信息。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或安全管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令将替换已弃用的 xref:save-storagearray-iscsistatistics.adoc[保存存储阵列iSCSI统计信息]， xref:save-storagearray-iserstatistics.adoc[保存存储阵列iSER统计信息]，和 xref:save-storagearray-ibstats.adoc[保存存储阵列InfiniBand统计信息] 命令
+
+====
+
+
+== 语法
+
+[listing]
+----
+save storageArray hostPortStatistics [(raw | baseline)] type=(ISCSI| ISER | SRP | NVMEOF) file="filename"
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`原始`
+ a| 
+用于检索自每天开始以来收集的统计信息。将参数括在方括号([])中。
+
+
+
+ a| 
+`基线`
+ a| 
+用于检索从控制器`基线重置为零开始收集的统计信息。将参数括在方括号([])中。
+
+
+
+ a| 
+`键入`
+ a| 
+用于指示要收集的统计信息类型。有效选项包括：`iSCSI`、`ISER`、`SRP`和`NVMEOF`。
+
+
+
+ a| 
+`文件`
+ a| 
+用于指定文件路径和文件名以保存统计信息。将文件名用双引号("")括起来。使用扩展名为`.csv`的任何文件名。
+
+|===
+[cols="6*"]
+|===
+| Type | 以太网MAC、以太网TCP/IP、本地启动程序(协议)、DCBX运行状态、LLDP TLV、 DCBX TLV | 目标(协议) | InfiniBand接口 | NVMe子系统 | ASUP文件名 
+
+
+ a| 
+`iSCSI`
+ a| 
+X
+ a| 
+X
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+``…
+ a| 
+ a| 
+X
+ a| 
+X
+ a| 
+ a| 
+
+
+
+ a| 
+`srp`
+ a| 
+ a| 
+ a| 
+X
+ a| 
+ a| 
+
+
+
+ a| 
+`nvmeof`
+ a| 
+ a| 
+ a| 
+X
+ a| 
+X
+ a| 
+
+|===
+
+
+== 最低固件级别
+
+8.41

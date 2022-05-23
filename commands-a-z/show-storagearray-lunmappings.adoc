@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/show-storagearray-lunmappings.html 
+sidebar: sidebar 
+keywords: show, storage, array, lun, map 
+summary: 'show storageArray lunMappings命令可从存储阵列配置文件中返回有关存储阵列中逻辑单元号(LUN)或命名空间ID (NSID)映射的信息。' 
+---
+= 显示存储阵列LUN映射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray lunMappings`命令可从存储阵列配置文件返回有关存储阵列中逻辑单元号(LUN)或命名空间ID (NSID)映射的信息。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+始终显示默认组LUN或NSID映射。如果运行此命令时没有任何参数、则此命令将返回所有LUN或NSID映射。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show storageArray lunMappings (host pass:quotes[["_hostName_"]] |
+hostgroup pass:quotes[["_hostGroupName_"]])
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`主机`
+ a| 
+要查看其LUN或NSID映射的特定主机的名称。将主机名用双引号("")括在方括号([])内。
+
+
+
+ a| 
+`hostGroup`
+ a| 
+要查看其LUN或NSID映射的特定主机组的名称。将主机组名称用双引号("")括在方括号([])内。
+
+|===
+
+
+== 注释：
+
+此命令将返回与此示例类似的主机拓扑信息。
+
+[listing]
+----
+MAPPINGS (Storage Partitioning - Enabled (0 of 16 used))
+VOLUME NAME  LUN  CONTROLLER  ACCESSIBLE BY  VOLUME STATUS
+Access Volume 7   A,B         Default Group  Optimal
+21           21   B           Default Group  Optimal
+22           22   B           Default Group  Optimal
+----
+
+
+== 最低固件级别
+
+6.10

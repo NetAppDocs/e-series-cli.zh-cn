@@ -1,0 +1,93 @@
+---
+permalink: commands-a-z/set-storagearray-autosupportmaintenancewindow.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, maintenance, window, individual, E2800, E5700, arrays 
+summary: set storageArray autosupportMaintenanceWindow命令用于打开或关闭AutoSupport 维护窗口功能。 
+---
+= 启用或禁用AutoSupport 维护窗口(对于单个E2800或E5700阵列)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray autosupportMaintenanceWindow`命令可打开或关闭AutoSupport 维护窗口功能。
+
+使用维护窗口禁止在发生错误事件时自动创建服务单。在正常操作模式下、如果存在问题描述 、存储阵列将使用AutoSupport 向技术支持创建案例。如果将AutoSupport 置于维护窗口中、则此功能将被禁止。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray autoSupportMaintenanceWindow (enable | disable)
+    emailAddresses=("emailAddress1" "emailAddress2" ...)
+    [duration=<duration_in_hours>];
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`电子邮件添加`
+ a| 
+用于接收维护窗口请求已处理的确认电子邮件的电子邮件地址列表。您最多可以指定五个电子邮件地址。
+
+
+
+ a| 
+`d配置`
+ a| 
+可选。启用维护窗口的持续时间(以小时为单位)。如果省略、则会使用支持的最长持续时间(72小时)。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupportMaintenanceWindow enable
+      emailAddresses=\"me@company.com\" duration=5;"
+
+SMcli completed successfully.
+----
+[listing]
+----
+SMcli -n Array1 -c "set storageArray autoSupportMaintenanceWindow enable
+      emailAddresses=(\"me1@company.com\" \"me2@company.com\");"
+
+SMcli completed successfully.
+----
+[listing]
+----
+SMcli -n Array1 -c "set storageArray autoSupportMaintenanceWindow disable
+      emailAddresses=(\"me1@company.com\" \"me2@company.com\" \"me3@company.com\"
+      \"me4@company.com\" \"me5@company.com\");"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.42

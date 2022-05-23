@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/save-storagearray-rlscounts.html 
+sidebar: sidebar 
+keywords: save, storage, array, rls, counts 
+summary: 'save storageArray RLSCounts命令可将读取链路状态(RLS)计数器保存到文件中。' 
+---
+= 保存存储阵列RLS计数
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray RLSCounts`命令可将读取链路状态(RLS)计数器保存到文件中。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save storageArray RLSCounts file=pass:quotes["_filename_"]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+要将RLS计数器保存到的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logs\rlscnt.csv"`
+
+包含RLS计数的文件的默认名称为`read-link-status.csv`。您可以使用任何文件名、但必须使用`.csv`扩展名。
+
+|===
+
+
+== 注释：
+
+要更有效地将RLS计数器保存到文件中、请执行以下步骤：
+
+. 运行`reset storageArray RLSbaseline`命令将所有RLS计数器设置为0。
+. 运行存储阵列一段预定的时间(例如两小时)。
+. 运行`save storageArray RLSCounts file`="[.code]`` filename_``命令。
+
+
+
+
+== 最低固件级别
+
+6.10

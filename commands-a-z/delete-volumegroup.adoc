@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/delete-volumegroup.html 
+sidebar: sidebar 
+keywords: delete, volume, group, command, entire, associated, support, role 
+summary: delete VolumeGroup命令可删除整个卷组及其关联的卷。 
+---
+= 删除卷组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`delete VolumeGroup`命令可删除整个卷组及其关联卷。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[IMPORTANT]
+====
+*可能会损坏存储阵列配置*-运行此命令后、卷组中的所有数据都将丢失。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete volumeGroup [_volumeGroupName_]]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`VolumeGroup`
+ a| 
+要删除的卷组的名称。将卷组名称用方括号([])括起来。
+
+|===
+
+
+== 最低固件级别
+
+6.10

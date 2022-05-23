@@ -1,0 +1,47 @@
+---
+permalink: commands-a-z/activate-storagearray-firmware.html 
+sidebar: sidebar 
+keywords: activate, storage array, firmware, syntax, parameter, minimum, level 
+summary: activate storageArray firmware命令可激活先前下载到存储阵列中控制器上待定配置区域的固件。 
+---
+= 激活存储阵列固件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`activate storageArray firmware`命令可激活先前下载到存储阵列中控制器上待定配置区域的固件。
+
+
+
+== 语法
+
+[listing]
+----
+activate storageArray firmware
+[healthCheckMelOverride=(TRUE | FALSE)]
+----
+
+
+== 参数
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`healthCheckMelOverride`
+ a| 
+用于覆盖主要事件日志(MEL)运行状况检查结果的设置。Mel验证仍会进行、不会绕过它。如果MEL检查失败、您可以在运行命令时使用此参数来绕过失败。
+
+在进行任何激活之前、控制器会检查事件日志、以确定是否发生了可能阻止新控制器固件成功激活的事件。如果发生此类事件、控制器通常不会激活新固件。
+
+此参数强制控制器激活新固件。默认值为`false`。如果要强制控制器激活新控制器固件、请将此值设置为`true`。
+
+|===
+
+
+== 最低固件级别
+
+8.10会添加`healthCheckMelOverride`参数。

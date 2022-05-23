@@ -1,0 +1,36 @@
+---
+permalink: get-started/adding-comments-to-a-script-file.html 
+sidebar: sidebar 
+keywords: add, comments, script file 
+summary: 脚本引擎会查找某些字符或命令以显示注释。您可以通过三种方式向脚本文件添加注释。 
+---
+= 向脚本文件添加注释
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+脚本引擎会查找某些字符或命令以显示注释。您可以通过以下三种方式向脚本文件添加注释：
+
+* 在两个正斜杠(`//`)后添加文本作为注释、直到达到行尾字符为止。如果脚本引擎在处理注释后未在脚本中找到行尾字符、则会显示一条错误消息、并终止脚本操作。如果在脚本末尾放置注释、而您忘记按*输入*键、则通常会发生此错误。
++
+[listing]
+----
+// Deletes the existing configuration.
+set storageArray resetConfiguration=true;
+----
+* 在`/*`和`*/`之间添加文本作为注释。如果脚本引擎未同时找到起始注释表示法和结束注释表示法、则会显示一条错误消息、并终止脚本操作。
++
+[listing]
+----
+/* Deletes the existing configuration */
+set storageArray resetConfiguration=true;
+----
+* 使用`show`语句将注释嵌入到要在脚本文件运行时显示的脚本文件中。使用双引号("``")将要显示的文本括起来。
++
+[listing]
+----
+show “Deletes the existing configuration”;
+set storageArray resetConfiguration=true;
+----
+

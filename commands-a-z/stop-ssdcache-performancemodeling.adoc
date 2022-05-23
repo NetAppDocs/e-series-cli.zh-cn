@@ -1,0 +1,123 @@
+---
+permalink: commands-a-z/stop-ssdcache-performancemodeling.html 
+sidebar: sidebar 
+keywords: stop, ssd, cache, performance, model 
+summary: stop ssdCache performanceModeling命令可停止性能建模操作并显示SSD缓存的性能建模数据。 
+---
+= 停止SSD缓存性能建模
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`stop ssdCache performanceModeling`命令可停止性能建模操作并显示SSD缓存的性能建模数据。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有支持管理员角色。
+
+
+
+== 环境
+
+运行此命令之前、您必须使用`sstart ssdCache performanceModeling`命令启动性能建模操作。您也可以将数据保存到文件中。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[stop ssdCache [_ssdCacheName_]] performanceModeling pass:quotes[[file="_filename_"]]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`ssdCache`
+ a| 
+要停止建模性能的SSD缓存的名称。将SSD缓存名称括在方括号([])中。如果SSD缓存名称包含特殊字符或数字、则必须将SSD缓存名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`文件`
+ a| 
+要将性能建模数据保存到的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logssdcachperf.csv`
+
+您可以使用任何文件名、但必须使用`.csv`扩展名。
+
+|===
+
+
+== 注释：
+
+此命令将返回与此示例类似的性能建模信息。监控器的大小决定了信息的包装方式、并将影响信息的显示方式。
+
+[listing]
+----
+SSD Cache Name: my_cache
+Start time: 4/18/12 2:38:26  PM IST
+Stop time: 4/18/12 2:38:45 PM IST
+Duration : 00:00:19
+
+SSD Cache Performance Modeling Data (Response Time):
+
+                        SSD Reads            HDD Reads           HDD Writes
+            Overall     Avg.                 Avg.                Avg.
+Cache       Response    Response    % of    Response    % of    Response    % of
+Capacity    Time        Time        I/Os    Time        I/Os    Time        I/Os
+186 GB      0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+372 GB      0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+557 GB *    0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+558 GB      0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+744 GB      0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+931 GB      0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+1117 GB     0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+1303 GB     0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+1489 GB     0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+1675 GB     0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+1862 GB     0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+
+* = Current SSD cache physical capacity.
+
+
+SSD Cache Performance Modeling Data (Cache Hit %):
+
+Cache Capacity    Cache Hit %
+186 GB            0 %
+372 GB            0 %
+557 GB *          0 %
+558 GB            0 %
+744 GB            0 %
+931 GB            0 %
+1117 GB           0 %
+1303 GB           0 %
+1489 GB           0 %
+1675 GB           0 %
+1862 GB           0 %
+* = Current SSD cache physical capacity.
+----
+
+
+== 最低固件级别
+
+7.84.接受采取后续行动

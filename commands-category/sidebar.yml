@@ -1,0 +1,24 @@
+---
+section: commands-category
+title: 按类别显示命令
+entries:
+- title: 管理员命令
+  url: "/commands-category/administrator-commands.html"
+- title: 警报配置命令
+  url: "/commands-category/alert-configuration-commands.html"
+- title: 阵列配置命令
+  url: "/commands-category/array-configuration-commands.html"
+- title: 自动支持命令
+  url: "/commands-category/auto-support-commands.html"
+- title: 镜像命令
+  url: "/commands-category/mirroring-commands.html"
+- title: 性能调整命令
+  url: "/commands-category/performance-tuning-commands.html"
+- title: 复制命令
+  url: "/commands-category/replication-commands.html"
+- title: 安全命令
+  url: "/commands-category/security-commands.html"
+- title: storage monitor人事命令
+  url: "/commands-category/storage-monitor-personal-commands.html"
+- title: 卷配置命令
+  url: "/commands-category/volume-configuration-commands.html"

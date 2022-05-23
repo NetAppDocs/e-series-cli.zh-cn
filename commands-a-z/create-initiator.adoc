@@ -1,0 +1,98 @@
+---
+permalink: commands-a-z/create-initiator.html 
+sidebar: sidebar 
+keywords: create, initiator 
+summary: create initiator命令用于创建启动程序对象。 
+---
+= 创建启动程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`create initiator`命令可创建启动程序对象。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令将替换已弃用的 xref:create-iscsiinitiator.adoc[创建iSCSI启动程序] 命令：
+
+====
+[NOTE]
+====
+此命令仅适用于iSCSI、iSER、基于RoCE的NVMe、基于InfiniBand的NVMe以及基于光纤通道的NVMe。
+
+====
+
+
+== 语法
+
+[listing]
+----
+
+create initiator identifier="initiatorQualifiedName" userLabel="initiatorName" host="hostName"
+interfaceType=(iscsi | iser | nvmeof) [chapSecret="securityKey"]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`标识符`
+ a| 
+用于指定标识符限定名称(例如iqn或nqn)以创建启动程序。将标识符用双引号("")括起来。
+
+
+
+ a| 
+`用户标签`
+ a| 
+用于指定启动程序的用户标签。请将此名称用双引号("")括起来。
+
+
+
+ a| 
+`主机`
+ a| 
+用于指定安装启动程序的主机名。请将此名称用双引号("")括起来。
+
+
+
+ a| 
+`接口类型`
+ a| 
+用于指定启动程序的接口类型。有效选项包括：iscsi、isor或nvmeof。
+
+
+
+ a| 
+`chapSecret`
+ a| 
+用于输入要用于对对等连接进行身份验证的安全密钥。将安全密钥用双引号("")括起来。此参数仅适用于iSCSI和iSER主机接口类型。
+
+|===
+
+
+== 最低固件级别
+
+8.41

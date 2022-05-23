@@ -1,0 +1,567 @@
+---
+permalink: commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html 
+sidebar: sidebar 
+keywords: set, volume, attributes, group 
+summary: set volume命令用于定义卷组中卷的属性。 
+---
+= 为卷组中的卷设置卷属性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set volume`命令用于定义卷组中卷的属性。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+您可以使用大多数参数为一个或多个卷定义属性。您还可以使用某些参数仅为一个卷定义属性。语法定义将进行分隔、以显示哪些参数适用于多个卷、哪些参数仅适用于一个卷。
+
+[NOTE]
+====
+在卷组包含32个以上卷的配置中、此操作可能会导致主机I/O错误或内部控制器重新启动、因为此操作完成前的超时期限已过。如果遇到主机I/O错误或内部控制器重新启动、请暂停主机I/O并重试此操作。
+
+====
+
+
+== 适用于一个或多个卷的语法
+
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+preReadRedundancyCheck=(TRUE | FALSE)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+preReadRedundancyCheck=(TRUE | FALSE)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[["_volumeName_"]] |
+volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+preReadRedundancyCheck=(TRUE | FALSE)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[["_volumeName_"]] |
+volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+reservedFutureOption1=(TRUE | FALSE)
+----
+
+
+== 语法仅适用于一个卷
+
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[[_volumeName_]] | volume <wwID>)
+pass:quotes[addCapacity=_volumeCapacity_]
+[addDrives=pass:quotes[(_trayID1_,_drawerID1_,_slotID1_ ... _trayIDn_,_drawerIDn_,_slotIDn_)]]
+redundancyCheckEnabled=(TRUE | FALSE)
+pass:quotes[segmentSize=_segmentSizeValue_]
+pass:quotes[userLabel=_volumeName_]
+preReadRedundancyCheck=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[["_volumeName_"]] | volume <wwID>)
+pass:quotes[addCapacity=_volumeCapacity_]
+[addDrives=pass:quotes[(_trayID1_,_drawerID1_,_slotID1_
+... _trayIDn_,_drawerIDn_,_slotIDn_)]]
+redundancyCheckEnabled=(TRUE | FALSE)
+pass:quotes[segmentSize=_segmentSizeValue_]
+pass:quotes[userLabel=_volumeName_]
+preReadRedundancyCheck=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[[_volumeName_]] | volume <wwID>)
+pass:quotes[addCapacity=_volumeCapacity_]
+[addDrives=pass:quotes[(_trayID1_,_slotID1_ ... _trayIDn_,_slotIDn_)]]
+redundancyCheckEnabled=(TRUE | FALSE)
+pass:quotes[segmentSize=_segmentSizeValue_]
+pass:quotes[userLabel=_volumeName_]
+preReadRedundancyCheck=(TRUE | FALSE)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有卷`
+ a| 
+此参数用于设置存储阵列中所有卷的属性。
+
+
+
+ a| 
+`卷`
+ a| 
+要为其定义属性的卷的名称。将卷名称括在方括号([])中。如果卷名称包含特殊字符或数字、则必须在方括号内用双引号("")将卷名称括起来。
+
+
+
+ a| 
+`卷`
+ a| 
+要为其定义属性的卷的全球通用标识符(WWID)。将WWID用双引号("")括在尖括号(<>)内。
+
+[NOTE]
+====
+运行此命令时、请勿在WWID中使用冒号分隔符。
+
+====
+
+
+ a| 
+`卷`
+ a| 
+要为其定义属性的多个卷的名称。所有卷都具有相同的属性。使用以下规则输入卷的名称：
+
+* 请将所有名称用方括号([])括起来。
+* 使用空格分隔每个名称。
+
+
+如果卷名称包含特殊字符或数字、请使用以下规则输入名称：
+
+* 请将所有名称用方括号([])括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+
+
+ a| 
+`cachFlushModifier`
+ a| 
+卷中的数据在转储到物理存储之前保留在缓存中的最长时间。注释部分列出了有效值。
+
+
+
+ a| 
+`cachWithoutBatteryEnabled`
+ a| 
+用于在不使用电池的情况下打开或关闭缓存的设置。要在不使用电池的情况下打开缓存、请将此参数设置为`true`。要在不使用电池的情况下关闭缓存、请将此参数设置为`false`。
+
+
+
+ a| 
+`media扫描 已启用`
+ a| 
+用于打开或关闭卷的介质扫描的设置。要打开介质扫描、请将此参数设置为`true`。要关闭介质扫描、请将此参数设置为`false`。(如果在存储阵列级别禁用了介质扫描、则此参数不起作用。)
+
+
+
+ a| 
+`mirrorCacheEnabled`
+ a| 
+用于打开或关闭镜像缓存的设置。要打开镜像缓存、请将此参数设置为`true`。要关闭镜像缓存、请将此参数设置为`false`。
+
+
+
+ a| 
+`m修改优先级`
+ a| 
+在存储阵列正常运行时修改卷的优先级。有效值为`最高`、`高`、`m中`、`低`或`最低`。
+
+
+
+ a| 
+`所有者`
+ a| 
+拥有卷的控制器。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器只有在要更改卷所有者时、才使用此参数。
+
+
+
+ a| 
+`预读冗余检查`
+ a| 
+用于打开或关闭预读取冗余检查的设置。启用预读取冗余检查可验证包含读取数据的条带的RAID冗余数据的一致性。只对读取操作执行预读取冗余检查。要启用预读取冗余检查、请将此参数设置为`true`。要关闭预读取冗余检查、请将此参数设置为`false`。
+
+[NOTE]
+====
+请勿对非冗余卷(例如RAID 0卷)使用此参数。
+
+====
+
+
+ a| 
+`re已启用ADCacheTM`
+ a| 
+用于打开或关闭读取缓存的设置。要打开读取缓存、请将此参数设置为`true`。要关闭读取缓存、请将此参数设置为`false`。
+
+
+
+ a| 
+`writeCacheEnabled`
+ a| 
+用于打开或关闭写入缓存的设置。要打开写入缓存、请将此参数设置为`true`。要关闭写入缓存、请将此参数设置为`false`。
+
+
+
+ a| 
+`cachedReadPrefetch`
+ a| 
+用于打开或关闭缓存读取预取的设置。要关闭缓存读取预取、请将此参数设置为`false`。要启用缓存读取预取、请将此参数设置为`true`。
+
+
+
+ a| 
+`dataAssuranceDisabled`
+ a| 
+用于关闭特定卷的数据保证的设置。
+
+要使此参数有意义、您的卷必须能够提供数据保证。此参数会将卷从支持数据保证的卷更改为不支持数据保证的卷。
+
+[NOTE]
+====
+只有当驱动器支持DA时、此选项才对启用有效。
+
+====
+要从支持数据保证的卷中删除数据保证、请将此参数设置为`true`。
+
+[NOTE]
+====
+如果从卷中删除数据保证、则无法为此卷重置数据保证。
+
+====
+要为卷上删除了数据保证的数据重置数据保证、请执行以下步骤：
+
+. 从卷中删除数据。
+. 删除卷。
+. 使用已删除卷的属性重新创建新卷。
+. 为新卷设置数据保证。
+. 将数据移动到新卷。
+
+
+
+
+ a| 
+`addCapacity`
+ a| 
+用于增加要定义属性的卷的存储大小(容量)的设置。大小的单位为`字节`、`KB`、`MB`、`GB`或`TB`。默认值为`bytes`。
+
+
+
+ a| 
+`添加驱动器`
+ a| 
+对于大容量驱动器托盘、请指定驱动器的托盘ID值、抽盒ID值和插槽ID值。对于低容量驱动器托盘、请指定驱动器的托盘ID值和插槽ID值。托盘ID值为`0`到`99`。抽盒ID值为`1`到`5`。
+
+所有插槽ID最大值均为24。插槽ID值从0或1开始、具体取决于托盘型号。与E2800和E5700控制器兼容的驱动器托盘的插槽ID编号从0开始。与E2700和E5600控制器兼容的驱动器托盘的插槽ID编号从1开始。
+
+将托盘ID值、抽盒ID值和插槽ID值括在方括号()中。
+
+如果需要指定其他驱动器以适应新大小、请将此参数与`addCapacity`参数结合使用。
+
+
+
+ a| 
+`re已启用dundancyCheckEnabled`
+ a| 
+在介质扫描期间打开或关闭冗余检查的设置。要启用冗余检查、请将此参数设置为`true`。要关闭冗余检查、请将此参数设置为`false`。
+
+
+
+ a| 
+`segmentSize`
+ a| 
+在将数据写入下一个驱动器之前、控制器在卷中的单个驱动器上写入的数据量(以KB为单位)。有效值为`8`、`16`、`32`、`64`、`128`、 `256`或`512`。
+
+
+
+ a| 
+`用户标签`
+ a| 
+要为现有卷指定的新名称。将新卷名称用双引号("")括起来。
+
+
+
+ a| 
+`预读冗余检查`
+ a| 
+用于在读取操作期间检查条带上RAID冗余数据的一致性的设置。不要对非冗余卷使用此操作、例如RAID级别0。要检查冗余一致性、请将此参数设置为`true`。要进行无条带检查、请将此参数设置为`false`。
+
+|===
+
+
+== 注释：
+
+主机I/O错误可能会导致卷组包含32个以上的卷。此操作还可能会导致内部控制器重新启动、因为此操作完成前的超时期限已到期。如果遇到此问题描述 、请暂停主机I/O、然后重试此操作。
+
+使用此命令时、您可以指定一个或多个可选参数。
+
+一次只能将这些参数应用于一个卷：
+
+* `addCapacity`
+* `segmentSize`
+* `用户标签`
+* `logicalUnitNumber`
+
+
+
+
+== 添加容量、添加驱动器和区块大小
+
+设置`addCapacity`参数、`addDrives`参数或`segmentSize`参数将启动一个无法停止的长时间运行操作。这些长时间运行的操作在后台执行、不会阻止您运行其他命令。要显示长时间运行的操作的进度、请使用`show volume actionProprogress`命令。
+
+
+
+== 缓存刷新修饰符
+
+此表列出了缓存刷新修饰符的有效值。
+
+[cols="2*"]
+|===
+| 价值 | Description 
+
+
+ a| 
+`即时`
+ a| 
+一旦将数据放入缓存中、数据就会立即刷新。
+
+
+
+ a| 
+`。25`
+ a| 
+数据将在250毫秒后刷新。
+
+
+
+ a| 
+`。5`
+ a| 
+数据将在500毫秒后刷新。
+
+
+
+ a| 
+`.75`
+ a| 
+数据将在750毫秒后刷新。
+
+
+
+ a| 
+`1`
+ a| 
+数据将在1秒后刷新
+
+
+
+ a| 
+`1.5`
+ a| 
+数据将在1500毫秒后刷新。
+
+
+
+ a| 
+`2`
+ a| 
+数据将在2秒后刷新
+
+
+
+ a| 
+`5`
+ a| 
+数据将在5秒后刷新
+
+
+
+ a| 
+`10`
+ a| 
+数据会在10秒后刷新
+
+
+
+ a| 
+`20`
+ a| 
+数据将在20秒后刷新
+
+
+
+ a| 
+`60`
+ a| 
+数据将在60秒(1分钟)后刷新。
+
+
+
+ a| 
+`120`
+ a| 
+数据将在120秒(2分钟)后刷新。
+
+
+
+ a| 
+`300`
+ a| 
+数据将在300秒(5分钟)后刷新。
+
+
+
+ a| 
+`1200`
+ a| 
+数据将在1200秒(20分钟)后刷新。
+
+
+
+ a| 
+`3600`
+ a| 
+数据将在3600秒(1小时)后刷新。
+
+
+
+ a| 
+`无限`
+ a| 
+缓存中的数据不受任何期限或时间限制。数据将根据控制器管理的其他条件进行刷新。
+
+|===
+[NOTE]
+====
+请勿将`cachFlushModifier`参数的值设置为10秒以上。但出于测试目的除外。运行任何已将`cachFlushModifier`参数的值设置为10秒以上的测试后、将`cachFlushModifier`参数的值返回为10秒或更少的秒。
+
+====
+
+
+== 未启用电池的缓存
+
+如果控制器电池已完全放电、未充满电或不存在、则不使用电池进行写入缓存可以继续写入缓存。如果在没有不间断电源(UPS)或其他备份电源的情况下将此参数设置为`true`、则在存储阵列电源出现故障时可能会丢失数据。如果禁用了写入缓存、则此参数不起作用。
+
+
+
+== 修改优先级
+
+修改优先级用于定义修改卷属性时使用的系统资源量。如果选择最高优先级、则卷修改会使用最多的系统资源、从而降低主机数据传输的性能。
+
+
+
+== 缓存读取预取
+
+使用`cacheReadPrefetch`参数、控制器可以将其他数据块复制到缓存中、同时控制器可以将主机请求的数据块从驱动器读取并复制到缓存中。此操作增加了从缓存满足未来数据请求的可能性。对于使用顺序数据传输的多媒体应用程序来说、缓存读取预取非常重要。您使用的存储阵列配置设置决定了控制器读取到缓存中的其他数据块的数量。`cachedReadPrefetch`参数的有效值为`true`或`false`。
+
+
+
+== 区块大小
+
+区块大小决定了在将数据写入下一个驱动器之前控制器在卷中的单个驱动器上写入的数据块数。每个数据块存储512字节的数据。数据块是最小的存储单元。分段的大小决定了其包含的数据块数。例如、一个8 KB区块可容纳16个数据块。64 KB区块可容纳128个数据块。
+
+为区块大小输入值时、系统会对照控制器在运行时提供的受支持值来检查该值。如果您输入的值无效、则控制器将返回有效值列表。使用单个驱动器处理单个请求会使其他驱动器可以同时处理其他请求。
+
+如果卷所在环境中的一个用户正在传输大量数据(例如多媒体)、则在使用一个数据条带处理单个数据传输请求时、性能会最大化。(数据条带是指分段大小乘以卷组中用于数据传输的驱动器数。) 在这种情况下、同一请求会使用多个驱动器、但每个驱动器只访问一次。
+
+为了在多用户数据库或文件系统存储环境中获得最佳性能、请设置区块大小、以最大程度地减少满足数据传输请求所需的驱动器数量。
+
+
+
+== 最低固件级别
+
+5.00会添加`addCapacity`参数。
+
+7.10添加了`preReadRedundancyCheck`参数。
+
+7.60添加了`drawerID`用户输入。
+
+7.75添加`dataAssuranceDisabled`参数。
+
+8.10更正了缓存刷新表中`cacherFlushModifier`参数的值。

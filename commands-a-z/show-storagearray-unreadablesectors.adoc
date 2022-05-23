@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/show-storagearray-unreadablesectors.html 
+sidebar: sidebar 
+keywords: show, storage, array, unreadable, sectors 
+summary: show storageArray unreadableSectors命令可返回一个表、其中列出了存储阵列中无法读取的所有扇区的地址。 
+---
+= 显示存储阵列无法读取的扇区
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray unreadableSectors`命令可返回一个表、其中列出了存储阵列中无法读取的所有扇区的地址。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+返回的表将按列标题组织、以显示以下信息：
+
+* 卷用户标签
+* 逻辑单元号(LUN)
+* 可访问(主机或主机组)
+* 日期/时间
+* 卷相对逻辑块地址(十六进制格式—0xnnnnnnnn)
+* 驱动器位置(托盘t、插槽)
+* 驱动器相对逻辑块地址(十六进制格式—0xnnnnnnnn)
+* 故障类型
+
+
+数据首先按卷用户标签进行排序、然后按逻辑块地址(LBA)进行排序。表中的每个条目对应一个扇区。
+
+
+
+== 语法
+
+[listing]
+----
+show storageArray unreadableSectors
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+6.10

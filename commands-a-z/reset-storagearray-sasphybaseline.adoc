@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/reset-storagearray-sasphybaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, sas, phy, baseline 
+summary: 'reset storageArray SASPHYBaseline命令可重置所有设备的SAS物理层(SAS PHY)基线、并从.csv文件中删除错误列表。' 
+---
+= 重置存储阵列SAS PHY基线
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`reset storageArray SASPHYBaseline`命令可重置所有设备的SAS物理层(SAS PHY)基线、并从`.csv`文件中删除错误列表。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+运行`save storageArray SASPHYCounts`命令时、系统会生成`。csv`文件。
+
+[NOTE]
+====
+先前版本的`reset storageArray SASPHYBaseline`命令清除了除驱动器之外的所有设备的错误计数。现在、`reset storageArray SASPHYBaseline`命令可重置驱动器和其他设备的SAS PHY基线。所有错误都会从`.csv`文件中删除。
+
+====
+
+
+== 语法
+
+[listing]
+----
+reset storageArray SASPHYBaseline
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+6.10
+
+7.83重置驱动器的SAS PHY基线。

@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/stop-storagearray-drivefirmwaredownload.html 
+sidebar: sidebar 
+keywords: stop, storage, array, drive, firmware, download 
+summary: stop storageArray driveFirmwareDownload命令可停止将固件下载到存储阵列中的驱动器、该下载是使用download storageArray driveFirmware命令启动的。 
+---
+= 停止存储阵列驱动器固件下载
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`stop storageArray drivefirmwareDownload`命令可停止向存储阵列中的驱动器下载固件、该固件是使用`download storageArray driveFirmware`命令启动的。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+此命令不会停止正在向驱动器下载固件的操作。此命令将停止向正在等待下载的驱动器下载所有固件。
+
+
+
+== 语法
+
+[listing]
+----
+stop storageArray driveFirmwareDownload
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+6.10

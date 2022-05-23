@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/autoconfigure-storagearray-hotspares.html 
+sidebar: sidebar 
+keywords: autoconfigure, storage, array, hot spares, supported, roles, syntax, parameters, minimum firmware level 
+summary: autosConfigure storageArray hotspares命令可自动定义和配置存储阵列中的热备用磁盘。您可以随时运行此命令。此命令可为存储阵列提供最佳热备用磁盘覆盖范围。 
+---
+= 自动配置存储阵列热备件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`autoConfigure storageArray hotspares`命令可自动定义和配置存储阵列中的热备用磁盘。您可以随时运行此命令。此命令可为存储阵列提供最佳热备用磁盘覆盖范围。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+autoConfigure storageArray hotSpares
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+运行`autosupport storageArray hotspares`命令时、控制器固件会根据存储阵列中的驱动器总数和类型确定要创建的热备用磁盘数。对于SAS驱动器、控制器固件会为存储阵列创建一个热备用磁盘、并为存储阵列中的每60个驱动器创建一个额外的热备用磁盘。
+
+
+
+== 最低固件级别
+
+6.10

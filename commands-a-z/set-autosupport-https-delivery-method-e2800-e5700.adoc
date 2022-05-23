@@ -1,0 +1,147 @@
+---
+permalink: commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html 
+sidebar: sidebar 
+keywords: 'Specify AutoSupport HTTP(S) delivery method (for individual E2800 or E5700 arrays)' 
+summary: 'set storageArray AutoSupport deliveryMethod命令用于设置将AutoSupport 消息发送到HTTP (S)的传送方法。' 
+---
+= 指定AutoSupport HTTP (S)交付方法(适用于单个E2800或E5700阵列)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray AutoSupport deliveryMethod`命令可设置将AutoSupport 消息发送到HTTP (S)的传送方法。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+set storageArray autoSupport deliveryMethod={HTTP | HTTPS}
+   {direct | proxyConfigScript=pass:quotes["_proxyConfigScriptUrl_"] |
+proxyServer hostAddress=pass:quotes[_address_] portNumber=pass:quotes[_portNumber_]
+ [userName=pass:quotes["_username_"] password=pass:quotes["_password_"]]}
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`deliveryMethod`
+ a| 
+允许用户指定AutoSupport 收集的交付方法。有效选项包括：
+
+* email
+* HTTP
+* HTTPS
+
+
+[NOTE]
+====
+如果配置了电子邮件方法、则AutoSupport OnDemand和远程诊断将被禁用。
+
+====
+
+
+ a| 
+`d直接`
+ a| 
+允许用户使用HTTP或HTTPS协议直接连接到目标技术支持系统。
+
+
+
+ a| 
+`proxyConfigScript`
+ a| 
+允许用户指定代理自动配置(Proxy Auto-Configuration、PAC)脚本文件的位置
+
+
+
+ a| 
+`ProxyServer`
+ a| 
+允许用户指定与目标技术支持系统建立连接所需的HTTP (S)代理服务器详细信息。
+
+
+
+ a| 
+`主机地址`
+ a| 
+允许用户指定代理服务器的主机地址。如果使用ProxyServer、则为必需项。
+
+
+
+ a| 
+`portNumber`
+ a| 
+允许用户指定代理服务器的端口号。如果使用ProxyServer、则为必需项。
+
+
+
+ a| 
+`用户名`
+ a| 
+允许用户指定代理服务器的用户名(如果已配置)。
+
+
+
+ a| 
+`密码`
+ a| 
+允许用户指定代理服务器的密码(如果已配置)。
+
+|===
+
+
+== 最低固件级别
+
+8.40
+
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupport deliveryMethod=HTTP direct;"
+
+SMcli -n Array1 -c "set storageArray autoSupport deliveryMethod=HTTP
+proxyConfigScript=\"http://company.com/~username/proxy.pac\";"
+
+SMcli -n Array1 -c "set storageArray autoSupport deliveryMethod=HTTPS
+proxyServer hostAddress=10.117.12.112 portNumber=8080 userName=\"tracyt\" password=\"1234456\";"
+
+SMcli completed successfully.
+----
+
+
+== 验证
+
+使用`sStart storageArray AutoSupport deliveryTest`命令发送测试消息、以验证是否已正确设置您的交付方法。
+
+
+
+== 最低固件级别
+
+8.40

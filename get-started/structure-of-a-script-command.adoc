@@ -1,0 +1,161 @@
+---
+permalink: get-started/structure-of-a-script-command.html 
+sidebar: sidebar 
+keywords: structure, script command 
+summary: 所有脚本命令的结构均如下。 
+---
+= 脚本命令的结构
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+所有脚本命令的结构均如下：
+
+[listing]
+----
+
+      *command operand-data* (*statement-data*)
+----
+* `command`用于标识要执行的操作。
+* `操作数-数据`表示与要配置或管理的存储阵列关联的对象。
+* `s语句数据`提供执行命令所需的信息。
+
+
+`操作数-data_`的语法具有以下结构：
+
+[listing]
+----
+(*object-type* | all *object-types* | [*qualifier*] (*object-type* [*identifier*] (*object-type* [*identifier*] | *object-types* [*identifier-list*])))
+----
+可以通过四种方式标识对象：
+
+* object type—在命令未引用特定对象时使用。
+* `*所有*`参数前缀—当命令引用存储阵列中指定类型的所有对象(例如`*所有卷*`)时使用。
+* 方括号—在对特定对象执行命令以标识该对象时使用(例如、`* volume [engineering]*`)。
+* 标识符列表—用于指定对象的子集。将对象标识符括在方括号中(例如、`*卷*销售工程营销*`)。
+
+
+如果要使用追加信息 来描述对象、则需要使用限定符。
+
+此表列出了与每个对象类型关联的对象类型和标识符。
+
+[cols="2*"]
+|===
+| 对象类型 | 标识符 
+
+
+ a| 
+`*控制器*`
+ a| 
+a 或 b
+
+
+
+ a| 
+`*驱动器*`
+ a| 
+对于带抽盒的机箱、请使用托盘ID、抽盒ID和插槽ID。或者、只需托盘ID和插槽ID即可。
+
+
+
+ a| 
+`*更换驱动器*`
+ a| 
+对于带抽盒的机箱、请使用托盘ID、抽盒ID和插槽ID。或者、只需托盘ID和插槽ID即可。
+
+
+
+ a| 
+`*驱动器通道*`
+ a| 
+驱动器通道标识符
+
+
+
+ a| 
+`*主机*`
+ a| 
+用户标签
+
+
+
+ a| 
+`*主机通道*`
+ a| 
+主机通道标识符
+
+
+
+ a| 
+`* hostGroup*`
+ a| 
+用户标签
+
+
+
+ a| 
+`*主机端口*`
+ a| 
+用户标签
+
+
+
+ a| 
+`* iscsiInitiator*`
+ a| 
+用户标签或iSCSI限定名称(IQN)
+
+
+
+ a| 
+`* iscsiTarget*`
+ a| 
+用户标签或IQN
+
+
+
+ a| 
+`*存储阵列*`
+ a| 
+不适用
+
+
+
+ a| 
+`*托盘*`
+ a| 
+托盘ID
+
+
+
+ a| 
+`*卷*`
+ a| 
+卷用户标签或卷全球通用标识符(WWID)(仅限`set`命令)
+
+
+
+ a| 
+`*卷副本*`
+ a| 
+目标卷用户标签以及(可选)源卷用户标签
+
+
+
+ a| 
+`*卷组*`
+ a| 
+用户标签
+
+有效字符包括字母数字、连字符和下划线。
+
+|===
+语句数据的形式如下：
+
+* 参数=值(例如`* raidLevel=5*`)
+* 参数名称(例如`* batteryInstallDate*`)
+* operation-name (例如`* redundancyCheck*`)
+
+
+用户定义的条目(如用户标签)称为变量。在语法中、它以斜体显示(例如`reeID`或`volumeGroupName`)。

@@ -1,0 +1,191 @@
+---
+permalink: commands-a-z/show-controller.html 
+sidebar: sidebar 
+keywords: show, controller 
+summary: show controller命令可返回有关控制器的信息。 
+---
+= 显示控制器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show controller`命令可返回有关控制器的信息。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+对于存储阵列中的每个控制器、此命令将返回以下信息：
+
+* 状态(联机或脱机)
+* 当前固件和NVSRAM配置
+* 待定固件配置和NVSRAM配置(如果有)
+* 板ID
+* 产品ID
+* 产品修订版
+* 序列号
+* 制造日期
+* 缓存大小或处理器大小
+* 控制器的设置日期和时间
+* 关联卷(包括首选所有者)
+* 以太网端口
+* 物理磁盘接口
+* 主机接口、仅适用于光纤通道主机接口
+
+
+
+
+== 语法
+
+[listing]
+----
+show (allControllers | controller [(a|b)])
+ [summary]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有控制器`
+ a| 
+用于返回有关存储阵列中两个控制器的信息的设置。
+
+
+
+ a| 
+`控制器`
+ a| 
+用于返回有关存储阵列中特定控制器的信息的设置。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器将控制器标识符括在方括号()中。
+
+
+
+ a| 
+`summary`
+ a| 
+用于返回有关存储阵列中两个控制器的简明信息列表的设置。
+
+|===
+
+
+== 注释：
+
+以下列表是`show controller`命令返回的信息示例。此示例仅显示信息的显示方式、不应视为表示存储阵列配置的最佳实践。
+
+[listing]
+----
+Controller in slot A
+
+   Status: Online
+   Current configuration
+      Firmware version: 96.10.21.00
+         Appware version: 96.10.21.00
+         Bootware version: 96.10.21.00
+      NVSRAM version: N4884-610800-001
+   Pending configuration
+      Firmware version: Not applicable
+         Appware version: Not applicable
+         Bootware version: Not applicable
+      NVSRAM version: Not applicable
+      Transferred on: Not applicable
+   Board ID: 4884
+   Product ID: INF-01-00
+   Product revision: 9610
+   Serial number: 1T14148766
+   Date of manufacture: October 14, 2006
+   Cache/processor size (MB): 1024/128
+   Date/Time: Wed Feb 18 13:55:53 MST 2008
+   Associated Volumes (* = Preferred Owner):
+      1*, 2*, CTL 0 Mirror Repository*, Mirror Repository 1*,
+      JCG_Remote_MirrorMenuTests*
+   Ethernet port: 1
+      MAC address: 00:a0:b8:0c:c3:f5
+      Host name: ausctlr9
+      Network configuration: Static
+      IP address: 172.22.4.249
+      Subnet mask: 255.255.255.0
+      Gateway: 172.22.4.1
+      Remote login: Enabled
+   Drive interface: Fibre
+      Channel: 1
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Drive interface: Fibre
+      Channel: 2
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Drive interface: Fibre
+      Channel: 3
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Drive interface: Fibre
+      Channel: 4
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Host interface: Fibre
+      Port: 1
+      Current ID: Not applicable/0xFFFFFFFF
+      Preferred ID: 126/0x0
+      NL-Port ID: 0x011100
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+      Topology: Fabric Attach
+      World-wide port name: 20:2c:00:a0:b8:0c:c3:f6
+      World-wide node name: 20:2c:00:a0:b8:0c:c3:f5
+      Part type: HPFC-5200    revision 10
+   Host interface: Fibre
+      Port: 2
+      Current ID: Not applicable/0xFFFFFFFF
+      Preferred ID: 126/0x0
+      NL-Port ID: 0x011100
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+      Topology: Fabric Attach
+      World-wide port name: 20:2c:00:a0:b8:0c:c3:f7
+      World-wide node name: 20:2c:00:a0:b8:0c:c3:f5
+      Part type: HPFC-5200    revision 10
+----
+使用`summary`参数时、该命令将返回信息列表、而不包含驱动器通道信息和主机通道信息。
+
+`show storageArray`命令还会返回有关控制器的详细信息。
+
+
+
+== 最低固件级别
+
+5.43添加`summary`参数。

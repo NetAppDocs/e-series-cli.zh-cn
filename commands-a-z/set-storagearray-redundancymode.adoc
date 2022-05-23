@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/set-storagearray-redundancymode.html 
+sidebar: sidebar 
+keywords: set, storage, array, redundancy, mode 
+summary: set storageArray redundancyMode命令可将存储阵列的冗余模式设置为单工或双工。 
+---
+= 设置存储阵列冗余模式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray redundancyMode`命令可将存储阵列的冗余模式设置为单工或双工。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray redundancyMode=(simplex | duplex)
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`redundancyMode`
+ a| 
+如果只有一个控制器、请使用`simplicx`模式。如果有两个控制器、请使用`duplex`模式。
+
+|===
+
+
+== 最低固件级别
+
+6.10

@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html 
+sidebar: sidebar 
+keywords: stop, snapshot, images, consistency, group 
+summary: stop ConsistencyGroup pendingSnapImageCreation命令可停止要在快照一致性组上创建的所有待定快照映像。 
+---
+= 停止一致性组上的待定快照映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`stop ConsistencyGroup pendingSnapImageCreation`命令可停止要在快照一致性组上创建的所有待定快照映像。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+如果快照一致性组没有任何待定快照映像、则存储管理软件会显示一条错误消息、并且不会运行命令。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+stop consistencyGroup pass:quotes[[_consistencyGroupName_]]pendingSnapImageCreation
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`consistencyGroupName`
+ a| 
+要停止任何待定快照操作的一致性组的名称。将一致性组的名称用方括号([])括起来。如果一致性组名称包含特殊字符或数字、则必须将一致性组名称用双引号("")括在方括号内。
+
+|===
+
+
+== 最低固件级别
+
+7.83.

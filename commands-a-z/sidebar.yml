@@ -1,0 +1,904 @@
+---
+section: commands-a-z
+title: 命令A-Z
+entries:
+- title: 答
+  entries:
+  - title: 激活异步镜像
+    url: "/commands-a-z/activate-asynchronous-mirroring.html"
+  - title: 激活storageArray固件
+    url: "/commands-a-z/activate-storagearray-firmware.html"
+  - title: 激活同步镜像
+    url: "/commands-a-z/activate-synchronous-mirroring.html"
+  - title: 添加阵列标签
+    url: "/commands-a-z/add-array-label.html"
+  - title: 从阵列添加证书
+    url: "/commands-a-z/add-certificate-from-array.html"
+  - title: 从文件添加证书
+    url: "/commands-a-z/add-certificate-from-file.html"
+  - title: 将驱动器添加到SSD缓存
+    url: "/commands-a-z/add-drives-to-ssd-cache.html"
+  - title: 添加卷asyncmirrorgroup
+    url: "/commands-a-z/add-volume-asyncmirrorgroup.html"
+  - title: 自动配置存储阵列热备件
+    url: "/commands-a-z/autoconfigure-storagearray-hotspares.html"
+  - title: 自动配置存储阵列
+    url: "/commands-a-z/autoconfigure-storagearray.html"
+- title: C
+  entries:
+  - title: 更改SSD缓存应用程序类型
+    url: "/commands-a-z/change-ssd-cache-application-type.html"
+  - title: 检查asyncmirrorgroup repositoryconsistency
+    url: "/commands-a-z/check-asyncmirrorgroup-repositoryconsistency.html"
+  - title: 检查repositoryconsistency
+    url: "/commands-a-z/check-repositoryconsistency.html"
+  - title: 检查storageArray连接
+    url: "/commands-a-z/check-storagearray-connectivity.html"
+  - title: 检查SyncMirror
+    url: "/commands-a-z/check-syncmirror.html"
+  - title: 检查卷奇偶校验
+    url: "/commands-a-z/check-volume-parity.html"
+  - title: 清除所有驱动器信息统计信息
+    url: "/commands-a-z/clear-alldrivechannels-stats.html"
+  - title: 清除异步镜像故障
+    url: "/commands-a-z/clear-asyncmirrorfault.html"
+  - title: 清除电子邮件警报配置
+    url: "/commands-a-z/clear-emailalert-configuration.html"
+  - title: 清除storageArray配置
+    url: "/commands-a-z/clear-storagearray-configuration.html"
+  - title: 清除storageArray事件日志
+    url: "/commands-a-z/clear-storagearray-eventlog.html"
+  - title: 清除storageArray firmwarependingarea
+    url: "/commands-a-z/clear-storagearray-firmwarependingarea.html"
+  - title: 清除storageArray恢复模式
+    url: "/commands-a-z/clear-storagearray-recoverymode.html"
+  - title: 清除系统日志配置
+    url: "/commands-a-z/clear-syslog-configuration.html"
+  - title: 清除卷预留
+    url: "/commands-a-z/clear-volume-reservations.html"
+  - title: 清除卷未读取的数据存储器
+    url: "/commands-a-z/clear-volume-unreadablesectors.html"
+  - title: 创建异步镜像组
+    url: "/commands-a-z/create-asyncmirrorgroup.html"
+  - title: 创建cgsnapimage ConsistencyGroup
+    url: "/commands-a-z/create-cgsnapimage-consistencygroup.html"
+  - title: 创建cgsnapvolume
+    url: "/commands-a-z/create-cgsnapvolume.html"
+  - title: 创建ConsistencyGroup
+    url: "/commands-a-z/create-consistencygroup.html"
+  - title: 创建磁盘池
+    url: "/commands-a-z/create-diskpool.html"
+  - title: 创建主机
+    url: "/commands-a-z/create-host.html"
+  - title: 创建主机组
+    url: "/commands-a-z/create-hostgroup.html"
+  - title: 创建主机端口
+    url: "/commands-a-z/create-hostport.html"
+  - title: 创建启动程序
+    url: "/commands-a-z/create-initiator.html"
+  - title: 创建iscsiInitiator
+    url: "/commands-a-z/create-iscsiinitiator.html"
+  - title: 创建映射cgsnapvolume
+    url: "/commands-a-z/create-mapping-cgsnapvolume.html"
+  - title: 创建映射卷
+    url: "/commands-a-z/create-mapping-volume.html"
+  - title: 创建RAID卷自动选择驱动器
+    url: "/commands-a-z/create-raid-volume-automatic-drive-select.html"
+  - title: 创建基于选择的RAID卷可用块区
+    url: "/commands-a-z/create-raid-volume-free-extent-based-select.html"
+  - title: 创建RAID卷手动选择驱动器
+    url: "/commands-a-z/create-raid-volume-manual-drive-select.html"
+  - title: 创建只读Snapshot卷
+    url: "/commands-a-z/create-read-only-snapshot-volume.html"
+  - title: 创建snapgroup
+    url: "/commands-a-z/create-snapgroup.html"
+  - title: 创建SnapImage
+    url: "/commands-a-z/create-snapimage.html"
+  - title: 创建Snapshot卷
+    url: "/commands-a-z/create-snapshot-volume.html"
+  - title: 创建snmpcommunity
+    url: "/commands-a-z/create-snmpcommunity.html"
+  - title: 创建snmptrapdestination
+    url: "/commands-a-z/create-snmptrapdestination.html"
+  - title: 创建snmpuser用户名
+    url: "/commands-a-z/create-snmpuser-username.html"
+  - title: 创建ssdcache
+    url: "/commands-a-z/create-ssdcache.html"
+  - title: 创建storageArray目录服务器
+    url: "/commands-a-z/create-storagearray-directoryserver.html"
+  - title: 创建storageArray securitykey
+    url: "/commands-a-z/create-storagearray-securitykey.html"
+  - title: 创建storageArray系统日志
+    url: "/commands-a-z/create-storagearray-syslog.html"
+  - title: 创建SyncMirror
+    url: "/commands-a-z/create-syncmirror.html"
+  - title: 创建卷磁盘池
+    url: "/commands-a-z/create-volume-diskpool.html"
+  - title: 创建卷复制
+    url: "/commands-a-z/create-volumecopy.html"
+  - title: 创建卷组
+    url: "/commands-a-z/create-volumegroup.html"
+- title: D
+  entries:
+  - title: 停用storageArray功能
+    url: "/commands-a-z/deactivate-storagearray-feature.html"
+  - title: 停用storageArray
+    url: "/commands-a-z/deactivate-storagearray.html"
+  - title: 删除异步镜像组
+    url: "/commands-a-z/delete-asyncmirrorgroup.html"
+  - title: 删除auditlog
+    url: "/commands-a-z/delete-auditlog.html"
+  - title: 删除证书
+    url: "/commands-a-z/delete-certificates.html"
+  - title: 删除cgsnapimage ConsistencyGroup
+    url: "/commands-a-z/delete-cgsnapimage-consistencygroup.html"
+  - title: 删除ConsistencyGroup
+    url: "/commands-a-z/delete-consistencygroup.html"
+  - title: 删除控制器caCertificate
+    url: "/commands-a-z/delete-controller-cacertificate.html"
+  - title: 删除磁盘池
+    url: "/commands-a-z/delete-diskpool.html"
+  - title: 删除电子邮件警报
+    url: "/commands-a-z/delete-emailalert.html"
+  - title: 删除主机
+    url: "/commands-a-z/delete-host.html"
+  - title: 删除主机组
+    url: "/commands-a-z/delete-hostgroup.html"
+  - title: 删除hostport
+    url: "/commands-a-z/delete-hostport.html"
+  - title: 删除启动程序
+    url: "/commands-a-z/delete-initiator.html"
+  - title: 删除iscsiInitiator
+    url: "/commands-a-z/delete-iscsiinitiator.html"
+  - title: 删除sgsnapvolume
+    url: "/commands-a-z/delete-sgsnapvolume.html"
+  - title: 删除snapgroup
+    url: "/commands-a-z/delete-snapgroup.html"
+  - title: 删除SnapImage
+    url: "/commands-a-z/delete-snapimage.html"
+  - title: 删除snapvolume
+    url: "/commands-a-z/delete-snapvolume.html"
+  - title: 删除snmpcommunity
+    url: "/commands-a-z/delete-snmpcommunity.html"
+  - title: 删除snmptrapdestination
+    url: "/commands-a-z/delete-snmptrapdestination.html"
+  - title: 删除snmpuser用户名
+    url: "/commands-a-z/delete-snmpuser-username.html"
+  - title: 删除ssdcache
+    url: "/commands-a-z/delete-ssdcache.html"
+  - title: 删除storageArray目录服务器
+    url: "/commands-a-z/delete-storagearray-directoryservers.html"
+  - title: 删除storageArray密钥管理证书
+    url: "/commands-a-z/delete-storagearray-keymanagementcertificate.html"
+  - title: 删除storageArray登录横幅
+    url: "/commands-a-z/delete-storagearray-loginbanner.html"
+  - title: 删除storageArray系统日志
+    url: "/commands-a-z/delete-storagearray-syslog.html"
+  - title: 删除storageArray受托者证书
+    url: "/commands-a-z/delete-storagearray-trustedcertificate.html"
+  - title: 删除系统日志
+    url: "/commands-a-z/delete-syslog.html"
+  - title: 从磁盘池中删除卷
+    url: "/commands-a-z/delete-volume-from-disk-pool.html"
+  - title: 删除卷
+    url: "/commands-a-z/delete-volume.html"
+  - title: 删除卷组
+    url: "/commands-a-z/delete-volumegroup.html"
+  - title: 诊断异步镜像组
+    url: "/commands-a-z/diagnose-asyncmirrorgroup.html"
+  - title: 诊断控制器iscsihostport
+    url: "/commands-a-z/diagnose-controller-iscsihostport.html"
+  - title: 诊断控制器
+    url: "/commands-a-z/diagnose-controller.html"
+  - title: 诊断SyncMirror
+    url: "/commands-a-z/diagnose-syncmirror.html"
+  - title: 禁用storageArray外部密钥管理文件
+    url: "/commands-a-z/disable-storagearray-externalkeymanagement-file.html"
+  - title: 禁用storageArray
+    url: "/commands-a-z/disable-storagearray.html"
+  - title: 下载控制器arraymanagementservercertificate
+    url: "/commands-a-z/download-controller-arraymanagementservercertificate.html"
+  - title: 下载控制器caCertificate
+    url: "/commands-a-z/download-controller-cacertificate.html"
+  - title: 下载控制器受托证书
+    url: "/commands-a-z/download-controller-trustedcertificate.html"
+  - title: 下载驱动器固件
+    url: "/commands-a-z/download-drive-firmware.html"
+  - title: 下载storageArray驱动器固件文件
+    url: "/commands-a-z/download-storagearray-drivefirmware-file.html"
+  - title: 下载storageArray固件
+    url: "/commands-a-z/download-storagearray-firmware.html"
+  - title: 下载storageArray密钥管理证书
+    url: "/commands-a-z/download-storagearray-keymanagementcertificate.html"
+  - title: 下载storageArray nvsram
+    url: "/commands-a-z/download-storagearray-nvsram.html"
+  - title: 下载托盘配置设置
+    url: "/commands-a-z/download-tray-configurationsettings.html"
+  - title: 下载托盘固件文件
+    url: "/commands-a-z/download-tray-firmware-file.html"
+- title: E
+  entries:
+  - title: 启用控制器数据传输
+    url: "/commands-a-z/enable-controller-datatransfer.html"
+  - title: 启用磁盘池安全性
+    url: "/commands-a-z/enable-diskpool-security.html"
+  - title: 启用或禁用AutoSupport 单个阵列
+    url: "/commands-a-z/enable-or-disable-autosupport-individual-arrays.html"
+  - title: 启用storageArray外部密钥管理文件
+    url: "/commands-a-z/enable-storagearray-externalkeymanagement-file.html"
+  - title: 启用storageArray功能文件
+    url: "/commands-a-z/enable-storagearray-feature-file.html"
+  - title: 启用卷组安全性
+    url: "/commands-a-z/enable-volumegroup-security.html"
+  - title: 建立异步镜像卷
+    url: "/commands-a-z/establish-asyncmirror-volume.html"
+  - title: 导出storageArray securitykey
+    url: "/commands-a-z/export-storagearray-securitykey.html"
+- title: g
+  entries:
+  - title: 身份验证入门
+    url: "/commands-a-z/getting-started-with-authentication.html"
+  - title: 外部密钥管理入门
+    url: "/commands-a-z/getting-started-with-external-key-management.html"
+  - title: 开始使用内部密钥管理
+    url: "/commands-a-z/getting-started-with-internal-key-management.html"
+- title: I
+  entries:
+  - title: 导入storageArray securitykey文件
+    url: "/commands-a-z/import-storagearray-securitykey-file.html"
+- title: L
+  entries:
+  - title: 加载storageArray dbmdatabase
+    url: "/commands-a-z/load-storagearray-dbmdatabase.html"
+- title: r
+  entries:
+  - title: 重新复制卷复制目标
+    url: "/commands-a-z/recopy-volumecopy-target.html"
+  - title: 恢复已禁用的驱动器端口
+    url: "/commands-a-z/recover-disabled-driveports.html"
+  - title: 恢复sasport连线错误
+    url: "/commands-a-z/recover-sasport-miswire.html"
+  - title: 恢复卷
+    url: "/commands-a-z/recover-volume.html"
+  - title: 重新创建storageArray镜像存储库
+    url: "/commands-a-z/recreate-storagearray-mirrorrepository.html"
+  - title: 重新创建storageArray securitykey
+    url: "/commands-a-z/recreate-storagearray-securitykey.html"
+  - title: 减少磁盘池容量
+    url: "/commands-a-z/reduce-disk-pool-capacity.html"
+  - title: 删除阵列标签
+    url: "/commands-a-z/remove-array-label.html"
+  - title: 删除异步镜像组
+    url: "/commands-a-z/remove-asyncmirrorgroup.html"
+  - title: 从SSD缓存中删除驱动器
+    url: "/commands-a-z/remove-drives-from-ssd-cache.html"
+  - title: 删除lunmapping
+    url: "/commands-a-z/remove-lunmapping.html"
+  - title: 从一致性组中删除成员卷
+    url: "/commands-a-z/remove-member-volume-from-consistency-group.html"
+  - title: 删除storageArray目录服务器
+    url: "/commands-a-z/remove-storagearray-directoryserver.html"
+  - title: 删除SyncMirror
+    url: "/commands-a-z/remove-syncmirror.html"
+  - title: 删除卷asyncmirrorgroup
+    url: "/commands-a-z/remove-volume-asyncmirrorgroup.html"
+  - title: 删除卷复制目标
+    url: "/commands-a-z/remove-volumecopy-target.html"
+  - title: 重命名SSD缓存
+    url: "/commands-a-z/rename-ssd-cache.html"
+  - title: 修复数据奇偶校验
+    url: "/commands-a-z/repair-data-parity.html"
+  - title: 修复卷奇偶校验
+    url: "/commands-a-z/repair-volume-parity.html"
+  - title: 更换驱动器更换驱动器
+    url: "/commands-a-z/replace-drive-replacementdrive.html"
+  - title: 重置控制器arraymanagementsignedcertificate
+    url: "/commands-a-z/reset-controller-arraymanagementsignedcertificate.html"
+  - title: 重置控制器
+    url: "/commands-a-z/reset-controller.html"
+  - title: 重置驱动器
+    url: "/commands-a-z/reset-drive.html"
+  - title: 重置iscsiipaddress
+    url: "/commands-a-z/reset-iscsiipaddress.html"
+  - title: 重置storageArray arvmstats asyncmirrorgroup
+    url: "/commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html"
+  - title: 重置存储阵列AutoSupport 计划
+    url: "/commands-a-z/reset-storagearray-autosupport-schedule.html"
+  - title: 重置storageArray诊断数据
+    url: "/commands-a-z/reset-storagearray-diagnosticdata.html"
+  - title: 重置storageArray hostportstatisticsbaseline
+    url: "/commands-a-z/reset-storagearray-hostportstatisticsbaseline.html"
+  - title: 重置storageArray ibstatsbaseline
+    url: "/commands-a-z/reset-storagearray-ibstatsbaseline.html"
+  - title: 重置storageArray iscsistatsbaseline
+    url: "/commands-a-z/reset-storagearray-iscsistatsbaseline.html"
+  - title: 重置storageArray iserstatsbaseline
+    url: "/commands-a-z/reset-storagearray-iserstatsbaseline.html"
+  - title: 重置storageArray rlsbaseline
+    url: "/commands-a-z/reset-storagearray-rlsbaseline.html"
+  - title: 重置storageArray sasphybaseline
+    url: "/commands-a-z/reset-storagearray-sasphybaseline.html"
+  - title: 重置storageArray socbaseline
+    url: "/commands-a-z/reset-storagearray-socbaseline.html"
+  - title: 重置storageArray卷分布
+    url: "/commands-a-z/reset-storagearray-volumedistribution.html"
+  - title: 恢复异步镜像组
+    url: "/commands-a-z/resume-asyncmirrorgroup.html"
+  - title: 恢复cgsnapvolume
+    url: "/commands-a-z/resume-cgsnapvolume.html"
+  - title: 恢复SnapImage回滚
+    url: "/commands-a-z/resume-snapimage-rollback.html"
+  - title: 恢复snapvolume
+    url: "/commands-a-z/resume-snapvolume.html"
+  - title: 恢复ssdcache
+    url: "/commands-a-z/resume-ssdcache.html"
+  - title: 恢复SyncMirror
+    url: "/commands-a-z/resume-syncmirror.html"
+  - title: 恢复驱动器
+    url: "/commands-a-z/revive-drive.html"
+  - title: 恢复快照组
+    url: "/commands-a-z/revive-snapgroup.html"
+  - title: 恢复snapvolume
+    url: "/commands-a-z/revive-snapvolume.html"
+  - title: 恢复卷组
+    url: "/commands-a-z/revive-volumegroup.html"
+- title: S
+  entries:
+  - title: 保存...
+    entries:
+    - title: 保存所有驱动器日志文件
+      url: "/commands-a-z/save-alldrives-logfile.html"
+    - title: 保存所有托盘日志文件
+      url: "/commands-a-z/save-alltrays-logfile.html"
+    - title: 保存auditlog
+      url: "/commands-a-z/save-auditlog.html"
+    - title: 保存控制器阵列管理csr
+      url: "/commands-a-z/save-controller-arraymanagementcsr.html"
+    - title: 保存控制器arraymanagementsignedcertificate
+      url: "/commands-a-z/save-controller-arraymanagementsignedcertificate.html"
+    - title: 保存控制器caCertificate
+      url: "/commands-a-z/save-controller-cacertificate.html"
+    - title: 保存控制器nvsram文件
+      url: "/commands-a-z/save-controller-nvsram-file.html"
+    - title: 保存驱动器通道故障诊断文件
+      url: "/commands-a-z/save-drivechannel-faultdiagnostics-file.html"
+    - title: 保存iosclog
+      url: "/commands-a-z/save-ioclog.html"
+    - title: 保存存储阵列诊断数据
+      url: "/commands-a-z/save-storage-array-diagnostic-data.html"
+    - title: 将storageArray arvmstats另存为同步镜像组
+      url: "/commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html"
+    - title: 保存storageArray自动加载型初始文件
+      url: "/commands-a-z/save-storagearray-autoloadbalancestatistics-file.html"
+    - title: 保存storageArray AutoSupport 日志
+      url: "/commands-a-z/save-storagearray-autosupport-log.html"
+    - title: 保存storageArray配置
+      url: "/commands-a-z/save-storagearray-configuration.html"
+    - title: 保存storageArray控制器运行状况映像
+      url: "/commands-a-z/save-storagearray-controllerhealthimage.html"
+    - title: 保存storageArray dbmdatabase
+      url: "/commands-a-z/save-storagearray-dbmdatabase.html"
+    - title: 保存storageArray dbmvalidatorinfo
+      url: "/commands-a-z/save-storagearray-dbmvalidatorinfo.html"
+    - title: 保存storageArray firmwareinventory
+      url: "/commands-a-z/save-storagearray-firmwareinventory.html"
+    - title: 保存storageArray主机端口统计信息
+      url: "/commands-a-z/save-storagearray-hostportstatistics.html"
+    - title: 保存storageArray ibstats
+      url: "/commands-a-z/save-storagearray-ibstats.html"
+    - title: 保存storageArray iscsiStatistics
+      url: "/commands-a-z/save-storagearray-iscsistatistics.html"
+    - title: 保存storageArray iserstatistics
+      url: "/commands-a-z/save-storagearray-iserstatistics.html"
+    - title: 保存storageArray密钥管理证书
+      url: "/commands-a-z/save-storagearray-keymanagementcertificate.html"
+    - title: 保存storageArray密钥管理客户端csr
+      url: "/commands-a-z/save-storagearray-keymanagementclientcsr.html"
+    - title: 保存storageArray登录横幅
+      url: "/commands-a-z/save-storagearray-loginbanner.html"
+    - title: 保存storageArray性能统计信息
+      url: "/commands-a-z/save-storagearray-performancestats.html"
+    - title: 保存storageArray rlscounts
+      url: "/commands-a-z/save-storagearray-rlscounts.html"
+    - title: 保存storageArray sasphycounts
+      url: "/commands-a-z/save-storagearray-sasphycounts.html"
+    - title: 保存storageArray插槽数
+      url: "/commands-a-z/save-storagearray-soccounts.html"
+    - title: 保存storageArray状态
+      url: "/commands-a-z/save-storagearray-statecapture.html"
+    - title: 保存storageArray SupportData
+      url: "/commands-a-z/save-storagearray-supportdata.html"
+    - title: 保存storageArray受托者证书
+      url: "/commands-a-z/save-storagearray-trustedcertificate.html"
+    - title: 保存storageArray警告事件
+      url: "/commands-a-z/save-storagearray-warningevents.html"
+  - title: 设置...
+    entries:
+    - title: 设置asyncmirrorgroup
+      url: "/commands-a-z/set-asyncmirrorgroup.html"
+    - title: 设置auditlog
+      url: "/commands-a-z/set-auditlog.html"
+    - title: 设置AutoSupport https传送方法e2800或e5700
+      url: "/commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html"
+    - title: 设置cgsnapvolume
+      url: "/commands-a-z/set-cgsnapvolume.html"
+    - title: 设置一致性组属性
+      url: "/commands-a-z/set-consistency-group-attributes.html"
+    - title: 设置ConsistencyGroup addcgmembervolume
+      url: "/commands-a-z/set-consistencygroup-addcgmembervolume.html"
+    - title: 设置控制器dnsservers
+      url: "/commands-a-z/set-controller-dnsservers.html"
+    - title: 设置控制器主机端口
+      url: "/commands-a-z/set-controller-hostport.html"
+    - title: 设置控制器iscsihostport
+      url: "/commands-a-z/set-controller-iscsihostport.html"
+    - title: 设置控制器ntp服务器
+      url: "/commands-a-z/set-controller-ntpservers.html"
+    - title: 设置允许控制器维护操作指示符
+      url: "/commands-a-z/set-controller-service-action-allowed-indicator.html"
+    - title: 设置控制器
+      url: "/commands-a-z/set-controller.html"
+    - title: 设置磁盘池修改磁盘池
+      url: "/commands-a-z/set-disk-pool-modify-disk-pool.html"
+    - title: 设置磁盘池
+      url: "/commands-a-z/set-disk-pool.html"
+    - title: 设置驱动器热备用磁盘
+      url: "/commands-a-z/set-drive-hotspare.html"
+    - title: 设置驱动器nativestate
+      url: "/commands-a-z/set-drive-nativestate.html"
+    - title: 设置驱动器操作状态
+      url: "/commands-a-z/set-drive-operationalstate.html"
+    - title: 设置驱动器安全性ID
+      url: "/commands-a-z/set-drive-securityid.html"
+    - title: 设置驱动器服务允许指示符
+      url: "/commands-a-z/set-drive-serviceallowedindicator.html"
+    - title: 设置驱动器通道
+      url: "/commands-a-z/set-drivechannel.html"
+    - title: 设置电子邮件SMTP传送方法e2800或e5700
+      url: "/commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html"
+    - title: 设置电子邮件警报
+      url: "/commands-a-z/set-emailalert.html"
+    - title: 设置事件警报
+      url: "/commands-a-z/set-event-alert.html"
+    - title: 设置主机
+      url: "/commands-a-z/set-host.html"
+    - title: 设置主机通道
+      url: "/commands-a-z/set-hostchannel.html"
+    - title: 设置主机组
+      url: "/commands-a-z/set-hostgroup.html"
+    - title: 设置hostport
+      url: "/commands-a-z/set-hostport.html"
+    - title: 设置启动程序
+      url: "/commands-a-z/set-initiator.html"
+    - title: 设置iscsiInitiator
+      url: "/commands-a-z/set-iscsiinitiator.html"
+    - title: 设置iscsitarget
+      url: "/commands-a-z/set-iscsitarget.html"
+    - title: 设置isertarget
+      url: "/commands-a-z/set-isertarget.html"
+    - title: 设置会话错误操作
+      url: "/commands-a-z/set-session-erroraction.html"
+    - title: 设置snapgroup enableschedule
+      url: "/commands-a-z/set-snapgroup-enableschedule.html"
+    - title: 设置snapgroup Increase decerepositorycapacity
+      url: "/commands-a-z/set-snapgroup-increase-decreaserepositorycapacity.html"
+    - title: 设置snapgroup介质已启用
+      url: "/commands-a-z/set-snapgroup-mediascanenabled.html"
+    - title: 设置snapgroup
+      url: "/commands-a-z/set-snapgroup.html"
+    - title: 设置snapvolume convertoreadwrite
+      url: "/commands-a-z/set-snapvolume-converttoreadwrite.html"
+    - title: 设置snapvolume Increase decerepositorycapacity
+      url: "/commands-a-z/set-snapvolume-increase-decreaserepositorycapacity.html"
+    - title: 设置snapvolume mediaenabled
+      url: "/commands-a-z/set-snapvolume-mediascanenabled.html"
+    - title: 设置snapvolume
+      url: "/commands-a-z/set-snapvolume.html"
+    - title: 设置snmpcommunity
+      url: "/commands-a-z/set-snmpcommunity.html"
+    - title: 设置snmpsystemvariables
+      url: "/commands-a-z/set-snmpsystemvariables.html"
+    - title: 设置snmptrapdestination trap接收 器
+      url: "/commands-a-z/set-snmptrapdestination-trapreceiverip.html"
+    - title: 设置snmpuser用户名
+      url: "/commands-a-z/set-snmpuser-username.html"
+    - title: 设置storageArray autoloadbalancingenable
+      url: "/commands-a-z/set-storagearray-autoloadbalancingenable.html"
+    - title: 设置storageArray AutoSupport 计划
+      url: "/commands-a-z/set-storagearray-autosupport-schedule.html"
+    - title: 设置storageArray autosupportmaintenancewindow
+      url: "/commands-a-z/set-storagearray-autosupportmaintenancewindow.html"
+    - title: 设置storageArray autosupportonDemand
+      url: "/commands-a-z/set-storagearray-autosupportondemand.html"
+    - title: 设置storageArray autosupremotediag
+      url: "/commands-a-z/set-storagearray-autosupportremotediag.html"
+    - title: 设置storageArray cachemirrordataassurancecheckenable
+      url: "/commands-a-z/set-storagearray-cachemirrordataassurancecheckenable.html"
+    - title: 设置storageArray控制器healthimageallowoverwrite
+      url: "/commands-a-z/set-storagearray-controllerhealthimageallowoverwrite.html"
+    - title: 设置storageArray目录服务器角色
+      url: "/commands-a-z/set-storagearray-directoryserver-roles.html"
+    - title: 设置storageArray目录服务器
+      url: "/commands-a-z/set-storagearray-directoryserver.html"
+    - title: 设置storageArray外部密钥管理
+      url: "/commands-a-z/set-storagearray-externalkeymanagement.html"
+    - title: 设置storageArray hostconnectivitireporting
+      url: "/commands-a-z/set-storagearray-hostconnectivityreporting.html"
+    - title: 设置storageArray icmppingresponse
+      url: "/commands-a-z/set-storagearray-icmppingresponse.html"
+    - title: 设置storageArray isnsipv4configurationmethod
+      url: "/commands-a-z/set-storagearray-isnsipv4configurationmethod.html"
+    - title: 设置storageArray isnsipv6address
+      url: "/commands-a-z/set-storagearray-isnsipv6address.html"
+    - title: 设置storageArray isnslosteningport
+      url: "/commands-a-z/set-storagearray-isnslisteningport.html"
+    - title: 设置storageArray isnssregistration
+      url: "/commands-a-z/set-storagearray-isnsregistration.html"
+    - title: 设置storageArray isnssserverrefresh
+      url: "/commands-a-z/set-storagearray-isnsserverrefresh.html"
+    - title: 设置storageArray learncycledate控制器
+      url: "/commands-a-z/set-storagearray-learncycledate-controller.html"
+    - title: 设置storageArray localusername
+      url: "/commands-a-z/set-storagearray-localusername.html"
+    - title: 设置storageArray登录横幅
+      url: "/commands-a-z/set-storagearray-loginbanner.html"
+    - title: 设置storageArray管理接口
+      url: "/commands-a-z/set-storagearray-managementinterface.html"
+    - title: 设置storageArray odxenabled
+      url: "/commands-a-z/set-storagearray-odxenabled.html"
+    - title: 设置storageArray密码长度
+      url: "/commands-a-z/set-storagearray-passwordlength.html"
+    - title: 设置storageArray pqvalidateonreconstruct
+      url: "/commands-a-z/set-storagearray-pqvalidateonreconstruct.html"
+    - title: 设置storageArray冗余模式
+      url: "/commands-a-z/set-storagearray-redundancymode.html"
+    - title: 设置storageArray资源配置的卷
+      url: "/commands-a-z/set-storagearray-resourceprovisionedvolumes.html"
+    - title: 设置storageArray revocationchecksettings
+      url: "/commands-a-z/set-storagearray-revocationchecksettings.html"
+    - title: 设置storageArray securitykey
+      url: "/commands-a-z/set-storagearray-securitykey.html"
+    - title: 设置storageArray系统日志
+      url: "/commands-a-z/set-storagearray-syslog.html"
+    - title: 设置storageArray时间
+      url: "/commands-a-z/set-storagearray-time.html"
+    - title: 设置storageArray托架位置
+      url: "/commands-a-z/set-storagearray-traypositions.html"
+    - title: 设置storageArray unnamed可 发现会话
+      url: "/commands-a-z/set-storagearray-unnameddiscoverysession.html"
+    - title: 设置storageArray用户会话
+      url: "/commands-a-z/set-storagearray-usersession.html"
+    - title: 将storageArray设置为已启用
+      url: "/commands-a-z/set-storagearray-vaaienabled.html"
+    - title: 设置storageArray
+      url: "/commands-a-z/set-storagearray.html"
+    - title: 设置SyncMirror
+      url: "/commands-a-z/set-syncmirror.html"
+    - title: 设置系统日志
+      url: "/commands-a-z/set-syslog.html"
+    - title: 设置目标
+      url: "/commands-a-z/set-target.html"
+    - title: 设置精简卷属性
+      url: "/commands-a-z/set-thin-volume-attributes.html"
+    - title: 设置托盘属性
+      url: "/commands-a-z/set-tray-attribute.html"
+    - title: 设置托盘抽屉
+      url: "/commands-a-z/set-tray-drawer.html"
+    - title: 设置托盘标识
+      url: "/commands-a-z/set-tray-identification.html"
+    - title: 设置托盘服务允许指示符
+      url: "/commands-a-z/set-tray-serviceallowedindicator.html"
+    - title: 为卷组中的卷设置卷组属性
+      url: "/commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html"
+    - title: 设置卷logicalUnitNumber
+      url: "/commands-a-z/set-volume-logicalunitnumber.html"
+    - title: 将卷ssdcacheTM设置为enabled
+      url: "/commands-a-z/set-volume-ssdcacheenabled.html"
+    - title: 设置卷复制目标
+      url: "/commands-a-z/set-volumecopy-target.html"
+    - title: 设置volumegroup forcedstate
+      url: "/commands-a-z/set-volumegroup-forcedstate.html"
+    - title: 设置卷组
+      url: "/commands-a-z/set-volumegroup.html"
+    - title: 设置卷
+      url: "/commands-a-z/set-volumes.html"
+  - title: 显示...
+    entries:
+    - title: 显示所有驱动器下载进度
+      url: "/commands-a-z/show-alldrives-downloadprogress.html"
+    - title: 显示所有驱动器性能统计信息
+      url: "/commands-a-z/show-alldrives-performancestats.html"
+    - title: 显示所有驱动器
+      url: "/commands-a-z/show-alldrives.html"
+    - title: 显示所有主机端口
+      url: "/commands-a-z/show-allhostports.html"
+    - title: 显示所有snmpCommunities
+      url: "/commands-a-z/show-allsnmpcommunities.html"
+    - title: 显示所有snmpusers
+      url: "/commands-a-z/show-allsnmpusers.html"
+    - title: 显示阵列标签
+      url: "/commands-a-z/show-array-label.html"
+    - title: 显示asyncmirrorgroup摘要
+      url: "/commands-a-z/show-asyncmirrorgroup-summary.html"
+    - title: 显示异步镜像组同步进度
+      url: "/commands-a-z/show-asyncmirrorgroup-synchronizationprogress.html"
+    - title: 显示auditlog配置
+      url: "/commands-a-z/show-auditlog-configuration.html"
+    - title: 显示auditlog摘要
+      url: "/commands-a-z/show-auditlog-summary.html"
+    - title: show blockkedeventalertlist
+      url: "/commands-a-z/show-blockedeventalertlist.html"
+    - title: 显示证书
+      url: "/commands-a-z/show-certificates.html"
+    - title: show cgsnapimage
+      url: "/commands-a-z/show-cgsnapimage.html"
+    - title: 显示ConsistencyGroup
+      url: "/commands-a-z/show-consistencygroup.html"
+    - title: show controller arraymanagementsignedcertificate summary
+      url: "/commands-a-z/show-controller-arraymanagementsignedcertificate-summary.html"
+    - title: 显示控制器caCertificate
+      url: "/commands-a-z/show-controller-cacertificate.html"
+    - title: 显示控制器诊断状态
+      url: "/commands-a-z/show-controller-diagnostic-status.html"
+    - title: show controller nvsram
+      url: "/commands-a-z/show-controller-nvsram.html"
+    - title: 显示控制器
+      url: "/commands-a-z/show-controller.html"
+    - title: 显示磁盘池
+      url: "/commands-a-z/show-diskpool.html"
+    - title: 显示驱动器通道统计信息
+      url: "/commands-a-z/show-drivechannel-stats.html"
+    - title: 显示电子邮件警报摘要
+      url: "/commands-a-z/show-emailalert-summary.html"
+    - title: 显示iscsisessions
+      url: "/commands-a-z/show-iscsisessions.html"
+    - title: 显示可更换的驱动器
+      url: "/commands-a-z/show-replaceabledrives.html"
+    - title: 显示snapgroup
+      url: "/commands-a-z/show-snapgroup.html"
+    - title: 显示SnapImage
+      url: "/commands-a-z/show-snapimage.html"
+    - title: 显示snapvolume
+      url: "/commands-a-z/show-snapvolume.html"
+    - title: 显示snmpsystemvariables
+      url: "/commands-a-z/show-snmpsystemvariables.html"
+    - title: 显示SSD缓存统计信息
+      url: "/commands-a-z/show-ssd-cache-statistics.html"
+    - title: 显示SSD缓存
+      url: "/commands-a-z/show-ssd-cache.html"
+    - title: 显示storageArray自动配置
+      url: "/commands-a-z/show-storagearray-autoconfiguration.html"
+    - title: 显示storageArray AutoSupport
+      url: "/commands-a-z/show-storagearray-autosupport.html"
+    - title: show storageArray cachemirrordataassurancecheckenable
+      url: "/commands-a-z/show-storagearray-cachemirrordataassurancecheckenable.html"
+    - title: show storageArray controllerhealthimage
+      url: "/commands-a-z/show-storagearray-controllerhealthimage.html"
+    - title: show storageArray dbmdatabase
+      url: "/commands-a-z/show-storagearray-dbmdatabase.html"
+    - title: 显示storageArray DirectoryServices摘要
+      url: "/commands-a-z/show-storagearray-directoryservices-summary.html"
+    - title: 显示storageArray hostconnectivitireporting
+      url: "/commands-a-z/show-storagearray-hostconnectivityreporting.html"
+    - title: show storageArray主机拓扑
+      url: "/commands-a-z/show-storagearray-hosttopology.html"
+    - title: show storageArray iscsinfodefaults
+      url: "/commands-a-z/show-storagearray-iscsinegotiationdefaults.html"
+    - title: 显示storageArray lunmappings
+      url: "/commands-a-z/show-storagearray-lunmappings.html"
+    - title: show storageArray odxsetting
+      url: "/commands-a-z/show-storagearray-odxsetting.html"
+    - title: show storageArray powerinfo
+      url: "/commands-a-z/show-storagearray-powerinfo.html"
+    - title: 显示storageArray revocationchecksettings
+      url: "/commands-a-z/show-storagearray-revocationchecksettings.html"
+    - title: 显示storageArray系统日志
+      url: "/commands-a-z/show-storagearray-syslog.html"
+    - title: 显示storageArray受托者证书摘要
+      url: "/commands-a-z/show-storagearray-trustedcertificate-summary.html"
+    - title: show storageArray unconfiguredinitiators
+      url: "/commands-a-z/show-storagearray-unconfiguredinitiators.html"
+    - title: show storageArray unconfigurediscsiinitiators
+      url: "/commands-a-z/show-storagearray-unconfigurediscsiinitiators.html"
+    - title: 显示storageArray不可读存储器
+      url: "/commands-a-z/show-storagearray-unreadablesectors.html"
+    - title: 显示storageArray用户会话
+      url: "/commands-a-z/show-storagearray-usersession.html"
+    - title: 显示storageArray
+      url: "/commands-a-z/show-storagearray.html"
+    - title: 显示SyncMirror 候选项
+      url: "/commands-a-z/show-syncmirror-candidates.html"
+    - title: 显示SyncMirror 同步进度
+      url: "/commands-a-z/show-syncmirror-synchronizationprogress.html"
+    - title: 显示系统日志摘要
+      url: "/commands-a-z/show-syslog-summary.html"
+    - title: 显示文本字符串
+      url: "/commands-a-z/show-textstring.html"
+    - title: 显示卷操作进度
+      url: "/commands-a-z/show-volume-actionprogress.html"
+    - title: 显示卷性能统计信息
+      url: "/commands-a-z/show-volume-performancestats.html"
+    - title: 显示卷预留
+      url: "/commands-a-z/show-volume-reservations.html"
+    - title: 显示卷摘要
+      url: "/commands-a-z/show-volume-summary.html"
+    - title: 显示卷
+      url: "/commands-a-z/show-volume.html"
+    - title: show volumecopy source targetCandidates
+      url: "/commands-a-z/show-volumecopy-source-targetcandidates.html"
+    - title: 显示卷复制sourceCandidates
+      url: "/commands-a-z/show-volumecopy-sourcecandidates.html"
+    - title: 显示卷复制
+      url: "/commands-a-z/show-volumecopy.html"
+    - title: 显示卷组导出依赖关系
+      url: "/commands-a-z/show-volumegroup-exportdependencies.html"
+    - title: 显示卷组的导入依赖关系
+      url: "/commands-a-z/show-volumegroup-importdependencies.html"
+    - title: 显示卷组
+      url: "/commands-a-z/show-volumegroup.html"
+  - title: SMcli...
+    entries:
+    - title: smcli alerttest
+      url: "/commands-a-z/smcli-alerttest.html"
+    - title: smcli autosupportconfig show
+      url: "/commands-a-z/smcli-autosupportconfig-show.html"
+    - title: SMcli autosupportconfig测试
+      url: "/commands-a-z/smcli-autosupportconfig-test.html"
+    - title: SMcli autosupportconfig
+      url: "/commands-a-z/smcli-autosupportconfig.html"
+    - title: SMcli autosupportlog
+      url: "/commands-a-z/smcli-autosupportlog.html"
+    - title: SMcli autosupportschedule reset
+      url: "/commands-a-z/smcli-autosupportschedule-reset.html"
+    - title: smcli autosupportschedule show
+      url: "/commands-a-z/smcli-autosupportschedule-show.html"
+    - title: SMcli启用AutoSupport功能
+      url: "/commands-a-z/smcli-enable-autosupportfeature.html"
+    - title: smcli enable disable autosupportondemand
+      url: "/commands-a-z/smcli-enable-disable-autosupportondemand.html"
+    - title: smcli enable disable autosupportremotediag
+      url: "/commands-a-z/smcli-enable-disable-autosupportremotediag.html"
+    - title: SMcli supportBundle计划
+      url: "/commands-a-z/smcli-supportbundle-schedule.html"
+  - title: 启动...
+    entries:
+    - title: 启动异步镜像组同步
+      url: "/commands-a-z/start-asyncmirrorgroup-synchronize.html"
+    - title: 启动cgsnapimage回滚
+      url: "/commands-a-z/start-cgsnapimage-rollback.html"
+    - title: 启动控制器iscsihostport dhcprefresh
+      url: "/commands-a-z/start-controller-iscsihostport-dhcprefresh.html"
+    - title: 启动控制器
+      url: "/commands-a-z/start-controller.html"
+    - title: 启动磁盘池全满配置
+      url: "/commands-a-z/start-diskpool-fullprovisioning.html"
+    - title: 启动diskpool locate
+      url: "/commands-a-z/start-diskpool-locate.html"
+    - title: 启动磁盘池资源配置
+      url: "/commands-a-z/start-diskpool-resourceprovisioning.html"
+    - title: 启动驱动器擦除
+      url: "/commands-a-z/start-drive-erase.html"
+    - title: 启动驱动器初始化
+      url: "/commands-a-z/start-drive-initialize.html"
+    - title: 启动驱动器定位
+      url: "/commands-a-z/start-drive-locate.html"
+    - title: 启动驱动器重建
+      url: "/commands-a-z/start-drive-reconstruct.html"
+    - title: 启动驱动器通道故障诊断
+      url: "/commands-a-z/start-drivechannel-faultdiagnostics.html"
+    - title: 启动驱动器通道定位
+      url: "/commands-a-z/start-drivechannel-locate.html"
+    - title: 启动电子邮件警报测试
+      url: "/commands-a-z/start-emailalert-test.html"
+    - title: 开始增加卷容量
+      url: "/commands-a-z/start-increasevolumecapacity-volume.html"
+    - title: 启动iosclog
+      url: "/commands-a-z/start-ioclog.html"
+    - title: 启动secureerase驱动器
+      url: "/commands-a-z/start-secureerase-drive.html"
+    - title: 启动SnapImage回滚
+      url: "/commands-a-z/start-snapimage-rollback.html"
+    - title: 启动snmptrapdestination
+      url: "/commands-a-z/start-snmptrapdestination.html"
+    - title: 启动ssdcache locate
+      url: "/commands-a-z/start-ssdcache-locate.html"
+    - title: 启动ssdcache性能图
+      url: "/commands-a-z/start-ssdcache-performancemodeling.html"
+    - title: 启动storageArray AutoSupport deliverytest
+      url: "/commands-a-z/start-storagearray-autosupport-deliverytest.html"
+    - title: 启动storageArray AutoSupport 手动派单
+      url: "/commands-a-z/start-storagearray-autosupport-manualdispatch.html"
+    - title: 启动storageArray configdbdiagnostic
+      url: "/commands-a-z/start-storagearray-configdbdiagnostic.html"
+    - title: 启动storageArray controllerhealthimage控制器
+      url: "/commands-a-z/start-storagearray-controllerhealthimage-controller.html"
+    - title: 启动storageArray DirectoryServices测试
+      url: "/commands-a-z/start-storagearray-directoryservices-test.html"
+    - title: 启动storageArray外部密钥管理测试
+      url: "/commands-a-z/start-storagearray-externalkeymanagement-test.html"
+    - title: 启动storageArray isnssserverrefresh
+      url: "/commands-a-z/start-storagearray-isnsserverrefresh.html"
+    - title: 启动storageArray locate
+      url: "/commands-a-z/start-storagearray-locate.html"
+    - title: 启动storageArray ocspresponderurl测试
+      url: "/commands-a-z/start-storagearray-ocspresponderurl-test.html"
+    - title: 启动storageArray系统日志测试
+      url: "/commands-a-z/start-storagearray-syslog-test.html"
+    - title: 启动SyncMirror 主同步
+      url: "/commands-a-z/start-syncmirror-primary-synchronize.html"
+    - title: 启动系统日志测试
+      url: "/commands-a-z/start-syslog-test.html"
+    - title: 启动托盘定位
+      url: "/commands-a-z/start-tray-locate.html"
+    - title: 启动卷初始化
+      url: "/commands-a-z/start-volume-initialization.html"
+    - title: 启动卷初始化
+      url: "/commands-a-z/start-volume-initialize.html"
+    - title: 启动volumegroup碎片整理
+      url: "/commands-a-z/start-volumegroup-defragment.html"
+    - title: 启动卷组导出
+      url: "/commands-a-z/start-volumegroup-export.html"
+    - title: 启动volumegroup填充
+      url: "/commands-a-z/start-volumegroup-fullprovisioning.html"
+    - title: 启动卷组导入
+      url: "/commands-a-z/start-volumegroup-import.html"
+    - title: 启动volumegroup locate
+      url: "/commands-a-z/start-volumegroup-locate.html"
+    - title: 启动卷组资源配置
+      url: "/commands-a-z/start-volumegroup-resourceprovisioning.html"
+  - title: 停止...
+    entries:
+    - title: 停止异步镜像组回滚
+      url: "/commands-a-z/stop-asyncmirrorgroup-rolechange.html"
+    - title: 停止cgsnapimage回滚
+      url: "/commands-a-z/stop-cgsnapimage-rollback.html"
+    - title: 停止cgsnapvolume
+      url: "/commands-a-z/stop-cgsnapvolume.html"
+    - title: 停止ConsistencyGroup pendingsnapimagecn丛
+      url: "/commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html"
+    - title: 停止diskpool locate
+      url: "/commands-a-z/stop-diskpool-locate.html"
+    - title: 停止驱动器定位
+      url: "/commands-a-z/stop-drive-locate.html"
+    - title: 停止驱动器更换
+      url: "/commands-a-z/stop-drive-replace.html"
+    - title: 停止驱动器通道故障诊断
+      url: "/commands-a-z/stop-drivechannel-faultdiagnostics.html"
+    - title: 停止驱动器通道定位
+      url: "/commands-a-z/stop-drivechannel-locate.html"
+    - title: 停止pendingsnapimageecn之间 的创建
+      url: "/commands-a-z/stop-pendingsnapimagecreation.html"
+    - title: 停止SnapImage回滚
+      url: "/commands-a-z/stop-snapimage-rollback.html"
+    - title: 停止snapvolume
+      url: "/commands-a-z/stop-snapvolume.html"
+    - title: 停止ssdcache locate
+      url: "/commands-a-z/stop-ssdcache-locate.html"
+    - title: 停止ssdcache性能图块化
+      url: "/commands-a-z/stop-ssdcache-performancemodeling.html"
+    - title: 停止storageArray configdbdiagnostic
+      url: "/commands-a-z/stop-storagearray-configdbdiagnostic.html"
+    - title: 停止storageArray drivefirmwaredownload
+      url: "/commands-a-z/stop-storagearray-drivefirmwaredownload.html"
+    - title: 停止storageArray iscsisession
+      url: "/commands-a-z/stop-storagearray-iscsisession.html"
+    - title: 停止storageArray locate
+      url: "/commands-a-z/stop-storagearray-locate.html"
+    - title: 停止托盘定位
+      url: "/commands-a-z/stop-tray-locate.html"
+    - title: 停止卷复制目标源
+      url: "/commands-a-z/stop-volumecopy-target-source.html"
+    - title: 停止volumegroup locate
+      url: "/commands-a-z/stop-volumegroup-locate.html"
+  - title: 暂停...
+    entries:
+    - title: 暂停异步镜像组
+      url: "/commands-a-z/suspend-asyncmirrorgroup.html"
+    - title: 暂停ssdcache
+      url: "/commands-a-z/suspend-ssdcache.html"
+    - title: 暂停SyncMirror 主节点
+      url: "/commands-a-z/suspend-syncmirror-primaries.html"
+- title: 五
+  entries:
+  - title: 验证storageArray安全密钥
+    url: "/commands-a-z/validate-storagearray-securitykey.html"

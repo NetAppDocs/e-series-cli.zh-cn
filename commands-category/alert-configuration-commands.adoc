@@ -1,0 +1,85 @@
+---
+permalink: commands-category/alert-configuration-commands.html 
+sidebar: sidebar 
+keywords: configuration, commands, alert, embedded 
+summary: 警报配置命令 
+---
+= 警报配置命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 嵌入式SNMP配置
+
+link:../commands-a-z/create-snmpcommunity.html["注册SNMP社区"]
+
+link:../commands-a-z/create-snmptrapdestination.html["注册SNMP陷阱目标"]
+
+link:../commands-a-z/show-allsnmpcommunities.html["显示SNMP社区"]
+
+link:../commands-a-z/show-snmpsystemvariables.html["显示SNMP MIB II系统组变量"]
+
+link:../commands-a-z/start-snmptrapdestination.html["测试SNMP陷阱目标"]
+
+link:../commands-a-z/delete-snmpcommunity.html["取消注册SNMP社区"]
+
+link:../commands-a-z/delete-snmptrapdestination.html["取消注册SNMP陷阱目标"]
+
+link:../commands-a-z/set-snmpcommunity.html["更新SNMP社区"]
+
+link:../commands-a-z/set-snmpsystemvariables.html["更新SNMP MIB II系统组变量"]
+
+link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["更新SNMP陷阱目标"]
+
+
+
+== 电子邮件警报配置—E2700或E5600阵列
+
+link:../commands-a-z/set-emailalert.html["配置电子邮件警报设置"]
+
+link:../commands-a-z/set-event-alert.html["设置事件警报筛选"]
+
+link:../commands-a-z/show-blockedeventalertlist.html["显示阻止的事件"]
+
+link:../commands-a-z/smcli-alerttest.html["测试警报"]
+
+
+
+== SSD缓存命令
+
+link:../commands-a-z/clear-emailalert-configuration.html["清除电子邮件警报配置"]
+
+link:../commands-a-z/set-emailalert.html["配置电子邮件警报设置"]
+
+link:../commands-a-z/delete-emailalert.html["删除电子邮件警报收件人"]
+
+link:../commands-a-z/show-emailalert-summary.html["显示电子邮件警报配置"]
+
+link:../commands-a-z/start-emailalert-test.html["测试电子邮件警报配置"]
+
+
+
+== 系统日志配置
+
+link:../commands-a-z/clear-syslog-configuration.html["清除系统日志配置"]
+
+link:../commands-a-z/set-syslog.html["配置系统日志设置"]
+
+link:../commands-a-z/create-storagearray-syslog.html["创建存储阵列系统日志配置"]
+
+link:../commands-a-z/delete-storagearray-syslog.html["删除存储阵列系统日志配置"]
+
+link:../commands-a-z/delete-syslog.html["删除系统日志服务器"]
+
+link:../commands-a-z/show-storagearray-syslog.html["显示存储阵列系统日志配置"]
+
+link:../commands-a-z/show-syslog-summary.html["显示系统日志配置"]
+
+link:../commands-a-z/start-storagearray-syslog-test.html["启动存储阵列系统日志测试"]
+
+link:../commands-a-z/start-syslog-test.html["测试系统日志配置"]
+
+link:../commands-a-z/set-storagearray-syslog.html["更新存储阵列系统日志配置"]

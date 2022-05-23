@@ -1,0 +1,605 @@
+---
+permalink: commands-a-z/set-controller-hostport.html 
+sidebar: sidebar 
+keywords: set, controller, host, port, properties 
+summary: set controller hostPort命令可更改以下类型主机端口的网络属性：iSCSI、iSER、基于InfiniBand的NVMe和基于RoCE的NVMe。属性更改包括IPv4和IPv6属性、端口速度和最大帧有效负载。 
+---
+= 设置控制器主机端口属性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set controller hostPort`命令可更改以下类型主机端口的网络属性：iSCSI、iSER、基于InfiniBand的NVMe和基于RoCE的NVMe。属性更改包括IPv4和IPv6属性、端口速度和最大帧有效负载。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令将替换已弃用的 xref:set-controller-iscsihostport.adoc[设置iSCSI主机端口网络连接属性] 命令：
+
+====
+
+
+== 语法
+
+[listing]
+----
+
+set controller [(a|b)] hostPort ["portLabel"[, "physical"|"virtual"]]
+    (IPV4Address=(0-255).(0-255).(0-255).(0-255) |
+    IPv6LocalAddress=(FE80):(0000):(0000):(0000):(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+    IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+    IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+    enableIPv4=(TRUE | FALSE) |
+    enableIPv6=(TRUE | FALSE) |
+    enableIPv4Vlan=(TRUE | FALSE) |
+    enableIPv6Vlan=(TRUE | FALSE) |
+    enableIPv4Priority=(TRUE | FALSE) |
+    enableIPv6Priority=(TRUE | FALSE) |
+    fecMode=(auto:none:reedSolomon:fireCode) |
+    IPv4ConfigurationMethod=(static | dhcp) |
+    IPv6ConfigurationMethod=(static | auto) |
+    IPv4GatewayIP=(0-255).(0-255).(0-255).(0-255) |
+    IPv6HopLimit=[0-255] |
+    IPv6NdDetectDuplicateAddress=[0-255] |
+    IPv6NdReachableTime=[0-65535] |
+    IPv6NdRetransmitTime=[0-65535] |
+    IPv6NdTimeOut=[0-65535] |
+    IPv4Priority=[0-7] |
+    IPv6Priority=[0-7] |
+    IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255) |
+    IPv4VlanId=[1-4094] |
+    IPv6VlanId=[1-4094] |
+    maxFramePayload=[1500-9000] |
+    tcpListeningPort=(3260 | [49152-65535]) |
+    portSpeed=(autoNegotiate | 10 | 25 | 40 | 50 | 100))
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+用于指定要为其定义属性的控制器。
+
+
+
+ a| 
+`hostPort`
+ a| 
+用于指定要为其定义属性的主机端口标签。仅对于200 Gb主机端口、您可以指定`physical`或`virtual`作为参数。
+
+[NOTE]
+====
+如果未为200 Gb主机端口连接指定值、则默认情况下会设置`physical`参数。
+
+====
+
+
+ a| 
+`IPV4Address`
+ a| 
+用于按以下格式输入地址：(0-255).（0-255).（0-255).（0-255).（0-255)。(0-255)。
+
+
+
+ a| 
+`IPV6LocalAddress`
+ a| 
+允许您按以下格式输入地址：(fe80)：(0000)：(0000)：(0000)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)。
+
+
+
+ a| 
+`IPv6RoutableAddress`
+ a| 
+允许您按以下格式输入地址：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)。
+
+
+
+ a| 
+`IPV6路由器 地址`
+ a| 
+允许您按以下格式输入地址：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)。
+
+
+
+ a| 
+`enableIPV4`
+ a| 
+用于启用IPv4。
+
+
+
+ a| 
+`enableIPV6`
+ a| 
+用于启用IPv6。IPv6地址空间为128位。它由八个16位十六进制块表示、这些块以冒号分隔。
+
+
+
+ a| 
+`enableIPv4Vlan`
+ a| 
+用于启用IPv4 VLAN。VLAN 是一种逻辑网络，其行为与相同交换机，相同路由器或这两者所支持的其他物理和虚拟局域网（ LAN ）在物理上是分开的。
+
+
+
+ a| 
+`enableIPv6Vlan`
+ a| 
+用于启用IPv6 VLAN。VLAN 是一种逻辑网络，其行为与相同交换机，相同路由器或这两者所支持的其他物理和虚拟局域网（ LAN ）在物理上是分开的。
+
+
+
+ a| 
+`enableIPv4Priority`
+ a| 
+用于启用用于确定访问网络的优先级的参数。在以太网等共享局域网（ LAN ）环境中，许多工作站可能会争用网络访问权限。访问权限按先到先得原则提供。两个工作站可能会同时尝试访问网络，这会导致两个工作站重新关闭并等待，然后再重试。对于只有一个工作站连接到交换机端口的交换式以太网，此过程会最小化。
+
+
+
+ a| 
+`enableIPv6Priority`
+ a| 
+用于启用用于确定访问网络的优先级的参数。在以太网等共享局域网（ LAN ）环境中，许多工作站可能会争用网络访问权限。访问权限按先到先得原则提供。两个工作站可能会同时尝试访问网络，这会导致两个工作站重新关闭并等待，然后再重试。对于只有一个工作站连接到交换机端口的交换式以太网，此过程会最小化。
+
+
+
+ a| 
+`fecMode`
+ a| 
+用于将主机端口的FEC模式设置为以下选项之一：
+
+* `auto`
+* `无`
+* `reedSolomon`
+* `FireCode`
+
+
+
+
+ a| 
+`IPv4ConfigurationMethod`
+ a| 
+用于设置IPv4静态地址或DHCP地址。
+
+
+
+ a| 
+`IPv6ConfigurationMethod`
+ a| 
+用于设置IPv6静态地址或DHCP地址。
+
+
+
+ a| 
+`IPv4GatewayIP`
+ a| 
+用于按以下格式输入网关地址：(0-255).（0-255).（0-255).（0-255).（0-255)。
+
+
+
+ a| 
+`IPv6HopLimit`
+ a| 
+用于配置IPv6数据包可以遍历的最大跃点数。默认值为64。
+
+
+
+ a| 
+`IPv6NDDetectDuplicateAddress`
+ a| 
+用于设置要在尝试确定IP地址唯一性时发送的邻居请求消息的数量。
+
+
+
+ a| 
+`IPv6NDReachbleTime`
+ a| 
+用于设置将远程IPv6节点视为可访问的时间量(以毫秒为单位)。默认值为30000毫秒。
+
+
+
+ a| 
+`IPv6NDRetransmitTime`
+ a| 
+用于设置继续将数据包重新传输到IPv6节点的时间量(以毫秒为单位)。默认值为1000毫秒。
+
+
+
+ a| 
+`IPv6NDTimeOut`
+ a| 
+用于设置IPv6节点的超时值(以毫秒为单位)。默认值为30000毫秒。
+
+
+
+ a| 
+`IPv4Priority`
+ a| 
+用于设置IPv4数据包的优先级分配。
+
+
+
+ a| 
+`IPv6优先级`
+ a| 
+用于设置IPv6数据包的优先级分配。
+
+
+
+ a| 
+`IPv4SubnetMask`
+ a| 
+允许您以以下格式输入子网掩码地址：(0-255).（0-255).（0-255).（0-255).(0-255)。
+
+
+
+ a| 
+`IPv4VlanId`
+ a| 
+用于设置IPv4 VLAN ID。
+
+
+
+ a| 
+`IPv6VlanId`
+ a| 
+用于设置IPv6 VLAN ID。
+
+
+
+ a| 
+`maxFramePayload`
+ a| 
+用于设置在网络中发送的数据包或帧的最大大小。标准以太网帧的有效负载部分设置为1500、巨型以太网帧设置为9000。使用巨型帧时、网络路径中的所有设备都应能够处理较大的帧大小。默认值为每帧1500字节。
+
+[NOTE]
+====
+要确保NVMe over RoCE环境中的最佳性能、请将帧大小配置为4、200。
+
+====
+
+
+ a| 
+`tcpListeningPort`
+ a| 
+用于设置用于侦听启动程序的iSCSI登录的TCP端口号。默认端口为3260。
+
+
+
+ a| 
+`portSpeed`
+ a| 
+用于设置端口应通信的速度、以每秒兆位数(MB/秒)为单位。
+
+[NOTE]
+====
+只有25 Gbps iSCSI主机接口卡和100 Gbps以太网主机接口卡才支持此参数。对于25 Gbps iSCSI主机接口卡、更改一个端口的速度会更改卡上所有四个端口的速度。在这种情况下、允许的选项为10或25。对于8.50版中新增的100 Gbps以太网主机接口卡、更改一个端口的速度不会影响该卡上的其他端口。后一种情况下允许的选项包括自动协商、10、25、40、50、 或100GbE。
+
+====
+|===
+
+
+== 按主机端口类型提供参数支持
+
+参数支持因主机端口类型(iSCSI、iSER、基于InfiniBand的NVMe或基于RoCE的NVMe)而异、如下表所述：
+
+[cols="5*"]
+|===
+| 参数 | iSCSI | iSER | 基于InfiniBand的NVMe | 基于 RoCE 的 NVMe 
+
+
+ a| 
+`IPV4Address`
+ a| 
+是的。
+ a| 
+是的。
+ a| 
+是的。
+ a| 
+是的。
+
+
+
+ a| 
+`IPV6LocalAddress`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+是的。
+
+
+
+ a| 
+`IPv6RoutableAddress`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+是的。
+
+
+
+ a| 
+`IPV6路由器 地址`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+是的。
+
+
+
+ a| 
+`enableIPV4`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+是的。
+
+
+
+ a| 
+`enableIPV6`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+是的。
+
+
+
+ a| 
+`enableIPv4Vlan`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+`enableIPv6Vlan`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+`enableIPv4Priority`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+`enableIPv6Priority`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+`IPv4ConfigurationMethod`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+是的。
+
+
+
+ a| 
+`IPv6ConfigurationMethod`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+是的。
+
+
+
+ a| 
+`IPv4GatewayIP`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+是的。
+
+
+
+ a| 
+`IPv6HopLimit`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+`IPv6NDDetectDuplicateAddress`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+`IPv6NDReachbleTime`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+`IPv6NDRetransmitTime`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+`IPv6NDTimeOut`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+`IPv4Priority`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+`IPv6优先级`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+`IPv4SubnetMask`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+是的。
+
+
+
+ a| 
+`IPv4VlanId`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+`IPv6VlanId`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+`maxFramePayload`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+是的。
+
+
+
+ a| 
+`tcpListeningPort`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+`portSpeed`
+ a| 
+是的。
+ a| 
+ a| 
+ a| 
+是的。
+
+|===
+
+
+== 最低固件级别
+
+8.41
+
+8.50 -添加了有关基于RoCE的NVMe环境的信息。
+
+11.70.1增加了`fecMode`参数。

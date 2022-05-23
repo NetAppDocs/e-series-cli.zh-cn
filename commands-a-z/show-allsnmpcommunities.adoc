@@ -1,0 +1,121 @@
+---
+permalink: commands-a-z/show-allsnmpcommunities.html 
+sidebar: sidebar 
+keywords: show, snmp, communities 
+summary: 'show allSnmpCommunities命令可返回有关为存储阵列定义的简单网络管理协议(Simple Network Management Protocol、SNMP)社区的信息。SNMP社区是一系列设备、例如路由器、交换机、打印机、存储设备、 组合在一起、用于管理和监控设备。' 
+---
+= 显示SNMP社区
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show allSnmpCommunitis`命令可返回有关为存储阵列定义的简单网络管理协议(Simple Network Management Protocol、SNMP)社区的信息。SNMP社区是一系列设备、例如路由器、交换机、打印机、存储设备、 组合在一起、用于管理和监控设备。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员或存储监控角色。
+
+
+
+== 环境
+
+返回的信息包括：
+
+* 社区总数
+* 陷阱目标的总数
+* SNMP社区的名称
+
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show pass:quotes[(allSnmpCommunities |
+snmpCommunity communityName="_snmpCommunityName_"] |
+snmpCommunities pass:quotes[[_snmpCommunityName1_ ... _snmpCommunityNameN_]])
+[summary]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有SnmpCommunications`
+ a| 
+此参数返回有关存储阵列中所有SNMP社区的信息。
+
+
+
+ a| 
+`社区名称`
+ a| 
+要检索其信息的SNMP社区的名称。将SNMP社区名称用双引号("")括起来。
+
+
+
+ a| 
+`snmpCommunities`
+ a| 
+要检索其信息的多个SNMP社区的名称。使用以下规则输入SNMP社区的名称：
+
+* 请将所有名称用方括号([])括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+
+
+ a| 
+`summary`
+ a| 
+此参数返回SNMP社区总数和SNMP陷阱目标总数的列表。使用此参数时、将省略所有详细信息。
+
+|===
+
+
+== 注释：
+
+SNMP支持管理器和受管设备所属的一个或多个_communities_。SNMP请求在通过网络传递的数据包中包含一个_community string_、该数据包充当粗略的密码。SNMP代理可以使用无法识别的社区字符串拒绝GET或SET请求。从代理发送到管理器的陷阱通知也包含社区字符串。
+
+嵌入式SNMP代理同时支持IPv4和IPv6。
+
+此命令将返回类似于此示例的SNMP社区信息。
+
+[listing]
+----
+SNMP COMMUNITIES------------------------------
+SUMMARY
+   Total SNMP Communities: 2
+   Total SNMP Trap Destinations: 1
+DETAILS
+   SNMP Community: TestComm1
+   SNMP Permission: Read Only
+      Associated Trap Destination:
+      Trap Receiver IP Address: 10.113.173.133
+      Send Authentication Failure Traps: true
+   SNMP Community: Test2
+   SNMP Permission: Read Only
+      Associated Trap Destination:
+----
+
+
+== 最低固件级别
+
+8.30

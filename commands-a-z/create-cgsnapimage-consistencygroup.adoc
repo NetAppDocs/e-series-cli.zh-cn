@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/create-cgsnapimage-consistencygroup.html 
+sidebar: sidebar 
+keywords: create, consistency group, snapshot image 
+summary: 他create cgSnapImage ConsistencyGroup命令会为属于快照一致性组的每个基础卷创建一个新的快照映像。 
+---
+= 创建一致性组快照映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`create cgSnapImage ConsistencyGroup`命令可为属于快照一致性组的每个基础卷创建一个新的快照映像。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+create cgSnapImage consistencyGroup=pass:quotes[_"consistencyGroupName"_]
+----
+
+
+== 参数
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`ConsistencyGroup`
+ a| 
+要为其创建快照映像的一致性组的名称。将一致性组名称用双引号("")括起来。
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、连字符和下划线的任意组合。名称最多可以包含30个字符。
+
+此命令会导致在创建快照映像之前、对一致性组中的每个基础卷执行的所有待定I/O操作均被清空并暂停。如果无法成功为所有一致性组成员创建所有快照映像、则此操作将失败、并且不会创建新的快照映像。
+
+通常、快照一致性组的所有成员都具有相同数量的快照映像。向快照一致性组添加新成员时、此新成员缺少先前在快照一致性组的已建立成员上创建的快照映像。这不是错误情况。如果请求删除或回滚的快照映像仅存在于一小部分快照一致性组成员上、则仅会影响实际存在指定快照映像的成员。
+
+
+
+== 最低固件级别
+
+7.83.

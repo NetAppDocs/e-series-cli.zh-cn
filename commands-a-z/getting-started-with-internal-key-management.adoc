@@ -1,0 +1,34 @@
+---
+permalink: commands-a-z/getting-started-with-internal-key-management.html 
+sidebar: sidebar 
+keywords: security key, string, characters, secure enabled, drive, controllers, storage, array, internal, key, management, create, maintain, persistent, memory 
+summary: 安全密钥是一个字符串、在存储阵列中启用了安全保护的驱动器和控制器之间共享。使用内部密钥管理时、您可以在控制器的永久性内存上创建和维护安全密钥。 
+---
+= 开始使用内部密钥管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+安全密钥是一个字符串、在存储阵列中启用了安全保护的驱动器和控制器之间共享。使用内部密钥管理时、您可以在控制器的永久性内存上创建和维护安全密钥。
+
+有关使用内部安全密钥的概念信息、请参见SANtricity System Manager联机帮助。
+
+以下是使用内部安全密钥的基本工作流：
+
+. *创建安全密钥*
+. *设置安全密钥*
+. *验证安全密钥*
+
+
+
+
+== 工作流步骤
+
+以下命令可帮助您开始使用内部安全密钥：
+
+. 使用`create storageArray securityKey`命令创建存储阵列安全密钥。请参见 xref:create-storagearray-securitykey.adoc[创建存储阵列安全密钥]。
+. 使用`set storageArray securityKey`命令设置存储阵列安全密钥。请参见 xref:set-storagearray-securitykey.adoc[设置存储阵列安全密钥]。
+. 使用`validate storageArray securityKey`命令验证安全密钥。请参见 xref:validate-storagearray-securitykey.adoc[验证存储阵列安全密钥]。
+

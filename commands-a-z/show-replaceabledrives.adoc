@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/show-replaceabledrives.html 
+sidebar: sidebar 
+keywords: show, replaceable, drives 
+summary: show replaceableDrives命令可显示存储阵列中的所有可更换驱动器。 
+---
+= 显示可更换驱动器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show replaceableDrives`命令可显示存储阵列中的所有可更换驱动器。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+对于存储阵列中的每个可更换驱动器、此命令将返回以下信息：
+
+* 托盘位置和插槽位置
+* 驱动器所属的卷组名称
+* 全球通用名称(WWN)
+* 驱动器的状态
+
+
+
+
+== 语法
+
+[listing]
+----
+show replaceableDrives
+----
+
+
+== 示例输出
+
+[listing]
+----
+Replaceable drive at Tray 0, Slot 3
+                Volume group: 2
+                World-wide name: 5000c50028785aff0000000000000000
+                Status: Removed
+Replaceable drive at Tray 0, Slot 23
+                Volume group: 2
+                World-wide name: 5000c500095d46df0000000000000000
+                Status: Removed
+Replaceable drive at Tray 0, Slot 24
+                Volume group: 2
+                World-wide name: 5000c500287854d70000000000000000
+                Status: Removed
+----
+
+
+== 最低固件级别
+
+7.10.

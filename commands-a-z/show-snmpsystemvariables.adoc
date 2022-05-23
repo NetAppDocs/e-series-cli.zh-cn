@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/show-snmpsystemvariables.html 
+sidebar: sidebar 
+keywords: show, snmp, mib ii, system, group, variables 
+summary: 'show snmpSystemVariables命令可返回有关简单网络管理协议(Simple Network Management Protocol、SNMP)系统变量的信息。系统变量保存在管理信息库II (Management Information Base II、MIB-II)数据库中。' 
+---
+= 显示SNMP MIB II系统组变量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`ssnmpSystemVariables`命令可返回有关简单网络管理协议(Simple Network Management Protocol、SNMP)系统变量的信息。系统变量保存在管理信息库II (Management Information Base II、MIB-II)数据库中。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员或存储监控角色。
+
+
+
+== 语法
+
+[listing]
+----
+show snmpSystemVariables
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+此命令将返回与此示例类似的SNMP系统变量信息。
+
+[listing]
+----
+SYSTEM VARIABLES
+    Sys Name: NONE
+    Sys Contact: NONE
+    Sys Location: NONE
+----
+
+
+== 最低固件级别
+
+8.30

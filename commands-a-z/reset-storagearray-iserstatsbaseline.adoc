@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/reset-storagearray-iserstatsbaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, iser, baseline 
+summary: reset storageArray iserStatsBaseline命令会将存储阵列的iSER基线重置为0。 
+---
+= 重置存储阵列iSER基线
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`reset storageArray iserStatsBaseline`命令可将存储阵列的iSER基线重置为0。
+
+
+
+== 支持的阵列
+
+此命令可对任何单个存储阵列执行适用场景 操作、包括E2700、E5600、E2800和E5700阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+[NOTE]
+====
+此命令已弃用、并替换为 xref:reset-storagearray-hostportstatisticsbaseline.adoc[重置存储阵列主机端口统计信息基线] 命令：
+
+====
+
+
+== 语法
+
+[listing]
+----
+reset storageArray iserStatsBaseline
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+此命令不会实际重置硬件和固件中保留的原始计数。相反、固件会为当前计数器值创建一个快照、并使用这些值在检索统计信息时报告计数差异。新的基线时间将应用于两个控制器、以便控制器计数彼此同步。如果一个控制器重置而另一个控制器未重置、则计数器将不再同步。客户端会发现控制器未同步、因为两个控制器报告的时间戳数据以及统计信息不同。
+
+
+
+== 最低固件级别
+
+8.20
+
+8.41此命令已弃用。

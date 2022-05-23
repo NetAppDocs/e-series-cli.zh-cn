@@ -1,0 +1,145 @@
+---
+permalink: commands-category/replication-commands.html 
+sidebar: sidebar 
+keywords: replication, commands, consistency group, command, repository volume, 
+summary: 复制命令 
+---
+= 复制命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 一致性组命令
+
+link:../commands-a-z/set-consistencygroup-addcgmembervolume.html["将成员添加到一致性组"]
+
+link:../commands-a-z/create-consistencygroup.html["创建一致性组"]
+
+link:../commands-a-z/create-cgsnapimage-consistencygroup.html["创建一致性组快照映像"]
+
+link:../commands-a-z/create-cgsnapvolume.html["创建一致性组快照卷"]
+
+link:../commands-a-z/create-mapping-cgsnapvolume.html["创建一致性组快照卷映射"]
+
+link:../commands-a-z/delete-consistencygroup.html["删除一致性组"]
+
+link:../commands-a-z/delete-cgsnapimage-consistencygroup.html["删除一致性组快照映像"]
+
+link:../commands-a-z/delete-sgsnapvolume.html["删除一致性组快照卷"]
+
+link:../commands-a-z/remove-member-volume-from-consistency-group.html["从一致性组中删除成员卷"]
+
+link:../commands-a-z/resume-cgsnapvolume.html["恢复一致性组快照卷"]
+
+link:../commands-a-z/set-consistency-group-attributes.html["设置一致性组属性"]
+
+link:../commands-a-z/set-cgsnapvolume.html["设置一致性组快照卷"]
+
+link:../commands-a-z/show-consistencygroup.html["显示一致性组"]
+
+link:../commands-a-z/show-cgsnapimage.html["显示一致性组快照映像"]
+
+link:../commands-a-z/start-cgsnapimage-rollback.html["启动一致性组快照回滚"]
+
+link:../commands-a-z/stop-cgsnapimage-rollback.html["停止一致性组快照回滚"]
+
+link:../commands-a-z/stop-cgsnapvolume.html["停止一致性组快照卷"]
+
+link:../commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html["停止一致性组上的待定快照映像"]
+
+
+
+== 存储库卷分析命令
+
+link:../commands-a-z/check-repositoryconsistency.html["检查存储库一致性"]
+
+
+
+== snapshot group命令
+
+link:../commands-a-z/create-snapgroup.html["创建快照组"]
+
+link:../commands-a-z/delete-snapvolume.html["删除Snapshot卷"]
+
+link:../commands-a-z/revive-snapgroup.html["恢复快照组"]
+
+link:../commands-a-z/set-snapgroup.html["设置快照组属性"]
+
+link:../commands-a-z/set-snapgroup-mediascanenabled.html["设置Snapshot组介质扫描"]
+
+link:../commands-a-z/set-snapgroup-increase-decreaserepositorycapacity.html["设置Snapshot组存储库卷容量"]
+
+link:../commands-a-z/set-snapgroup-enableschedule.html["设置Snapshot组计划"]
+
+link:../commands-a-z/set-volume-ssdcacheenabled.html["为卷设置SSD缓存"]
+
+link:../commands-a-z/show-snapgroup.html["显示快照组"]
+
+link:../commands-a-z/stop-pendingsnapimagecreation.html["停止快照组待定快照映像"]
+
+
+
+== snapshot image命令
+
+link:../commands-a-z/create-snapimage.html["创建快照映像"]
+
+link:../commands-a-z/delete-snapimage.html["删除快照映像"]
+
+link:../commands-a-z/resume-snapimage-rollback.html["恢复快照映像回滚"]
+
+link:../commands-a-z/show-snapimage.html["显示快照映像"]
+
+link:../commands-a-z/start-snapimage-rollback.html["启动快照映像回滚"]
+
+link:../commands-a-z/stop-snapimage-rollback.html["停止快照映像回滚"]
+
+
+
+== snapshot volume命令
+
+link:../commands-a-z/create-read-only-snapshot-volume.html["创建只读Snapshot卷"]
+
+link:../commands-a-z/create-snapshot-volume.html["创建Snapshot卷"]
+
+link:../commands-a-z/delete-snapgroup.html["删除快照组"]
+
+link:../commands-a-z/set-snapvolume.html["重命名快照卷"]
+
+link:../commands-a-z/resume-snapvolume.html["恢复快照卷"]
+
+link:../commands-a-z/revive-snapvolume.html["恢复快照卷"]
+
+link:../commands-a-z/set-snapvolume-converttoreadwrite.html["将只读Snapshot卷设置为读/写卷"]
+
+link:../commands-a-z/set-snapvolume-mediascanenabled.html["设置Snapshot卷介质扫描"]
+
+link:../commands-a-z/set-snapvolume-increase-decreaserepositorycapacity.html["设置Snapshot卷存储库卷容量"]
+
+link:../commands-a-z/set-volume-ssdcacheenabled.html["为卷设置SSD缓存"]
+
+link:../commands-a-z/show-snapvolume.html["显示Snapshot卷"]
+
+link:../commands-a-z/stop-snapvolume.html["停止Snapshot卷"]
+
+
+
+== volume copy命令
+
+link:../commands-a-z/create-volumecopy.html["创建卷副本"]
+
+link:../commands-a-z/recopy-volumecopy-target.html["重新复制卷副本"]
+
+link:../commands-a-z/remove-volumecopy-target.html["删除卷副本"]
+
+link:../commands-a-z/set-volumecopy-target.html["设置卷副本"]
+
+link:../commands-a-z/show-volumecopy.html["显示卷副本"]
+
+link:../commands-a-z/show-volumecopy-sourcecandidates.html["显示卷副本源候选项"]
+
+link:../commands-a-z/show-volumecopy-source-targetcandidates.html["显示卷副本目标候选项"]
+
+link:../commands-a-z/stop-volumecopy-target-source.html["停止卷复制"]

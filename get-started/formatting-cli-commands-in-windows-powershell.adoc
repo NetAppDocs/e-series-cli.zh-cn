@@ -1,0 +1,35 @@
+---
+permalink: get-started/formatting-cli-commands-in-windows-powershell.html 
+sidebar: sidebar 
+keywords: format, rules, cli, commands, windows, powershell 
+summary: Windows PowerShell是一个交互式脚本Shell、可用于访问命令行工具。 
+---
+= Windows PowerShell中CLI命令的格式规则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+Windows PowerShell是一个交互式脚本Shell、可用于访问命令行工具。Windows PowerShell在Windows命令提示符处进行了改进、提供了一组更强大的命令和脚本功能。您可以在Windows PowerShell中运行所有命令行界面和脚本命令；但是、Windows PowerShell具有一些独特的格式要求。这些要求如下：
+
+* 以句点和正斜杠(./)开头的所有SMcli命令
+* 必须将SMcli包装程序标识为扩展名为.exe的可执行命令(smcli.exe)
+* 将此脚本命令用单引号括起来("")
+* 名称、文件路径或值中的双引号必须在每个双引号字符(\")前面有一个反斜杠
+
+
+以下是在Windows PowerShell中创建存储阵列名称的命令行界面命令示例。请注意、脚本命令使用单引号作为分隔符、而存储阵列名称周围使用反斜杠双引号、在命令语法中标识为`userLabel`。
+
+[listing]
+----
+PS C:\...\StorageManager\client> ./SMcli.exe 123.45.67.88 123.45.67.89
+-c ’set storageArray userLabel=\"Engineering\";’
+----
+以下是在Windows PowerShell中启用高级功能的命令行界面命令示例。请注意在高级功能密钥的文件路径之前使用反斜杠双引号。
+
+[listing]
+----
+PS C:\...\StorageManager\client> ./SMcli.exe 123.45.67.88 123.45.67.89
+-c ’enable storageArray feature file=\"C:\licenseKey.bin\";’
+----
+在前面的示例中、使用大写字母和小写字母。此用途有助于明确命令的格式。但是、Windows PowerShell不区分大小写、不需要特定使用情形。

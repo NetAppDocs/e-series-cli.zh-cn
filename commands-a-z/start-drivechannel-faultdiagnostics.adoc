@@ -1,0 +1,145 @@
+---
+permalink: commands-a-z/start-drivechannel-faultdiagnostics.html 
+sidebar: sidebar 
+keywords: start, drive channel, fault, isolation, diagnostics 
+summary: start driveChannel faultDiagnostics命令运行驱动器通道故障隔离诊断并存储结果。 
+---
+= 启动驱动器通道故障隔离诊断
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sStart driveChannel faultDiagnostics`命令可运行驱动器通道故障隔离诊断并存储结果。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+对于固件版本8.10、已弃用`sStart driveChannel faultDiagnostics`命令。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+start driveChannel [(1 | 2 | 3 | 4 | 5 | 6 | 7 | 8)]
+controller [(a|b)] faultDiagnostics
+testDevices=[all |
+controller=(a|b) |
+esms=pass:quotes[[_trayID1_ (left | right), ... , _trayIDN_] (left | right)] |
+drivespass:quotes[[_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_]]
+|[dataPattern=(fixed | pseudoRandom) |
+patternNumber=[pass:quotes[(_0xhexadecimal_ | _number_)]] |
+pass:quotes[maxErrorCount=_integer_] |
+pass:quotes[testIterations=_integer_] |
+pass:quotes[timeout=_timeInterval_]]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`d驱动器通道`
+ a| 
+要查找的驱动器通道的标识符编号。驱动器通道的标识符编号的有效值为`1`、`2`、`3`、`4`、`5`、 `6`、`7`或`8`。将驱动器通道标识符编号括在方括号()中。
+
+
+
+ a| 
+`控制器`
+ a| 
+要测试的控制器的标识符字母。有效控制器标识符值为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器将控制器标识符括在方括号()中。
+
+
+
+ a| 
+`testDevices`
+ a| 
+要测试的设备(控制器、环境服务模块[ESM]或驱动器)的标识符。您可以指定`all`或输入要诊断的设备的特定标识符。`控制器`标识符为`a`或`b`、其中`a`是插槽A中的RAID控制器模块、`b`是插槽B中的RAID控制器模块
+
+`ESM`标识符是托盘ID和左侧或右侧、其中托盘ID值为0到99、从背面查看驱动器托盘时、确定左侧或右侧。
+
+`d驱动器`标识符包括托盘标识符、托盘包含抽盒时的抽盒标识符以及插槽标识符。
+
+对于大容量驱动器托盘、请指定驱动器的托盘ID值、抽盒ID值和插槽ID值。对于低容量驱动器托盘、请指定驱动器的托盘ID值和插槽ID值。托盘ID值为`0`到`99`。抽盒ID值为`1`到`5`。
+
+所有插槽ID最大值均为24。插槽ID值从0或1开始、具体取决于托盘型号。与E2800和E5700控制器兼容的驱动器托盘的插槽ID编号从0开始。与E2700和E5600控制器兼容的驱动器托盘的插槽ID编号从1开始。
+
+将托盘ID值、抽盒ID值和插槽ID值括在方括号()中。
+
+
+
+ a| 
+`dataPattern`
+ a| 
+要测试的重复性方法。
+
+
+
+ a| 
+`模式编号`
+ a| 
+要用于运行测试的十六进制数据模式。此数字可以是介于`0000`到`FFFF`之间的任何十六进制数字。您必须将`0x`置于前面、以指示十六进制数。
+
+
+
+ a| 
+`maxErrorCount`
+ a| 
+终止测试前要接受的错误数。
+
+
+
+ a| 
+`测试项`
+ a| 
+要重复测试的次数。
+
+
+
+ a| 
+`超时`
+ a| 
+要运行测试的时间长度(以分钟为单位)。
+
+|===
+
+
+== 注释：
+
+您可以输入多种类型的设备进行测试、并且可以输入多种类型的测试来运行。
+
+使用`sve driveChannel faultDiagnostics`命令和`stop driveChannel faultDiagnostics`命令以及`sStart driveChannel faultDiagnostics`命令。需要使用这些命令将诊断测试结果保存到文件中并停止诊断测试。
+
+有效的`patternNumber`条目示例为`0xA5a5`、`0x3C3C`、`8787`和`1234`。
+
+您也可以随时按`Ctrl+C`停止此命令。
+
+
+
+== 最低固件级别
+
+7.15

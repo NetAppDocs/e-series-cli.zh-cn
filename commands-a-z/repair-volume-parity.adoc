@@ -1,0 +1,86 @@
+---
+permalink: commands-a-z/repair-volume-parity.html 
+sidebar: sidebar 
+keywords: repair, volume, parity 
+summary: repair volume parity命令可修复卷上的奇偶校验错误。 
+---
+= 修复卷奇偶校验
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`repair volume parity`命令可修复卷上的奇偶校验错误。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[CAUTION]
+====
+如果卷奇偶校验和卷数据不匹配、则卷数据可能存在缺陷、而不是卷奇偶校验。如果需要、修复卷奇偶校验将无法修复有缺陷的卷数据。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+repair volume pass:quotes[[_volumeName_]] parity
+parityErrorFile=pass:quotes[_"filename"_]
+[verbose=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`卷`
+ a| 
+要修复奇偶校验的卷的名称。将卷名称括在方括号([])中。如果卷名称包含特殊字符或数字、则必须在方括号内用双引号("")将卷名称括起来。
+
+
+
+ a| 
+`参数错误文件`
+ a| 
+包含用于修复错误的奇偶校验错误信息的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\sup\parfile.txt"`
+
+[NOTE]
+====
+a `parityErrorFile`是先前的`check volume parity`操作的结果。
+
+====
+
+
+ a| 
+`verbose`
+ a| 
+用于捕获进度详细信息(例如完成百分比)以及在修复卷奇偶校验时显示信息的设置。要捕获进度详细信息、请将此参数设置为`true`。要防止捕获进度详细信息、请将此参数设置为`false`。
+
+|===
+
+
+== 最低固件级别
+
+6.10

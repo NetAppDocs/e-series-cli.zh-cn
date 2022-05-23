@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/set-storagearray-loginbanner.html 
+sidebar: sidebar 
+keywords: set, storage, array, login, banner 
+summary: 使用set storageArray loginbanner命令可以上传要用作登录横幅的文本文件。横幅文本可以包含建议通知和同意消息、在用户在SANtricity System Manager中建立会话之前或在用户运行命令之前、这些通知和同意消息会提供给用户。 
+---
+= 设置存储阵列登录横幅
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray loginbanner`命令可以上传要用作登录横幅的文本文件。横幅文本可以包含建议通知和同意消息、在用户在SANtricity System Manager中建立会话之前或在用户运行命令之前、这些通知和同意消息会提供给用户。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray loginBanner file="path_to_login_banner"
+----
+
+
+== 环境
+
+加载文本文件后、该文件将保存到存储阵列中。横幅文本将显示在SANtricity System Manager登录屏幕之前或运行命令之前。
+
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+存储登录横幅文本文件的文件路径和文件名。
+
+[NOTE]
+====
+登录横幅文件不能为空、并且必须为5 KB或更小。
+
+====
+|===
+
+
+== 最低固件级别
+
+8.41

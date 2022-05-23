@@ -1,0 +1,127 @@
+---
+permalink: commands-a-z/set-storagearray-isnsregistration.html 
+sidebar: sidebar 
+keywords: set, storage, array, isns, registration 
+summary: '使用set storageArray isnssRegistration命令可以列出IPv4或IPv6 Internet存储名称服务(iSNS)服务器上的存储阵列。' 
+---
+= 设置存储阵列iSNS注册
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray isnssRegistration`命令可以列出IPv4或IPv6 Internet存储名称服务(iSNS)服务器上的存储阵列。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== IPv4的语法
+
+[listing, subs="+macros"]
+----
+set storageArray isnsRegistration=(TRUE | FALSE)
+isnsIPv4ConfigurationMethod=[static | dhcp]
+isnsIPv4Address=pass:quotes[_ipAddress_]
+[isnsListeningPort]
+----
+
+
+== IPv6的语法
+
+[listing, subs="+macros"]
+----
+set storageArray isnsRegistration=(TRUE | FALSE)
+isnsIPv6Address=pass:quotes[_ipAddress_]
+[isnsListeningPort]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| Parameters | Description 
+
+
+ a| 
+`isnssRegistration`
+ a| 
+在iSNS服务器上注册iSCSI目标的方法。将参数设置为`true`以列出iSCSI目标。
+
+将此参数设置为`true`时、您还必须对IPv4配置使用以下参数：
+
+* `isnssIPV4ConfigurationMethod`
+* `isnssIPV4Address`
+
+
+将此参数设置为`true`时、您还必须对IPv6配置使用以下参数：
+
+* `isnssIPV6地址`
+
+
+您也可以使用`isnssListeningPort`参数定义端口监控器并管理服务器的流量。
+
+要从iSNS服务器中删除存储阵列的注册、请将此参数设置为`false`。
+
+
+
+ a| 
+`isnssIPv4ConfigurationMethod`
+ a| 
+要用于定义iSNS服务器配置的方法。您可以通过选择`static`来输入IPv4 iSNS服务器的IP地址。对于IPv4、您可以输入`dHCP`来选择让动态主机配置协议(DHCP)服务器选择iSNS服务器IP地址。要启用DHCP、必须将`isnssIPV4Address`参数设置为`0.0.0.0`。
+
+
+
+ a| 
+`isnssIPV4Address`
+ a| 
+用于连接到iSNS服务器的IPv4地址。请将此参数与IPv4配置的`static`值结合使用。如果您选择让DHCP服务器为IPv4 Internet iSNS服务器设置IP地址、则必须将`isnssIPV4Address`参数设置为`0.0.0.0`。
+
+
+
+ a| 
+`isnssIPv6Address`
+ a| 
+用于连接到iSNS服务器的IPv6地址。
+
+
+
+ a| 
+`isnssListeningPort`
+ a| 
+要用于iSNS服务器侦听端口的端口号。侦听端口的值范围为`49152`到`65535`。默认值为`3205`。
+
+侦听端口位于服务器上、并执行以下活动：
+
+* 监控传入的客户端连接请求
+* 管理服务器的流量
+
+
+当客户端请求与服务器进行网络会话时、侦听器会收到实际请求。如果客户端信息与侦听器信息匹配、则侦听器会授予与数据库服务器的连接。
+
+|===
+
+
+== 注释：
+
+iSNS协议有助于在TCP/IP网络上自动发现、管理和配置iSCSI设备和光纤通道设备。iSNS可提供与光纤通道网络中的服务相当的智能存储发现和管理服务、从而使商用IP网络能够以与存储区域网络类似的容量运行。iSNS还可以模拟光纤通道网络服务并同时管理iSCSI设备和光纤通道设备、从而有助于实现IP网络和光纤通道网络的无缝集成。
+
+DHCP服务器将配置参数(例如网络地址)传递到IP节点。通过DHCP、客户端可以获取运行所需的所有IP配置参数。使用DHCP、您可以自动分配可重复使用的网络地址。
+
+
+
+== 最低固件级别
+
+7.10.

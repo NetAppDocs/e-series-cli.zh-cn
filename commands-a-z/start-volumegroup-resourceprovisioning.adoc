@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-volumegroup-resourceprovisioning.html 
+sidebar: sidebar 
+keywords: start, volume, group, resource, provision 
+summary: 'start VolumeGroup resourceProvisioning命令可对给定卷组启用资源配置、并对卷组中的每个卷启动资源配置启用异步操作。资源配置要求卷组中的所有驱动器都支持NVMe的DULBE"功能。' 
+---
+= 启动卷组资源配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstart VolumeGroup resourcesProvisioning`命令可在给定卷组上启用资源配置、并对卷组中的每个卷启动资源配置启用异步操作。资源配置要求卷组中的所有驱动器都支持NVMe的DULBE"功能。
+
+
+
+== 支持的阵列
+
+此命令可对任何单个存储阵列执行适用场景 操作、包括EF600和EF300阵列；前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在EF600和EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+要在卷组上禁用资源配置、请使用带有选项的full provisioning命令禁用资源配置。如果所有驱动器均支持DULBE"且存储阵列的`resourceProvisionedVolumes`设置为`true`、则在创建卷组时将配置资源。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup[_volumeGroupName_]] resourceProvisioning
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`volumeGroupName`
+ a| 
+要启用资源配置功能的卷组。将卷组名称用方括号([])括起来。
+
+|===
+
+
+== 最低固件级别
+
+11.73.

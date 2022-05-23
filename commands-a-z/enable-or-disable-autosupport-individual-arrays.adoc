@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/enable-or-disable-autosupport-individual-arrays.html 
+sidebar: sidebar 
+keywords: command, enable, disable, autosupport, feature, storage, array, possible, transit, messages, technical, support, site, capable, automatically, prepare, collect, data, remote, troubleshooting, problem, analysis 
+summary: '此命令可为存储阵列启用或禁用AutoSupport (ASUP)功能、并可将消息传输到技术支持站点。启用ASUP功能后、支持ASUP的存储阵列将自动准备好收集支持相关数据并将其发送给技术支持。然后、可以使用这些数据进行远程故障排除和问题分析。' 
+---
+= 启用或禁用AutoSupport (所有单个阵列)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+此命令可为存储阵列启用或禁用AutoSupport (ASUP)功能、并可将消息传输到技术支持站点。启用ASUP功能后、支持ASUP的存储阵列将自动准备好收集支持相关数据并将其发送给技术支持。然后、可以使用这些数据进行远程故障排除和问题分析。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+启用此功能后、您可以根据需要启用AutoSupport 按需功能、然后启用AutoSupport 远程诊断功能(如果需要)。
+
+必须按以下顺序启用三项功能：
+
+. *启用AutoSupport *
+. *启用AutoSupport OnDemand *
+. *启用AutoSupport 远程诊断*
+
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray autoSupport (enable | disable)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`enable | disable`
+ a| 
+用于启用或禁用AutoSupport。如果启用了OnDemand和远程诊断功能、则禁用操作也会关闭OnDemand和远程诊断功能。
+
+|===
+
+
+=== 示例
+
+[listing]
+----
+
+   SMcli -n Array1 -c "set storageArray autoSupport enable;"
+
+   SMcli completed successfully.
+----
+
+
+== 验证
+
+使用`show storageArray AutoSupport`命令查看是否已启用此功能。显示的输出的第一行显示了启用状态：
+
+[listing]
+----
+The AutoSupport feature is enabled on this storage array.
+----
+
+
+== 最低固件级别
+
+7.86 -为E2700和E5600以上的所有存储阵列添加了命令
+
+8.40 -增加了对E2800和E5700的支持

@@ -1,0 +1,80 @@
+---
+permalink: commands-a-z/smcli-enable-autosupportfeature.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, emw, management, domain, level, smcli 
+summary: 'smcli enable autosupportFeature命令可为所有受管存储阵列启用AutoSupport (ASUP)功能、并可将消息传输到技术支持站点。启用ASUP功能后、任何支持ASUP的存储阵列都会自动准备好收集支持相关数据并将其发送给技术支持。然后、可以使用这些数据进行远程故障排除和问题分析。' 
+---
+= 在EMW管理域级别启用或禁用AutoSupport (仅限SMcli)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`Smcli enable autosupportFeature`命令可为所有受管存储阵列启用AutoSupport (ASUP)功能、并可将消息传输到技术支持站点。启用ASUP功能后、任何支持ASUP的存储阵列都会自动准备好收集支持相关数据并将其发送给技术支持。然后、可以使用这些数据进行远程故障排除和问题分析。
+
+
+
+== 支持的阵列
+
+此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E2800或E5700存储阵列。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令是一个smcli命令、而不是一个脚本命令。您必须从命令行运行此命令。您不能从存储管理软件中的脚本编辑器运行此命令。
+
+====
+[NOTE]
+====
+要使AutoSupport 功能正常运行、必须启用永久性监控器。
+
+====
+[NOTE]
+====
+任何客户数据都不会传输到技术支持站点。
+
+====
+此命令会影响管理域中所有支持ASUP的存储阵列。为管理域启用此功能后、您可以控制每个存储阵列的功能启用。
+
+启用此功能后、您可以根据需要启用AutoSupport 按需功能、然后启用AutoSupport 远程诊断功能(如果需要)。
+
+必须按以下顺序启用这三项功能：
+
+. *启用AutoSupport *
+. *启用AutoSupport OnDemand *
+. *启用AutoSupport 远程诊断*
+
+
+
+
+== 语法
+
+[listing]
+----
+SMcli enable|disable autoSupportFeature
+----
+
+
+== Parameters
+
+无
+
+
+
+== 验证
+
+使用`Smcli -autosupportConfig show`命令查看是否已启用此功能。显示的输出的第一行显示了启用状态：
+
+[listing]
+----
+The AutoSupport feature is activated on this storage management station.
+----
+
+
+== 最低固件级别
+
+7.86

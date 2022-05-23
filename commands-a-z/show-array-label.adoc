@@ -1,0 +1,50 @@
+---
+permalink: commands-a-z/show-array-label.html 
+sidebar: sidebar 
+keywords: show, array, label 
+summary: show array label命令可返回有关是否已定义存储阵列标签或所有现有存储阵列标签的信息。 
+---
+= 显示阵列标签
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`Show array label`命令可返回有关是否已定义存储阵列标签或所有现有存储阵列标签的信息。
+
+
+
+== 支持的阵列
+
+此命令用于对EF600存储阵列执行适用场景。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[show storageArrayLabel label _userDefinedString_]
+show storageArrayLabel all
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`userDefinedString`
+ a| 
+用于为存储阵列指定用户定义的标签。
+
+|===
+
+
+== 最低固件级别
+
+8.60

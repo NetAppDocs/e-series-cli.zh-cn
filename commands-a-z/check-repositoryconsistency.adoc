@@ -1,0 +1,124 @@
+---
+permalink: commands-a-z/check-repositoryconsistency.html 
+sidebar: sidebar 
+keywords: check, repository, consistency 
+summary: check repositoryConsistency命令可根据对指定对象底层存储库卷中数据的分析生成报告。 
+---
+= 检查存储库一致性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`check repositoryConsistency`命令可根据对指定对象底层存储库卷中数据的分析生成报告。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+check (snapGroup pass:quotes[[_snapGroupName_]] repositoryConsistency |
+snapVolume pass:quotes[[_snapVolumeName_]] repositoryConsistency |
+volume pass:quotes[[_volumeName_]] repositoryConsistency |
+volumeCopy target pass:quotes[[_targetName_]] repositoryConsistency |
+asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
+repositoryConsistency localVolume=pass:quotes[_"localVolumeName"_]]
+file=pass:quotes[_"filePath"_]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`re正则性`
+ a| 
+指定检查快照组、快照卷、卷或异步镜像组(取决于相应参数指定的组)的一致性。
+
+
+
+ a| 
+`snapGroup`
+ a| 
+要对其运行一致性检查的快照组的名称。将快照组名称用方括号([])括起来。如果快照组名称包含特殊字符或仅包含数字、则还必须将名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`snapVolume`
+ a| 
+要对其运行一致性检查的快照卷的名称。将快照卷名称用方括号([])括起来。如果快照卷名称包含特殊字符或仅包含数字、则还必须将该名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`卷`
+ a| 
+要对其运行一致性检查的精简卷的名称。将精简卷名称用方括号([])括起来。如果精简卷名称包含特殊字符或仅包含数字、则还必须将名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`volumeCopy`
+ a| 
+指定检查卷副本关系的目标的一致性。
+
+
+
+ a| 
+`目标`
+ a| 
+请仅将与`volumeCopy`参数结合使用、以指定卷副本关系的目标卷的名称。如果卷名称包含特殊字符或仅包含数字、则还必须将名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`asyncMirrorGroup`
+ a| 
+要对其运行一致性检查的异步镜像组的名称。将异步镜像组名称用方括号([])括起来。如果异步镜像组名称包含特殊字符或仅包含数字、则还必须将名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`localVolume`
+ a| 
+请仅将与`asyncMirrorGroup`参数结合使用、以指定参与镜像关系的本地卷的名称。您可以指定镜像关系上的源卷或目标卷。将本地卷名称用双引号("")括起来。
+
+
+
+ a| 
+`文件`
+ a| 
+要将一致性检查结果的报告保存到的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logs\repoConsistency.txt"`此参数必须最后显示在任何可选参数之后。
+
+|===
+
+
+== 注释：
+
+此命令生成的报告可供技术支持使用以分析问题。
+
+
+
+== 最低固件级别
+
+7.83.

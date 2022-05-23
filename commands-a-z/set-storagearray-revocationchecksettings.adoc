@@ -1,0 +1,80 @@
+---
+permalink: commands-a-z/set-storagearray-revocationchecksettings.html 
+sidebar: sidebar 
+keywords: set, certificate, revocation, check, set 
+summary: '使用set storageArray revocationCheckSettings命令可以启用或禁用撤消检查、并配置联机证书状态协议(Online Certificate Status Protocol、OCSP)服务器。' 
+---
+= 设置证书撤消检查设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray revocationCheckSettings`命令可以启用或禁用撤消检查、并配置联机证书状态协议(Online Certificate Status Protocol、OCSP)服务器。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+OCSP服务器会检查证书颁发机构(CA)在其计划的到期日期之前是否已撤销任何证书。如果CA颁发的证书不正确或私钥受到影响、您可能需要启用撤消检查。
+
+[NOTE]
+====
+确保在两个控制器上都配置了DNS服务器、这样、您就可以对OCSP服务器使用完全限定域名。
+
+====
+启用撤消检查后、存储阵列会拒绝尝试使用已撤销证书连接到服务器。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray revocationCheckSettings ([revocationCheckEnable = boolean] &| [ocspResponderUrl=stringLiteral])
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`revocationCheckEnable`
+ a| 
+设置为`true`以启用证书撤消检查。
+
+
+
+ a| 
+`ocspResponderUrl`
+ a| 
+用于证书撤消检查的OCSP响应程序服务器的URL。
+
+[NOTE]
+====
+指定OCSP响应方地址将覆盖在证书文件中找到的OCSP地址。
+
+====
+|===
+
+
+== 最低固件级别
+
+8.42

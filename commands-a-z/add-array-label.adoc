@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/add-array-label.html 
+sidebar: sidebar 
+keywords: add array label, supported, syntax, parameters, minimum firmware level 
+summary: 使用添加阵列标签命令可以使用用户定义的标签向配置中添加存储阵列。这样、以后的命令便可按用户定义的标签而非IP地址或主机名来处理存储阵列。 
+---
+= 添加阵列标签
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`Add array label`命令、您可以使用用户定义的标签将存储阵列添加到配置中。这样、以后的命令便可按用户定义的标签而非IP地址或主机名来处理存储阵列。
+
+
+
+== 支持的阵列
+
+[NOTE]
+====
+提供的用户定义标签不需要与System Manager中显示的存储阵列名称匹配。这是一个本地标签、仅用于从命令行界面引用存储阵列。
+
+====
+此命令用于对EF600和EF300存储阵列执行适用场景。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[ _Address1 Address2_ add storageArrayLabel label _userDefinedString_]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`地址`
+ a| 
+用于指定存储阵列的IP地址(IPv4或IPv6)或完全限定主机名。
+
+[NOTE]
+====
+`Address2`值是可选的。
+
+====
+
+
+ a| 
+`userDefinedString`
+ a| 
+用于指定存储阵列的标签。
+
+|===
+
+
+== 最低固件级别
+
+8.60

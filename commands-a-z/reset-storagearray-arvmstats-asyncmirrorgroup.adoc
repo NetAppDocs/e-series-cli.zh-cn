@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: reset, asynchronous, mirror group, statistics 
+summary: reset storageArray arvmStats asyncMirrorGroup命令会将异步镜像组中一个或多个成员卷的同步统计信息重置为相对0。 
+---
+= 重置异步镜像组统计信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`reset storageArray arvmStats asyncMirrorGroup`命令可将异步镜像组中一个或多个成员卷的同步统计信息重置为相对0。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+reset storageArray arvmStats asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
+volume=pass:quotes[_"volumeName"_] sampleType=(all | mostRecent | longestSyncTime | errors)
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`asyncMirrorGroup`
+ a| 
+要重置同步统计信息的异步镜像组的名称。将异步镜像组名称用方括号([])括起来。如果异步镜像组名称包含特殊字符或数字、则必须将异步镜像组名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`卷`
+ a| 
+此参数是可选的。要重置同步统计信息的异步镜像组中的特定成员卷的名称。如果未指定任何卷、则异步镜像组中每个成员卷的统计信息都会重置。
+
+将卷名称用双引号("")括起来。
+
+
+
+ a| 
+`sampleType`
+ a| 
+此参数是可选的。`sampleType`的默认值为`all`。
+
+* `所有`—所有三种样本类型的数据均已重置。
+* `mostRecent`—为最近50个重新同步示例重置统计信息。
+* `longestSyncTime`—为最近20个最长的重新同步示例重置统计信息。
+* `errors`-为最近20个失败的重新同步示例重置统计信息。
+
+
+|===
+
+
+== 注释：
+
+系统将重置主角色中镜像卷的统计信息。重置的统计信息包括以下数据：
+
+* 同步开始时间
+* 同步类型(手动或定期)
+* 同步持续时间
+* 发送的字节数
+* 最长和最短写入时间(对于单次写入)
+* 最大和最小同步数据速率
+* 总写入时间
+* 存储库利用率(%)
+* 恢复点期限
+
+
+
+
+== 最低固件级别
+
+7.84.接受采取后续行动

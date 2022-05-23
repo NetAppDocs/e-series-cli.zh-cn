@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/show-alldrives-downloadprogress.html 
+sidebar: sidebar 
+keywords: show, drive, download, progress 
+summary: show allDrives downloadProgress命令可返回download drive firmware命令或download storageArray driveFirmware命令所针对的驱动器的固件下载状态。 
+---
+= 显示驱动器下载进度
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`s所有驱动器下载进度`命令可返回`download drive firmware`命令或`download storageArray driveFirmware`命令所针对的驱动器的固件下载状态。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+show allDrives downloadProgress
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+成功完成所有固件下载后、此命令将返回正常状态。如果任何固件下载失败、此命令将显示目标驱动器的固件下载状态。此命令将返回此表中显示的状态。
+
+[cols="2*"]
+|===
+| Status | 定义 
+
+
+ a| 
+`s成功`
+ a| 
+下载已完成、无错误。
+
+
+
+ a| 
+`未尝试`
+ a| 
+下载未启动。
+
+
+
+ a| 
+`部分下载`
+ a| 
+正在下载。
+
+
+
+ a| 
+`故障`
+ a| 
+下载已完成、但出现错误。
+
+|===
+
+
+== 最低固件级别
+
+6.10

@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/show-syncmirror-candidates.html 
+sidebar: sidebar 
+keywords: show, synchronous, mirror, volume, candidates 
+summary: show SyncMirror candidates命令可返回有关远程存储阵列上可用作同步镜像配置中二级卷的候选卷的信息。 
+---
+= 显示同步镜像卷候选项
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show SyncMirror candidates`命令可返回有关远程存储阵列上可用作同步镜像配置中二级卷的候选卷的信息。
+
+
+
+== 支持的阵列
+
+此命令会对任何单个存储阵列执行适用场景 操作、但有一些限制。如果您在E2700或E5600阵列上运行命令、则没有任何限制。
+
+[NOTE]
+====
+如果您在E2800或E5700阵列上运行命令、则客户端类型必须设置为`symbol`。如果客户端类型设置为`https`、则不会执行此命令。
+
+====
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+在先前版本的此命令中、功能标识符为`remoteMirror`。此功能标识符不再有效、并替换为`SyncMirror`。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[show syncMirror candidates primary="_volumeName_"
+remoteStorageArrayName="_storageArrayName_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`主卷`
+ a| 
+远程镜像对中主卷所需的本地卷的名称。将主卷名称用双引号("")括起来。
+
+
+
+ a| 
+`remoteStorageArrayName`
+ a| 
+包含二级卷的可能卷的远程存储阵列。如果远程存储阵列名称包含特殊字符、则还必须将远程存储阵列名称用双引号("")括起来。
+
+|===
+
+
+== 最低固件级别
+
+5.40

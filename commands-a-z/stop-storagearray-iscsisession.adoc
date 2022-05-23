@@ -1,0 +1,56 @@
+---
+permalink: commands-a-z/stop-storagearray-iscsisession.html 
+sidebar: sidebar 
+keywords: stop, storage, array, iscsi session 
+summary: stop storageArray iscsiSession命令可强制终止存储阵列iSCSI会话。 
+---
+= 停止存储阵列iSCSI会话
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`stop storageArray iscsiSession`命令可强制终止存储阵列iSCSI会话。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[stop storageArray iscsiSession [_essionNumber_]]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`* iscsiSession*`
+ a| 
+iSCSI会话的标识符编号。将iSCSI会话的标识符编号括在方括号([])中。
+
+|===
+
+
+== 最低固件级别
+
+7.10.

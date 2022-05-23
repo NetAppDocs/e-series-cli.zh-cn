@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/show-storagearray-revocationchecksettings.html 
+sidebar: sidebar 
+keywords: show, certificate, revocation, check, set 
+summary: 使用show storageArray revocationCheckSettings命令可以查看存储阵列的证书撤消设置。 
+---
+= 显示证书撤消检查设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sstorageArray revocationCheckSettings`命令可以查看存储阵列的证书撤消设置。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== Parameters
+
+无
+
+
+
+== 语法
+
+[listing]
+----
+show storageArray revocationCheckSettings
+----
+
+
+=== 示例
+
+[listing]
+----
+SMcli -n Array1 c "show storageArray revocationCheckSettings;"
+Revocation Checking: Disabled
+OCSP Responder Server URL: https://ocspResponderURL.com
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.42

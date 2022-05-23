@@ -1,0 +1,151 @@
+---
+permalink: commands-a-z/show-snapgroup.html 
+sidebar: sidebar 
+keywords: show, snapshot, group 
+summary: show snapGroup命令可返回有关一个或多个快照映像组的信息。 
+---
+= 显示快照组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show snapGroup`命令可返回有关一个或多个快照映像组的信息。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show (allSnapGroups | snapGroup pass:quotes[[_snapGroupName_]] |
+snapGroups pass:quotes[["_snapGroupName1_" ... "_snapGroupNamen_"]])
+[summary | schedule]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有SnapGroups`
+ a| 
+用于返回有关存储阵列中所有快照组的信息的参数。
+
+
+
+ a| 
+`snapGroup`
+ a| 
+要检索其信息的快照组的名称。将快照组名称用方括号([])括起来。如果快照组名称包含特殊字符或数字、则必须将快照组名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`snapGroups`
+ a| 
+要检索其信息的多个快照组的名称。使用以下规则输入快照组的名称：
+
+* 请将所有名称用方括号([])括起来。
+* 使用空格分隔每个名称。
+
+
+如果快照组名称包含特殊字符或仅包含数字、请使用以下规则输入名称：
+
+* 请将所有名称用方括号([])括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+
+
+ a| 
+`summary`
+ a| 
+用于返回有关快照组的简明信息列表的参数。
+
+
+
+ a| 
+`s计划`
+ a| 
+用于返回有关快照组副本操作计划的简明信息列表的参数。
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
+
+此命令将返回快照组信息、如以下示例所示：
+
+[listing]
+----
+SNAPSHOT GROUP DETAILS
+
+SNAPSHOT GROUPS-----------------------------
+
+SUMMARY
+----
+[listing]
+----
+  Total Snapshot Groups: 1
+  Total Snapshot Images: 0
+  Enabled Snapshot Image Schedules: 0
+  Status: 1 Optimal, 0 Non Optimal
+
+  Name      Type       Status    Associated Base Volume
+  2_SG_01   Standard   Optimal   2
+  Total Repository Capacity  Available Repository Capacity  Snapshot Image Limit
+  10.318 GB                  10.318 GB (100%)               0
+
+  Snapshot Images   Scheduled
+  0                 No
+DETAILS
+
+  Snapshot Group "2_SG_01"
+
+   Status:  Optimal
+   Type:    Standard
+   Associated base volume: 2
+   Cluster size: 65,536 bytes
+
+   Repository
+
+    Total repository volumes: 3
+    Aggregate repository status: Optimal
+    Total repository capacity:   10.318 GB
+    Used capacity:           0.000 MB (0%)
+    Available repository capacity: 10.318 GB (100%)
+    Repository full policy:    Auto-purge Snapshot Images
+    Utilization alert threshold: 75%
+
+   Snapshot images
+
+    Total Snapshot images: 0
+    Auto-delete Snapshot images: Disabled
+    Snapshot image schedule:   Not Applicable
+----
+
+
+== 最低固件级别
+
+7.83.

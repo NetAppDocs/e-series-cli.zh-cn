@@ -1,0 +1,353 @@
+---
+permalink: commands-a-z/set-controller.html 
+sidebar: sidebar 
+keywords: set, controller 
+summary: set controller命令用于定义控制器的属性。 
+---
+= 设置控制器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set controller`命令用于定义控制器的属性。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+set controller [(a|b)]
+[availability=(online | offline | serviceMode)]
+[ethernetPort [(1| 2)] ethernetPortOptions]
+[globalNVSRAMByte [nvsramOffset]=(nvsramByteSetting | nvsramBitSetting)]
+[hostNVSRAMByte [hostType, nvsramOffset]=(nvsramByteSetting | nvsramBitSetting)]
+[IPv4GatewayIP=ipAddress]
+[IPv6RouterAddress=ipv6Address]
+[iscsiHostPort [portLabel] iscsiHostPortOptions]
+[rloginEnabled=(TRUE | FALSE)]
+[serviceAllowedIndicator=(on | off)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+要为其定义属性的控制器。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器将控制器的标识符用方括号()括起来。如果不指定控制器、则此控制器的固件将返回语法错误。
+
+
+
+ a| 
+`可用性`
+ a| 
+控制器的模式、您可以将其设置为`online`、`offline`或`serviceMode`(service)。
+
+
+
+ a| 
+`ethernetPort`
+ a| 
+管理以太网端口的属性(选项)。以下语法Element语句数据表列出了支持此参数的条目。可以进行许多设置、包括设置IP地址、网关地址和子网掩码地址。
+
+
+
+ a| 
+`globalNVSRAMByte`
+ a| 
+控制器NVSRAM的一部分。使用区域内的起始字节偏移以及要存储到NVSRAM中的新数据的字节值或位值指定要修改的区域。
+
+
+
+ a| 
+`hostNVSRAMByte`
+ a| 
+主机特定区域的NVSRAM。此设置用于指定特定主机的主机索引、区域内的起始偏移量、字节数以及要存储到NVSRAM中的新数据的字节值或位值。
+
+
+
+ a| 
+`IPv4GatewayIP`
+ a| 
+提供网络接口的节点的IP地址。IPv4网关的地址格式为*(0-255).（0-255).（0-255).（0-255).（0-255)*
+
+
+
+ a| 
+`IPv6路由器地址`
+ a| 
+连接两个或更多逻辑子网的IPv6路由器的IP地址。IPv6路由器的地址格式为`(0–FFFF)：(0–FFFF)：(0–FFFF)：(0–FFFF)：(0–FFFF)：(0–FFFF)：(0–FFFF)：(0–FFFF)：(0–FFFF)`。
+
+
+
+ a| 
+`iscsiHostPort`
+ a| 
+使用此参数可以为控制器上的iSCSI端口设置选项。输入iSCSI端口标签或编号、然后选择该端口的选项。
+
+有关详细信息、请参见下面的_Identifying an iSCSI host port label _一节。
+
+
+
+ a| 
+`rloginEnabled`
+ a| 
+远程登录功能是打开还是关闭的设置。要启用远程登录功能、请将此参数设置为`true`。要关闭远程登录功能、请将此参数设置为`false`。
+
+
+
+ a| 
+`s服务Allowed指标`
+ a| 
+用于设置允许服务操作指示灯是打开还是关闭。要打开允许服务操作指示灯、请将此参数设置为`on`。要关闭允许服务操作指示灯、请将此参数设置为`off`。
+
+|===
+
+
+== 确定iSCSI主机端口标签
+
+您必须为主机端口指定一个标签。请按照以下步骤指定主机端口标签：
+
+. 如果您不知道iSCSI主机端口的端口标签、请运行`show controller`命令。
+. 在结果的主机接口部分中、找到要选择的主机端口。
++
+[NOTE]
+====
+端口标签是为`Port`字段返回的完整值。
+
+====
+. 将端口标签的整个值用引号和方括起来："portLabel"。例如、如果端口标签为`Ch2`、请按如下所示指定iSCSI主机端口：
++
+[listing]
+----
+iscsiHostPort[\"ch 2\"]
+----
++
+[NOTE]
+====
+如果您使用的是Windows命令行、并且标签包含管道(我们)、则应转义此字符(使用｛caret｝)；否则、此字符将被解释为命令。例如、如果端口标签为`e0b\0b`、请按如下所示指定iSCSI主机端口：
+
+====
++
+[listing]
+----
+iscsiHostPort[\"e0b^|0b\"]
+----
+
+
+[NOTE]
+====
+为实现向后兼容性、E2700、E5600或EF560控制器(以及以前其他几代E系列或EF系列控制器)仍可使用带花括号(而不是引号和花括号)的iscsiPortNumber。对于这些控制器、iscsiPortNumber的有效值如下所示：
+
+* 对于具有集成主机端口的控制器、编号为3、4、5或6。
+* 对于仅在主机接口卡上具有主机端口的控制器、编号为1、2、3或4。
+
+
+以下是先前语法的示例：
+
+[listing]
+----
+iscsiHostPort[3]
+----
+====
+
+
+== ethernetPort参数的选项
+
+[listing]
+----
+enableIPv4=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv6=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv4Address=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv4ConfigurationMethod=[(static | dhcp)] |
+----
+[listing]
+----
+IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+duplexMode=(TRUE | FALSE) |
+----
+[listing]
+----
+portSpeed=[(autoNegotiate | 10 | 100 | 1000)]
+----
+
+
+== iSCSIHostPort参数的选项
+
+[listing]
+----
+IPv4Address=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv4Vlan=(TRUE | FALSE) | enableIPv6Vlan=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv4Priority=(TRUE | FALSE) | enableIPv6Priority=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv4ConfigurationMethod=(static | dhcp) |
+----
+[listing]
+----
+IPv6ConfigurationMethod=(static | auto) |
+----
+[listing]
+----
+IPv4GatewayIP=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv6HopLimit=[0-255] |
+----
+[listing]
+----
+IPv6NdDetectDuplicateAddress=[0-256] |
+----
+[listing]
+----
+IPv6NdReachableTime=[0-65535] |
+----
+[listing]
+----
+IPv6NdRetransmitTime=[0-65535] |
+----
+[listing]
+----
+IPv6NdTimeOut=[0-65535] |
+----
+[listing]
+----
+IPv4Priority=[0-7] | IPv6Priority=[0-7] |
+----
+[listing]
+----
+IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv4VlanId=[1-4094] | IPv6VlanId=[1-4094] |
+----
+[listing]
+----
+maxFramePayload=[*frameSize*] |
+----
+[listing]
+----
+tcpListeningPort=[3260, 49152-65536] |
+----
+[listing]
+----
+portSpeed=[( 10 | 25)]
+----
+
+
+== 注释：
+
+[NOTE]
+====
+在固件版本7.75之前、`set controller`命令支持`NVSRAMByte`参数。`NVSRAMByte`参数已弃用、必须替换为`hostNVSRAMByte`参数或`globalNVSRAMByte`参数。
+
+====
+使用此命令时、您可以指定一个或多个参数。您无需使用所有参数。
+
+将`availability`参数设置为`serviceMode`会导致备用控制器接管所有卷的所有权。指定控制器不再具有任何卷、并拒绝接管任何其他卷的所有权。服务模式会在重置周期和电源周期之间保持不变、直到`availability`参数设置为`online`为止。
+
+使用`show controller NVSRAM`命令显示NVSRAM信息。在对NVSRAM进行任何更改之前、请联系技术支持以了解您可以修改NVSRAM的哪些区域。
+
+如果将`dulexMode`选项设置为`true`、则选定以太网端口将设置为全双工。默认值为半双工(`duplexMode`参数设置为`false`)。
+
+要确保应用了IPv4设置或IPv6设置、您必须设置以下`iscsiHostPort`选项：
+
+* `enableIPV4 =``true`
+* `enableIPV6 =``true`
+
+
+IPv6地址空间为128位。它由八个16位十六进制块表示、这些块以冒号分隔。
+
+在IPv4和IPv6之间共享`maxFramePayload`选项。标准以太网帧的有效负载部分设置为`1500`、巨型以太网帧设置为`9000`。使用巨型帧时、网络路径中的所有设备都应能够处理较大的帧大小。
+
+`portSpeed`选项以每秒兆位数(MB/秒)表示。
+
+`iscsiHostPort`参数的`portSpeed`选项的值以每秒兆位数(MB/秒)为单位。
+
+以下值是`iscsiHostOptions`的默认值：
+
+* `IPv6HopLimit`选项为`64`。
+* `IPv6NDReachbleTime`选项为`30000`毫秒。
+* `IPv6NDRetransmitTime`选项为`1000`毫秒。
+* `IPv6NDTimeOut`选项为`30000`毫秒。
+* `tcpListeningPort`选项为`3260`。
+
+
+
+
+== 最低固件级别
+
+7.15删除`bootp`参数、并添加新的以太网端口选项和新的iSCSI主机端口选项。
+
+7.50将`IPV4Gateway`参数和`IPV6路由器 地址`参数从iSCSI主机端口选项移至命令。
+
+7.60添加了`iscsiHostPort`参数的`portSpeed`选项。
+
+7.75已弃用`NVSRAMByte`参数。
+
+8.10修改了iSCSI主机端口的标识方法。

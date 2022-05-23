@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/show-storagearray-syslog.html 
+sidebar: sidebar 
+keywords: display, storage, array, syslog, configuration 
+summary: 使用show storageArray syslog命令可以查看用于存储审核日志的系统日志服务器的配置。配置信息包括服务器ID及其地址、协议和端口号。 
+---
+= 显示存储阵列系统日志配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`show storageArray syslog`命令可以查看用于存储审核日志的系统日志服务器的配置。配置信息包括服务器ID及其地址、协议和端口号。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+
+show storageArray syslog (allServers | id="<id>")
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+所有服务器
+ a| 
+显示所有系统日志配置。
+
+
+
+ a| 
+id
+ a| 
+显示具有匹配ID的系统日志配置。
+
+|===
+
+
+=== 示例
+
+[listing]
+----
+SMcli -n Array1 -c "show storageArray syslog allServers;"
+SMcli -n Array1 -c "show storageArray syslog id=\"331998fe-3154-4489-b773-b0bb60c6b48e\";"
+
+ID:             331998fe-3154-4489-b773-b0bb60c6b48e
+Server Address: 192.168.2.1.com
+Port:           514
+Protocol:       udp
+Components
+1. Component Name: auditLog
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.42

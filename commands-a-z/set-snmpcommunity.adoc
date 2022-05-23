@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/set-snmpcommunity.html 
+sidebar: sidebar 
+keywords: update, snmp, community 
+summary: 'set snmpCommunity命令可为现有简单网络管理协议(Simple Network Management Protocol、SNMP)社区创建一个新名称。' 
+---
+= 更新SNMP社区
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set snmpCommunity`命令可为现有简单网络管理协议(Simple Network Management Protocol、SNMP)社区创建新名称。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set snmpCommunity communityName=pass:quotes["_snmpCommunityName_"]
+newCommunityName=pass:quotes["_newSnmpCommunityName_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`社区名称`
+ a| 
+要重命名的现有SNMP社区的名称。将SNMP社区名称用双引号("")括起来。
+
+
+
+ a| 
+`newCommunityName`
+ a| 
+要为SNMP社区指定的新名称。将SNMP社区名称用双引号("")括起来。
+
+|===
+
+
+== 最低固件级别
+
+8.30

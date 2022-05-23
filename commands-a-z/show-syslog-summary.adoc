@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/show-syslog-summary.html 
+sidebar: sidebar 
+keywords: show, syslog, configuration 
+summary: show syslog summary命令可显示系统日志警报配置信息。 
+---
+= 显示系统日志配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show syslog summary`命令可显示系统日志警报配置信息。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员或存储监控角色。
+
+
+
+== 语法
+
+[listing]
+----
+show syslog summary
+----
+
+
+== Parameters
+
+无
+
+
+
+== 示例
+
+[listing]
+----
+
+SYSLOG SUMMARY
+   Default facility: 3
+   Default tag: StorageArray
+   Syslog format: rfc5424
+   Syslog Servers
+      Server Address               Port Number
+      serverName1.company.com      514
+      serverName2.company.com      514
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40
+
+11.70.1添加了`ssyslogFormat`参数以指定系统日志消息格式。

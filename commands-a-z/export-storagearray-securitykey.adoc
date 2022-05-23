@@ -1,0 +1,107 @@
+---
+permalink: commands-a-z/export-storagearray-securitykey.html 
+sidebar: sidebar 
+keywords: export, storage, array, security, key, command, save, drive, securitykey, file, context, role 
+summary: export storageArray securityKey命令可将驱动器安全密钥保存到文件中。 
+---
+= 导出存储阵列安全密钥
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`export storageArray securityKey`命令可将驱动器安全密钥保存到文件中。
+
+
+
+== 支持的阵列
+
+如果启用了外部密钥管理、则此命令仅适用于E2800、E5700、EF600和EF300阵列。如果启用了内部密钥管理、则只要安装了所有SMcli软件包、命令适用场景 any individual storage array即可。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+从一个存储阵列导出密钥文件时、该密钥可以导入到另一个存储阵列中。这样、您可以在存储阵列之间移动支持安全功能的驱动器。
+
+[NOTE]
+====
+此命令可同时对内部和外部密钥管理进行适用场景。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+export storageArray securityKey
+pass:quotes[passPhrase="_passPhraseString_"]
+pass:quotes[file="_fileName_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`密码短语`
+ a| 
+一个字符串、用于对安全密钥进行加密、以便将安全密钥存储在外部文件中。请将密码短语用双引号("")括起来。
+
+
+
+ a| 
+`文件`
+ a| 
+要将安全密钥保存到的文件路径和文件名。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[NOTE]
+====
+文件名的扩展名必须为`.slk`。
+
+====
+|===
+
+
+== 注释：
+
+要将驱动器移动到的存储阵列中的驱动器容量必须等于或大于要导入的驱动器。
+
+控制器固件会创建一个锁定、用于限制对全磁盘加密(Full Disk Encryption、FDE)驱动器的访问。FDE驱动器的状态称为"安全功能"。创建安全密钥时、状态将设置为安全已启用、从而限制对存储阵列中所有FDE驱动器的访问。
+
+您的密码短语必须满足以下条件：
+
+* 长度必须介于8到32个字符之间。
+* 不得包含空格。
+* 必须至少包含一个大写字母。
+* 必须至少包含一个小写字母。
+* 必须至少包含一个数字。
+* 必须至少包含一个非字母数字字符、例如<>@+。
+
+
+[NOTE]
+====
+如果您的密码短语不符合这些条件、则会收到一条错误消息、并要求您重试此命令。
+
+====
+
+
+== 最低固件级别
+
+7.40

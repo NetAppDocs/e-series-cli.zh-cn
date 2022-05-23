@@ -1,0 +1,189 @@
+---
+permalink: commands-a-z/create-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: create, asynchronous, mirror, group 
+summary: create asyncMirrorGroup命令可在本地存储阵列和远程存储阵列上创建一个新的空异步镜像组。 
+---
+= 创建异步镜像组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`create asyncMirrorGroup`命令可在本地存储阵列和远程存储阵列上创建一个新的空异步镜像组。
+
+
+
+== 支持的阵列
+
+此命令会对任何单个存储阵列执行适用场景 操作、但有一些限制。如果您在E2700或E5600阵列上运行命令、则没有任何限制。
+
+[NOTE]
+====
+如果您在E2800或E5700阵列上运行命令、则客户端类型必须设置为`symbol`。如果客户端类型设置为`https`、则不会执行此命令。
+
+====
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+异步镜像组是一个容器、可以容纳多个镜像对、以便将其作为一个实体进行管理。您可以创建异步镜像组来定义组中所有镜像对的同步设置。异步镜像组中的每个镜像对共享相同的同步设置、主角色和二级角色以及写入模式。
+
+异步镜像组与用于镜像的本地存储阵列和远程存储阵列相关联。本地存储阵列是异步镜像组的主端、而远程存储阵列是异步镜像组的二级端。添加到本地存储阵列上异步镜像组的所有卷在镜像关系中都具有主角色。随后、添加到远程存储阵列上异步镜像组的所有卷都会在镜像关系中保留二级角色。
+
+请确保在本地存储阵列上执行`Create Asynchronous Mirror Group`命令。异步镜像组创建是从包含在镜像关系中具有主角色的卷的存储阵列启动的。您可以使用`Create Asynchronous Mirror Group`命令指定包含在镜像关系中具有二级角色的卷的远程存储阵列的标识。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+create asyncMirrorGroup userLabel=pass:quotes[_"asyncMirrorGroupName"_]
+(remoteStorageArrayName=pass:quotes[_"storageArrayName"_] | remoteStorageArrayWWN=pass:quotes[_"wwID"_])
+[remotePassword=pass:quotes[_"password"_]
+interfaceType=(FC | iSCSI)
+[syncInterval=pass:quotes[_integer_](minutes | hours | days)]
+[warningSyncThreshold=pass:quotes[_integer_](minutes | hours | days)]
+[warningRecoveryThreshold=pass:quotes[_integer_](minutes | hours | days)]
+[warningThresholdPercent=pass:quotes[_percentValue_]]
+[autoResync=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`用户标签`
+ a| 
+要创建的新异步镜像组的名称。将新异步镜像组名称用双引号("")括起来。
+
+此名称在本地和远程存储阵列上必须是唯一的。
+
+
+
+ a| 
+`remoteStorageArrayName`
+ a| 
+要镜像异步镜像组的远程存储阵列的名称。将存储阵列名称用双引号("")括起来。
+
+远程存储阵列必须与本地存储阵列具有相同的连接类型。
+
+
+
+ a| 
+`remoteStorageArrayWWN`
+ a| 
+要镜像异步镜像组的远程存储阵列的全球通用标识符(WWID)。您可以使用WWID而不是存储阵列名称来标识存储阵列。将WWID括在尖括号中(<>)。
+
+远程存储阵列必须与本地存储阵列具有相同的连接类型。
+
+
+
+ a| 
+`remotePassword`
+ a| 
+远程存储阵列的密码。如果远程存储阵列受密码保护、请使用此参数。请将密码用双引号("")括起来。
+
+
+
+ a| 
+`接口类型`
+ a| 
+指定要使用的连接类型：光纤通道网络结构或iSCSI接口。(默认值为光纤通道。) 本地存储阵列和远程存储阵列必须通过正确的光纤通道网络结构或iSCSI接口进行连接。
+
+
+
+ a| 
+`syncInterval`
+ a| 
+指定从本地存储阵列自动向远程存储阵列发送修改后的数据更新之间的时间长度。您可以以分钟、小时或天为单位指定时间长度。
+
+[NOTE]
+====
+请勿在整数和时间长度之间添加空格。
+
+====
+示例：`10分钟`
+
+
+
+ a| 
+`warningSyncThreshold`
+ a| 
+指定在异步镜像组中所有卷的同步所需时间超过定义时间的情况下、等待触发警告的时间长度。您可以以分钟、小时或天为单位指定时间长度。
+
+[NOTE]
+====
+请勿在整数和时间长度之间添加空格。
+
+====
+示例：`30分钟`
+
+
+
+ a| 
+`warningRecoveryThreshold`
+ a| 
+指定在远程存储阵列上时间点映像的自动数据更新早于定义的时间时、等待触发警告的时间长度。定义上次更新结束时的阈值。您可以以分钟、小时或天为单位指定时间长度。
+
+[NOTE]
+====
+您必须将恢复点阈值设置为同步间隔阈值的两倍。
+
+====
+[NOTE]
+====
+请勿在整数和时间长度之间添加空格。
+
+====
+示例：`60分钟`
+
+
+
+ a| 
+`warningThresholdPercent`
+ a| 
+指定在镜像存储库卷的容量达到定义的百分比时等待触发警告的时间长度。按剩余容量的百分比(%)定义阈值。
+
+
+
+ a| 
+`AutoResync`
+ a| 
+用于在异步镜像组中异步镜像对的主卷和二级卷之间自动重新同步的设置。此参数具有以下值：
+
+* `enabled`—已启用自动重新同步。您无需执行任何其他操作即可重新同步主卷和二级卷。
+* `d已标记`—自动重新同步已关闭。要重新同步主卷和二级卷、必须运行`reassume asyncMirrorGroup`命令。
+
+
+|===
+
+
+== 注释：
+
+* 必须在要用于镜像活动的本地和远程存储阵列上启用和激活异步镜像功能。
+* 您可以对名称使用字母数字字符、连字符和下划线的任意组合。名称最多可以包含30个字符。
+* 本地和远程存储阵列必须通过光纤通道网络结构或iSCSI接口进行连接。
+* 密码存储在管理域中的每个存储阵列上。如果先前未设置密码、则不需要密码。密码可以是字母数字字符的任意组合、最多30个字符。(您可以使用`set storageArray`命令定义存储阵列密码。)
+* 根据您的配置、您可以在存储阵列上创建的异步镜像组数量上限。
+* 异步镜像组将创建为空、镜像对将稍后添加到这些组中。只能将镜像对添加到异步镜像组。每个镜像对只与一个异步镜像组相关联。
+* 异步镜像过程将按定义的同步间隔启动。定期复制时间点映像、因为只复制更改的数据、而不复制整个卷。
+
+
+
+
+== 最低固件级别
+
+7.84.接受采取后续行动

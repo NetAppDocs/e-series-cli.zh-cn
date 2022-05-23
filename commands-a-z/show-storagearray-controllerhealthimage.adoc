@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/show-storagearray-controllerhealthimage.html 
+sidebar: sidebar 
+keywords: show, storage, array, controller, health, image 
+summary: 'show storageArray controllerHealthImage命令可显示控制器缓存上控制器运行状况映像的详细信息(如果有控制器运行状况映像)、以及支持控制器运行状况映像的存储阵列上的控制器运行状况映像。' 
+---
+= 显示存储阵列控制器运行状况映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray controllerHealthImage`命令可在支持控制器运行状况映像的存储阵列上显示控制器缓存上的控制器运行状况映像的详细信息(如果有控制器运行状况映像)。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+对于固件版本8.20、`coredump`参数将替换为`controllerHealthImage`参数。
+
+====
+如果存储阵列不支持控制器运行状况映像功能、则此命令将返回错误。
+
+
+
+== 语法
+
+[listing]
+----
+show storageArray controllerHealthImage
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+7.83.
+
+8.20将`coredump`参数替换为`controllerHealthImage`参数。

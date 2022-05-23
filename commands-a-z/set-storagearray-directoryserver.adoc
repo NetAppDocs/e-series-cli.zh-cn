@@ -1,0 +1,161 @@
+---
+permalink: commands-a-z/set-storagearray-directoryserver.html 
+sidebar: sidebar 
+keywords: set, storage, array, directory, server 
+summary: set storageArray directoryServer命令用于更新目录服务器配置。 
+---
+= 设置存储阵列目录服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray directoryServer`命令可更新目录服务器配置。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+set storageArray directoryServer ["domainId"]
+    (domainNames=pass:quotes[("_domainName1_"..."_domainNameN_")] |
+     addDomainNames=pass:quotes[("_domainName1_"..."_domainNameN_")] |
+     serverUrl=pass:quotes["_serverUrl_"] |
+     bindAccount=pass:quotes["_username_"] bindPassword=pass:quotes["_password_"] |
+     searchBaseDN=pass:quotes["_distinguishedName_"] |
+     usernameAttribute=pass:quotes["_attributeName_"] |
+     groupAttributes=pass:quotes[("_attrName1_"..."_attrNameN_")] |
+     addGroupAttributes=pass:quotes[("_attrName1_"..."_attrNameN_"))]
+    [skipConfigurationTest={true | false}]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`d目录服务器`
+ a| 
+用于指定域ID以更新设置。
+
+
+
+ a| 
+`domainNames`
+ a| 
+用于为目录服务器设置一个或多个有效域名。如果输入多个名称、请使用空格分隔这些值。使用此设置选项将清除现有域名。
+
+
+
+ a| 
+`AddDomainNames`
+ a| 
+用于为目录服务器添加一个或多个有效域名。如果输入多个名称、请使用空格分隔这些值。
+
+
+
+ a| 
+`serverUrl`
+ a| 
+用于指定服务器URL。
+
+
+
+ a| 
+`bindAccount`
+ a| 
+用于指定要用作绑定帐户的用户名。
+
+
+
+ a| 
+`bindPassword`
+ a| 
+用于指定要用作绑定密码的密码。
+
+
+
+ a| 
+`searchBaseDN`
+ a| 
+用于指定搜索基本可分辨名称以搜索LDAP用户对象以确定组成员资格。
+
+
+
+ a| 
+`用户名属性`
+ a| 
+用于指定用于搜索用户对象以确定组成员资格的属性。如果指定、则字符串必须包含变量`+｛uid｝+`、该变量将替换为登录期间使用的用户名。示例：`+sAMAccountName=｛uid｝+`
+
+
+
+ a| 
+`groupAttributes`
+ a| 
+用于设置一个或多个组属性以查找组可分辨名称。可分辨名称用于确定角色映射的组成员资格。
+
+[NOTE]
+====
+如果输入多个组、请使用空格将值分隔开。
+
+====
+[NOTE]
+====
+使用此参数将清除现有组。
+
+====
+
+
+ a| 
+`AddGroupAttributes`
+ a| 
+用于添加一个或多个组属性以用于查找组可分辨名称。可分辨名称用于确定组成员资格、以便进行角色映射。
+
+[NOTE]
+====
+如果输入多个组、请使用空格将值分隔开。
+
+====
+
+
+ a| 
+`skipConfigurationTest`
+ a| 
+用于在保存配置之前跳过配置测试。默认值为 `false` 。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+     serverUrl="ldaps://hqldap.eng.mycompany.com:636";"
+
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+                    bindAccount="bindDN2" bindPassword="thePassword2"
+                    searchBaseDN="OU=_Users,DC=hq,DC=mycompany,DC=com"
+                    usernameAttribute="sAMAccountName" groupAttributes=("memberOf");"
+
+SMcli completed successfully.
+----

@@ -1,0 +1,488 @@
+---
+permalink: commands-a-z/set-controller-iscsihostport.html 
+sidebar: sidebar 
+keywords: set, iscsi, host, port, network, properties 
+summary: set controller iscsiHostPort命令用于更改主机端口的网络属性、包括IPv4和IPv6属性、端口速度和最大帧有效负载。 
+---
+= 设置iSCSI主机端口网络连接属性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set controller iscsiHostPort`命令可更改主机端口的网络属性、包括IPv4和IPv6属性、端口速度和最大帧有效负载。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+[NOTE]
+====
+此命令已弃用、并替换为 xref:set-controller-hostport.adoc[设置控制器主机端口属性] 命令：
+
+====
+
+
+== 语法
+
+[listing]
+----
+set controller [(a|b)]
+iscsiHostPort [portLabel]
+----
+[listing]
+----
+([IPv4Address=(0-255).(0-255).(0-255).(0-255) ]|
+----
+[listing]
+----
+[IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF)] |
+----
+[listing]
+----
+[IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) ]|
+----
+[listing]
+----
+[IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) ]|
+----
+[listing]
+----
+[enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE)] |
+----
+[listing]
+----
+[enableIPv4Vlan=(TRUE | FALSE) | enableIPv6Vlan=(TRUE | FALSE)] |
+----
+[listing]
+----
+[enableIPv4Priority=(TRUE | FALSE) | enableIPv6Priority=(TRUE | FALSE) ]|
+----
+[listing]
+----
+[IPv4ConfigurationMethod=(static | dhcp) ]|
+----
+[listing]
+----
+[IPv6ConfigurationMethod=(static | auto)] |
+----
+[listing]
+----
+[IPv4GatewayIP=(TRUE | FALSE)] |
+----
+[listing]
+----
+[IPv6HopLimit=[0-255] ]|
+----
+[listing]
+----
+[IPv6NdDetectDuplicateAddress=[0-256] ]|
+----
+[listing]
+----
+[IPv6NdReachableTime=[0-65535] ]|
+----
+[listing]
+----
+[IPv6NdRetransmitTime=[0-65535]] |
+----
+[listing]
+----
+[IPv6NdTimeOut=[0-65535] ]|
+----
+[listing]
+----
+[IPv4Priority=[0-7] | IPv6Priority=[0-7] ]|
+----
+[listing]
+----
+[IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255)] |
+----
+[listing]
+----
+[IPv4VlanId=[1-4094] | IPv6VlanId=[1-4094]] |
+----
+[listing]
+----
+[maxFramePayload=[*frameSize*]] |
+----
+[listing]
+----
+[tcpListeningPort=[3260, 49152-65536] ]|
+----
+[listing]
+----
+[portSpeed=[(10 | 25)])
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`enableIPV4`
+ a| 
+可用选项包括：
+
+* true
+* false
+
+
+
+
+ a| 
+`enableIPV4Priority`
+ a| 
+选择此选项可启用用于确定网络访问优先级的参数。使用滑块选择 1 到 7 之间的优先级。
+
+在以太网等共享局域网（ LAN ）环境中，许多工作站可能会争用网络访问权限。访问权限按先到先得原则提供。两个工作站可能会同时尝试访问网络，这会导致两个工作站重新关闭并等待，然后再重试。对于只有一个工作站连接到交换机端口的交换式以太网，此过程会最小化。
+
+可用选项包括：
+
+* true
+* false
+
+
+[NOTE]
+====
+此参数在基于RoCE的NVMe环境中不受支持。
+
+====
+
+
+ a| 
+`enableIPV4Vlan`
+ a| 
+VLAN 是一种逻辑网络，其行为与相同交换机，相同路由器或这两者所支持的其他物理和虚拟局域网（ LAN ）在物理上是分开的。可用选项包括：
+
+* true
+* false
+
+
+[NOTE]
+====
+此参数在基于RoCE的NVMe环境中不受支持。
+
+====
+
+
+ a| 
+`enableIPV6`
+ a| 
+IPv6地址空间为128位。它由八个16位十六进制块表示、这些块以冒号分隔。
+
+可用选项包括：
+
+* true
+* false
+
+
+
+
+ a| 
+`enableIPV6Priority`
+ a| 
+选择此选项可启用用于确定网络访问优先级的参数。使用滑块选择 1 到 7 之间的优先级。
+
+在以太网等共享局域网（ LAN ）环境中，许多工作站可能会争用网络访问权限。访问权限按先到先得原则提供。两个工作站可能会同时尝试访问网络，这会导致两个工作站重新关闭并等待，然后再重试。对于只有一个工作站连接到交换机端口的交换式以太网，此过程会最小化。
+
+可用选项包括：
+
+* true
+* false
+
+
+[NOTE]
+====
+此参数在基于RoCE的NVMe环境中不受支持。
+
+====
+
+
+ a| 
+`enableIPV6Vlan`
+ a| 
+VLAN 是一种逻辑网络，其行为与相同交换机，相同路由器或这两者所支持的其他物理和虚拟局域网（ LAN ）在物理上是分开的。
+
+可用选项包括：
+
+* true
+* false
+
+
+[NOTE]
+====
+此参数在基于RoCE的NVMe环境中不受支持。
+
+====
+
+
+ a| 
+`IPV4Address`
+ a| 
+以以下格式输入地址：(0-255).（0-255).（0-255).（0-255).（0-255)
+
+
+
+ a| 
+`IPV4ConfigurationMethod`
+ a| 
+可用选项包括：
+
+* 静态
+* DHCP
+
+
+
+
+ a| 
+`IPV4GatewayIP`
+ a| 
+可用选项包括：
+
+* true
+* false
+
+
+
+
+ a| 
+`IPV4Priority`
+ a| 
+输入一个介于0到7之间的值。
+
+[NOTE]
+====
+此参数在基于RoCE的NVMe环境中不受支持。
+
+====
+
+
+ a| 
+`IPV4SubnetMask`
+ a| 
+以以下格式输入子网掩码：(0-255).（0-255).（0-255).（0-255).（0-255)
+
+
+
+ a| 
+`IPV4VlanId`
+ a| 
+输入一个介于1到4094之间的值。
+
+[NOTE]
+====
+此参数在基于RoCE的NVMe环境中不受支持。
+
+====
+
+
+ a| 
+`IPV6ConfigurationMethod`
+ a| 
+可用选项包括：
+
+* 静态
+* 自动
+
+
+
+
+ a| 
+`IPV6HopLimit`
+ a| 
+此选项用于配置IPv6数据包可以遍历的最大跃点数。
+
+默认值为`64`。
+
+
+
+ a| 
+`IPV6LocalAddress`
+ a| 
+输入以下格式的地址：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)
+
+
+
+ a| 
+`IPV6NDDetectDuplicateAddress`
+ a| 
+输入一个介于0到256之间的值。
+
+
+
+ a| 
+`IPV6NDReachbleTime`
+ a| 
+此选项用于配置将远程IPv6模式视为可访问的时间量。指定一个介于0到65535之间的值(以毫秒为单位)。
+
+默认值为`30000`毫秒。
+
+
+
+ a| 
+`IPV6NDRetransmitTime`
+ a| 
+此选项用于配置继续向IPv6节点重新传输数据包的时间量。指定一个介于0到65535之间的值(以毫秒为单位)。
+
+默认值为`1000`毫秒。
+
+
+
+ a| 
+`IPV6NDTimeOut`
+ a| 
+此选项用于配置IPv6节点的超时值。指定一个介于0到65535之间的值(以毫秒为单位)。
+
+默认值为`30000`毫秒。
+
+
+
+ a| 
+`IPV6优先级`
+ a| 
+输入一个介于0到7之间的值。
+
+[NOTE]
+====
+此参数在基于RoCE的NVMe环境中不受支持。
+
+====
+
+
+ a| 
+`IPV6RoutableAddress`
+ a| 
+输入以下格式的地址：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)
+
+
+
+ a| 
+`IPV6路由器 地址`
+ a| 
+输入以下格式的地址：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)
+
+
+
+ a| 
+`IPV6VlanId`
+ a| 
+输入一个介于1到4094之间的值。
+
+[NOTE]
+====
+此参数在基于RoCE的NVMe环境中不受支持。
+
+====
+
+
+ a| 
+`maxFramePayload`
+ a| 
+`maxFramePayload`选项在IPv4和IPv6之间共享、是可在网络中发送的最大数据包或帧。标准以太网帧的有效负载部分设置为`1500`、巨型以太网帧设置为`9000`。使用巨型帧时、网络路径中的所有设备都应能够处理较大的帧大小。
+
+默认值为每帧1500字节。您必须输入一个介于 1500 和 9000 之间的值。
+
+
+
+ a| 
+`portSpeed`
+ a| 
+可用选项包括：
+
+* 10
+* 25.
+
+
+[NOTE]
+====
+此选项仅适用于25 Gb/秒以太网主机接口卡。更改一个端口的速度会更改卡上所有四个端口的速度。
+
+====
+[NOTE]
+====
+`iscsiHostPort`参数的`portSpeed`选项的值以每秒兆位数(MB/秒)为单位。
+
+====
+
+
+ a| 
+`tcpListeningPort`
+ a| 
+侦听端口是控制器用于侦听主机 iSCSI 启动程序的 iSCSI 登录的 TCP 端口号。默认侦听端口为 3260 。您必须输入 3260 或 49152 到 65535 之间的值。
+
+|===
+
+
+== 确定iSCSI主机端口标签
+
+您必须为主机端口指定一个标签。请按照以下步骤指定主机端口标签：
+
+. 如果您不知道iSCSI主机端口的端口标签、请运行`show controller`命令。
+. 在结果的主机接口部分中、找到要选择的主机端口。
++
+[NOTE]
+====
+端口标签是为`Port`字段返回的完整值。
+
+====
+. 将端口标签的整个值用引号和方括起来："portLabel"。例如、如果端口标签为`Ch2`、请按如下所示指定iSCSI主机端口：
++
+[listing]
+----
+iscsiHostPort[\"ch 2\"]
+----
++
+[NOTE]
+====
+如果您使用的是Windows命令行、并且标签包含管道(我们)、则应转义此字符(使用｛caret｝)；否则、此字符将被解释为命令。例如、如果端口标签为`e0b\0b`、请按如下所示指定iSCSI主机端口：
+
+====
++
+[listing]
+----
+iscsiHostPort[\"e0b^|0b\"]
+----
+
+
+[NOTE]
+====
+为实现向后兼容性、E2700、E5600或EF560控制器(以及以前其他几代E系列或EF系列控制器)仍可使用带花括号(而不是引号和花括号)的iscsiPortNumber。对于这些控制器、iscsiPortNumber的有效值如下所示：
+
+* 对于具有集成主机端口的控制器、编号为3、4、5或6。
+* 对于仅在主机接口卡上具有主机端口的控制器、编号为1、2、3或4。
+
+
+以下是先前语法的示例：
+
+[listing]
+----
+iscsiHostPort[3]
+----
+====
+
+
+== 最低固件级别
+
+7.15添加了新的iSCSI主机端口选项。
+
+7.60增加了`portSpeed`选项。
+
+8.10修改了iSCSI主机端口的标识方法。
+
+8.40修改了`iscsiHostPort`参数的`portSpeed`选项、以注意它仅适用于25 Gb/秒以太网主机接口卡、更改一个端口的速度会更改卡上所有四个端口的速度。
+
+8.41此命令已弃用。

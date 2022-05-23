@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/start-diskpool-fullprovisioning.html 
+sidebar: sidebar 
+keywords: start, disk pool, full, provision 
+summary: start diskPool fullProvisioning命令可对磁盘池中的所有卷启动完全配置操作、并可选择禁用磁盘池上的资源配置。 
+---
+= 启动磁盘池完全配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstart diskPool fullProvisioning`命令可对磁盘池中的所有卷启动完全配置操作、并可选择禁用磁盘池上的资源配置。
+
+
+
+== 支持的阵列
+
+此命令可对任何单个存储阵列执行适用场景 操作、包括EF600和EF300阵列；前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在EF600和EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+资源配置功能可以使大部分驱动器块保持未分配状态、从而延长SSD的使用寿命并提高写入性能。资源配置的卷是SSD卷组或池中的厚卷、其中会分配(分配给卷)驱动器容量、但在创建卷期间会取消分配(取消映射)驱动器块。根据需要分配驱动器块以完成主机写入IO。主机取消映射操作可以将驱动器块恢复为未分配状态。资源配置还消除了有时间限制的后台初始化、从而可以快速初始化大型卷。
+
+只有SSD卷组和池支持资源配置的卷、其中组或池中的所有驱动器都支持NVMe已取消分配或未写入逻辑块错误启用(DULBE")错误恢复功能。性能提升因驱动器型号和容量而异。
+
+完全配置格式可确保存储池中的卷所需的所有块都完全映射到驱动器上。此命令仅适用于资源配置的存储池。如果未将`disableResourceProvisioning`选项设置为`false`、则卷仍将配置为资源、而在存储池上创建的新卷将配置为资源。如果禁用资源配置的选项设置为`true`、则卷将不再配置为资源、而在存储池上创建的新卷将不会配置为资源。
+
+
+
+== 语法
+
+[listing]
+----
+start diskPool[diskPoolName] fullProvisioning [disableResourceProvisioning=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`diskPool`
+ a| 
+要启动完全配置操作的磁盘池。将磁盘池名称用方括号括起来([])
+
+
+
+ a| 
+`disableResourceProvisioning`
+ a| 
+用于指定是否应在完全配置操作完成后禁用资源配置的设置。要跳过禁用资源配置、请将其设置为`false`。默认值为`true`。
+
+[NOTE]
+====
+要在存储池和所有关联卷上重新启用资源配置、请使用`SStart Disk Pool Resource Provisioning`命令。
+
+====
+|===
+
+
+== 最低固件级别
+
+11.72.

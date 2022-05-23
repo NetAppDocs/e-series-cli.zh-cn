@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/download-controller-arraymanagementservercertificate.html 
+sidebar: sidebar 
+keywords: download, controller, array, management, server, certificate, command, install 
+summary: download controller arrayManagementServerCertificate命令可在控制器上安装服务器证书。 
+---
+= 安装服务器签名证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`dload controller arrayManagementServerCertificate`命令可在控制器上安装服务器证书。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+使用适用于每个控制器的签名证书对每个控制器执行此操作。签名证书必须包含控制器的IP/DNS名称。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+download controller [(a|b)] pass:quotes[arrayManagementServerCertificate file="_filename_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+允许用户指定要为其安装服务器签名证书的控制器。有效的控制器标识符为a或b、其中a是插槽A中的控制器、b是插槽B中的控制器将控制器标识符括在方括号()中。
+
+
+
+ a| 
+`文件`
+ a| 
+允许用户指定包含签名证书的文件路径和文件名。可接受的扩展名包括.cer、.crt和.der。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "download controller [a] arrayManagementServerCertificate
+   file="C:\serverSignedCertificateA.cer";"
+
+SMcli -n Array1 -c "download controller [b] arrayManagementServerCertificate
+   file="C:\serverSignedCertificateB.cer";"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/revive-snapvolume.html 
+sidebar: sidebar 
+keywords: revive, snapshot, volume 
+summary: revive snapVolume命令会将指定的快照卷强制设置为最佳状态。 
+---
+= 恢复快照卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`revve snapVolume`命令可将指定的快照卷强制设置为最佳状态。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+快照卷可以是以下卷之一：
+
+* 一个独立的Snapshot卷
+* 一致性组的成员Snapshot卷
+
+
+如果快照卷未处于故障状态、则固件将显示一条错误消息、并且不会运行此命令。
+
+[NOTE]
+====
+不能对联机卷副本中使用的快照卷使用此命令。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+revive snapVolume pass:quotes[[_snapVolumeName_]]
+----
+
+
+== 参数
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`snapVolume`
+ a| 
+要设置为最佳状态的快照卷的名称。将快照卷名称用方括号([])括起来。如果快照卷名称包含特殊字符或仅包含数字、则必须将快照卷名称用双引号("")括在方括号内。
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
+
+
+
+== 最低固件级别
+
+7.83.

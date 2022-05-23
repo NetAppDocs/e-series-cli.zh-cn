@@ -1,0 +1,104 @@
+---
+permalink: commands-a-z/recopy-volumecopy-target.html 
+sidebar: sidebar 
+keywords: volumecopy, target, command, operation, volume, copy, pair, reinitiate, array, role, context 
+summary: recopy volumeCopy target命令使用现有卷副本对重新启动卷复制操作。 
+---
+= 重新复制卷副本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`recopy volumeCopy target`命令可使用现有卷副本对重新启动卷复制操作。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+对于固件版本7.83、不再使用`copyType=(online | offline)`参数。
+
+====
+此命令适用于Snapshot映像卷副本对。
+
+此命令适用于您使用快照映像卷创建的卷副本对。
+
+[NOTE]
+====
+启动卷复制操作将覆盖目标卷上的所有现有数据、使目标卷对主机只读、并使与目标卷关联的所有Snapshot映像卷(如果存在)发生故障。如果您之前已将目标卷用作副本、请确保不再需要数据或已对其进行备份。
+
+====
+
+
+== 语法
+
+[listing]
+----
+recopy volumeCopy target [targetName]
+[source [sourceName]]
+[copyPriority=(highest | high | medium | low | lowest)]
+[targetReadOnlyEnabled=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`目标`
+ a| 
+要重新启动卷复制操作的目标卷的名称。将目标卷名称用方括号([])括起来。如果目标卷名称包含特殊字符、则必须将目标卷名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`s源`
+ a| 
+要重新启动卷复制操作的源卷的名称。将源卷名称用方括号([])括起来。如果源卷名称包含特殊字符、则必须将源卷名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`copyPriority`
+ a| 
+卷副本相对于主机I/O活动的优先级。有效值为`最高`、`高`、`m中`、`低`或`最低`。
+
+
+
+ a| 
+`targetReadOnlyEnabled`
+ a| 
+此设置可用于向目标卷写入数据或仅从目标卷读取数据。要写入目标卷、请将此参数设置为`false`。要防止写入目标卷、请将此参数设置为`true`。
+
+|===
+
+
+== 注释：
+
+复制优先级用于定义在源卷和卷副本对的目标卷之间复制数据所使用的系统资源量。如果选择最高优先级、则卷副本将使用最多的系统资源来执行卷复制、从而降低主机数据传输的性能。
+
+
+
+== 最低固件级别
+
+6.10
+
+7.83删除`copyType=(online | offline)`参数。

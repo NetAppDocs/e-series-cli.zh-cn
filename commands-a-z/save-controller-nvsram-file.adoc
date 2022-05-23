@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/save-controller-nvsram-file.html 
+sidebar: sidebar 
+keywords: save, controller, nvsram 
+summary: save controller NVSRAM file命令可将一组选定的控制器NVSRAM区域保存到一个文件中。 
+---
+= 保存控制器NVSRAM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`scontroller NVSRAM file`命令可将一组选定的控制器NVSRAM区域保存到一个文件中。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save controller [(a|b)] NVSRAM file=pass:quotes["_filename_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+具有要保存的NVSRAM值的控制器。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器将控制器标识符括在方括号()中。
+
+
+
+ a| 
+`文件`
+ a| 
+要将NVSRAM值保存到的文件路径和文件名。将NVSRAM文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logs\nvsramb.txt "`
+
+包含NVSRAM值的文件的默认名称为`nvsram-data.txt`。此命令不会自动向保存的文件附加文件扩展名。输入文件名时、必须指定文件扩展名。
+
+|===
+
+
+== 最低固件级别
+
+6.10

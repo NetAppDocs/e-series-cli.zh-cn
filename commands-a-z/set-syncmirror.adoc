@@ -1,0 +1,150 @@
+---
+permalink: commands-a-z/set-syncmirror.html 
+sidebar: sidebar 
+keywords: set, synchronous, mirror 
+summary: set SyncMirror 命令用于定义远程镜像对的属性。 
+---
+= 设置同步镜像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set SyncMirror`命令用于定义远程镜像对的属性。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+在先前版本的此命令中、功能标识符为`remoteMirror`。此功能标识符不再有效、并替换为`SyncMirror`。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set syncMirror (localVolume pass:quotes[[_volumeName_]] |
+localVolumes pass:quotes[[_volumeName1 ... volumeNameN_]])
+[role=(primary | secondary)]
+[syncPriority=(highest | high | medium | low | lowest)]
+[autoResync=(enabled | disabled)]
+[writeOrder=(preserved | notPreserved)]
+[writeMode=(synchronous | asynchronous)]
+[force=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`localVolume`
+ a| 
+要为其定义属性的本地卷的名称。将主卷名称用方括号([])括起来。如果主卷名称包含特殊字符或数字、则必须将主卷名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`localVolumes`
+ a| 
+要为其定义属性的多个本地卷的名称。使用以下规则输入卷的名称：
+
+* 请将所有名称用方括号([])括起来。
+* 使用空格分隔每个名称。
+
+
+如果卷名称包含特殊字符或仅包含数字、请使用以下规则输入名称：
+
+* 请将所有名称用方括号([])括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+
+
+ a| 
+`角色`
+ a| 
+本地卷用作主卷或二级卷的设置。要将卷定义为主卷、请将此参数设置为`primary`。要将该卷定义为二级卷、请将此参数设置为`s辅助`。只有当卷属于镜像关系时、此参数才适用。
+
+
+
+ a| 
+`s同步优先级`
+ a| 
+完全同步相对于主机I/O活动的优先级。有效值为`最高`、`高`、`m中`、`低`或`最低`。
+
+
+
+ a| 
+`AutoResync`
+ a| 
+用于在远程镜像对的主卷和二级卷之间自动重新同步的设置。此参数具有以下值：
+
+* `enabled`—已启用自动重新同步。您无需执行任何其他操作即可重新同步主卷和二级卷。
+* `d已标记`—自动重新同步已关闭。要重新同步主卷和二级卷、必须运行`reresume SyncMirror`命令。
+
+
+
+
+ a| 
+`writeOrder`
+ a| 
+此参数用于定义主卷与二级卷之间数据传输的写入顺序。有效值为`preserved`或`notPreserved`。
+
+
+
+ a| 
+`写入模式`
+ a| 
+此参数用于定义主卷如何写入二级卷。有效值为`synchronous`或`ynchronous`。
+
+
+
+ a| 
+`强制`
+ a| 
+如果存储阵列之间的通信链路已关闭、并且本地端的提升或降级导致出现双主条件或双二级条件、则会强制执行角色反转。要强制反转角色、请将此参数设置为`true`。默认值为`false`。
+
+[NOTE]
+====
+只有在使用`role`参数时、才使用`force`参数。
+
+====
+|===
+
+
+== 注释：
+
+使用此命令时、您可以指定一个或多个可选参数。
+
+同步优先级用于定义用于在镜像关系的主卷和二级卷之间同步数据的系统资源量。如果选择最高优先级、则数据同步将使用最多的系统资源来执行完全同步、从而降低主机数据传输的性能。
+
+`writeOrder`参数仅适用于异步写入模式、并使其成为一致性组的一部分。将`writeOrder`参数设置为`preserved`会使远程镜像对按照主机写入主卷的相同顺序将数据从主卷传输到二级卷。如果发生传输链路故障、则会对数据进行缓冲、直到完全同步为止。此操作可能需要额外的系统开销来维护已缓冲的数据、从而降低操作速度。将`writeOrder`参数设置为`notReserved`可使系统不必在缓冲区中保留数据、但需要强制执行完全同步、以确保二级卷与主卷具有相同的数据。
+
+
+
+== 最低固件级别
+
+6.10

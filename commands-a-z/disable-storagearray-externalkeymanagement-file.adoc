@@ -1,0 +1,116 @@
+---
+permalink: commands-a-z/disable-storagearray-externalkeymanagement-file.html 
+sidebar: sidebar 
+keywords: disable, storage, array, external, management, file, command, disable, security, key, full, disk, encryption, drives 
+summary: disable storageArray externalKeyManagement file命令会对具有全磁盘加密驱动器的存储阵列禁用外部安全密钥管理。 
+---
+= 禁用外部安全密钥管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`disable storageArray externalKeyManagement file`命令可为具有全磁盘加密驱动器的存储阵列禁用外部安全密钥管理。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+disable storageArray externalKeyManagement
+pass:quotes[file="_fileName_"]
+pass:quotes[passPhrase="_passPhraseString_"]
+pass:quotes[saveFile=(_TRUE_ | _FALSE_)]
+----
+
+
+== 环境
+
+[NOTE]
+====
+此命令可将内部密钥管理作为驱动器安全的备用形式。
+
+====
+[NOTE]
+====
+此命令仅适用于外部密钥管理。
+
+====
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+存储内部安全密钥文件的文件路径和文件名。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[IMPORTANT]
+====
+文件名的扩展名必须为`.slk`。
+
+====
+
+
+ a| 
+`密码短语`
+ a| 
+一个字符串、用于对安全密钥进行加密、以便将安全密钥存储在外部文件中。
+
+
+
+ a| 
+`saveFile`
+ a| 
+验证安全密钥并将其保存到文件中。将设置为`false`以不保存安全密钥并将其验证到文件。默认值为`true`。
+
+|===
+
+
+== 注释：
+
+您的密码短语必须满足以下条件：
+
+* 长度必须介于8到32个字符之间。
+* 无空格。
+* 必须至少包含一个大写字母。
+* 必须至少包含一个小写字母。
+* 必须至少包含一个数字。
+* 必须至少包含一个非字母数字字符、例如<>@+。
+
+
+[NOTE]
+====
+如果您的密码短语不符合这些条件、您将收到一条错误消息。
+
+====
+
+
+== 最低固件级别
+
+8.40
+
+8.70添加了`saveFile`参数。

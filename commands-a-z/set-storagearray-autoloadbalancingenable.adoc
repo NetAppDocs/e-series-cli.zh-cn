@@ -1,0 +1,107 @@
+---
+permalink: commands-a-z/set-storagearray-autoloadbalancingenable.html 
+sidebar: sidebar 
+keywords: set, storage, array, enable, disable, automatic, load, balance 
+summary: set storageArray autodelloadBalancingEnable命令用于启用或禁用自动负载平衡功能。 
+---
+= 将存储阵列设置为启用或禁用自动负载平衡
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray autodelloadBalancingEnable`命令可启用或禁用自动负载平衡功能。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray autoLoadBalancingEnable=(TRUE | FALSE)
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`s存储阵列`
+ a| 
+表示此参数适用于存储阵列。
+
+
+
+ a| 
+`AutoLoadBalancingEnable`
+ a| 
+此参数用于打开或关闭控制器上的自动负载平衡。将参数设置为`true`以启用自动负载平衡。将参数设置为`false`以关闭自动负载平衡。
+
+|===
+
+
+== 什么是自动负载平衡？
+
+自动负载平衡功能可以随着时间的推移对负载变化做出动态响应、并自动调整卷控制器所有权、以便在工作负载在控制器之间移动时更正任何负载不平衡问题、从而改进了I/O资源管理。
+
+系统会持续监控每个控制器的工作负载、并在主机上安装的多路径驱动程序的配合下、在必要时自动实现平衡。在控制器之间自动重新平衡工作负载时、存储管理员无需再承担手动调整卷控制器所有权以适应存储阵列上的负载变化的负担。
+
+启用自动负载平衡后、它将执行以下功能：
+
+* 自动监控和平衡控制器资源利用率。
+* 根据需要自动调整卷控制器所有权、从而优化主机和存储阵列之间的I/O带宽。
+
+
+
+
+== 启用和禁用自动负载平衡
+
+默认情况下、SANtricity OS (控制器软件) 8.30或更高版本附带的所有存储阵列都会启用自动负载平衡。Linux、Windows和VMware多路径驱动程序可以使用自动负载平衡功能。如果将控制器从SANtricity OS (控制器软件) 8.25或更早版本升级到8.30或更高版本、则默认情况下、存储阵列会禁用自动负载平衡。
+
+您可能需要在存储阵列上禁用自动负载平衡、原因如下：
+
+* 您不希望自动更改特定卷的控制器所有权以平衡工作负载。
+* 您正在高度调整的环境中运行、在此环境中、负载分布会有针对性地进行设置、以便在控制器之间实现特定的分布。
+
+
+在SANtricity 存储管理器中、选择*存储阵列*>*配置*>*自动负载平衡*菜单选项、以便为单个存储阵列启用或禁用自动负载平衡功能。
+
+在SANtricity 系统管理器中、选择*设置*>*系统*、向下滚动到*其他设置*部分、单击E*启用/禁用自动负载平衡*链接、然后选中*启用/禁用自动负载平衡*复选框以对单个存储阵列启用或禁用此功能。
+
+
+
+== 示例
+
+[listing]
+----
+SMcli -n Array1 -c "set storageArray autoLoadBalancingEnable=true;"
+
+SMcli completed successfully.
+----
+[NOTE]
+====
+如果处于活动状态"驱动器丢失主路径"、则自动负载平衡将无法平衡工作负载。此情况必须处于非活动状态、以确保通过自动负载平衡功能平衡工作负载。
+
+====
+
+
+== 最低固件级别
+
+8.30

@@ -1,0 +1,122 @@
+---
+permalink: commands-a-z/set-snapvolume-increase-decreaserepositorycapacity.html 
+sidebar: sidebar 
+keywords: set, snapshot, volume, repository, capacity 
+summary: set snapVolume increase/decreposeRepositoryCapacity命令可增加或减少快照卷存储库卷的容量。 
+---
+= 设置Snapshot卷存储库卷容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set snapVolume increase/decreposeRepositoryCapacity`命令可增加或减少快照卷存储库卷的容量。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 增加容量的语法
+
+[listing, subs="+macros"]
+----
+set snapVolume[“snapVolumeName”] increaseRepositoryCapacity
+(repositoryVolumes="repos_xxxx" |
+repositoryVolumes=pass:quotes[(_volumeGroupName_] [capacity=pass:quotes[_capacityValue_]] |
+repositoryVolumes=pass:quotes[(_diskPoolName_] [capacity=pass:quotes[_capacityValue_]])
+----
+
+
+== 降低容量的语法
+
+[listing, subs="+macros"]
+----
+set snapVolume pass:quotes[["_snapVolumeName_"]] decreaseRepositoryCapacity
+count=pass:quotes[_numberOfVolumes_]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`snapVolume`
+ a| 
+要为其设置属性的快照卷的名称。将快照卷标识符用双引号("")括在方括号([])内。
+
+
+
+ a| 
+`repositoryVolume`
+ a| 
+要增加容量的存储库卷的名称。系统会向存储库卷添加一个可用的标准卷、以增加存储库卷的容量。
+
+您可以通过两个选项来定义存储库卷的名称：
+
+* 使用现有存储库卷：name
+* 运行此命令时、请创建一个新的存储库卷
+
+
+现有存储库卷的名称由两部分组成：
+
+* 术语"repos"
+* 分配给存储库卷名称的四位数字标识符
+
+
+将现有存储库卷的名称用双引号("")括起来。
+
+如果要在运行此命令时创建新的存储库卷、则必须输入要在其中创建存储库卷的卷组或磁盘池的名称。您也可以选择定义存储库卷的容量。如果要定义容量、可以使用以下值：
+
+* 一个整数值、表示基本卷容量的百分比
+* 一个小数值、表示基本卷容量的百分比
+* 存储库卷的特定大小。大小的单位为`字节`、`KB`、`MB`、`GB`或`TB`。
+
+
+如果不使用容量选项、则存储管理软件会将容量设置为基本卷容量的20%。
+
+将新存储库卷的名称用圆括号括起来。
+
+
+
+ a| 
+`计数`
+ a| 
+要删除的卷数。使用整数值。
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
+
+Snapshot存储库卷是一个可扩展卷、其结构为一个串联集合、最多包含16个标准卷实体。最初、可扩展存储库卷只有一个元素。可扩展存储库卷的容量与单个元素的容量完全相同。您可以通过向可扩展存储库卷附加其他标准卷来增加该卷的容量。然后、复合可扩展存储库卷容量将成为所有串联标准卷的容量之和。
+
+Snapshot组存储库卷必须满足以下各项的总和所需的最小容量：
+
+* 32 MB、用于支持快照组和写入时复制处理的固定开销。
+* 回滚处理的容量、是基础卷容量的1/5000。
+
+
+最小容量由控制器固件和存储管理软件强制实施。
+
+
+
+== 最低固件级别
+
+7.83.

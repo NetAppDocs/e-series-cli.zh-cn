@@ -1,0 +1,166 @@
+---
+permalink: commands-a-z/create-syncmirror.html 
+sidebar: sidebar 
+keywords: create, synchronous, mirroring 
+summary: 'create SyncMirror 命令可为同步远程镜像对同时创建主卷和二级卷。此命令还会设置写入模式(同步写入模式或异步写入模式)和同步优先级。' 
+---
+= 创建同步镜像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`create SyncMirror`命令可为同步远程镜像对创建主卷和二级卷。此命令还会设置写入模式(同步写入模式或异步写入模式)和同步优先级。
+
+
+
+== 支持的阵列
+
+此命令会对任何单个存储阵列执行适用场景 操作、但有一些限制。如果您在E2700或E5600阵列上运行命令、则没有任何限制。
+
+[NOTE]
+====
+如果您在E2800或E5700阵列上运行命令、则客户端类型必须设置为`symbol`。如果客户端类型设置为`https`、则不会执行此命令。
+
+====
+
+
+== 角色
+
+要在E2800或E5700storage阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+在先前版本的此命令中、功能标识符为`remoteMirror`。此功能标识符不再有效、并替换为`SyncMirror`。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+create syncMirror primary=pass:quotes[_"primaryVolumeName_"
+secondary="_secondaryVolumeName_"
+(remoteStorageArrayName="_storageArrayName_" |
+remoteStorageArrayWwn="_wwID_")]
+[remotePassword="password"]
+[syncPriority=(highest | high | medium | low | lowest)]
+[autoResync=(enabled | disabled)]
+[writeOrder=(preserved | notPreserved)]
+[writeMode=(synchronous | asynchronous)]
+[role=(primary | secondary)]
+[force=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`主卷`
+ a| 
+本地存储阵列上要用于主卷的现有卷的名称。将主卷名称用双引号("")括起来。
+
+
+
+ a| 
+`s二等`
+ a| 
+远程存储阵列上要用于二级卷的现有卷的名称。将二级卷名称用双引号("")括起来。
+
+
+
+ a| 
+`remoteStorageArrayName`
+ a| 
+远程存储阵列的名称。将远程存储阵列名称用双引号("")括起来。
+
+
+
+ a| 
+`remoteStorageArrayWwn`
+ a| 
+远程存储阵列的全球通用标识符(World Wide Identifier、WWID)。将WWID用双引号("")括起来。
+
+
+
+ a| 
+`remotePassword`
+ a| 
+远程存储阵列的密码。如果远程存储阵列受密码保护、请使用此参数。请将密码用双引号("")括起来。
+
+
+
+ a| 
+`s同步优先级`
+ a| 
+完全同步相对于主机I/O活动的优先级。有效值为`最高`、`高`、`m中`、`低`或`最低`。
+
+
+
+ a| 
+`AutoResync`
+ a| 
+用于在远程镜像对的主卷和二级卷之间自动重新同步的设置。此参数具有以下值：
+
+* `enabled`—已启用自动重新同步。您无需执行任何其他操作即可重新同步主卷和二级卷。
+* `d已标记`—自动重新同步已关闭。要重新同步主卷和二级卷、必须运行`reresume SyncMirror`命令。
+
+
+
+
+ a| 
+`writeOrder`
+ a| 
+主卷与二级卷之间数据传输的写入顺序。有效值为`preserved`或`notPreserved`。
+
+
+
+ a| 
+`写入模式`
+ a| 
+主卷如何写入二级卷。有效值为`synchronous`或`ynchronous`。
+
+
+
+ a| 
+`角色`
+ a| 
+使用此参数可将异步镜像组提升为主角色、或者将异步镜像组降级为二级角色。要将异步镜像组定义为主角色、请将此参数设置为`primary`。要将异步镜像组定义为二级角色、请将此参数设置为`s辅助`。
+
+
+
+ a| 
+`强制`
+ a| 
+如果存储阵列之间的通信链路已关闭、并且本地端的提升或降级导致出现双主条件或双二级条件、则会强制执行角色反转。要强制反转角色、请将此参数设置为`true`。默认值为`false`。
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、连字符和下划线的任意组合。名称最多可以包含30个字符。
+
+选择主卷和二级卷时、二级卷的大小必须等于或大于主卷。二级卷的RAID级别不必与主卷相同。
+
+密码存储在管理域中的每个存储阵列上。如果先前未设置密码、则不需要密码。密码可以是字母数字字符的任意组合、最多30个字符。(您可以使用`set storageArray`命令定义存储阵列密码。)
+
+同步优先级用于定义用于在镜像关系的主卷和二级卷之间同步数据的系统资源量。如果选择最高优先级、则数据同步将使用最多的系统资源来执行完全同步、从而降低主机数据传输的性能。
+
+`writeOrder`参数仅适用于异步写入模式、并使镜像对成为一致性组的一部分。将`writeOrder`参数设置为`preserved`会使远程镜像对按照主机写入主卷的相同顺序将数据从主卷传输到二级卷。如果发生传输链路故障、则会对数据进行缓冲、直到完全同步为止。此操作可能需要额外的系统开销来维护已缓冲的数据、从而降低操作速度。将`writeOrder`参数设置为`notReserved`可使系统不必在缓冲区中保留数据、但需要强制执行完全同步、以确保二级卷与主卷具有相同的数据。
+
+
+
+== 最低固件级别
+
+6.10

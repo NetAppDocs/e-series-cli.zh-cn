@@ -1,0 +1,86 @@
+---
+permalink: commands-a-z/remove-storagearray-directoryserver.html 
+sidebar: sidebar 
+keywords: remove, storage array, directory, server, role, mapping 
+summary: remove storageArray directoryServer命令可删除为指定目录服务器定义的角色映射。 
+---
+= 删除存储阵列目录服务器角色映射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`remove storageArray directoryServer`命令可删除为指定目录服务器定义的角色映射。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+remove storageArray directoryServer pass:quotes[[_domainId_]]
+    (allGroupDNs | groupDNs=pass:quotes[(_groupDN1 ... groupDNN_))]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`d目录服务器`
+ a| 
+用于使用域ID指定要删除映射的域。
+
+
+
+ a| 
+`所有组域名`
+ a| 
+用于从域中删除所有组可分辨名称映射。
+
+
+
+ a| 
+`组FQDN`
+ a| 
+用于指定要删除的组`的可分辨名称(Distinguished Name、DN)。
+
+[NOTE]
+====
+如果输入多个组、请使用空格将值分隔开。
+
+====
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "remove storageArray directoryServer ["domain1"]
+                    groupDNs=("CN=company-distlist,OU=Managed,
+                    OU=MyCompanyGroups,DC=hq,DC=mycompany,DC=com");"
+
+SMcli -n Array1 -c "remove storageArray directoryServer ["domain1"]
+                    allGroupDNs;"
+
+SMcli completed successfully.
+----

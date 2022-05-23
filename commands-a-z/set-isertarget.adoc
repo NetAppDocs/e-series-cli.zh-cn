@@ -1,0 +1,311 @@
+---
+permalink: commands-a-z/set-isertarget.html 
+sidebar: sidebar 
+keywords: set, iser, target 
+summary: set iserTarget命令用于定义iSER目标的属性。 
+---
+= 设置iSER目标
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set iserTarget`命令用于定义iSER目标的属性。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+[NOTE]
+====
+此命令已弃用、并替换为 xref:set-target.adoc[设置目标属性] 命令：
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set iserTarget pass:quotes[["_userLabel_"]]
+authenticationMethod=(none | chap) |
+chapSecret=pass:quotes[_securityKey_] |
+targetAlias=pass:quotes["_userLabel_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`iserTarget`
+ a| 
+要设置属性的iSER目标。将`_userLabel"`用双引号("")括起来。如果用户标签是目标别名、则还必须将`_userLabel"`括在方括号([])中；如果用户标签是iSCSI限定名称(IQN)、则还必须将其括在方括号(<>)中。
+
+
+
+ a| 
+`身份验证方法`
+ a| 
+对iSCSI会话进行身份验证的方法。
+
+
+
+ a| 
+`chapSecret`
+ a| 
+要用于对对等连接进行身份验证的安全密钥。
+
+
+
+ a| 
+`targetAlias`
+ a| 
+要用于目标的新名称。请将此名称用双引号("")括起来。
+
+|===
+
+
+== 注释：
+
+质询握手身份验证协议(CHAP)是一种对连接对等方进行身份验证的协议。CHAP基于共享_secret_的对等方。机密是一种类似于密码的安全密钥。
+
+使用`chapSecret`参数为需要相互身份验证的启动程序设置安全密钥。CHAP密钥必须介于12到57个字符之间。此表列出了有效字符。
+
+[cols="1a,1a,1a,1a,1a,1a,1a,1a,1a,1a,1a,1a"]
+|===
+
+
+ a| 
+空间
+ a| 
+！
+ a| 
+"
+ a| 
+#
+ a| 
+美元
+ a| 
+%
+ a| 
+和
+ a| 
+'
+ a| 
+（
+ a| 
+）
+ a| 
+*
+ a| 
+
+
+
+ a| 
+，
+ a| 
+-
+ a| 
+。
+ a| 
+/
+ a| 
+0
+ a| 
+1.
+ a| 
+2.
+ a| 
+3.
+ a| 
+4.
+ a| 
+5.
+ a| 
+6.
+ a| 
+7.
+
+
+
+ a| 
+8.
+ a| 
+9
+ a| 
+：
+ a| 
+；
+ a| 
+<
+ a| 
+=
+ a| 
+>
+ a| 
+？
+ a| 
+@
+ a| 
+答
+ a| 
+B
+ a| 
+C
+
+
+
+ a| 
+D
+ a| 
+E
+ a| 
+F
+ a| 
+g
+ a| 
+H
+ a| 
+I
+ a| 
+J
+ a| 
+k
+ a| 
+L
+ a| 
+M
+ a| 
+不包括
+ a| 
+O
+
+
+
+ a| 
+P
+ a| 
+问
+ a| 
+r
+ a| 
+S
+ a| 
+电话
+ a| 
+u
+ a| 
+五
+ a| 
+W
+ a| 
+X
+ a| 
+Y
+ a| 
+Z
+ a| 
+[
+
+
+
+ a| 
+\
+ a| 
+]
+ a| 
+^
+ a| 
+_
+ a| 
+'
+ a| 
+答
+ a| 
+B
+ a| 
+C
+ a| 
+D
+ a| 
+E
+ a| 
+F
+ a| 
+g
+
+
+
+ a| 
+H
+ a| 
+I
+ a| 
+J
+ a| 
+k
+ a| 
+L
+ a| 
+M
+ a| 
+不包括
+ a| 
+O
+ a| 
+P
+ a| 
+问
+ a| 
+r
+ a| 
+S
+
+
+
+ a| 
+电话
+ a| 
+u
+ a| 
+五
+ a| 
+W
+ a| 
+X
+ a| 
+Y
+ a| 
+Z
+ a| 
+｛
+ a| 
+我们可以为您提供
+ a| 
+｝
+ a| 
+~
+ a| 
+
+|===
+
+
+== 最低固件级别
+
+8.20
+
+8.41此命令已弃用。

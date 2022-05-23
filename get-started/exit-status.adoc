@@ -1,0 +1,639 @@
+---
+permalink: get-started/exit-status.html 
+sidebar: sidebar 
+keywords: exit, status 
+summary: 此表列出了可能返回的退出状态以及每个状态的含义。 
+---
+= 退出状态
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+此表列出了可能返回的退出状态以及每个状态的含义。
+
+[cols="3*"]
+|===
+| 状态值 | 错误名称 | 含义 
+
+
+ a| 
+0
+ a| 
+成功
+ a| 
+命令已终止、但未显示错误。
+
+
+
+ a| 
+1.
+ a| 
+invalid_usage
+ a| 
+命令已终止、并出现错误。同时、还会显示有关此错误的信息。
+
+
+
+ a| 
+2.
+ a| 
+script_file_does_not_exist
+ a| 
+此脚本文件不存在。
+
+
+
+ a| 
+3.
+ a| 
+error_opening_output_file
+ a| 
+打开输出文件时出错。
+
+
+
+ a| 
+4.
+ a| 
+no_storage_array_at地址
+ a| 
+存储阵列不在指定地址。
+
+
+
+ a| 
+5.
+ a| 
+Addresses_specify_Different_arrays
+ a| 
+地址用于指定不同的存储阵列。
+
+
+
+ a| 
+6.
+ a| 
+no_sansAME_for_host_agent_connect
+ a| 
+已连接的主机代理不存在存储阵列名称。
+
+
+
+ a| 
+7.
+ a| 
+SANAME_NOT_AT地址
+ a| 
+存储阵列名称不在指定地址。
+
+
+
+ a| 
+8.
+ a| 
+SANAME_NOT_INique
+ a| 
+存储阵列名称不唯一。
+
+
+
+ a| 
+9
+ a| 
+SANAME_NOT_IN_CONFIG文件
+ a| 
+此存储阵列名称不在配置文件中。
+
+
+
+ a| 
+10
+ a| 
+no_management_class_for_SA
+ a| 
+存储阵列不存在管理类。
+
+
+
+ a| 
+11.
+ a| 
+未找到sa_in_config_file_found
+ a| 
+在配置文件中未找到存储阵列。
+
+
+
+ a| 
+12
+ a| 
+内部错误
+ a| 
+发生内部错误。此退出状态表示您无权从命令行运行CLI命令。要从命令行运行所有CLI命令、您必须具有管理员权限。
+
+
+
+ a| 
+13
+ a| 
+脚本语法无效
+ a| 
+发现脚本语法无效。
+
+
+
+ a| 
+14
+ a| 
+无法进行通信
+ a| 
+控制器无法与存储阵列通信。
+
+
+
+ a| 
+15
+ a| 
+重复参数
+ a| 
+输入的参数重复。
+
+
+
+ a| 
+16.
+ a| 
+exection_error
+ a| 
+发生执行错误。
+
+
+
+ a| 
+17
+ a| 
+no_host_at地址
+ a| 
+主机未使用指定地址。
+
+
+
+ a| 
+18
+ a| 
+WWNAME_not_in_config_files
+ a| 
+此WWID不在配置文件中。
+
+
+
+ a| 
+19
+ a| 
+WWNAME_NOT_AT地址
+ a| 
+WWID不在该地址。
+
+
+
+ a| 
+20
+ a| 
+未知_IP
+ a| 
+指定的IP地址未知。
+
+
+
+ a| 
+21
+ a| 
+pm_config_file_Corrupted
+ a| 
+事件监控器配置文件已损坏。
+
+
+
+ a| 
+22.
+ a| 
+无法进行通信
+ a| 
+存储阵列无法与事件监控器通信。
+
+
+
+ a| 
+23
+ a| 
+UNEXIST_ALert
+ a| 
+控制器无法写入警报设置。
+
+
+
+ a| 
+24
+ a| 
+管理器节点错误
+ a| 
+指定的管理器节点不正确。
+
+
+
+ a| 
+25.
+ a| 
+cmd_not_available
+ a| 
+命令不可用。
+
+
+
+ a| 
+26
+ a| 
+device_not_in_config_file
+ a| 
+此设备不在配置文件中。
+
+
+
+ a| 
+27
+ a| 
+error_updating_config_file
+ a| 
+更新配置文件时出错。
+
+
+
+ a| 
+28
+ a| 
+未知主机错误
+ a| 
+发生未知主机错误。
+
+
+
+ a| 
+29
+ a| 
+sender_contact_file_not_found
+ a| 
+未找到发件人联系信息文件。
+
+
+
+ a| 
+30 个
+ a| 
+read_sender_contact_file_failed
+ a| 
+无法读取发件人联系信息文件。
+
+
+
+ a| 
+31
+ a| 
+用户Data_file_exists
+ a| 
+存在`userdata.txt`文件。
+
+
+
+ a| 
+32
+ a| 
+bad_email_information_to_include
+ a| 
+在电子邮件警报通知中指定的`-I`值无效。
+
+
+
+ a| 
+33
+ a| 
+bad_email_frequency
+ a| 
+在电子邮件警报通知中指定的`-f`值无效。
+
+
+
+ a| 
+34
+ a| 
+option_removed
+ a| 
+不再支持`-r`选项。
+
+
+
+ a| 
+35
+ a| 
+未知警报优先级
+ a| 
+指定的警报严重性无效。
+
+
+
+ a| 
+36
+ a| 
+password_required
+ a| 
+此操作需要设置管理员或监控器密码。
+
+
+
+ a| 
+37
+ a| 
+monitor_password无效
+ a| 
+无法完成此操作、因为输入的监控器密码无效。
+
+
+
+ a| 
+38
+ a| 
+admin_password无效
+ a| 
+无法完成此操作、因为输入的管理员密码无效。
+
+
+
+ a| 
+39
+ a| 
+超过了密码的最大值
+ a| 
+提供的密码超出字符限制。
+
+
+
+ a| 
+40
+ a| 
+monitor_token无效
+ a| 
+此阵列不支持`-R`监控器。请使用有效角色并重试此操作。
+
+
+
+ a| 
+41.
+ a| 
+ASUP_config_error
+ a| 
+写入或读取AutoSupport 配置文件时出错。请重试此操作。
+
+
+
+ a| 
+42
+ a| 
+mail_Server_unknown
+ a| 
+主机地址或邮件服务器地址不正确。
+
+
+
+ a| 
+43
+ a| 
+asUP_smtp_reply_address_required
+ a| 
+尝试ASUP配置测试时未检测到已启用ASUP的运行状况良好的阵列。
+
+
+
+ a| 
+44
+ a| 
+未检测到ASUP_array_detected.
+ a| 
+如果ASUP交付类型为SMTP、则需要回复电子邮件请求。
+
+
+
+ a| 
+45
+ a| 
+ASUP_INVALID_MAST_RELAY_SERVER
+ a| 
+无法验证ASUP邮件中继服务器。
+
+
+
+ a| 
+46
+ a| 
+ASUP_INVALID_Sender_email
+ a| 
+您指定的发件人电子邮件地址格式无效。
+
+
+
+ a| 
+47
+ a| 
+asup_invalid_PAC脚本
+ a| 
+代理自动配置(PAC)脚本文件不是有效的URL。
+
+
+
+ a| 
+48
+ a| 
+ASUP_INVALID_proxy_SERVER_HOST_address
+ a| 
+找不到指定的主机地址或其格式不正确。
+
+
+
+ a| 
+49
+ a| 
+ASUP_INVALID_proxy_SERVER_PORT_NUMBER
+ a| 
+指定的端口号格式无效。
+
+
+
+ a| 
+50
+ a| 
+ASUP_INVALID_authentication_parameter
+ a| 
+您指定的用户名或密码无效。
+
+
+
+ a| 
+51
+ a| 
+ASUP_INVALID_daily时间参数
+ a| 
+指定的每日时间参数无效。
+
+
+
+ a| 
+52
+ a| 
+ASUP_INVALID_day_of_week_parameter
+ a| 
+输入的`-dayOfWeek`参数无效。
+
+
+
+ a| 
+53.
+ a| 
+ASUP_INVALID_weekly_time_parameter
+ a| 
+每周时间参数无效。
+
+
+
+ a| 
+54
+ a| 
+ASUP_INVALID_schedule_parsing
+ a| 
+无法成功解析提供的计划信息。
+
+
+
+ a| 
+55
+ a| 
+ASUP_INVALID_SA_Specified
+ a| 
+提供的存储阵列说明符无效。
+
+
+
+ a| 
+56
+ a| 
+asUP_invalid_input_archive
+ a| 
+输入的输入归档无效。输入归档参数的格式必须为``-inputArchive=<n>``、其中`-n`是一个介于0到5之间的整数。
+
+
+
+ a| 
+57
+ a| 
+ASUP_INVALID_output_log
+ a| 
+未指定有效的输出日志。
+
+
+
+ a| 
+58
+ a| 
+ASUP_transmission _file_copy_error
+ a| 
+尝试复制AutoSupport 传输日志文件时出错。传输日志不存在或尝试复制其数据时出现IO错误。
+
+
+
+ a| 
+59
+ a| 
+asUP_duplicate_named_arrays
+ a| 
+找到多个同名存储阵列。请使用world-wide-name参数`-w <WWID>`重试此命令。
+
+
+
+ a| 
+60
+ a| 
+ASUP_NO_Specified_array_found
+ a| 
+此命令不存在或不支持使用-n <storage-system-name>参数的指定存储阵列。
+
+
+
+ a| 
+61.
+ a| 
+已找到ASUP_NO_Specified_WWID_FOUND
+ a| 
+此命令不存在或不支持使用`-w <WWID>`参数的指定存储阵列。
+
+
+
+ a| 
+62.
+ a| 
+ASUP_Filtered_transmission日志错误
+ a| 
+尝试获取筛选后的传输日志时出现未知错误。
+
+
+
+ a| 
+63.
+ a| 
+ASUP_transmission _archive_does_not_exist
+ a| 
+使用``-inputArchive=<n>``参数指定的AutoSupport 输入归档传输日志不存在。
+
+
+
+ a| 
+64
+ a| 
+no_valid_rest_client_discovered
+ a| 
+无法通过https与存储阵列通信。
+
+
+
+ a| 
+65
+ a| 
+无效_cli_version
+ a| 
+客户端命令行界面版本与存储阵列上运行的命令行界面版本不兼容。
+
+
+
+ a| 
+66
+ a| 
+用户名或密码无效
+ a| 
+输入的用户名或密码无效。
+
+
+
+ a| 
+67
+ a| 
+不可信连接
+ a| 
+无法与存储阵列建立安全连接。
+
+
+
+ a| 
+68
+ a| 
+密码文件无效
+ a| 
+找不到此密码文件或此密码文件不可读。
+
+|===

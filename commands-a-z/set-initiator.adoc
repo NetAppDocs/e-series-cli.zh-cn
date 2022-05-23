@@ -1,0 +1,92 @@
+---
+permalink: commands-a-z/set-initiator.html 
+sidebar: sidebar 
+keywords: set, initiator 
+summary: set initiator命令用于更新启动程序对象。 
+---
+= 设置启动程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set initiator`命令可更新启动程序对象。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令将替换已弃用的 xref:set-iscsiinitiator.adoc[设置iSCSI启动程序] 命令：
+
+====
+[NOTE]
+====
+此命令仅适用于iSCSI、iSER、基于RoCE的NVMe、基于InfiniBand的NVMe以及基于光纤通道的NVMe。
+
+====
+
+
+== 语法
+
+[listing]
+----
+
+set initiator (["initiatorName"] | <"initiatorQualifiedName">) ([userLabel="newInitiatorName"] |
+[host="newHostName"] | [chapSecret="newSecurityKey"])
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`启动程序`
+ a| 
+用于指定要为其设置属性的启动程序标识符。将名称用双引号("`"`)括起来。如果值为用户标签、则还必须将名称用方括号([])括起来；如果值为限定名称(例如iqn或nqn)、则还必须将名称用尖括号(<>)括起来。
+
+
+
+ a| 
+`用户标签`
+ a| 
+用于输入启动程序对象的新用户标签。将新用户标签用双引号("")括起来。
+
+
+
+ a| 
+`主机`
+ a| 
+用于输入主机端口连接到的新主机。将主机名用双引号("")括起来。
+
+
+
+ a| 
+`chapSecret`
+ a| 
+用于输入要用于对对等连接进行身份验证的新安全密钥。将安全密钥用双引号("")括起来。此参数仅适用于`iSCSI`和`iSER`主机接口类型。
+
+|===
+
+
+== 最低固件级别
+
+8.41

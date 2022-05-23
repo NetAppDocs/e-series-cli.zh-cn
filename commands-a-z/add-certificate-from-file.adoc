@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/add-certificate-from-file.html 
+sidebar: sidebar 
+keywords: add certificate file, supported arrays, syntax, parameters, minimum firmware level 
+summary: 使用从文件添加证书命令可以从文件中获取证书并将其添加到CLI软件包的信任存储中。添加的证书仅供命令行界面软件包使用。 
+---
+= 从文件添加证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`Add certificate from file`命令可以从文件中获取证书并将其添加到命令行界面软件包的信任存储中。添加的证书仅供命令行界面软件包使用。
+
+
+
+== 支持的阵列
+
+此命令用于对EF600和EF300存储阵列执行适用场景。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[trust localCertificate file _filename_ alias user _specified alias_]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件名`
+ a| 
+用于指定包含证书的文件名。
+
+
+
+ a| 
+`用户指定的别名`
+ a| 
+用于通过用户定义的别名指定证书。
+
+|===
+
+
+== 最低固件级别
+
+8.60

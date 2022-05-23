@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/clear-emailalert-configuration.html 
+sidebar: sidebar 
+keywords: clear email, alert, configuration 
+summary: clear emailAlert configuration命令会将电子邮件警报配置清除为默认值。 
+---
+= 清除电子邮件警报配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`clear emailAlert configuration`命令可将电子邮件警报配置清除为默认值。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+clear emailAlert configuration
+----
+
+
+== Parameters
+
+无
+
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "clear emailAlert configuration;"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

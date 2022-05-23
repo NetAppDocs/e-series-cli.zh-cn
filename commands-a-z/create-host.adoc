@@ -1,0 +1,90 @@
+---
+permalink: commands-a-z/create-host.html 
+sidebar: sidebar 
+keywords: create, host 
+summary: create host命令将创建一个新主机。 
+---
+= 创建主机
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`create host`命令可创建新主机。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+对于E2700和E5600存储阵列、如果未指定要在其中创建新主机的主机组、则会在默认组中创建新主机。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+create host userLabel=pass:quotes[_"hostName"_]
+[hostGroup=pass:quotes[(_"hostGroupName"_] | defaultGroup)]
+[hostType=(hostTypeIndexLabel | hostTypeIndexNumber)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`用户标签`
+ a| 
+要为其创建的主机指定的名称。将主机名用双引号("")括起来。
+
+
+
+ a| 
+`hostGroup`
+ a| 
+要在其中创建新主机的主机组的名称。将主机组名称用双引号("")括起来。(如果主机组不存在、您可以使用`create hostGroup`命令创建新主机组。) `defaultGroup`选项是包含卷映射到的主机的主机组。
+
+
+
+ a| 
+`hostType`
+ a| 
+标识主机类型的索引标签或索引编号。使用`show storageArray hostTypeTable`命令生成可用主机类型标识符的列表。如果主机类型包含特殊字符、请将主机类型用双引号("")括起来。
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、连字符和下划线的任意组合。名称最多可以包含30个字符。
+
+主机是指连接到存储阵列并通过主机端口访问存储阵列上的卷的计算机。您可以定义单个主机的特定映射。您还可以将主机分配给共享对一个或多个卷的访问的主机组。
+
+主机组是一个可选的拓扑元素、如果要指定一组共享对相同卷的访问的主机、则可以定义该元素。主机组是一个逻辑实体。只有当您有两个或更多主机共享对相同卷的访问时、才定义主机组。
+
+如果未指定要放置所创建主机的主机组、则新定义的主机属于默认主机组。
+
+
+
+== 最低固件级别
+
+5.20
+
+7.10添加`hostType`参数。

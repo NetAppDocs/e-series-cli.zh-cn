@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/show-allhostports.html 
+sidebar: sidebar 
+keywords: show, host, ports 
+summary: show allHostPorts命令可返回有关已配置主机端口的信息。 
+---
+= 显示主机端口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show allHostPorts`命令可返回有关已配置主机端口的信息。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+对于连接到存储阵列的所有主机端口、此命令将返回以下信息：
+
+* 主机端口标识符
+* 主机端口名称
+* 主机类型
+
+
+
+
+== 语法
+
+[listing]
+----
+show allHostPorts
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+此命令将返回与此示例类似的HBA主机端口信息。
+
+[listing]
+----
+HOST PORT IDENTIFIER     HOST PORT NAME  HOST TYPE
+12:34:56:54:33:22:22:22  Jupiter1        Solaris
+12:34:56:78:98:98:88:88  Pluto1          Windows 2000/Server 2003 Clustered
+54:32:12:34:34:55:65:66  Undefined       Undefined
+----
+
+
+== 最低固件级别
+
+5.40

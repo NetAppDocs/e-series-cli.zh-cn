@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/show-emailalert-summary.html 
+sidebar: sidebar 
+keywords: show, email, alert, configuration 
+summary: show emailAlert summary命令可显示电子邮件警报配置信息。 
+---
+= 显示电子邮件警报配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show emailAlert summary`命令可显示电子邮件警报配置信息。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员或存储监控角色。
+
+
+
+== 语法
+
+[listing]
+----
+show emailAlert summary
+----
+
+
+== Parameters
+
+无
+
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "show emailAlert summary;"
+
+EMAIL ALERT SETTINGS
+   Mail server address: email@company.com
+   Mail server encryption: starttls
+   Mail server port: 587
+   Mail server user name: accountName
+   Mail server password: secret123
+   Email sender address: no-reply@company.com
+   Recipient Email
+      recipient@company.com
+      recipient-two@company.com
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40
+
+11.70.01添加了用于指定SMTP加密(none、smTPS、STARTTLS)、SMTP端口和SMTP凭据(用户名和密码)的参数。

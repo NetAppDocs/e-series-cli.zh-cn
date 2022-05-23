@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/set-storagearray-vaaienabled.html 
+sidebar: sidebar 
+keywords: enable, disable, vaai 
+summary: 'set storageArray vaaiEnabled命令用于打开或关闭存储阵列的VMware vStorage API阵列架构(VAAI)。' 
+---
+= 启用或禁用VAAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray vaaiEnabled`命令可为存储阵列启用或禁用VMware vStorage API阵列架构(VAAI)。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+存储阵列随附的VAAI已打开。如果您不想运行VAAI、或者VAAI导致存储阵列出现问题、请使用此命令关闭VAAI。唯一受影响的存储阵列是运行命令的存储阵列。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray vaaiEnabled=(TRUE | FALSE)
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`已启用vaaiEnabled`
+ a| 
+用于打开或关闭VAAI的设置。要打开VAAI、请将此参数设置为`true`。要关闭VAAI、请将此参数设置为`false`。默认设置是启用VAAI。
+
+|===
+
+
+== 注释：
+
+[NOTE]
+====
+通过VAAI、可以将某些存储任务从服务器硬件卸载到存储阵列。将存储任务卸载到存储阵列可减少主机必须执行的任务、从而提高主机性能。
+
+====
+[NOTE]
+====
+使用`show storageArray odxSetting` name查看VAAI设置。
+
+====
+
+
+== 最低固件级别
+
+8.20

@@ -1,0 +1,74 @@
+---
+permalink: commands-a-z/start-volumegroup-import.html 
+sidebar: sidebar 
+keywords: start, volume, group, import 
+summary: start VolumeGroup import命令可将卷组移至完整状态、以使新引入的卷组可供其新存储阵列使用。 
+---
+= 启动卷组导入
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sStart VolumeGroup import`命令可将卷组移至完整状态、以使新引入的卷组可供其新存储阵列使用。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+在运行此命令之前、卷组必须处于已导出或已强制状态。成功运行命令后、卷组将正常运行。
+
+[NOTE]
+====
+在卷组中、不能将与功能关联的卷从一个存储阵列移动到另一个存储阵列。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup [_volumeGroupName_]] import
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`VolumeGroup`
+ a| 
+要导入的卷组的名称。将卷组名称用方括号([])括起来。
+
+|===
+
+
+== 注释：
+
+在导入操作中、与功能(同步镜像、卷副本、映射和持久预留)特别相关的更高级别卷将被删除。
+
+在运行`sStart VolumeGroup import`命令之前、必须运行`show VolumeGroup importDependencies`命令。
+
+
+
+== 最低固件级别
+
+7.10.

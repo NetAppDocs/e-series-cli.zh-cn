@@ -1,0 +1,54 @@
+---
+permalink: commands-a-z/reset-storagearray-volumedistribution.html 
+sidebar: sidebar 
+keywords: reset, storage array, volume, distribution 
+summary: 'reset storageArray volumeDistribution命令可将所有卷重新分配(移动)到其首选控制器。' 
+---
+= 重置存储阵列卷分布
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`reset storageArray volumeDistribution`命令可将所有卷重新分配(移动)到其首选控制器。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+reset storageArray volumeDistribution
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+如果在没有多路径驱动程序的主机上使用此命令、则必须停止对卷的I/O操作、直到此命令完成为止、以防止出现应用程序错误。
+
+在某些主机操作系统环境下、可能需要重新配置多路径主机驱动程序。您可能还需要修改操作系统、才能识别卷的新I/O路径。
+
+
+
+== 最低固件级别
+
+5.20

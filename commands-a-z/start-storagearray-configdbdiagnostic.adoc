@@ -1,0 +1,136 @@
+---
+permalink: commands-a-z/start-storagearray-configdbdiagnostic.html 
+sidebar: sidebar 
+keywords: start, storage, array, configuration, database, diagnostic 
+summary: start storageArray configDbDiagnostic命令会对配置数据库运行一致性检查。 
+---
+= 启动存储阵列配置数据库诊断
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sStart storageArray configDbDiagnostic`命令可对配置数据库运行一致性检查。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+start storageArray configDbDiagnostic
+[sourceLocation=(disk | onboard) |
+diagnosticType=(fileSystem | mirror) |
+controller[(a|b)]]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`sSourceLocation`
+ a| 
+此参数用于指定数据库的位置。
+
+* `disk`表示数据直接来自驱动器上的数据库
+* `板载`表示数据来自RPA内存位置
+
+
+默认位置为`disk`。
+
+
+
+ a| 
+`diIn可 知类型`
+ a| 
+要对数据库运行的诊断测试级别。您可以运行以下级别的测试之一：
+
+`filesystem`—此选项用于检查数据库的结构完整性。
+
+`mirror`—使用此选项运行的测试会根据`sSourceLocation`参数的值而有所不同：
+
+* 当`* sourceLocation*`参数设置为`disk`时、对等控制器将启动块检查。
+* 当`* sourceLocation*`参数设置为`板载`时、对等控制器将启动记录检查。
+
+
+[NOTE]
+====
+您只能从命令行或脚本编辑器运行`mirror`选项。此选项不能通过存储管理软件图形用户界面使用。`mirror`选项将启动一个长时间运行的操作、您无法停止该操作。
+
+====
+默认值为`filesystem`。
+
+
+
+ a| 
+`控制器`
+ a| 
+包含要在其中运行诊断测试的数据库的控制器。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器将控制器标识符括在方括号()中。
+
+|===
+
+
+== 注释：
+
+此命令会对配置数据库运行一致性检查。系统将检查所有数据库记录。错误数据会自动写入磁盘上数据文件夹中的文件。您无需指定输出文件。
+
+[NOTE]
+====
+运行一致性检查时、将`diIn可 知类型`参数设置为`mirror`、并将`sSourceLocation`参数设置为`板载`可以发生原因 操作长时间运行。这可能会对主机I/O处理产生负面影响。此操作只能在支持组织的指导下执行。
+
+====
+完成诊断测试后、控制器固件将返回以下结果之一：
+
+* `d诊断已完成、无错误。未创建ZIP文件。`
+* `d诊断已完成、但出现错误。请参阅在`创建的ZIP文件
++
+`+...\Install_dir\data\FirmwareUpgradeResports\timestamp_buildNo.zip +`
+
+
+
+如果诊断测试检测到配置数据库不一致、则控制器固件将执行以下操作：
+
+* 返回不一致的问题描述
+* 保存包含原始二进制数据的ZIP文件
+
+
+控制器固件会将ZIP文件保存到此位置：
+
+`+...\Install_dir\data\FirmwareUpgradeResports\timestamp_buildNo.zip +`
+
+您可以使用二进制数据帮助确定问题的发生原因 、也可以将包含二进制数据的文件发送给技术支持。
+
+要停止数据库配置诊断测试、请使用`stop storageArray configDbDiagnostic`命令。
+
+此外、您还可以通过存储管理软件图形用户界面启动数据库配置诊断测试；但是、您不能通过存储管理软件图形用户界面停止数据库配置诊断测试。如果要停止正在运行的诊断测试、必须使用`stop storageArray configDbDiagnostic`命令。
+
+
+
+== 最低固件级别
+
+7.75
+
+7.83添加了以下参数：
+
+* `sSourceLocation`
+* `diIn可 知类型`
+* `控制器`
+

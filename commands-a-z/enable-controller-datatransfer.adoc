@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/enable-controller-datatransfer.html 
+sidebar: sidebar 
+keywords: enable, controller, datatransfer, command, revive, quiesced, running, diagnostics, role, syntax, parameter, firmware level 
+summary: enable controller dataTransfer命令可对运行诊断时已暂停的控制器进行恢复。 
+---
+= 启用控制器数据传输
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`enable controller dataTransfer`命令可对运行诊断时已暂停的控制器进行恢复。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+enable controller [(a|b)] dataTransfer
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+要恢复的控制器。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器将控制器标识符括在方括号()中。如果不指定控制器、则存储管理软件将返回语法错误。
+
+|===
+
+
+== 最低固件级别
+
+6.10

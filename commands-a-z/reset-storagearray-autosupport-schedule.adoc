@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/reset-storagearray-autosupport-schedule.html 
+sidebar: sidebar 
+keywords: reset, autosupport, message, collection, schedule 
+summary: reset storageArray AutoSupport schedule命令可将AutoSupport 消息发送回管理软件生成的随机值的每日和每周时间以及每周天数重置为。 
+---
+= 重置AutoSupport 消息收集计划(适用于单个E2800或E5700阵列)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`reset storageArray AutoSupport schedule`命令可将AutoSupport 消息发送回管理软件生成的随机值的每日和每周时间及星期几重置为。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+* 管理软件会随机选择每日消息和每周消息的时间、以及每周消息的星期几。
+* 管理软件会尽力确保管理域中的任何两个存储阵列都不会同时发送计划的AutoSupport 消息。
+
+
+
+
+== 语法
+
+[listing]
+----
+reset storageArray autoSupport schedule
+----
+
+
+== Parameters
+
+无
+
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "reset storageArray autoSupport schedule;"
+
+SMcli completed successfully.
+----
+
+
+== 验证
+
+使用`show storageArray AutoSupport`命令查看对计划所做的更改。
+
+
+
+== 最低固件级别
+
+8.40

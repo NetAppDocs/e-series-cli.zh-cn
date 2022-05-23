@@ -1,0 +1,115 @@
+---
+permalink: commands-a-z/create-read-only-snapshot-volume.html 
+sidebar: sidebar 
+keywords: create, read only, snapshot, volume 
+summary: create snapVolume命令可为基础卷的快照映像创建只读快照卷。要将只读快照卷更改为读/写卷、请使用set snapVolume convertToReadWrite命令。 
+---
+= 创建只读Snapshot卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`create snapVolume`命令可为基础卷的快照映像创建只读快照卷。要将只读快照卷更改为读/写卷、请使用`set snapVolume convertToReadWrite`命令。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+不能对联机卷副本中使用的快照映像使用此命令。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+create snapVolume userLabel=pass:quotes[_"snapVolumeName"_
+snapImageID="_snapCGID:imageID"_]
+readOnly
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`用户标签`
+ a| 
+要为快照卷指定的名称。将快照卷名称用双引号("")括起来。
+
+
+
+ a| 
+`snapImageID`
+ a| 
+要添加到新只读Snapshot卷的快照映像的名称。快照映像的名称由两部分组成：
+
+* 快照组的名称
+* 快照组中快照映像的标识符
+
+
+快照映像的标识符可以是以下项之一：
+
+* 一个整数值、是快照组中快照的序列号。
+* `最新`-如果要显示在快照组中创建的最新快照映像、请使用此选项。
+* `oldest`—如果要显示在快照组中创建的最早快照映像、请使用此选项。
+
+
+将快照映像名称用双引号("")括起来。
+
+
+
+ a| 
+`re仅限`
+ a| 
+此参数会将快照卷设置为只读。此参数实际上是一个布尔值；但是、在该命令的上下文中、布尔值始终为`true`。
+
+[NOTE]
+====
+使用`readOnly`参数时、不会创建快照卷。
+
+====
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
+
+快照映像的标识符包含两个部分、并用冒号(：)分隔：
+
+* 快照组的名称
+* 快照映像的标识符
+
+
+例如、如果要使用名为snapGroup1的快照组中的最新快照映像创建名为engData1的只读卷、则应使用以下命令：
+
+[listing]
+----
+create snapVolume userLabel="engData1" snapImageID="snapGroup1:newest" readOnly;
+----
+
+
+== 最低固件级别
+
+7.83.

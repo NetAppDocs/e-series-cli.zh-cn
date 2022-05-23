@@ -1,0 +1,104 @@
+---
+permalink: commands-a-z/set-storagearray-pqvalidateonreconstruct.html 
+sidebar: sidebar 
+keywords: set, storage, array, pq validation, reconstruct 
+summary: set storageArray pqValidateOnReconstruct命令可在重建时设置存储阵列的P/Q验证状态。启用此功能后、将使用data+P和data+Q重建数据、并在确定如何继续之前检查结果的一致性。 
+---
+= 在reconstruct上设置存储阵列PQ验证
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray pqValidateOnReconstruct`命令可在重建时设置存储阵列的P/Q验证状态。启用此功能后、将使用data+P和data+Q重建数据、并在确定如何继续之前检查结果的一致性。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+这种配置具有双奇偶校验的适用场景 磁盘池和RAID 6卷组。在这种情况下、驱动器发生故障时、卷组或磁盘池中仍存在冗余、因此可以在重建期间检查数据和奇偶校验一致性。如果在重建期间发现不一致、并且为卷启用了数据保证、则可以确定不一致的原因、以便可以使用其余驱动器重建数据。如果启用了此功能、但未为卷启用数据保证、或者无法将不一致性隔离到单个驱动器、则要重建的块将标记为不可读。
+
+验证可能会延长SSD驱动器的重建时间、因此可以根据介质类型启用或禁用此功能。如果为给定介质类型启用了此功能、则此功能将应用于使用此介质类型的所有池和RAID 6卷组。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray pqValidateOnReconstruct (enable | disable) driveMediaType=(hdd | ssd | allMedia)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`pqValidateOnReconstruct`
+ a| 
+修改P/Q validate on reconstruction功能。
+
+
+
+ a| 
+`enable`或`disable`
+ a| 
+启用或禁用重建时的P/Q验证。
+
+
+
+ a| 
+`driveMediaType`
+ a| 
+要设置P/Q验证重建功能的驱动器介质类型。支持以下驱动器介质类型：
+
+* `HDD`表示您要在硬盘驱动器上设置验证状态
+* `sSD`表示您要在固态磁盘上设置验证状态
+* `allMedia`表示您要在存储阵列中的所有介质上设置验证状态。
+
+
+|===
+
+
+== 驱动器介质类型指定为硬盘驱动器的示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray pqValidateOnReconstruct enable driveMediaType=hdd;"
+
+SMcli completed successfully.
+----
+
+
+== 驱动器介质类型指定为固态驱动器的示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray pqValidateOnReconstruct disable driveMediaType=ssd;"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.42

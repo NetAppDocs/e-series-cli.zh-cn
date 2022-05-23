@@ -1,0 +1,140 @@
+---
+permalink: commands-a-z/save-storagearray-warningevents.html 
+sidebar: sidebar 
+keywords: save, storage, array, events 
+summary: save storageArray warningEvents命令可将事件从主要事件日志保存到文件中。 
+---
+= 保存存储阵列事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sstorageArray warningEvents`命令可将事件从主要事件日志保存到文件。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+此命令会将事件从主要事件日志保存到一个文件中。您可以保存以下事件：
+
+* *严重事件*—存储阵列上发生错误、需要立即解决。如果不立即更正错误、可能会丢失数据访问。
+* *警告事件*—存储阵列发生错误、导致性能下降或从其他错误中恢复的能力下降。对数据的访问未丢失、但您必须更正此错误、以防止在发生其他错误时可能丢失数据访问。
+* *Informational Events*—存储阵列上发生的事件不会影响正常操作。此事件报告配置发生更改或其他信息、这些信息可能有助于评估存储阵列的性能。
+* *调试事件*—存储阵列上发生的事件、提供了一些信息、可用于帮助您确定导致错误的步骤或状态。您可以将包含此信息的文件发送给技术支持、以帮助确定错误的发生原因。
+
+
+[NOTE]
+====
+某些存储阵列可能无法支持所有四种类型的事件。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save storageArray (allEvents | criticalEvents |
+warningEvents | infoEvents | debugEvents)
+file=pass:quotes["_filename_"]
+[count=pass:quotes[_numberOfEvents_]]
+[forceSave=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有通风口`
+ a| 
+用于将所有事件保存到文件的参数。
+
+
+
+ a| 
+`关键问题`
+ a| 
+用于仅将严重事件保存到文件的参数。
+
+
+
+ a| 
+`warningEvents`
+ a| 
+用于仅将警告事件保存到文件的参数。
+
+
+
+ a| 
+`信息提供`
+ a| 
+用于仅将信息性事件保存到文件的参数。
+
+
+
+ a| 
+`debugEvents`
+ a| 
+用于仅将调试事件保存到文件的参数。
+
+
+
+ a| 
+`文件`
+ a| 
+要将事件保存到的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logs\events.txt"`
+
+包含主要事件日志内容的文件的默认名称为`major-event-log.txt`。此命令不会自动向保存的文件附加文件扩展名。输入文件名时、必须指定文件扩展名。
+
+
+
+ a| 
+`计数`
+ a| 
+要保存到文件的事件数。如果不为该计数输入值、则与指定事件类型匹配的所有事件都会保存到该文件中。如果为该计数输入值、则只会将该数量的事件(从输入的最后一个事件开始)保存到该文件中。使用整数值。
+
+
+
+ a| 
+`forceSave`
+ a| 
+用于强制将您从视图筛选的调试事件保存到文件的参数。要强制保存事件、请将此参数设置为`true`。默认值为`false`。
+
+[NOTE]
+====
+使用此参数可保存已从SANtricity 事件查看器中筛选出的调试事件。
+
+====
+|===
+
+
+== 最低固件级别
+
+7.77添加以下参数：
+
+* `warningEvents`
+* `信息提供`
+* `debugEvents`
+* `forceSave`
+

@@ -1,0 +1,95 @@
+---
+permalink: commands-a-z/save-storagearray-dbmvalidatorinfo.html 
+sidebar: sidebar 
+keywords: save, storage, array, dbm, validator, information, file 
+summary: 'save storageArray dbmValidatorInfo命令可将存储阵列的数据库管理(DBM)验证信息保存在XML文件中。' 
+---
+= 保存存储阵列DBM验证程序信息文件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sstorage storageArray dbmValidatorInfo`命令可将存储阵列的数据库管理(DBM)验证信息保存在XML文件中。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+技术支持可以使用此XML文件生成验证程序字符串(安全代码)。将存储阵列还原回原有配置时、必须在`load storageArray dbmDatabase`命令中包含验证程序字符串。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save storageArray dbmValidatorInfo file=pass:quotes["_filename_"] dbmDatabase=pass:quotes["_filename_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+技术支持所需的DBM验证程序的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Array Backups \DBMvalidator.xml"`此命令不会自动将文件扩展名附加到已保存的文件。输入文件名时、必须指定.xml文件扩展名。
+
+
+
+ a| 
+`dbmDatabase`
+ a| 
+要从中生成XML信息文件的DBM数据库的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`dbmDatabase="C：\Array Backups \DBMbackup_03302010.bdm"`此命令不会自动将文件扩展名附加到已保存的文件。输入文件名时、必须指定.dbm文件扩展名。
+
+|===
+
+
+== 注释：
+
+如果要生成XML信息文件以获取验证程序字符串、则必须在连接到要还原数据库的控制器时运行此命令。以下示例显示了XML文件的格式：
+
+[listing]
+----
+<?xml version="1.0" encoding="utf-8"?>
+<DbmImageMetadata>
+<Controllers>
+<A>1IT0nnnnnnnnnABCD</A>
+<B>1T0nnnnnnnnnABCD</B>
+</Controllers>
+<Header>
+<ImageVersion>1</ImageVersion>
+<TimeStamp>1269388283</TimeStamp>
+</Header>
+<Trailer>
+<CRC>nnnnnnnnnn</CRC><
+/Trailer>
+</DbmImageMetadata>
+----
+
+
+== 最低固件级别
+
+7.75

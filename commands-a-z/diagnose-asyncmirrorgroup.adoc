@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/diagnose-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: diagnose, command, tests, possible, communication, problems, local, storage, array, remote, asynchronous, mirror, group 
+summary: di诊断asyncMirrorGroup命令用于测试本地存储阵列与与异步镜像组关联的远程存储阵列之间可能存在的通信问题。 
+---
+= 测试异步镜像组连接
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`diagnose asyncMirrorGroup`命令可测试本地存储阵列与与异步镜像组关联的远程存储阵列之间可能出现的通信问题。
+
+
+
+== 支持的阵列
+
+此命令会对任何单个存储阵列执行适用场景 操作、但有一些限制。如果您在E2700或E5600阵列上运行命令、则没有任何限制。
+
+[NOTE]
+====
+如果您在E2800或E5700阵列上运行命令、则客户端类型必须设置为`symbol`。如果客户端类型设置为`https`、则不会执行此命令。
+
+====
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[diagnose asyncMirrorGroup [_asyncMirrorGroupName_]]
+testID=(all | connectivity | latency | bandwidth | portConnections)
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`asyncMirrorGroup`
+ a| 
+要测试的现有异步镜像组的名称。将异步镜像组名称用方括号([])括起来。如果异步镜像组名称包含特殊字符或数字、则必须将异步镜像组名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`testID`
+ a| 
+要运行的诊断测试的标识符。标识符和相应的测试如下所示：
+
+* "*全部*"-执行与此命令关联的所有测试。
+* *连接*-验证两个控制器是否具有通信路径。连接测试会在存储阵列之间发送控制器间消息、然后验证远程存储阵列上的相应异步镜像组是否存在。它还会验证远程系统上异步镜像组的卷成员是否与本地系统上异步镜像组的卷成员匹配。
+* *延迟*-向与异步镜像组关联的远程存储阵列上的每个卷发送SCSI测试单元命令、以测试最小、平均和最大延迟。
+* *带宽*—向远程存储阵列发送两条控制器间消息、以测试执行测试的控制器上端口的最小、平均和最大带宽以及协商的链路速度。
+* *端口连接*-显示本地存储阵列上用于镜像的端口以及远程存储阵列上接收镜像数据的端口。
+
+
+|===
+
+
+== 最低固件级别
+
+7.84.接受采取后续行动

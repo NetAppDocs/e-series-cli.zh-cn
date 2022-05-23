@@ -1,0 +1,239 @@
+---
+permalink: commands-a-z/activate-synchronous-mirroring.html 
+sidebar: sidebar 
+keywords: activate, synchronous mirroring, supported arrays, roles, context, syntax, parameters, data assurance management, minimum firmware level 
+summary: activate storageArray feature命令可激活同步镜像功能并创建镜像存储库卷。 
+---
+= 激活同步镜像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`activate storageArray feature`命令可激活同步镜像功能并创建镜像存储库卷。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+使用此命令时、可以通过以下三种方式之一定义镜像存储库卷：
+
+* 用户定义的驱动器
+* 用户定义的卷组
+* 用户定义的驱动器数量
+
+
+如果您选择定义多个驱动器、则控制器固件会选择要用于镜像存储库卷的驱动器。
+
+[NOTE]
+====
+在先前版本的此命令中、功能标识符为`remoteMirror`。此功能标识符不再有效、并替换为`SyncMirror`。
+
+====
+
+
+== 语法(用户定义的驱动器)
+
+[listing, subs="+macros"]
+----
+activate storageArray feature=syncMirror
+repositoryRAIDLevel=(0 |1 | 3 | 5 | 6)
+repositoryDrives=pass:quotes[(_trayID1_],pass:quotes[[_drawerID1,_]pass:quotes[_slotID1 ... trayIDn_,pass:quotes[[_drawerIDn_,]pass:quotes[_slotIDn_
+[driveType=(fibre | SATA | SAS | NVMe4K)]
+)
+[repositoryVolumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dataAssurance=(none | enabled)]
+----
+[listing, subs="+macros"]
+----
+activate storageArray feature=syncMirror
+repositoryRAIDLevel=(0 |1 | 5 | 6)
+repositoryDrives=pass:quotes[_(trayID1,_]pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1 ... trayIDn_],pass:quotes[[_drawerIDn,_]]pass:quotes[_slotIDn)_]
+[repositoryVolumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dataAssurance=(none | enabled)]
+----
+
+
+== 语法(用户定义的卷组)
+
+[listing, subs="+macros"]
+----
+activate storageArray feature=syncMirror
+repositoryVolumeGroup=pass:quotes[_volumeGroupName_]
+[freeCapacityArea=pass:quotes[_freeCapacityIndexNumber_]]
+----
+
+
+== 语法(用户定义的驱动器数)
+
+[listing, subs="+macros"]
+----
+activate storageArray feature=syncMirror
+repositoryRAIDLevel=(1 | 3 | 5 | 6)
+repositoryDriveCount=pass:quotes[_numberOfDrives_]
+[repositoryVolumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dataAssurance=(none | enabled)]
+----
+[listing, subs="+macros"]
+----
+activate storageArray feature=syncMirror
+repositoryRAIDLevel=(1 | 5 | 6)
+repositoryDriveCount=pass:quotes[_numberOfDrives_]
+[repositoryVolumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dataAssurance=(none | enabled)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`repositoryRAIDLevel`
+ a| 
+镜像存储库卷的RAID级别。有效值为`0`、`1`、`3`、`5`或`6`。
+
+
+
+ a| 
+`repositoryDrives`
+ a| 
+镜像存储库卷的驱动器。对于大容量驱动器托盘、请指定驱动器的托盘ID值、抽盒ID值和插槽ID值。对于低容量驱动器托盘、请指定驱动器的托盘ID值和插槽ID值。托盘ID值为`0`到`99`。抽盒ID值为`1`到`5`。
+
+所有插槽ID最大值均为24。插槽ID值从0或1开始、具体取决于托盘型号。与E2800和E5700控制器兼容的驱动器托盘的插槽ID编号从0开始。与E2700和E5600控制器兼容的驱动器托盘的插槽ID编号从1开始。
+
+将托盘ID值、抽盒ID值和插槽ID值括在方括号()中。
+
+
+
+ a| 
+`repositoryVolumeGroupUserLabel`
+ a| 
+要为镜像存储库卷所在的新卷组指定的名称。将卷组名称用双引号("")括起来。
+
+
+
+ a| 
+`repositoryVolumeGroup`
+ a| 
+镜像存储库卷所在的镜像存储库卷组的名称。(要确定存储阵列中卷组的名称、请运行`show storageArray profile`命令。)
+
+
+
+ a| 
+`FreeCapacityArea`
+ a| 
+现有卷组中要用于创建镜像存储库卷的可用空间的索引编号。可用容量是指卷组中现有卷之间的可用容量。例如、卷组可能具有以下区域：卷1、可用容量、卷2、可用容量、卷3、 可用容量。要使用卷2之后的可用容量、应指定：
+
+[listing]
+----
+freeCapacityArea=2
+----
+运行`show VolumeGroup`命令以确定是否存在可用容量区域。
+
+
+
+ a| 
+`repositoryDriveCount`
+ a| 
+要用于镜像存储库卷的未分配驱动器的数量。
+
+
+
+ a| 
+`d驱动器类型`
+ a| 
+要检索其信息的驱动器类型。您不能混用驱动器类型。
+
+有效驱动器类型为：
+
+* `光纤`
+* `sATA`
+* `s作为`
+* NVMe4k
+
+
+如果未指定驱动器类型、则命令默认为all type。
+
+
+
+ a| 
+`纸架LossProtect`
+ a| 
+创建镜像存储库卷时用于强制实施托盘丢失保护的设置。要强制实施托盘丢失保护、请将此参数设置为`true`。默认值为`false`。
+
+
+
+ a| 
+`drawerLossProtect`
+ a| 
+用于在创建镜像存储库卷时强制实施抽盒丢失保护的设置。要强制实施抽盒丢失保护、请将此参数设置为`true`。默认值为`false`。
+
+|===
+
+
+== 注释：
+
+`repositoryDrives`参数既支持高容量驱动器托盘、也支持低容量驱动器托盘。高容量驱动器托盘具有用于容纳驱动器的抽盒。抽盒滑出驱动器托盘、以便可以访问驱动器。低容量驱动器托盘没有抽屉。对于大容量驱动器托盘、您必须指定驱动器托盘的标识符(ID)、抽盒ID以及驱动器所在插槽的ID。对于低容量驱动器托盘、只需指定驱动器托盘的ID以及驱动器所在插槽的ID即可。对于低容量驱动器托盘、确定驱动器位置的另一种方法是指定驱动器托盘的ID、将抽盒的ID设置为`0`、并指定驱动器所在插槽的ID。
+
+如果为`repositoryDrives`参数选择的驱动器与其他参数(例如`repositoryRAIDLevel`参数)不兼容、则脚本命令将返回错误、并且同步镜像未激活。此错误将返回镜像存储库卷所需的空间量。然后、您可以重新输入命令并指定适当的空间量。
+
+如果为存储库存储空间输入值对于镜像存储库卷来说太小、则控制器固件将返回一条错误消息、其中提供了镜像存储库卷所需的空间量。命令不会尝试激活同步镜像。您可以使用错误消息中存储库存储空间值的值重新输入命令。
+
+分配驱动器时、如果将`tray LossProtect`参数设置为`true`并从任意一个托盘中选择了多个驱动器、则存储阵列将返回错误。如果将`tray LossProtect`参数设置为`false`、则存储阵列将执行操作、但您创建的卷组可能无法获得托盘丢失保护。
+
+在控制器固件分配驱动器时、如果将`tray LossProtect`参数设置为`true`、则如果控制器固件无法提供驱动器、从而导致新卷组具有托盘丢失保护、则存储阵列将返回错误。如果将`tray LossProtect`参数设置为`false`、则存储阵列会执行此操作、即使这意味着卷组可能没有托盘丢失保护。
+
+`drawerLossProtect`参数用于确定在抽盒出现故障时是否可以访问卷上的数据。分配驱动器时、如果将`drawerLossProtect`参数设置为`true`并从任意一个抽盒中选择多个驱动器、则存储阵列将返回错误。如果将`drawerLossProtect`参数设置为`false`、则存储阵列将执行操作、但您创建的卷组可能没有抽盒丢失保护。
+
+
+
+== 数据保证管理
+
+数据保证(Data Assurance、DA)功能可提高整个存储系统的数据完整性。通过DA、存储阵列可以检查在主机和驱动器之间移动数据时可能发生的错误。启用此功能后、存储阵列会向卷中的每个数据块附加错误检查代码(也称为循环冗余检查或CRC)。移动数据块后、存储阵列会使用这些CRC代码来确定传输期间是否发生任何错误。可能损坏的数据既不会写入磁盘、也不会返回到主机。
+
+如果要使用DA功能、请从仅包含支持DA的驱动器的池或卷组开始。然后、创建支持DA的卷。最后、使用支持DA的I/O接口将这些支持DA的卷映射到主机。支持DA的I/O接口包括光纤通道、SAS和基于InfiniBand的iSER (适用于RDMA/IB的iSCSI扩展)。基于以太网的iSCSI或基于InfiniBand的SRP不支持DA。
+
+[NOTE]
+====
+如果所有驱动器均支持DA、则可以将`dataAssurance`参数设置为`enabled`、然后对某些操作使用DA。例如、您可以创建一个包含支持DA的驱动器的卷组、然后在该卷组中创建一个启用了DA的卷。使用已启用DA的卷的其他操作可以选择支持DA功能。
+
+====
+如果将`dataAssurance`参数设置为`enabled`、则候选卷仅会考虑支持数据保证的驱动器；否则、将同时考虑支持数据保证和不支持数据保证的驱动器。如果只有数据保证驱动器可用、则会使用已启用的数据保证驱动器创建新卷组。
+
+
+
+== 最低固件级别
+
+7.10增加了RAID级别6功能。
+
+7.60会添加`drawerID`用户输入、`driveMediaType`参数和`drawerLossProtect`参数。
+
+7.75添加`dataAssurance`参数。
+
+8.10删除`driveMediaType`参数。
+
+8.60会添加`driveType`参数。

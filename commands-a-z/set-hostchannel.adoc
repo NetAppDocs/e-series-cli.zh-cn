@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/set-hostchannel.html 
+sidebar: sidebar 
+keywords: set, host, channel 
+summary: set hostChannel命令用于定义主机通道的环路ID。 
+---
+= 设置主机通道
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set hostChannel`命令用于定义主机通道的环路ID。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set hostChannel pass:quotes[[_hostChannelNumber_]]
+preferredID=pass:quotes[_portID_]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`hostChannel`
+ a| 
+要设置环路ID的主机通道的标识符编号。将主机通道标识符编号括在方括号([])中。
+
+请使用适合您的特定控制器型号的主机通道值。一个控制器托盘可能支持一个主机通道或多达八个主机通道。有效主机通道值为`A1`、`A2`、`A3`、`A4`、`A2`、 ``a6`、`a7`、` a8 `、` b1 `、` b2、 `B3`、`b4`、`B5`、`B6`、`B7`、 或`B8`。
+
+
+
+ a| 
+`preferredID`
+ a| 
+指定主机通道的端口标识符。端口ID值为`0`到`127`。
+
+|===
+
+
+== 最低固件级别
+
+6.10
+
+6.14向主机通道标识符添加更新。
+
+7.15向主机通道标识符添加更新。

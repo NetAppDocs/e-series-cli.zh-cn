@@ -1,0 +1,56 @@
+---
+permalink: commands-a-z/activate-asynchronous-mirroring.html 
+sidebar: sidebar 
+keywords: activate, asynchronous, mirroring 
+summary: activate storageArray feature命令可激活异步镜像功能。 
+---
+= 激活异步镜像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`activate storageArray feature`命令可激活异步镜像功能。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+激活异步镜像功能后、必须设置异步镜像组和异步镜像对。
+
+
+
+== 语法
+
+[listing]
+----
+activate storageArray feature=asyncRemoteMirror
+----
+[listing]
+----
+activate storageArray feature=asyncMirror
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+7.84.接受采取后续行动

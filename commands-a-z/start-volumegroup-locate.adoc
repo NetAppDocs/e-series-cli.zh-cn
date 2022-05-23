@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-volumegroup-locate.html 
+sidebar: sidebar 
+keywords: start, volume, group, locate 
+summary: start VolumeGroup locate命令可通过闪烁驱动器上的指示灯来标识逻辑分组在一起以构成指定卷组的驱动器。 
+---
+= 启动卷组定位
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sStart VolumeGroup locate`命令可通过闪烁驱动器上的指示灯来识别逻辑分组在一起以构成指定卷组的驱动器。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+使用`stop VolumeGroup locate`命令关闭驱动器上的指示灯。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup [_volumeGroupName_]] locate
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`VolumeGroup`
+ a| 
+要查找属于该卷组的驱动器的卷组的名称。将卷组名称用方括号([])括起来。
+
+|===
+
+
+== 最低固件级别
+
+6.16

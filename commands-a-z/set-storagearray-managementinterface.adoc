@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/set-storagearray-managementinterface.html 
+sidebar: sidebar 
+keywords: set, storage, array, management, interface 
+summary: set storageArray managementInterface命令用于更改控制器的管理接口。更改管理接口类型以在存储阵列与其管理软件之间实施机密性、或者访问外部工具。 
+---
+= 设置存储阵列管理接口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray managementInterface`命令可更改控制器的管理接口。更改管理接口类型以在存储阵列与其管理软件之间实施机密性、或者访问外部工具。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+
+set storageArray managementInterface restOnly={true | false}
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`restOnly`
+ a| 
+如果设置为`true`、则表示RESTful接口是唯一允许的管理接口。此接口会在存储阵列和管理软件之间强制建立加密连接。
+
+如果设置为`false`、则表示允许使用存储阵列与管理软件之间的原有接口。此接口未加密。
+
+除非将`restOnly`参数设置为`false`、否则与原有管理界面直接通信的某些工具(例如SANtricity SMI-S Provider或OnCommand Insight (OCI))将无法正常工作。有关详细信息，请联系技术支持。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray managementInterface restOnly=true;"
+
+SMcli completed successfully.
+----

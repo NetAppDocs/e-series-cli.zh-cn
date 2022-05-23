@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/smcli-enable-disable-autosupportondemand.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, ondemand, feature, emw, management, domain, level, smcli 
+summary: smcli enable_disable autosupportOnDemand命令用于打开或关闭AutoSupport OnDemand功能。此功能允许技术支持协调AutoSupport 数据传输、并允许他们请求重新传输缺失的支持数据。 
+---
+= 在EMW管理域级别启用或禁用AutoSupport OnDemand功能(仅限SMcli)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`Smcli enable_disable autosupportOnDemand`命令可打开或关闭AutoSupport OnDemand功能。此功能允许技术支持协调AutoSupport 数据传输、并允许他们请求重新传输缺失的支持数据。
+
+
+
+== 支持的阵列
+
+此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E2800或E5700存储阵列。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令是一个smcli命令、而不是一个脚本命令。您必须从命令行运行此命令。您不能从存储管理软件中的脚本编辑器运行此命令。
+
+====
+启用此功能之前、必须先在管理域上启用AutoSupport 功能。启用此功能后、您接下来可以启用AutoSupport 远程诊断功能(如果需要)。默认情况下、启用AutoSupport OnDemand功能后、AutoSupport 远程诊断功能处于启用状态。
+
+
+
+== 语法
+
+[listing]
+----
+SMcli enable|disable autoSupportOnDemand
+----
+
+
+== Parameters
+
+无
+
+
+
+== 验证
+
+使用`Smcli -autosupportConfig show`命令查看是否已启用此功能。显示的输出的前两行显示了AutoSupport 功能的启用状态、后跟AutoSupport OnDemand功能：
+
+[listing]
+----
+The AutoSupport feature is activated on this storage management
+station.
+The AutoSupport OnDemand feature is activated on this storage
+management station.
+----
+
+
+== 最低固件级别
+
+8.25

@@ -1,0 +1,102 @@
+---
+permalink: commands-a-z/smcli-autosupportconfig-test.html 
+sidebar: sidebar 
+keywords: test, autosupport, configuration 
+summary: 使用smcli -autosupportConfig测试命令发送测试消息以测试AutoSupport 配置。此命令在管理域上运行。存储管理软件会在管理域中选择一个支持自动支持的阵列、以便在测试消息中包含样本数据。 
+---
+= 测试AutoSupport 配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`Smcli -autosupportConfig test`命令发送测试消息以测试AutoSupport 配置。此命令在管理域上运行。存储管理软件会在管理域中选择一个支持自动支持的阵列、以便在测试消息中包含样本数据。
+
+
+
+== 支持的阵列
+
+此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E2800或E5700存储阵列。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令是一个smcli命令、而不是一个脚本命令。您必须从命令行运行此命令。您不能从存储管理软件中的脚本编辑器运行此命令。
+
+====
+[NOTE]
+====
+要发送计划的或事件触发的AutoSupport 消息、应在管理工作站上运行持久性监控器。请先启动此服务、然后再使用此命令。
+
+====
+
+
+== 语法
+
+[listing]
+----
+SMcli -autoSupportConfig test reply-toEmail<address>
+----
+
+
+== Parameters
+
+下表列出了用于发送AutoSupport 测试消息的参数。
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`测试`
+ a| 
+命令所需的参数。不需要任何值。
+
+
+
+ a| 
+`re可通过电子邮件发送`
+ a| 
+允许用户为SMTP传送类型的AutoSupport 消息指定答复电子邮件地址。
+
+|===
+
+
+== 最低固件级别
+
+8.25
+
+
+
+== 使用HTTP/HTTPS交付进行测试的示例
+
+以下是使用HTTP或HTTPS传送类型时使用此命令的示例、您不会指定要传送的电子邮件地址。
+
+[listing]
+----
+SMcli -autoSupportConfig test
+The sample AutoSupport message was successfully sent to the ASUP gateway.
+
+SMcli completed successfully.
+----
+
+
+== 使用SMTP传送进行测试的示例
+
+以下是使用此命令的示例。使用SMTP传送方法时、您可以使用`reply-toEmail`参数指定目标地址。
+
+[listing]
+----
+SMcli -autoSupportConfig test reply-toEmail:user@netapp.com
+The sample AutoSupport message was successfully sent to the ASUP gateway.
+
+An email has been sent to 'user@netapp.com', please check the mailbox
+for delivery confirmation.
+
+SMcli completed successfully.
+----

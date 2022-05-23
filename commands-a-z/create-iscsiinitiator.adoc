@@ -1,0 +1,93 @@
+---
+permalink: commands-a-z/create-iscsiinitiator.html 
+sidebar: sidebar 
+keywords: create, iscsi, initiator 
+summary: create iscsiInitiator命令将创建一个新的iSCSI启动程序对象。 
+---
+= 创建iSCSI启动程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`create iscsiInitiator`命令可创建新的iSCSI启动程序对象。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+[NOTE]
+====
+此命令已弃用、并替换为 xref:create-initiator.adoc[创建启动程序] 命令：
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+create iscsiInitiator iscsiName=pass:quotes[_"iscsiID"_
+userLabel="_name_"
+host="_hostName"_]
+[chapSecret=pass:quotes[_"securityKey"_]]
+----
+
+
+== Parameters
+
+|===
+| Parameters | Description 
+
+
+ a| 
+`iscsiName`
+ a| 
+iSCSI启动程序的默认标识符。将标识符用双引号("")括起来。
+
+
+
+ a| 
+`用户标签`
+ a| 
+要用于iSCSI启动程序的名称。请将此名称用双引号("")括起来。
+
+
+
+ a| 
+`主机`
+ a| 
+安装iSCSI启动程序的主机的名称。请将此名称用双引号("")括起来。
+
+
+
+ a| 
+`chapSecret`
+ a| 
+要用于对对等连接进行身份验证的安全密钥。将安全密钥用双引号("")括起来。
+
+|===
+
+
+== 注释：
+
+质询握手身份验证协议(CHAP)是一种对连接对等方进行身份验证的协议。CHAP基于共享_secret_的对等方。机密是一种类似于密码的安全密钥。
+
+使用`chapSecret`参数为需要相互身份验证的启动程序设置安全密钥。
+
+
+
+== 最低固件级别
+
+7.10.
+
+8.41此命令已弃用。

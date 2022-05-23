@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/show-consistencygroup.html 
+sidebar: sidebar 
+keywords: show, consistency, group 
+summary: show ConsistencyGroup命令可返回有关一个或多个一致性组的信息。 
+---
+= 显示一致性组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show ConsistencyGroup`命令可返回有关一个或多个一致性组的信息。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show (allConsistencyGroups | consistencyGroup pass:quotes[[_consistencyGroupName_]] |
+consistencyGroups pass:quotes[[_consistencyGroupName1_ ... _consistencyGroupNameN_]])
+[(summary | schedule)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有ConsistencyGroups`
+ a| 
+此设置将返回有关存储阵列中所有一致性组的信息。
+
+
+
+ a| 
+`ConsistencyGroup`
+ a| 
+要检索其信息的一致性组的名称。将一致性组名称用方括号([])括起来。如果一致性组名称包含特殊字符或数字、则必须将一致性组名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`一致性组`
+ a| 
+要检索其信息的多个一致性组的名称。所有卷都具有相同的属性。使用以下规则输入卷的名称：
+
+* 请将所有名称用方括号([])括起来。
+* 使用空格分隔每个名称。
+
+
+如果卷名称包含特殊字符或仅包含数字、请使用以下规则输入名称：
+
+* 请将所有名称用方括号([])括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+
+
+ a| 
+`summary`
+ a| 
+此设置将返回有关一致性组的简明信息列表。
+
+
+
+ a| 
+`s计划`
+ a| 
+此参数将返回有关一致性组的任何计划的信息。
+
+|===
+
+
+== 最低固件级别
+
+7.83.

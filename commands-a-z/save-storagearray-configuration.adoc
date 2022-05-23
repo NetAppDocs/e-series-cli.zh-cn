@@ -1,0 +1,113 @@
+---
+permalink: commands-a-z/save-storagearray-configuration.html 
+sidebar: sidebar 
+keywords: save, storage, array, configuration 
+summary: save storageArray configuration命令用于创建一个脚本文件、您可以使用该脚本文件重新创建当前存储阵列卷配置。 
+---
+= 保存存储阵列配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray configuration`命令可创建一个脚本文件、您可以使用该文件重新创建当前存储阵列卷配置。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。但是、此命令与LDAP参数的使用仅限于具有安全管理员角色的用户。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令不会将当前存储阵列上的远程镜像或卷副本配置数据保存到文件中。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save storageArray configuration file=pass:quotes["_filename_"]
+(allconfig|[globalSettings=(TRUE | FALSE)]
+[volumeConfigAndSettings=(TRUE | FALSE)]
+[hostTopology=(TRUE | FALSE)]
+[lunMappings=(TRUE | FALSE)])
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+要将配置设置保存到的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logs\caconf.cfg"`
+
+包含配置设置的文件的默认名称为`storage-array-configuration.cfg`。此命令不会自动向保存的文件附加文件扩展名。输入文件名时、必须指定文件扩展名。
+
+
+
+ a| 
+`所有配置`
+ a| 
+用于将所有配置值保存到文件的设置。(如果选择此参数、则所有配置参数都将设置为`true`。)
+
+
+
+ a| 
+`全局设置`
+ a| 
+用于将全局设置保存到文件的设置。要保存全局设置、请将此参数设置为`true`。要防止保存全局设置、请将此参数设置为`false`。默认值为`true`。
+
+
+
+ a| 
+`volumeConfigAndSettings`
+ a| 
+用于将卷配置设置和所有全局设置保存到文件的设置。要保存卷配置设置和全局设置、请将此参数设置为`true`。要防止保存卷配置设置和全局设置、请将此参数设置为`false`。默认值为`true`。
+
+
+
+ a| 
+`主机拓扑`
+ a| 
+用于将主机拓扑保存到文件的设置。要保存主机拓扑、请将此参数设置为`true`。要防止保存主机拓扑、请将此参数设置为`false`。默认值为`false`。
+
+
+
+ a| 
+`lunMappings`
+ a| 
+用于将LUN或NSID映射保存到文件的设置。要保存LUN或NSID映射、请将此参数设置为`true`。要防止保存LUN或NSID映射、请将此参数设置为`false`。默认值为`false`。
+
+|===
+
+
+== 注释：
+
+使用此命令时、您可以为全局设置、卷配置设置、主机拓扑或LUN映射指定参数的任意组合。如果要输入所有设置、请使用`allConfig`参数。您必须使用`allConfig`参数或其他四个参数中的一个或多个参数。
+
+
+
+== 最低固件级别
+
+6.10

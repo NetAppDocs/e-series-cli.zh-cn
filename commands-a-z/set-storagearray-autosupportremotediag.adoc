@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/set-storagearray-autosupportremotediag.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, remote, diagnostics, feature, individual, E2800, E5700, arrays 
+summary: set storageArray autosupportRemoteDiag命令用于打开或关闭AutoSupport OnDemand远程诊断功能。通过此功能、技术支持可以请求支持数据以远程诊断问题。 
+---
+= 启用或禁用AutoSupport 远程诊断功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray autosupportRemoteDiag`命令可以打开或关闭AutoSupport OnDemand远程诊断功能。通过此功能、技术支持可以请求支持数据以远程诊断问题。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+启用此功能之前、请先在存储阵列上启用AutoSupport 功能、然后再启用AutoSupport OnDemand功能。
+
+必须按以下顺序启用这三项功能：
+
+. 启用AutoSupport
+. 启用AutoSupport OnDemand
+. 启用AutoSupport 远程诊断
+
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray autoSupportRemoteDiag (enable | disable)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`enable | disable`
+ a| 
+允许用户启用或禁用AutoSupport 远程诊断功能。如果禁用了AutoSupport 和AutoSupport OnDemand、则enable操作将出错并要求用户先启用它们。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupportRemoteDiag enable;"
+
+SMcli completed successfully.
+----
+
+
+== 验证
+
+使用`show storageArray AutoSupport`命令查看是否已启用此功能。显示的输出的前三行显示了AutoSupport 功能的启用状态、然后显示了AutoSupport OnDemand功能和AutoSupport 远程诊断功能：
+
+[listing]
+----
+The AutoSupport feature is enabled on this storage array.
+The AutoSupport OnDemand feature is enabled on this storage array.
+The AutoSupport Remote Diagnostics feature is enabled on this storage array.
+----
+
+
+== 最低固件级别
+
+8.40

@@ -1,0 +1,122 @@
+---
+permalink: commands-a-z/delete-volume.html 
+sidebar: sidebar 
+keywords: delete, volume, command, one, standard, volume, supported, array, role 
+summary: delete volume命令可删除一个或多个标准卷。 
+---
+= 删除卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`delete volume`命令可删除一个或多个标准卷。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+*可能会损坏存储阵列配置*-运行此命令后、卷中的所有数据都将丢失。
+
+====
+[NOTE]
+====
+当卷超过给定大小(当前为128 TB)时、将在后台执行删除、释放的空间可能不会立即可用。
+
+====
+
+
+== 语法
+
+[listing]
+----
+delete (allVolumes) |
+volume [volumeName] |
+volumes [volumeName1 ... volumeNameN]
+[removeVolumeGroup=(TRUE | FALSE)]
+[force=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有卷`
+ a| 
+此参数将删除存储阵列中的所有卷。
+
+
+
+ a| 
+`卷`
+ a| 
+要删除的卷的名称。将卷名称括在方括号([])中。如果卷名称包含特殊字符或仅包含数字、则必须将卷名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`卷`
+ a| 
+要删除的多个卷的名称。使用以下规则输入卷的名称：
+
+* 请将所有名称用方括号([])括起来。
+* 使用空格分隔每个名称。
+
+
+如果卷名称包含特殊字符或仅包含数字、请使用以下规则输入名称：
+
+* 请将所有名称用方括号([])括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+
+
+ a| 
+`removeVolumeGroup`
+ a| 
+删除卷组中的最后一个卷不会删除该卷组。您可以拥有一个独立的卷组(减去任何卷)。要删除独立卷组、请将此参数设置为`true`。要保持独立卷组完好无损、请将此参数设置为`false`。
+
+
+
+ a| 
+`强制`
+ a| 
+使用此参数可强制立即删除卷、即使控制器正在执行其他操作也是如此。要立即强制删除卷、请将此参数设置为`true`。要等待控制器完成其他操作、请勿使用此参数或将此参数设置为`false`。
+
+|===
+
+
+== 注释：
+
+使用`allVolumes`参数时、此命令将删除卷、直到删除所有卷或遇到错误为止。如果遇到错误、此命令不会尝试删除其余卷。可以从不同的卷组中删除卷。如果将`removeVolumeGroup`参数设置为`true`、则所有变为空的卷组都将被删除。
+
+如果要删除整个卷组、也可以使用`delete VolumeGroup`命令。
+
+
+
+== 最低固件级别
+
+6.10
+
+7.10添加`removeVolumeGroup`参数。

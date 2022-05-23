@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-tray-locate.html 
+sidebar: sidebar 
+keywords: start, tray, locate 
+summary: start tray locate命令可通过打开指示灯来定位托盘。 
+---
+= 启动托盘定位
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sStart tray locate`命令可通过打开指示灯来查找托盘。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+使用`stop tray locate`命令关闭托盘的指示灯
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start tray [_trayID_]] locate
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`托盘`
+ a| 
+要查找的托盘。托盘ID值为`0`到`99`。将托盘ID值用方括号()括起来。
+
+|===
+
+
+== 最低固件级别
+
+6.10

@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/save-ioclog.html 
+sidebar: sidebar 
+keywords: save, input, output, controller, ioc, dump 
+summary: save IOCLog命令可将存储阵列中控制器的IOC转储保存到主机上的文件中。 
+---
+= 保存输入输出控制器(IOC)转储
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`socCLog`命令可将存储阵列中控制器的IOC转储保存到主机上的文件中。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save IOCLog [file=pass:quotes["_filename_"]]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+保存IOC转储的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+[listing]
+----
+file="C:\Array Backups\IOCcoredump1.7z"
+----
+此命令会将数据保存到压缩文件中、并将文件扩展名`.7z`添加到已保存的文件中。包含存储阵列中控制器的IOC相关数据的文件的默认名称使用存储阵列的WWN。
+
+|===
+
+
+== 注释：
+
+此命令从两个控制器检索IOC转储日志数据和IOC转储元数据。使用7zip文件格式将检索到的数据归档并压缩到一个文件中、该文件名由您选择。7zip归档文件包含以下内容：
+
+* filename+"IOCLog"+[A_B].gz—从控制器A或控制器B检索到的IOC日志(如果可用)
+* filename+"IOCLogInfo"+[A_B].txt—IOC记录从控制器A或控制器B检索到的元数据信息。如果无法从控制器检索到IOC日志数据、则元数据.txt文件将包含错误情况和原因。
+
+
+以下是错误情况：
+
+* 控制器平台和HIC不支持IOC转储。
+* 控制器未收集IOC转储数据。
+
+
+压缩的日志格式不是可供用户读取的。您必须将日志返回给技术支持才能进行评估。
+
+
+
+== 最低固件级别
+
+8.20

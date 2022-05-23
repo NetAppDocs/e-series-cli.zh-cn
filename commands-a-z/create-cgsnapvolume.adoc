@@ -1,0 +1,229 @@
+---
+permalink: commands-a-z/create-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: create, consistency group, snapshot, volume 
+summary: create cgSnapVolume命令可为一致性组中的基础卷中的特定映像创建一个快照卷。 
+---
+= 创建一致性组快照卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`create cgSnapVolume`命令可为一致性组中的基础卷中的特定映像创建一个快照卷。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+您可以从一致性组中选择一个或多个基础卷以包括在快照卷中。在为一致性组创建快照卷时、您正在创建包含可查看内容的卷。
+
+
+
+== 使用用户指定的基础卷的语法
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+members=pass:quotes[_(baseVolume1:repos_XXXX ... baseVolumen:repos_YYYY)_]
+----
+
+
+== 将一致性组快照卷设置为只读时的语法
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+readOnly
+----
+
+
+== 设置存储库全满限制时的语法
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+members=pass:quotes[_(baseVolume1:repos_XXXX_] |
+baseVolume1: (pass:quotes[_volumeGroupName_] pass:quotes[[_capacity=capacityValue_])] |
+(baseVolume1:pass:quotes[_diskPoolName_] [capacity=pass:quotes[_capacityValue_]])
+... baseVolumen:repos_YYYY |
+baseVolumen: (pass:quotes[_volumeGroupName_] [capacity=pass:quotes[_capacityValue_]]) |
+baseVolumen: (pass:quotes[_diskPoolName_] [capacity=pass:quotes{_capacityValue_]]))
+repositoryFullLimit=pass:quotes[_percentValue_]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`用户标签`
+ a| 
+要为其创建的一致性组快照卷指定的名称。将一致性组快照卷名称用双引号("")括起来。
+
+
+
+ a| 
+`cgSnapImageID`
+ a| 
+一致性组中快照映像的名称。快照映像的名称由两部分组成：
+
+* 一致性组的名称
+* 一致性组中快照映像的标识符
+
+
+快照映像的标识符可以是以下项之一：
+
+* `最新`-如果要显示在一致性组中创建的最新快照映像、请使用此选项。
+* `oldest`—如果要显示在一致性组中创建的最早快照映像、请使用此选项。
+
+
+将快照映像名称用双引号("")括起来。
+
+您可以输入多个快照映像名称或序列号。将所有快照映像名称括在圆括号内。使用空格分隔每个快照映像名称。
+
+
+
+ a| 
+`members`
+ a| 
+要添加的一个或多个基础卷的标识符。成员标识符由与存储库卷名称串联的基础卷名称组成。必须在两个名称之间使用冒号(：)。将所有成员标识符括在圆括号中。如果输入多个成员、则使用空格分隔这些成员。
+
+如果不使用members参数、则所有成员都会自动添加到新的一致性组快照卷中。
+
+
+
+ a| 
+`repositoryVolume`
+ a| 
+要包含一致性组成员卷的存储库卷的名称。
+
+您可以通过两个选项来定义存储库卷的名称：
+
+* 使用现有存储库卷：name
+* 运行此命令时、请创建一个新的存储库卷
+
+
+现有存储库卷的名称由两部分组成：
+
+* 术语"repos"
+* 存储管理软件分配给存储库卷名称的四位数字标识符
+
+
+将现有存储库卷的名称用双引号("")括起来。
+
+如果要在运行此命令时创建新的存储库卷、则必须输入要在其中创建存储库卷的卷组或磁盘池的名称。您也可以选择定义存储库卷的容量。如果要定义容量、可以使用以下值：
+
+* 一个整数值、表示基本卷容量的百分比
+* 一个小数值、表示基本卷容量的百分比
+* 存储库卷的特定大小。大小的单位为`字节`、`KB`、`MB`、`GB`或`TB`。
+
+
+如果不使用容量选项、则存储管理软件会将容量设置为基本卷容量的20%。
+
+运行此命令时、存储管理软件将为快照卷创建存储库卷。
+
+
+
+ a| 
+`repositoryFullLimit`
+ a| 
+一致性组快照存储库卷接近全满时的存储库容量百分比。使用整数值。例如、值70表示70%。
+
+
+
+ a| 
+`re仅限`
+ a| 
+用于确定您可以写入快照卷还是只能从快照卷读取的设置。要写入快照卷、请勿包含此参数。要防止写入快照卷、请使用此参数。
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
+
+快照映像的名称包含两个部分、并用冒号(：)分隔：
+
+* 快照组的标识符
+* 快照映像的标识符
+
+
+如果未指定`repositoryVolumeType`或`readOnly`参数、则存储管理软件将为一致性组快照卷选择存储库。如果基础卷所在的卷组或磁盘池没有足够的空间、则此命令将失败。
+
+`create cgSnapVolume`命令具有以下示例所述的唯一形式：
+
+* 在名为"snapcg1"的快照一致性组上创建读/写一致性组快照卷、该组包含三个成员：cgm1、cgm2和cgm3。存储库卷已存在、并由用户在此命令中选择。
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume1"
+cgSnapImageID="snapCG1:oldest"
+members=(cgm1:repos_0010 cgm2:repos_0011 cgm3:repos_0007);
+----
++
+请注意要包含在一致性组快照卷中的快照映像名称中使用冒号(：)。冒号是一个分隔符、用于将快照卷的名称与您可能要使用的特定快照映像分隔开。可以在冒号后面使用以下选项之一：
+
++
+** 一个整数值、表示快照映像的实际序列号。
+** `最新`-如果要显示最新的一致性组快照映像、请使用此选项。
+** `oldest`—如果要显示创建的最早快照映像、请使用此选项。使用快照一致性组成员名称后面的冒号可定义成员与存储库卷之间的映射。例如、在`cgm1：repos_10`中、成员cgm1映射到存储库卷repos_0010。
+
+
+* 在仅由成员cgm1和cgm2组成的名为"snapcg1"的快照一致性组上创建读/写一致性组快照卷：
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume2"
+cgSnapImageID="snapCG1:14214"
+members=(cgm1:repos_1000 cgm2:repos_1001);
+----
+* 在名为snapcg1的快照一致性组上创建只读一致性组快照卷、该快照一致性组包含三个成员：cgm1、cgm2和cgm3：
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume3"
+cgSnapImageID="snapCG1:oldest" readOnly;
+----
+* 在具有三个成员的名为snapcg1的快照一致性组snapg1上创建一个将存储库全满限制设置为60%的一致性组快照卷：cgm1、cgm2和cgm3：
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume3"
+cgSnapImageID="snapCG1:oldest"
+repositoryFullLimit=60;
+----
+* 在名为snapcg1的快照一致性组上创建具有自动选择存储库的读/写一致性组快照卷、该快照一致性组包含三个成员：cgm1、cgm2和cgm3：
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume4"
+cgSnapImageID="snapCG1:oldest";
+----
+
+
+
+
+== 最低固件级别
+
+7.83.

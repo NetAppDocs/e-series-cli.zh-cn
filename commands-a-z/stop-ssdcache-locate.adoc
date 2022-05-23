@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/stop-ssdcache-locate.html 
+sidebar: sidebar 
+keywords: stop, ssd, cache, locate 
+summary: 'stop ssdCache locate命令可关闭由start ssdCache locate命令打开的固态磁盘(SSD)上的指示灯。' 
+---
+= 停止SSD缓存定位
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`stop ssdCache locate`命令可关闭由`sStart ssdCache locate`命令打开的固态磁盘(SSD)上的指示灯。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有支持管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+stop ssdCache locate
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+7.84.接受采取后续行动

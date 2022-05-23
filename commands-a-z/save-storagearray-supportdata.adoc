@@ -1,0 +1,527 @@
+---
+permalink: commands-a-z/save-storagearray-supportdata.html 
+sidebar: sidebar 
+keywords: save, storage, array, support, data 
+summary: save storageArray supportData命令可将存储阵列的支持相关信息保存到文件中。 
+---
+= 保存存储阵列支持数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray supportData`命令可将存储阵列的支持相关信息保存到一个文件中。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+下表列出了可收集的支持数据类型。
+
+[cols="2*"]
+|===
+| 数据类型 | 文件名和问题描述 
+
+
+ a| 
+自动负载平衡统计信息
+ a| 
+`alb statistics-A.txt`
+
+`alb. statistics-B.txt`
+
+每个控制器一个此文件可指定与自动负载平衡功能相关的各种统计信息、以便通过脱机分析工具进行进一步分析。
+
+
+
+ a| 
+核心转储元数据
+ a| 
+`all-coredump.xml`
+
+此文件包含阵列的核心转储元数据。
+
+[NOTE]
+====
+从8.25版开始、core-dump-info.xml已重命名为all-coredump.xml。
+
+====
+
+
+ a| 
+AutoSupport 状态
+ a| 
+`autosupport.xml`
+
+此文件指定给定阵列的ASUP的当前状态。
+
+
+
+ a| 
+AutoSupport 历史记录文件
+ a| 
+`autosupport-history.xml`
+
+此文件指定给定阵列的所有ASUP消息、包括标准和AutoSupport OnDemand消息。表中的每个条目对应于当前位于给定阵列的一个存储库中的ASUP消息。
+
+
+
+ a| 
+AutoSupport 日志
+ a| 
+`asup-transtranstransmission logs.txt`
+
+此文件包含所有已传输的AutoSupport 消息。
+
+
+
+ a| 
+Web Server客户端信息
+ a| 
+`client-info.txt`
+
+此文件指定各种Web服务客户端信息。
+
+[NOTE]
+====
+此参数不适用于E2700和E5600阵列。
+
+====
+
+
+ a| 
+驱动器布线拓扑
+ a| 
+`connection.txt`此文件包含有关驱动器托盘环境服务模块(ESM)与控制器对之间连接的信息。
+
+
+
+ a| 
+累积统计信息包
+ a| 
+`累积驱动器-vol-stats。xml`
+
+此文件包含控制器的累积统计信息。
+
+
+
+ a| 
+驱动器日志运行不正常
+ a| 
+`controller-drive-error-event-log.txt`
+
+此文件包含存储阵列控制器驱动器端错误和事件日志消息。
+
+
+
+ a| 
+控制器运行状况映像元数据
+ a| 
+`all-coredump.xml`
+
+此文件包含DPL控制器运行状况映像信息。
+
+[NOTE]
+====
+从8.25版开始、core-dump-info.xml已重命名为all-coredump.xml。
+
+====
+
+
+ a| 
+控制器A的DOM 0日志文件(仅限E2800或E5700)
+ a| 
+`dom0-complete-journal-A.7z`
+
+此文件包含详细的Linux系统日志、每个控制器一个。其中包括Linux软件包以及标准Linux实用程序和服务的日志。
+
+
+
+ a| 
+控制器B的DOM 0日志文件(仅限E2800或E5700)
+ a| 
+`dom0-complete-journal-B.7z`
+
+此文件包含详细的Linux系统日志、每个控制器一个。其中包括Linux软件包以及标准Linux实用程序和服务的日志。
+
+
+
+ a| 
+控制器A的其他DOM 0日志文件(仅限E2800或E5700)
+ a| 
+`dom0-mis-logs-A.7z`
+
+每个控制器一个此文件包含日志中不能包含的系统日志。其中包括RAID应用程序的串行日志和虚拟机管理程序的调试日志。
+
+
+
+ a| 
+控制器B的其他DOM 0日志文件(仅限E2800或E5700)
+ a| 
+`dom0-mis-logs-B.7z`
+
+每个控制器一个此文件包含日志中不能包含的系统日志。其中包括RAID应用程序的串行日志和虚拟机管理程序的调试日志。
+
+
+
+ a| 
+驱动器命令时效超时值
+ a| 
+`drive-command-aging-timeout.txt`此文件包含每个驱动器的命令时效超时字段的默认值和当前值。
+
+
+
+ a| 
+驱动器运行状况日志
+ a| 
+`drive-health-data.bin`此文件包含与驱动器运行状况相关的各种驱动器信息。
+
+[NOTE]
+====
+此文件是一个二进制文件、需要使用脱机解析器转换为人类可读格式。
+
+====
+
+
+ a| 
+驱动性能分析器数据
+ a| 
+`drive-performation-log.txt`
+
+此文件包含驱动器性能数据、可帮助您确定性能低于预期的任何驱动器。
+
+
+
+ a| 
+企业管理窗口配置
+ a| 
+`emwdata_v04.bin`
+
+此文件包含EMW配置数据存储文件。
+
+[NOTE]
+====
+在E2800和E5700的支持包中、此文件不存在。
+
+====
+
+
+ a| 
+托盘事件日志
+ a| 
+`expansion -try-log.txt`
+
+ESM事件日志。
+
+
+
+ a| 
+存储库分析失败
+ a| 
+`failed-repository-analysis .txt`
+
+此文件包含失败的存储库分析信息。
+
+
+
+ a| 
+存储阵列的功能
+ a| 
+`feature-bundle.txt`此文件包含存储阵列中允许的卷、驱动器和驱动器托盘数量列表以及可用功能及其限制列表。
+
+
+
+ a| 
+固件清单
+ a| 
+`firmware-inventory.txt`此文件包含存储阵列中所有组件的所有固件版本列表。
+
+
+
+ a| 
+InfiniBand接口统计信息(仅限InfiniBand)
+ a| 
+`IB-statistics.csv`
+
+此文件包含InfiniBand接口统计信息。
+
+
+
+ a| 
+I/O路径统计信息
+ a| 
+`io-path-statistics.7z`此文件包含每个控制器的原始性能数据、可用于分析应用程序性能问题。
+
+
+
+ a| 
+主机接口芯片的IOC转储信息
+ a| 
+`IOC-DUMP-INFO.txt`此文件包含主机接口芯片的IOC转储信息。
+
+
+
+ a| 
+主机接口芯片的IOC转储日志
+ a| 
+`IOC-DUMP.gz`此文件包含控制器上主机接口芯片的日志转储。文件将以gz格式进行压缩。此zip文件将作为文件保存在客户支持包中。
+
+
+
+ a| 
+iSCSI连接(仅限iSCSI)
+ a| 
+`iscsi-session-connections.txt`此文件包含所有当前iSCSI会话的列表。
+
+
+
+ a| 
+iSCSI统计信息(仅限iSCSI)
+ a| 
+`iscsi-statistics.csv`此文件包含以太网介质访问控制(MAC)、以太网传输控制协议(TCP)/Internet协议(IP)和iSCSI目标的统计信息。
+
+
+
+ a| 
+iSER接口统计信息(仅限基于InfiniBand的iSER)
+ a| 
+`iser-statistics.csv`此文件包含在InfiniBand上运行iSER的主机接口卡的统计信息。
+
+
+
+ a| 
+主要事件日志
+ a| 
+`major-event-log.txt`此文件包含存储阵列上发生的事件的详细列表。此列表存储在存储阵列中磁盘上的预留区域中。此列表可记录存储阵列中的配置事件和组件故障。
+
+
+
+ a| 
+清单文件
+ a| 
+`manifest.xml`
+
+此文件包含一个表、用于描述归档文件中包含的文件以及其中每个文件的收集状态。
+
+
+
+ a| 
+存储管理软件运行时信息
+ a| 
+`msw-runtime-info.txt`
+
+此文件包含存储管理软件应用程序运行时信息。包含存储管理软件当前使用的JRE版本。
+
+
+
+ a| 
+NVMe-oF统计信息
+ a| 
+`nvmeo-statistics.csv`
+
+此文件包含一系列统计信息、包括NVMe控制器统计信息、NVMe队列统计信息以及传输协议(例如InfiniBand)的接口统计信息。
+
+
+
+ a| 
+NVSRAM数据
+ a| 
+`nvsram-data.txt`此控制器文件指定控制器的默认设置。
+
+
+
+ a| 
+对象包
+ a| 
+`object-bundle`.bin``object-bundle``.json
+
+此捆绑包包含存储阵列及其组件状态的详细问题描述 、此状态在生成文件时有效。
+
+
+
+ a| 
+摘要性能统计信息
+ a| 
+`perf-stat-daily-summary-a.csv``perf-stat-daily-summary-b.csv`
+
+此文件包含各种控制器性能统计信息、每个控制器一个文件。
+
+
+
+ a| 
+持久预留和注册
+ a| 
+`persistent-reservations.txt`此文件包含存储阵列上具有永久性预留和注册的卷的详细列表。
+
+
+
+ a| 
+存储管理软件用户首选项
+ a| 
+`pref-01.bin`
+
+此文件包含用户首选项永久性数据存储。
+
+[NOTE]
+====
+在E2800或E5700的支持包中、不存在此文件。
+
+====
+
+
+ a| 
+恢复Guru过程
+ a| 
+`recovery-gural-procedures.html`此文件包含针对在存储阵列上检测到的问题发出的所有恢复guru主题的详细列表。对于E2800和E5700阵列、此文件仅包含恢复guru详细信息、而不包含HTML文件。
+
+
+
+ a| 
+恢复配置文件
+ a| 
+`recovery-profile.csv`此文件包含最新恢复配置文件记录和历史数据的详细问题描述。
+
+
+
+ a| 
+SAS PHY错误日志
+ a| 
+`sis-phy-error-logs.csv`
+
+此文件包含SAS PHY的错误信息。
+
+
+
+ a| 
+状态捕获数据
+ a| 
+`state-capture-data.txt`此文件包含存储阵列当前状态的详细问题描述。
+
+
+
+ a| 
+存储阵列配置
+ a| 
+`storage-array-configuration.cfg`此文件包含存储阵列上逻辑配置的详细问题描述。
+
+
+
+ a| 
+存储阵列配置文件
+ a| 
+`storage-array-profile.txt`此文件包含存储阵列的所有组件和属性的问题描述。
+
+
+
+ a| 
+跟踪缓冲区内容
+ a| 
+`trace-buzes.7z`此文件包含用于记录调试信息的控制器`跟踪缓冲区的内容。
+
+
+
+ a| 
+托盘捕获数据
+ a| 
+`try-component-state-capture.7z`如果您的托盘包含抽盒、则诊断数据将归档在此压缩文件中。对于包含抽盒的每个托盘、此Zip文件都包含一个单独的文本文件。此Zip文件将作为文件保存在客户支持包中。
+
+
+
+ a| 
+无法读取的扇区
+ a| 
+`不可读扇区.txt`此文件包含已记录到存储阵列的所有不可读扇区的详细列表。
+
+
+
+ a| 
+Web服务跟踪日志(仅限E2800或E5700)
+ a| 
+`web-server-trace-log-A.7z`
+
+`web-server-trace-log-B.7z`
+
+此文件包含用于记录调试信息的Web服务跟踪缓冲区、每个控制器一个。
+
+
+
+ a| 
+工作负载捕获分析日志文件
+ a| 
+`wlc分析-a.lz4``wlc分析-b.lz4`
+
+此文件(每个控制器一个)包含计算得出的关键工作负载特征、例如所有活动卷的LBA直方图、读/写比率和I/O吞吐量。
+
+
+
+ a| 
+X-header数据文件
+ a| 
+`x-header data.txt`此AutoSupport 消息标题由纯文本键值对组成、其中包括有关阵列和消息类型的信息。
+
+|===
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save storageArray supportData file=pass:quotes["_filename_"] [force=(TRUE | FALSE)]
+----
+[listing, subs="+macros"]
+----
+save storageArray supportData file=pass:quotes["_filename_"]
+[force=(TRUE | FALSE) |
+csbSubsetid=(basic | weekly | event | daily | complete) |
+csbTimeStamp=pass:quotes[_hh:mm_]]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+要将存储阵列的支持相关数据保存到的文件路径和文件名。将文件路径和文件名用双引号（ "" ）括起来。例如：
+
+`file="C：\Program Files\cli\logs\supdat.7z"`
+
+
+
+ a| 
+`强制`
+ a| 
+如果在保护控制器操作锁定方面出现任何故障、此参数将强制收集支持数据。要强制收集支持数据、请将此参数设置为`true`。默认值为`false`。
+
+|===
+
+
+== 注释：
+
+从固件级别7.86开始、在运行Windows的系统上、文件扩展名必须为`.7z`。如果在Windows系统上运行的固件版本早于7.86、则文件扩展名必须为`.zip`。在未运行Windows的系统上、您可以使用适用于您的系统的任何文件扩展名。
+
+
+
+== 最低固件级别
+
+7.80添加`force`参数。
+
+8.30添加了有关E2800存储阵列的信息。

@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/show-storagearray-usersession.html 
+sidebar: sidebar 
+keywords: display, storage, array, user, session 
+summary: 使用show storageArray userSession命令可以查看System Manager的会话超时期限。 
+---
+= 显示存储阵列用户会话
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sstorageArray userSession`命令可以查看System Manager的会话超时期限。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员或存储监控角色。
+
+
+
+== Parameters
+
+无
+
+
+
+== 语法
+
+[listing]
+----
+show storageArray userSession
+----
+
+
+== 最低固件级别
+
+8.41

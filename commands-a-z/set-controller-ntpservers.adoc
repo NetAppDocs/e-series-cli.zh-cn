@@ -1,0 +1,135 @@
+---
+permalink: commands-a-z/set-controller-ntpservers.html 
+sidebar: sidebar 
+keywords: set, controller, ntp 
+summary: 'set controller NTPServers命令用于设置控制器的NTP设置、以便控制器可以使用SNTP (简单网络时间协议)自动将时钟与外部主机同步。' 
+---
+= 设置控制器NTP设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set controller NTPServers`命令可为控制器设置NTP设置、以便控制器可以使用SNTP (简单网络时间协议)自动将时钟与外部主机同步。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+启用此功能后、控制器会定期查询已配置的NTP服务器、然后使用结果更新其内部时间时钟。如果只有一个控制器启用了NTP、则备用控制器会定期将其时钟与启用了NTP的控制器同步。如果这两个控制器均未启用NTP、则这些控制器会定期同步各自的时钟。
+
+[NOTE]
+====
+此命令特定于控制器。不必在两个控制器上配置NTP；但是、这样做可以提高阵列在硬件或通信故障期间保持同步的能力。
+
+====
+[NOTE]
+====
+如果您使用完全限定域名配置NTP、则还必须在这些控制器上配置DNS、以便操作成功。请参见 xref:set-controller-dnsservers.adoc[设置控制器DNS设置] 有关详细信息 ...
+
+====
+
+
+== 语法
+
+[listing]
+----
+
+set controller(a|b) NTPServers=(disabled|auto|(Address1 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()] [Address2 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()]]))
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+要更改其NTP设置的控制器。有效控制器标识符为a或b
+
+
+
+ a| 
+`NTPServers`
+ a| 
+此参数用于为控制器配置NTP服务器。
+
+* 指定`d已标记`以关闭NTP支持。
+* 指定`auto`以使用DHCP服务器提供的NTP服务器地址。
++
+[NOTE]
+====
+只有当控制器上至少有一个管理端口设置为通过DHCP获取接口参数、并且在DHCP服务器上至少配置了一个NTP服务器时、才应使用此选项。
+
+====
+* 否则、请指定一个或两个NTP服务器的空格分隔列表。这些地址可以是域名、IPv4地址或IPv6地址。如果指定多个地址、则地址类型不需要匹配。如果指定了多个地址、则会按指定的顺序使用这些地址(第一个是主地址、第二个是备份地址)。
+
+
+[NOTE]
+====
+将NTP服务器名称用引号括起来、如示例部分所示。
+
+====
+
+
+ a| 
+`地址`
+ a| 
+"域名"|IPv4Address|IPv6Address
+
+[NOTE]
+====
+如果指定了域名、则还必须配置DNS服务器、以允许控制器解析服务器IP地址。
+
+====
+
+
+ a| 
+`KeyIdentifier``KeyType`
+
+`密码短语`
+ a| 
+或者、这些参数可提供用于启用NTP身份验证的关键凭据：
+
+* `key Identifier`是一个介于0到65535之间的整数。
+* `KeyType`是以下选项之一：none、SHA1、SH224、SHA256、sh384或SHA512。
+* `密码短语`是十六进制数字(0-9、允许a-f)(长度恰好为40位、输入为字符串字形)或字母数字字符串(长度最多为20字节)。
+
+
+|===
+
+
+== 示例
+
+[listing]
+----
+set controller[a] NTPServers=disabled;
+set controller[a] NTPServers=auto;
+set controller[a] NTPServers=("0.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase="SomePassword1" "1.us.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
+set controller[b] NTPServers=(192.168.1.105 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1" "1.us.pool.ntp.org");
+set controller[b] NTPServers=(set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
+----
+
+
+== 最低固件级别
+
+8.25
+
+8.42添加了用于NTP身份验证的关键凭据参数。

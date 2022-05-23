@@ -1,0 +1,67 @@
+---
+permalink: commands-a-z/set-storagearray-hostconnectivityreporting.html 
+sidebar: sidebar 
+keywords: enable, disable, host, connectivity, report 
+summary: set storageArray hostConnectivityResporting命令用于启用或禁用控制器上的主机连接报告。 
+---
+= 启用或禁用主机连接报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray hostConnectivityReporting`命令可以在控制器上启用或禁用主机连接报告。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray hostConnectivityReporting (enable | disable)
+----
+
+
+== 环境
+
+在存储阵列上启用主机连接报告后、存储阵列会持续监控存储阵列控制器与已配置主机之间的连接、如果连接因主机松动、损坏或缺少电缆或其他问题而中断、则会向您发出警报。如果在存储阵列上指定的主机类型不正确(可能会导致故障转移问题)、您也会收到通知。
+
+[NOTE]
+====
+要禁用主机连接报告、必须先禁用自动负载平衡。
+
+====
+[NOTE]
+====
+如果禁用了自动负载平衡、则可以保持主机连接报告处于启用状态。
+
+====
+[NOTE]
+====
+主机连接报告和自动负载平衡功能仅适用于Linux DHALUA、Windows/Windows集群模式和VMware主机类型。
+
+====
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+8.42新命令参数。

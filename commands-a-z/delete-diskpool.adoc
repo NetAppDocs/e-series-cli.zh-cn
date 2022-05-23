@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/delete-diskpool.html 
+sidebar: sidebar 
+keywords: delete, disk pool 
+summary: delete diskPool命令可删除磁盘池。 
+---
+= 删除磁盘池
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`delete diskPool`命令可删除磁盘池。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+*可能会损坏存储阵列配置*-运行此命令后、磁盘池中的所有数据都将丢失。
+
+====
+根据您的存储管理软件版本、此命令还会删除磁盘池中的所有卷。如果您的存储管理软件版本不支持自动删除卷、则可以强制删除磁盘池和卷。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+delete diskPool pass:quotes[[_diskPoolName_]]
+[force=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`diskPoolName`
+ a| 
+要删除的磁盘池的名称。将磁盘池名称用方括号([])括起来。如果磁盘池名称包含特殊字符或仅包含数字、则必须将该名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`强制`
+ a| 
+如果存储管理软件不支持自动删除磁盘池中的卷、则此参数会强制删除卷。要强制删除磁盘池及其包含的卷、请将此参数设置为`true`。默认值为`false`。
+
+|===
+
+
+== 注释：
+
+每个磁盘池名称必须唯一。您可以对用户标签使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。用户标签最多可以包含30个字符。
+
+
+
+== 最低固件级别
+
+7.83.

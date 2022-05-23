@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/show-storagearray-iscsinegotiationdefaults.html 
+sidebar: sidebar 
+keywords: show, storage, array, negotiation, defaults 
+summary: show storageArray iscsiNegotiationDefault命令可返回有关受启动程序-目标协商影响的连接级别设置的信息。 
+---
+= 显示存储阵列协商默认值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray iscsiNegotiationDefault`命令可返回有关受启动程序-目标协商限制的连接级别设置的信息。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 语法
+
+[listing]
+----
+show storageArray iscsiNegotiationDefaults
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+返回的信息包括控制器托盘默认设置(即、作为协商起点的设置)和当前活动设置。
+
+
+
+== 最低固件级别
+
+7.10.

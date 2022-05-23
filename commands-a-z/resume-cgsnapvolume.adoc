@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/resume-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: resume, consistency, group, snapshot, volume 
+summary: resume cgSnapVolume命令将重新启动写入时复制操作、以创建使用stop cgSnapVolume命令停止的一致性组快照卷。 
+---
+= 恢复一致性组快照卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`reume cgSnapVolume`命令可重新启动写时复制操作、以创建使用`stop cgSnapVolume`命令停止的一致性组快照卷。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+resume cgSnapVolume pass:quotes[[_"snapVolumeName"_]]
+cgSnapImage=pass:quotes[_"snapImageName"_]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`cgSnapVolume`
+ a| 
+要恢复的一致性组快照卷的名称。将一致性组快照卷的名称用双引号("")括在方括号([])内。
+
+
+
+ a| 
+`cgSnapImage`
+ a| 
+要重新启动的一致性组中快照映像的名称。快照映像的名称由两部分组成：
+
+* 一致性组的名称
+* 一致性组中快照映像的标识符
+
+
+快照映像的标识符可以是以下项之一：
+
+* 一个整数值、即一致性组中快照的序列号。
+* `最新`-如果要显示在一致性组中创建的最新快照映像、请使用此选项。
+* `oldest`—如果要显示在一致性组中创建的最早快照映像、请使用此选项。
+
+
+将快照映像名称用双引号("")括起来。
+
+|===
+
+
+== 注释：
+
+快照映像的名称包含两个部分、并用冒号(：)分隔：
+
+* 一致性组的标识符
+* 快照映像的标识符
+
+
+例如、如果要重新启动Snapshot映像12345的写时复制操作、该映像位于名为snapvol1的一致性组快照卷中的Snapshot一致性组snapgroup1中、则应使用以下命令：
+
+[listing]
+----
+resume cgSnapVolume ["snapVol1"] cgSnapImage=["snapgroup1:12345"]
+----
+
+
+== 最低固件级别
+
+7.83.

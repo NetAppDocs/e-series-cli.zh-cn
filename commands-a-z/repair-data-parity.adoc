@@ -1,0 +1,117 @@
+---
+permalink: commands-a-z/repair-data-parity.html 
+sidebar: sidebar 
+keywords: repair, data, parity 
+summary: 修复数据奇偶校验命令可修复数据奇偶校验错误。 
+---
+= 修复数据奇偶校验
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`修复数据奇偶校验`命令可修复数据奇偶校验错误。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+在使用此命令之前、请咨询NetApp支持部门、以获取有关受影响固件、驱动器和RAID条带的指导。
+
+
+
+== 语法
+
+[listing]
+----
+repair volume[volumeName] parity
+   [startingLBA=LBAvalue]
+   [endingLBA=LBAvalue]
+   [repairMethods=(repairMethod . . . repairMethod)]
+           Space delimited list where possible repair methods are: reconstruct, unmap, updateP, updateQ, updateData, and writeZeros
+   [repairPI=(TRUE|FALSE)]
+   [suspectDrives=(trayID1,[drawerID1,]slotID1 . . . trayIDn,[drawerIDn,]slotIDn)]
+   [timeout=(0-65535)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`卷`
+ a| 
+要修复奇偶校验的卷的名称。将卷名称括在方括号中([])
+
+
+
+ a| 
+`sTartingLBA`
+ a| 
+起始逻辑块地址。
+
+
+
+ a| 
+`endingLBA`
+ a| 
+结束逻辑块地址。
+
+
+
+ a| 
+`re配对方法`
+ a| 
+用于修复奇偶校验错误的方法。可用方法包括：
+
+* reconstruct：`suspectDrives`参数下指定的驱动器。
+* unmap：对于R5/R6 dulbe卷、用于取消映射R5/R6 RAID条带
+* updateP：用于修复数据奇偶校验不匹配类型。
+* updateQ：用于修复数据奇偶校验不匹配类型。
+* updateData：用于修复数据奇偶校验不匹配类型。
+* writeZeros：对于R5/R6 dulbe卷、当发现包含已映射和未映射数据的意外RAID5/6条带时使用。将条带中未映射的块写入零、然后更新奇偶校验
+
+
+
+
+ a| 
+`repairPI`
+ a| 
+设置为true可在从StartingLBA开始的范围内修复PI。
+
+
+
+ a| 
+`suspectDrives`
+ a| 
+用于指定要重建的驱动器。
+
+
+
+ a| 
+`超时`
+ a| 
+要运行此操作的时间长度(以分钟为单位)。
+
+|===
+
+
+== 最低固件级别
+
+8.63

@@ -1,0 +1,152 @@
+---
+permalink: commands-a-z/set-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: set, asynchronous, mirror, group 
+summary: set asyncMirrorGroup命令可更改异步镜像组主端的控制器所有者在执行初始同步或重新同步时使用的同步设置和警告阈值。 
+---
+= 设置异步镜像组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set asyncMirrorGroup`命令可更改异步镜像组主端的控制器所有者在执行初始同步或重新同步时使用的同步设置和警告阈值。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+更改同步设置会影响异步镜像组中所有镜像对的同步操作。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
+[volume="repos_xxxx" increaseRepositoryCapacity (repositoryVolume=("repos_xxxx")]
+[syncInterval=pass:quotes[_integer_] (minutes | hours | days)]
+[warningSyncThreshold=pass:quotes[_integer_] (minutes | hours | days)]
+[warningRecoveryThreshold=integer (minutes | hours | days)]
+[userLabel=pass:quotes["_New_asyncMirrorGroupName_"]]
+[warningThresholdPercent=pass:quotes[_percentValue_]]
+[role=(primary | secondary)]
+[autoResync=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`asyncMirrorGroup`
+ a| 
+要修改的异步镜像组的名称。将异步镜像组名称用方括号([])括起来。如果异步镜像组名称包含特殊字符或数字、则必须将名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`卷`
+ a| 
+要增加容量的异步镜像组存储库卷的名称。
+
+存储库卷的名称由两部分组成：
+
+* 术语"repos"
+* 存储管理软件分配给存储库卷名称的四位数字标识符
+
+
+将存储库卷的名称用双引号("")括起来。
+
+
+
+ a| 
+`syncInterval`
+ a| 
+指定从本地存储阵列自动向远程存储阵列发送修改后的数据更新之间的时间长度。您可以以分钟、小时或天为单位指定时间长度。
+
+
+
+ a| 
+`warningSyncThreshold`
+ a| 
+指定在异步镜像组中所有卷的同步所需时间超过定义时间的情况下、等待触发警告的时间长度。您可以以分钟、小时或天为单位指定时间长度。
+
+
+
+ a| 
+`warningRecoveryThreshold`
+ a| 
+指定在远程存储阵列上时间点映像的自动数据更新早于定义的时间时、等待触发警告的时间长度。定义上次更新结束时的阈值。您可以以分钟、小时或天为单位指定时间长度。
+
+[NOTE]
+====
+您必须将恢复点阈值设置为同步间隔阈值的两倍。
+
+====
+
+
+ a| 
+`用户标签`
+ a| 
+要为异步镜像组指定的新名称。如果要重命名异步镜像组、请使用此参数。将新异步镜像组名称用双引号("")括起来。
+
+
+
+ a| 
+`warningThresholdPercent`
+ a| 
+指定百分比值、用于确定在镜像存储库卷的容量达到定义的百分比时何时触发警告。按剩余容量的百分比(%)定义阈值。
+
+
+
+ a| 
+`角色`
+ a| 
+使用此参数可将异步镜像组提升为主角色、或者将异步镜像组降级为二级角色。要将异步镜像组定义为主角色、请将此参数设置为`primary`。要将异步镜像组定义为二级角色、请将此参数设置为`s辅助`。
+
+
+
+ a| 
+`AutoResync`
+ a| 
+用于在异步镜像组中异步镜像对的主卷和二级卷之间自动重新同步的设置。此参数具有以下值：
+
+* `enabled`—已启用自动重新同步。您无需执行任何其他操作即可重新同步主卷和二级卷。
+* `d已标记`—自动重新同步已关闭。要重新同步主卷和二级卷、必须运行`sStart asyncMirrorGroup`命令。
+
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
+
+使用此命令时、您可以指定一个或多个参数。但是、您不需要使用所有参数。
+
+异步镜像组存储库卷是一个可扩展卷、其结构为一个串联集合、最多包含16个标准卷实体。最初、可扩展存储库卷只有一个卷。可扩展存储库卷的容量与单个卷的容量完全相同。您可以通过将其他未使用的存储库卷附加到可扩展存储库卷来增加该卷的容量。然后、复合可扩展存储库卷容量将成为所有串联标准卷的容量之和。
+
+
+
+== 最低固件级别
+
+7.84.接受采取后续行动

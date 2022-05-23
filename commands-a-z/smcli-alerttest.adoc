@@ -1,0 +1,49 @@
+---
+permalink: commands-a-z/smcli-alerttest.html 
+sidebar: sidebar 
+keywords: test, alerts 
+summary: smcli alertTest命令会向Windows事件日志和所有已配置的系统日志接收器发送测试警报。 
+---
+= 测试警报
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`Smcli alertTest`命令会向Windows事件日志和所有已配置的系统日志接收器发送测试警报。
+
+
+
+== 支持的阵列
+
+此命令仅适用于E2700和E5600存储阵列。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令是一个smcli命令、而不是一个脚本命令。您必须从命令行运行此命令。您不能从存储管理软件中的脚本编辑器运行此命令
+
+====
+
+
+== 语法
+
+[listing]
+----
+SMcli -alertTest
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+7.83.

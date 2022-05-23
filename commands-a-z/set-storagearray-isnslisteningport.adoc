@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/set-storagearray-isnslisteningport.html 
+sidebar: sidebar 
+keywords: set, storage, array, isns, server, listen, port 
+summary: set storageArray isnssListeningPort命令用于设置iSNS服务器侦听端口。 
+---
+= 设置存储阵列iSNS服务器侦听端口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray isnssListeningPort`命令可设置iSNS服务器侦听端口。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set storageArray isnsListeningPort=pass:quotes[_listeningPortIPAddress_]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`isnssListeningPort`
+ a| 
+要用于iSNS服务器侦听端口的IP地址。侦听端口的值范围为`49152`到`65535`。默认值为`53205`。
+
+侦听端口位于服务器上、并执行以下活动：
+
+* 监控传入的客户端连接请求
+* 管理服务器的流量
+
+
+当客户端请求与服务器进行网络会话时、侦听器会收到实际请求。如果客户端信息与侦听器信息匹配、则侦听器会授予与数据库服务器的连接。
+
+|===
+
+
+== 注释：
+
+侦听端口位于数据库服务器上、负责以下活动：
+
+* 侦听(监控)传入的客户端连接请求
+* 管理服务器的流量
+
+
+当客户端请求与服务器进行网络会话时、侦听器会收到实际请求。如果客户端信息与侦听器信息匹配、则侦听器会授予与数据库服务器的连接。
+
+
+
+== 最低固件级别
+
+7.10.

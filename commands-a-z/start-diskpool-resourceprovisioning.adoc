@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-diskpool-resourceprovisioning.html 
+sidebar: sidebar 
+keywords: start, disk pool, resource, provision 
+summary: 'start diskPool resourcegroup Provisioning命令可在给定磁盘池上启用资源配置、并对磁盘池中的每个卷启动资源配置启用异步操作。资源配置要求磁盘池中的所有驱动器都支持NVMe的DULBE"功能。' 
+---
+= 启动磁盘池资源配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstart diskPool resourcegroup Provisioning`命令可在给定磁盘池上启用资源配置、并对磁盘池中的每个卷启动资源配置启用异步操作。资源配置要求磁盘池中的所有驱动器都支持NVMe的DULBE"功能。
+
+
+
+== 支持的阵列
+
+此命令可对任何单个存储阵列执行适用场景 操作、包括EF600和EF300阵列；前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在EF600和EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+要在磁盘池上禁用资源配置、请使用带有选项的full provisioning命令禁用资源配置。如果所有驱动器均支持DULBE"且存储阵列的`resourceProvisionedVolumes`设置为`true`、则在创建磁盘池时将配置资源。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+start diskPoolpass:quotes[[_diskPoolName_]] resourceProvisioning
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`diskPoolName`
+ a| 
+要启用资源配置功能的磁盘池。将磁盘池名称用方括号([])括起来。
+
+|===
+
+
+== 最低固件级别
+
+11.73.

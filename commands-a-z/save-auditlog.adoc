@@ -1,0 +1,123 @@
+---
+permalink: commands-a-z/save-auditlog.html 
+sidebar: sidebar 
+keywords: save, audit log, records 
+summary: 保存审核日志命令可检索审核日志记录。 
+---
+= 保存审核日志记录
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sAudit日志`命令可检索审核日志记录。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+save auditLog (all | (beginDate=pass:quotes[_date_ | endDate=_date_)]
+|(beginRecord=pass:quotes[_timestamp_] | endRecord=pass:quotes[_timestamp_))] file=pass:quotes["_filename_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`全部`
+ a| 
+用于检索所有审核日志记录。
+
+
+
+ a| 
+`开始日期`
+ a| 
+用于指定检索的开始日期。在客户端时区中、输入日期的格式为MM：DD：YY。检索到的第一条审核日志记录将是在指定日期或之后发布的第一条记录。
+
+[NOTE]
+====
+午夜到午夜范围取决于客户端的时区。
+
+====
+
+
+ a| 
+`endDate`
+ a| 
+用于指定检索的结束日期。如果未指定、则会检索日志中的最后一条记录。在客户端时区中、输入日期的格式为MM：DD：YY。检索到的最后一个审核日志记录将是指定日期或之前发布的最后一个记录。
+
+[NOTE]
+====
+午夜到午夜范围取决于客户端的时区。
+
+====
+
+
+ a| 
+`B来说 记录`
+ a| 
+用于指定要检索的起始记录。该值是一个整体值、表示第一个审核日志记录的时间戳(包括此时间戳)。如果未指定、则会检索日志中的第一条记录。
+
+
+
+ a| 
+`endRecord`
+ a| 
+用于指定要检索的结束记录。该值是一个整体值、表示最后一个审核日志记录的时间戳(包括在内)。如果未指定、则会检索日志中的最后一条记录。
+
+
+
+ a| 
+`文件`
+ a| 
+用于指定审核日志的输出文件名。
+
+[NOTE]
+====
+审核日志记录将按从最新到最旧的降序保存在文件中。
+
+====
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save auditLog all file="myAuditLog.txt";"
+
+SMcli -n Array1 -c "save auditLog endRecord=1493070393313 file="myAuditLog.txt";"
+
+SMcli -n Array1 -c "save auditLog beginDate=12:12:16 endDate=04:01:17 file="myAuditLog.txt";"
+
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

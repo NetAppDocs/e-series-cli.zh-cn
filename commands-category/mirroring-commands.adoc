@@ -1,0 +1,87 @@
+---
+permalink: commands-category/mirroring-commands.html 
+sidebar: sidebar 
+keywords: commands, mirroring, asynchronous, synchronous, command 
+summary: 镜像命令 
+---
+= 镜像命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 异步镜像命令
+
+link:../commands-a-z/activate-asynchronous-mirroring.html["激活异步镜像"]
+
+link:../commands-a-z/add-volume-asyncmirrorgroup.html["将卷添加到异步镜像组"]
+
+link:../commands-a-z/stop-asyncmirrorgroup-rolechange.html["取消异步镜像组角色反转"]
+
+link:../commands-a-z/check-asyncmirrorgroup-repositoryconsistency.html["检查异步镜像组一致性"]
+
+link:../commands-a-z/clear-asyncmirrorfault.html["清除异步镜像故障"]
+
+link:../commands-a-z/create-asyncmirrorgroup.html["创建异步镜像组"]
+
+link:../commands-a-z/deactivate-storagearray.html["停用异步镜像"]
+
+link:../commands-a-z/delete-asyncmirrorgroup.html["删除异步镜像组"]
+
+link:../commands-a-z/establish-asyncmirror-volume.html["建立异步镜像对"]
+
+link:../commands-a-z/remove-asyncmirrorgroup.html["从异步镜像组中删除不完整的异步镜像对"]
+
+link:../commands-a-z/remove-volume-asyncmirrorgroup.html["从异步镜像组中删除卷"]
+
+link:../commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html["重置异步镜像组统计信息"]
+
+link:../commands-a-z/reset-iscsiipaddress.html["重置iSCSI IP地址"]
+
+link:../commands-a-z/resume-asyncmirrorgroup.html["恢复异步镜像组"]
+
+link:../commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html["保存异步镜像组统计信息"]
+
+link:../commands-a-z/set-asyncmirrorgroup.html["设置异步镜像组"]
+
+link:../commands-a-z/show-asyncmirrorgroup-summary.html["显示异步镜像组"]
+
+link:../commands-a-z/show-asyncmirrorgroup-synchronizationprogress.html["显示异步镜像组同步进度"]
+
+link:../commands-a-z/start-asyncmirrorgroup-synchronize.html["启动异步镜像同步"]
+
+link:../commands-a-z/suspend-asyncmirrorgroup.html["暂停异步镜像组"]
+
+link:../commands-a-z/diagnose-asyncmirrorgroup.html["测试异步镜像组连接"]
+
+
+
+== 同步镜像命令
+
+link:../commands-a-z/activate-synchronous-mirroring.html["激活同步镜像"]
+
+link:../commands-a-z/check-syncmirror.html["检查同步镜像状态"]
+
+link:../commands-a-z/create-syncmirror.html["创建同步镜像"]
+
+link:../commands-a-z/deactivate-storagearray-feature.html["停用同步镜像"]
+
+link:../commands-a-z/diagnose-syncmirror.html["诊断同步镜像"]
+
+link:../commands-a-z/recreate-storagearray-mirrorrepository.html["重新创建同步镜像存储库卷"]
+
+link:../commands-a-z/remove-syncmirror.html["删除同步镜像"]
+
+link:../commands-a-z/resume-syncmirror.html["恢复同步镜像"]
+
+link:../commands-a-z/set-syncmirror.html["设置同步镜像"]
+
+link:../commands-a-z/show-syncmirror-candidates.html["显示同步镜像卷候选项"]
+
+link:../commands-a-z/show-syncmirror-synchronizationprogress.html["显示同步镜像卷同步进度"]
+
+link:../commands-a-z/start-syncmirror-primary-synchronize.html["启动同步镜像同步"]
+
+link:../commands-a-z/suspend-syncmirror-primaries.html["暂停同步镜像"]

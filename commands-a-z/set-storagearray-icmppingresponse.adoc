@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/set-storagearray-icmppingresponse.html 
+sidebar: sidebar 
+keywords: set, storage, array, icmp, response 
+summary: set storageArray icmpPingResponse命令将返回会话和连接的可协商设置的默认值、这些值表示存储阵列协商的起点。 
+---
+= 设置存储阵列ICMP响应
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray icmpPingResponse`命令可返回会话和连接的可协商设置的默认值、这些值表示存储阵列协商的起点。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray icmpPingResponse=(TRUE | FALSE)
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`icmpPingResponse`
+ a| 
+此参数用于打开或关闭回显请求消息。将参数设置为`true`以打开回显请求消息。将参数设置为`false`以关闭回显请求消息。
+
+|===
+
+
+== 注释：
+
+网络中的操作系统使用Internet控制消息协议(Internet Control Message Protocol、ICMP)发送错误消息、测试数据包以及与IP相关的信息消息、例如、请求的服务不可用或无法访问主机或路由器。ICMP response命令可发送ICMP回显请求消息并接收ICMP回显响应消息、以确定主机是否可访问以及数据包往返于该主机所需的时间。
+
+
+
+== 最低固件级别
+
+7.10.

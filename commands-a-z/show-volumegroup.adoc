@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/show-volumegroup.html 
+sidebar: sidebar 
+keywords: show, volume, group 
+summary: show VolumeGroup命令可返回有关卷组的信息。 
+---
+= 显示卷组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show VolumeGroup`命令可返回有关卷组的信息。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+此命令将返回有关卷组的信息：
+
+* 状态(联机或脱机)
+* 容量
+* 当前所有者(插槽A中的控制器或插槽B中的控制器)
+* RAID级别
+* 驱动器介质类型(HDD或SSD)
+* 驱动器接口类型(光纤通道、iSCSI、InfiniBand、SAS)
+* 托盘丢失保护(是或否)
+* Secure Capable—指示卷组是否由所有支持安全的驱动器组成。支持安全的驱动器可以是FDE驱动器或FIPS驱动器。
+* 安全-指示卷组是否已启用驱动器安全保护(称为已启用安全保护)。
+* 关联的卷和可用容量
+* 关联的驱动器
+* 数据保证功能以及启用了数据保证的卷的存在
+* 资源配置功能
+
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[show volumeGroup [_volumeGroupName_]]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`VolumeGroup`
+ a| 
+要显示其信息的卷组的名称。将卷组名称用方括号([])括起来。
+
+|===
+
+
+== 注释：
+
+此命令将返回卷组信息、如以下示例所示：
+
+[listing]
+----
+Name:              SecureGroup
+
+      Status:         Optimal
+      Capacity:       120.000 GB
+      Current owner: Controller in slot A
+
+      Quality of Service (QoS) Attributes
+
+         RAID level:                  5
+         Drive media type:            Hard Disk Drive
+         Drive interface type:        SAS
+         Shelf loss protection:       No
+         Secure Capable:              Yes
+         Secure:                      No
+         Data Assurance (DA) capable: Yes
+         DA enabled volume present:   No
+         Resource-provisioned:           Yes
+
+
+      Total Volumes:          1
+         Standard volumes:    1
+         Repository volumes:  0
+         Free Capacity:       110.000 GB
+
+      Associated drives - present (in piece order)
+      Total drives present: 5
+
+         Tray     Slot
+         99       1
+         99       2
+         99       3
+         99       4
+         99       5
+----
+
+
+== 最低固件级别
+
+6.10

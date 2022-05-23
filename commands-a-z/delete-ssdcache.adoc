@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/delete-ssdcache.html 
+sidebar: sidebar 
+keywords: delete, cache, command, data, purged, array, support, role, parameter 
+summary: delete ssdCache命令可删除SSD缓存。SSD缓存中的所有数据将被清除。 
+---
+= 删除SSD缓存
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`delete ssdCache`命令可删除SSD缓存。SSD缓存中的所有数据将被清除。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有支持管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete ssdCache [_ssdCacheName_]]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`ssdCache`
+ a| 
+要删除的SSD缓存的名称。将SSD缓存名称括在方括号([])中。如果SSD缓存名称包含特殊字符或仅包含数字、则必须将SSD缓存名称用双引号("")括在方括号内。
+
+|===
+
+
+== 最低固件级别
+
+7.84.接受采取后续行动

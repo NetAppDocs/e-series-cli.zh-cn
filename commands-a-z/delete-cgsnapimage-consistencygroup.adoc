@@ -1,0 +1,90 @@
+---
+permalink: commands-a-z/delete-cgsnapimage-consistencygroup.html 
+sidebar: sidebar 
+keywords: delete, consistency, group, snapshot, image 
+summary: delete cgSnapImage ConsistencyGroup命令可删除一致性组中的快照映像。 
+---
+= 删除一致性组快照映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`dcgSnapImage ConsistencyGroup`命令可删除一致性组中的快照映像。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+delete cgSnapImage consistencyGroup=pass:quotes[_"consistencyGroupName"_]
+pass:quotes[[deleteCount=_numberOfSnapImages_]
+[retainCount=pass:quotes[_numberOfSnapImages_]
+[ignoreSnapVolume=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`ConsistencyGroup`
+ a| 
+要从中删除快照映像的一致性组的名称。将一致性组名称用双引号("")括起来。
+
+
+
+ a| 
+`dDeleteCount`
+ a| 
+要从一致性组中删除的快照映像的数量。使用整数值。
+
+此参数首先删除最旧的快照映像、并继续删除最旧的快照映像、直到达到您输入的数字为止。
+
+
+
+ a| 
+`re数量`
+ a| 
+要保留在一致性组中的快照映像的数量。使用整数值。
+
+此参数会将最新的快照映像保留在一致性组中。
+
+
+
+ a| 
+`ignoreSnapVolume`
+ a| 
+确定关联的一致性组快照卷是保留还是删除。只有当一致性组快照映像与一致性组快照卷关联时、此参数才适用。要保留快照卷、请将此参数设置为`true`。要删除快照卷、请将此参数设置为`false`。默认值为`false`。
+
+|===
+
+
+== 注释：
+
+如果无法删除一致性组中所有相关成员卷的快照映像、则此操作将失败、并且不会删除任何快照映像。
+
+删除与一致性组快照卷关联的一致性组快照映像时、一致性组快照卷中的相应快照卷成员将过渡到已停止状态。处于stopped状态的快照卷成员不再与已删除快照映像的快照组建立关系。但是、处于stopped状态的快照卷成员与其一致性组快照卷保持关系。
+
+
+
+== 最低固件级别
+
+7.83.

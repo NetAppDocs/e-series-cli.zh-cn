@@ -1,0 +1,407 @@
+---
+permalink: commands-a-z/show-storagearray.html 
+sidebar: sidebar 
+keywords: show, storage, array 
+summary: show storageArray命令可返回有关存储阵列的配置信息。 
+---
+= 显示存储阵列
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show storageArray`命令可返回有关存储阵列的配置信息。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+这些参数将返回存储阵列中组件和功能的值列表。您可以输入包含一个或多个参数的命令。如果输入不带任何参数的命令、则会显示整个存储阵列配置文件(与输入`*配置文件*`参数时的信息相同)。
+
+
+
+== 语法
+
+[listing]
+----
+show storageArray
+[autoSupport| autoSupportConfig | profile |
+batteryAge | connections | defaultHostType | healthStatus |
+hostTypeTable | hotSpareCoverage | features | time |
+volumeDistribution | longRunningOperations | summary | preferredVolumeOwners |
+iscsiNegotiationDefaults | unconfiguredIscsiInitiators | autoLoadBalancingEnable |
+cacheMirrorDataAssuranceCheckEnable | hostConnectivityReporting]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`AutoLoadBalancingEnable`
+ a| 
+用于返回自动负载平衡功能启用状态的参数。
+
+[NOTE]
+====
+启用自动负载平衡功能后、还会启用主机连接报告功能。
+
+====
+
+
+ a| 
+`AutoSupport`
+ a| 
+[NOTE]
+====
+此参数仅适用于运行`https`客户端类型的E2800或E5700存储阵列。对于使用客户端类型运行的E2800或E5700存储阵列、请使用`autosupportConfig`参数。
+
+====
+
+
+ a| 
+`autosupportConfig`
+ a| 
+参数、用于返回有关自动收集支持数据的操作当前状态的信息。将返回以下信息：
+
+* 操作是启用还是禁用
+* 支持数据文件所在文件夹的位置
+
+
+[NOTE]
+====
+此参数仅适用于运行`symbol`客户端类型的E2800或E5700存储阵列。对于使用`https`客户端类型运行的E2800或E5700存储阵列、请使用`* AutoSupport *`参数。
+
+====
+
+
+ a| 
+`batteryAge`
+ a| 
+用于显示状态、电池使用时间(以天为单位)以及需要更换电池之前的天数的参数。此时将显示两个电池的信息。
+
+
+
+ a| 
+`cachMirrorDataAssuranceCheckEnable`
+ a| 
+用于返回缓存镜像数据保证功能启用状态的参数。
+
+
+
+ a| 
+`连接`
+ a| 
+用于显示驱动器通道端口所在位置以及驱动器通道连接位置的参数。
+
+
+
+ a| 
+`defaultHostType`
+ a| 
+用于显示默认主机类型和主机类型索引的参数。
+
+
+
+ a| 
+`功能`
+ a| 
+用于显示存储阵列功能配置的参数。
+
+
+
+ a| 
+`healthStatus`
+ a| 
+用于显示存储阵列的运行状况、逻辑属性和物理组件属性的参数。
+
+
+
+ a| 
+`hostConnectivityReporting`
+ a| 
+用于返回主机连接报告功能启用状态的参数。
+
+
+
+ a| 
+`hostTypeTable`
+ a| 
+参数、用于显示控制器已知的所有主机类型的表。表中的每一行都显示了主机类型索引以及主机类型索引所代表的平台。
+
+
+
+ a| 
+`热空间覆盖`
+ a| 
+用于显示有关存储阵列中哪些卷具有热备用覆盖范围以及哪些卷不具有热备用覆盖范围的信息的参数。
+
+
+
+ a| 
+`iscsiNegotiationDefault`
+ a| 
+用于返回有关受启动程序-目标协商影响的连接级别设置的信息的参数。
+
+
+
+ a| 
+`长期运行操作`
+ a| 
+用于显示存储阵列中每个卷组和每个卷的长时间运行操作的参数。
+
+`longRunningOperation`参数返回此信息：
+
+* 卷组或卷的名称
+* 运行时间较长
+* Status
+* 完成百分比
+* 剩余时间
+
+
+
+
+ a| 
+`首选卷获得者`
+ a| 
+用于显示存储阵列中每个卷的首选控制器所有者的参数。
+
+
+
+ a| 
+`配置文件`
+ a| 
+用于显示逻辑组件和构成存储阵列的物理组件的所有属性的参数。此信息会显示在多个屏幕中。
+
+[NOTE]
+====
+profile参数返回有关存储阵列的详细信息。此信息涵盖了一个显示屏上的多个屏幕。要查看所有信息、可能需要增加显示缓冲区的大小。由于此信息非常详细、因此您可能需要将此参数的输出保存到文件中。
+
+====
+使用以下命令将配置文件输出保存到文件：
+
+[listing]
+----
+c:\...\smX\client>smcli 123.45.67.88
+123.45.67.89 -c "show storagearray profile;"
+-o "c:\folder\storagearray
+profile.txt"
+----
+
+
+ a| 
+`summary`
+ a| 
+用于显示有关存储阵列配置的简明信息列表的参数。
+
+
+
+ a| 
+`时间`
+ a| 
+用于显示存储阵列中两个控制器的当前设置时间的参数。
+
+
+
+ a| 
+`unconfiguredIscsiInitiators`
+ a| 
+用于返回存储阵列检测到但尚未在存储阵列拓扑中配置的启动程序列表的参数。
+
+
+
+ a| 
+`卷分布`
+ a| 
+用于显示存储阵列中每个卷的当前控制器所有者的参数。
+
+|===
+
+
+== 注释：
+
+`profile`参数可显示有关存储阵列的详细信息。此信息显示在一个显示监视器的多个屏幕上。要查看所有信息、可能需要增加显示缓冲区的大小。由于此信息非常详细、因此您可能需要将此参数的输出保存到文件中。要将输出保存到文件中、请运行`show storageArray`命令、如本示例所示。
+
+[listing]
+----
+-c "show storageArray profile;" -o "c:\\folder\\storageArrayProfile.txt"
+----
+上述命令语法适用于运行Windows操作系统的主机。实际语法因操作系统而异。
+
+将信息保存到文件时、您可以将此信息用作配置记录、并在恢复期间提供帮助。
+
+[NOTE]
+====
+虽然存储阵列配置文件会返回大量已清晰标记的数据、但8.41版本中的新增功能是为E2800或E5700存储阵列中的SSD驱动器提供额外的使用寿命报告信息。以前的耗损寿命报告包括平均擦除计数和剩余备用块的信息、而现在则包括已用持久性百分比。使用的持久性百分比是迄今为止写入SSD驱动器的数据量除以驱动器的理论总写入限制。
+
+====
+`batteryAge`参数以此表单返回信息。
+
+[listing]
+----
+Battery status: Optimal
+    Age: 1 day(s)
+    Days until replacement: 718 day(s)
+----
+较新的控制器托盘不支持`batteryAge`参数。
+
+`defaultHostType`参数将以此格式返回信息。
+
+[listing]
+----
+Default host type: Linux (Host type index 6)
+----
+`healthStatus`参数以此表单返回信息。
+
+[listing]
+----
+Storage array health status = optimal.
+----
+`hostTypeTable`参数以此表单返回信息。
+
+[listing]
+----
+NVSRAM HOST TYPE INDEX DEFINITIONS
+HOST TYPE                         ALUA/AVT STATUS   ASSOCIATED INDEXS
+AIX MPIO                          Disabled          9
+AVT_4M                            Enabled           5
+Factory Default                   Disabled          0
+HP-UX                             Enabled           15
+Linux (ATTO)                      Enabled           24
+Linux (DM-MP)                     Disabled          6
+Linux (Pathmanager)               Enabled           25
+Mac OS                            Enabled           22
+ONTAP                             Disabled          4
+SVC                               Enabled           18
+Solaris (v11 or Later)            Enabled           17
+Solaris (version 10 or earlier)   Disabled          2
+VMWare                            Enabled           10 (Default)
+Windows                           Enabled           1
+----
+`hotSpareCoverage`参数以此表单返回信息。
+
+[listing]
+----
+The following volume groups are not protected: 2, 1
+Total hot spare drives: 0
+   Standby: 0
+   In use: 0
+----
+`features`参数返回的信息显示了已启用、已禁用、评估以及可安装的功能。此命令将以类似如下格式返回功能信息：
+
+[listing]
+----
+PREMIUM FEATURE           STATUS
+
+asyncMirror               Trial available
+syncMirror                Trial available/Deactivated
+thinProvisioning          Trial available
+driveSlotLimit            Enabled (12 of 192 used)
+snapImage                 Enabled (0 of 512 used) - Trial version expires m/d/y
+snapshot                  Enabled (1 of 4 used)
+storagePartition          Enabled (0 of 2 used)
+volumeCopy                Enabled (1 of 511 used)
+SSDSupport                Disabled (0 of 192 used) - Feature Key required
+driveSecurity             Disabled - Feature Key required
+enterpriseSecurityKeyMgr  Disabled - Feature Key required
+highPerformanceTier       Disabled - Feature Key required
+----
+`time`参数以此表单返回信息。
+
+[listing]
+----
+Controller in Slot A
+
+Date/Time: Thu Jun 03 14:54:55 MDT 2004
+Controller in Slot B
+
+Date/Time: Thu Jun 03 14:54:55 MDT 2004
+----
+`longRunningOperations`参数以以下格式返回信息：
+
+[listing]
+----
+LOGICAL DEVICES  OPERATION         STATUS        TIME REMAINING
+Volume-2         Volume Disk Copy  10% COMPLETED  5 min
+----
+对。
+
+`longRunningOperations`参数返回的信息字段具有以下含义：
+
+* `name`是当前运行时间较长的卷的名称。卷名称必须使用"Volume"作为前缀。
+* `operation`列出了正在对卷组或卷执行的操作。
+* `*% complete*`显示已执行长时间运行操作的量。
+* `s状态`可以具有以下含义之一：
++
+** Pending—长时间运行的操作尚未启动、但将在当前操作完成后启动。
+** 进行中—长时间运行的操作已启动并将运行、直到用户请求完成或停止为止。
+
+
+* `剩余时间`表示完成当前长时间运行操作的剩余持续时间。时间采用"小时分钟"格式。如果剩余时间少于一小时、则仅显示分钟。如果剩余时间少于1分钟、则会显示消息"[.code]``less than a minute``"。
+
+
+`volumeDistribution`参数以此表单返回信息。
+
+[listing]
+----
+volume name: 10
+     Current owner is controller in slot: A
+
+volume name: CTL 0 Mirror Repository
+     Current owner is controller in slot: A
+
+volume name: Mirror Repository 1
+     Current owner is controller in slot:A
+
+volume name: 20
+     Current owner is controller in slot:A
+
+volume name: JCG_Remote_MirrorMenuTests
+     Current owner is controller in slot:A
+----
+
+
+== 最低固件级别
+
+5.00会添加`defaultHostType`参数。
+
+5.43添加`summary`参数。
+
+6.10添加了`volumeDistribution`参数。
+
+6.14添加`connections`参数。
+
+7.10添加了`autosupportConfig`参数。
+
+7.77添加了`longRunningOperations`参数。
+
+7.83将返回支持存储管理软件10.83版中发布的新功能的信息。此外、返回的信息已展开、显示了存储阵列中功能的状态。
+
+8.30添加了`autodelLoadBalancingEnable`参数。
+
+8.40会添加`AutoSupport`参数。
+
+8.40已弃用`https` client类型的E2800或E5700存储阵列的`autosupportConfig`参数。
+
+8.41将SSD驱动器的使用寿命监控添加到存储阵列配置文件中。此信息仅适用于E2800和E5700存储阵列。
+
+8.42添加了`hostConnectivityReporting`参数。
+
+8.63会在`profile`参数结果下添加资源配置卷条目。

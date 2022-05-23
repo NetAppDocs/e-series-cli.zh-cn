@@ -1,0 +1,119 @@
+---
+permalink: commands-a-z/show-allsnmpusers.html 
+sidebar: sidebar 
+keywords: show, snmpv3, usm, user 
+summary: 'show allsnmpUsers命令可返回有关为存储阵列定义的简单网络管理(Simple Network Management、SNMP) USM用户的信息。' 
+---
+= 显示SNMPv3 USM用户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sallsnmpUsers`命令可返回有关为存储阵列定义的简单网络管理(Simple Network Management、SNMP) USM用户的信息。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+show (allSnmpUsers |
+    snmpUser userName="snmpUsername" |
+    snmpUsers [snmpUserName1 ... snmpUserNameN])
+    [summary]
+----
+[NOTE]
+====
+此命令将返回类似于以下内容的SNMP用户信息
+
+[listing]
+----
+SNMP USERS------------------------------
+
+SUMMARY
+
+   Total SNMP Users: 2
+   Total SNMP Trap Destinations: 1
+
+DETAILS
+
+   SNMP User: TestUser1
+   SNMP Engine ID: local
+   SNMP Permission: Read Only
+   SNMP Authentication Protocol: sha
+   SNMP Privacy Protocol: aes128
+
+      Associated Trap Destination:
+
+      Trap Receiver IP Address  Send Authentication Failure Traps
+      10.113.173.133            false
+
+   SNMP User: TestUser2
+   SNMP Engine ID: local
+   SNMP Permission: Read Only
+   SNMP Authentication Protocol: sha256
+   SNMP Privacy Protocol: none
+
+      Associated Trap Destination:
+----
+====
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有SnmpUsers`
+ a| 
+此参数返回有关存储阵列中所有SNMP用户的信息。
+
+
+
+ a| 
+`用户名`
+ a| 
+要检索其信息的SNMP用户的名称。将SNMP用户名用双引号("")括起来。
+
+
+
+ a| 
+`snmpUsers`
+ a| 
+要检索其信息的多个SNMP用户的名称。使用以下规则输入SNMP用户的名称：
+
+* 请将所有名称用方括号([])括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+
+
+ a| 
+`summary`
+ a| 
+此参数返回SNMP用户总数和SNMP陷阱目标总数的列表。使用此参数时、将省略所有详细信息。
+
+|===
+
+
+== 最低固件级别
+
+8.72

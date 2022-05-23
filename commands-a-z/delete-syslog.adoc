@@ -1,0 +1,76 @@
+---
+permalink: commands-a-z/delete-syslog.html 
+sidebar: sidebar 
+keywords: delete, syslog, command, servers, configuration, alerts, array, support, role 
+summary: delete syslog命令可从系统日志配置中删除一个或多个服务器、以使其不再接收警报。 
+---
+= 删除系统日志服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`delete syslog`命令可从系统日志配置中删除一个或多个服务器、以便不再接收警报。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+delete syslog (allServers | serverAddresses pass:quotes[[_serverAddress1_ ... _serverAddressN_]])
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有服务器`
+ a| 
+允许用户删除所有系统日志服务器。
+
+
+
+ a| 
+`serverAdds`
+ a| 
+允许用户删除系统日志服务器。将服务器括在方括号([])中。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete syslog allServers;
+
+SMcli -n Array1 -c "delete syslog serverAddresses ["serverName1.company.com"]";
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

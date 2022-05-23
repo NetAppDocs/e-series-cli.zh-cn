@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/show-storagearray-odxsetting.html 
+sidebar: sidebar 
+keywords: show, storage, array, odx, set 
+summary: 'show storageArray odxsetting命令可返回存储阵列上卸载数据传输(Offloaded Data Transfer、ODX)和VMware vStorage API阵列架构(VAAI)的当前设置。' 
+---
+= 显示存储阵列ODX设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+命令`show storageArray odxsetting`返回存储阵列上卸载数据传输(Offloaded Data Transfer、ODX)和VMware vStorage API阵列架构(VAAI)的当前设置。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+此命令的设置可以是以下设置之一：
+
+* true—ODX和VAAI已打开。
+* false—ODX和VAAI已关闭。
+* inconsistent—控制器的设置不同。
+* unknown—无法确定ODX或VAAI的设置。
+
+
+
+
+== 语法
+
+[listing]
+----
+show storageArray odxsetting
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+此命令将返回与此示例类似的ODX和VAAI信息。
+
+[listing]
+----
+Windows ODX Setting Status
+odxEnabled  True | False | Inconsistent | Unknown
+vaaiEnabled True | False | Inconsistent | Unknown
+----
+
+
+== 最低固件级别
+
+8.20

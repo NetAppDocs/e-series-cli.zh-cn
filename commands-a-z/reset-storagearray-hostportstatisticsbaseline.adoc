@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/reset-storagearray-hostportstatisticsbaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, host, port, statistics, baseline 
+summary: reset storageArray hostPortStatissBaseline命令可重置存储阵列主机端口统计信息基线。 
+---
+= 重置存储阵列主机端口统计信息基线
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`reset storageArray hostPortStatissBaseline`命令可重置存储阵列主机端口统计信息基线。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令将替换已弃用的 xref:reset-storagearray-ibstatsbaseline.adoc[重置存储阵列InfiniBand统计信息基线]， xref:reset-storagearray-iscsistatsbaseline.adoc[重置存储阵列iSCSI基线]，和 xref:reset-storagearray-iserstatsbaseline.adoc[重置存储阵列iSER基线] 命令
+
+====
+
+
+== 语法
+
+[listing]
+----
+
+reset storageArray hostPortStatisticsBaseline type=(ISCSI| ISER | SRP | NVMEOF)
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`键入`
+ a| 
+用于指示要收集的统计信息类型。有效选项包括：`iSCSI`、`ISER`、`SRP`和`NVMEOF`。
+
+|===
+
+
+== 最低固件级别
+
+8.41

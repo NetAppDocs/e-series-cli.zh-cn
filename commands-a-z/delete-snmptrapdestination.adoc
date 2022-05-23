@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/delete-snmptrapdestination.html 
+sidebar: sidebar 
+keywords: delete, command, snmptrapdestination, existing, simple, network, management, protocol, trap, destination, previous, create, registered 
+summary: 'delete snmpTrapDestination命令可删除先前使用create snmpTrapDestination命令创建并注册的现有简单网络管理协议(Simple Network Management Protocol、SNMP)陷阱目标。' 
+---
+= 取消注册SNMP陷阱目标
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`delete snmpTrapDestination`命令可删除先前使用`create snmpTrapDestination`命令创建和注册的现有简单网络管理协议(Simple Network Management Protocol、SNMP)陷阱目标。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snmpTrapDestination trapReceiverIP=_ipAddress_]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`trap接收方IP`
+ a| 
+要停止从中发送陷阱消息的SNMP管理器的IP地址。
+
+|===
+
+
+== 最低固件级别
+
+8.30

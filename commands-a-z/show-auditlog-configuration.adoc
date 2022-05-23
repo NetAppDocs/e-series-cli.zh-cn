@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/show-auditlog-configuration.html 
+sidebar: sidebar 
+keywords: show, audit log, configuration 
+summary: show audiitLog configuration命令可显示存储阵列的审核日志配置设置。 
+---
+= 显示审核日志配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show Audit itLog configuration`命令可显示存储阵列的审核日志配置设置。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+
+show auditLog configuration
+----
+
+
+== Parameters
+
+无
+
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "show auditLog configuration;"
+
+Logging level: All
+Full policy: Overwrite
+Maximum records: 30,000 count
+Warning threshold: 90 percent
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

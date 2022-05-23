@@ -1,0 +1,638 @@
+---
+permalink: get-started/recurring-syntax-elements.html 
+sidebar: sidebar 
+keywords: recur, syntax, elements 
+summary: 重复语法元素是一个常规的参数和选项类别、可在脚本命令中使用。 
+---
+= 重复语法元素
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+重复语法元素是一个常规的参数和选项类别、可在脚本命令中使用。下表列出了重复语法元素中使用的约定。
+
+[cols="2*"]
+|===
+| 约定 | 定义 
+
+
+ a| 
+`* a` b *
+ a| 
+备选项("A"或"b")
+
+
+
+ a| 
+`斜体字`
+ a| 
+需要用户输入来完成参数(对变量的响应)
+
+
+
+ a| 
+`+... ]+`(方括号)
+ a| 
+零个或一次出现(方括号也用作某些命令参数的分隔符)
+
+
+
+ a| 
+`+｛... ｝+`(花括号)
+ a| 
+零个或多个发生
+
+
+
+ a| 
+`(* a | b` c*)
+ a| 
+请仅选择一种备选方案
+
+|===
+下表列出了重复语法参数以及可与重复语法参数结合使用的值。
+
+[cols="2*"]
+|===
+| 重复语法 | 语法值 
+
+
+ a| 
+` autosconfigure-vols-attr- value-list_`
+ a| 
+` autosconfig-vols-attr-value-pair_`｛` autosconfig-vols-attr-value-pair_`｝
+
+
+
+ a| 
+`自动配置-vols-attr-值对_`
+ a| 
+[listing]
+----
+driveType=drive-type | driveMediaType=drive-media-type |
+raidLevel=raid-level | volumeGroupWidth=integer-literal |
+volumeGroupCount=integer-literal | volumesPerGroupCount=integer-literal6|
+hotSpareCount=integer-literal | segmentSize=segment-size-spec | cacheReadPrefetch=(TRUE | FALSE)
+securityType=(none | capable | enabled)7| dataAssurance=(none | enabled)5
+----
+
+
+ a| 
+`布尔值_`
+ a| 
+[listing]
+----
+(TRUE | FALSE)
+----
+
+
+ a| 
+` cache-flush-modify-setting_`
+ a| 
+[listing]
+----
+immediate, 0, .25, .5, .75, 1, 1.5, 2, 5, 10, 20, 60, 120, 300, 1200, 3600, infinite
+----
+
+
+ a| 
+`容量规格_`
+ a| 
+`整型-文字_``[KB _ MB _ GB _ TB _字节]`
+
+
+
+ a| 
+`计数基于存储库-规范_`
+ a| 
+[listing]
+----
+repositoryRAIDLevel =repository-raid-level repositoryDriveCount=integer-literal
+[repositoryVolumeGroupUserLabel =user-label] [driveType=drive-type4
+] [trayLossProtect=(TRUE | FALSE)1] | [drawerLossProtect=(TRUE | FALSE)2] |
+[dataAssurance=(none | enabled)5] |
+----
+
+
+ a| 
+` create-raid-vol-attr- value-list_`
+ a| 
+`_create-raid-volume-attribute-value-pair_`｛` create-raid-volume-attribute-value-pair_`｝
+
+
+
+ a| 
+` create-raid-volume-attribute-value-pair_`
+ a| 
+[listing]
+----
+capacity=capacity-spec | owner=(a | b) |
+cacheReadPrefetch=(TRUE | FALSE) | segmentSize=integer-literal |
+usageHint=usage-hint-spec
+----
+
+
+ a| 
+` create-volume-copy-attr- value-list_`
+ a| 
+`_create-volume-copy-attr-value-pair_`｛` create-volume-copy-attr-value-pair_`｝
+
+
+
+ a| 
+` create-volume-copy-attr- value-pair_`
+ a| 
+[listing]
+----
+copyPriority=(highest | high | medium | low | lowest) |
+targetReadOnlyEnabled=(TRUE | FALSE) | copyType=(offline | online) |
+repositoryPercentOfBase=(20 | 40 | 60 | 120 | default) |
+repositoryGroupPreference=(sameAsSource | otherThanSource | default)
+----
+
+
+ a| 
+`驱动器介质类型_`
+ a| 
+`(HDD、SSD、未知、所有介质)`_HDD_表示硬盘驱动器。_SSD_表示固态磁盘。
+
+
+
+ a| 
+`驱动器规格_`
+ a| 
+`托盘ID、插槽ID`或`托盘ID、抽取ID、插槽ID_`驱动器定义为两个或三个以逗号分隔的整型文字值。低密度托盘需要两个值。高密度托盘(即具有抽盒的托盘)需要三个值。
+
+
+
+ a| 
+`驱动器规范列表_`
+ a| 
+`驱动器规格_``驱动器规格_`
+
+
+
+ a| 
+`d驱动器类型`
+ a| 
+`(光纤` SATA、SAS)
+
+[NOTE]
+====
+固件版本7.86及更高版本仅支持SAS驱动器。
+
+====
+
+
+ a| 
+`_error-action_`
+ a| 
+`(停止`继续)
+
+
+
+ a| 
+`以太网端口选项_`
+ a| 
+[listing]
+----
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) |
+IPv6LocalAddress=ipv6-address | IPv6RoutableAddress=ipv6-address |
+IPv6RouterAddress=ipv6-address | IPv4Address=ip-address |
+IPv4ConfigurationMethod= (static | dhcp) | IPv4GatewayIP=ip-address |
+IPv4SubnetMask=ip-address | duplexMode=(TRUE | FALSE) | portSpeed=(autoNegotiate | 10 | 100 |
+1000)
+----
+
+
+ a| 
+`功能标识符_`
+ a| 
+[NOTE]
+====
+默认情况下、SANtricity 11.40中的所有功能均处于启用状态。
+
+====
+
+
+ a| 
+`文件名_`
+ a| 
+`字符串-文字_`
+
+
+
+ a| 
+` GID_`
+ a| 
+`字符串-文字_`
+
+
+
+ a| 
+`十六进制文字_`
+ a| 
+0x00 - 0xFF范围内的文字。
+
+
+
+ a| 
+`主机卡标识符_`
+ a| 
+`(1` 2、3 4)
+
+
+
+ a| 
+`主机类型_`
+ a| 
+`string-tat即``integer -tat即`
+
+
+
+ a| 
+`基于实例- repository-spec_`
+ a| 
+[listing]
+----
+(repositoryRAIDLevel =repository-raid-level repositoryDrives= (drive-spec-list)
+[repositoryVolumeGroupUserLabel =user-label] [trayLossProtect=(TRUE | FALSE)1]) |
+[drawerLossProtect=(TRUE | FALSE)2]) | (repositoryVolumeGroup=user-label
+[freeCapacityArea=integer-literal3])
+----
+使用`* repositoryDrives*`参数指定`* repositoryRAIDLevel*`参数。请勿指定RAID级别或卷组中的驱动器。指定卷组时、请勿为`*纸架LossProtect*`参数设置值。
+
+
+
+ a| 
+` IP地址_`
+ a| 
+`*(0-255).(0-255).(0-255).(0-255)*`
+
+
+
+ a| 
+` ipv6-address_`
+ a| 
+`*(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)*`
+
+必须输入所有32个十六进制字符。
+
+
+
+ a| 
+`_iscsi-host-port_`
+ a| 
+[listing]
+----
+(1 | 2 | 3 | 4)
+----
+主机端口号可能为2、3或4、具体取决于所使用的控制器类型。
+
+
+
+ a| 
+`_iscsi-host-port-options_`
+ a| 
+[listing]
+----
+IPv4Address=ip-address | IPv6LocalAddress=ipv6-address |
+IPv6RoutableAddress=ipv6-address | IPv6RouterAddress=ipv6-address |
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) | enableIPv4Priority=(TRUE | FALSE) |
+enableIPv6Priority=(TRUE | FALSE) | IPv4ConfigurationMethod=(static | dhcp) |
+IPv6ConfigurationMethod= (static | auto) | IPv4GatewayIP=ip-address |
+IPv6HopLimit=integer | IPv6NdDetectDuplicateAddress=integer |
+IPv6NdReachableTime=time-interval | IPv6NdRetransmitTime=time-interval |
+IPv6NdTimeOut=time-interval | IPv4Priority=integer |
+IPv6Priority=integer | IPv4SubnetMask=ip-address |
+IPv4VlanId=integer | IPv6VlanId=integer |
+maxFramePayload=integer | tcpListeningPort=tcp-port-id |
+portSpeed=(autoNegotiate | 1 | 10)
+----
+
+
+ a| 
+`_iscsiSession_`
+ a| 
+[listing]
+----
+[session-identifier]
+----
+
+
+ a| 
+`_nvsram-offset_`
+ a| 
+`十六进制文字_`
+
+
+
+ a| 
+`` nvsramBitSeting_N
+ a| 
+`_nvsram-mask、nvsram-value_`=`_0x十六 进制、0x十六 进制_`_`_整型-文字_`
+
+`值0xX十六 进制_`值通常为0x00到0xFF之间的值。
+
+
+
+ a| 
+`` nvsramByteSeting_N
+ a| 
+`_nvsram-value_`=`_0xX十六 进制_`_`_整型-文字_`
+
+`0x十六 进制`值通常为0x00到0xFF之间的值。
+
+
+
+ a| 
+`_portID_`
+ a| 
+[listing]
+----
+(0-127)
+----
+
+
+ a| 
+`_raid-level_`
+ a| 
+[listing]
+----
+(0 | 1 | 3 | 5 | 6)
+----
+
+
+ a| 
+`_recovery-raid-volume-attr- value-list_`
+ a| 
+`_recovery-raid-volume-attr-value-pair_`｛` recover-raid-volume-attr-value-pair_`｝
+
+
+
+ a| 
+`_recovery-raid-volume-attr- value-pair_`
+ a| 
+[listing]
+----
+owner=(a|b) |cacheReadPrefetch=(TRUE | FALSE) | dataAssurance=(none | enabled)
+----
+
+
+ a| 
+`存储库-raid-level_`
+ a| 
+[listing]
+----
+(1 | 3 | 5 | 6)
+----
+
+
+ a| 
+`存储库-spec_`
+ a| 
+`insta-based repository-spect``` count-based repository-spect
+
+
+
+ a| 
+`_segment -size-spec_`
+ a| 
+`整型-文字_`-所有容量均以基础-2表示。
+
+
+
+ a| 
+`序列号_`
+ a| 
+[listing]
+----
+string-literal
+----
+
+
+ a| 
+`_插槽ID_`
+ a| 
+对于大容量驱动器托盘、请指定驱动器的托盘ID值、抽盒ID值和插槽ID值。对于低容量驱动器托盘、请指定驱动器的托盘ID值和插槽ID值。托盘ID值为`0`到`99`。抽盒ID值为`1`到`5`。
+
+所有插槽ID最大值均为24。插槽ID值从0或1开始、具体取决于托盘型号。
+
+将托盘ID值、抽盒ID值和插槽ID值括在方括号()中。
+
+[listing]
+----
+(drive=\(trayID,[drawerID,]slotID\)|
+drives=\(trayID1,[drawerID1,]slotID1 ... trayIDn,[drawerIDn,]slotIDn\) )
+----
+
+
+ a| 
+`测试设备_`
+ a| 
+[listing]
+----
+controller=(a|b)
+esms=(esm-spec-list)drives=(drive-spec-list)
+----
+
+
+ a| 
+`_test-devices-list_`
+ a| 
+`_test-devices_`｛` test-devices_`｝
+
+
+
+ a| 
+`时区规范_`
+ a| 
+[listing]
+----
+(GMT+HH:MM | GMT-HH:MM) [dayLightSaving=HH:MM]
+----
+
+
+ a| 
+`_纸架ID-list_`
+ a| 
+`_｛`｝``｛n｝_｛e｝｛n｝｛n｝｛n｝｛n｝｛n｝｛n｝
+
+
+
+ a| 
+`_usage-hnt-spec_`
+ a| 
+[listing]
+----
+usageHint=(multiMedia | database | fileSystem)
+----
+控制器使用卷的使用提示或预期I/O特征来指示适当的默认卷段大小和动态缓存读取预取。对于文件系统和数据库、使用128 KB的区块大小。对于多媒体、使用256 KB的区块大小。所有这三个使用提示均可启用动态缓存读取预取。
+
+
+
+ a| 
+`用户标签_`
+ a| 
+`字符串-文字_`
+
+有效字符包括字母数字、短划线和下划线。
+
+
+
+ a| 
+`用户标签列表_`
+ a| 
+`用户标签_`｛`用户标签_`｝
+
+
+
+ a| 
+`卷组编号_`
+ a| 
+`整型-文字_`
+
+
+
+ a| 
+`_WWID_`
+ a| 
+`字符串-文字_`
+
+|===
+1要使托盘丢失保护正常工作、您的配置必须遵循以下准则：
+
+[cols="3*"]
+|===
+| 级别 | 托盘丢失保护标准 | 所需的最小托盘数 
+
+
+ a| 
+磁盘池
+ a| 
+磁盘池在一个托盘中包含的驱动器不超过两个
+ a| 
+6.
+
+
+
+ a| 
+RAID 6
+ a| 
+卷组在一个托盘中包含的驱动器不超过两个
+ a| 
+3.
+
+
+
+ a| 
+RAID 3或RAID 5
+ a| 
+卷组中的每个驱动器都位于一个单独的托盘中
+ a| 
+3.
+
+
+
+ a| 
+RAID 1
+ a| 
+RAID 1对中的每个驱动器都必须位于一个单独的托盘中
+ a| 
+2.
+
+
+
+ a| 
+RAID 0
+ a| 
+无法实现托盘丢失保护。
+ a| 
+不适用
+
+|===
+2要使抽盒丢失保护正常工作、您的配置必须遵循以下准则：
+
+[cols="3*"]
+|===
+| 级别 | 抽盒丢失保护的标准 | 所需的最小抽盒数量 
+
+
+ a| 
+磁盘池
+ a| 
+池中包含所有五个抽盒中的驱动器、每个抽盒中的驱动器数量相等。如果磁盘池包含15、20、25、30、35、 40、45、50、55或60个驱动器。
+ a| 
+5.
+
+
+
+ a| 
+RAID 6
+ a| 
+卷组在一个抽屉中包含的驱动器不超过两个。
+ a| 
+3.
+
+
+
+ a| 
+RAID 3或RAID 5
+ a| 
+卷组中的每个驱动器都位于一个单独的抽盒中。
+ a| 
+3.
+
+
+
+ a| 
+RAID 1
+ a| 
+镜像对中的每个驱动器都必须位于一个单独的抽盒中。
+ a| 
+2.
+
+
+
+ a| 
+RAID 0
+ a| 
+无法实现抽盒丢失保护。
+ a| 
+不适用
+
+|===
+如果存储阵列配置中的卷组跨越多个托盘、则必须确保抽盒丢失保护设置与托盘丢失保护设置配合使用。您可以在不保护托盘丢失的情况下获得抽盒丢失保护。如果没有抽盒丢失保护、您将无法获得托盘丢失保护。如果`* rayLossProtect*`参数和`* rawerLossProtect*`参数未设置为相同的值、则存储阵列将返回一条错误消息、并且不会创建存储阵列配置。
+
+3要确定是否存在可用容量区域、请运行`show VolumeGroup`命令。
+
+4默认驱动器(驱动器类型)为`S作为`。
+
+如果存储阵列中只有一种类型的驱动器、则不需要`* driveType*`参数。如果使用`* driveType*`参数、则还必须使用`* hotSpaceCount *`参数和`* volumeGroupWidth*`参数。
+
+5 `*数据保证*`参数与数据保证(Data Assurance、DA)功能相关。
+
+数据保证(Data Assurance、DA)功能可提高整个存储系统的数据完整性。通过DA、存储阵列可以检查在主机和驱动器之间移动数据时可能发生的错误。启用此功能后、存储阵列会向卷中的每个数据块附加错误检查代码(也称为循环冗余检查或CRC)。移动数据块后、存储阵列会使用这些CRC代码来确定传输期间是否发生任何错误。可能损坏的数据既不会写入磁盘、也不会返回到主机。
+
+如果要使用DA功能、请从仅包含支持DA的驱动器的池或卷组开始。然后、创建支持DA的卷。最后、使用支持DA的I/O接口将这些支持DA的卷映射到主机。支持DA的I/O接口包括光纤通道、SAS和基于InfiniBand的iSER (适用于RDMA/IB的iSCSI扩展)。基于以太网的iSCSI或基于InfiniBand的SRP不支持DA。
+
+[NOTE]
+====
+如果所需的所有硬件和I/O接口均支持DA、则可以将`* dataAssurance *`参数设置为`enabled`、然后对某些操作使用DA。例如、您可以创建一个包含支持DA的驱动器的卷组、然后在该卷组中创建一个启用了DA的卷。使用已启用DA的卷的其他操作可以选择支持DA功能。
+
+====
+6 `* volumesPerGroupCount*`参数是每个卷组的容量相等的卷数。
+
+7使用`* securityType*`参数可以为要创建的卷组指定安全设置。所有卷也会设置为您选择的安全设置。用于设置安全设置的可用选项包括：
+
+* `none`—卷组不安全。
+* `capable`—卷组具有安全性功能、但尚未启用安全性。
+* `enabled`—卷组已启用安全性。
+
+
+[NOTE]
+====
+如果要设置`* securityType=enabled"`、则必须已为存储阵列创建存储阵列安全密钥。(要创建存储阵列安全密钥、请使用`create storageArray securityKey`命令。)
+
+====

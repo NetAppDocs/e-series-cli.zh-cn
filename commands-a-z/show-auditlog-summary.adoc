@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/show-auditlog-summary.html 
+sidebar: sidebar 
+keywords: show, audit, log, summary 
+summary: show audiitLog summary命令可显示审核日志摘要信息。 
+---
+= 显示审核日志摘要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show Audit itLog summary`命令可显示审核日志摘要信息。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+
+show auditLog summary
+----
+
+
+== Parameters
+
+无
+
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "show auditLog summary;"
+
+Total log records: 1,532
+First log record: 1493070393313 (2017-04-24T16:46:33.313-0500)
+Last log record: 1493134565128 (2017-04-25T10:36:05.128-0500)
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

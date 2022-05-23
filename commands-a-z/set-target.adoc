@@ -1,0 +1,86 @@
+---
+permalink: commands-a-z/set-target.html 
+sidebar: sidebar 
+keywords: set, target, properties 
+summary: set target命令用于更改iSCSI/iSER目标的属性、包括身份验证方法和别名。 
+---
+= 设置目标属性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set target`命令可更改iSCSI/iSER目标的属性、包括身份验证方法和别名。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令将替换已弃用的 xref:set-isertarget.adoc[设置iSER目标] 和 xref:set-iscsitarget.adoc[设置iSCSI目标属性] 命令
+
+====
+
+
+== 语法
+
+[listing]
+----
+
+set target (["targetAliasName"] | <"targetQualifiedName">) (authenticationMethod=(none | chap chapSecret="newSecurityKey") | targetAlias="newAliasName")
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`目标`
+ a| 
+用于指定要设置的目标。您可以指定目标的别名或限定名称(例如iqn)。将目标标识符用双引号("")括起来。如果标识符是别名、则还必须用方括号()括起来；如果标识符是限定名称、则必须用尖括号()括起来。
+
+
+
+ a| 
+`身份验证方法`
+ a| 
+用于设置对会话进行身份验证的方法。有效选项包括：`none`或`chap`。
+
+
+
+ a| 
+`chapSecret`
+ a| 
+用于输入安全密钥以对对等连接进行身份验证。只有当`authenticationMethod`设置为`chap`时、此选项才适用。
+
+
+
+ a| 
+`targetAlias`
+ a| 
+用于指定目标的新别名。请将此名称用双引号("")括起来。
+
+|===
+
+
+== 最低固件级别
+
+8.41

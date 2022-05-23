@@ -1,0 +1,52 @@
+---
+settings:
+  name: SANtricity commands
+  internal:
+    pdf_enabled: false
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  pdf:
+    zip-level: 1
+    zip-filename: santricity-commands.zip
+  langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr
+sidebar:
+  entries:
+  - title: SANtricity 命令行界面文档
+    url: "/index.html"
+  - section: get-started
+  - section: commands-category
+  - section: commands-a-z
+  - title: 法律声明
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: 入门
+    links:
+    - title: 新增功能
+      url: get-started/changes-in-the-cli-and-script-commands-in-this-release.html
+    - title: CLI概述
+      url: get-started/overview-format-commands.html
+    - title: CLI命令结构
+      url: get-started/structure-of-a-cli-command.html
+  - title: E系列文档
+    links:
+    - title: E系列系统文档
+      url: https://docs.netapp.com/us-en/e-series/index.html
+    - title: SANtricity System Manager 11.7
+      url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
+    - title: SANtricity 统一管理器 5.
+      url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
+  - title: 工具支持
+    links:
+    - title: NetApp 互操作性表
+      url: http://mysupport.netapp.com/matrix/
+    - title: NetApp 知识库
+      url: https://kb.netapp.com/
+    - title: Active IQ （需要登录）
+      url: https://activeiq.netapp.com/?source=aiqnsspage
+    - title: E 系列 /SANtricity 下载（需要登录）
+      url: https://mysupport.netapp.com/site/downloads#E
+product-family:
+  name: E-Series
+  repo: e-series-family

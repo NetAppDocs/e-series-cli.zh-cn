@@ -1,0 +1,111 @@
+---
+permalink: commands-a-z/set-consistency-group-attributes.html 
+sidebar: sidebar 
+keywords: set, consistency, group, attributes 
+summary: set ConsistencyGroup命令用于定义快照一致性组的属性。 
+---
+= 设置一致性组属性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set ConsistencyGroup`命令可定义快照一致性组的属性。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
+[userLabel=pass:quotes["_consistencyGroupName_"]]
+[repositoryFullPolicy=(failBaseWrites | purgeSnapImages)]
+[repositoryFullLimit=pass:quotes[_percentValue_]]
+[autoDeleteLimit=pass:quotes[_numberOfSnapImages_]]
+[rollbackPriority=(lowest | low | medium | high | highest)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`consistencyGroupName`
+ a| 
+要为其设置属性的一致性组的名称。将一致性组名称用双引号("")括在方括号([])内。
+
+
+
+ a| 
+`用户标签`
+ a| 
+要为快照一致性组指定的新名称。将新一致性组名称用双引号("")括起来。
+
+
+
+ a| 
+`repositoryFullPolicy`
+ a| 
+希望在快照存储库卷已满时继续执行快照处理的方式。您可以选择对基础卷的写入失败(`failBaseWrites`)或删除(清除)快照映像(`purgeSnapImages`)。默认操作为`purgeSnapImages`。
+
+
+
+ a| 
+`repositoryFullLimit`
+ a| 
+收到快照存储库卷接近全满警告时存储库容量的百分比。使用整数值。例如、值70表示70%。默认值为75。
+
+
+
+ a| 
+`autodeleteLimit`
+ a| 
+可以将每个一致性组配置为自动删除其快照映像、以使快照组中的快照映像总数保持在指定级别或以下。启用此选项后、每当在快照组中创建新的快照映像时、系统都会自动删除组中最早的快照映像、以符合限制值。此操作可释放存储库容量、以便用于满足其余Snapshot映像的持续写入时复制要求。
+
+
+
+ a| 
+`rollBackPriority`
+ a| 
+存储阵列运行时一致性组回滚操作的优先级。有效值为`最高`、`高`、`m中`、`低`或`最低`。
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
+
+使用此命令时、您可以指定一个或多个参数。但是、您不需要使用所有参数。
+
+回滚优先级用于定义应在牺牲系统性能的情况下分配给回滚操作的系统资源量。值`high`表示回滚操作的优先级高于所有其他主机I/O值`low`表示执行回滚操作时、应尽可能减少对主机I/O的影响
+
+
+
+== 自动删除
+
+您可以将每个快照组配置为自动删除其快照映像、以使快照组中的快照映像总数保持在或低于最大映像数。如果快照组中的快照映像数达到最大限制、则每当在快照组中创建新的快照映像时、`autodeleteLimit`参数都会自动删除快照映像。`autodeleteLimit`参数将删除快照组中最早的快照映像、直到达到使用参数定义的最大映像数为止。以这种方式删除快照映像可释放存储库容量、以便可以使用它来满足其余快照映像的持续写入时复制要求。
+
+
+
+== 最低固件级别
+
+7.83.

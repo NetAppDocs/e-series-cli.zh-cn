@@ -1,0 +1,107 @@
+---
+permalink: commands-a-z/create-hostport.html 
+sidebar: sidebar 
+keywords: create, host, port 
+summary: 'create hostPort命令可在主机总线适配器(HBA)或主机通道适配器(HCA)上创建新的主机端口标识。' 
+---
+= 创建主机端口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`create hostPort`命令可在主机总线适配器(HBA)或主机通道适配器(HCA)上创建新的主机端口标识。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+主机端口标识是一个软件值、用于表示控制器的物理HBA或HCA主机端口。如果没有正确的主机端口标识、控制器将无法从主机端口接收指令或数据。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+create hostPort identifier=pass:quotes[_("wwID"_ | "_gid"_)
+userLabel="_portLabel"_]
+[host=pass:quotes[_"hostName"_]]
+[interfaceType=(FC | SAS | IB)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`标识符`
+ a| 
+HBA或HCA主机端口的8字节全球通用标识符(World Wide Identifier、WWID)或16字节组标识符(Group Identifier、GID)。将WWID或GID用双引号("")括起来。
+
+
+
+ a| 
+`用户标签`
+ a| 
+要为新HBA或HCA主机端口指定的名称。将主机端口标签用双引号("")括起来。
+
+
+
+ a| 
+`主机`
+ a| 
+要为其定义HBA或HCA主机端口的主机的名称。将主机名用双引号("")括起来。
+
+
+
+ a| 
+`接口类型`
+ a| 
+主机端口接口类型的标识符。
+
+主机端口接口类型的选项如下：
+
+* `FC`—光纤通道
+* `s作为`—串行连接SCSI
+* `IB`—InfiniBand
+
+
+选择FC或SAS需要8字节WWID。IB选择需要16字节组标识符(GID)。
+
+如果未指定接口类型、则会使用`FC`作为主机端口的默认接口。
+
+|===
+
+
+== 注释：
+
+HBA主机端口或HCA主机端口是主机总线适配器或主机计算机中的主机通道适配器上的物理连接。通过HBA主机端口或HCA主机端口、主机可以访问存储阵列中的卷。如果HBA或HCA只有一个物理连接(一个主机端口)、则术语主机端口和主机总线适配器或主机通道适配器是同义词。
+
+您可以对名称使用字母数字字符、连字符和下划线的任意组合。名称最多可以包含30个字符。
+
+
+
+== 最低固件级别
+
+5.20
+
+7.10已弃用`hostType`参数。`hostType`参数已添加到`create host`命令中。
+
+7.32添加`interfaceType`参数。

@@ -1,0 +1,122 @@
+---
+permalink: commands-a-z/set-storagearray-learncycledate-controller.html 
+sidebar: sidebar 
+keywords: set, storage, array, controller, battery, learn, cycle 
+summary: set storageArray learnCycleDate控制器命令用于设置控制器电池学习周期。 
+---
+= 设置存储阵列控制器电池学习周期
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray learnCycleDate controller`命令可设置控制器电池学习周期。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+要为存储阵列中的每个控制器设置单独的学习周期、请将此命令发送到这两个控制器。
+
+====
+[NOTE]
+====
+学习周期不会关联在一起、因此、一个控制器电池学习周期中断不会影响另一个控制器中电池的学习周期。
+
+====
+[NOTE]
+====
+学习周期可能需要几个小时才能完成。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set storageArray learnCycleDate (controller[(a| b)] )
+pass:quotes[(daysToNextLearnCycle=_numberOfDays_ |
+day=_dayOfTheWeek_)] pass:quotes[time=_HH:MM_]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`*控制器*`
+ a| 
+要为其指定电池学习周期的控制器。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器将控制器标识符括在方括号()中。如果不指定控制器、则控制器固件将返回语法错误。
+
+[NOTE]
+====
+省略此参数可为双控制器阵列中的两个控制器电池设置学习周期。
+
+====
+
+
+ a| 
+`dysToNextLearnCycle`
+ a| 
+有效值为`0`到`7`、其中`0`为立即、`7`为7天。`dysToNextLearnCycle`参数将在下一个计划学习周期后最长七天发生。
+
+
+
+ a| 
+`day`
+ a| 
+`day`参数的有效值包括一周中的天数(`Sunday`、`Monday`、`星期二`、`Wedday`、`Thedday`、Thurday、 `星期五`和`S星期六`)。设置此日期将使下一个学习周期计划在当前计划的学习周期之后的指定日期进行。
+
+
+
+ a| 
+`时间`
+ a| 
+24小时格式的时间；例如上午8：00输入为`08：00`。晚上9点输入的格式为`21：00`和晚上9：30输入为`21：30`。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+set storageArray learnCycleDate controller [a] daysToNextLearnCycle=4 time=08:30;
+----
+
+
+== 注释：
+
+您可以将学习周期设置为在七天内仅进行一次。
+
+`time`参数用于选择要运行学习周期的特定时间。如果未输入值、则此命令将使用默认值`00：00`(午夜)。
+
+如果指定的日期和时间在过去、则下一个学习周期将在指定的下一个可能日期进行。
+
+
+
+== 最低固件级别
+
+7.15
+
+8.30 -添加了`controller`参数。

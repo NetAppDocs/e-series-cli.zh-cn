@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/delete-snmpcommunity.html 
+sidebar: sidebar 
+keywords: delete, snmpcommunity, command, existing, simple, network, management, protocol, community, previously, create, effective, unregister, trap, destination, associate, remove 
+summary: 'delete snmpCommunity命令可删除先前使用create snmpCommunity命令创建并注册的现有简单网络管理协议(Simple Network Management Protocol、SNMP)社区。删除SNMP社区会有效地取消注册该社区。此外、还会删除与该社区关联的任何陷阱目标。' 
+---
+= 取消注册SNMP社区
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`delete snmpCommunity`命令可删除先前使用`create snmpCommunity`命令创建并注册的现有简单网络管理协议(Simple Network Management Protocol、SNMP)社区。删除SNMP社区会有效地取消注册该社区。此外、还会删除与该社区关联的任何陷阱目标。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snmpCommunity communityName="_snmpCommunityName_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`社区名称`
+ a| 
+要删除的SNMP社区的名称。将SNMP社区名称用双引号("")括起来。
+
+|===
+
+
+== 最低固件级别
+
+8.30

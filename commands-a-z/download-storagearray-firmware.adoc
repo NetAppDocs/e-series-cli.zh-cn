@@ -1,0 +1,143 @@
+---
+permalink: commands-a-z/download-storagearray-firmware.html 
+sidebar: sidebar 
+keywords: download, storage, array, firmware, command, downloads, optionally, values, controllers, role, context, parameter 
+summary: 'download storageArray firmware命令可下载存储阵列控制器的固件以及NVSRAM值(可选)。' 
+---
+= 下载存储阵列固件/NVSRAM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+命令`download storageArray firmware`可下载存储阵列控制器的固件以及NVSRAM值(可选)。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+如果您只想下载NVSRAM值、请使用`download storageArray NVSRAM`命令。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+download storageArray firmware [, NVSRAM ]
+pass:quotes[file="_filename_" [, "_NVSRAM-filename_"]]
+[downgrade=(TRUE | FALSE)
+activateNow=(TRUE | FALSE)
+healthCheckMelOverride=(TRUE | FALSE)
+healthCheckNeedsAttnOverride=(TRUE | FALSE)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`NVSRAM`
+ a| 
+此参数可在下载固件文件时下载具有NVSRAM值的文件。请勿在此参数中包含方括号。在`firmware`参数后添加逗号。
+
+
+
+ a| 
+`文件`
+ a| 
+此参数用于指定包含固件的文件路径和文件名。将文件路径和文件名用双引号（ "" ）括起来。例如：
+
+`file="C：\Program Files\CLI\dnld\safrm.dpl"`
+
+有效文件名的扩展名为`。lp`。
+
+
+
+ a| 
+`NVSRAM文件名`
+ a| 
+此参数用于指定包含NVSRAM值的文件路径和文件名。将NVSRAM文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\CLI\dnld\safrm.dpld"`有效文件名的扩展名为``。
+
+下载固件和NVSRAM时、请在文件名前面添加一个逗号。
+
+
+
+ a| 
+`d降级`
+ a| 
+[CAUTION]
+====
+*可能会损坏存储阵列配置*—错误下载先前版本的控制器固件或NVSRAM可能会导致控制器损坏或数据访问丢失。在使用此参数之前、请联系技术支持。
+
+====
+此设置允许加载先前版本的固件。默认值为`false`。如果要下载早期版本的固件、请将`downgrade`参数设置为`true`。
+
+[NOTE]
+====
+如果您仅下载NVSRAM、则此参数无效。
+
+====
+
+
+ a| 
+`activateNow`
+ a| 
+此设置将激活固件映像和NVSRAM映像。默认值为`true`。如果将`activateNow`参数设置为`false`、则必须运行`activate storageArray firmware`命令以稍后激活固件和NVSRAM。
+
+[NOTE]
+====
+如果您仅下载了NVSRAM、则此参数无效。
+
+====
+
+
+ a| 
+`healthCheckMelOverride`
+ a| 
+此设置将覆盖主要事件日志(MEL)的运行状况检查结果。Mel验证仍会进行、不会绕过它。如果MEL检查失败、您可以在运行命令时使用此参数来绕过失败。
+
+在进行任何下载之前、控制器都会检查事件日志、以确定是否发生了可能会阻止新控制器固件成功下载的事件。如果发生此类事件、控制器通常不会下载新固件。
+
+此参数强制控制器下载新固件。默认值为`false`。如果要强制控制器下载新的控制器固件、请将此值设置为`true`。
+
+
+
+ a| 
+`healthCheckNeedsAttnOverride`
+ a| 
+此设置将覆盖一组特定的需要引起注意的情况下的运行状况检查结果。对于仍发生的一组特定条件、需要引起注意的验证；不会绕过它。如果Needs Attention check失败、则可以在运行命令时使用此参数来绕过失败。
+
+在进行任何下载之前、控制器会检查一组特定的需要注意的情况、以确定是否发生了可能会阻止新控制器固件成功下载的故障。如果发生此类事件、控制器通常不会下载新固件。
+
+此参数强制控制器下载新固件。默认值为`false`。如果要强制控制器下载新的控制器固件、请将此值设置为`true`。
+
+|===
+
+
+== 最低固件级别
+
+5：00
+
+8.10添加了`* healthCheckMelOverrider*`参数。
+
+8.70添加了`* healthCheckNeedsAttnOverride*`参数。

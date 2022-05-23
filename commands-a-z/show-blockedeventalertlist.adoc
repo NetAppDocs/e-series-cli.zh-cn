@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/show-blockedeventalertlist.html 
+sidebar: sidebar 
+keywords: show, blocked, events 
+summary: 'show blockedEventAlertList命令可返回当前已被set blockEventAlert命令阻止的事件列表。此列表中的事件不会发送您使用警报终端和参数(即电子邮件、系统日志和陷阱通知)配置的任何通知。' 
+---
+= 显示阻止的事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show blockedEventAlertList`命令可返回当前已被`set blockEventAlert`命令阻止的事件列表。此列表中的事件不会发送您使用警报终端和参数(即电子邮件、系统日志和陷阱通知)配置的任何通知。
+
+
+
+== 支持的阵列
+
+此命令仅适用于E2700和E5600存储阵列。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令是一个smcli命令、而不是一个脚本命令。您必须从命令行运行此命令。您不能从存储管理软件中的脚本编辑器运行此命令。
+
+====
+
+
+== 语法
+
+[listing]
+----
+show blockedEventAlertList
+----
+
+
+== 示例
+
+输出中的每个被阻止事件都有一行、以十六进制格式列出事件类型、然后列出事件的问题描述。以下是输出示例：
+
+[listing]
+----
+Executing Script...
+0x280D Enclosure Failure
+0x282B Tray Redundancy Lost
+Script execution complete.
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+8.10

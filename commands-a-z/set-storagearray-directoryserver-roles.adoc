@@ -1,0 +1,103 @@
+---
+permalink: commands-a-z/set-storagearray-directoryserver-roles.html 
+sidebar: sidebar 
+keywords: set, storage, array, directory, server, role, map 
+summary: 使用set storageArray directoryServer roles命令可以为指定目录服务器定义角色映射。这些角色映射用于对尝试执行各种SMcli命令的用户进行身份验证。 
+---
+= 设置存储阵列目录服务器角色映射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray directoryServer roles`命令可以为指定目录服务器定义角色映射。这些角色映射用于对尝试执行各种SMcli命令的用户进行身份验证。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 您将需要什么
+
+可以映射以下角色：
+
+* *存储管理*—对存储对象(例如卷和磁盘池)具有完全读/写访问权限、但无法访问安全配置。
+* *安全管理*—访问访问管理、证书管理、审核日志管理中的安全配置、以及打开或关闭原有管理界面(符号)的功能。
+* *支持管理*—访问存储阵列上的所有硬件资源、故障数据、MEL事件和控制器固件升级。无法访问存储对象或安全配置。
+* *监控*—对所有存储对象的只读访问、但无法访问安全配置。
+
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+set storageArray directoryServer pass:quotes[["_domainId_"]]
+    groupDN=pass:quotes["_groupDistinguishedName_"] roles=pass:quotes[("_role1_"..."_roleN_")]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`d目录服务器`
+ a| 
+用于按要设置角色映射的域的ID指定此域。
+
+
+
+ a| 
+`groupDN`
+ a| 
+用于指定要添加到映射列表的组的可分辨名称(Distinguished Name、DN)。
+
+
+
+ a| 
+`角色`
+ a| 
+用于为定义的组中的用户指定一个或多个角色。如果输入多个角色、请使用空格分隔这些值。有效选项包括：
+
+* `storage.monitor`
+* `storage.admin`
+* `ssecurity.admin`
+* `support.admin`
+
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+                    groupDN="CN=ng-hsg-bc-madridsecurity,OU=Managed,
+                    OU=MyCompanyGroups,DC=hq,DC=mycompany,DC=com"
+                    roles=("storage.monitor" "security.admin" "storage.admin");"
+
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+                    groupDN="CN=ng-epg-engr-manageability,OU=Managed,
+                    OU=MyCompanyGroups,DC=hq,DC=mycompany,DC=com"
+                    roles=("support.admin");"
+
+SMcli completed successfully.
+----

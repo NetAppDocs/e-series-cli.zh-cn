@@ -1,0 +1,324 @@
+---
+permalink: commands-a-z/create-diskpool.html 
+sidebar: sidebar 
+keywords: create, disk pool 
+summary: create diskPool命令会根据指定参数创建新的磁盘池。 
+---
+= 创建磁盘池
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`create diskPool`命令可根据指定参数创建新的磁盘池。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+您可以通过输入要用于磁盘池的驱动器列表或驱动器类型来创建磁盘池。
+
+[NOTE]
+====
+如果输入驱动器列表、请确保所有驱动器具有相同的容量。如果驱动器的容量不同、则磁盘池中的每个驱动器都会报告容量等于最小驱动器。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+create diskPool
+(drives=pass:quotes[_(trayID1_],pass:quotes[[_drawerID1,_]]pass:quotes[_slotID1 ... trayIDN_],pass:quotes[[_drawerIDN,_]]pass:quotes[_slotIDN)_]|
+driveType=(fibre | SATA | SAS | NVMe4K))
+ userLabel=pass:quotes[_"diskPoolName"_]
+[driveCount=pass:quotes[_driveCountValue_]]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[warningThreshold=(pass:quotes[_warningThresholdValue_] | default)]
+[criticalThreshold=(pass:quotes[_criticalThresholdValue_] | default)]
+[criticalPriority=(highest|high|medium|low|lowest)]
+[backgroundPriority=(highest|high|medium|low|lowest)]
+[degradedPriority=(highest|high|medium|low|lowest)]
+[securityType=(none | capable | enabled )]
+[secureDrives=(fips | fde )]
+[driveMediaType=(hdd | ssd | allMedia | unknown)]
+[dataAssurance=(none|enabled)]
+[resourceProvisioningCapable=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`d` 驱动器
+ a| 
+要分配给要创建的磁盘池的驱动器。对于大容量驱动器托盘、请指定驱动器的托盘ID值、抽盒ID值和插槽ID值。对于低容量驱动器托盘、请指定驱动器的托盘ID值和插槽ID值。托盘ID值为`0`到`99`。抽盒ID值为`1`到`5`。
+
+所有插槽ID最大值均为24。插槽ID值从0或1开始、具体取决于托盘型号。与E2800和E5700控制器兼容的驱动器托盘的插槽ID编号从0开始。与E2700和E5600控制器兼容的驱动器托盘的插槽ID编号从1开始。
+
+将托盘ID值、抽盒ID值和插槽ID值括在方括号()中。
+
+
+
+ a| 
+`用户标签`
+ a| 
+要为新磁盘池指定的名称。将磁盘池名称用双引号("")括起来。
+
+
+
+ a| 
+`driveCount`
+ a| 
+`driveCount`参数可将磁盘池候选项限制为给定数字。使用此参数时、可以为HDD驱动器输入的最小值为11。对于SSD驱动器、您可以输入的最小值为8。
+
+[NOTE]
+====
+包含`driveCount`小于11的SSD池仅限RAID 1卷使用。
+
+====
+
+
+ a| 
+`warningThreshold`
+ a| 
+收到磁盘池接近全满警告警报时的存储容量百分比。使用整数值。例如、值60表示60%。为了获得最佳操作效果、此参数的值必须小于`criticalThreshold`参数的值。
+
+有效值为0到100。
+
+默认值为50。
+
+将此参数设置为0 (零)将禁用警告警报。
+
+如果将此值设置为`default`、则警告警报阈值由控制器固件决定。
+
+
+
+ a| 
+`关键阈值`
+ a| 
+收到磁盘池接近全满的严重警报时的存储容量百分比。使用整数值。例如、值70表示70%。为了获得最佳操作效果、此参数的值必须大于`warningThreshold`参数的值。
+
+有效值为0到100。
+
+默认值为85%。
+
+如果将此参数设置为0 (零)、则会同时禁用警告警报和严重警报。
+
+如果将此值设置为`default`、则严重警报阈值由控制器固件决定。
+
+
+
+ a| 
+`关键优先级`
+ a| 
+磁盘池上严重事件的重建操作的优先级。例如、在至少发生两个驱动器故障后重建磁盘池。
+
+有效值为`最高`、`高`、`m中`、`低`和`最低`。默认值为`Highest`。
+
+
+
+ a| 
+`BackgroundPriority`
+ a| 
+磁盘池上后台操作的优先级。
+
+有效值为`最高`、`高`、`m中`、`低`和`最低`。默认值为`low`。
+
+
+
+ a| 
+`degradedPriPriority`
+ a| 
+磁盘池上降级活动的优先级。例如、在一个驱动器发生故障后重建磁盘池。
+
+有效值为`最高`、`高`、`m中`、`低`和`最低`。默认值为`high`。
+
+
+
+ a| 
+`securityType`
+ a| 
+用于指定创建磁盘池时的安全级别的设置。磁盘池的所有候选卷都将具有指定的安全类型。
+
+这些设置有效：
+
+* `none`—卷候选项不安全。
+* `capable`—卷候选项能够设置安全、但尚未启用安全性。
+* `enabled`—卷候选项已启用安全性。
+
+
+默认值为 `none` 。
+
+
+
+ a| 
+`secureDrives`
+ a| 
+要在卷组中使用的安全驱动器的类型。这些设置有效：
+
+* `FIPS`—仅使用FIPS兼容驱动器。
+* `FDE`—使用FDE兼容的驱动器。
+
+
+[NOTE]
+====
+请将此参数与`securityType`参数结合使用。如果为`securityType`参数指定`none`、则会忽略`secureDrives`参数的值、因为非安全磁盘池不需要指定安全驱动器类型。
+
+====
+[NOTE]
+====
+除非您同时使用`driveCount`参数、否则会忽略此参数。如果要指定磁盘池要使用的驱动器、而不是提供计数、请根据所需的安全类型在选择列表中指定适当类型的驱动器。
+
+====
+
+
+ a| 
+`driveMediaType`
+ a| 
+要用于磁盘池的驱动器介质类型。
+
+如果存储阵列中有多种类型的驱动器介质、则必须使用此参数。
+
+这些驱动器介质有效：
+
+* `HDD`—如果有硬盘驱动器、请使用此选项。
+* `sSD`—如果有固态磁盘、请使用此选项。
+* `unknown`—如果您不确定驱动器托盘中的驱动器介质类型、请使用此选项
+* `allMedia`—如果要使用驱动器托盘中的所有类型的驱动器介质、请使用此选项
+
+
+默认值为`HDD`。
+
+[NOTE]
+====
+无论使用您选择的设置、控制器固件都不会在同一磁盘池中混用`HDD`和`sSD`驱动器介质。
+
+====
+
+
+ a| 
+`resourceProvisioningCapable`
+ a| 
+用于指定是否启用资源配置功能的设置。要禁用资源配置、请将此参数设置为`false`。默认值为`true`。
+
+|===
+
+
+== 注释：
+
+每个磁盘池名称必须唯一。您可以对用户标签使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。用户标签最多可以包含30个字符。
+
+如果任何可用的候选驱动器都无法满足您指定的参数、则此命令将失败。通常、与服务质量属性匹配的所有驱动器都将返回为首选驱动器。但是、如果指定驱动器列表、则作为候选项返回的某些可用驱动器可能与服务质量属性不匹配。
+
+如果不为可选参数指定值、则会分配默认值。
+
+
+
+== 驱动器
+
+使用`driveType`参数时、将使用该驱动器类型的所有未分配驱动器来创建磁盘池。如果要限制在磁盘池中通过`driveType`参数找到的驱动器数、可以使用`driveCount`参数指定驱动器数。只有在使用`driveType`参数时、才能使用`driveCount`参数。
+
+`d驱动器`参数既支持高容量驱动器托盘、也支持低容量驱动器托盘。高容量驱动器托盘具有用于容纳驱动器的抽盒。抽盒滑出驱动器托盘、以便可以访问驱动器。低容量驱动器托盘没有抽屉。对于大容量驱动器托盘、您必须指定驱动器托盘的标识符(ID)、抽盒ID以及驱动器所在插槽的ID。对于低容量驱动器托盘、只需指定驱动器托盘的ID以及驱动器所在插槽的ID即可。对于低容量驱动器托盘、确定驱动器位置的另一种方法是指定驱动器托盘的ID、将抽盒的ID设置为`0`、并指定驱动器所在插槽的ID。
+
+如果您输入了高容量驱动器托盘的规格、但驱动器托盘不可用、则存储管理软件将返回一条错误消息。
+
+
+
+== 磁盘池警报阈值
+
+每个磁盘池都有两个逐渐严重的警报级别、用于在磁盘池的存储容量接近全满时通知用户。警报阈值是磁盘池中已用容量占总可用容量的百分比。警报如下：
+
+* 警告—这是第一级警报。此级别表示磁盘池中的已用容量接近全满。达到警告警报阈值时、将生成需要注意的情况、并将事件发布到存储管理软件。警告阈值将被严重阈值所取代。默认警告阈值为50%。
+* 严重—这是最严重的警报级别。此级别表示磁盘池中的已用容量接近全满。达到严重警报的阈值时、将生成需要注意的情况、并将事件发布到存储管理软件。警告阈值将被严重阈值所取代。严重警报的默认阈值为85%。
+
+
+要生效、警告警报的值必须始终小于严重警报的值。如果警告警报的值与严重警报的值相同、则仅发送严重警报。
+
+
+
+== 磁盘池后台操作
+
+磁盘池支持以下后台操作：
+
+* 重建
+* 即时可用性格式(IAF)
+* 格式。
+* 动态容量扩展(DCE)
+* 动态卷扩展(DVE)(对于磁盘池、DVE实际上不是后台操作、但支持将DVE作为同步操作。)
+
+
+磁盘池不会对后台命令进行排队。您可以按顺序启动多个后台命令、但一次启动多个后台操作会延迟先前启动的命令的完成。支持的后台操作具有以下相对优先级：
+
+. 重建
+. 格式。
+. 系统
+. DCE
+
+
+
+
+== 安全类型
+
+使用`securityType`参数指定存储阵列的安全设置。
+
+要将`securityType`参数设置为`enabled`、必须先创建存储阵列安全密钥。使用`create storageArray securityKey`命令创建存储阵列安全密钥。这些命令与安全密钥相关：
+
+* `创建storageArray securityKey`
+* `导出storageArray securityKey`
+* `导入storageArray securityKey`
+* `set storageArray securityKey`
+* `启用VolumeGroup [volumeGroupName]安全性`
+* `启用diskPool [diskPoolName]安全性`
+
+
+
+
+== 保护驱动器
+
+支持安全的驱动器可以是全磁盘加密(Full Disk Encryption、FDE)驱动器、也可以是联邦信息处理标准(Federal Information Processing Standard、FIPS)驱动器。使用`secureDrives`参数指定要使用的安全驱动器类型。可以使用的值为`FIPS`和`FDE`。
+
+
+
+== 命令示例
+
+[listing]
+----
+create diskPool driveType=SAS userLabel="FIPS_Pool" driveCount=11 securityType=capable secureDrives=fips;
+----
+
+
+== 最低固件级别
+
+7.83.
+
+8.20添加了以下参数：
+
+* `纸架LossProtect`
+* `drawerLossProtect`
+
+
+8.25添加了`secureDrives`参数。
+
+8.63添加了`resourceProvisioningCapable`参数。
+
+11.73会更新`driveCount`参数。

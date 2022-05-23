@@ -1,0 +1,58 @@
+---
+permalink: commands-a-z/stop-volumecopy-target-source.html 
+sidebar: sidebar 
+keywords: stop, volume, copy 
+summary: stop volumeCopy target source命令可停止卷复制操作。此命令适用于Snapshot卷副本对。 
+---
+= 停止卷复制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`stop volumeCopy target source`命令可停止卷复制操作。此命令适用于Snapshot卷副本对。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[stop volumeCopy target [_targetName_]] source pass:quotes[[_sourceName_]]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`目标`
+ a| 
+要停止卷复制操作的目标卷的名称。将目标卷名称用方括号([])括起来。如果目标卷名称包含特殊字符或数字、则必须将目标卷名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`s源`
+ a| 
+要停止卷复制操作的源卷的名称。将源卷名称用方括号([])括起来。如果源卷名称包含特殊字符或数字、则必须将源卷名称用双引号("")括在方括号内。
+
+|===

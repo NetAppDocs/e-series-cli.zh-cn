@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/reset-storagearray-iscsistatsbaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, iscsi, baseline 
+summary: reset storageArray iscsiStatsBaseline命令可将存储阵列的iSCSI基线重置为0。 
+---
+= 重置存储阵列iSCSI基线
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`reset storageArray iscsiStatsBaseline`命令可将存储阵列的iSCSI基线重置为0。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+[NOTE]
+====
+此命令已弃用、并替换为 xref:reset-storagearray-hostportstatisticsbaseline.adoc[重置存储阵列主机端口统计信息基线] 命令：
+
+====
+
+
+== 语法
+
+[listing]
+----
+reset storageArray iscsiStatsBaseline
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+此命令会将存储阵列中两个控制器的基线重置为0。重置这两个控制器基线的目的是帮助确保控制器计数在控制器之间同步。如果一个控制器重置、但第二个控制器未重置、则主机会收到控制器不同步的通知。主机将通过随统计信息报告的时间戳来获得通知。
+
+
+
+== 最低固件级别
+
+7.10.
+
+8.41此命令已弃用。

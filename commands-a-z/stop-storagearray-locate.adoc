@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/stop-storagearray-locate.html 
+sidebar: sidebar 
+keywords: stop, storage, array, locate 
+summary: stop storageArray locate命令用于关闭存储阵列上由start storageArray locate命令打开的指示灯。 
+---
+= 停止存储阵列定位
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`stop storageArray locate`命令可关闭存储阵列上由`sStart storageArray locate`命令打开的指示灯。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+stop storageArray locate
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+6.10

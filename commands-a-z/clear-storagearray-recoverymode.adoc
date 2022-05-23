@@ -1,0 +1,60 @@
+---
+permalink: commands-a-z/clear-storagearray-recoverymode.html 
+sidebar: sidebar 
+keywords: clear, storage array, recovery, mode 
+summary: clear storageArray recoveryMode命令可强制存储阵列退出恢复模式。 
+---
+= 清除存储阵列恢复模式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`clear storageArray recoveryMode`命令可强制存储阵列退出恢复模式。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+clear storageArray recoveryMode
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+[NOTE]
+====
+在清除系统配置并提供有效的板载备份后、恢复模式将在每天开始操作期间进入。从备份位置还原系统配置或清除现有板载备份可退出此模式。在恢复模式有效期间、系统会引发需要注意的情况、并可从用户界面访问Recovery Guru。但是、在恢复模式下、系统配置为空。
+
+====
+[NOTE]
+====
+如果要将存储阵列恢复到先前的配置、则必须先从备份还原配置、然后再清除恢复模式。您必须执行验证检查或与技术支持人员核实、以确保还原成功。确定还原成功后、可以清除恢复模式。
+
+====
+
+
+== 最低固件级别
+
+7.83.

@@ -1,0 +1,89 @@
+---
+permalink: commands-a-z/download-controller-cacertificate.html 
+sidebar: sidebar 
+keywords: download, controller, certificate, command, install, root, intermediate, web, servers, validate, array, roles, context 
+summary: download controller caCertificate命令可在控制器的Web服务器上安装根/中间CA证书、以验证Web服务器签名的证书。 
+---
+= 安装根/中间CA证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`dload controller caCertificate`命令可在控制器的Web服务器上安装根/中间CA证书、以验证Web服务器签名的证书。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+对每个控制器执行此操作。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+download controller[(a|b)] caCertificate pass:quotes[[alias="_string_"]]
+         pass:quotes[file="_filename_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+用于指定要安装根/中间签名证书的控制器。有效的控制器标识符为a或b、其中a是插槽A中的控制器、b是插槽B中的控制器将控制器标识符括在方括号()中。
+
+
+
+ a| 
+`别名`
+ a| 
+用于指定代表根/中间证书的别名。此别名用于查找根/中间证书的相关信息或将其删除。别名与根/中间证书关联、并且必须是唯一的。
+
+
+
+ a| 
+`文件`
+ a| 
+用于指定包含根/中间CA证书的文件。可接受的扩展名包括.pem、.cer、.crt和.der。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "download controller[a] caCertificate alias="myAlias" file="C:\rootCA1.cer";"
+SMcli -n Array1 -c "download controller[b] caCertificate file="C:\rootCA1.cer";"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

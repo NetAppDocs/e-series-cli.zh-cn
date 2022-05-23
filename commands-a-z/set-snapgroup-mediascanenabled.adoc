@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/set-snapgroup-mediascanenabled.html 
+sidebar: sidebar 
+keywords: set, snapshot, group, media, scan 
+summary: set snapGroup mediaScan Enabled命令可对快照组运行介质扫描。 
+---
+= 设置Snapshot组介质扫描
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set snapGroup mediaScan Enabled`命令可对快照组运行介质扫描。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set snapGroup pass:quotes[["_snapGroupName_"]]
+mediaScanEnabled=(TRUE | FALSE)
+redundancyCheckEnabled=(TRUE | FALSE)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`snapGroup`
+ a| 
+要运行介质扫描的快照组的名称。将快照组名称用双引号("")括在方括号([])内。
+
+
+
+ a| 
+`media扫描 已启用`
+ a| 
+用于打开或关闭卷的介质扫描的设置。要打开介质扫描、请将此参数设置为`true`。要关闭介质扫描、请将此参数设置为`false`。(如果在存储阵列级别禁用了介质扫描、则此参数不起作用。)
+
+
+
+ a| 
+`re已启用dundancyCheckEnabled`
+ a| 
+在介质扫描期间打开或关闭冗余检查的设置。要启用冗余检查、请将此参数设置为`true`。要关闭冗余检查、请将此参数设置为`false`。
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
+
+
+
+== 最低固件级别
+
+7.83.

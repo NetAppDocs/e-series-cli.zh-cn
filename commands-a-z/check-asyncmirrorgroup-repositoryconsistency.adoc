@@ -1,0 +1,85 @@
+---
+permalink: commands-a-z/check-asyncmirrorgroup-repositoryconsistency.html 
+sidebar: sidebar 
+keywords: check, asynchronous mirror group, consistency 
+summary: check asyncMirrorGroup repositoryConsistency命令可根据对指定异步镜像组的底层存储库卷中数据的分析生成报告。 
+---
+= 检查异步镜像组一致性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`check asyncMirrorGroup repositoryConsistency`命令可根据对指定异步镜像组的底层存储库卷中数据的分析生成报告。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+check asyncMirrorGrouppass:quotes[[_asyncMirrorGroupName_]]
+repositoryConsistency localVolume=pass:quotes[[_localVolumeName"_]]
+file=pass:quotes[_"filePath"_]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`asyncMirrorGroup`
+ a| 
+要对其运行一致性检查的异步镜像组的名称。将异步镜像组名称用方括号([])括起来。如果异步镜像组名称包含特殊字符或仅包含数字、则还必须将名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`re正则性`
+ a| 
+指定检查异步镜像组的一致性。
+
+
+
+ a| 
+`localVolume`
+ a| 
+指定参与镜像关系的本地卷的名称。您可以指定镜像关系上的源卷或目标卷。如果本地卷名称包含特殊字符或仅包含数字、则还必须将名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`文件`
+ a| 
+要将一致性检查结果的报告保存到的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logs\repoConsistency.txt"`此参数必须最后显示在任何可选参数之后。
+
+|===
+
+
+== 注释：
+
+此命令生成的报告可供技术支持使用以分析问题。
+
+
+
+== 最低固件级别
+
+7.83.

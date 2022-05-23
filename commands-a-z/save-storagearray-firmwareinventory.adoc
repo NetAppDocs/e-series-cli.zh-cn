@@ -1,0 +1,74 @@
+---
+permalink: commands-a-z/save-storagearray-firmwareinventory.html 
+sidebar: sidebar 
+keywords: save, storage, array, firmware, inventory 
+summary: save storageArray firmwareInventory命令可将报告保存到存储阵列上当前运行的所有固件的文件中。 
+---
+= 保存存储阵列固件清单
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray firmwareInventory`命令可将报告保存到存储阵列上当前运行的所有固件的文件中。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+此报告列出了以下组件的固件：
+
+* 控制器
+* 驱动器
+* 抽盒(如果适用)
+* 环境服务模块(ESM)
+* 电源
+
+
+您可以使用此信息来帮助确定与存储阵列中的其他固件不匹配的过时固件或固件。您也可以将报告发送给技术支持以供进一步审核。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save storageArray firmwareInventory file=pass:quotes["_filename_"]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+要将固件清单保存到的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logs\fwinvitation.txt`
+
+包含固件清单的文件的默认名称为`firmware-inventory.txt`。此命令不会自动向保存的文件附加文件扩展名。输入文件名时、必须指定文件扩展名。
+
+|===
+
+
+== 最低固件级别
+
+7.70

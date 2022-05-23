@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/start-drive-erase.html 
+sidebar: sidebar 
+keywords: start, drive, erase 
+summary: start drive erase命令会擦除一个或多个驱动器中的所有数据。 
+---
+= 启动驱动器擦除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`s启动驱动器擦除`命令可擦除一个或多个驱动器中的所有数据。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 单个E2800、E5700、EF600或EF300阵列。它可以在E2700和E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+只有在要永久删除驱动器上的所有数据时、才运行此命令。如果驱动器已启用安全保护、则`sStart drive erase`命令选项将执行加密擦除、并将驱动器的安全属性重置回支持安全保护的状态。
+
+[NOTE]
+====
+擦除操作无法撤消。使用此命令时、请确保选择正确的驱动器。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+start drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]] | drivespass:quotes[[_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_]] erase
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`d`驱动器`或`d驱动器
+ a| 
+对于大容量驱动器托盘、请指定驱动器的托盘ID值、抽盒ID值和插槽ID值。对于低容量驱动器托盘、请指定驱动器的托盘ID值和插槽ID值。托盘ID值为`0`到`99`。抽盒ID值为`1`到`5`。
+
+所有插槽ID最大值均为24。插槽ID值从0或1开始、具体取决于托盘型号。与E2800和E5700控制器兼容的驱动器托盘的插槽ID编号从0开始。与E2700和E5600控制器兼容的驱动器托盘的插槽ID编号从1开始。
+
+将托盘ID值、抽盒ID值和插槽ID值括在方括号()中。
+
+[NOTE]
+====
+驱动器列表不能包含存储阵列中的所有驱动器、否则命令将被拒绝。
+
+====
+|===
+
+
+== 最低固件级别
+
+11.70.1

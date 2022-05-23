@@ -1,0 +1,72 @@
+---
+permalink: commands-a-z/delete-consistencygroup.html 
+sidebar: sidebar 
+keywords: delete, consistency, group 
+summary: delete ConsistencyGroup命令可删除快照一致性组。 
+---
+= 删除一致性组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`delete ConsistencyGroup`命令可删除快照一致性组。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+此命令的工作方式有两种：
+
+* 您可以同时删除一致性组和一致性组包含的存储库卷。
+* 您只能删除一致性组、并保持一致性组中的存储库卷完好无损。
+
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+delete consistencyGroup pass:quotes[[_"consistencyGroupName"_]]
+[deleteRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== 参数
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`ConsistencyGroup`
+ a| 
+要删除的快照一致性组的名称。将快照一致性组名称用双引号("")括在方括号([])内。
+
+
+
+ a| 
+`dDeleteRepositoryMembers`
+ a| 
+用于在存储库卷上删除或保留存储库卷的设置。要删除存储库卷、请将此参数设置为`true`。要保留存储库卷、请将此参数设置为`false`。默认设置为`false`。
+
+|===
+
+
+== 最低固件级别
+
+7.83.

@@ -1,0 +1,60 @@
+---
+permalink: commands-a-z/start-emailalert-test.html 
+sidebar: sidebar 
+keywords: test, email, alert, configuration 
+summary: 使用start emailAlert test命令可以通过发送电子邮件示例来测试警报配置。 
+---
+= 测试电子邮件警报配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sStart emailAlert test`命令、您可以通过发送电子邮件示例来测试警报配置。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+
+start emailAlert test
+----
+
+
+== Parameters
+
+无
+
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "start emailAlert test;"
+
+The sample alert message was successfully sent to the email addresses.
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

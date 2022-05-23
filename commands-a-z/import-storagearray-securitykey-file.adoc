@@ -1,0 +1,115 @@
+---
+permalink: commands-a-z/import-storagearray-securitykey-file.html 
+sidebar: sidebar 
+keywords: import, storage, array, security, file, command, unlock, disk, encryption, context, syntax, firmware level, role, context 
+summary: 'import storageArray securityKey file命令可解锁已从一个存储阵列移至另一个存储阵列的一个或多个全磁盘加密(Full Disk Encryption、FDE)驱动器。' 
+---
+= 导入存储阵列安全密钥
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`import storageArray securityKey file`命令可解锁已从一个存储阵列移至另一个存储阵列的一个或多个全磁盘加密(Full Disk Encryption、FDE)驱动器。
+
+
+
+== 支持的阵列
+
+如果启用了外部密钥管理、则此命令仅适用于E2800、E5700、EF600或EF300阵列。如果启用了内部密钥管理、则只要安装了所有SMcli软件包、命令适用场景 any individual storage array即可。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+只有具有匹配安全密钥的驱动器才会解锁。解除锁定后、将应用新存储阵列的安全密钥。
+
+[NOTE]
+====
+此命令可同时对内部和外部密钥管理进行适用场景。
+
+====
+
+
+== 语法
+
+[listing]
+----
+import storageArray securityKey file="fileName"
+passPhrase="passPhraseString"
+[forceOverwrite=(TRUE|FALSE)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+具有导入的FDE驱动器的原始安全密钥的文件路径和文件名。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[NOTE]
+====
+文件名的扩展名必须为`.slk`。
+
+====
+
+
+ a| 
+`密码短语`
+ a| 
+为安全密钥提供身份验证的字符串。
+
+
+
+ a| 
+`forceOverwrite`
+ a| 
+如果此参数设置为`true`、则在通常不允许导入时、例如一个控制器不存在或出现故障时、导入将强制覆盖FDE密钥。默认情况下、force overwrite参数设置为false。
+
+|===
+
+
+== 注释：
+
+控制器固件会创建一个锁定、用于限制对FDE驱动器的访问。FDE驱动器的状态称为"安全功能"。创建安全密钥时、状态将设置为安全已启用、从而限制对存储阵列中所有FDE驱动器的访问。
+
+您的密码短语必须满足以下条件：
+
+* 长度必须介于8到32个字符之间。
+* 必须至少包含一个大写字母。
+* 必须至少包含一个小写字母。
+* 必须至少包含一个数字。
+* 必须至少包含一个非字母数字字符、例如<>@+。
+
+
+[NOTE]
+====
+如果您的密码短语不符合这些条件、则会收到一条错误消息、并要求您重试此命令。
+
+====
+
+
+== 最低固件级别
+
+7.40
+
+8.40增加了导入外部存储阵列安全密钥的功能
+
+11.70.1增加了`forceOverwrite`参数。

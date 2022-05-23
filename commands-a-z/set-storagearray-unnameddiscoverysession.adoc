@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/set-storagearray-unnameddiscoverysession.html 
+sidebar: sidebar 
+keywords: set, storage, array, unnamed, discovery, session 
+summary: 使用set storageArray unnamedDiscoverySession命令可以使存储阵列参与未命名的发现会话。 
+---
+= 设置存储阵列未命名的发现会话
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray unnamedDiscoverySession`命令可以使存储阵列参与未命名的发现会话。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray unnamedDiscoverySession=(TRUE | FALSE)
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`unnamedDiscoverySession`
+ a| 
+此参数用于打开或关闭未命名的发现会话。将参数设置为`true`以打开未命名的发现会话。将参数设置为`false`以关闭未命名的发现会话。
+
+|===
+
+
+== 注释：
+
+发现是指启动程序确定可用目标的过程。发现会在启动/初始化时发生、也会在总线拓扑发生变化时发生、例如添加了额外的设备。
+
+未命名的发现会话是指在登录请求中未指定目标ID的情况下建立的发现会话。对于未命名的发现会话、目标既不能使用目标ID、也不能使用目标门户组ID。
+
+
+
+== 最低固件级别
+
+7.10.

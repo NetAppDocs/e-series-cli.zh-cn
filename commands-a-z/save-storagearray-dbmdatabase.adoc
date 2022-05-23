@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/save-storagearray-dbmdatabase.html 
+sidebar: sidebar 
+keywords: save, storage, array, dbm, database 
+summary: save storageArray dbmDatabase命令可将RAID配置数据或所有数据备份到主机上的文件中。您可以指定多个数据位置和控制器。 
+---
+= 保存存储阵列DBM数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sstorageArray dbmDatabase`命令可将RAID配置数据或所有数据备份到主机上的文件中。您可以指定多个数据位置和控制器。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+save storageArray dbmDatabase
+[sourceLocation=(disk | onboard)]
+[controller [(a|b)]]
+[contentType= all]
+ file="fileName"
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+要将数据库保存到的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logs\dbmdata.zip`
+
+此参数必须最后显示在任何可选参数之后。
+
+此命令将创建一个.zip文件、您无需指定文件扩展名。
+
+
+
+ a| 
+`sSourceLocation`
+ a| 
+此参数指定用于获取备份数据库信息的位置。
+
+* `disk`表示数据直接来自驱动器上的数据库
+* `板载`表示数据来自RPA内存位置
+
+
+默认位置为`板载`。
+
+
+
+ a| 
+`控制器`
+ a| 
+此参数指定在将`sSourceLocation`设置为`板载`时从其专用检索数据的控制器。如果未指定`controller`参数、则可以从任一控制器检索数据。
+
+有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器
+
+
+
+ a| 
+`contentType`
+ a| 
+此参数指定要检索的数据的内容类型。
+
+默认情况下、此参数设置为`All`、以便检索包括磁盘池配置数据在内的所有数据。
+
+|===
+
+
+== 注释：
+
+如果需要、可以将使用此命令保存到主机的数据还原到控制器。但是、要从主机上的文件还原数据、需要使用验证程序。
+
+
+
+== 最低固件级别
+
+7.75
+
+7.83添加了以下参数：
+
+* `sSourceLocation`
+* `控制器`
+* `contentType`
+

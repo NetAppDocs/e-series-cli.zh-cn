@@ -1,0 +1,160 @@
+---
+permalink: commands-a-z/set-consistencygroup-addcgmembervolume.html 
+sidebar: sidebar 
+keywords: add, member, consistency, group 
+summary: set ConsistencyGroup addCGMemberVolume命令可将新的基础卷作为成员添加到现有一致性组中。 
+---
+= 将成员添加到一致性组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set ConsistencyGroup addCGMemberVolume`命令可将新的基础卷作为成员添加到现有一致性组中。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+您可以为新一致性组成员指定现有存储库卷、也可以创建新的存储库卷。创建新的存储库卷时、您可以确定要使用存储库卷的现有卷组或现有磁盘池。
+
+
+
+== 用于现有存储库卷的语法
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup ["consistencyGroupName"]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes["_volumeGroupName_"]
+----
+
+
+== 在卷组中创建新存储库卷时使用的语法
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes[("_volumeGroupName_"] capacity=pass:quotes[_capacityValue_](KB|MB|GB|TB|bytes))
+----
+
+
+== 在磁盘池中创建新存储库卷时使用的语法
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes[("_diskPoolName_"] capacity=pass:quotes[_capacityValue_](KB|MB|GB|TB|bytes))
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`ConsistencyGroup`
+ a| 
+要添加新成员卷的一致性组的名称。新成员卷是快照操作的基础卷。将一致性组名称用双引号("")括在方括号([])内。
+
+
+
+ a| 
+`添加CGMemberVolume`
+ a| 
+要添加的基础卷的名称。将卷名称用双引号("")括起来。
+
+如果指定卷是现有存储库卷或现有快照卷、则此命令将失败。
+
+
+
+ a| 
+`repositoryVolume`
+ a| 
+此参数执行两个功能：
+
+* 在具有存储库卷的现有一致性组中、此参数用于标识存储库卷。
+* 创建新存储库卷时、此参数用于标识要在其中创建新存储库卷的卷组或磁盘池。
+
+
+将卷名称用双引号("")括起来。
+
+
+
+ a| 
+`容量`
+ a| 
+卷组或磁盘池中新存储库卷的大小。大小以字节、KB、MB、GB或TB为单位定义。
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
+
+一致性组是指作为快照源卷的一组基本卷。您可以在一致性组中收集基础卷、以便可以对每个基础卷执行相同的快照操作。在此命令的上下文中、术语_member_表示快照操作的基础卷。您可以通过批处理模式操作来操作与一致性组成员关联的快照映像、同时保持快照映像之间的一致性。
+
+每个成员卷都必须具有相应的存储库卷。您可以使用`repositoryVolume`参数定义成员卷与存储库卷之间的关系。`repositoryVolume`参数可以执行以下操作之一：
+
+* 确定连接到一致性组的现有存储库卷。
+* 确定要在其中创建新存储库卷的卷组或磁盘池。
+
+
+将成员添加到具有现有存储库的一致性组有两个用途：
+
+* 您可以通过运行不带`repositoryVolume`参数的命令来创建全新的存储库卷。在不使用`repositoryVolume`参数运行命令时、该命令会在卷组或磁盘池中创建一个新的存储库卷、以便存储所有其他存储库卷。以下是此命令用法的示例：
++
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+----
+* 如果现有存储库卷为空且与其他成员卷无关、则可以重复使用该存储库卷。如果要为存储库卷维护特定序列或关系、则可能需要执行此操作。要重复使用现有的空存储库卷、您需要知道存储库卷的名称。要确定存储库卷的名称、请使用`show allVolumes summary`命令。所有存储库卷名称的格式均为`repos_XXXX`、其中`XXXX`是存储管理软件生成的唯一标识符。以下是此命令用法的示例：
++
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+repositoryVolume="repos_0011"
+----
+
+
+您可以将存储库卷放置在所选的卷组或磁盘池中。您无需将存储库卷与其他存储库卷位于同一位置。要将存储库卷放置在您选择的卷组或磁盘池中、请使用`repositoryVolume`参数并确定卷组或磁盘池以及存储库卷的大小。以下是此命令用法的示例：
+
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+repositoryVolume=("12" capacity=2 GB)
+----
+在此示例中、"[.code]``12``"是现有卷组或现有磁盘池的名称。capacity参数用于定义存储库卷组所需的大小。
+
+在卷组或磁盘池中创建新存储库卷时、必须在卷组名称和容量或磁盘池名称和容量周围使用圆括号。
+
+
+
+== 最低固件级别
+
+7.83.

@@ -1,0 +1,56 @@
+---
+permalink: commands-a-z/set-storagearray-usersession.html 
+sidebar: sidebar 
+keywords: set, storage, array, user, session 
+summary: 使用set storageArray userSession命令可以在System Manager中设置超时、以便在指定时间后断开用户的非活动会话。 
+---
+= 设置存储阵列用户会话
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray userSession`命令可以在System Manager中设置超时、以便在指定时间后断开用户的非活动会话。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+使用此命令执行以下操作之一：
+
+* 为用户会话设置超时时间(以秒为单位)。最小超时值为900秒(15分钟)。
+* 将此值设置为0以关闭会话超时。
+
+
+
+
+== Parameters
+
+无
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray userSession sessionTimeout=n
+----
+
+
+== 最低固件级别
+
+8.41

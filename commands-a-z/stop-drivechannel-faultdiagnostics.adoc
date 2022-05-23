@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/stop-drivechannel-faultdiagnostics.html 
+sidebar: sidebar 
+keywords: stop, drive, channel, fault, isolation, diagnostics 
+summary: stop driveChannel faultDiagnostics命令用于停止驱动器通道故障隔离诊断、从而在启动驱动器通道故障隔离诊断命令完成之前停止该命令。 
+---
+= 停止驱动器通道故障隔离诊断
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`stop driveChannel faultDiagnostics`命令可停止驱动器通道故障隔离诊断、从而在完成之前停止`sStart drive channel fault isolation diagnostics`命令。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+对于固件版本8.10、已弃用`stop driveChannel faultDiagnostics`命令。
+
+====
+
+
+== 语法
+
+[listing]
+----
+stop driveChannel faultDiagnostics
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+使用`sStart driveChannel faultDiagnostics`命令和`sve driveChannel faultDiagnostics`命令以及`stop driveChannel faultDiagnostics`命令。要启动诊断测试并将诊断测试结果保存到文件中、需要使用这些命令。
+
+您也可以随时按`Ctrl+C`停止`sStart driveChannel faultDiagnostics`命令。
+
+
+
+== 最低固件级别
+
+7.15

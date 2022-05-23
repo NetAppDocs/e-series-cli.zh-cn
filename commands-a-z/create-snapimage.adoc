@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/create-snapimage.html 
+sidebar: sidebar 
+keywords: create, snapshot, image 
+summary: create SnapImage命令可在一个或多个现有快照组中创建新的快照映像。 
+---
+= 创建快照映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`create SnapImage`命令可在一个或多个现有快照组中创建新的快照映像。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+在创建快照映像之前、必须先至少有一个快照组、您可以将该快照映像放置到该快照组中。要创建快照组、请使用`create snapGroup`命令。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+create snapImage (snapGroup=pass:quotes[_"snapGroupName" |
+snapGroups=("_snapGroupName1"... "snapGroupNamen_"))]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`snapGroup`
+ a| 
+要包含快照映像的快照组的名称。将快照组的名称用双引号("")括起来。
+
+
+
+ a| 
+`snapGroups`
+ a| 
+要包含快照映像的多个快照组的名称。使用以下规则输入快照组的名称：
+
+* 将所有名称用圆括号括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
+
+快照映像是关联_BASE卷内容的逻辑时间点映像。此时将立即创建快照映像、并记录基础卷当时的状态。每个快照映像都是在一个_snapshot group_的上下文中创建的。快照组是关联基础卷的一系列快照映像。一个快照组具有一个_repository volume"_、用于保存快照映像中的所有数据。快照组中的快照映像具有特定顺序。通过快照映像的特定顺序、您可以管理快照映像、例如将特定快照映像还原到基础卷或删除不再需要的快照映像。
+
+创建一致性组的快照映像后、一致性组中每个成员卷的快照映像即为一个。
+
+
+
+== 最低固件级别
+
+7.83.

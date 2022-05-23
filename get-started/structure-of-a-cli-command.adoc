@@ -1,0 +1,35 @@
+---
+permalink: get-started/structure-of-a-cli-command.html 
+sidebar: sidebar 
+keywords: structure, cli, commands 
+summary: CLI命令采用命令包装器的形式、并在包装器中嵌入一些元素。 
+---
+= CLI命令的结构
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+CLI命令采用命令包装器的形式、并在包装器中嵌入一些元素。CLI命令由以下元素组成：
+
+* 使用术语`SMcli`标识的命令包装程序
+* 存储阵列标识符
+* 用于定义要执行的操作的终端
+* 脚本命令
+
+
+CLI命令包装程序是一个shell、用于标识存储阵列控制器、嵌入操作终端、嵌入脚本命令并将这些值传递到脚本引擎。
+
+所有CLI命令的结构均如下：
+
+[listing]
+----
+SMcli *storageArray terminal script-commands*;
+----
+* `sMcli`调用命令行界面。
+* `storageArray`是存储阵列的名称或IP地址。
+* `terminal`是一个命令行界面值、用于定义环境和命令用途。
+* `sscript-commands`是一个或多个脚本命令或包含脚本命令的脚本文件的名称。(脚本命令用于配置和管理存储阵列。)
+
+
+如果输入的`SMcli`字符串不完整或不准确、并且语法、参数名称、选项或终端不正确、则脚本引擎将返回使用情况信息。

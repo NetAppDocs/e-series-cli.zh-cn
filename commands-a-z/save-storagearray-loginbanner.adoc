@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/save-storagearray-loginbanner.html 
+sidebar: sidebar 
+keywords: save, storage, array, login, banner 
+summary: 使用save storageArray loginbanner命令可以将登录横幅保存到本地计算机。横幅文本可以包含建议通知和同意消息、这些通知和同意消息会在用户建立会话之前提供给用户。 
+---
+= 保存存储阵列登录横幅
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`save storageArray loginbanner`命令可以将登录横幅保存到本地计算机。横幅文本可以包含建议通知和同意消息、这些通知和同意消息会在用户建立会话之前提供给用户。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+具有任何角色的用户均可执行此命令。
+
+
+
+== 语法
+
+[listing]
+----
+save storageArray loginBanner file="file_name"
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+登录横幅文件的名称。
+
+|===
+
+
+== 最低固件级别
+
+8.41

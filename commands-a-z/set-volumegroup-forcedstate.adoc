@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/set-volumegroup-forcedstate.html 
+sidebar: sidebar 
+keywords: set, volume, group, forced, state 
+summary: set VolumeGroup forcedState命令可将卷组移至强制状态。 
+---
+= 设置卷组强制状态
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set VolumeGroup forcedState`命令可将卷组移至强制状态。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+如果`sStart VolumeGroup import`命令未将卷组移动到已导入状态、或者导入操作因硬件错误而不起作用、请使用此命令。在强制状态下、可以导入卷组、然后确定硬件错误。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set volumeGroup pass:quotes[[_volumeGroupName_]] forcedState
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`VolumeGroup`
+ a| 
+要置于强制状态的卷组的名称。将卷组名称用方括号([])括起来。
+
+|===
+
+
+== 注释：
+
+您可以将构成卷组的驱动器从一个存储阵列移动到另一个存储阵列。CLI提供了三个命令、用于移动驱动器。命令包括`sStart VolumeGroup export`、`sStart VolumeGroup import`和`set VolumeGroup forcedState`。
+
+在强制状态下、您可以对卷组执行导入操作。
+
+
+
+== 最低固件级别
+
+7.10.

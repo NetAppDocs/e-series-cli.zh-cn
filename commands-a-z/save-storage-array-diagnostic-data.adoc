@@ -1,0 +1,88 @@
+---
+permalink: commands-a-z/save-storage-array-diagnostic-data.html 
+sidebar: sidebar 
+keywords: save, storage, array, diagnostic, data 
+summary: 'save storageArray diagnosticData命令可将控制器或环境服务模块(ESM)中的存储阵列诊断数据保存到文件中。' 
+---
+= 保存存储阵列诊断数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sstorageArray diagnosticData`命令可将存储阵列诊断数据从控制器或环境服务模块(ESM)保存到文件中。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+您可以稍后查看文件内容。您也可以将此文件发送给技术支持以供进一步查看。
+
+保存诊断数据后、您可以重置包含诊断数据的NVSRAM注册表、以便覆盖旧数据。使用`reset storageArray diagnosticData`命令重置诊断数据注册表。
+
+[NOTE]
+====
+请仅在技术支持的协助下运行此命令。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save storageArray diagnosticData [(controller | tray)]
+file=pass:quotes["_filename_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`diIn可 知数据`
+ a| 
+使用此参数可以从控制器或ESM下载诊断数据。
+
+
+
+ a| 
+`文件`
+ a| 
+要将存储阵列诊断数据保存到的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logs\sadiag.zip`
+
+此命令会自动将数据保存到压缩文件中；但是、此命令不会自动将文件扩展名附加到已保存的文件。输入文件名时、必须指定`.zip`扩展名。
+
+|===
+
+
+== 注释：
+
+在7.77之前的版本中、用户选项为`ESM`而不是`tray`。从7.77开始、`托盘`更换`ESM`。仍然支持使用`ESM`、但为了与未来版本最佳兼容、请将`ESM`更换为`托盘`。
+
+
+
+== 最低固件级别
+
+6.16
+
+7.77 `托盘`更换`ESM`。

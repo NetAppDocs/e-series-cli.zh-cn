@@ -1,0 +1,68 @@
+---
+permalink: commands-a-z/set-controller-service-action-allowed-indicator.html 
+sidebar: sidebar 
+keywords: set, controller, service, action, allowed, indicator 
+summary: set controller命令用于打开或关闭控制器托盘或控制器驱动器托盘中的控制器上的允许服务操作指示灯 
+---
+= 设置允许控制器维护操作指示符
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set controller`命令可以打开或关闭控制器托盘或控制器驱动器托盘中控制器上的允许服务操作指示灯
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700和E5600阵列。
+
+
+
+== 环境
+
+如果存储阵列不支持允许服务操作指示灯功能、则此命令将返回错误。如果存储阵列支持命令、但无法打开或关闭指示灯、则此命令将返回错误。(要打开或关闭电源风扇箱或互连电池箱上的"Service Action Allowedindicator"指示灯、请使用`set tray serviceAllowedindicator`命令。)
+
+[NOTE]
+====
+此命令仅适用于E2700、E5600或EF560 (以及其他前几代E系列或EF系列控制器)。E2800控制器托盘具有一个警示指示灯、只有在1)发生故障时、该指示灯才会亮起；2)可以安全地卸下出现故障的组件。
+
+====
+
+
+== 语法
+
+[listing]
+----
+set controller [(a| b)]
+serviceAllowedIndicator=(on | off)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+具有允许服务操作指示灯的控制器、您要打开或关闭此指示灯。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器将控制器标识符括在方括号()中。如果不指定控制器、则控制器固件将返回语法错误。
+
+
+
+ a| 
+`s服务Allowed指标`
+ a| 
+用于打开或关闭允许服务操作指示灯的设置。要打开允许服务操作指示灯、请将此参数设置为`on`。要关闭允许服务操作指示灯、请将此参数设置为`off`。
+
+|===
+
+
+== 最低固件级别
+
+6.14

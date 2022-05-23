@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/start-volumegroup-defragment.html 
+sidebar: sidebar 
+keywords: start, volume, group, defragment 
+summary: start VolumeGroup defragment命令可对指定的卷组启动碎片整理操作。 
+---
+= 启动卷组碎片整理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstart VolumeGroup defragment`命令可对指定的卷组启动碎片整理操作。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+对卷组执行碎片整理将启动一个长时间运行的操作、您无法停止该操作。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup [_volumeGroupName_]] defragment
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`VolumeGroup`
+ a| 
+要进行碎片整理的卷组的名称。将卷组名称用方括号([])括起来。
+
+|===
+
+
+== 注释：
+
+主机I/O错误可能会导致卷组包含32个以上的卷。此操作还可能导致内部控制器重新启动、因为在设置卷组定义之前、超时期限已结束。如果您遇到此问题描述 、请暂停主机I/O操作、然后重试此命令。
+
+
+
+== 最低固件级别
+
+6.10

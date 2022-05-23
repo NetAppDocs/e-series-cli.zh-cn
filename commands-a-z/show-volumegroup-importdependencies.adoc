@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/show-volumegroup-importdependencies.html 
+sidebar: sidebar 
+keywords: show, volume, group, import, dependencies 
+summary: show VolumeGroup importDependences命令可显示卷组中要从一个存储阵列移动到另一个存储阵列的驱动器的依赖关系列表。 
+---
+= 显示卷组导入依赖关系
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show VolumeGroup importDependences`命令可显示卷组中要从一个存储阵列移动到另一个存储阵列的驱动器的依赖关系列表。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[show volumeGroup [_volumeGroupName_]] importDependencies
+[cancelImport=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`VolumeGroup`
+ a| 
+要显示其导入依赖关系的卷组的名称。将卷组名称用方括号([])括起来。
+
+
+
+ a| 
+`cancelImport`
+ a| 
+读取卷组依赖关系后将驱动器转回到关闭状态的设置。要关闭驱动器、请将此参数设置为`true`。要使驱动器保持旋转状态、请将此参数设置为`false`。
+
+|===
+
+
+== 注释：
+
+此命令将返回特定卷组的依赖关系、该组必须处于导出状态或强制状态。如果决定保留列出的依赖关系、则可以强制使用`cancelImport`参数将驱动器重新旋转。
+
+在运行`sStart VolumeGroup import`命令之前、必须运行`show VolumeGroup importDependencies`命令。
+
+
+
+== 最低固件级别
+
+7.10.

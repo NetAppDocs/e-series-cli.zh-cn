@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/show-storagearray-dbmdatabase.html 
+sidebar: sidebar 
+keywords: show, storage, array, dbm, database 
+summary: show storageArray dbmDatabase命令可检索并显示存储阵列的板载备份位置的元数据。如果存在多个备份位置、则会显示每个位置的元数据。 
+---
+= 显示存储阵列DBM数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray dbmDatabase`命令可检索并显示存储阵列的板载备份位置的元数据。如果存在多个备份位置、则会显示每个位置的元数据。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 语法
+
+[listing]
+----
+show storageArray dbmDatabase
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+此命令将以类似于此示例的格式返回配置数据库信息。
+
+`配置数据库MetadataLast主机备份：<日期戳>`
+
+[cols="7*"]
+|===
+| 控制 | 位置 | 修订版 | ID | 生成编号 | 状态 | 访问模式 
+
+
+ a| 
+答
+ a| 
+缓存
+ a| 
+x.y
+ a| 
+999999
+ a| 
+999999
+ a| 
+读写
+ a| 
+最佳
+
+
+
+ a| 
+B
+ a| 
+缓存
+ a| 
+x.y
+ a| 
+999999
+ a| 
+999999
+ a| 
+读写
+ a| 
+最佳
+
+
+
+ a| 
+不适用
+ a| 
+Disk
+ a| 
+x.y
+ a| 
+999999
+ a| 
+999999
+ a| 
+读写
+ a| 
+最佳
+
+|===
+
+
+== 最低固件级别
+
+7.83.

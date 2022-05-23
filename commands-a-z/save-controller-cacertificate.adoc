@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/save-controller-cacertificate.html 
+sidebar: sidebar 
+keywords: retrieve, installed, ca, certificates 
+summary: save controller caCertificate命令可从指定控制器检索已安装的CA证书。检索到的证书中包括从控制器的Web服务器请求的任何CA证书。 
+---
+= 检索已安装的CA证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`scontroller caCertificate`命令可从指定控制器检索已安装的CA证书。检索到的证书中包括从控制器的Web服务器请求的任何CA证书。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+save controller[(a|b)] caCertificate [all | aliases=pass:quotes[("_alias1_" ... "_aliasN_")]]
+ path="fileLocation"
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+用于指定要检索根/中间证书的控制器。有效的控制器标识符为a或b、其中a是插槽A中的控制器、b是插槽B中的控制器将控制器标识符括在方括号()中。
+
+
+
+ a| 
+`全部`
+ a| 
+用于指定检索为解析签名证书链而导入的所有证书。用户安装的证书包括密钥管理证书。
+
+
+
+ a| 
+`别名`
+ a| 
+用于指定用户安装的根/中间证书以按别名检索。将所有别名括在圆括号中。如果输入多个别名、请使用空格将其分隔开。
+
+
+
+ a| 
+`路径`
+ a| 
+用于指定保存控制器`的根/中间证书的本地位置。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save controller[a] caCertificate all path="C:\";"
+
+SMcli -n Array1 -c "save controller[b] caCertificate aliases=("myAlias" "anotherAlias") path="C:\";"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

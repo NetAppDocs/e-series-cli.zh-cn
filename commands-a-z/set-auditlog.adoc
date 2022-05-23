@@ -1,0 +1,90 @@
+---
+permalink: commands-a-z/set-auditlog.html 
+sidebar: sidebar 
+keywords: set, audit log 
+summary: set audiitLog命令用于配置审核日志设置。 
+---
+= 设置审核日志设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set audiitLog`命令可配置审核日志设置。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+set auditLog (logLevel={all | writeOnly} |
+    fullPolicy={overwrite | preventSystemAccess} |
+    pass:quotes[maxRecords=_n_] | pass:quotes[warningThreshold=_n_)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`logLevel`
+ a| 
+用于指定日志记录级别。有效选项包括：`All`和`WriteOnly`。默认值为`WriteOnly`。
+
+
+
+ a| 
+`完整策略`
+ a| 
+用于在日志已满时指定策略。有效选项包括：`overwrite`和`prev SystemAccess`。
+
+
+
+ a| 
+`maxRecords`
+ a| 
+允许用户指定要存储的最大记录数、其中`n`是从30000开始到50000结束的整数。
+
+
+
+ a| 
+`warningThreshold`
+ a| 
+用于指定在将完整策略设置为`pre到SystemAccess`时发送警告警报以指示审核日志接近全满的百分比。使用介于0到100之间的整数值。如果将此参数设置为0 (零)、则会禁用警告警报。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set auditLog logLevel=writeOnly fullPolicy=preventSystemAccess maxRecords=40000 warningThreshold=90;"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

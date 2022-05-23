@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/set-drivechannel.html 
+sidebar: sidebar 
+keywords: set, drive, channel, status 
+summary: set driveChannel命令用于定义驱动器通道的执行方式。 
+---
+= 设置驱动器通道状态
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set driveChannel`命令用于定义驱动器通道的执行方式。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+set driveChannel [(1 | 2 | 3 | 4 | 5 | 6 | 7 | 8)]
+status=(optimal | degraded)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`d驱动器通道`
+ a| 
+要设置其状态的驱动器通道的标识符编号。有效驱动器通道值为`1`、`2`、`3`、`4`、`5`、 `6`、`7`或`8`。将驱动器通道编号括在方括号([])中。
+
+
+
+ a| 
+`s状态`
+ a| 
+驱动器通道的状况。您可以将驱动器通道状态设置为`Optimal`或`degraded`。
+
+|===
+
+
+== 注释：
+
+使用`optimal`选项将已降级的驱动器通道移回最佳状态。如果驱动器通道出现问题、并且存储阵列需要更多时间进行数据传输、请使用`degraded`选项。
+
+
+
+== 最低固件级别
+
+6.10
+
+7.15将更新添加到驱动器通道标识符。

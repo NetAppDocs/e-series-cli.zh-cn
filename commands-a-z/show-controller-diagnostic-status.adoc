@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/show-controller-diagnostic-status.html 
+sidebar: sidebar 
+keywords: show, controller, diagnostic, status 
+summary: show controller命令可返回由start controller diagnostic命令启动的控制器诊断的状态。 
+---
+= 显示控制器诊断状态
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show controller`命令可返回由`sStart controller diagnostic`命令启动的控制器诊断的状态。
+
+如果诊断已完成、则会显示诊断测试的整个结果。如果诊断测试尚未完成、则仅显示已完成的测试的结果。测试结果显示在终端上、您也可以将结果写入文件。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show controller [(a| b)] diagnosticStatus pass:quotes[[file=_filename_]]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+用于返回有关存储阵列中特定控制器的信息的设置。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器将控制器标识符括在方括号()中。
+
+
+
+ a| 
+`文件`
+ a| 
+包含诊断测试结果的文件的名称。此命令不会自动将文件扩展名附加到文件名。输入文件名时、必须添加扩展名。
+
+|===
+
+
+== 最低固件级别
+
+7.70增加了控制器诊断状态功能。

@@ -1,0 +1,49 @@
+---
+permalink: commands-a-z/add-certificate-from-array.html 
+sidebar: sidebar 
+keywords: add certificate array, supported, syntax, parameters, minimum firmware level 
+summary: 使用Add certificate from array命令可以从阵列获取证书并将其添加到CLI软件包的信任存储中。添加的证书仅供命令行界面软件包使用。 
+---
+= 从阵列添加证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`Add certificate from array`命令、您可以从阵列获取证书并将其添加到命令行界面软件包的信任存储中。添加的证书仅供命令行界面软件包使用。
+
+
+
+== 支持的阵列
+
+此命令用于对EF600和EF300存储阵列执行适用场景。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[_ipAddress1 ipAddress2_  trust localCertificate]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`IP地址`
+ a| 
+用于指定存储阵列的IP地址。
+
+|===
+
+
+== 最低固件级别
+
+8.60

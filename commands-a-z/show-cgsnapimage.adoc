@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/show-cgsnapimage.html 
+sidebar: sidebar 
+keywords: show, consistency, group, snapshot, image 
+summary: show CGSnapImage命令可显示一个或多个快照一致性组中的一个或多个快照映像。 
+---
+= 显示一致性组快照映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`s如何使用CGSnapImage`命令可显示一个或多个快照一致性组中的一个或多个快照映像。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show ((CGSnapImage pass:quotes[[(_CGSnapImageName_ | _CGSnapImageSequenceNumber_)]]) |
+(CGSnapImages pass:quotes[[(_CGSnapImageNumber1_ ... _CGSnapImageNumbern_ |
+_CGSnapImageSequenceNumber1_ ... _CGSnapImageSequenceNumbern_)]]) |
+allCGSnapImages
+[summary]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`CGSnapImage`或`CGSnapImages`
+ a| 
+一致性组中快照映像的名称。快照映像的名称由两部分组成：
+
+* 一致性组的名称
+* 一致性组中快照映像的标识符。
+
+
+快照映像的标识符可以是以下项之一：
+
+* 一个整数值、即一致性组中快照的序列号。
+* `最新`—要显示在一致性组中创建的最新快照映像、请使用此选项。
+* `oldest`—如果要显示在一致性组中创建的最早快照映像、请使用此选项。
+
+
+将快照映像名称用双引号("")括在方括号([])内。
+
+您可以输入多个快照映像名称或序列号。将所有快照映像名称用一组双引号("")括在方括号([])内。使用空格分隔每个快照映像名称。
+
+
+
+ a| 
+`所有CGSnapImages`
+ a| 
+用于从一致性组返回所有快照映像的设置。
+
+
+
+ a| 
+`summary`
+ a| 
+用于返回有关存储阵列中所有快照映像的简明信息列表的设置。
+
+|===
+
+
+== 注释：
+
+快照映像的名称包含两个部分、并用冒号(：)分隔：
+
+* 快照一致性组的标识符
+* 快照映像的标识符
+
+
+例如、如果要在名为snapCGroup1的快照一致性组中显示Snapshot映像12345、则应使用以下命令：
+
+[listing]
+----
+show CGsnapImage ["snapCGroup1:12345"];
+----
+要显示名为snapCGroup1的快照一致性组中的最新快照映像、应使用以下命令：
+
+[listing]
+----
+show CGsnapImage ["snapCGroup1:newest"];
+----
+要显示名称分别为snapCGroup1、snapCGroup2和snapCGroup3的多个快照一致性组中的快照映像、应使用以下命令：
+
+[listing]
+----
+show CGsnapImages ["snapCGroup1:12345 snapCGroup2:newest snapCGroup3:oldest"];
+----
+请注意、在这些示例中、快照一致性组名称与快照映像标识符之间用冒号(：)分隔。
+
+
+
+== 最低固件级别
+
+7.83.

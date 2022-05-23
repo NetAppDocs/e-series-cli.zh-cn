@@ -1,0 +1,135 @@
+---
+permalink: commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: save, asynchronous, mirror, group, statistics 
+summary: save storageArray arvmStats asyncMirrorGroup命令可将同步统计信息保存到异步镜像组中一个或多个成员卷的文件中。 
+---
+= 保存异步镜像组统计信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray arvmStats asyncMirrorGroup`命令可将同步统计信息保存到异步镜像组中一个或多个成员卷的文件中。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+收集的统计信息仅适用于本地存储阵列上主角色的异步镜像组成员卷。
+
+同步过程中会收集一组数据、可用于评估镜像配置的运行状况。此数据将作为一组_samples_进行收集。在同步过程开始时会创建一个示例、并在同步过程进行期间定期更新。
+
+样本将收集数据、直到同步过程完成或同步过程发生中断为止、例如卷所有权传输或`read-write`错误。解决同步过程中断问题(例如、卷将传输到备用控制器)后、系统将创建一个新样本、并在同步过程继续进行时进行更新。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save storageArray arvmStats asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
+arvmStats file=pass:quotes["_filename_"]
+"
+[volume=pass:quotes["_volumeName_"]]
+[sampleType=(all | mostRecent | longestSyncTime | errors)]
+[recordLimit=(1-90)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`asyncMirrorGroup`
+ a| 
+要保存同步统计信息的异步镜像组的名称。将异步镜像组名称用方括号([])括起来。如果异步镜像组名称包含特殊字符或数字、则必须将异步镜像组名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`文件`
+ a| 
+要将同步统计信息保存到的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logs\asynchdata.csv`
+
+此命令不会自动向保存的文件附加文件扩展名。您可以使用任何文件名、但必须使用`.csv`扩展名。
+
+
+
+ a| 
+`卷`
+ a| 
+此参数是可选的。要检索同步统计信息的异步镜像组中特定成员卷的名称。如果未指定卷、则会保存异步镜像组中每个成员卷的统计信息。
+
+如果为异步镜像组中的多个卷收集统计信息、则所有数据都将写入同一文件。
+
+将卷名称用双引号("")括起来。
+
+
+
+ a| 
+`sampleType`
+ a| 
+此参数是可选的。`sampleType`的默认值为`all`。
+
+* `所有`—所有三种样本类型的数据都会收集并写入到同一文件中。
+* `mostRecent`—为最近50个重新同步示例记录统计信息。
+* `longestSyncTime`—为最近20个最长的重新同步示例收集统计信息。
+* `errors`—为最近20个失败的重新同步示例记录统计信息。这些示例包括故障代码。
+
+
+
+
+ a| 
+`recordLimit`
+ a| 
+此参数是可选的。记录限制的默认值为`no limit`。`recordLimit`必须大于0且小于或等于90。
+
+|===
+
+
+== 注释：
+
+系统会为主角色中的镜像卷捕获统计信息。收集的统计信息包括以下数据：
+
+* 同步开始时间
+* 同步类型(手动或定期)
+* 同步持续时间
+* 发送的字节数
+* 最长写入时间(对于单次写入)
+* 最短写入时间(对于单次写入)
+* 最小同步数据速率
+* 最大同步数据速率
+* 总写入时间
+* 存储库利用率(%)
+* 恢复点期限
+
+
+在初始同步期间、统计信息样本大约每15分钟捕获一次。
+
+同步统计信息包含在支持包中。
+
+
+
+== 最低固件级别
+
+7.84.接受采取后续行动

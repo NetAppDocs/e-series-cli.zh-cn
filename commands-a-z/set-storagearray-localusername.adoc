@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/set-storagearray-localusername.html 
+sidebar: sidebar 
+keywords: set, storage, array, local, user, password, symbol 
+summary: 使用set storageArray localUsername命令和set storageArray symbolE命令可以为特定角色设置本地用户名密码或符号密码。 
+---
+= 设置存储阵列本地用户密码或符号密码
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray localUsername`命令和`set storageArray symbols`命令、您可以为特定角色设置本地用户名密码或符号密码。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员、支持管理员、安全管理员或存储监控角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set storageArray (localUsername=pass:quotes[{ _admin_ | _storage_ | _security_ | _support_ | _monitor_}]
+| symbol [userRole={admin | monitor}])
+password="string" adminPassword="string"
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`localUsername`
+ a| 
+用于指定要更改密码的用户。有效选项包括：`admin`、`storage`、`support`、`monitor`和`sSecurity`。
+
+
+
+ a| 
+`symbol`
+ a| 
+用于更改符号密码。有效选项包括：`admin`和`monitor`。
+
+[NOTE]
+====
+这是已弃用的`set storageArray password`命令的替换命令。
+
+====
+
+
+ a| 
+`密码`
+ a| 
+用于指定角色的密码。
+
+
+
+ a| 
+`adminpassword`
+ a| 
+用于指定管理员密码、设置任何新密码都需要此密码。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray localUsername=storage password="newPassword" adminPassword="theAdminPassword";"
+SMcli -n Array1 -c "set storageArray localUsername=admin password="newAdminPassword" adminPassword="theAdminPassword";"
+SMcli -n Array1 -c "set storageArray symbol userRole=admin password="newSymbolPassword" adminPassword="theAdminPassword";"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40添加命令。

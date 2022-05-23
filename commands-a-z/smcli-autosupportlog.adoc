@@ -1,0 +1,119 @@
+---
+permalink: commands-a-z/smcli-autosupportlog.html 
+sidebar: sidebar 
+keywords: capture, view, autosupport, log 
+summary: 使用smcli -autosupportLog命令可以查看AutoSupport 日志文件。此文件提供有关状态、传输活动历史记录以及在传送AutoSupport 消息期间遇到的任何错误的信息。此日志可用于所有支持AutoSupport和支持AutoSupport的存储阵列。 
+---
+= 捕获或查看AutoSupport 日志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`SMcli -autosupportLog`命令可以查看AutoSupport 日志文件。此文件提供有关状态、传输活动历史记录以及在传送AutoSupport 消息期间遇到的任何错误的信息。此日志可用于所有支持AutoSupport和支持AutoSupport的存储阵列。
+
+
+
+== 支持的阵列
+
+此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E2800或E5700存储阵列。
+
+
+
+== 环境
+
+使用此命令可以查看两种类型的日志：
+
+* Current log—查看此时捕获的日志。
+* 归档日志—从归档文件查看日志。
+
+
+[NOTE]
+====
+此命令是一个smcli命令、而不是一个脚本命令。您必须从命令行运行此命令。您不能从存储管理软件中的脚本编辑器运行此命令。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+SMcli -autoSupportLog pass:quotes[(all|-n "_storageArrayName_" | -w "_wwID_")]
+pass:quotes[inputArchive=_n_] pass:quotes[outputLog=_filename_]
+----
+
+
+== Parameters
+
+下表列出了命令参数。
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`全部`
+ a| 
+如果要为管理域中启用了AutoSupport 功能AutoSupport 的所有存储阵列创建传输日志、请使用此参数。
+
+
+
+ a| 
+`_ n_`
+ a| 
+要查看其AutoSupport 日志的存储阵列的名称。
+
+
+
+ a| 
+`_ w_`
+ a| 
+要查看其AutoSupport 日志的存储阵列的全球通用标识符(WWID)。
+
+
+
+ a| 
+`inputArchive`
+ a| 
+用于指定归档的AutoSupport 日志、其中归档文件为`_n_`、一个介于0到5之间的整数。
+
+[NOTE]
+====
+省略此参数意味着您选择当前AutoSupport 日志(此时捕获)。
+
+====
+
+
+ a| 
+`outputLog`
+ a| 
+用于指定输出AutoSupport 日志文件名。
+
+[NOTE]
+====
+此参数为必填项。
+
+====
+|===
+
+
+== 最低固件级别
+
+8.25
+
+
+
+== 示例
+
+[listing]
+----
+SMcli -autosupportLog -n StorageArrayName inputArchive=0 outputLog=ASUPTransmissionLog
+----
+
+
+== 验证
+
+查看您请求的AutoSupport 日志、该日志位于安装存储管理软件的客户端目录中。

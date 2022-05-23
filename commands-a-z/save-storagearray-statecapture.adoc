@@ -1,0 +1,56 @@
+---
+permalink: commands-a-z/save-storagearray-statecapture.html 
+sidebar: sidebar 
+keywords: save, storage, array, state, capture 
+summary: save storageArray statecapture命令可将存储阵列的状态捕获保存到文件中。 
+---
+= 保存存储阵列状态捕获
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`save storageArray statecapture`命令可将存储阵列的状态捕获保存到文件中。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save storageArray stateCapture file=pass:quotes["_filename_"]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+要将状态捕获保存到的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\logs\state.txt`
+
+您可以使用任何文件名、但必须使用`.txt`扩展名。
+
+包含状态捕获的文件的默认名称为`state-capture-data.txt`。此命令不会自动向保存的文件附加文件扩展名。输入文件名时、必须指定文件扩展名。
+
+|===

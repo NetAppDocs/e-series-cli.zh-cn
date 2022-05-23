@@ -1,0 +1,146 @@
+---
+permalink: commands-a-z/show-volume.html 
+sidebar: sidebar 
+keywords: show, thin, volume 
+summary: show volume命令可返回指定精简卷的扩展历史记录或已用容量。 
+---
+= 显示精简卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show volume`命令可返回指定精简卷的扩展历史记录或已用容量。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]])
+(consumedCapacity |
+(expansionHistory pass:quotes[[file=_fileName_]]))
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有卷`
+ a| 
+此参数返回有关存储阵列中所有精简卷的信息。
+
+
+
+ a| 
+`卷`
+ a| 
+要检索其信息的精简卷的名称。将精简卷名称用方括号([])括起来。如果精简卷名称包含特殊字符或数字、则必须将精简卷名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`卷`
+ a| 
+要检索其信息的多个精简卷的名称。使用以下规则输入卷的名称：
+
+* 请将所有名称用方括号([])括起来。
+* 使用空格分隔每个名称。
+
+
+如果卷名称包含特殊字符或数字、请使用以下规则输入名称：
+
+* 请将所有名称用方括号([])括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+
+
+ a| 
+`配置容量`
+ a| 
+用于返回精简卷已用容量信息的简洁列表的设置。
+
+
+
+ a| 
+`扩展历史记录`
+ a| 
+用于返回精简卷扩展历史记录信息的简洁列表的设置。
+
+
+
+ a| 
+`文件`
+ a| 
+`file`参数指定用于记录`expansionHistory`参数输出的文件。只有与`expansionHistory`参数结合使用时、`文件`才有效。文件名无效会导致命令失败。
+
+|===
+
+
+== 注释：
+
+使用`expansionHistory`参数时、该命令将返回类似于以下示例的信息。
+
+`精简卷名称：volume-nameRepository volume Name：repos_nnn`
+
+[cols="4*"]
+|===
+| 记录时间 | 扩展类型 | 起始容量 | 结束容量 
+
+
+ a| 
+MM/DD/YYYY HH：MM：SS
+ a| 
+手动/自动
+ a| 
+nnnnnnnn字节
+ a| 
+nnnnnnnn字节
+
+|===
+使用`consumedCapacity`参数时、该命令将返回类似于以下示例的信息。
+
+[cols="5*"]
+|===
+| Volume | 已配置容量 | 已用容量 | 配额 | 已用资源百分比 
+
+
+ a| 
+`VolumeName`
+ a| 
+500.000 GB
+ a| 
+230.000 GB
+ a| 
+700.000 GB
+ a| 
+46%
+
+|===
+
+
+== 最低固件级别
+
+7.83.

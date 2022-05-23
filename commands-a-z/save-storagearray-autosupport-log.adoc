@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/save-storagearray-autosupport-log.html 
+sidebar: sidebar 
+keywords: retrieve, autosupport, log, individual, E2800, E5700, arrays 
+summary: 使用save storageArray AutoSupport log命令可以查看AutoSupport 日志文件。此文件提供有关状态、传输活动历史记录以及在传送AutoSupport 消息期间遇到的任何错误的信息。此日志可用于所有支持AutoSupport和支持AutoSupport的存储阵列。 
+---
+= 检索AutoSupport 日志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`savageArray AutoSupport log`命令可以查看AutoSupport 日志文件。此文件提供有关状态、传输活动历史记录以及在传送AutoSupport 消息期间遇到的任何错误的信息。此日志可用于所有支持AutoSupport和支持AutoSupport的存储阵列。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+使用此命令可以查看两种类型的日志：
+
+* current log—查看此时捕获的日志。
+* archive log—从归档文件查看日志。
+
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save storageArray autoSupport log [inputArchive=n]
+file=pass:quotes["_filename_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`inputArchive`
+ a| 
+用于指定归档的AutoSupport 日志、其中归档文件为`n`、一个从0开始的整数。
+
+[NOTE]
+====
+省略此参数意味着您选择当前AutoSupport 日志(此时捕获)。
+
+====
+
+
+ a| 
+`文件`
+ a| 
+用于指定输出ASUP传输日志文件名。
+
+[NOTE]
+====
+此参数为必填项。
+
+====
+|===
+
+
+=== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save storageArray autoSupport log inputArchive=0 file=\"ASUPTransmissionLog\";"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

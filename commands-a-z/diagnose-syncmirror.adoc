@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/diagnose-syncmirror.html 
+sidebar: sidebar 
+keywords: diagnose, syncmirror, command, test, connection, specified, primary, volumes, mirror, storage, array, synchronous, feature, enabled 
+summary: di诊断SyncMirror 命令用于测试已启用同步镜像功能的存储阵列上指定主卷与镜像卷之间的连接。 
+---
+= 诊断同步镜像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`diagnose SyncMirror`命令可测试已启用同步镜像功能的存储阵列上指定主卷与镜像卷之间的连接。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+在先前版本的此命令中、功能标识符为`remoteMirror`。此功能标识符不再有效、并替换为`SyncMirror`。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[diagnose syncMirror (_primary [primaryVolumeName_]] |pass:quotes[primaries ["_primaryVolumeName1_]" ... pass:quotes[_"primaryVolumeNameN"_]])
+testID=connectivity
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`主卷`
+ a| 
+要测试的远程镜像对的主卷的名称。将主卷名称用方括号([])括起来。如果主卷名称包含特殊字符或仅包含数字、则必须将主卷名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`主卷`
+ a| 
+您可以输入多个卷名称。将所有卷名称括在一组方括号([])中。将每个卷名称用双引号("")括起来。使用空格分隔每个卷名称。
+
+要用作主卷的多个卷的名称。使用以下规则输入主卷的名称：
+
+* 请将所有名称用方括号([])括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+|===
+
+
+== 最低固件级别
+
+6.10

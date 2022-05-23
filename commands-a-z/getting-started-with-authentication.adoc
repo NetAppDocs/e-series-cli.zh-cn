@@ -1,0 +1,27 @@
+---
+permalink: commands-a-z/getting-started-with-authentication.html 
+sidebar: sidebar 
+keywords: authentication, users, access, system, assign, login credentials, associated, profile, include, specific, role, access, permissions, start 
+summary: 身份验证要求用户使用分配的登录凭据访问系统。每个用户登录都与一个用户配置文件相关联、该配置文件包含特定角色和访问权限。 
+---
+= 身份验证入门
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+身份验证要求用户使用分配的登录凭据访问系统。每个用户登录都与一个用户配置文件相关联、该配置文件包含特定角色和访问权限。
+
+管理员可以按如下方式实施系统身份验证：
+
+* 使用在存储阵列中强制实施的RBAC (基于角色的访问控制)功能、包括预定义的用户和角色。
+* 连接到LDAP (轻型目录访问协议)服务器和目录服务(例如Microsoft的Active Directory)、然后将LDAP用户映射到存储阵列的嵌入式角色。
+* 使用安全断言标记语言(Security Assertion Markup Language、SAML) 2.0与身份提供程序(Identity Provider、IdP)连接、然后将用户映射到存储阵列的嵌入式角色。
++
+[NOTE]
+====
+SAML是存储阵列中的一项嵌入式功能(固件级别为8.42及更高)、只能从SANtricity System Manager用户界面进行配置。
+
+====
+

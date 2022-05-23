@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/show-volume-actionprogress.html 
+sidebar: sidebar 
+keywords: show, volume, action, progress 
+summary: show volume actionPro出口 命令可返回有关卷操作的信息、以及在卷上执行长时间运行的操作所完成的长时间运行操作的数量。 
+---
+= 显示卷操作进度
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show volume actionPro多少`命令可返回有关卷操作的信息以及在卷上执行长时间运行的操作所完成的长时间运行操作的数量。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+对于固件版本7.77、已弃用`show volume actionPro多少`命令。将此命令替换为`show storageArray longRunningOperations`。
+
+====
+已完成的长时间运行操作的量将显示为一个百分比(例如、25表示已完成25%的长期运行操作)。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show volume pass:quotes[[_volumeName_]] actionProgress
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`卷`
+ a| 
+要检索有关长时间运行的操作的信息的卷的名称。将卷名称括在方括号([])中。如果卷名称包含特殊字符或数字、则必须将名称用双引号("")括在方括号内。
+
+|===
+
+
+== 最低固件级别
+
+5.43

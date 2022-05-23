@@ -1,0 +1,102 @@
+---
+permalink: commands-a-z/set-storagearray-syslog.html 
+sidebar: sidebar 
+keywords: update, storage, array, syslog, configuration 
+summary: 使用set storageArray syslog命令可以更改系统日志服务器地址、协议或端口号。 
+---
+= 更新存储阵列系统日志配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray syslog`命令可以更改系统日志服务器地址、协议或端口号。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray syslog id="<id>"
+serverAddress="<address>"
+port=<port> protocol=("udp" | "tcp" | "tls")
+components=(componentName=("auditLog") ...)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`serverAddress`
+ a| 
+系统日志接收器主机名或IP地址。
+
+
+
+ a| 
+`端口`
+ a| 
+系统日志接收器端口号。
+
+
+
+ a| 
+`协议`
+ a| 
+系统日志传输协议。可接受的值包括UDP、TCP或TLS。
+
+
+
+ a| 
+`组件`
+ a| 
+将记录到系统日志服务器的组件条目列表。目前、仅支持审核日志。
+
+
+
+ a| 
+`组件名称`
+ a| 
+组件名称；当前仅支持"审核 日志"。
+
+|===
+
+
+=== 示例
+
+[listing]
+----
+SMcli -n Array1 -c "set storageArray syslog
+id=\"331998fe-3154-4489-b773-b0bb60c6b48e\"
+serverAddress=\"192.168.2.1\" port=514 protocol=\"udp\"
+components=(componentName=\"auditLog\");"
+ID: 331998fe-3154-4489-b773-b0bb60c6b48e Server Address: 192.168.2.1
+Port: 514 Protocol: udp
+Components
+1. Component Name: auditLog
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.42

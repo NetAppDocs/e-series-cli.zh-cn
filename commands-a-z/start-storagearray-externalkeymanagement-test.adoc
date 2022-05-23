@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/start-storagearray-externalkeymanagement-test.html 
+sidebar: sidebar 
+keywords: test, external key, management, communication 
+summary: 'start storageArray externalKeyManagement测试命令使用已配置的凭据(证书、KMIP服务器的地址和KMIP端口号)验证存储阵列是否能够与外部KMIP服务器通信。' 
+---
+= 测试外部密钥管理通信
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sStart storageArray externalKeyManagement test`命令可使用已配置的凭据(证书、KMIP服务器的地址和KMIP端口号)来验证存储阵列是否能够与外部KMIP服务器进行通信。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令仅适用于外部密钥管理。
+
+====
+
+
+== 语法
+
+[listing]
+----
+start storageArray externalKeyManagement test
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+8.40

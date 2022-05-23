@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/save-controller-arraymanagementsignedcertificate.html 
+sidebar: sidebar 
+keywords: retrieve, installed, server, certificate 
+summary: save controller arrayManagementSignedCertificate命令可检索已安装的控制器服务器证书、以便您查看证书详细信息。 
+---
+= 检索已安装的服务器证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`scontroller arrayManagementSignedCertificate`命令可检索已安装的控制器服务器证书、以便您查看证书详细信息。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+save controller [(a|b)] arrayManagementSignedCertificate
+     file=pass:quotes["_filename_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+用于指定要从中下载签名证书的控制器。有效的控制器标识符为a或b、其中a是插槽A中的控制器、b是插槽B中的控制器将控制器标识符括在方括号()中。
+
+
+
+ a| 
+`文件`
+ a| 
+用于指定要保存控制器签名证书文件的文件。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save controller [a] arrayManagementSignedCertificate
+   file="C:\controllerAcertificate.cer";"
+
+SMcli -n Array1 -c "save controller [b] arrayManagementSignedCertificate
+   file="C:\controllerBcertificate.cer";"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

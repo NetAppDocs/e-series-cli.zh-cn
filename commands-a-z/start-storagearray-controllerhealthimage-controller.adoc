@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/start-storagearray-controllerhealthimage-controller.html 
+sidebar: sidebar 
+keywords: start, storage, array, controller, health, image 
+summary: start storageArray controllerHealthImage controller命令可在支持控制器运行状况映像功能的存储阵列上生成存储阵列控制器运行状况映像。 
+---
+= 启动存储阵列控制器运行状况映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`s启动storageArray controllerHealthImage controller`命令可在支持控制器运行状况映像功能的存储阵列上生成存储阵列控制器运行状况映像。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+对于固件版本8.20、`coredump`参数将替换为`controllerHealthImage`参数。
+
+====
+[NOTE]
+====
+请仅在技术支持的指导下使用此命令。
+
+====
+如果存储阵列不支持控制器运行状况映像功能、则此命令将返回错误。
+
+
+
+== 语法
+
+[listing]
+----
+start storageArray controllerHealthImage controller [(a|b)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+此参数指定用于生成控制器运行状况映像的控制器。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器将控制器标识符括在方括号()中。如果不指定控制器、则存储管理软件将返回语法错误。
+
+|===
+
+
+== 注释：
+
+此命令强制选定控制器将其核心数据转储到缓存。使用`save storageArray controllerHealthImage`命令将缓存数据的副本保存到主机文件中。
+
+
+
+== 最低固件级别
+
+7.83.
+
+8.20将`coredump`参数替换为`controllerHealthImage`参数。

@@ -1,0 +1,60 @@
+---
+permalink: commands-a-z/delete-host.html 
+sidebar: sidebar 
+keywords: delete, host 
+summary: delete host命令可删除一个或多个主机。 
+---
+= 删除主机
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`delete host`命令可删除一个或多个主机。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+delete host pass:quotes[[_hostName_]]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`主机`
+ a| 
+要删除的主机的名称。请将主机名用方括号([])括起来。如果主机名包含特殊字符、则必须将主机名用双引号("")括在方括号内。
+
+|===
+
+
+== 注释：
+
+主机是指连接到存储阵列并通过主机上的主机端口访问存储阵列上的卷的计算机。
+
+
+
+== 最低固件级别
+
+5.20

@@ -1,0 +1,65 @@
+---
+permalink: commands-a-z/set-storagearray-securitykey.html 
+sidebar: sidebar 
+keywords: set, internal, storage, array, security key 
+summary: set storageArray securityKey命令用于设置整个存储阵列用于实施驱动器安全功能的安全密钥。 
+---
+= 设置内部存储阵列安全密钥
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray securityKey`命令可设置整个存储阵列用于实施驱动器安全功能的安全密钥。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+如果将存储阵列中任何支持安全的驱动器分配给安全卷组或磁盘池、则该驱动器将使用安全密钥启用安全性。在设置安全密钥之前、您必须使用`create storageArray securityKey`命令创建安全密钥。
+
+[NOTE]
+====
+此命令仅适用于内部密钥管理。
+
+====
+
+
+== 语法
+
+[listing]
+----
+set storageArray securityKey
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+支持安全的驱动器具有可加快加密处理速度的硬件、每个驱动器都有一个唯一的驱动器密钥。在将支持安全的驱动器添加到安全卷组之前、该驱动器的行为与任何其他驱动器相同、此时、支持安全的驱动器将变为已启用安全保护的驱动器。
+
+每当启用了安全保护的驱动器启动时、它都需要从控制器获取正确的安全密钥、才能读取或写入数据。因此、启用了安全保护的驱动器使用两个密钥：用于对数据进行加密和解密的驱动器密钥以及用于授权加密和解密过程的安全密钥。使用`set storageArray securityKey`命令可将安全密钥提交到存储阵列中所有控制器和启用了安全保护的驱动器。全磁盘加密功能可确保、如果从存储阵列中物理删除启用了安全保护的驱动器、则除非知道安全密钥、否则任何其他设备都无法读取其数据。
+
+
+
+== 最低固件级别
+
+7.50

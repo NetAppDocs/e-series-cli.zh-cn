@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/set-storagearray-resourceprovisionedvolumes.html 
+sidebar: sidebar 
+keywords: set, storage, array, resource, provisioned, volumes 
+summary: 'set storageArray resourcesProvisionedVolumes命令可禁用DULBE"功能。' 
+---
+= 设置存储阵列资源配置的卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set storageArray resourcedVolumes`命令可禁用DULBEe功能。
+
+
+
+== 支持的阵列
+
+此命令可对任何单个存储阵列执行适用场景 操作、包括EF600和EF300阵列；前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在EF600和EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+资源配置是一项可用功能、可用于快速初始化大型卷。
+
+资源配置卷是SSD卷组或池中的厚卷、在创建卷时会分配(分配给卷)驱动器容量、但会取消分配(取消映射)驱动器块。对于资源配置的卷、不会进行有时间限制的后台初始化。而是在首次写入条带中的卷块时初始化每个RAID条带
+
+只有SSD卷组和池支持资源配置的卷、其中组或池中的所有驱动器都支持NVMe已取消分配或未写入逻辑块错误启用(DULBE")错误恢复功能。创建资源配置的卷时、分配给该卷的所有驱动器块都会进行取消分配(未映射)。取消分配块可以延长SSD的使用寿命并提高最大写入性能。性能提升因驱动器型号和容量而异。
+
+
+
+== 语法
+
+[listing]
+----
+set storageArray resourceProvisionedVolumes=(enable|disable)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`resourceProvisionedVolumes`
+ a| 
+用于指定是否启用资源配置功能的设置。要禁用资源配置、请将此参数设置为`disable`。默认值为`enable`。
+
+[NOTE]
+====
+更改此值时、仅会显示将来创建的适用场景 卷组和池。它不会更改任何现有卷组和池的值。
+
+====
+|===
+
+
+== 最低固件级别
+
+8.63

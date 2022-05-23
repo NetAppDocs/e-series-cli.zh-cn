@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/enable-volumegroup-security.html 
+sidebar: sidebar 
+keywords: enable, volumegroup, security, command, non secure, volume, group 
+summary: enable VolumeGroup security命令可将非安全卷组转换为安全卷组。 
+---
+= 启用卷组安全性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`enable VolumeGroup security`命令可将非安全卷组转换为安全卷组。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable volumeGroup [_volumeGroupName_]] security
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`VolumeGroup`
+ a| 
+要置于安全已启用状态的卷组的名称。将卷组名称用方括号([])括起来。
+
+|===
+
+
+== 注释：
+
+要成功运行此命令、必须满足这些条件。
+
+* 卷组中的所有驱动器都必须是全磁盘加密驱动器。
+* 必须启用驱动器安全功能。
+* 必须设置存储阵列安全密钥。
+* 此卷组是最佳卷、并且没有存储库卷。
+
+
+控制器固件会创建一个锁定、用于限制对FDE驱动器的访问。FDE驱动器的状态称为"安全功能"。创建安全密钥时、状态将设置为安全已启用、从而限制对存储阵列中所有FDE驱动器的访问。
+
+
+
+== 最低固件级别
+
+7.40

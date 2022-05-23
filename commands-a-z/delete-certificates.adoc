@@ -1,0 +1,48 @@
+---
+permalink: commands-a-z/delete-certificates.html 
+sidebar: sidebar 
+keywords: delete, certificates 
+summary: 使用Delete certificates命令可以从命令行界面软件包信任存储中删除证书。 
+---
+= 删除证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`Delete certificates`命令可以从命令行界面软件包信任存储中删除证书。
+
+
+
+== 支持的阵列
+
+此命令用于对EF600和EF300存储阵列执行适用场景。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+delete localCertificate all | alias pass:quotes[_alias_]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`别名`
+ a| 
+用于通过用户定义的别名指定证书。
+
+|===
+
+
+== 最低固件级别
+
+8.60

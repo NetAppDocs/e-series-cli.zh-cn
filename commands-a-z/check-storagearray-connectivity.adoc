@@ -1,0 +1,89 @@
+---
+permalink: commands-a-z/check-storagearray-connectivity.html 
+sidebar: sidebar 
+keywords: check, storage array, connectivity 
+summary: check storageArray connectivity命令可验证本地存储阵列和远程存储阵列是否具有通信路径、并显示本地和远程存储阵列之间的连接详细信息。 
+---
+= 检查存储阵列连接
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`check storageArray connectivity`命令可验证本地存储阵列和远程存储阵列是否具有通信路径、并显示本地和远程存储阵列之间的连接详细信息。
+
+
+
+== 支持的阵列
+
+此命令会对任何单个存储阵列执行适用场景 操作、但有一些限制。如果您在E2700或E5600阵列上运行命令、则没有任何限制。
+
+[NOTE]
+====
+如果您在E2800或E5700阵列上运行命令、则客户端类型必须设置为`symbol`。如果客户端类型设置为`https`、则不会执行此命令。
+
+====
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+在创建异步镜像组之前、您应检查本地存储阵列和远程存储阵列是否可以彼此通信。执行此命令时、系统会在所有符合条件的主机端口上查询远程存储阵列、以确定哪些端口连接到远程存储阵列。测试结果将列出本地存储阵列上的所有端口以及可通过该端口访问的远程存储阵列端口地址。
+
+[NOTE]
+====
+系统将使用所有可能的通道测试连接、如果是双控制器配置、则会检查每个控制器的连接。检查两个存储阵列之间的连接可能需要长达20分钟的时间。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+check storageArray connectivity
+(remoteStorageArrayName=pass:quotes[_"storageArrayName"_]|
+remoteStorageArrayWwid=<pass:quotes[_wwID_]>)
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`remoteStorageArrayName`
+ a| 
+要检查连接的远程存储阵列的名称。将存储阵列名称用双引号("")括起来。
+
+
+
+ a| 
+`remoteStorageArrayWwid`
+ a| 
+要检查连接的存储阵列的全球通用标识符(WWID)。您可以使用WWID而不是存储阵列名称来标识存储阵列。将WWID括在尖括号中(<>)。
+
+|===
+
+
+== 注释：
+
+在两个存储阵列之间建立镜像之前、必须通过光纤通道连接或iSCSI连接进行连接。
+
+必须先在两个存储阵列上激活光纤通道异步镜像、然后它们才能相互通信以进行镜像或连接检查。
+
+如果本地存储阵列支持iSCSI、则会检查通过iSCSI的连接。如果本地存储阵列支持光纤通道、并且已激活通过光纤通道镜像、则会检查通过光纤通道的连接。如果本地存储阵列不支持iSCSI或光纤通道、则会显示一条错误消息并中止操作。
+
+
+
+== 最低固件级别
+
+7.84.接受采取后续行动

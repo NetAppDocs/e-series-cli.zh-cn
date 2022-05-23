@@ -1,0 +1,102 @@
+---
+permalink: commands-a-z/set-controller-dnsservers.html 
+sidebar: sidebar 
+keywords: set, controller, dns 
+summary: 'set controller DNSServers命令用于更新控制器的域名系统(Domain Name System、DNS)设置。DNS用于解析控制器和网络时间协议(NTP)服务器的完全限定域名。' 
+---
+= 设置控制器DNS设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set controller DNSServers`命令可更新控制器的域名系统(DNS)设置。DNS用于解析控制器和网络时间协议(NTP)服务器的完全限定域名。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+开始之前、请确保：
+
+* 已配置DNS服务器。
+* 您知道主DNS服务器和备份DNS服务器的地址、以防主DNS服务器发生故障。这些地址可以是IPv4地址或IPv6地址。
+
+
+[NOTE]
+====
+您需要将此命令发送到这两个控制器。此命令特定于控制器。
+
+====
+[NOTE]
+====
+如果已使用DHCP (动态主机配置协议)配置阵列的管理端口、并且您有一个或多个DNS或NTP服务器与DHCP设置关联、则无需手动配置DNS/NTP。在这种情况下、阵列应已自动获取DNS/NTP服务器地址。
+
+====
+
+
+== 语法
+
+[listing]
+----
+
+set controller[a] DNSServers=(auto|(Address1 [Address2]))
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`dNSServers`
+ a| 
+此参数用于为控制器配置DNS服务器。指定`auto`以使用DHCP提供的DNS服务器。否则、请使用一个或两个DNS服务器的空格分隔列表。
+
+[NOTE]
+====
+阵列上的管理以太网端口可以同时支持IPv4或IPv6协议。这些地址可以是IPv4地址或IPv6地址。如果指定多个地址、则地址类型不需要匹配。
+
+====
+如果指定了多个地址、则会按指定的顺序使用这些地址(第一个是主地址、第二个是备份地址)。
+
+
+
+ a| 
+`地址X`
+ a| 
+IPV4Address|IPv6Address
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+set controller[a] DNSServers=auto;
+set controller[a] DNSServers=(192.168.1.1);
+set controller[b] DNSServers=(192.168.1.1 192.168.1.105);
+set controller[b] DNSServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 192.168.1.1)
+----
+
+
+== 最低固件级别
+
+8.25

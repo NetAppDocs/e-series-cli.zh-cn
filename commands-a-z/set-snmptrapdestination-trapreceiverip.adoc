@@ -1,0 +1,85 @@
+---
+permalink: commands-a-z/set-snmptrapdestination-trapreceiverip.html 
+sidebar: sidebar 
+keywords: update, snmp, trap, destination 
+summary: set snmpTrapDestination trap接收方IP命令用于打开或关闭为SNMP陷阱目标发送身份验证失败消息的功能。如果SNMP代理从SNMP管理器收到消息、但消息包含无效的社区名称或用户名、则会失败。 
+---
+= 更新SNMP陷阱目标
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+命令`set snmpTrapDestination trap接收方IP`用于打开或关闭SNMP陷阱目标的身份验证失败消息发送。如果SNMP代理从SNMP管理器收到消息、但消息包含无效的社区名称或用户名、则会失败。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set snmpTrapDestination trapReceiverIP=ipAddress
+(communityName=pass:quotes["_communityName_"] | (userName=pass:quotes["_userName_"] [engineId=(local | engineId)]))
+[sendAuthenticationFailureTraps=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`trap接收方IP`
+ a| 
+要向其发送陷阱消息的SNMP管理器的IP地址。
+
+
+
+ a| 
+`社区名称`
+ a| 
+要为其发送陷阱消息的SNMP社区的名称。
+
+
+
+ a| 
+`用户名`
+ a| 
+要为其发送陷阱消息的SNMP用户的名称。
+
+
+
+ a| 
+`EngineID`
+ a| 
+要为其发送陷阱消息的SNMP用户的引擎ID。如果有多个USM用户使用相同的用户名、则需要引擎ID。该值可以是"[.code]``local``"以指定本地SNMP代理为权威代理、也可以是十六进制数字字符串以指定远程SNMP代理引擎ID。
+
+
+
+ a| 
+`sendAuthenticationFailureTraps`
+ a| 
+此参数用于打开或关闭向SNMP管理器发送身份验证失败消息的功能。要发送身份验证失败消息、请将参数设置为`true`。要防止发送身份验证失败消息、请将参数设置为`false`。默认值为`true`。
+
+|===
+
+
+== 最低固件级别
+
+8.30

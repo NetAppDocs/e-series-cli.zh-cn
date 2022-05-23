@@ -1,0 +1,153 @@
+---
+permalink: commands-a-z/save-controller-arraymanagementcsr.html 
+sidebar: sidebar 
+keywords: generate, web server, certificate, sign, request, csr 
+summary: 'save controller arrayManagementCSR命令会为控制器生成证书签名请求(Certificate Signing Request、CSR)。' 
+---
+= 生成Web服务器证书签名请求(CSR)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`scontroller arrayManagementCSR`命令可为控制器生成证书签名请求(Certificate Signing Request、CSR)。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+CSR必须由证书颁发机构(CA)签名。生成的签名证书安装在控制器的Web服务器上、这样、浏览器在尝试管理阵列时就可以自动信任控制器的Web服务器。对每个控制器执行此操作。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+save controller [(a|b)] arrayManagementCSR
+     commonName=pass:quotes["_ipOrDnsName_"]
+     [alternateIPAddresses=pass:quotes[(_ipvX1_..._ipvXN_)]]
+     [alternateDnsNames=pass:quotes[("_dnsName1_"..."_dnsNameN_")]]
+     organization=pass:quotes["_organizationName_"]
+     [organizationalUnit=pass:quotes["_organizationalUnitName_"]]
+     locality=pass:quotes["_cityOrLocality_"]
+     [stateProvince=pass:quotes["_stateOrRegion_"]]
+     country=pass:quotes["_string_"]
+     file=pass:quotes["_filename_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+用于指定要为其创建CSR的控制器。有效的控制器标识符为a或b、其中a是插槽A中的控制器、b是插槽B中的控制器将控制器标识符括在方括号()中。
+
+
+
+ a| 
+`commonName`
+ a| 
+用于指定控制器的IP地址或DNS名称。此名称必须与访问System Manager时在浏览器中键入的内容完全匹配(请勿包含http：//或https：//)、否则将出现名称不匹配错误。
+
+
+
+ a| 
+`alternateIPAddess`
+ a| 
+用于为控制器指定其他IP地址或别名。将所有IP地址括在圆括号中。如果输入多个IP地址、请使用空格将其分隔开。
+
+
+
+ a| 
+`alternateDnsNames`
+ a| 
+用于指定控制器的其他DNS名称。将所有DNS名称用圆括号括起来。如果输入多个名称、请使用空格将其分隔开。
+
+
+
+ a| 
+`组织`
+ a| 
+用于指定存储阵列所属的组织的完整法定名称。请勿使用缩写形式、并加入任何后缀、例如Inc、Corp或LLC。
+
+
+
+ a| 
+`OrganizationalUnit`
+ a| 
+允许用户指定组织负责处理证书的部门。
+
+
+
+ a| 
+`位置`
+ a| 
+用于指定存储阵列所在的城市或位置。
+
+
+
+ a| 
+`sTateProvince`
+ a| 
+用于指定存储阵列所在的状态或区域。这不应简略。
+
+
+
+ a| 
+`国家或地区`
+ a| 
+用于指定国家/地区的两位数ISO (国际标准化组织)代码、例如美国。
+
+
+
+ a| 
+`文件`
+ a| 
+用于指定要保存控制器CSR文件的文件。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save controller [a] arrayManagementCSR
+   commonName="ictd0702s05c01-a.ict.englab.xyz.com"
+   alternateIPAddresses=(10.113.174.190 10.113.174.191)
+   alternateDnsNames=("ictd0702s05c01-b.ict.englab.xyz.com")
+   organization="Company"
+   locality="Wichita"
+   stateProvince="Kansas"
+   country="US"
+   file="C:\storage_array_csr.csr";"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

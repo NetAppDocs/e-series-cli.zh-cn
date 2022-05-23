@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/show-volumecopy.html 
+sidebar: sidebar 
+keywords: show, volume, copy 
+summary: show volumeCopy命令可返回有关卷复制操作的信息。 
+---
+= 显示卷副本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`show volumeCopy`命令可返回有关卷复制操作的信息。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+
+
+== 环境
+
+此命令将返回有关卷复制操作的信息：
+
+* 复制状态
+* 开始时间戳
+* 完成时间戳
+* 复制优先级
+* 源卷全球通用标识符(World Wide Identifier、WWID)或目标卷WWID
+* 目标卷只读属性设置
+
+
+您可以检索有关特定卷副本对或存储阵列中所有卷副本对的信息。此命令适用于Snapshot卷副本对。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show volumeCopy (allVolumes | source pass:quotes[["_sourceName_"]] |
+target pass:quotes[["_targetName_"]])
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有卷`
+ a| 
+用于返回有关所有卷副本对的卷复制操作的信息的设置。
+
+
+
+ a| 
+`s源`
+ a| 
+要检索其信息的源卷的名称。将源卷名称用双引号("")括在方括号([])内。
+
+
+
+ a| 
+`目标`
+ a| 
+要检索其信息的目标卷的名称。将目标卷名称用双引号("")括在方括号([])内。
+
+|===

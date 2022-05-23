@@ -1,0 +1,111 @@
+---
+permalink: commands-a-z/stop-cgsnapimage-rollback.html 
+sidebar: sidebar 
+keywords: stop, consistency, group, snapshot, rollback 
+summary: stop cgSnapImage rollback命令用于停止对快照一致性组中的基础卷进行回滚操作。 
+---
+= 停止一致性组快照回滚
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`stop cgSnapImage rollback`命令可停止对快照一致性组中的基础卷进行回滚操作。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+取消一致性组快照回滚操作会使基础卷处于不确定状态、并可能存在无效或不一致的数据。相关一致性组快照卷将被禁用且无法使用。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[stop cgSnapImage["_snapCGID:imageID_"]] rollback
+memberVolumeSet pass:quotes[("_memberVolumeName1_" ... "_memberVolumeNamen_")]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`cgSnapImage`
+ a| 
+要停止回滚操作的一致性组快照映像的名称。快照映像的名称由两部分组成：
+
+* 快照组的名称
+* 快照组中快照映像的标识符
+
+
+快照映像的标识符可以是以下项之一：
+
+* 一个整数值、是快照组中快照的序列号。
+* `latest`—要显示在快照组中创建的最新快照映像、请使用此选项。
+* `oldest`—如果要显示在快照组中创建的最早快照映像、请使用此选项。
+
+
+将快照映像名称用双引号("")括在方括号([])内。
+
+
+
+ a| 
+`memberVolumeSet`
+ a| 
+要停止回滚操作的一致性组中的一个或多个成员基础卷的名称。将每个成员基础卷名称用双引号("")括在圆括号内。
+
+您可以输入多个成员基础卷名称。将所有成员基本卷名称放在一组方括号()中。将每个成员基础卷名称用双引号("")括起来。使用空格分隔每个成员基础卷名称。
+
+如果未使用`memberVolumeSet`参数、则停止回滚过程适用场景 一致性组的所有成员卷。
+
+|===
+
+
+== 注释：
+
+快照映像的名称包含两个部分、并用冒号(：)分隔：
+
+* 快照组的标识符
+* 快照映像的标识符
+
+
+例如、如果要停止对名为CG1的整个一致性组中的最新快照映像执行回滚操作、则应使用以下命令：
+
+[listing]
+----
+stop cgSnapImage ["CG1:newest"] rollback;
+----
+要停止名为CG2的一致性组中基础卷成员memVol1、memVol2和memVol3的Snapshot映像12345的回滚操作、您应使用以下命令：
+
+[listing]
+----
+stop cgSnapImage ["CG2:12345"] rollback memberVolumeset=("memVol1 memVol2 memVol3");
+----
+
+
+== 最低固件级别
+
+7.83.

@@ -1,0 +1,388 @@
+---
+permalink: commands-a-z/smcli-supportbundle-schedule.html 
+sidebar: sidebar 
+keywords: schedule, automatic, support, bundle, collection, configuration 
+summary: smcli -supportbundle schedule命令可创建或删除在一个或多个存储阵列上保存支持包的计划。您可以在支持包中收集系统和配置信息、以便将这些信息传输给技术支持以进行分析和诊断。 
+---
+= 计划自动支持包收集配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`Smcli -supportbundle schedule`命令可创建或删除在一个或多个存储阵列上保存支持包的计划。您可以在支持包中收集系统和配置信息、以便将这些信息传输给技术支持以进行分析和诊断。
+
+[NOTE]
+====
+此命令是一个smcli命令、而不是一个脚本命令。您必须从命令行运行此命令。您不能从存储管理软件中的脚本编辑器运行此命令。
+
+====
+您可以创建两种类型的计划：
+
+* "每日/每周"—如果需要频繁收集数据以监控新配置或对现有配置进行故障排除、请使用此计划。
+* 每月/每年—在收集数据以评估存储阵列的长期运行时、请使用此计划。
+
+
+
+
+== 创建每日/每周计划的语法
+
+[listing, subs="+macros"]
+----
+SMcli -supportBundle schedule enable
+pass:quotes[(all | _storageArrayName_)]
+pass:quotes[startTime=_HH:MM_]
+pass:quotes[startDate=_MM:DD:YYYY_]
+pass:quotes[endDate=_MM:DD:YYYY_]
+daysOfWeek=[Sunday Monday Tuesday Wednesday Thursday Friday Saturday]
+pass:quotes[data=_pathName_]
+----
+
+
+== 创建每月/每年计划的语法
+
+[listing, subs="+macros"]
+----
+SMcli -supportBundle schedule enable
+pass:quotes[(all | _storageArrayName_)]
+pass:quotes[startTime=_HH:MM_]
+pass:quotes[startDate=_MM:DD:YYYY_]
+pass:quotes[endDate=_MM:DD:YYYY_]
+months=[January February March April May June July August September October
+November December]
+weekNumber=(First|Second|Third|Fourth|Last)
+dayOfWeek=(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)|
+onDays=[1-31] |
+pass:quotes[data=_pathName_]
+----
+
+
+== 删除计划的语法
+
+[NOTE]
+====
+此命令将完全删除存储阵列的计划。要重新开始保存支持包信息、您需要创建一个新计划。
+
+====
+[listing, subs="+macros"]
+----
+SMcli -supportBundle schedule disable
+pass:quotes[(all|_storageArrayName_)]
+----
+
+
+== Parameters
+
+下表列出了每日/每周计划的参数。
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`启用`
+ a| 
+检测到严重的MEL事件时、启用自动收集支持包。如果支持包数据已暂停、则此参数将恢复收集支持包数据。创建新计划或修改现有计划时、必须使用参数。
+
+
+
+ a| 
+`全部`
+ a| 
+如果要为从主机检测到的所有存储阵列设置收集计划、请使用此参数。
+
+
+
+ a| 
+`_storageArrayName_`
+ a| 
+要为其设置计划的特定存储阵列的名称。
+
+
+
+ a| 
+`sTartTime`
+ a| 
+要开始收集支持包的时间。输入时间的格式为HH：mm、其中HH是小时、MM是小时后的分钟。使用24小时制时钟。
+
+默认时间为00：00、午夜。如果未输入开始时间并且启用了支持包收集、则会在午夜自动收集数据。
+
+
+
+ a| 
+`sTartDate`
+ a| 
+要开始收集支持包数据的特定日期。输入日期的格式为MM：DD：YY。
+
+默认日期为当前日期。
+
+
+
+ a| 
+`endDate`
+ a| 
+要停止收集支持包数据的特定日期。输入日期的格式为MM：DD：YY。
+
+默认值为none。
+
+如果使用此参数、则此参数必须至少在开始日期之后一周、并且不能在过去发生。
+
+
+
+ a| 
+`daysOfWeek`
+ a| 
+要收集支持包数据的特定日期或星期几。如果要在一周中的一天或多天收集支持包数据、请使用此参数。例如：
+
+[listing]
+----
+daysOfWeek=[Tuesday]
+----
+[listing]
+----
+daysOfWeek=[Monday Wednesday Friday]
+----
+将一周中的几天括在方括号([])中。如果输入的天数超过一天、请每天使用空格分隔。
+
+
+
+ a| 
+`data`
+ a| 
+要将支持包数据保存到的文件路径和文件名。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\data.txt"
+----
+[NOTE]
+====
+您可以使用任何文件扩展名。
+
+====
+将文件路径和名称用双引号("")括起来。
+
+|===
+下表列出了每月/每年计划的参数。
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`启用`
+ a| 
+检测到严重的MEL事件时、启用自动收集支持包。如果支持包数据已暂停、则此参数将恢复收集支持包数据。创建新计划或修改现有计划时、必须使用参数。
+
+
+
+ a| 
+`全部`
+ a| 
+如果要为从主机检测到的所有存储阵列设置收集计划、请使用此参数。
+
+
+
+ a| 
+`storageArrayName`
+ a| 
+要为其设置计划的特定存储阵列的名称。
+
+
+
+ a| 
+`sTartTime`
+ a| 
+一天中希望开始收集支持包的时间。输入时间的格式为HH：mm、其中HH是小时、MM是小时后的分钟。使用24小时制时钟。
+
+默认时间为00：00、午夜。如果未输入开始时间并且启用了支持包收集、则会在午夜自动收集数据。
+
+
+
+ a| 
+`sTartDate`
+ a| 
+要开始收集支持包数据的特定日期。输入日期的格式为MM：DD：YY。
+
+默认日期为当前日期。
+
+
+
+ a| 
+`endDate`
+ a| 
+要停止收集支持包数据的特定日期。输入日期的格式为MM：DD：YY。
+
+默认值为none。
+
+
+
+ a| 
+`m个`个
+ a| 
+要收集支持包数据的一年中的特定月份或月份。如果要收集一年中一个或多个月的支持包数据、请使用此参数。例如：
+
+[listing]
+----
+months=[June]
+----
+[listing]
+----
+months=[January April July October]
+----
+将月份括在方括号()中。如果输入的月数超过一个、请使用空格分隔每个月。
+
+
+
+ a| 
+`weekNumber`
+ a| 
+要收集支持包数据的月份中的一周。例如：
+
+[listing]
+----
+weekNumber=first
+----
+
+
+ a| 
+`dayOfWeek`
+ a| 
+一周中要收集支持包数据的特定日期。如果只想在一周的某一天收集支持包数据、请使用此参数。例如：
+
+[listing]
+----
+dayOfWeek=Wednesday
+----
+
+
+ a| 
+`onDays`
+ a| 
+要收集支持包数据的特定日期或月份中的特定日期。例如：
+
+[listing]
+----
+onDays=[15]
+----
+[listing]
+----
+onDays=[7 21]
+----
+将此日期括在方括号([])中。如果输入的天数超过一天、请每天使用空格分隔。
+
+[NOTE]
+====
+您不能将`* onDays*`参数与`* weekNumber*`参数或`* dayOfWeek*`参数结合使用。
+
+====
+
+
+ a| 
+`data`
+ a| 
+要将支持包数据保存到的文件路径和文件名。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\data.txt"
+----
+[NOTE]
+====
+您可以使用任何文件扩展名。
+
+====
+将文件路径和名称用双引号("")括起来。
+
+|===
+下表列出了用于删除计划的参数。
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`d可`
+ a| 
+禁用自动收集支持包并立即删除先前定义的任何计划。
+
+[NOTE]
+====
+禁用计划也会删除此计划。
+
+====
+
+
+ a| 
+`全部`
+ a| 
+如果要为从主机检测到的所有存储阵列设置收集计划、请使用此参数。
+
+
+
+ a| 
+`storageArrayName`
+ a| 
+要为其设置计划的特定存储阵列的名称。
+
+|===
+
+
+== 注释：
+
+使用`all`参数为所有存储阵列设置通用计划时、将删除各个存储阵列的计划。如果为所有存储阵列设置了计划、则新发现的存储阵列将遵循相同的计划。如果为所有存储阵列设置了计划、然后为单个存储阵列设置了计划、则新发现的存储阵列将不会定义计划。
+
+以下是使用此命令的示例。第一个示例是每日/每周计划、该计划满足收集支持包数据的以下条件：
+
+* 存储阵列名称为DevKit4
+* 收集开始时间为02：00 (早晨2：00)
+* 开始日期为2013年5月1日5：01：2013 (2013年5月1日)
+* 数据将在每周的星期一和星期五收集
+* 此计划没有结束日期、只能通过运行`SMcli -supportBundle schedule disable`命令来停止
+
+
+[listing]
+----
+SMcli -supportBundle schedule enable DevKit4 startTime=02:00
+startDate=05:01:2013 endDate=05:10:2014 daysOfWeek=[Monday Friday]
+----
+第二个示例是满足以下收集支持包数据标准的每月/每年计划：
+
+* 存储阵列名称是eng_stor1
+* 收集开始时间为04：00 (早晨4：00)
+* 开始日期为2013年5月1日5：01：2013 (2013年5月1日)
+* 数据收集时间为3月、4月、5月、6月和8月
+* 数据将在每个月的第一天和第二十天收集
+* 此计划没有结束日期、只能通过运行`SMcli -supportBundle schedule disable`命令来停止
+
+
+[listing]
+----
+SMcli -supportBundle schedule enable eng_stor1 startTime=04:00
+startDate=05:01:2013 months=[March April May June August] onDays=[1 21]
+----
+第三个示例是满足以下收集支持包数据标准的每月/每年计划：
+
+* 存储阵列名称是firmware_2
+* 收集开始时间为22：00 (晚上10：00)
+* 开始日期为2013年5月1日5：01：2013 (2013年5月1日)
+* 数据收集时间为3月、4月、5月、6月和8月
+* 数据将在每个月第一周的星期五收集
+* 此计划将于2014年5月10日5：10结束
+
+
+[listing]
+----
+SMcli -supportBundle schedule enable firmware_2 startTime=22:00
+startDate=05:01:2013 endDate=05:10:2014 months=[March April May June August]
+weekNumber=First dayOfWeek=Friday
+----
+
+
+== 最低固件级别
+
+7.83.

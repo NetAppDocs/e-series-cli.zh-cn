@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/set-tray-attribute.html 
+sidebar: sidebar 
+keywords: set, tray, attribute 
+summary: set tray命令用于为托盘设置用户定义的属性 
+---
+= 设置托盘属性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set tray`命令可为托盘设置用户定义的属性
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set tray pass:quotes[[_trayID_]] (chassisName | assetTag)=pass:quotes["_userID_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`托盘`
+ a| 
+标识要为其设置属性的特定托盘。托盘ID值为0到99。您必须将磁盘机箱ID值括起来([])。
+
+
+
+ a| 
+`chassisname`
+ a| 
+用于指定新机箱的机箱名称或编号。机箱名称可以是字母数字字符的任意组合、最大长度为32个字符。字母字符可以是大写或小写。您也可以使用下划线字符(_)和连字符(-)。机箱名称不能使用空格。您必须将机箱名称括在引号("")内。
+
+
+
+ a| 
+`ASSETTAG`
+ a| 
+用于指定新机箱的资产标记名称或编号。资产标记可以是字母数字字符的任意组合、最大长度为10个字符。字母字符可以是大写或小写。您也可以使用下划线字符(_)和连字符(-)。资产标记名称中不能使用空格。您必须将资产标记名称括在引号("")内。
+
+|===
+
+
+== 最低固件级别
+
+6.16

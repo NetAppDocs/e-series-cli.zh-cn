@@ -1,0 +1,73 @@
+---
+permalink: commands-a-z/set-drive-operationalstate.html 
+sidebar: sidebar 
+keywords: set, drive, state 
+summary: set drive operationalState命令可将驱动器设置为故障状态。 
+---
+= 设置驱动器状态
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set drive operationalState`命令可将驱动器设置为故障状态。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+要将驱动器返回到最佳状态、请使用`revve drive`命令。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]] operationalState=failed [copyDrive]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`d驱动器`
+ a| 
+对于大容量驱动器托盘、请指定驱动器的托盘ID值、抽盒ID值和插槽ID值。对于低容量驱动器托盘、请指定驱动器的托盘ID值和插槽ID值。托盘ID值为`0`到`99`。抽盒ID值为`1`到`5`。
+
+所有插槽ID最大值均为24。插槽ID值从0或1开始、具体取决于托盘型号。与E2800和E5700控制器兼容的驱动器托盘的插槽ID编号从0开始。与E2700和E5600控制器兼容的驱动器托盘的插槽ID编号从1开始。
+
+将托盘ID值、抽盒ID值和插槽ID值括在方括号()中。
+
+|===
+
+
+== 注释：
+
+`d驱动器`参数既支持高容量驱动器托盘、也支持低容量驱动器托盘。高容量驱动器托盘具有用于容纳驱动器的抽盒。抽盒滑出驱动器托盘、以便可以访问驱动器。低容量驱动器托盘没有抽屉。对于大容量驱动器托盘、您必须指定驱动器托盘的标识符(ID)、抽盒ID以及驱动器所在插槽的ID。对于低容量驱动器托盘、只需指定驱动器托盘的ID以及驱动器所在插槽的ID即可。对于低容量驱动器托盘、确定驱动器位置的另一种方法是指定驱动器托盘的ID、将抽盒的ID设置为`0`、并指定驱动器所在插槽的ID。
+
+
+
+== 最低固件级别
+
+5.20
+
+7.60添加` rawerID_`用户输入。

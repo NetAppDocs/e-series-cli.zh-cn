@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/reset-storagearray-socbaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, soc, baseline 
+summary: 'reset storageArray SOCBaseline命令可重置通过控制器访问的所有片上交换机(SOC)设备的基线。' 
+---
+= 重置存储阵列SOC基线
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`reset storageArray SOCBaseline`命令可重置通过控制器访问的所有片上交换机(SOC)设备的基线。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+此命令会将所有SOC计数设置为0、从而重置基线。此命令仅适用于仲裁环路拓扑中的光纤通道设备。
+
+
+
+== 语法
+
+[listing]
+----
+reset storageArray SOCBaseline
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+6.16

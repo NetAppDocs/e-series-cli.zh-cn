@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/download-storagearray-drivefirmware-file.html 
+sidebar: sidebar 
+keywords: download, storage, array, drive, firmware, command, images, roles, supported 
+summary: download storageArray driveFirmware file命令可将固件映像下载到存储阵列中的所有驱动器。 
+---
+= 下载存储阵列驱动器固件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`dload storageArray driveFirmware file`命令可将固件映像下载到存储阵列中的所有驱动器。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[download storageArray driveFirmware file="_filename_"]
+pass:quotes[[file="_filename2_"... file="_filenameN_"]]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+包含固件映像的文件的文件路径和文件名。将固件映像的文件路径和文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\CLI\dnld\smadrvfrm.dpl"`
+
+有效文件名的扩展名为`。lp`。
+
+|===
+
+
+== 注释：
+
+运行此命令时、您可以将多个固件映像文件下载到存储阵列中的驱动器。您可以下载的固件映像文件数量取决于存储阵列。如果您尝试下载的固件映像文件数超过存储阵列可以接受的数量、则存储管理软件将返回错误。
+
+您可以同时为多个驱动器计划下载、包括一个冗余卷组中的多个驱动器。每个固件映像文件都包含有关运行固件映像的驱动器类型的信息。指定的固件映像只能下载到兼容驱动器。使用`download drive firmware`命令将固件映像下载到特定驱动器。
+
+`download storageArray driveFirmware`命令会阻止所有I/O活动、直到对每个候选驱动器进行下载尝试或运行`stop storageArray downloadDriveFirmware`命令为止。`d卸载storageArray driveFirmware`命令完成固件映像下载后、每个候选驱动器都会显示每个驱动器的下载状态。将返回以下状态之一：
+
+* 成功
+* 失败、但有原因
+* 无故尝试
+
+
+
+
+== 最低固件级别
+
+5.20

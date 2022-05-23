@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/set-volumecopy-target.html 
+sidebar: sidebar 
+keywords: set, volume, copy 
+summary: set volumeCopy target命令用于定义卷副本对的属性。 
+---
+= 设置卷副本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set volumeCopy target`命令可定义卷副本对的属性。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+对于固件版本7.83、不再使用`copyType=(online | offline)`参数。
+
+====
+此命令适用于Snapshot卷副本对。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set volumeCopy target pass:quotes[[_targetName_]]
+source pass:quotes[[_sourceName_]]
+[copyPriority=(highest | high | medium | low | lowest)]
+[targetReadOnlyEnabled=(TRUE | FALSE)]
+[copyType=(online | offline)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`目标`
+ a| 
+要将数据复制到的卷的名称。将目标卷名称用方括号([])括起来。如果目标卷名称包含特殊字符或数字、则必须将目标卷名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`s源`
+ a| 
+要从中复制数据的卷的名称。将源卷名称用方括号([])括起来。如果源卷名称包含特殊字符或数字、则必须将源卷名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`copyPriority`
+ a| 
+卷副本相对于主机I/O活动的优先级。有效值为`最高`、`高`、`m中`、`低`或`最低`。
+
+
+
+ a| 
+`targetReadOnlyEnabled`
+ a| 
+此设置可用于向目标卷写入数据或仅从目标卷读取数据。要写入目标卷、请将此参数设置为`false`。要防止写入目标卷、请将此参数设置为`true`。
+
+
+
+ a| 
+`copyType`
+ a| 
+[NOTE]
+====
+此参数已弃用。
+
+====
+|===
+
+
+== 注释：
+
+使用此命令时、您可以指定一个或多个可选参数。
+
+
+
+== 最低固件级别
+
+5.40
+
+7.83删除`copyType=(online | offline)`参数。

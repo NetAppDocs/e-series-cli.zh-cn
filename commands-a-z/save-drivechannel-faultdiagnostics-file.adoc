@@ -1,0 +1,76 @@
+---
+permalink: commands-a-z/save-drivechannel-faultdiagnostics-file.html 
+sidebar: sidebar 
+keywords: save, drive, channel, fault, isolation, diagnostic, status 
+summary: save driveChannel faultDiagnostics file命令用于保存从start driveChannel faultDiagnostics命令返回的驱动器通道故障隔离诊断数据。 
+---
+= 保存驱动器通道故障隔离诊断状态
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sve driveChannel faultDiagnostics file`命令可保存从`sStart driveChannel faultDiagnostics`命令返回的驱动器通道故障隔离诊断数据。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+对于固件版本8.10、已弃用`sve driveChannel faultDiagnostics`命令。
+
+====
+您可以将诊断数据保存为标准文本或XML文件。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save driveChannel faultDiagnostics file=pass:quotes["_filename_"]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+要在驱动器通道上保存故障隔离诊断测试结果的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\cli\sup\fltdiag.txt "`
+
+此命令不会自动向保存的文件附加文件扩展名。输入文件名时、必须指定文件扩展名。
+
+|===
+
+
+== 注释：
+
+文件扩展名不会自动附加到保存的文件中。您必须为文件指定适用的格式文件扩展名。如果指定文件扩展名`.txt`、则输出将采用文本文件格式。如果指定文件扩展名`.xml`、则输出将采用XML文件格式。
+
+
+
+== 最低固件级别
+
+7.15为原有控制器托盘引入了这一新功能。

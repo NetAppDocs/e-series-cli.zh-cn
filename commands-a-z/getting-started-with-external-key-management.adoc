@@ -1,0 +1,43 @@
+---
+permalink: commands-a-z/getting-started-with-external-key-management.html 
+sidebar: sidebar 
+keywords: security, key, string, characters, shared, secure, drives, controllers, storage, array, external, management, maintain, server 
+summary: 安全密钥是一个字符串、在存储阵列中启用了安全保护的驱动器和控制器之间共享。使用外部密钥管理时、您可以在密钥管理服务器上创建和维护安全密钥 
+---
+= 外部密钥管理入门
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+安全密钥是一个字符串、在存储阵列中启用了安全保护的驱动器和控制器之间共享。使用外部密钥管理时、您可以在密钥管理服务器上创建和维护安全密钥
+
+有关使用外部密钥管理服务器和安全密钥的概念信息、请参见SANtricity System Manager联机帮助。
+
+下面是实施外部安全密钥的基本工作流：
+
+. *生成证书签名请求*
+. *从KMIP服务器获取客户端和服务器证书*
+. *安装客户端证书*
+. *设置KMIP服务器的IP地址和端口号*
+. *测试与KMIP服务器的通信*
+. *创建存储阵列安全密钥*
+. *验证安全密钥*
+
+
+
+
+== 工作流步骤
+
+证书管理和外部密钥管理都是SANtricity11.40版本的新安全功能。要开始使用、请执行以下基本步骤：
+
+. 使用`save storageArray keyManagementClientCSR`命令生成证书签名请求。请参见 xref:save-storagearray-keymanagementclientcsr.adoc[生成密钥管理证书签名请求]。
+. 从KMIP服务器请求客户端和服务器证书。
+. 使用`download storageArray keyManagementCertificate`命令并将`certificateType`参数设置为`client`来安装客户端证书。请参见 xref:download-storagearray-keymanagementcertificate.adoc[安装存储阵列外部密钥管理证书]。
+. 使用`download storageArray keyManagementCertificate`命令并将`certificateType`参数设置为`server`来安装服务器证书。请参见 xref:download-storagearray-keymanagementcertificate.adoc[安装存储阵列外部密钥管理证书]。
+. 使用`set storageArray externalKeyManagement`命令设置密钥管理服务器的IP地址和端口号。请参见 xref:set-storagearray-externalkeymanagement.adoc[设置外部密钥管理设置]。
+. 使用`sStart storageArray externalKeyManagement test`命令测试与外部密钥管理服务器的通信。请参见 xref:start-storagearray-externalkeymanagement-test.adoc[测试外部密钥管理通信]。
+. 使用`create storageArray securityKey`命令创建安全密钥。请参见 xref:create-storagearray-securitykey.adoc[创建安全密钥]。
+. 使用`validate storageArray securityKey`命令验证安全密钥。请参见 xref:validate-storagearray-securitykey.adoc[验证内部或外部安全密钥]。
+

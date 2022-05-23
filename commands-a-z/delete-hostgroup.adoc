@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/delete-hostgroup.html 
+sidebar: sidebar 
+keywords: delete, hostgroup, command, support, role 
+summary: delete hostGroup命令可删除主机组。 
+---
+= 删除主机组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`delete hostGroup`命令可删除主机组。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+*可能损坏存储阵列配置*-此命令将删除主机组中的所有主机定义。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete hostGroup [_hostGroupName_]]
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`hostGroup`
+ a| 
+要删除的主机组的名称。将主机组名称用方括号([])括起来。如果主机组名称包含特殊字符或仅包含数字、则必须将主机组名称用双引号("")括在方括号内。
+
+|===
+
+
+== 注释：
+
+主机组是一个可选的拓扑元素、它是共享对相同卷的访问的一组主机。主机组是一个逻辑实体。
+
+
+
+== 最低固件级别
+
+5.20

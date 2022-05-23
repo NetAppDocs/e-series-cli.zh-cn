@@ -1,0 +1,61 @@
+---
+permalink: get-started/formatting-cli-commands.html 
+sidebar: sidebar 
+keywords: format, rules, cli, commands 
+summary: 在Windows、Linux或Solaris操作系统上运行CLI命令和脚本命令时、需要特别注意名称或标签中使用的双引号。 
+---
+= CLI命令的格式规则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+在Windows、Linux或Solaris操作系统上运行CLI命令和脚本命令时、需要特别注意名称或标签中使用的双引号("")。
+
+如果名称或值包含双引号("")、则必须在每个双引号字符前面插入反斜杠(\)。
+
+例如：
+
+[listing]
+----
+-c "set storageArray userLabel=\"Engineering\";"
+----
+在此示例中、"工程"是存储阵列名称。
+
+第二个示例是：
+
+[listing]
+----
+-n \"My\"_Array
+----
+在此示例中、"My"_Array是存储阵列的名称。
+
+您不能在脚本命令中使用双引号("")作为字符串(也称为字符串文字)的一部分。例如、您不能输入以下字符串将存储阵列名称设置为"Finance" Array：
+
+[listing]
+----
+-c "set storageArray userLabel=\"\"Finance\"Array\";"
+----
+在Windows操作系统中、如果名称不使用双引号("")、则必须在每个特殊脚本字符之前插入一个记号(｛caret｝)。特殊字符包括｛caret｝、|、<和>。
+
+在与终端`-n`、`-o`、`-f`和`-p`结合使用时、在每个特殊脚本字符之前插入一个脱字号。例如、要指定存储阵列cli>client、请输入以下字符串：
+
+[listing]
+----
+-n CLI^>CLIENT
+----
+在脚本命令的字符串文字中使用时、在每个特殊脚本字符之前插入一个插入符号(｛caret｝)。例如、要将存储阵列的名称更改为finance_|_payl哪些、请输入以下字符串：
+
+[listing]
+----
+-c "set storageArray userLabel=\"FINANCE_^|_PAYROLL\";"
+----
+[NOTE]
+====
+在命令提示符处发出SMcli命令时、使用Windows操作系统时、输入或输出文件的文件路径名称中需要额外的反斜杠(`\`)字符作为转义字符。在安全https模式下使用SMcli时、必须包含额外的反斜杠(`\`)、方法是提供-u选项以指定基于角色的访问管理用户。* 示例： *
+
+[listing]
+----
+C:\\dir\\subdir\\filename
+----
+====

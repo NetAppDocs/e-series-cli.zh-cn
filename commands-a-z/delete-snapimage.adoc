@@ -1,0 +1,127 @@
+---
+permalink: commands-a-z/delete-snapimage.html 
+sidebar: sidebar 
+keywords: delete, snapimage, command, snapshot, images, group, support, array, roles 
+summary: delete SnapImage命令可从快照组中删除一个或多个快照映像。 
+---
+= 删除快照映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`d删除SnapImage`命令可从快照组中删除一个或多个快照映像。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snapImage (snapGroup="snapGroupName" |
+snapGroups=("_snapGroupName1"
+... "snapGroupNamen_"))]
+[deleteCount=numberOfSnapImages]
+[retainCount=numberOfSnapImages]
+[ignoreSnapVolume=(TRUE | FALSE)]
+[snapImageID=OLDEST]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`snapGroup`
+ a| 
+包含要删除的快照映像的快照组的名称。将快照组的名称用双引号("")括起来。
+
+
+
+ a| 
+`snapGroups`
+ a| 
+包含要删除的快照映像的多个快照组的名称。使用以下规则输入快照组的名称：
+
+* 将所有名称用圆括号括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+
+
+ a| 
+`dDeleteCount`
+ a| 
+要从快照组中删除的快照映像的数量。使用整数值。
+
+此参数首先删除最旧的快照映像、并继续删除最旧的快照映像、直到达到您输入的数字为止。
+
+如果输入的数量大于快照组中所有快照映像的实际数量、则所有快照映像都将被删除。快照组留空。
+
+
+
+ a| 
+`re数量`
+ a| 
+要保留在快照组中的快照映像数。使用整数值。
+
+此参数会将最新的快照映像保留在快照组中、并删除旧的快照映像。
+
+如果快照组中现有快照映像的数量小于输入的数量、则不会删除任何快照映像。
+
+
+
+ a| 
+`ignoreSnapVolume`
+ a| 
+使用此参数可确保您不会删除具有与快照映像关联的快照卷的快照映像。您可以使用以下值之一：
+
+* `true`—使用此值删除快照映像、即使该快照映像具有关联的快照卷也是如此。
+* `false`—当快照映像具有关联的快照卷时、使用此值保留快照映像。
+
+
+默认值为`true`。
+
+
+
+ a| 
+`snapImageID`
+ a| 
+`snapImageID`参数仅接受`oldest`选项。此参数将删除最早创建的快照映像。
+
+|===
+
+
+== 注释：
+
+您可以从快照组存储库卷中删除最旧的快照映像。删除的快照映像的定义将从系统中删除。从快照组存储库卷中删除的快照映像占用的空间将被释放、并可在快照组中重复使用。
+
+如果未将任何其他参数与`snapGroup`参数或`snapGroups`参数结合使用、则默认情况下会删除最旧的快照映像。
+
+删除快照映像后、为快照映像过渡到stopped状态而存在的任何快照卷。
+
+当控制器处于锁定模式时、此命令不会运行。
+
+
+
+== 最低固件级别
+
+7.83.

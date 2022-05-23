@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/set-drive-securityid.html 
+sidebar: sidebar 
+keywords: set, fips, drive, security, identifier 
+summary: set drive securityID命令用于将FIPS驱动器重置回原始制造商设置。 
+---
+= 设置FIPS驱动器安全标识符
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set drive securityID`命令将FIPS驱动器重置回原始制造商设置。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令会将FIPS驱动器重置回原始制造商设置、并擦除所有现有驱动器数据。此操作是完全不可逆的。如果由于安全密钥文件无效或缺失或密码短语未知而锁定驱动器、则可能需要执行此操作。所有现有驱动器数据都将被擦除。
+
+====
+要擦除FDE驱动器、请使用`sStart secureErase`命令。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]] securityID="string"
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`d驱动器`
+ a| 
+对于大容量驱动器托盘、请指定驱动器的托盘ID值、抽盒ID值和插槽ID值。对于低容量驱动器托盘、请指定驱动器的托盘ID值和插槽ID值。托盘ID值为`0`到`99`。抽盒ID值为`1`到`5`。
+
+所有插槽ID最大值均为24。插槽ID值从0或1开始、具体取决于托盘型号。与E2800和E5700控制器兼容的驱动器托盘的插槽ID编号从0开始。与E2700和E5600控制器兼容的驱动器托盘的插槽ID编号从1开始。
+
+将托盘ID值、抽盒ID值和插槽ID值括在方括号()中。
+
+
+
+ a| 
+`securityID`
+ a| 
+要擦除的驱动器的安全ID、以字符串形式显示。此字符串最多可以包含32个字符。安全ID的形式因制造商而异。
+
+[NOTE]
+====
+要查找安全ID、请移除驱动器并读取箱标签上的安全ID。
+
+====
+|===
+
+
+== 注释：
+
+`d驱动器`参数既支持高容量驱动器托盘、也支持低容量驱动器托盘。高容量驱动器托盘具有用于容纳驱动器的抽盒。抽盒滑出驱动器托盘、以便可以访问驱动器。低容量驱动器托盘没有抽屉。对于大容量驱动器托盘、您必须指定驱动器托盘的标识符(ID)、抽盒ID以及驱动器所在插槽的ID。对于低容量驱动器托盘、只需指定驱动器托盘的ID以及驱动器所在插槽的ID即可。对于低容量驱动器托盘、确定驱动器位置的另一种方法是指定驱动器托盘的ID、将抽盒的ID设置为`0`、并指定驱动器所在插槽的ID。
+
+
+
+== 示例
+
+[listing]
+----
+set drive [1,31,4] securityID="V2zdvLTdGWdWyTALGHns";
+----
+
+
+== 最低固件级别
+
+8.25

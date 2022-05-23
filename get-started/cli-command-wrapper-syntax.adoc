@@ -1,0 +1,139 @@
+---
+permalink: get-started/cli-command-wrapper-syntax.html 
+sidebar: sidebar 
+keywords: cli, command, wrapper, syntax 
+summary: 本节列出了命令行界面命令包装程序的一般语法形式。 
+---
+= CLI命令包装器语法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+本节列出了命令行界面命令包装程序的一般语法形式。下表列出了CLI命令包装器语法中使用的约定。
+
+[cols="2*"]
+|===
+| 约定 | 定义 
+
+
+ a| 
+`A` b
+ a| 
+备选项("A"或"b")
+
+
+
+ a| 
+`斜体字词_`
+ a| 
+需要用户输入来完成参数(对变量的响应)
+
+
+
+ a| 
+`+... ]+`(方括号)
+ a| 
+零个或一次出现(方括号也用作某些命令参数的分隔符)
+
+
+
+ a| 
+`+｛... ｝+`(花括号)
+ a| 
+零个或多个发生
+
+
+
+ a| 
+`(a` b c)
+ a| 
+请仅选择一种备选方案
+
+
+
+ a| 
+`A和` b
+ a| 
+和/或。这用于https客户端模式、此时您可以对一个或两个控制器IP地址使用。这样、如果一个控制器无响应、SMcli将使用备用IP地址。此外、还包括需要两个IP地址的情况、例如固件下载。
+
+|===
+[NOTE]
+====
+要运行所有命令行界面命令、您必须具有管理员权限。某些命令行界面命令将在没有管理员权限的情况下运行。但是、许多命令都无法运行。如果由于您没有正确的权限而无法运行CLI命令、则CLI将返回退出代码12。
+
+====
+
+
+== https客户端模式的示例
+
+以下示例演示了中所述的`https` client mode命令行参数 xref:command-line-parameters.adoc[命令行参数]。
+
+[listing]
+----
+SMcli (Controller A host-name-or-IP-address&|
+Controller B host-name-or-IP-address)  -u username -p password -c "commands;" [-clientType (auto | https | symbol)]
+----
+[NOTE]
+====
+如果未指定`clientType`、但包含`-u`选项和`username`变量、则系统将使用`https`或`symbol` client模式、以任何可用模式为准。
+
+====
+
+
+== 符号客户端模式的示例
+
+以下示例演示了中所述的`symbol` client mode命令行参数 xref:command-line-parameters.adoc[命令行参数]。
+
+[listing]
+----
+SMcli **-a** **email:** email-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-I** information-to-include] [**-q** frequency] [**-S**]
+----
+[NOTE]
+====
+E2800或E5700存储阵列不支持` a`命令行选项。
+
+====
+[listing]
+----
+SMcli **-x** **email:** email-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-S**]
+----
+[NOTE]
+====
+E2800或E5700存储阵列不支持`-x`命令行选项。
+
+====
+[listing]
+----
+SMcli (**-a** | **-x**) **trap:** community, host-name-or-IP-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-S**]
+----
+[NOTE]
+====
+E2800或E5700存储阵列不支持` a`和`-x`命令行选项。
+
+====
+[listing]
+----
+SMcli **-d** [**-w**] [**-i**] [**-s**] [**-v**] [**-S**]
+----
+[NOTE]
+====
+E2800或E5700存储阵列不支持`-s`命令行选项。
+
+====
+[listing]
+----
+SMcli host-name-or-IP-address **-F** email-address [**-g** contactInfoFile] [**-S**]
+----
+[listing]
+----
+SMcli **-A** [host-name-or-IP-address [host-name-or-IP-address]] [**-S**]
+----
+[listing]
+----
+SMcli **-X **(**-n** storage-system-name | **-w** wwID | **-h** host-name)
+----
+[listing]
+----
+SMcli **-?**
+----

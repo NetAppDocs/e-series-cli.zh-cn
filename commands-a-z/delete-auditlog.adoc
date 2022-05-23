@@ -1,0 +1,99 @@
+---
+permalink: commands-a-z/delete-auditlog.html 
+sidebar: sidebar 
+keywords: delete, audit, log, records 
+summary: delete Audit日志命令会删除审核日志中的部分或全部记录。 
+---
+= 删除审核日志记录
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`d删除审核日志`命令可删除审核日志中的部分或全部记录。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+delete auditLog (all | (endRecord=pass:quotes[_timestamp_ | endDate=_date_) |
+ (retentionCount=_integer_))]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`全部`
+ a| 
+用于删除所有审核日志记录。
+
+
+
+ a| 
+`endRecord`
+ a| 
+用于指定要从最早的记录开始删除的结束记录。该值是一个整体值、表示最后一个审核日志记录的时间戳(包括在内)。
+
+
+
+ a| 
+`endDate`
+ a| 
+用于指定从最旧记录开始删除的结束日期。在客户端时区中、输入日期的格式为MM：DD：YY。
+
+[NOTE]
+====
+审核日志记录(包括指定日期)将被删除。
+
+====
+
+
+ a| 
+`retentionCount`
+ a| 
+用于指定要保留的最新审核日志记录的数量。
+
+|===
+
+
+== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete auditLog all;"
+
+SMcli -n Array1 -c "delete auditLog endRecord=1493070393313;"
+
+SMcli -n Array1 -c "delete auditLog endDate=04:30:17;"
+
+SMcli -n Array1 -c "delete auditLog retentionCount=1000;"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

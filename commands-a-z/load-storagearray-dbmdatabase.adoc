@@ -1,0 +1,117 @@
+---
+permalink: commands-a-z/load-storagearray-dbmdatabase.html 
+sidebar: sidebar 
+keywords: load, storage array, database, command, management 
+summary: 'load storageArray dbmDatabase命令可通过从文件或缓存中检索数据库管理(DBM)数据库映像。' 
+---
+= 加载存储阵列DBM数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`load storageArray dbmDatabase`命令可通过从文件或缓存中检索数据库管理(DBM)数据库映像。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+此命令会将存储阵列DBM数据库还原为使用`save storageArray dbmDatabase`命令捕获数据库映像时所存在的精确配置。文件中的数据包括RAID配置、卷组和磁盘池的数据。
+
+在将此命令与`file`选项结合使用之前、您必须先从技术支持获取验证程序字符串(安全代码)。要获取验证程序、请使用`save storageArray dbmValidatorInfo`命令生成包含验证程序信息的XML文件。技术支持使用XML文件生成此命令所需的验证程序字符串。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+load storageArray dbmDatabase
+pass:quotes[((file="_filename_" validator="_validatorValue_") | sourceLocation=onboard)]
+[controller [(a|b)]]
+[contentType= all]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+要上传的DBM数据库的文件路径和文件名。将文件名用双引号("")括起来。例如：
+
+`file="C：\Array Backups\DBMbackup_03302010.bdm"`此命令不会自动将文件扩展名附加到已保存的文件。输入文件名时、必须指定文件扩展名。
+
+
+
+ a| 
+`验证器`
+ a| 
+将存储阵列还原到现有配置所需的字母数字安全代码。
+
+您必须从技术支持处获取验证程序。要获取验证程序、请运行`save storageArray dbmValidatorInfo`命令生成所需的验证信息XML文件。验证信息XML文件可用后、请联系技术支持以获取验证程序。
+
+将验证程序用双引号("")括起来。
+
+
+
+ a| 
+`sSourceLocation`
+ a| 
+此参数指定用于检索备份数据库信息的位置。为确保一致性、必须包含参数、但唯一允许的值为`板载`。
+
+
+
+ a| 
+`控制器`
+ a| 
+此参数指定将从其中专门检索数据的控制器。将控制器标识符括在方括号()中。如果未指定`controller`参数、则可以从任一控制器检索数据。
+
+有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器
+
+
+
+ a| 
+`contentType`
+ a| 
+此参数指定要检索的数据的内容类型。
+
+默认情况下、此参数设置为`All`、以便检索包括磁盘池配置数据在内的所有数据。
+
+|===
+
+
+== 注释：
+
+根据数据库映像的大小、还原数据库可能需要长达30分钟的时间。只有在控制器上完成所有加载数据库映像的操作之后、主机软件才会显示控制器处于最佳状态。
+
+
+
+== 最低固件级别
+
+7.75
+
+7.83添加了以下参数：
+
+* `sSourceLocation`
+* `控制器`
+* `contentType`
+

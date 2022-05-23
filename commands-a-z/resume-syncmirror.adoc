@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/resume-syncmirror.html 
+sidebar: sidebar 
+keywords: resume, synchronous, mirroring 
+summary: resume SyncMirror 命令可恢复已暂停的同步镜像操作。 
+---
+= 恢复同步镜像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`reume SyncMirror`命令可恢复已暂停的同步镜像操作。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+在先前版本的此命令中、功能标识符为`remoteMirror`。此功能标识符不再有效、并替换为`SyncMirror`。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+resume syncMirror (primary pass:quotes[[_volumeName_]] |
+primaries pass:quotes[[_volumeName1 ... volumeNameN_]])
+[writeConsistency=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`主卷`
+ a| 
+要恢复同步镜像操作的主卷的名称。将主卷名称用方括号([])括起来。如果主卷名称包含特殊字符或数字、则必须将主卷名称用双引号("")括在方括号内。
+
+
+
+ a| 
+`主卷`
+ a| 
+要恢复同步镜像操作的多个主卷的名称。使用以下规则输入主卷的名称：
+
+* 请将所有名称用方括号([])括起来。
+* 使用空格分隔每个名称。
+
+
+如果主卷名称包含特殊字符或仅包含数字、请使用以下规则输入名称：
+
+* 请将所有名称用方括号([])括起来。
+* 请将每个名称用双引号("")括起来。
+* 使用空格分隔每个名称。
+
+
+
+
+ a| 
+`写入并发性`
+ a| 
+用于标识此命令中属于写入一致性组或独立卷的设置。要使卷位于同一写入一致性组中、请将此参数设置为`true`。要使卷分开、请将此参数设置为`false`。
+
+|===
+
+
+== 注释：
+
+如果将`writeConsistency`参数设置为`true`、则卷必须位于一个或多个写入一致性组中。此命令将恢复包含卷的所有写入一致性组。例如、如果卷A、B和C位于写入一致性组中、并且它们具有远程对等项A`'、B`'和C`'、则`rebrume SyncMirror volume ["A"] writeConsistency=true`命令将恢复A-A`、B-B`'和C-C`。
+
+
+
+== 最低固件级别
+
+6.10

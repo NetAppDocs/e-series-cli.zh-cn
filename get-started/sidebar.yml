@@ -1,0 +1,52 @@
+---
+section: get-started
+title: 入门
+entries:
+- title: 新增功能
+  url: "/get-started/changes-in-the-cli-and-script-commands-in-this-release.html"
+- title: 命令格式化
+  entries:
+  - title: 概述
+    url: "/get-started/overview-format-commands.html"
+  - title: CLI结构
+    entries:
+    - title: CLI命令的结构
+      url: "/get-started/structure-of-a-cli-command.html"
+    - title: 交互模式
+      url: "/get-started/interactive-mode.html"
+    - title: CLI包装器语法
+      url: "/get-started/cli-command-wrapper-syntax.html"
+    - title: CLI参数
+      url: "/get-started/command-line-parameters.html"
+  - title: 脚本命令结构
+    entries:
+    - title: 脚本命令的结构
+      url: "/get-started/structure-of-a-script-command.html"
+    - title: 脚本命令摘要
+      url: "/get-started/synopsis-of-the-script-commands.html"
+    - title: 重复语法元素
+      url: "/get-started/recurring-syntax-elements.html"
+  - title: 命名约定
+    url: "/get-started/naming-conventions.html"
+  - title: 格式规则
+    entries:
+    - title: CLI命令
+      url: "/get-started/formatting-cli-commands.html"
+    - title: 脚本命令
+      url: "/get-started/formatting-rules-for-script-commands.html"
+    - title: Windows PowerShell
+      url: "/get-started/formatting-cli-commands-in-windows-powershell.html"
+  - title: 详细的错误报告
+    url: "/get-started/detailed-error-reporting.html"
+  - title: 退出状态
+    url: "/get-started/exit-status.html"
+  - title: 向脚本文件添加注释
+    url: "/get-started/adding-comments-to-a-script-file.html"
+  - title: 脚本命令准则
+    url: "/get-started/usage-guidelines.html"
+  - title: 固件兼容性级别
+    url: "/get-started/firmware-compatibility-levels.html"
+- title: SMcli https模式
+  url: "/get-started/new-https-mode.html"
+- title: 卷组迁移
+  url: "/get-started/learn-about-volume-group-migration.html"

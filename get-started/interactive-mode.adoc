@@ -1,0 +1,17 @@
+---
+permalink: get-started/interactive-mode.html 
+sidebar: sidebar 
+keywords: interactive mode 
+summary: '如果输入`SMcli`和存储阵列名称、但未指定CLI参数、脚本命令或脚本文件、则命令行界面将以交互模式运行。' 
+---
+= 交互模式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+如果输入`SMcli`和存储阵列名称、但未指定CLI参数、脚本命令或脚本文件、则命令行界面将以交互模式运行。通过交互模式、您可以运行各个命令、而无需使用`SMcli`预先修复命令。
+
+在交互模式下、您可以输入一个命令、查看结果并输入下一个命令、而无需键入完整的`SMcli`字符串。交互模式对于确定配置错误和快速测试配置更改非常有用。
+
+要结束交互模式会话、请键入操作系统专用的命令。对于Linux、此密钥组合为*控制D-*。对于Windows、此密钥组合为*控制-Z +输入*。

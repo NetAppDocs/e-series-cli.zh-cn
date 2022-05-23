@@ -1,0 +1,141 @@
+---
+permalink: commands-a-z/create-volumecopy.html 
+sidebar: sidebar 
+keywords: create, volume, copy 
+summary: create volumeCopy命令用于创建卷副本并启动卷副本操作。此命令适用于Snapshot映像卷副本对。 
+---
+= 创建卷副本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`create volumeCopy`命令可创建卷副本并启动卷副本操作。此命令适用于Snapshot映像卷副本对。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+启动卷复制操作将覆盖目标卷上的所有现有数据、使目标卷对主机只读、并使与目标卷关联的所有Snapshot映像卷(如果存在)发生故障。如果您之前已将目标卷用作副本、请确保不再需要数据或已对其进行备份。
+
+====
+此命令可通过两种方式创建卷副本：
+
+* 不带快照映像的卷副本、也称为_offliner_卷副本
+* 带有快照映像的卷副本、也称为_online卷副本
+
+
+如果使用不带Snapshot映像的卷副本、则在复制操作完成之前、无法向源卷写入数据。如果要在复制操作完成之前能够写入源卷、请使用卷副本和快照映像。您可以通过命令语法中的可选参数选择具有快照映像的卷副本。
+
+使用快照映像完成卷复制操作后、快照映像将被删除、快照卷将被禁用。
+
+[NOTE]
+====
+一次最多可以有八个卷副本。如果您尝试一次创建八个以上的卷副本、则控制器将返回"Pending"状态、直到正在创建的一个卷副本完成并返回"complete"状态。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+create volumeCopy source=pass:quotes[_"sourceName"_
+target="_targetName_"]
+[copyPriority=(highest | high | medium | low | lowest)]
+[targetReadOnlyEnabled=(TRUE | FALSE)]
+[copyType=(offline | online)]
+[repositoryPercentOfBase=(20 | 40 | 60 | 120 | default)]
+[repositoryGroupPreference=(sameAsSource | otherThanSource | default)]
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`s源`
+ a| 
+要用作源卷的现有卷的名称。将源卷名称用双引号("")括起来。
+
+
+
+ a| 
+`目标`
+ a| 
+要用作目标卷的现有卷的名称。将目标卷名称用双引号("")括起来。
+
+
+
+ a| 
+`copyPriority`
+ a| 
+卷副本相对于主机I/O活动的优先级。有效值为`最高`、`高`、`m中`、`低`或`最低`。
+
+
+
+ a| 
+`targetReadOnlyEnabled`
+ a| 
+此设置可用于向目标卷写入数据或仅从目标卷读取数据。要写入目标卷、请将此参数设置为`false`。要防止写入目标卷、请将此参数设置为`true`。
+
+
+
+ a| 
+`copyType`
+ a| 
+使用此参数创建具有快照映像的卷副本。通过使用快照映像创建卷副本、您可以在创建卷副本时继续向源卷写入数据。要使用快照映像创建卷副本、请将此参数设置为`online`。要创建不带快照映像的卷副本、请将此参数设置为`offline`。
+
+如果不使用此参数、则创建卷副本时不会创建快照映像。
+
+
+
+ a| 
+`repositoryPercentOfBase`
+ a| 
+此参数用于确定使用快照映像创建卷副本时快照映像的存储库卷大小。存储库卷的大小以源卷(也称为基础卷)的百分比表示。此参数的有效值为`20`、`40`、`60`、`120`和`default`。默认值为20。如果不使用此参数、则固件将使用20%的值。
+
+您必须将`copyType`参数与`repositoryPercentOfBase`参数结合使用。
+
+
+
+ a| 
+`repositoryGroupPreference`
+ a| 
+此参数用于确定将快照映像存储库卷写入到哪个卷组。您可以选择以下选项：
+
+* `sameAsSource`—如果空间可用、快照映像卷将写入与源卷相同的卷组。
+* `otherThassSource`—已弃用的参数。请勿使用
+* `default`—快照映像存储库卷将写入任何具有空间的卷组。
+
+
+要获得最佳性能、请使用`sameAsSource`选项。
+
+您必须将`copyType`参数与`repositoryGroupPreference`参数结合使用。
+
+|===
+
+
+== 注释：
+
+您可以对名称使用字母数字字符、发生的事件和下划线的任意组合。名称最多可以包含30个字符。
+
+复制优先级用于定义在源卷和卷副本对的目标卷之间复制数据所使用的系统资源量。如果选择最高优先级、则卷副本将使用最多的系统资源来执行卷复制、从而降低主机数据传输的性能。

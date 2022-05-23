@@ -1,0 +1,92 @@
+---
+permalink: commands-a-z/show-iscsisessions.html 
+sidebar: sidebar 
+keywords: show, current, iscsi, sessions 
+summary: show iscsiSessions命令可返回有关iSCSI启动程序或iSCSI目标的iSCSI会话的信息。 
+---
+= 显示当前iSCSI会话
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`siscsiSessions`命令可返回有关iSCSI启动程序或iSCSI目标的iSCSI会话的信息。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show iscsiInitiator pass:quotes[["_initiatorName_"] | <"iqn">] iscsiSessions
+----
+[listing, subs="+macros"]
+----
+show iscsiTarget pass:quotes[["_targetName_"] | <"iqn">] iscsiSessions
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`iscsiInitiator`
+ a| 
+要获取其会话信息的iSCSI启动程序的名称。
+
+如果iSCSI启动程序使用标签或别名、请将iSCSI启动程序标签或别名用双引号("")括在方括号([])内。
+
+如果iSCSI启动程序使用iSCSI限定名称(IQN)、请将IQN用双引号("")括在尖括号(<>)内。
+
+
+
+ a| 
+`iscsiTarget`
+ a| 
+要获取其会话信息的iSCSI目标的名称。
+
+如果iSCSI目标使用标签或别名、请将iSCSI目标标签或别名用双引号("")括在方括号([])内。
+
+如果iSCSI目标使用iSCSI限定名称(IQN)、请将IQN用双引号("")括在尖括号(<>)内。
+
+|===
+
+
+== 注释：
+
+如果输入此命令而未定义任何参数、则此命令将返回有关当前正在运行的所有iSCSI会话的信息。以下命令将返回有关所有当前iSCSI会话的信息：
+
+[listing]
+----
+show iscsiSessions
+----
+要限制返回的信息、请输入特定的iSCSI启动程序或特定的iSCSI目标。然后、此命令仅返回有关您命名的iSCSI启动程序或iSCSI目标的会话的信息。
+
+启动程序名称可以是长度为1到30个字符的任意字母或数字字符组合。IQN的长度最多可以包含255个字符、并且格式如下：
+
+[listing]
+----
+iqn.yyyy-mm.naming-authority:unique name
+----
+
+
+== 最低固件级别
+
+7.10.

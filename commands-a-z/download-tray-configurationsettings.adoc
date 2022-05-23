@@ -1,0 +1,80 @@
+---
+permalink: commands-a-z/download-tray-configurationsettings.html 
+sidebar: sidebar 
+keywords: download, tray, configuration, settings, commands, factory, default, drive, array, specific, storage, roles, support 
+summary: download tray configurationsettings命令可将出厂默认设置下载到存储阵列中的所有驱动器托盘或存储阵列中的特定驱动器托盘。 
+---
+= 下载托盘配置设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+命令`download tray configurationsettings`会将出厂默认设置下载到存储阵列中的所有驱动器托盘或存储阵列中的特定驱动器托盘。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[download (allTrays | tray [_trayID_]] configurationSettings
+pass:quotes[file="_filename_"]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`所有托盘`
+ a| 
+此参数会将新固件下载到存储阵列中的所有托盘。
+
+
+
+ a| 
+`托盘`
+ a| 
+包含要将新固件加载到的ESM卡的驱动器托架。托盘ID值为`0`到`99`。将托盘ID值用方括号()括起来。
+
+
+
+ a| 
+`文件`
+ a| 
+包含固件映像的文件的文件路径和文件名。将固件映像的文件路径和文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\CLI\dnld\dyset.dpl"`
+
+有效文件名的扩展名为`。lp`。
+
+|===
+
+
+== 注释：
+
+`tray`参数可将出厂默认配置设置下载到特定驱动器托盘如果需要将出厂默认配置设置下载到多个驱动器托盘、但并非所有驱动器托盘、则必须为每个驱动器托盘输入此命令
+
+
+
+== 最低固件级别
+
+7.75

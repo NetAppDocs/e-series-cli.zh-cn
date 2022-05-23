@@ -1,0 +1,48 @@
+---
+permalink: commands-a-z/show-storagearray-unconfiguredinitiators.html 
+sidebar: sidebar 
+keywords: show, unconfigured, initiators 
+summary: show storageArray unconfiguredInitiators命令可返回存储阵列检测到但尚未配置到存储阵列拓扑中的启动程序列表。 
+---
+= 显示未配置的启动程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray unconfiguredInitiators`命令可返回存储阵列检测到但尚未配置到存储阵列拓扑中的启动程序列表。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+
+此命令将替换 link:show-storagearray-unconfigurediscsiinitiators.html["show storageArray unconfiguredIscsiInitiators"] 命令：
+
+
+
+== 语法
+
+[listing]
+----
+show storageArray unconfiguredInitiators
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+8.50

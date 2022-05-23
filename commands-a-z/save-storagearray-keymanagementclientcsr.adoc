@@ -1,0 +1,130 @@
+---
+permalink: commands-a-z/save-storagearray-keymanagementclientcsr.html 
+sidebar: sidebar 
+keywords: generate, key, management, certificate, sign, request, csr 
+summary: save storageArray keyManagementClientCSR命令会请求为存储阵列生成一个CSR、您可以将其保存到文件中。 
+---
+= 生成密钥管理证书签名请求(CSR)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstorageArray keyManagementClientCSR`命令会为存储阵列请求生成CSR、您可以将其保存到文件中。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令仅适用于外部密钥管理。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+
+save storageArray keyManagementClientCSR commonName=pass:quotes["_common_name_"]
+organization=pass:quotes["_organization_"]
+locality=pass:quotes["_locality_"]
+country=pass:quotes["_country_"]
+file=pass:quotes["_file_"]
+[organizationalUnit=pass:quotes["_organizational unit_"]]
+[stateProvince=pass:quotes["_state_province_"]]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`commonName`
+ a| 
+为此参数输入的值必须与KMIP服务器上定义的一个用户名匹配。
+
+
+
+ a| 
+`组织`
+ a| 
+用于指定存储阵列所属的组织的完整法定名称。请勿使用缩写形式、并加入任何后缀、例如Inc、Corp或LLC。
+
+
+
+ a| 
+`位置`
+ a| 
+用于指定存储阵列所在的城市或位置、
+
+
+
+ a| 
+`国家或地区`
+ a| 
+用于指定您所在国家/地区的两位数ISO (国际标准化组织) 3166-1 alpha-2代码、例如US。
+
+
+
+ a| 
+`文件`
+ a| 
+用于指定要保存控制器签名证书文件的文件和文件位置。
+
+
+
+ a| 
+`OrganizationalUnit`
+ a| 
+用于指定组织负责处理证书的部门。
+
+
+
+ a| 
+`sTateProvince`
+ a| 
+用于指定存储阵列所在的状态或区域。这不应简略。
+
+|===
+
+
+== 示例
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "save storageArray keyManagementClientCSR commonName=pass:quotes["_192.0.2.1_"]
+organization=pass:quotes["_Widgets Are Us_, _Inc_."]
+locality=pass:quotes["_sedgwick_"]
+country=pass:quotes["_US_"]
+file=pass:quotes["_latestCertificate_"]
+organizationalUnit=pass:quotes["_Products Unit_"]
+stateProvince=pass:quotes["_Kansas_"];"
+
+SMcli completed successfully.
+----
+
+
+== 最低固件级别
+
+8.40

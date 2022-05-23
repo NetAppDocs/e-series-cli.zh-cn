@@ -1,0 +1,122 @@
+---
+permalink: commands-a-z/set-snapvolume-converttoreadwrite.html 
+sidebar: sidebar 
+keywords: set, read-only, snapshot, volume, read/write, volume 
+summary: set snapVolume convertToReadWrite命令可将只读卷快照卷更改为读/写卷快照卷。 
+---
+= 将只读Snapshot卷设置为读/写卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`set snapVolume convertToReadWrite`命令可将只读卷的快照卷更改为读/写卷的快照卷。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+您也可以使用此命令为读/写卷确定新的存储库卷、或者为存储库卷设置全限制警告级别。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set snapVolume pass:quotes[["_snapImageVolumeName_"]] convertToReadWrite
+[(repositoryVolume="repos_xxxx" |
+repositoryVolume=pass:quotes[(_volumeGroupName_] [capacity=pass:quotes[_capacityValue_]])
+repositoryVolume=pass:quotes[(_diskPoolName_] [capacity=pass:quotes[_capacityValue_]))]]
+[repositoryFullLimit=pass:quotes[_percentValue_]]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`snapVolume`
+ a| 
+要从只读更改为读/写的快照卷的名称。将快照卷标识符用双引号("")括在方括号([])内。
+
+
+
+ a| 
+`repositoryVolume`
+ a| 
+要用于读/写卷的存储库卷的名称。
+
+您可以通过两个选项来定义存储库卷的名称：
+
+* 使用现有存储库卷：name
+* 运行此命令时、请创建一个新的存储库卷
+
+
+现有存储库卷的名称由两部分组成：
+
+* 术语"repos"
+* 存储管理软件分配给存储库卷名称的四位数字标识符
+
+
+将现有存储库卷的名称用双引号("")括起来。
+
+如果要在运行此命令时创建新的存储库卷、则必须输入要在其中创建存储库卷的卷组或磁盘池的名称。您也可以选择定义存储库卷的容量。如果要定义容量、可以使用以下值：
+
+* 一个整数值、表示基本卷容量的百分比
+* 一个小数值、表示基本卷容量的百分比
+* 存储库卷的特定大小。大小的单位为`字节`、`KB`、`MB`、`GB`或`TB`。
+
+
+如果不使用容量选项、则存储管理软件会将容量设置为基本卷容量的20%。
+
+运行此命令时、存储管理软件将为快照卷创建存储库卷。
+
+
+
+ a| 
+`repositoryFullLimit`
+ a| 
+收到快照映像存储库卷接近全满警告时存储库卷容量的百分比。使用整数值。例如、值70表示70%。默认值为75。
+
+|===
+
+
+== 注释：
+
+您可以对用户标签使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。用户标签最多可以包含30个字符。
+
+在创建新快照组时、存储管理软件和固件会自动创建存储库卷名称。您不能重命名存储库卷、因为重命名存储库卷将中断与快照映像的链接。
+
+快照组存储库卷是一个可扩展卷、其结构为一个串联集合、最多包含16个标准卷实体。最初、可扩展存储库卷只有一个元素。可扩展存储库卷的容量与单个元素的容量完全相同。您可以通过向可扩展存储库卷附加其他标准卷来增加该卷的容量。然后、复合可扩展存储库卷容量将成为所有串联标准卷的容量之和。
+
+Snapshot组存储库卷必须满足以下各项的总和所需的最小容量：
+
+* 32 MB、用于支持快照组和写入时复制处理的固定开销。
+* 回滚处理的容量、是基础卷容量的1/5000。
+
+
+最小容量由控制器固件和存储管理软件强制实施。
+
+
+
+== 最低固件级别
+
+7.83.

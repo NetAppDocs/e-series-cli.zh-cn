@@ -1,0 +1,65 @@
+---
+permalink: commands-a-z/set-storagearray-controllerhealthimageallowoverwrite.html 
+sidebar: sidebar 
+keywords: set, storage, array, controller, health, image, allow, overwrite 
+summary: set storageArray controllerHealthImageAllowOverWrite命令可在控制器上设置一个标志、以允许新的控制器运行状况映像覆盖支持控制器运行状况映像功能的存储阵列上的现有控制器运行状况映像。 
+---
+= 设置存储阵列控制器运行状况映像允许覆盖
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray controllerHealthImageAllowOverWrite`命令可在控制器上设置一个标志、以允许新的控制器运行状况映像覆盖支持控制器运行状况映像功能的存储阵列上的现有控制器运行状况映像。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+如果存储阵列不支持控制器运行状况映像功能、则此命令将返回错误。
+
+[NOTE]
+====
+对于固件版本8.20、`coreDumpAllowOverWrite`参数将替换为`controllerHealthImageAllowOverWrite`参数。
+
+====
+
+
+== 语法
+
+[listing]
+----
+set storageArray controllerHealthImageAllowOverWrite
+----
+
+
+== Parameters
+
+无
+
+
+
+== 注释：
+
+检索控制器运行状况映像时、会设置`allow overwrite`标志。如果未检索到控制器运行状况映像、此映像将在48小时后过期、之后将设置`allow overwrite`标志。使用`set storageArray controllerHealthImageAllowOverWrite`命令设置`allow overwrite`标志时、系统将免除48小时的到期时间、就像已检索到映像一样。
+
+
+
+== 最低固件级别
+
+7.86
+
+8.20将`* coreDumpAllowOverWrite*`参数替换为`controllerHealthImageAllowOverWrite`参数。

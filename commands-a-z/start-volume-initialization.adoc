@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/start-volume-initialization.html 
+sidebar: sidebar 
+keywords: start, volume, initialization 
+summary: start volume initialize命令用于开始格式化存储阵列中的卷。 
+---
+= 启动卷初始化
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`sstart volume initialize`命令可开始格式化存储阵列中的卷。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+[NOTE]
+====
+格式化卷会启动一个长时间运行的操作、您无法停止此操作。
+
+====
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volume [_volumeName_]] initialize
+----
+
+
+== 参数
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`卷`
+ a| 
+要格式化的卷的名称。将卷名称括在方括号([])中。如果卷名称包含特殊字符或数字、则必须将名称用双引号("")括在方括号内。
+
+|===
+
+
+== 最低固件级别
+
+6.10

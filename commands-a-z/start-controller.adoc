@@ -1,0 +1,148 @@
+---
+permalink: commands-a-z/start-controller.html 
+sidebar: sidebar 
+keywords: start, controller, trace 
+summary: start controller命令将启动一项操作、将调试跟踪信息保存到压缩文件中。 
+---
+= 启动控制器跟踪
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`sstart controller`命令可启动一项操作、将调试跟踪信息保存到压缩文件中。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 环境
+
+技术支持可使用调试跟踪信息帮助分析存储阵列的运行状况。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+start controller [(a
+ | b
+ | both)] trace
+dataType=(current | flushed | currentFlushed | all)
+forceFlush=(TRUE | FALSE)
+pass:quotes[file="_fileName_]"
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`控制器`
+ a| 
+要收集跟踪调试信息的控制器。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器您也可以输入`both`来同时收集这两个控制器的调试。将控制器标识符括在方括号()中。如果不指定控制器、则存储管理软件将返回语法错误。
+
+
+
+ a| 
+`dataType`
+ a| 
+要收集的数据类型：
+
+* `current`—检索当前DQ跟踪
+* `flushed`—检索所有已刷新的DQ跟踪
+* `currentFlushed`—检索当前DQ跟踪和刷新的DQ跟踪
+* `all`—检索当前DQ跟踪、刷新的DQ跟踪和所有平台DQ跟踪
+
+
+[NOTE]
+====
+如果`dataType=flushed`和`forceFlush=True`、则会返回一条错误消息、指示检索时只能将活动跟踪刷新到缓冲区。
+
+====
+
+
+ a| 
+`*强制刷新*`
+ a| 
+检索`dataType`参数定义的DQ跟踪信息时、用于将当前缓冲区中的DQ信息移至已刷新缓冲区的设置。要启用强制刷新、请将此参数设置为`true`。要禁用强制刷新、请将此参数设置为`false`。
+
+[NOTE]
+====
+如果`dataType=flushed`和`forceFlush=True`、则会返回一条错误消息、指示检索时只能将活动跟踪刷新到缓冲区。
+
+====
+
+
+ a| 
+`文件`
+ a| 
+要将DQ跟踪信息保存到的文件路径和文件名。将文件名用双引号("")括起来。
+
+有关为文件命名的信息、请参见注释部分。
+
+|===
+
+
+== 注释：
+
+DQ跟踪信息将写入扩展名为.zip的压缩文件。文件名是用户定义的文件名和存储阵列标识符(SAID)的组合。文件名中还会添加一个常量"DQ"。完整的文件名格式如下：
+
+[listing]
+----
+user_defined_file_name-SAID-dq.zip
+----
+压缩文件包含此表中列出的信息。
+
+[cols="3*"]
+|===
+| 文件名 | 目录 | 注释 
+
+
+ a| 
+`user_provided_file_name-sed-A.DQ`
+ a| 
+`s辅助/时间戳/`
+ a| 
+从控制器A检索到的DQ跟踪数据
+
+
+
+ a| 
+`user_provided_file_name-sed-B.DQ`
+ a| 
+`s辅助/时间戳/`
+ a| 
+从控制器B检索到的DQ跟踪数据
+
+
+
+ a| 
+`user_provided_file_name-sed-trace_description.xm`
+ a| 
+`s辅助/时间戳/`
+ a| 
+xml格式的问题描述 文件、用于描述未来数据挖掘的DQ文件属性。
+
+|===
+
+
+== 最低固件级别
+
+7.75

@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/deactivate-storagearray-feature.html 
+sidebar: sidebar 
+keywords: deactivate, synchronous, mirror 
+summary: deactivate storageArray feature命令可停用同步镜像功能、拆装镜像存储库卷、并释放二级卷的控制器所有者。 
+---
+= 停用同步镜像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用`deactivate storageArray feature`命令可停用同步镜像功能、取消镜像存储库卷的组装、并释放二级卷的控制器所有者。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+
+
+
+== 角色
+
+要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+专用于二级卷的控制器主机端口可用于主机数据传输。
+
+[NOTE]
+====
+在先前版本的此命令中、功能标识符为`remoteMirror`。此功能标识符不再有效、并替换为`SyncMirror`。
+
+====
+
+
+== 语法
+
+[listing]
+----
+deactivate storageArray feature=syncMirror
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+6.10

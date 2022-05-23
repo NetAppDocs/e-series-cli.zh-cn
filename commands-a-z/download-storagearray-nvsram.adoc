@@ -1,0 +1,73 @@
+---
+permalink: commands-a-z/download-storagearray-nvsram.html 
+sidebar: sidebar 
+keywords: download, storagearray, down, values, controller, support, role, command, array 
+summary: download storageArray NVSRAM命令可下载存储阵列控制器的NVSRAM值。 
+---
+= 下载存储阵列NVSRAM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`dload storageArray NVSRAM`命令可下载存储阵列控制器的NVSRAM值。
+
+
+
+== 支持的阵列
+
+此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+pass:quotes[download storageArray NVSRAM file="_filename_"]
+[healthCheckMelOverride=(TRUE | FALSE)]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`文件`
+ a| 
+包含NVSRAM值的文件路径和文件名。将NVSRAM文件名用双引号("")括起来。例如：
+
+`file="C：\Program Files\CLI\dnld\afrm.dpl"`
+
+有效文件名的扩展名为`。lp`。
+
+
+
+ a| 
+`healthCheckMelOverride`
+ a| 
+用于覆盖主要事件日志(MEL)运行状况检查结果的设置。仍会进行Mel验证、但不会绕过它。如果MEL检查失败、您可以在运行命令时使用此参数来绕过失败。
+
+在进行任何下载之前、控制器都会检查事件日志、以确定是否发生了可能阻止新NVSRAM成功下载的事件。如果发生此类事件、控制器通常不会下载新的NVSRAM。
+
+此参数强制控制器下载新的NVSRAM。默认值为`false`。如果要强制控制器下载新的NVSRAM、请将此值设置为`true`。
+
+|===
+
+
+== 最低固件级别
+
+6.10
+
+8.10会添加`healthCheckMelOverride`参数。

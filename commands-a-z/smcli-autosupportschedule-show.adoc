@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/smcli-autosupportschedule-show.html 
+sidebar: sidebar 
+keywords: display, autosupport, message, collection, schedule 
+summary: smcli -autosupportSchedule show命令可显示收集和处理每日和每周AutoSupport 消息的计划。 
+---
+= 显示AutoSupport 消息收集计划
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`Smcli -autosupportSchedule show`命令可显示收集和处理每日和每周AutoSupport 消息的计划。
+
+
+
+== 支持的阵列
+
+此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E2800或E5700存储阵列。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令是一个smcli命令、而不是一个脚本命令。您必须从命令行运行此命令。您不能从存储管理软件中的脚本编辑器运行此命令。
+
+====
+有关自动支持包收集的计划、请注意以下事项：
+
+* 如果启用了AutoSupport 、则管理软件会同时发送每日AutoSupport 消息和每周AutoSupport 消息。
+* 管理软件会随机选择每日消息和每周消息的时间、以及每周消息的星期几。
+* 管理软件会尽力确保管理域中的任何两个存储阵列都不会同时发送计划的AutoSupport 消息。
+* 使用`SMcli -autosupportSchedule reset`命令、您可以指定首选时间范围(小时级粒度)、以便为管理域中的存储阵列发送每日和每周消息。对于每周消息计划、您可以使用命令选择一周中的首选日期。
+
+
+
+
+== 语法
+
+[listing]
+----
+SMcli -autoSupportSchedule show
+----
+
+
+== Parameters
+
+无
+
+
+
+== 最低固件级别
+
+8.25
+
+
+
+== 示例
+
+输出将显示首选时间范围、然后显示每日和每周计划。
+
+[NOTE]
+====
+如果您未同时为计划和一周中的首选日期选择首选时间范围、则此命令将显示存储管理软件随机选择的每日计划和每周计划。
+
+====
+[listing]
+----
+SMcli -autoSupportSchedule show
+The AutoSupport daily schedule preferred time range is from 12:00 AM to 01:00 AM.
+The AutoSupport weekly schedule preferred time range is from 10:00 PM to 11:00 PM on Thursday, Saturday.
+
+Name           Daily Schedule         Weekly Schedule
+Accounting     12:55 AM               10:08 PM on Thursdays
+Finance        12:02 AM               10:30 PM on Saturdays
+
+SMcli completed successfully.
+----

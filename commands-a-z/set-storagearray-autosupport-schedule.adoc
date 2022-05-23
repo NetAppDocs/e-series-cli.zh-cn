@@ -1,0 +1,99 @@
+---
+permalink: commands-a-z/set-storagearray-autosupport-schedule.html 
+sidebar: sidebar 
+keywords: set, autosupport, message, collection, schedule, individual, E2800, E5700, arrays 
+summary: set storageArray AutoSupport schedule命令可设置发送AutoSupport 消息的每日和每周时间以及每周日期。 
+---
+= 设置AutoSupport 消息收集计划
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`set storageArray AutoSupport schedule`命令可设置发送AutoSupport 消息的每日和每周时间以及每周日期。
+
+
+
+== 支持的阵列
+
+此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 环境
+
+* 如果启用了AutoSupport 、则管理软件会同时发送每日AutoSupport 消息和每周AutoSupport 消息。
+* 您可以指定管理域中存储阵列每天发送消息的时间范围(小时级粒度)以及每周发送消息的时间。
+* 对于每周计划、您可以为AutoSupport 收集和传输选择首选的一周日期。
+
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+set storageArray autoSupport schedule dailyTime=pass:quotes[_startTime-endTime_]
+ [dayOfWeek=(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)]
+weeklyTime=pass:quotes[_startTime-endTime_]
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`dailyTime`
+ a| 
+<``sTartTime``>-<``EndTime``>指定一天中要开始和结束收集所有存储阵列的AutoSupport 数据的时间。startTime和endTime必须采用24小时格式HH：00、并且必须在该小时。例如、晚上9：00应输入21：00。
+
+
+
+ a| 
+`dayOfWeek`
+ a| 
+(星期日、星期一、星期二、星期三、星期四、星期五、星期六)指定一周中要收集AutoSupport 捆绑包收集数据的首选日期(星期日到星期六)。`dayOfWeek`参数必须用圆括号括起来、并用空格分隔。
+
+
+
+ a| 
+`每周时间`
+ a| 
+<``sTartTime``>-<``EndTime``>指定您要在一天中的某一周中的每一天开始和结束AutoSupport 捆绑包收集数据的时间。`startTime`和`EndTime`的格式必须为HH：MM[AM|Pm]。
+
+|===
+
+
+=== 示例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupport schedule dailyTime=14:00-15:00 weeklyTime=1:00-5:00;"
+
+SMcli -n Array1 -c "set storageArray autoSupport schedule dailyTime=14:00-15:00 dayOfWeek=(Monday Friday) weeklyTime=1:00-5:00;"
+
+SMcli completed successfully.
+----
+
+
+=== 验证
+
+使用`show storageArray AutoSupport`命令查看对计划所做的更改。
+
+
+
+== 最低固件级别
+
+8.40

@@ -1,0 +1,104 @@
+---
+permalink: commands-a-z/smcli-autosupportschedule-reset.html 
+sidebar: sidebar 
+keywords: reset, autosupport, message, collection, schedule 
+summary: smcli autosupportSchedule reset命令可重置发送AutoSupport 消息的每日和每周时间以及每周日期。您可以接受管理软件生成的默认随机值、也可以使用此命令指定值。 
+---
+= 重置AutoSupport 消息收集计划
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+`Smcli autosupportSchedule reset`命令可重置发送AutoSupport 消息的每日和每周时间以及每周日期。您可以接受管理软件生成的默认随机值、也可以使用此命令指定值。
+
+
+
+== 支持的阵列
+
+此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E2800或E5700存储阵列。
+
+
+
+== 环境
+
+[NOTE]
+====
+此命令是一个smcli命令、而不是一个脚本命令。您必须从命令行运行此命令。您不能从存储管理软件中的脚本编辑器运行此命令。
+
+====
+* 如果启用了AutoSupport 、则管理软件会同时发送每日AutoSupport 消息和每周AutoSupport 消息。
+* 管理软件会随机选择每日消息和每周消息的时间、以及每周消息的星期几。管理软件会尽力确保管理域中的任何两个存储阵列都不会同时发送计划的AutoSupport 消息。
+* 您可以指定管理域中存储阵列每天发送消息的时间范围(小时级粒度)以及每周发送消息的时间。
+* 对于每周计划、您可以为AutoSupport 收集和传输选择首选的一周日期。
+
+
+
+
+== 语法
+
+[listing]
+----
+SMcli -autoSupportSchedule reset | (dailyTime=<startTime>-<endTime>
+   dayOfWeek=[Sunday Monday Tuesday Wednesday Thursday Friday Saturday]
+   weeklyTime=<startTime>-<endTime>)
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`re设置`
+ a| 
+使用24小时天7周(星期日到星期六)时间间隔重置和生成新计划。
+
+
+
+ a| 
+`dailyTime`
+ a| 
+<``sTartTime``>-<``EndTime``>指定一天中要开始和结束收集所有存储阵列的AutoSupport 数据的时间。StartTime和EndTime必须采用HH：MM[AM|PM｝的形式。
+
+
+
+ a| 
+`dayOfWeek`
+ a| 
+[星期日、星期一、星期二、星期三、星期四、星期五、星期六]指定一周中要收集所有存储阵列的AutoSupport 捆绑包收集数据的首选日期(星期日到星期六)。`_dayOfWeek_`参数必须用方括号括起来、并用空格分隔。
+
+
+
+ a| 
+`每周时间`
+ a| 
+<``sTartTime``>-<``EndTime``>指定您要在一天中的某一周中的每一天开始和结束AutoSupport 捆绑包收集数据的时间。`_StartTime_`和`_EndTime_`的格式必须为HH：MM[AM_Pm]。
+
+|===
+
+
+== 最低固件级别
+
+8.25
+
+
+
+== 示例
+
+[listing]
+----
+ SMcli -autoSupportSchedule dailyTime=10:00am-11:00am
+dayOfWeek=[Monday Thursday Friday] weeklyTime=2:00am-3:00am
+----
+`sMcli -autosupportSchedule dailyTime=10：00am-11：00am dayOfWeek=[星期一星期四星期五] weeklyTime=2：00am-3：00am`
+
+
+
+== 验证
+
+使用`Smcli -autosupportSchedule show`命令查看管理域中由此产生的计划更改。
