@@ -1,0 +1,3275 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head class="at-element-marker">
+  <title>显示已安装的受信任CA证书摘要</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="显示已安装的受信任CA证书摘要" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/e-series-cli/commands-a-z/show-storagearray-trustedcertificate-summary.html" />
+	<meta property="og:description" content="show storageArray trustedCertificate summary命令可显示阵列中已安装的可信CA证书摘要。在执行delete storageArray trustedCertificate命令之前、可以使用此命令、以便您知道要删除的证书的别名。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-cn/e-series-cli/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="show storageArray trustedCertificate summary命令可显示阵列中已安装的可信CA证书摘要。在执行delete storageArray trustedCertificate命令之前、可以使用此命令、以便您知道要删除的证书的别名。">
+  <meta name="keywords" content=" show, installed, trusted, ca, certificates, summary"><!-- Icons -->
+  <link rel="icon" href="/zh-cn/e-series-cli/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/e-series-cli/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/zh-cn/e-series-cli/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/e-series-cli/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/e-series-cli/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/zh-cn/e-series-cli/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/zh-cn/e-series-cli/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/zh-cn/e-series-cli/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/zh-cn/e-series-cli/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/zh-cn/e-series-cli/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/zh-cn/e-series-cli/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/e-series-cli/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/e-series-cli/css/custom-dropdown.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/e-series-cli/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/zh-cn/e-series-cli/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-cn/e-series-cli/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/zh-cn/e-series-cli/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/e-series-cli/js/na-search.js'></script><script src='/zh-cn/e-series-cli/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/e-series-cli/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/e-series-cli/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/zh-cn/e-series-cli/js/na-utility.js'></script>
+  <script src='/zh-cn/e-series-cli/js/clouddocs.js'></script>
+  <script src='/zh-cn/e-series-cli/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/zh-cn/e-series-cli/js/toc.js'></script>
+  <script src='/zh-cn/e-series-cli/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/zh-cn/e-series-cli/js/custom-dropdown.js'></script>
+  <script src='/zh-cn/e-series-cli/js/FileSaver.min.js'></script>
+  <script src='/zh-cn/e-series-cli/js/jszip-utils.min.js'></script>
+  <script src='/zh-cn/e-series-cli/js/jszip.min.js'></script>
+  <script src='/zh-cn/e-series-cli/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/e-series-cli/issues/new?body=Page%3A%20[显示已安装的受信任CA证书摘要](https://docs.netapp.com/zh-cn/e-series-cli/commands-a-z/show-storagearray-trustedcertificate-summary.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/e-series-cli/images/discuss-sm.svg" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/e-series-cli/blob/main/commands-a-z/show-storagearray-trustedcertificate-summary.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/e-series-cli/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/e-series-cli/images/article-sm.svg" class="github-icon" />提供者指南</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">产品和解决方案</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">支持和培训</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">云中心</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">社区</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">日志</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">客户案例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">联系人</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">联系人</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-cn/e-series-cli/search.html"
+          data-type="widget" 
+          data-placeholder="搜索文档" 
+          data-no-results-found="未找到与 {query} 匹配的结果。" 
+          data-did-you-mean="搜索 {suggestion}。" 
+          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
+          data-results-found="找到 {hitCount} 个结果"  
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">简体中文</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/e-series-cli/commands-a-z/show-storagearray-trustedcertificate-summary.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/e-series-cli/commands-a-z/show-storagearray-trustedcertificate-summary.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/e-series-cli/commands-a-z/show-storagearray-trustedcertificate-summary.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/e-series-cli/commands-a-z/show-storagearray-trustedcertificate-summary.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-tw/e-series-cli/commands-a-z/show-storagearray-trustedcertificate-summary.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/zh-cn/e-series-cli/pdfs/fullsite-sidebar/SANtricity_System_Manager命令.pdf" >
+          <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>此文档站点的 PDF</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/入门.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            入门
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/命令格式化.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            命令格式化
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/CLI结构.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            CLI结构
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/脚本命令结构.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            脚本命令结构
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/格式规则.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            格式规则
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/按类别显示命令.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            按类别显示命令
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/命令A_Z.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            命令A-Z
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/答.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            答
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/C.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            C
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/D.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            D
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/E.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            E
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/g.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            g
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/I.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            I
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/L.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            L
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/r.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            r
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/S.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            S
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/保存___.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            保存...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/设置___.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            设置...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/显示___.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            显示...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/zh-cn/e-series-cli/pdfs/pages/commands-a-z/show-storagearray-trustedcertificate-summary.pdf" >
+    <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/SMcli___.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            SMcli...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/启动___.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            启动...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/停止___.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            停止...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/暂停___.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            暂停...
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/e-series-cli/pdfs/sidebar/五.pdf" 
+            
+          >
+            <img src="/zh-cn/e-series-cli/images/pdf.png" width="16" height="16"/>
+            五
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/zh-cn/e-series-cli/images/pdf-zip.png" width="16" height="16"/>
+      <pre>收集单独的 PDF 文档<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/index.html">
+        SANtricity 命令行界面文档
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 入门</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/changes-in-the-cli-and-script-commands-in-this-release.html">
+        新增功能
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 命令格式化</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/overview-format-commands.html">
+        概述
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> CLI结构</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/structure-of-a-cli-command.html">
+        CLI命令的结构
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/interactive-mode.html">
+        交互模式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/cli-command-wrapper-syntax.html">
+        CLI包装器语法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/command-line-parameters.html">
+        CLI参数
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 脚本命令结构</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/structure-of-a-script-command.html">
+        脚本命令的结构
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/synopsis-of-the-script-commands.html">
+        脚本命令摘要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/recurring-syntax-elements.html">
+        重复语法元素
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/naming-conventions.html">
+        命名约定
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 格式规则</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/formatting-cli-commands.html">
+        CLI命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/formatting-rules-for-script-commands.html">
+        脚本命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/formatting-cli-commands-in-windows-powershell.html">
+        Windows PowerShell
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/detailed-error-reporting.html">
+        详细的错误报告
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/exit-status.html">
+        退出状态
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/adding-comments-to-a-script-file.html">
+        向脚本文件添加注释
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/usage-guidelines.html">
+        脚本命令准则
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/firmware-compatibility-levels.html">
+        固件兼容性级别
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/new-https-mode.html">
+        SMcli https模式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/get-started/learn-about-volume-group-migration.html">
+        卷组迁移
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 按类别显示命令</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-category/administrator-commands.html">
+        管理员命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-category/alert-configuration-commands.html">
+        警报配置命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-category/array-configuration-commands.html">
+        阵列配置命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-category/auto-support-commands.html">
+        自动支持命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-category/mirroring-commands.html">
+        镜像命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-category/performance-tuning-commands.html">
+        性能调整命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-category/replication-commands.html">
+        复制命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-category/security-commands.html">
+        安全命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-category/storage-monitor-personal-commands.html">
+        storage monitor人事命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-category/volume-configuration-commands.html">
+        卷配置命令
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 命令A-Z</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 答</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/activate-asynchronous-mirroring.html">
+        激活异步镜像
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/activate-storagearray-firmware.html">
+        激活storageArray固件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/activate-synchronous-mirroring.html">
+        激活同步镜像
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/add-array-label.html">
+        添加阵列标签
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/add-certificate-from-array.html">
+        从阵列添加证书
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/add-certificate-from-file.html">
+        从文件添加证书
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/add-drives-to-ssd-cache.html">
+        将驱动器添加到SSD缓存
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/add-volume-asyncmirrorgroup.html">
+        添加卷asyncmirrorgroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/autoconfigure-storagearray-hotspares.html">
+        自动配置存储阵列热备件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/autoconfigure-storagearray.html">
+        自动配置存储阵列
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> C</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/change-ssd-cache-application-type.html">
+        更改SSD缓存应用程序类型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/check-asyncmirrorgroup-repositoryconsistency.html">
+        检查asyncmirrorgroup repositoryconsistency
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/check-repositoryconsistency.html">
+        检查repositoryconsistency
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/check-storagearray-connectivity.html">
+        检查storageArray连接
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/check-syncmirror.html">
+        检查SyncMirror
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/check-volume-parity.html">
+        检查卷奇偶校验
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/clear-alldrivechannels-stats.html">
+        清除所有驱动器信息统计信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/clear-asyncmirrorfault.html">
+        清除异步镜像故障
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/clear-emailalert-configuration.html">
+        清除电子邮件警报配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/clear-storagearray-configuration.html">
+        清除storageArray配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/clear-storagearray-eventlog.html">
+        清除storageArray事件日志
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/clear-storagearray-firmwarependingarea.html">
+        清除storageArray firmwarependingarea
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/clear-storagearray-recoverymode.html">
+        清除storageArray恢复模式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/clear-syslog-configuration.html">
+        清除系统日志配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/clear-volume-reservations.html">
+        清除卷预留
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/clear-volume-unreadablesectors.html">
+        清除卷未读取的数据存储器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-asyncmirrorgroup.html">
+        创建异步镜像组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-cgsnapimage-consistencygroup.html">
+        创建cgsnapimage ConsistencyGroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-cgsnapvolume.html">
+        创建cgsnapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-consistencygroup.html">
+        创建ConsistencyGroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-diskpool.html">
+        创建磁盘池
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-host.html">
+        创建主机
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-hostgroup.html">
+        创建主机组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-hostport.html">
+        创建主机端口
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-initiator.html">
+        创建启动程序
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-iscsiinitiator.html">
+        创建iscsiInitiator
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-mapping-cgsnapvolume.html">
+        创建映射cgsnapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-mapping-volume.html">
+        创建映射卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-raid-volume-automatic-drive-select.html">
+        创建RAID卷自动选择驱动器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-raid-volume-free-extent-based-select.html">
+        创建基于选择的RAID卷可用块区
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-raid-volume-manual-drive-select.html">
+        创建RAID卷手动选择驱动器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-read-only-snapshot-volume.html">
+        创建只读Snapshot卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-snapgroup.html">
+        创建snapgroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-snapimage.html">
+        创建SnapImage
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-snapshot-volume.html">
+        创建Snapshot卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-snmpcommunity.html">
+        创建snmpcommunity
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-snmptrapdestination.html">
+        创建snmptrapdestination
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-snmpuser-username.html">
+        创建snmpuser用户名
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-ssdcache.html">
+        创建ssdcache
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-storagearray-directoryserver.html">
+        创建storageArray目录服务器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-storagearray-securitykey.html">
+        创建storageArray securitykey
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-storagearray-syslog.html">
+        创建storageArray系统日志
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-syncmirror.html">
+        创建SyncMirror
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-volume-diskpool.html">
+        创建卷磁盘池
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-volumecopy.html">
+        创建卷复制
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/create-volumegroup.html">
+        创建卷组
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> D</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/deactivate-storagearray-feature.html">
+        停用storageArray功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/deactivate-storagearray.html">
+        停用storageArray
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-asyncmirrorgroup.html">
+        删除异步镜像组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-auditlog.html">
+        删除auditlog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-certificates.html">
+        删除证书
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-cgsnapimage-consistencygroup.html">
+        删除cgsnapimage ConsistencyGroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-consistencygroup.html">
+        删除ConsistencyGroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-controller-cacertificate.html">
+        删除控制器caCertificate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-diskpool.html">
+        删除磁盘池
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-emailalert.html">
+        删除电子邮件警报
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-host.html">
+        删除主机
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-hostgroup.html">
+        删除主机组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-hostport.html">
+        删除hostport
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-initiator.html">
+        删除启动程序
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-iscsiinitiator.html">
+        删除iscsiInitiator
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-sgsnapvolume.html">
+        删除sgsnapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-snapgroup.html">
+        删除snapgroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-snapimage.html">
+        删除SnapImage
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-snapvolume.html">
+        删除snapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-snmpcommunity.html">
+        删除snmpcommunity
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-snmptrapdestination.html">
+        删除snmptrapdestination
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-snmpuser-username.html">
+        删除snmpuser用户名
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-ssdcache.html">
+        删除ssdcache
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-storagearray-directoryservers.html">
+        删除storageArray目录服务器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-storagearray-keymanagementcertificate.html">
+        删除storageArray密钥管理证书
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-storagearray-loginbanner.html">
+        删除storageArray登录横幅
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-storagearray-syslog.html">
+        删除storageArray系统日志
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-storagearray-trustedcertificate.html">
+        删除storageArray受托者证书
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-syslog.html">
+        删除系统日志
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-volume-from-disk-pool.html">
+        从磁盘池中删除卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-volume.html">
+        删除卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/delete-volumegroup.html">
+        删除卷组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/diagnose-asyncmirrorgroup.html">
+        诊断异步镜像组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/diagnose-controller-iscsihostport.html">
+        诊断控制器iscsihostport
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/diagnose-controller.html">
+        诊断控制器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/diagnose-syncmirror.html">
+        诊断SyncMirror
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/disable-storagearray-externalkeymanagement-file.html">
+        禁用storageArray外部密钥管理文件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/disable-storagearray.html">
+        禁用storageArray
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/download-controller-arraymanagementservercertificate.html">
+        下载控制器arraymanagementservercertificate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/download-controller-cacertificate.html">
+        下载控制器caCertificate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/download-controller-trustedcertificate.html">
+        下载控制器受托证书
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/download-drive-firmware.html">
+        下载驱动器固件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/download-storagearray-drivefirmware-file.html">
+        下载storageArray驱动器固件文件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/download-storagearray-firmware.html">
+        下载storageArray固件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/download-storagearray-keymanagementcertificate.html">
+        下载storageArray密钥管理证书
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/download-storagearray-nvsram.html">
+        下载storageArray nvsram
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/download-tray-configurationsettings.html">
+        下载托盘配置设置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/download-tray-firmware-file.html">
+        下载托盘固件文件
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> E</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/enable-controller-datatransfer.html">
+        启用控制器数据传输
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/enable-diskpool-security.html">
+        启用磁盘池安全性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/enable-or-disable-autosupport-individual-arrays.html">
+        启用或禁用AutoSupport 单个阵列
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/enable-storagearray-externalkeymanagement-file.html">
+        启用storageArray外部密钥管理文件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/enable-storagearray-feature-file.html">
+        启用storageArray功能文件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/enable-volumegroup-security.html">
+        启用卷组安全性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/establish-asyncmirror-volume.html">
+        建立异步镜像卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/export-storagearray-securitykey.html">
+        导出storageArray securitykey
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> g</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/getting-started-with-authentication.html">
+        身份验证入门
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/getting-started-with-external-key-management.html">
+        外部密钥管理入门
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/getting-started-with-internal-key-management.html">
+        开始使用内部密钥管理
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> I</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/import-storagearray-securitykey-file.html">
+        导入storageArray securitykey文件
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> L</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/load-storagearray-dbmdatabase.html">
+        加载storageArray dbmdatabase
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> r</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/recopy-volumecopy-target.html">
+        重新复制卷复制目标
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/recover-disabled-driveports.html">
+        恢复已禁用的驱动器端口
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/recover-sasport-miswire.html">
+        恢复sasport连线错误
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/recover-volume.html">
+        恢复卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/recreate-storagearray-mirrorrepository.html">
+        重新创建storageArray镜像存储库
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/recreate-storagearray-securitykey.html">
+        重新创建storageArray securitykey
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reduce-disk-pool-capacity.html">
+        减少磁盘池容量
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/remove-array-label.html">
+        删除阵列标签
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/remove-asyncmirrorgroup.html">
+        删除异步镜像组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/remove-drives-from-ssd-cache.html">
+        从SSD缓存中删除驱动器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/remove-lunmapping.html">
+        删除lunmapping
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/remove-member-volume-from-consistency-group.html">
+        从一致性组中删除成员卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/remove-storagearray-directoryserver.html">
+        删除storageArray目录服务器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/remove-syncmirror.html">
+        删除SyncMirror
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/remove-volume-asyncmirrorgroup.html">
+        删除卷asyncmirrorgroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/remove-volumecopy-target.html">
+        删除卷复制目标
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/rename-ssd-cache.html">
+        重命名SSD缓存
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/repair-data-parity.html">
+        修复数据奇偶校验
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/repair-volume-parity.html">
+        修复卷奇偶校验
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/replace-drive-replacementdrive.html">
+        更换驱动器更换驱动器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-controller-arraymanagementsignedcertificate.html">
+        重置控制器arraymanagementsignedcertificate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-controller.html">
+        重置控制器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-drive.html">
+        重置驱动器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-iscsiipaddress.html">
+        重置iscsiipaddress
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html">
+        重置storageArray arvmstats asyncmirrorgroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-storagearray-autosupport-schedule.html">
+        重置存储阵列AutoSupport 计划
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-storagearray-diagnosticdata.html">
+        重置storageArray诊断数据
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-storagearray-hostportstatisticsbaseline.html">
+        重置storageArray hostportstatisticsbaseline
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-storagearray-ibstatsbaseline.html">
+        重置storageArray ibstatsbaseline
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-storagearray-iscsistatsbaseline.html">
+        重置storageArray iscsistatsbaseline
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-storagearray-iserstatsbaseline.html">
+        重置storageArray iserstatsbaseline
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-storagearray-rlsbaseline.html">
+        重置storageArray rlsbaseline
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-storagearray-sasphybaseline.html">
+        重置storageArray sasphybaseline
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-storagearray-socbaseline.html">
+        重置storageArray socbaseline
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/reset-storagearray-volumedistribution.html">
+        重置storageArray卷分布
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/resume-asyncmirrorgroup.html">
+        恢复异步镜像组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/resume-cgsnapvolume.html">
+        恢复cgsnapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/resume-snapimage-rollback.html">
+        恢复SnapImage回滚
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/resume-snapvolume.html">
+        恢复snapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/resume-ssdcache.html">
+        恢复ssdcache
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/resume-syncmirror.html">
+        恢复SyncMirror
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/revive-drive.html">
+        恢复驱动器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/revive-snapgroup.html">
+        恢复快照组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/revive-snapvolume.html">
+        恢复snapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/revive-volumegroup.html">
+        恢复卷组
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> S</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 保存...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-alldrives-logfile.html">
+        保存所有驱动器日志文件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-alltrays-logfile.html">
+        保存所有托盘日志文件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-auditlog.html">
+        保存auditlog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-controller-arraymanagementcsr.html">
+        保存控制器阵列管理csr
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-controller-arraymanagementsignedcertificate.html">
+        保存控制器arraymanagementsignedcertificate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-controller-cacertificate.html">
+        保存控制器caCertificate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-controller-nvsram-file.html">
+        保存控制器nvsram文件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-drivechannel-faultdiagnostics-file.html">
+        保存驱动器通道故障诊断文件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-ioclog.html">
+        保存iosclog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storage-array-diagnostic-data.html">
+        保存存储阵列诊断数据
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html">
+        将storageArray arvmstats另存为同步镜像组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-autoloadbalancestatistics-file.html">
+        保存storageArray自动加载型初始文件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-autosupport-log.html">
+        保存storageArray AutoSupport 日志
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-configuration.html">
+        保存storageArray配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-controllerhealthimage.html">
+        保存storageArray控制器运行状况映像
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-dbmdatabase.html">
+        保存storageArray dbmdatabase
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-dbmvalidatorinfo.html">
+        保存storageArray dbmvalidatorinfo
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-firmwareinventory.html">
+        保存storageArray firmwareinventory
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-hostportstatistics.html">
+        保存storageArray主机端口统计信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-ibstats.html">
+        保存storageArray ibstats
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-iscsistatistics.html">
+        保存storageArray iscsiStatistics
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-iserstatistics.html">
+        保存storageArray iserstatistics
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-keymanagementcertificate.html">
+        保存storageArray密钥管理证书
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-keymanagementclientcsr.html">
+        保存storageArray密钥管理客户端csr
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-loginbanner.html">
+        保存storageArray登录横幅
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-performancestats.html">
+        保存storageArray性能统计信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-rlscounts.html">
+        保存storageArray rlscounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-sasphycounts.html">
+        保存storageArray sasphycounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-soccounts.html">
+        保存storageArray插槽数
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-statecapture.html">
+        保存storageArray状态
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-supportdata.html">
+        保存storageArray SupportData
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-trustedcertificate.html">
+        保存storageArray受托者证书
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/save-storagearray-warningevents.html">
+        保存storageArray警告事件
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 设置...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-asyncmirrorgroup.html">
+        设置asyncmirrorgroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-auditlog.html">
+        设置auditlog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html">
+        设置AutoSupport https传送方法e2800或e5700
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-cgsnapvolume.html">
+        设置cgsnapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-consistency-group-attributes.html">
+        设置一致性组属性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-consistencygroup-addcgmembervolume.html">
+        设置ConsistencyGroup addcgmembervolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-controller-dnsservers.html">
+        设置控制器dnsservers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-controller-hostport.html">
+        设置控制器主机端口
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-controller-iscsihostport.html">
+        设置控制器iscsihostport
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-controller-ntpservers.html">
+        设置控制器ntp服务器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-controller-service-action-allowed-indicator.html">
+        设置允许控制器维护操作指示符
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-controller.html">
+        设置控制器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-disk-pool-modify-disk-pool.html">
+        设置磁盘池修改磁盘池
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-disk-pool.html">
+        设置磁盘池
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-drive-hotspare.html">
+        设置驱动器热备用磁盘
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-drive-nativestate.html">
+        设置驱动器nativestate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-drive-operationalstate.html">
+        设置驱动器操作状态
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-drive-securityid.html">
+        设置驱动器安全性ID
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-drive-serviceallowedindicator.html">
+        设置驱动器服务允许指示符
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-drivechannel.html">
+        设置驱动器通道
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html">
+        设置电子邮件SMTP传送方法e2800或e5700
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-emailalert.html">
+        设置电子邮件警报
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-event-alert.html">
+        设置事件警报
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-host.html">
+        设置主机
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-hostchannel.html">
+        设置主机通道
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-hostgroup.html">
+        设置主机组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-hostport.html">
+        设置hostport
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-initiator.html">
+        设置启动程序
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-iscsiinitiator.html">
+        设置iscsiInitiator
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-iscsitarget.html">
+        设置iscsitarget
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-isertarget.html">
+        设置isertarget
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-session-erroraction.html">
+        设置会话错误操作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snapgroup-enableschedule.html">
+        设置snapgroup enableschedule
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snapgroup-increase-decreaserepositorycapacity.html">
+        设置snapgroup Increase decerepositorycapacity
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snapgroup-mediascanenabled.html">
+        设置snapgroup介质已启用
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snapgroup.html">
+        设置snapgroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snapvolume-converttoreadwrite.html">
+        设置snapvolume convertoreadwrite
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snapvolume-increase-decreaserepositorycapacity.html">
+        设置snapvolume Increase decerepositorycapacity
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snapvolume-mediascanenabled.html">
+        设置snapvolume mediaenabled
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snapvolume.html">
+        设置snapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snmpcommunity.html">
+        设置snmpcommunity
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snmpsystemvariables.html">
+        设置snmpsystemvariables
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snmptrapdestination-trapreceiverip.html">
+        设置snmptrapdestination trap接收 器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-snmpuser-username.html">
+        设置snmpuser用户名
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-autoloadbalancingenable.html">
+        设置storageArray autoloadbalancingenable
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-autosupport-schedule.html">
+        设置storageArray AutoSupport 计划
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-autosupportmaintenancewindow.html">
+        设置storageArray autosupportmaintenancewindow
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-autosupportondemand.html">
+        设置storageArray autosupportonDemand
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-autosupportremotediag.html">
+        设置storageArray autosupremotediag
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-cachemirrordataassurancecheckenable.html">
+        设置storageArray cachemirrordataassurancecheckenable
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-controllerhealthimageallowoverwrite.html">
+        设置storageArray控制器healthimageallowoverwrite
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-directoryserver-roles.html">
+        设置storageArray目录服务器角色
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-directoryserver.html">
+        设置storageArray目录服务器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-externalkeymanagement.html">
+        设置storageArray外部密钥管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-hostconnectivityreporting.html">
+        设置storageArray hostconnectivitireporting
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-icmppingresponse.html">
+        设置storageArray icmppingresponse
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-isnsipv4configurationmethod.html">
+        设置storageArray isnsipv4configurationmethod
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-isnsipv6address.html">
+        设置storageArray isnsipv6address
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-isnslisteningport.html">
+        设置storageArray isnslosteningport
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-isnsregistration.html">
+        设置storageArray isnssregistration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-isnsserverrefresh.html">
+        设置storageArray isnssserverrefresh
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-learncycledate-controller.html">
+        设置storageArray learncycledate控制器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-localusername.html">
+        设置storageArray localusername
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-loginbanner.html">
+        设置storageArray登录横幅
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-managementinterface.html">
+        设置storageArray管理接口
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-odxenabled.html">
+        设置storageArray odxenabled
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-passwordlength.html">
+        设置storageArray密码长度
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-pqvalidateonreconstruct.html">
+        设置storageArray pqvalidateonreconstruct
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-redundancymode.html">
+        设置storageArray冗余模式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-resourceprovisionedvolumes.html">
+        设置storageArray资源配置的卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-revocationchecksettings.html">
+        设置storageArray revocationchecksettings
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-securitykey.html">
+        设置storageArray securitykey
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-syslog.html">
+        设置storageArray系统日志
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-time.html">
+        设置storageArray时间
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-traypositions.html">
+        设置storageArray托架位置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-unnameddiscoverysession.html">
+        设置storageArray unnamed可 发现会话
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-usersession.html">
+        设置storageArray用户会话
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray-vaaienabled.html">
+        将storageArray设置为已启用
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-storagearray.html">
+        设置storageArray
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-syncmirror.html">
+        设置SyncMirror
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-syslog.html">
+        设置系统日志
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-target.html">
+        设置目标
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-thin-volume-attributes.html">
+        设置精简卷属性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-tray-attribute.html">
+        设置托盘属性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-tray-drawer.html">
+        设置托盘抽屉
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-tray-identification.html">
+        设置托盘标识
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-tray-serviceallowedindicator.html">
+        设置托盘服务允许指示符
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html">
+        为卷组中的卷设置卷组属性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-volume-logicalunitnumber.html">
+        设置卷logicalUnitNumber
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-volume-ssdcacheenabled.html">
+        将卷ssdcacheTM设置为enabled
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-volumecopy-target.html">
+        设置卷复制目标
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-volumegroup-forcedstate.html">
+        设置volumegroup forcedstate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-volumegroup.html">
+        设置卷组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/set-volumes.html">
+        设置卷
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 显示...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-alldrives-downloadprogress.html">
+        显示所有驱动器下载进度
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-alldrives-performancestats.html">
+        显示所有驱动器性能统计信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-alldrives.html">
+        显示所有驱动器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-allhostports.html">
+        显示所有主机端口
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-allsnmpcommunities.html">
+        显示所有snmpCommunities
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-allsnmpusers.html">
+        显示所有snmpusers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-array-label.html">
+        显示阵列标签
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-asyncmirrorgroup-summary.html">
+        显示asyncmirrorgroup摘要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-asyncmirrorgroup-synchronizationprogress.html">
+        显示异步镜像组同步进度
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-auditlog-configuration.html">
+        显示auditlog配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-auditlog-summary.html">
+        显示auditlog摘要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-blockedeventalertlist.html">
+        show blockkedeventalertlist
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-certificates.html">
+        显示证书
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-cgsnapimage.html">
+        show cgsnapimage
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-consistencygroup.html">
+        显示ConsistencyGroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-controller-arraymanagementsignedcertificate-summary.html">
+        show controller arraymanagementsignedcertificate summary
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-controller-cacertificate.html">
+        显示控制器caCertificate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-controller-diagnostic-status.html">
+        显示控制器诊断状态
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-controller-nvsram.html">
+        show controller nvsram
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-controller.html">
+        显示控制器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-diskpool.html">
+        显示磁盘池
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-drivechannel-stats.html">
+        显示驱动器通道统计信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-emailalert-summary.html">
+        显示电子邮件警报摘要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-iscsisessions.html">
+        显示iscsisessions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-replaceabledrives.html">
+        显示可更换的驱动器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-snapgroup.html">
+        显示snapgroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-snapimage.html">
+        显示SnapImage
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-snapvolume.html">
+        显示snapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-snmpsystemvariables.html">
+        显示snmpsystemvariables
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-ssd-cache-statistics.html">
+        显示SSD缓存统计信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-ssd-cache.html">
+        显示SSD缓存
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-autoconfiguration.html">
+        显示storageArray自动配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-autosupport.html">
+        显示storageArray AutoSupport
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-cachemirrordataassurancecheckenable.html">
+        show storageArray cachemirrordataassurancecheckenable
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-controllerhealthimage.html">
+        show storageArray controllerhealthimage
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-dbmdatabase.html">
+        show storageArray dbmdatabase
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-directoryservices-summary.html">
+        显示storageArray DirectoryServices摘要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-hostconnectivityreporting.html">
+        显示storageArray hostconnectivitireporting
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-hosttopology.html">
+        show storageArray主机拓扑
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-iscsinegotiationdefaults.html">
+        show storageArray iscsinfodefaults
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-lunmappings.html">
+        显示storageArray lunmappings
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-odxsetting.html">
+        show storageArray odxsetting
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-powerinfo.html">
+        show storageArray powerinfo
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-revocationchecksettings.html">
+        显示storageArray revocationchecksettings
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-syslog.html">
+        显示storageArray系统日志
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-trustedcertificate-summary.html">
+        显示storageArray受托者证书摘要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-unconfiguredinitiators.html">
+        show storageArray unconfiguredinitiators
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-unconfigurediscsiinitiators.html">
+        show storageArray unconfigurediscsiinitiators
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-unreadablesectors.html">
+        显示storageArray不可读存储器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray-usersession.html">
+        显示storageArray用户会话
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-storagearray.html">
+        显示storageArray
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-syncmirror-candidates.html">
+        显示SyncMirror 候选项
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-syncmirror-synchronizationprogress.html">
+        显示SyncMirror 同步进度
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-syslog-summary.html">
+        显示系统日志摘要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-textstring.html">
+        显示文本字符串
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-volume-actionprogress.html">
+        显示卷操作进度
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-volume-performancestats.html">
+        显示卷性能统计信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-volume-reservations.html">
+        显示卷预留
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-volume-summary.html">
+        显示卷摘要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-volume.html">
+        显示卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-volumecopy-source-targetcandidates.html">
+        show volumecopy source targetCandidates
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-volumecopy-sourcecandidates.html">
+        显示卷复制sourceCandidates
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-volumecopy.html">
+        显示卷复制
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-volumegroup-exportdependencies.html">
+        显示卷组导出依赖关系
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-volumegroup-importdependencies.html">
+        显示卷组的导入依赖关系
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/show-volumegroup.html">
+        显示卷组
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SMcli...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/smcli-alerttest.html">
+        smcli alerttest
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/smcli-autosupportconfig-show.html">
+        smcli autosupportconfig show
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/smcli-autosupportconfig-test.html">
+        SMcli autosupportconfig测试
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/smcli-autosupportconfig.html">
+        SMcli autosupportconfig
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/smcli-autosupportlog.html">
+        SMcli autosupportlog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/smcli-autosupportschedule-reset.html">
+        SMcli autosupportschedule reset
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/smcli-autosupportschedule-show.html">
+        smcli autosupportschedule show
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/smcli-enable-autosupportfeature.html">
+        SMcli启用AutoSupport功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/smcli-enable-disable-autosupportondemand.html">
+        smcli enable disable autosupportondemand
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/smcli-enable-disable-autosupportremotediag.html">
+        smcli enable disable autosupportremotediag
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/smcli-supportbundle-schedule.html">
+        SMcli supportBundle计划
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 启动...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-asyncmirrorgroup-synchronize.html">
+        启动异步镜像组同步
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-cgsnapimage-rollback.html">
+        启动cgsnapimage回滚
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-controller-iscsihostport-dhcprefresh.html">
+        启动控制器iscsihostport dhcprefresh
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-controller.html">
+        启动控制器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-diskpool-fullprovisioning.html">
+        启动磁盘池全满配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-diskpool-locate.html">
+        启动diskpool locate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-diskpool-resourceprovisioning.html">
+        启动磁盘池资源配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-drive-erase.html">
+        启动驱动器擦除
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-drive-initialize.html">
+        启动驱动器初始化
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-drive-locate.html">
+        启动驱动器定位
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-drive-reconstruct.html">
+        启动驱动器重建
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-drivechannel-faultdiagnostics.html">
+        启动驱动器通道故障诊断
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-drivechannel-locate.html">
+        启动驱动器通道定位
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-emailalert-test.html">
+        启动电子邮件警报测试
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-increasevolumecapacity-volume.html">
+        开始增加卷容量
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-ioclog.html">
+        启动iosclog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-secureerase-drive.html">
+        启动secureerase驱动器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-snapimage-rollback.html">
+        启动SnapImage回滚
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-snmptrapdestination.html">
+        启动snmptrapdestination
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-ssdcache-locate.html">
+        启动ssdcache locate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-ssdcache-performancemodeling.html">
+        启动ssdcache性能图
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-storagearray-autosupport-deliverytest.html">
+        启动storageArray AutoSupport deliverytest
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-storagearray-autosupport-manualdispatch.html">
+        启动storageArray AutoSupport 手动派单
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-storagearray-configdbdiagnostic.html">
+        启动storageArray configdbdiagnostic
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-storagearray-controllerhealthimage-controller.html">
+        启动storageArray controllerhealthimage控制器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-storagearray-directoryservices-test.html">
+        启动storageArray DirectoryServices测试
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-storagearray-externalkeymanagement-test.html">
+        启动storageArray外部密钥管理测试
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-storagearray-isnsserverrefresh.html">
+        启动storageArray isnssserverrefresh
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-storagearray-locate.html">
+        启动storageArray locate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-storagearray-ocspresponderurl-test.html">
+        启动storageArray ocspresponderurl测试
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-storagearray-syslog-test.html">
+        启动storageArray系统日志测试
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-syncmirror-primary-synchronize.html">
+        启动SyncMirror 主同步
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-syslog-test.html">
+        启动系统日志测试
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-tray-locate.html">
+        启动托盘定位
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-volume-initialization.html">
+        启动卷初始化
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-volume-initialize.html">
+        启动卷初始化
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-volumegroup-defragment.html">
+        启动volumegroup碎片整理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-volumegroup-export.html">
+        启动卷组导出
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-volumegroup-fullprovisioning.html">
+        启动volumegroup填充
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-volumegroup-import.html">
+        启动卷组导入
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-volumegroup-locate.html">
+        启动volumegroup locate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/start-volumegroup-resourceprovisioning.html">
+        启动卷组资源配置
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 停止...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-asyncmirrorgroup-rolechange.html">
+        停止异步镜像组回滚
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-cgsnapimage-rollback.html">
+        停止cgsnapimage回滚
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-cgsnapvolume.html">
+        停止cgsnapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html">
+        停止ConsistencyGroup pendingsnapimagecn丛
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-diskpool-locate.html">
+        停止diskpool locate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-drive-locate.html">
+        停止驱动器定位
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-drive-replace.html">
+        停止驱动器更换
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-drivechannel-faultdiagnostics.html">
+        停止驱动器通道故障诊断
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-drivechannel-locate.html">
+        停止驱动器通道定位
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-pendingsnapimagecreation.html">
+        停止pendingsnapimageecn之间 的创建
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-snapimage-rollback.html">
+        停止SnapImage回滚
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-snapvolume.html">
+        停止snapvolume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-ssdcache-locate.html">
+        停止ssdcache locate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-ssdcache-performancemodeling.html">
+        停止ssdcache性能图块化
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-storagearray-configdbdiagnostic.html">
+        停止storageArray configdbdiagnostic
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-storagearray-drivefirmwaredownload.html">
+        停止storageArray drivefirmwaredownload
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-storagearray-iscsisession.html">
+        停止storageArray iscsisession
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-storagearray-locate.html">
+        停止storageArray locate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-tray-locate.html">
+        停止托盘定位
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-volumecopy-target-source.html">
+        停止卷复制目标源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/stop-volumegroup-locate.html">
+        停止volumegroup locate
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 暂停...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/suspend-asyncmirrorgroup.html">
+        暂停异步镜像组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/suspend-ssdcache.html">
+        暂停ssdcache
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/suspend-syncmirror-primaries.html">
+        暂停SyncMirror 主节点
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 五</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/commands-a-z/validate-storagearray-securitykey.html">
+        验证storageArray安全密钥
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/e-series-cli/legal-notices.html">
+        法律声明
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/zh-cn/e-series-family/">E-Series</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/zh-cn/e-series-cli/">SANtricity&nbsp;commands</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 简体中文版经机器翻译而成，仅供参考。如与英语版出现任何冲突，应以英语版为准。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">显示已安装的受信任CA证书摘要</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-05-24 02:36:31 +0000">05/24/2022</time>
+    
+  
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>`show storageArray trustedCertificate summary`命令可显示阵列中已安装的可信CA证书摘要。在执行`delete storageArray trustedCertificate`命令之前、可以使用此命令、以便您知道要删除的证书的别名。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="支持的阵列">支持的阵列</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="角色">角色</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="语法">语法</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>show storageArray trustedCertificate [all | allUserInstalled|
+ aliases=("<em>alias1</em>" ... "<em>aliasN</em>")] summary</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="parameters">Parameters</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">参数</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>全部</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>用于指定检索所有证书、包括预安装和用户安装的证书。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>所有用户安装</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>用于指定检索所有用户安装的证书。这是默认选项。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>别名</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>允许用户指定要按别名检索的预安装或用户安装的可信证书。将所有别名括在圆括号中。如果输入多个别名、请使用空格将其分隔开。</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="示例">示例</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>示例输出可能与下图有所不同。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>SMcli -n Array1 -c "show storageArray trustedCertificate allUserInstalled summary;"
+============================
+Trusted Certificates
+============================
+Alias:        19527b38-8d26-44e5-8c7f-5bf2ca9db7cf
+Type:         Pre-installed | User installed
+Subject DN:   CN=Corp Issuing CA 1
+Issuer DN:    CN=Corp Root CA
+Start:        <em>date</em>
+Expire:       <em>date</em>
+---------------------
+Alias:        myAliasName
+Type:         Pre-installed | User installed
+Subject DN:   CN=Corp Issuing CA 1
+Issuer DN:    CN=Corp Root CA
+Start:        <em>date</em>
+Expire:       <em>date</em>
+
+SMcli completed successfully.</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="最低固件级别">最低固件级别</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>8.40</p>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">条款和条件</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">隐私政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie 政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie 设置</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">想就我们的网站提供反馈?</span>
+              <a target="_self" href="javascript:netapp_mailto()">请告诉我们</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/zh-cn/announcements/">通知</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/e-series-cli/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-cn/e-series-cli/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-cn/e-series-cli/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-cn/e-series-cli/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-cn/e-series-cli/js/www-ntap.js'></script>
+    <script src='/zh-cn/e-series-cli/js/tabbed-blocks.js'></script>
+  </body></html>
