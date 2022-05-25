@@ -202,7 +202,7 @@ link:../commands-a-z/start-volumegroup-export.html["启动卷组导出"]
 
 link:../commands-a-z/start-volumegroup-fullprovisioning.html["启动卷组完全配置"]
 
-link:learn-about-volume-group-migration.html["了解卷组迁移(仅限命令行界面)"]
+link:../get-started/learn-about-volume-group-migration.html["了解卷组迁移(仅限命令行界面)"]
 
 link:../commands-a-z/start-volumegroup-import.html["启动卷组导入"]
 
