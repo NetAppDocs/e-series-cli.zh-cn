@@ -33,7 +33,7 @@ summary: start VolumeGroup export命令可将卷组移至已导出状态。
 
 [CAUTION]
 ====
-如果未先执行中列出的步骤、请勿执行这些步骤 xref:../commands-category/learn-about-volume-group-migration.adoc[了解卷组迁移。]
+如果未先执行中列出的步骤、请勿执行这些步骤 xref:../get-started/learn-about-volume-group-migration.html[了解卷组迁移。]
 
 ====
 [NOTE]
