@@ -36,12 +36,14 @@ userLabel="_volumeName"_]
 [freeCapacityArea=pass:quotes[_freeCapacityIndexNumber_]]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]
+[mapping=(none | default)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [segmentSize=pass:quotes[_segmentSizeValue_]]
 [usageHint=(fileSystem | dataBase | multiMedia)]
 [dssPreAllocate=(TRUE | FALSE)]
 [securityType=(none | capable | enabled)]
 [dataAssurance=(none | enabled)]
+[blockSize=blockSizeValue]
 ----
 
 
@@ -142,6 +144,20 @@ userLabel="_volumeName"_]
 
 `enabled`—卷组和卷已启用安全性。
 
+
+
+ a| 
+`m设置`
+ a| 
+使用此参数可以将卷映射到主机。如果要稍后映射、请将此参数设置为 `none`。如果要立即映射、请将此参数设置为 `default`。卷将映射到有权访问存储池的所有主机。默认值为 `none`。
+
+
+
+ a| 
+`块大小`
+ a| 
+此参数用于设置要创建的卷的块大小。如果值为0或参数未设置、则会使用默认块大小。
+
 |===
 
 
@@ -233,3 +249,5 @@ enabled
 7.50添加了`securityType`参数。
 
 7.75添加`dataAssurance`参数。
+
+11.70添加 `blockSize` 参数。

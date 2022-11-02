@@ -341,8 +341,6 @@ Date/Time: Thu Jun 03 14:54:55 MDT 2004
 LOGICAL DEVICES  OPERATION         STATUS        TIME REMAINING
 Volume-2         Volume Disk Copy  10% COMPLETED  5 min
 ----
-对。
-
 `longRunningOperations`参数返回的信息字段具有以下含义：
 
 * `name`是当前运行时间较长的卷的名称。卷名称必须使用"Volume"作为前缀。

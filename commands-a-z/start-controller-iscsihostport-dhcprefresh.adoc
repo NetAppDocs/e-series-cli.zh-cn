@@ -62,7 +62,7 @@ start controller [(a|b)] iscsiHostPort [portLabel] dhcpRefresh
 
 有关详细信息，请参见以下内容：
 
-<<Identifying an iSCSI host port label,"确定iSCSI主机端口标签">>
+ an iSCSI host port label,"确定iSCSI主机端口标签"
 
 |===
 

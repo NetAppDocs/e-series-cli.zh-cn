@@ -48,6 +48,7 @@ driveMediaType=(HDD | SSD | unknown | allMedia)
 [driveType=(SAS | NVMe4K)]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]
+[mapping=(none | default)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [segmentSize=pass:quotes[_segmentSizeValue_]]
 [usageHint=(fileSystem | dataBase | multiMedia)]
@@ -58,6 +59,7 @@ driveMediaType=(HDD | SSD | unknown | allMedia)
 [secureDrives=(fips | fde )]
 [dataAssurance=(none | enabled)]
 [resourceProvisioningCapable=(TRUE | FALSE)]
+[blockSize=blockSizeValue]
 ----
 [listing, subs="+macros"]
 ----
@@ -69,6 +71,7 @@ driveMediaType=(HDD | SSD | unknown | allMedia)
 [driveType=SAS]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]
+[mapping=(none | default)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [segmentSize=pass:quotes[_segmentSizeValue_]]
 [usageHint=(fileSystem | dataBase | multiMedia)]
@@ -79,6 +82,7 @@ driveMediaType=(HDD | SSD | unknown | allMedia)
 [secureDrives=(fips | fde )]
 [dataAssurance=(none | enabled)]
 [resourceProvisioningCapable=(TRUE | FALSE)]
+[blockSize=blockSizeValue]
 ----
 
 
@@ -228,6 +232,20 @@ driveMediaType=(HDD | SSD | unknown | allMedia)
 `resourceProvisioningCapable`
  a| 
 用于指定是否启用资源配置功能的设置。要禁用资源配置、请将此参数设置为`false`。默认值为`true`。
+
+
+
+ a| 
+`m设置`
+ a| 
+使用此参数可以将卷映射到主机。如果要稍后映射、请将此参数设置为 `none`。如果要立即映射、请将此参数设置为 `default`。卷将映射到有权访问存储池的所有主机。默认值为 `none`。
+
+
+
+ a| 
+`块大小`
+ a| 
+此参数用于设置要创建的卷的块大小。如果值为0或参数未设置、则会使用默认块大小。
 
 |===
 
@@ -448,3 +466,5 @@ driveMediaType=HDD securityType=capable secureDrives=fips
 8.25添加了`secureDrives`参数。
 
 8.63添加了`resourceProvisioningCapable`参数。
+
+11.70添加 `blockSize` 参数。

@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-  <block id="05c5d3be594e5bc2293d9efbb13e5ac0" category="summary">对于具有嵌入式Web服务的E2800和E5700控制器、SANtricity OS 11.40版本可以使用安全HTTPS协议在命令行上进行交互。这些控制器可以选择使用符号协议进行命令行交互。</block>
   <block id="9cfc4b6c01a61eda2edda8580884f546" category="doc">命令行参数</block>
-  <block id="302750c230c8231b0e5ae8b563027105" category="section-title">11.40版本中的新命令行参数</block>
-  <block id="e992980d4f80a6fb0c1180d277b3563e" category="paragraph">对于具有嵌入式Web服务的E2800和E5700控制器、SANtricity OS 11.40版本可以使用安全HTTPS协议在命令行上进行交互。这些控制器可以选择使用符号协议进行命令行交互。符号协议是E2700和E5600控制器唯一支持的协议。为了保留现有脚本并最大限度地缩短过渡时间、CLI选项和语法会尽可能保留下来。但是、E2800和E5700控制器在安全性、身份验证、AutoSupport 和警报消息方面的功能存在一些差异、这些差异会使这些控制器的某些命令行界面语法变得过时。但是、在某些情况下、只有在使用新的https协议时、E2800或E5700上的语法才会过时。</block>
   <block id="aaedb78025d5d9a4e8dc9d4da12dd28e" category="paragraph">对于仅适用于`* https*`客户端类型的新参数、它们同样仅适用于E2800或E5700控制器。</block>
-  <block id="c85e51547f06efc79a891c2ac36e7a1f" category="inline-xref-macro">此版本中CLI和Script命令的更改</block>
-  <block id="16d3c453763fe3ed7272ca311343223a" category="paragraph">有关此版本中新增、已弃用和已废弃命令的列表、请参见 <block ref="5766981eb252a7c1d5434c15f8b92c94" category="inline-xref-macro-rx"></block>。</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">参数</block>
   <block id="0b890b1926b90387673882e6ccae7fdc" category="cell">定义</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="doc"></block>
@@ -759,148 +754,90 @@
   <block id="4f606061cc4499e411135fef4c307053" category="paragraph">E2800或E5700存储阵列不支持` a`和`-x`命令行选项。</block>
   <block id="223bbafe2f1dac423520e791e763e6f5" category="paragraph">E2800或E5700存储阵列不支持`-s`命令行选项。</block>
   <block id="40bca54aff18bd6b61ab776afa82b445" category="summary">本主题列出了最新版本的SANtricity System Manager命令行界面命令和脚本命令的更改。</block>
-  <block id="5fef629b836b60819e0c0ce49cd2b9d7" category="doc">新增功能</block>
-  <block id="8777c423eb5ff6041a851f39dd4409e0" category="paragraph">在命令提示符处发出SMcli命令时、使用Windows操作系统时、输入或输出文件的文件路径名称中需要额外的反斜杠(`\`)字符作为转义字符。在安全https模式下使用SMcli时、必须包含额外的反斜杠(`\`)、方法是提供-u选项以指定基于角色的访问管理用户。示例：`C：\\dir\\subdir\\filename`</block>
   <block id="e5b376b9bdbfe1612d578d30462ed6ff" category="section-title">SANtricity 11.70.3</block>
-  <block id="cc43cb6c70a489987f30d6aaabafd555" category="paragraph">下表列出了11.70.3版的命令行界面和脚本命令的更改。</block>
   <block id="ee97be03cb04119af45014d815621ce1" category="cell">命令</block>
   <block id="cabd3dec14f47181e4af36eb550db0ea" category="cell">问题描述 of Change</block>
   <block id="2095fd6c65341ab93c351699ae64c34e" category="inline-xref-macro">启动磁盘池资源配置</block>
-  <block id="ede09854458a2cb135d817c6510bc481" category="paragraph"><block ref="ede09854458a2cb135d817c6510bc481" category="inline-xref-macro-rx"></block></block>
   <block id="5f7ba2b716ed29bcc6c93b9e259022ee" category="paragraph">已添加命令</block>
   <block id="2f1b562e05b7449cb98803797eedcc19" category="inline-xref-macro">启动卷组资源配置</block>
-  <block id="b30eec40fc469badb14691b602a67632" category="paragraph"><block ref="b30eec40fc469badb14691b602a67632" category="inline-xref-macro-rx"></block></block>
   <block id="87f8a594fb1fc32894281afc20c0dda0" category="inline-xref-macro">启动磁盘池完全配置</block>
-  <block id="58fe324523598b4d0a3a609fafa743fa" category="paragraph"><block ref="58fe324523598b4d0a3a609fafa743fa" category="inline-xref-macro-rx"></block></block>
   <block id="969c2f3727f8a09904f177fa5c0b45d7" category="paragraph">已更新`disableResourceProvisioning`参数问题描述。</block>
   <block id="32af27643a1da772d0db094077cce8d8" category="inline-xref-macro">启动卷组完全配置</block>
-  <block id="0a40938b2ba0dc85879631e682623c50" category="paragraph"><block ref="0a40938b2ba0dc85879631e682623c50" category="inline-xref-macro-rx"></block></block>
   <block id="8a4df40632a4ef19806a0fe552fd3c5b" category="inline-xref-macro">重新创建外部安全密钥</block>
-  <block id="1a83588b8874d482411ae7043b414d0c" category="paragraph"><block ref="1a83588b8874d482411ae7043b414d0c" category="inline-xref-macro-rx"></block></block>
   <block id="8240d06183810907de9b280dfee9a05e" category="paragraph">已添加`dDeleteOldKey`参数。</block>
   <block id="ed6c4c5587cae9b7857a4c212c8b34da" category="inline-xref-macro">创建磁盘池</block>
-  <block id="c8cadf21378c7f1640b6dd8327e96197" category="paragraph"><block ref="c8cadf21378c7f1640b6dd8327e96197" category="inline-xref-macro-rx"></block></block>
   <block id="6f716bfd4057a5bb2f73f7b626fff002" category="paragraph">已更新`driveCount`参数问题描述。</block>
   <block id="3cffe633df330392f4d88b8478c9390b" category="section-title">SANtricity 11.70.2</block>
-  <block id="b580df9b7b9fe87123296ab444f6854f" category="paragraph">下表列出了11.70.2版的命令行界面和脚本命令的更改。</block>
   <block id="326299687f74c312b7aaa299887c7d36" category="inline-xref-macro">注册SNMPv3 USM用户</block>
-  <block id="b23800f9811e58684cffc261aac6d0ab" category="paragraph"><block ref="b23800f9811e58684cffc261aac6d0ab" category="inline-xref-macro-rx"></block></block>
   <block id="e1eeac0853bd4af8dbcb7863b475271f" category="inline-xref-macro">更新SNMPv3 USM用户</block>
-  <block id="ec7d3451c381de8f82589acbc5c59721" category="paragraph"><block ref="ec7d3451c381de8f82589acbc5c59721" category="inline-xref-macro-rx"></block></block>
   <block id="b41c0c310da974a918bce8d5adf0c364" category="inline-xref-macro">显示SNMPv3 USM用户</block>
-  <block id="507790c178995ba5afc4880ba6a2908b" category="paragraph"><block ref="507790c178995ba5afc4880ba6a2908b" category="inline-xref-macro-rx"></block></block>
   <block id="579373f73990fda09e2fa2adb4b31791" category="inline-xref-macro">取消注册SNMPv3 USM用户</block>
-  <block id="a0ab16e2889ba3dc6d08a3b1a3165200" category="paragraph"><block ref="a0ab16e2889ba3dc6d08a3b1a3165200" category="inline-xref-macro-rx"></block></block>
   <block id="3820f77018da043fb66e4fd865a34706" category="inline-xref-macro">注册SNMP陷阱目标</block>
-  <block id="2e40ae0a0a6062d15b29d1c1e5c9fdd1" category="paragraph"><block ref="2e40ae0a0a6062d15b29d1c1e5c9fdd1" category="inline-xref-macro-rx"></block></block>
   <block id="a2c9974b236ee81969b25e3fb9ab1358" category="paragraph">添加了`username`和`engineid`参数。</block>
   <block id="db81528e982d687f579b76a74b0366f1" category="inline-xref-macro">更新SNMP陷阱目标</block>
-  <block id="1722cf6a7cac49167aa9ffd96d074e9f" category="paragraph"><block ref="1722cf6a7cac49167aa9ffd96d074e9f" category="inline-xref-macro-rx"></block></block>
   <block id="35c629434ff0892b4189c42464b27f1b" category="inline-xref-macro">测试SNMP陷阱目标</block>
-  <block id="abd3b9079a6d6786221954207eb96177" category="paragraph"><block ref="abd3b9079a6d6786221954207eb96177" category="inline-xref-macro-rx"></block></block>
   <block id="cfafd61e53ff8b90ff59654a31683d33" category="section-title">SANtricity 11.70.1</block>
-  <block id="c489c59843bd73037903b8e6389538a7" category="paragraph">下表列出了11.70.1版的命令行界面和脚本命令的更改。</block>
   <block id="5e1960d53d0e67e3cd307a126a8f75ac" category="inline-xref-macro">启动驱动器擦除</block>
-  <block id="227dbaeff3402ff198e56a75414af408" category="paragraph"><block ref="227dbaeff3402ff198e56a75414af408" category="inline-xref-macro-rx"></block></block>
   <block id="11b1a1e2c28e878f48cf799cce8aa812" category="inline-xref-macro">导入存储阵列安全密钥</block>
-  <block id="62993f6010765a155393483d17b2a70c" category="paragraph"><block ref="62993f6010765a155393483d17b2a70c" category="inline-xref-macro-rx"></block></block>
   <block id="c8dcef2f4d406da39ebba027f0ad429b" category="paragraph">已添加`forceOverwrite`参数。</block>
   <block id="a1b505355d4125b9c69b8493dabecadd" category="inline-xref-macro">设置控制器主机端口属性</block>
-  <block id="3fa735e68ba0eddfdb5ecc5b5fd4e534" category="paragraph"><block ref="3fa735e68ba0eddfdb5ecc5b5fd4e534" category="inline-xref-macro-rx"></block></block>
   <block id="417a48334613625984787d90e56e38cb" category="paragraph">已添加`fecMode`参数。</block>
   <block id="7998fd524ef38b7a71eac8f9f4ccd238" category="inline-xref-macro">显示系统日志配置</block>
-  <block id="8116fab9bff799135acd5cb840c69e2e" category="paragraph"><block ref="8116fab9bff799135acd5cb840c69e2e" category="inline-xref-macro-rx"></block></block>
   <block id="6be91014f49b358314d631a1bd795452" category="paragraph">已添加`syslogFormat`参数。</block>
   <block id="6788b263ca8abda807d586f151085f44" category="inline-xref-macro">配置系统日志设置</block>
-  <block id="ceb944f7546b13abafaea97348355d79" category="paragraph"><block ref="ceb944f7546b13abafaea97348355d79" category="inline-xref-macro-rx"></block></block>
   <block id="1b15771136d070897a4786d21a91bfca" category="inline-xref-macro">配置电子邮件警报设置</block>
-  <block id="10268458f0980628772773e153eea80c" category="paragraph"><block ref="10268458f0980628772773e153eea80c" category="inline-xref-macro-rx"></block></block>
   <block id="fb9c0e1d3c7e89668f5d762844e0fff3" category="paragraph">添加了`serverEncryption`、`serverPort`、`serverUsername`和`serverPassword`参数。</block>
   <block id="0675a2151f6d8106026aed9de4d8c5e4" category="inline-xref-macro">显示电子邮件警报配置</block>
-  <block id="fed19fd3135843d564eb904e9ccdac60" category="paragraph"><block ref="fed19fd3135843d564eb904e9ccdac60" category="inline-xref-macro-rx"></block></block>
   <block id="5739d7add341e0326107e029f52ef372" category="paragraph">已添加`SMTP`加密、端口和凭据参数数据。</block>
   <block id="3b5d6c04848b808e88bd30603defae1c" category="inline-xref-macro">恢复RAID卷</block>
-  <block id="860a7823a2af330512f811f2bd8d86e8" category="paragraph"><block ref="860a7823a2af330512f811f2bd8d86e8" category="inline-xref-macro-rx"></block></block>
   <block id="b38477e0ffa079ffe6db9ea9609c7c0c" category="paragraph">已添加`blocksize`参数。</block>
   <block id="474034f7e02f357e3878ae2514a2b3fd" category="section-title">SANtricity 11.70</block>
-  <block id="d2ebffdd54980a34b665f5364d95c241" category="paragraph">下表列出了11.70版的命令行界面和脚本命令的更改。</block>
   <block id="8630f953448efd3164d45bd4733963c9" category="inline-xref-macro">下载存储阵列固件/NVSRAM</block>
-  <block id="2577d6851fdd96e616de9ab7837b6852" category="paragraph"><block ref="2577d6851fdd96e616de9ab7837b6852" category="inline-xref-macro-rx"></block></block>
   <block id="ddc948fd2b779667ef8ac6b9fa14e17c" category="paragraph">已添加`healthCheckNeedsAttnOverride`参数。</block>
   <block id="60aecce41e2696a961f6c03c42d6fefc" category="inline-xref-macro">在磁盘池中创建卷</block>
-  <block id="fe19bdb144cf589d0cf73d913fd6f0be" category="paragraph"><block ref="fe19bdb144cf589d0cf73d913fd6f0be" category="inline-xref-macro-rx"></block></block>
   <block id="d14dc92dae751ac72bbf29658a8cda5c" category="paragraph">已添加`raidLevel`参数。</block>
   <block id="0647a5952beb6863aacfa11311d22f0b" category="inline-xref-macro">启用外部安全密钥管理</block>
-  <block id="84c5266ab41140b5c0cdcbac931a2fa8" category="paragraph"><block ref="84c5266ab41140b5c0cdcbac931a2fa8" category="inline-xref-macro-rx"></block></block>
   <block id="4d926e7d603a8be98a85dd68645636bc" category="paragraph">已添加`saveFile`参数。</block>
   <block id="52d53af59b45ed76c374ea97831a2113" category="inline-xref-macro">禁用外部安全密钥管理</block>
-  <block id="90f2438a9d1f884d50519b799ae56fa4" category="paragraph"><block ref="90f2438a9d1f884d50519b799ae56fa4" category="inline-xref-macro-rx"></block></block>
   <block id="dd62ecca79626b0abf30ba505a8993ef" category="paragraph">已添加`hostUnmapEnabled`参数。</block>
   <block id="89009756cb3faf02b7f235c5a54cf270" category="section-title">SANtricity 11.63</block>
   <block id="facc1a9ea58302b0eaf856a4b4dc50f5" category="paragraph">下表列出了11.63版的命令行界面和脚本命令的更改。</block>
   <block id="ae6ca176a200036f0702de4f88af28de" category="inline-xref-macro">启动存储阵列AutoSupport 手动派遣</block>
-  <block id="f234f138eadfb77cf62a288e3630e58e" category="paragraph"><block ref="f234f138eadfb77cf62a288e3630e58e" category="inline-xref-macro-rx"></block></block>
   <block id="7e75d738e10ff67d5851ae5bca9dab0c" category="inline-xref-macro">修复数据奇偶校验</block>
-  <block id="04fdb467008d5b5016b47fa544519396" category="paragraph"><block ref="04fdb467008d5b5016b47fa544519396" category="inline-xref-macro-rx"></block></block>
   <block id="fd20a97395d72662264f2bfac37873a6" category="inline-xref-macro">设置存储阵列资源配置的卷</block>
-  <block id="eb592d329fb6f7babbfbadde143fd500" category="paragraph"><block ref="eb592d329fb6f7babbfbadde143fd500" category="inline-xref-macro-rx"></block></block>
   <block id="5fb337c5d1b8204f9a719a390633fbdd" category="inline-xref-macro">创建卷映射</block>
-  <block id="546cbae6566986b4bedc32a4e5671184" category="paragraph"><block ref="546cbae6566986b4bedc32a4e5671184" category="inline-xref-macro-rx"></block></block>
   <block id="35f524b6f8efa87c84a9936f8afa6ce1" category="paragraph">已添加`mapWaitPeriod`参数。</block>
   <block id="a08dfe2f4f0ed8cb0e4ecd537093ea76" category="inline-xref-macro">显示存储阵列</block>
-  <block id="3438d7385ed22a2d9387c90f34c58bca" category="paragraph"><block ref="3438d7385ed22a2d9387c90f34c58bca" category="inline-xref-macro-rx"></block></block>
   <block id="0ea2489c97700044a62ec015cbfea8cb" category="paragraph">已在`profile`参数结果下添加`资源配置卷`条目。</block>
-  <block id="cba79b9df9ca5d91c782c5d695700037" category="paragraph"><block ref="cba79b9df9ca5d91c782c5d695700037" category="inline-xref-macro-rx"></block></block>
   <block id="a7dcd6b31c24cfb3a203758b09c31835" category="paragraph">已添加`resourceProvisioningCapable`参数。</block>
   <block id="ecd5b19e377ea09681cc3033516727ef" category="inline-xref-macro">创建卷组</block>
-  <block id="c65261c5759266608f4b239fd59553bc" category="paragraph"><block ref="c65261c5759266608f4b239fd59553bc" category="inline-xref-macro-rx"></block></block>
   <block id="6bbb966265ea9783d25006b17718e5c1" category="inline-xref-macro">显示卷组</block>
-  <block id="2e6884e692b22d72f34774446ec859ff" category="paragraph"><block ref="2e6884e692b22d72f34774446ec859ff" category="inline-xref-macro-rx"></block></block>
   <block id="feb2059d63d5e46b9d607e1e6c9f4005" category="paragraph">在命令结果中添加了`resource-provisioned` information。</block>
   <block id="57b9042e61e804be9d7f7eb21f903bd2" category="inline-xref-macro">创建RAID卷(自动选择驱动器)</block>
-  <block id="b113c506197ceee61715e79148e118c4" category="paragraph"><block ref="b113c506197ceee61715e79148e118c4" category="inline-xref-macro-rx"></block></block>
   <block id="8bc7153babd734a7e9bcb2a8ae0a52a2" category="inline-xref-macro">创建RAID卷(手动选择驱动器)</block>
-  <block id="88d548daf0889c156db5133fc2297627" category="paragraph"><block ref="88d548daf0889c156db5133fc2297627" category="inline-xref-macro-rx"></block></block>
   <block id="9ef63d358bdc217e43dcb0fc830b0afa" category="inline-xref-macro">显示磁盘池</block>
-  <block id="516006f733eca01b974fe755e23087d3" category="paragraph"><block ref="516006f733eca01b974fe755e23087d3" category="inline-xref-macro-rx"></block></block>
   <block id="54f27706dd97a6e4af870a74b6d36046" category="section-title">SANtricity 11.62</block>
-  <block id="479ec17a09a6af1e81955aa32ea0ef99" category="paragraph">下表列出了11.62版的命令行界面和脚本命令的更改。</block>
   <block id="bbc33257024b79e4fd9ad85a4d1e5402" category="paragraph">为`主机端口`参数添加了`物理`和`虚拟`值。</block>
   <block id="92ebf9c09deafce375aa7192c5ffc460" category="section-title">SANtricity 11.61及更低版本</block>
   <block id="e4c60892daa50d0e069f9aaacd2b3e74" category="list-text">已将EF600平台添加为适用命令的受支持阵列。</block>
   <block id="64a2ce0969644ae2fb0f841ab7d4781b" category="inline-xref-macro">保存存储阵列支持数据</block>
-  <block id="498dbc04bafe065eb4acb138e4260371" category="paragraph"><block ref="498dbc04bafe065eb4acb138e4260371" category="inline-xref-macro-rx"></block></block>
   <block id="41598ebadd139da8827dc3df7cd355cf" category="paragraph">已添加`object-bundle.json`数据类型。</block>
   <block id="53fa78337dd74557902d76128f25d718" category="inline-xref-macro">显示驱动器</block>
-  <block id="d691799fdd18daabb68011ec1d75ecda" category="paragraph"><block ref="d691799fdd18daabb68011ec1d75ecda" category="inline-xref-macro-rx"></block></block>
   <block id="7706dccc3fd27017e7e31f08d81ce0ca" category="paragraph">增加了NVMe4K兼容性。</block>
   <block id="58df588da257807d5f7cbd9390db8785" category="inline-xref-macro">激活同步镜像</block>
-  <block id="381ed79325d8514f9a1807be863311ea" category="paragraph"><block ref="381ed79325d8514f9a1807be863311ea" category="inline-xref-macro-rx"></block></block>
   <block id="afdba758a33212a451d426e382ffffa6" category="inline-xref-macro">重新创建同步镜像存储库卷</block>
-  <block id="a22bcaf4b5224bffcddb6df1849a485b" category="paragraph"><block ref="a22bcaf4b5224bffcddb6df1849a485b" category="inline-xref-macro-rx"></block></block>
   <block id="bf6829a2035da1ee3f5c0ae93652732c" category="inline-xref-macro">显示存储阵列自动配置</block>
-  <block id="3ed5a11fdeb810671acc8de4051adfed" category="paragraph"><block ref="3ed5a11fdeb810671acc8de4051adfed" category="inline-xref-macro-rx"></block></block>
   <block id="e0a196896c0583bda51daf508bf2e9b3" category="inline-xref-macro">自动配置存储阵列</block>
-  <block id="429106d31bfca1bba99f68194149bbaf" category="paragraph"><block ref="429106d31bfca1bba99f68194149bbaf" category="inline-xref-macro-rx"></block></block>
   <block id="724ce6411c4e487216d71dfe6ca49cdf" category="inline-xref-macro">保存自动负载平衡统计信息</block>
-  <block id="9d23a95a3c841d64d1146c7484edd6fe" category="paragraph"><block ref="9d23a95a3c841d64d1146c7484edd6fe" category="inline-xref-macro-rx"></block></block>
   <block id="9064185bbc267e27fe8336512ff6fb89" category="paragraph">添加了"驱动器丢失主路径"注释</block>
   <block id="799587ec57d3ccaff63b5aeba6541ba1" category="inline-xref-macro">将存储阵列设置为启用或禁用自动负载平衡</block>
-  <block id="32585f5091d2b70e0dcdd3bfd20006c2" category="paragraph"><block ref="32585f5091d2b70e0dcdd3bfd20006c2" category="inline-xref-macro-rx"></block></block>
   <block id="a524a99cfdf07f411dee8bf72266b7e5" category="inline-xref-macro">从阵列添加证书</block>
-  <block id="f297fc0f93be9ef5eab81ac87d5f4e54" category="paragraph"><block ref="f297fc0f93be9ef5eab81ac87d5f4e54" category="inline-xref-macro-rx"></block></block>
   <block id="901711e6beac98bf77c83f0abcd06cc7" category="inline-xref-macro">从文件添加证书</block>
-  <block id="2d1c70723fdf3f613f1742dadd716c66" category="paragraph"><block ref="2d1c70723fdf3f613f1742dadd716c66" category="inline-xref-macro-rx"></block></block>
   <block id="98c9f4fd330bc6425238005018128760" category="inline-xref-macro">删除证书</block>
-  <block id="cdf70c39483ff7bfbe1a4a4cfe78d46d" category="paragraph"><block ref="cdf70c39483ff7bfbe1a4a4cfe78d46d" category="inline-xref-macro-rx"></block></block>
   <block id="08008244ae332cb6cfb7afd0a1421b5d" category="inline-xref-macro">显示证书</block>
-  <block id="5014566890153f96aef20449269561f1" category="paragraph"><block ref="5014566890153f96aef20449269561f1" category="inline-xref-macro-rx"></block></block>
   <block id="45f4af5d50e06c45ba28324c2d9fe147" category="inline-xref-macro">添加阵列标签</block>
-  <block id="40ae6849374d77536b04e745f251174a" category="paragraph"><block ref="40ae6849374d77536b04e745f251174a" category="inline-xref-macro-rx"></block></block>
   <block id="88e4ef4e75f71281d90069877b8a1847" category="inline-xref-macro">删除阵列标签</block>
-  <block id="cd6c694756776556d683d6d767bc1028" category="paragraph"><block ref="cd6c694756776556d683d6d767bc1028" category="inline-xref-macro-rx"></block></block>
   <block id="a8dddcb0378a5adc0ec4222faa73aebe" category="inline-xref-macro">显示阵列标签</block>
-  <block id="f827c222461062316791c13a86072819" category="paragraph"><block ref="f827c222461062316791c13a86072819" category="inline-xref-macro-rx"></block></block>
   <block id="94536b08c149b401c1e3d4aa164b853c" category="summary">Windows PowerShell是一个交互式脚本Shell、可用于访问命令行工具。</block>
   <block id="0a6760c3056dd4237b647943d44dae70" category="doc">Windows PowerShell中CLI命令的格式规则</block>
   <block id="decd8a350cdf754c968c86ee87e30c6c" category="paragraph">Windows PowerShell是一个交互式脚本Shell、可用于访问命令行工具。Windows PowerShell在Windows命令提示符处进行了改进、提供了一组更强大的命令和脚本功能。您可以在Windows PowerShell中运行所有命令行界面和脚本命令；但是、Windows PowerShell具有一些独特的格式要求。这些要求如下：</block>
@@ -1235,7 +1172,6 @@
   <block id="28d7c017ab2e702b4a94b5e0c8da9c64" category="paragraph">如果所有驱动器均支持DA、则可以将`dataAssurance`参数设置为`enabled`、然后对某些操作使用DA。例如、您可以创建一个包含支持DA的驱动器的卷组、然后在该卷组中创建一个启用了DA的卷。使用已启用DA的卷的其他操作可以选择支持DA功能。</block>
   <block id="e76a01cf4fd3b99e96ba093271dbe7ee" category="paragraph">如果将`dataAssurance`参数设置为`enabled`、则候选卷仅会考虑支持数据保证的驱动器、否则将同时考虑支持数据保证和不支持数据保证的驱动器。如果只有数据保证驱动器可用、则会使用已启用的数据保证驱动器创建新卷。</block>
   <block id="fa9ea3257bddd6cd4e7b86b67b522394" category="paragraph">7.83.</block>
-  <block id="d6e96befd979ff5c979e0ad7360f1ab8" category="paragraph">8.70添加了`_raidLevel_`参数。</block>
   <block id="4af9363fe34346a1ccd2eb55690d09e1" category="summary">clear storageArray recoveryMode命令可强制存储阵列退出恢复模式。</block>
   <block id="17bf570b0851595dd97edff08d58fed1" category="doc">清除存储阵列恢复模式</block>
   <block id="3ceeb02d28d94d773349005fce8d37c7" category="paragraph">`clear storageArray recoveryMode`命令可强制存储阵列退出恢复模式。</block>
@@ -5819,7 +5755,6 @@
   <block id="e1812aba89c37f99a38a6480719e9d43" category="paragraph">`features`参数返回的信息显示了已启用、已禁用、评估以及可安装的功能。此命令将以类似如下格式返回功能信息：</block>
   <block id="ed752efdba38d8799f2a231c4da29f7b" category="paragraph">`time`参数以此表单返回信息。</block>
   <block id="651eab6f387afcfd63c07cb04724a6a8" category="paragraph">`longRunningOperations`参数以以下格式返回信息：</block>
-  <block id="f2a2de657e92ec72dbe90fa791c2ce34" category="paragraph">对。</block>
   <block id="890cc787782f1f02570aef423f659823" category="paragraph">`longRunningOperations`参数返回的信息字段具有以下含义：</block>
   <block id="5ede01a707512186e7e34ba2427d90b0" category="list-text">`name`是当前运行时间较长的卷的名称。卷名称必须使用"Volume"作为前缀。</block>
   <block id="44b90e580781acbb1643fb5bc7095162" category="list-text">`operation`列出了正在对卷组或卷执行的操作。</block>
@@ -6986,7 +6921,6 @@
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概述</block>
   <block id="e5d0c3aab4dc0a6e945737c9328844a6" category="sidebar">CLI结构</block>
   <block id="a8ae6aca50d39d33a47b24a5e9fa2dab" category="sidebar">CLI包装器语法</block>
-  <block id="88153c8c136afcee6aa324ba5fe8af1c" category="sidebar">CLI参数</block>
   <block id="63a5617826e6dd4e15f9977b94d8bdc1" category="sidebar">脚本命令结构</block>
   <block id="65791f0e5ca134c2d6fa203ee3f41512" category="sidebar">脚本命令摘要</block>
   <block id="ec15aaf75c6ce2aa003900e30ad2f3b9" category="sidebar">格式规则</block>
@@ -7437,4 +7371,141 @@
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">按类别显示命令</block>
   <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">如果未先执行中列出的步骤、请勿执行这些步骤 <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
   <block id="9effc9edc3686486aaacfb6caa40aee6" category="paragraph"><block ref="9effc9edc3686486aaacfb6caa40aee6" category="inline-link-macro-rx"></block></block>
+  <block id="e0180366a7542136793eb497779f0039" category="summary">SANtricity OS 11.60版支持直接通过SANtricity 系统管理器下载和安装基于http的命令行界面版本(也称为安全命令行界面或SMcli)。</block>
+  <block id="2b21cb9530a6c7704a66108d45c196a1" category="doc">可下载的SMcli命令行参数</block>
+  <block id="ab21a9218cf2507b606b474a8958d92d" category="section-title">11.60及更高版本的可下载SMcli命令行参数</block>
+  <block id="b6c9cb32de0a61002f039efec80a465c" category="paragraph">SANtricity OS 11.60版可以直接通过SANtricity 系统管理器下载和安装基于http的命令行界面版本(也称为"Secure CLI"或SMcli)。此可下载版本的SMcli可从EF600、EF300、E5700、EF570、E2800、 和EF280控制器。要在SANtricity 系统管理器中下载SMCLI、请选择*设置*&gt;*系统*和*加载项*&gt;*命令行界面*。</block>
+  <block id="75842716a65060950b20cba161cbac95" category="admonition">要运行命令行界面命令的管理系统必须具有Java Runtime Environment (JRE) 8及更高版本。</block>
+  <block id="c3369045597873cd151e0a9b94edab23" category="inline-xref-macro">原有命令行参数</block>
+  <block id="720d9a5bd635c70358cdcb41b1eaefaf" category="paragraph">与先前版本的SMcli一样、可通过SANtricity 系统管理器下载的SMcli具有一组唯一的参数。有关在SANtricity OS 11.53及更早版本中使用命令行参数的信息、请参见 <block ref="55493e98e602a03e07f56f1acb2fb353" category="inline-xref-macro-rx"></block></block>
+  <block id="1a98f49f191845835d6fd3e13eb29812" category="section-title">多因素身份验证</block>
+  <block id="e228e60d948488385c1b528cc75ed77d" category="paragraph">如果启用了SAML (安全断言标记语言)、则CLI只能使用访问令牌。如果未启用SAML、则可以使用用户名/密码或访问令牌。可以通过SANtricity 系统管理器生成访问令牌。</block>
+  <block id="e88aeb63b8ab6fc616194c065b4c2b62" category="paragraph"><block ref="b7cc4b6b2b8c0f37377b5cc259385de0" prefix="" category="inline-code"></block></block>
+  <block id="378548dcc9cb4f8858caedf42a766950" category="paragraph">定义用于通过存储阵列进行身份验证的访问令牌。访问令牌可替代用户名和密码。</block>
+  <block id="dabb392a962a4c6f7a599fc77ac42873" category="paragraph"><block ref="f2349da52d073d93e5c41656eac03cfe" prefix="" category="inline-code"></block> (大写)</block>
+  <block id="6c064a9cbbd926e74587f8defd026655" category="list-text"><block ref="ce1dd84bb568503ac83dd4ac6a6214c1" prefix="" category="inline-code"></block> —包含用于身份验证的访问令牌</block>
+  <block id="103239ca71e2d980f813de328f67fd85" category="list-text"><block ref="2181c7399d16e14e568583d1444dafc8" prefix="" category="inline-code"></block> —从stdin读取访问令牌</block>
+  <block id="217925ade44631ba415e673301b463a2" category="paragraph">将此参数与结合使用<block ref="65daa52bdfbdb10c4e4e8ebe7767219b" prefix=" " category="inline-code"></block> 变量。如果不使用访问令牌、则需要此参数。</block>
+  <block id="82a1b054b66e0c0b6689bccad53abaa9" category="paragraph"><block ref="0c9c2c88e4d475e2325d26616cd357ea" prefix="" category="inline-code"></block> (大写)</block>
+  <block id="b46f687fd29df1285d03b2da8709a103" category="section-title">常规https模式命令行参数</block>
+  <block id="1ef7e353f59586eef59a967e0d0ac966" category="paragraph">可下载的SMcli仅支持https模式。以下是https模式常用的命令行参数。</block>
+  <block id="3e83224f233800bb06ce93d927b35bdd" category="paragraph">指定主机名或Internet协议(IP)地址 <block ref="d8c537c0d92ca8927e524da96af38676" prefix="(" category="inline-code"></block>)。</block>
+  <block id="3757a8693378041a86f885240df2e31c" category="paragraph">在通过每个控制器上的以太网连接管理带外存储管理时、必须指定<block ref="f04d852929cd714ffd6956bb571f80ba" prefix=" " category="inline-code"></block> 控制器。</block>
+  <block id="c36d9cabd1c830b950a2eca784ccfd9c" category="paragraph">此可选参数允许<block ref="de6b0dcfbccd619d18dc01c80f872c93" prefix=" " category="inline-code"></block> 客户端以在不安全模式下运行。这意味着不会验证存储阵列的证书。默认情况下、如果省略、则会执行正确的验证。</block>
+  <block id="21b717352b4d2e9ab433c3c73eacec7a" category="inline-xref">管理存储的证书命令行参数</block>
+  <block id="1cee5e6c4e0bed15d3b5693695f307bb" category="admonition">有关管理存储阵列证书的追加信息 、请参见 <block ref="afffa566b4a4cd4878295c084c81cf79" category="inline-xref-macro-rx"></block>。</block>
+  <block id="46e449ef50228f4c3b256f38192aabd8" category="paragraph"><block ref="3f9df9336d464ece6989396d54e649e3" prefix="" category="inline-code"></block> (大写)</block>
+  <block id="00c369eed11ad08d14aa63917019884b" category="paragraph">显示可下载SMcli的法律声明。</block>
+  <block id="6419c276911d1b1093f7244e44197d6e" category="paragraph">指定要运行脚本命令的本地存储标签。使用时、此选项为可选<block ref="f04d852929cd714ffd6956bb571f80ba" prefix=" " category="inline-code"></block>。如果需要、则需要本地存储的标签<block ref="f04d852929cd714ffd6956bb571f80ba" prefix=" " category="inline-code"></block> 未使用。</block>
+  <block id="42da5ee2f9896e8c87de07aa25a3427f" category="inline-xref">管理存储的阵列命令行参数</block>
+  <block id="422972ba4fd848f3950a3bdfb5ae51b4" category="admonition">有关使用本地存储的标签管理存储阵列的追加信息 、请参见 <block ref="b0882fa539b94092224c4c1baa28b4b3" category="inline-xref-macro-rx"></block>。</block>
+  <block id="9945659024e2adf80a541a553d3ee3d8" category="paragraph">如果不指定输出文件、则输出文本将转到标准输出 <block ref="64322f5f3ff7f9f717279e1b017a997e" prefix="(" category="inline-code"></block>）。所有来自非脚本命令的命令的输出都将发送到<block ref="64322f5f3ff7f9f717279e1b017a997e" prefix=" " category="inline-code"></block>、而不管是否设置此参数。</block>
+  <block id="d75299987abe492d079cdd1f02711a2d" category="paragraph"><block ref="96cf306e4040200feb7a7bf5e785fe7b" prefix="" category="inline-code"></block></block>
+  <block id="805cf5144eef92ea0cf17108b733cfaa" category="paragraph">显示可下载的SMcli版本</block>
+  <block id="831f9cccb445bff4416673e6f3d67d65" category="section-title">管理存储的阵列</block>
+  <block id="ced8a1b5b4cbad8af6ab06b156be7ad5" category="paragraph">您可以使用以下命令行参数通过本地存储的标签管理存储的阵列。</block>
+  <block id="78ecfc3f3c8ceb2384456d03a01f4950" category="admonition">本地存储的标签可能与SANtricity 系统管理器下显示的实际存储阵列名称不匹配。</block>
+  <block id="388a7d73001eb30eff20f129659526f9" category="paragraph"><block ref="2732b74944578d5b25bf007b35e13dfb" prefix="" category="inline-code"></block></block>
+  <block id="c7389fed7a0e11f2c54e2fae853a67d6" category="paragraph">显示所有本地存储的标签及其关联地址</block>
+  <block id="bfa8cfa24f5f2276aa4e09b29fe4a607" category="paragraph"><block ref="1a1c5f6b854cf8dfb011711f15b27156" prefix="" category="inline-code"></block></block>
+  <block id="65268edc485b5c0a1d39502b4dc1f0dc" category="paragraph">显示与名为的本地存储标签关联的地址<block ref="3492b4e60f2c816ff28667bb6230d2fc" prefix=" " category="inline-code"></block></block>
+  <block id="1377b4470655e855909e13e156424289" category="paragraph"><block ref="be066fc0d3f0dd00ebc5e337cbdcc0a1" prefix="" category="inline-code"></block></block>
+  <block id="388141b9edfe664201b839307aa959e4" category="paragraph">删除所有本地存储的标签</block>
+  <block id="ca6842956843df292d0720c894750ca9" category="paragraph"><block ref="3a3b01afddcf67fd5fd8b20ee0a7c526" prefix="" category="inline-code"></block></block>
+  <block id="02d8b064331ae4cc1ff77157dfc83684" category="paragraph">删除本地存储的名为的标签<block ref="3492b4e60f2c816ff28667bb6230d2fc" prefix=" " category="inline-code"></block></block>
+  <block id="9af5d75bd438b751c86f50328f0250b7" category="paragraph"><block ref="7b43f43d12a18a16ca4e770950a5c931" prefix="" category="inline-code"></block></block>
+  <block id="a7ab762ee2a954edf8fedc15cbd0f795" category="list-text">添加本地存储的标签并添加名称<block ref="3492b4e60f2c816ff28667bb6230d2fc" prefix=" " category="inline-code"></block> 包含提供的地址</block>
+  <block id="ac5232d2345b85aee38c3abd9e361fd3" category="list-text">不直接支持更新。要更新、请删除标签、然后重新添加。</block>
+  <block id="936ff13d8f93781765f5a7e48a336646" category="admonition">添加本地存储的标签时、SMcli不会与存储阵列联系。</block>
+  <block id="c278a5794824006e129b86708d8cd3bd" category="paragraph"><block ref="cfc9154b973ccf018190fb24d316eedb" prefix="" category="inline-code"></block></block>
+  <block id="c32312d45679273684d42154d827111d" category="paragraph">显示本地存储的所有受信任证书</block>
+  <block id="4b9b62f3d4b5edc0d818f45403120e19" category="paragraph"><block ref="9296c503a7f1121ea4b4473d90b79b8a" prefix="" category="inline-code"></block></block>
+  <block id="bbf94bdff34e510efc30e9914aeb774b" category="paragraph">显示具有别名的本地存储的受信任证书<block ref="33bd7764986e9fb9a2f66ffee227a13d" prefix=" " category="inline-code"></block></block>
+  <block id="29222fa82acac5589e1b38a89a306dd6" category="paragraph"><block ref="bcb57e8a52bb9dc18da53774d0a77623" prefix="" category="inline-code"></block></block>
+  <block id="10197cd52940215d608672db4d523c48" category="paragraph">删除本地存储的所有受信任证书</block>
+  <block id="cd971a9a07cd1afad54e546d2bdddbe4" category="paragraph"><block ref="d71c4187699b967f00e5a2198209871b" prefix="" category="inline-code"></block></block>
+  <block id="1cede1a7224fb2a98c345b384f618d2d" category="paragraph">删除本地存储的具有别名的受信任证书<block ref="33bd7764986e9fb9a2f66ffee227a13d" prefix=" " category="inline-code"></block></block>
+  <block id="594e5c0325c5825b27ded09f8aebefbf" category="paragraph"><block ref="c3d6f515887460b883e167702ceb72e4" prefix="" category="inline-code"></block></block>
+  <block id="d25d0df898e774ce62d2e53a11938c83" category="list-text">使用别名保存要信任的证书<block ref="33bd7764986e9fb9a2f66ffee227a13d" prefix=" " category="inline-code"></block></block>
+  <block id="4d9033c5cd8339363f7ff220c0c27fe5" category="list-text">要信任的证书将通过单独的操作(例如使用Web浏览器)从控制器下载</block>
+  <block id="655a70a2af09b1d4496eb71414a7189c" category="paragraph"><block ref="4fee9d7e2432a79296cdcba9499bc70c" prefix="" category="inline-code"></block></block>
+  <block id="6b35d6fbf55a3720f21fe621981eb545" category="list-text">连接到每个地址并将返回的证书保存到可信证书存储中</block>
+  <block id="2ea5955c79b3de0a046a4906a77d10ed" category="list-text">指定的主机名或IP地址将用作以这种方式保存的每个证书的别名</block>
+  <block id="264ae146b796a6ef6750c695d3b50cf0" category="list-text">在运行此命令之前、用户应验证控制器上的证书是否可信</block>
+  <block id="bcf0c6816d00842bd216f56545da7e12" category="list-text">为了获得最高安全性、应使用用于生成文件的信任命令来确保证书在用户验证和运行此命令之间不会发生更改</block>
+  <block id="6e560cf6c527d4c279a89d40d90f0f5f" category="summary">SANtricity OS 11.40版为具有嵌入式Web服务的E2800和E5700控制器引入了使用安全HTTPS协议在命令行上进行交互的功能。这些控制器可以选择使用符号协议进行命令行交互。</block>
+  <block id="fcd00ec6de7f196ccf5dd2134ec8c2eb" category="section-title">11.53和更早的命令行参数</block>
+  <block id="7f350558fa31543d0376cb3d9a59b5a6" category="paragraph">SANtricity OS 11.40版为具有嵌入式Web服务的E2800和E5700控制器引入了使用安全HTTPS协议在命令行上进行交互的功能。这些控制器可以选择使用符号协议进行命令行交互。符号协议是E2700和E5600控制器唯一支持的协议。为了保留现有脚本并最大限度地缩短过渡时间、CLI选项和语法会尽可能保留下来。但是、E2800和E5700控制器在安全性、身份验证、AutoSupport 和警报消息方面的功能存在一些差异、这些差异会使这些控制器的某些命令行界面语法变得过时。但是、在某些情况下、只有在使用新的https协议时、E2800或E5700上的语法才会过时。</block>
+  <block id="992fcf8487a5a376d1da947a5fa72b2b" category="admonition">RAID1级卷不支持精简配置。</block>
+  <block id="57a99d03719693273aad8c6972e18af2" category="paragraph">此参数用于设置要创建的卷的块大小。的值<block ref="cfcd208495d565ef66e7dff9f98764da" prefix=" " category="inline-code"></block> 或者、未设置的参数将使用默认块大小。</block>
+  <block id="a5c016ef7bdfc21e730e1ca6061742d6" category="paragraph">8.70添加<block ref="ac82d3d2e40087720415657115e05003" prefix=" " category="inline-code"></block> 和<block ref="1feb883ec49856bbc2f127143c719ed0" prefix=" " category="inline-code"></block> parameters</block>
+  <block id="e6bf3c5ef4a41e5e20172fe64b0ac2cd" category="paragraph">使用此参数可以将卷映射到主机。如果要稍后映射、请将此参数设置为<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>。如果要立即映射、请将此参数设置为<block ref="c21f969b5f03d33d43e04f8f136e7682" prefix=" " category="inline-code"></block>。卷将映射到有权访问存储池的所有主机。默认值为<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>。</block>
+  <block id="9768c8fb089e952c8ed07b137cdddc72" category="paragraph">此参数用于设置要创建的卷的块大小。如果值为0或参数未设置、则会使用默认块大小。</block>
+  <block id="611535f9eb3b91162ec562dd92296ebd" category="paragraph">11.70添加<block ref="480d1b61a0432d1319f7504a3d7318dd" prefix=" " category="inline-code"></block> 参数。</block>
+  <block id="d015a34de96d3f92372df94da0f629a7" category="paragraph">* 无 *</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">新增功能</block>
+  <block id="951c6ae7fff0668a89aef7dc85bf76d0" category="paragraph">在命令提示符处发出SMcli命令时、必须输入额外的反斜杠 <block ref="28d397e87306b8631f3ed80d858d35f0" prefix="(" category="inline-code"></block>)字符作为使用Windows操作系统时输入或输出文件的文件路径名称中的转义字符。附加反斜杠 <block ref="28d397e87306b8631f3ed80d858d35f0" prefix="(" category="inline-code"></block>)必须包括在安全https模式下使用SMcli时、方法是提供-u选项以指定基于角色的访问管理用户。示例<block ref="1c05e98ca61c10b2b98fcdccf3f101eb" prefix=" " category="inline-code"></block></block>
+  <block id="06d2539958ee4762f25ee6e06e44b9f1" category="section-title">SANtricity 11.70.4</block>
+  <block id="88f7095a6da86281dee41ca1973b59da" category="paragraph">下表列出了11.70.4版的命令行界面和脚本命令。</block>
+  <block id="3c81bd0a1f22910d21ddab30497f0cad" category="inline-xref-macro">Downloadble SMcli命令行参数</block>
+  <block id="26f5c6a358189222507298d61acc474c" category="paragraph"><block ref="26f5c6a358189222507298d61acc474c" category="inline-xref-macro-rx"></block></block>
+  <block id="5c0565b7c4e3a02c6f7da8e8b79a7540" category="paragraph">已添加<block ref="b7cc4b6b2b8c0f37377b5cc259385de0" prefix=" " category="inline-code"></block> 和<block ref="f2349da52d073d93e5c41656eac03cfe" prefix=" " category="inline-code"></block> 多因素身份验证的访问令牌参数说明。</block>
+  <block id="71fff74a4c9d69eab84efedd296433b6" category="paragraph">下表列出了11.70.3版的CLI和脚本命令的变更。</block>
+  <block id="28d2b76e39ac881658909c65abcd0daa" category="paragraph"><block ref="28d2b76e39ac881658909c65abcd0daa" category="inline-xref-macro-rx"></block></block>
+  <block id="183bf6a11cdfba8a784da30f0b6fe98e" category="paragraph"><block ref="183bf6a11cdfba8a784da30f0b6fe98e" category="inline-xref-macro-rx"></block></block>
+  <block id="15be8376d068bc8b336d134596e6b779" category="paragraph"><block ref="15be8376d068bc8b336d134596e6b779" category="inline-xref-macro-rx"></block></block>
+  <block id="b8a49e0477f4912fed8b11000c163cd5" category="paragraph"><block ref="b8a49e0477f4912fed8b11000c163cd5" category="inline-xref-macro-rx"></block></block>
+  <block id="b36598cc51fefae2fc91706fd03c8eef" category="paragraph"><block ref="b36598cc51fefae2fc91706fd03c8eef" category="inline-xref-macro-rx"></block></block>
+  <block id="6d75466b80c625b48fc8ba8590e96c95" category="paragraph"><block ref="6d75466b80c625b48fc8ba8590e96c95" category="inline-xref-macro-rx"></block></block>
+  <block id="f66791a36a8e67b4d2634d7f1e8c68c5" category="paragraph">下表列出了11.70.2版的命令行界面和脚本命令。</block>
+  <block id="b0712e32c143076d1b1765d28c4ff86d" category="paragraph"><block ref="b0712e32c143076d1b1765d28c4ff86d" category="inline-xref-macro-rx"></block></block>
+  <block id="4e932b7c5213821b7cad243423b94008" category="paragraph"><block ref="4e932b7c5213821b7cad243423b94008" category="inline-xref-macro-rx"></block></block>
+  <block id="d1b84f1127025d4d9dc8bd48868e7ce2" category="paragraph"><block ref="d1b84f1127025d4d9dc8bd48868e7ce2" category="inline-xref-macro-rx"></block></block>
+  <block id="5e8c25d9c0b20c68fc8c01b19bff00b2" category="paragraph"><block ref="5e8c25d9c0b20c68fc8c01b19bff00b2" category="inline-xref-macro-rx"></block></block>
+  <block id="cae6a0c64d5540614265350faf69a871" category="paragraph"><block ref="cae6a0c64d5540614265350faf69a871" category="inline-xref-macro-rx"></block></block>
+  <block id="f36c4239322f1d6c4d0012326bb82baf" category="paragraph"><block ref="f36c4239322f1d6c4d0012326bb82baf" category="inline-xref-macro-rx"></block></block>
+  <block id="4e922eeab0693268617854964f734062" category="paragraph"><block ref="4e922eeab0693268617854964f734062" category="inline-xref-macro-rx"></block></block>
+  <block id="59316ba483ba3aec447f68f9ec6e01ea" category="paragraph">下表列出了11.70.1版的命令行界面和脚本命令。</block>
+  <block id="e49e67325ea9057b09b143e96207afc5" category="paragraph"><block ref="e49e67325ea9057b09b143e96207afc5" category="inline-xref-macro-rx"></block></block>
+  <block id="f45516b35547a02af7b5f630f482b3c8" category="paragraph"><block ref="f45516b35547a02af7b5f630f482b3c8" category="inline-xref-macro-rx"></block></block>
+  <block id="2747069345d99e0acd81d0b24f294ee0" category="paragraph"><block ref="2747069345d99e0acd81d0b24f294ee0" category="inline-xref-macro-rx"></block></block>
+  <block id="be47e9424f352e1615c44e2086319644" category="paragraph"><block ref="be47e9424f352e1615c44e2086319644" category="inline-xref-macro-rx"></block></block>
+  <block id="003747732d93502041ceb1db27619e91" category="paragraph"><block ref="003747732d93502041ceb1db27619e91" category="inline-xref-macro-rx"></block></block>
+  <block id="d93658be0099c4d1add5f22dfc5a0995" category="paragraph"><block ref="d93658be0099c4d1add5f22dfc5a0995" category="inline-xref-macro-rx"></block></block>
+  <block id="31f575b374f6993eb9ed860a914a7de9" category="paragraph"><block ref="31f575b374f6993eb9ed860a914a7de9" category="inline-xref-macro-rx"></block></block>
+  <block id="05271dc1a2c676675a63e13c5b53b947" category="paragraph"><block ref="05271dc1a2c676675a63e13c5b53b947" category="inline-xref-macro-rx"></block></block>
+  <block id="a74afad0edcf76c0a4a9f8c65d64b174" category="paragraph">下表列出了11.70版的CLI和脚本命令。</block>
+  <block id="5e84b4270d9ce9be0ad2533dbfd95b65" category="paragraph"><block ref="5e84b4270d9ce9be0ad2533dbfd95b65" category="inline-xref-macro-rx"></block></block>
+  <block id="9ad23fd2db795292952203f1e70f5cf4" category="paragraph"><block ref="9ad23fd2db795292952203f1e70f5cf4" category="inline-xref-macro-rx"></block></block>
+  <block id="f89d3e2c717672dd2cae630c3229fe43" category="paragraph"><block ref="f89d3e2c717672dd2cae630c3229fe43" category="inline-xref-macro-rx"></block></block>
+  <block id="8ab3987f5e11278960924053c1c48603" category="paragraph"><block ref="8ab3987f5e11278960924053c1c48603" category="inline-xref-macro-rx"></block></block>
+  <block id="3c4554618d02db0aef828e22246c6b59" category="paragraph"><block ref="3c4554618d02db0aef828e22246c6b59" category="inline-xref-macro-rx"></block></block>
+  <block id="c18cced0b91c7306eba8aa95974d5d73" category="paragraph"><block ref="c18cced0b91c7306eba8aa95974d5d73" category="inline-xref-macro-rx"></block></block>
+  <block id="8dc0796d131f84b22d35084484e6f712" category="paragraph"><block ref="8dc0796d131f84b22d35084484e6f712" category="inline-xref-macro-rx"></block></block>
+  <block id="94ac69661c2d717315d8018624ebbe85" category="paragraph"><block ref="94ac69661c2d717315d8018624ebbe85" category="inline-xref-macro-rx"></block></block>
+  <block id="f7c28deada4fce505c370bfe9336570b" category="paragraph"><block ref="f7c28deada4fce505c370bfe9336570b" category="inline-xref-macro-rx"></block></block>
+  <block id="9e0e2266a81338fbfaf354427a1629c8" category="paragraph"><block ref="9e0e2266a81338fbfaf354427a1629c8" category="inline-xref-macro-rx"></block></block>
+  <block id="9b609f7e87918bf9211f6e0e9f22fa5a" category="paragraph"><block ref="9b609f7e87918bf9211f6e0e9f22fa5a" category="inline-xref-macro-rx"></block></block>
+  <block id="40b41041d07ac7993f03456611c81f15" category="paragraph"><block ref="40b41041d07ac7993f03456611c81f15" category="inline-xref-macro-rx"></block></block>
+  <block id="480576ccaea5bc0e0e8ae41d4a033c1b" category="paragraph"><block ref="480576ccaea5bc0e0e8ae41d4a033c1b" category="inline-xref-macro-rx"></block></block>
+  <block id="c9b3eea1b5f6b5ad2989b197b28eedce" category="paragraph"><block ref="c9b3eea1b5f6b5ad2989b197b28eedce" category="inline-xref-macro-rx"></block></block>
+  <block id="4ad59273ade530447003d676a301cc73" category="paragraph"><block ref="4ad59273ade530447003d676a301cc73" category="inline-xref-macro-rx"></block></block>
+  <block id="fd83f34fd47d642e467d2796b016b097" category="paragraph">下表列出了11.62版的命令行界面和脚本命令。</block>
+  <block id="f37b13e86f97e59ee48d67277e240520" category="paragraph"><block ref="f37b13e86f97e59ee48d67277e240520" category="inline-xref-macro-rx"></block></block>
+  <block id="a26ca5d017415a1eef700afbebf2489d" category="paragraph"><block ref="a26ca5d017415a1eef700afbebf2489d" category="inline-xref-macro-rx"></block></block>
+  <block id="3529e34205440babbcc2a342fff713bd" category="paragraph"><block ref="3529e34205440babbcc2a342fff713bd" category="inline-xref-macro-rx"></block></block>
+  <block id="579c3e6c53c24b3c13e14718b192a91c" category="paragraph"><block ref="579c3e6c53c24b3c13e14718b192a91c" category="inline-xref-macro-rx"></block></block>
+  <block id="adeab83c7aebbd6a5921e03b39ae3692" category="paragraph"><block ref="adeab83c7aebbd6a5921e03b39ae3692" category="inline-xref-macro-rx"></block></block>
+  <block id="e9b46bd45d89b563069e32b2ab8efeec" category="paragraph"><block ref="e9b46bd45d89b563069e32b2ab8efeec" category="inline-xref-macro-rx"></block></block>
+  <block id="6e0478ffff0b3c1332c63ff8e7b14b09" category="paragraph"><block ref="6e0478ffff0b3c1332c63ff8e7b14b09" category="inline-xref-macro-rx"></block></block>
+  <block id="d90e4abdd3ee227c0579661d5d24cef3" category="paragraph"><block ref="d90e4abdd3ee227c0579661d5d24cef3" category="inline-xref-macro-rx"></block></block>
+  <block id="98f0ea9a8f189ba8cb3b4e0f6aad5027" category="paragraph"><block ref="98f0ea9a8f189ba8cb3b4e0f6aad5027" category="inline-xref-macro-rx"></block></block>
+  <block id="d45145e28afa4b36a26e000619d7782f" category="paragraph"><block ref="d45145e28afa4b36a26e000619d7782f" category="inline-xref-macro-rx"></block></block>
+  <block id="0ce9ea5c4824c57f4a47b87c1c3d0a25" category="paragraph"><block ref="0ce9ea5c4824c57f4a47b87c1c3d0a25" category="inline-xref-macro-rx"></block></block>
+  <block id="5a73a4d3914ce0c6f82c2c6d8225421d" category="paragraph"><block ref="5a73a4d3914ce0c6f82c2c6d8225421d" category="inline-xref-macro-rx"></block></block>
+  <block id="98104774738b4d9c0bba90497a5272b7" category="paragraph"><block ref="98104774738b4d9c0bba90497a5272b7" category="inline-xref-macro-rx"></block></block>
+  <block id="2ce1112caa707f16f23146b202be4be9" category="paragraph"><block ref="2ce1112caa707f16f23146b202be4be9" category="inline-xref-macro-rx"></block></block>
+  <block id="7a18d8afc4de5a81e7b0321efd958d8c" category="paragraph"><block ref="7a18d8afc4de5a81e7b0321efd958d8c" category="inline-xref-macro-rx"></block></block>
+  <block id="a17f26ca71a4bb33276e3037806eea2c" category="sidebar">Downloadble SMcli参数</block>
+  <block id="a87e14eaf99b0ce7290927262e7cb91a" category="sidebar">传统CLI参数</block>
 </blocks>

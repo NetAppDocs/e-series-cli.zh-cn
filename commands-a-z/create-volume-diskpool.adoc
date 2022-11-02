@@ -49,17 +49,7 @@ capacity=_volumeCapacity_]
 [dataAssurance=(none|enabled)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [raidLevel=(1 | 6)]
-----
-[listing, subs="+macros"]
-----
-create volume diskPool=pass:quotes[_"diskPoolName"_
-userLabel="_volumeName_"
-capacity=_volumeCapacity_]
-[thinProvisioned=(TRUE | FALSE)]
-[owner=(a|b)]
-[mapping=(none|default)]
-[cacheReadPrefetch=(TRUE | FALSE)]
-[raidLevel=(1 | 6)]
+[blockSize=requestedBlockSizeValue]
 ----
 
 
@@ -139,6 +129,9 @@ capacity=_volumeCapacity_]
 `精简配置`
  a| 
 此参数用于为新卷启用精简配置。要使用精简配置、请将此参数设置为`true`。如果不希望进行精简配置、请将此参数设置为`false`。
+
+
+NOTE: RAID1级卷不支持精简配置。
 
 
 
@@ -223,6 +216,13 @@ capacity=_volumeCapacity_]
  a| 
 设置要在磁盘池中创建的卷的RAID级别。要指定RAID1、请设置为`1`。要指定RAID6、请设置为`6`。如果未设置RAID级别、则默认情况下会对磁盘池使用RAID6。
 
+
+
+ a| 
+`块大小`
+ a| 
+此参数用于设置要创建的卷的块大小。的值 `0` 或者、未设置的参数将使用默认块大小。
+
 |===
 
 
@@ -257,4 +257,4 @@ capacity=_volumeCapacity_]
 
 7.83.
 
-8.70添加了`_raidLevel_`参数。
+8.70添加 `_raidLevel_` 和 `_blockSize` parameters
