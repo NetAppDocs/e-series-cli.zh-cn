@@ -219,14 +219,10 @@
   <block id="b28de08f5f84620a8d9387e4bc82c145" category="list-text">您可以使用基于角色的访问管理、并为不同角色分配不同的安全权限。使用`-u`选项使用用户名参数运行命令。</block>
   <block id="31c49cbd47495cd0283671d9f563a6d0" category="list-text">先前在`*符号*`模式下提供的密码参数也可以在`* https *`模式下使用、用于为特定用户角色指定密码。`-p`选项用于在命令行上指定密码、或者`-P`选项可以从文件或`stdin`中读取密码。</block>
   <block id="a6531c9cca5e8e900e3ca0277d431ca8" category="paragraph">本主题中有几个示例有助于说明新的命令行参数：</block>
-  <block id="c908ce368d4fe8339cba1bf1e4ea861a" category="section-title">阵列上安装了需要密码、https客户端模式和可信证书的操作</block>
   <block id="16c398a12b24b49ad8fd9d8cf71bd34d" category="paragraph">在以下示例中、提供了用户名和密码选项、并在阵列上安装了可信证书。</block>
-  <block id="fa78d93e0beeed4f5375cf768e7a0381" category="section-title">需要密码、https客户端模式、阵列上未安装可信证书的操作</block>
   <block id="57bccb659e7be24e1b2bfe3acd2728ae" category="paragraph">在以下示例中、提供了用户名和密码选项、但阵列上未安装可信证书、并且未使用`-k`选项。此示例显示了返回的输出。</block>
-  <block id="c063d79f0e133e1256a7a93c57688060" category="section-title">操作需要密码、https客户端模式、未安装可信证书、但对自签名证书使用-k</block>
   <block id="945538cd7afe8709efac27b96915389d" category="paragraph">在以下示例中、与前面的示例一样、提供了用户名和密码选项、但阵列上未安装可信证书。但是、在这种情况下、会使用`-k`选项来使用自签名证书。</block>
   <block id="22d5e376747f8800631977368e13fe8a" category="paragraph">在此示例中、使用`*符号*`客户端模式时、要成功完成此命令、只需输入密码选项即可。</block>
-  <block id="350c6ef338d6ab3369b1b85476ddb126" category="section-title">只读操作、符号客户端模式</block>
   <block id="8407b004173192880cab6c17030bbd4e" category="paragraph">在此示例中、在`*符号*`客户端模式下、不提供用户名或密码。此操作仅针对只读操作成功完成。</block>
   <block id="e09eb504f4a302a718a04fda53bbcb8c" category="section-title">只读操作、http客户端模式</block>
   <block id="87af3705302719c8461683fbfb64f57a" category="paragraph">在以下示例中、也可以使用只读操作、但在`* https *`客户端模式下、需要提供用户名和密码以及`-k`来接受自签名证书。`* https*`客户端模式需要密码、即使只读操作也是如此。</block>
@@ -4642,7 +4638,6 @@
   <block id="1f6350121cc6be42467adde5ceda9948" category="summary">使用set storageArray directoryServer roles命令可以为指定目录服务器定义角色映射。这些角色映射用于对尝试执行各种SMcli命令的用户进行身份验证。</block>
   <block id="ba82f0e46ee4e71332f094495a7ef046" category="doc">设置存储阵列目录服务器角色映射</block>
   <block id="2ce33a36c7495d35412356b5df7429aa" category="paragraph">使用`set storageArray directoryServer roles`命令可以为指定目录服务器定义角色映射。这些角色映射用于对尝试执行各种SMcli命令的用户进行身份验证。</block>
-  <block id="eed5ddc8f738970611f01ee16f2a17e5" category="section-title">您将需要什么</block>
   <block id="9423165348dbe1106dd8519c5f376e8a" category="paragraph">可以映射以下角色：</block>
   <block id="b146be7830b865aa772d4dd25fca1a78" category="list-text">*存储管理*—对存储对象(例如卷和磁盘池)具有完全读/写访问权限、但无法访问安全配置。</block>
   <block id="892ec2709f7a0ff6e883205b45a6d6a5" category="list-text">*安全管理*—访问访问管理、证书管理、审核日志管理中的安全配置、以及打开或关闭原有管理界面(符号)的功能。</block>
@@ -7508,4 +7503,9 @@
   <block id="7a18d8afc4de5a81e7b0321efd958d8c" category="paragraph"><block ref="7a18d8afc4de5a81e7b0321efd958d8c" category="inline-xref-macro-rx"></block></block>
   <block id="a17f26ca71a4bb33276e3037806eea2c" category="sidebar">Downloadble SMcli参数</block>
   <block id="a87e14eaf99b0ce7290927262e7cb91a" category="sidebar">传统CLI参数</block>
+  <block id="bc968b5475454c32c0accb20e0fffbde" category="section-title">需要密码的操作、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 客户端模式下、受信任证书安装在阵列上</block>
+  <block id="7738c732553fe92af1f9ad5d112e48db" category="section-title">需要密码的操作、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 客户端模式下、阵列上未安装可信证书</block>
+  <block id="54ae93e7b9eb6723cc6c1599cf7e1572" category="section-title">需要密码的操作、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 客户端模式、未安装可信证书、但对自签名证书使用-k</block>
+  <block id="9ccc3ce7d13f58c471a7befa5d7ad4bd" category="section-title">只读操作、<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block> 客户端模式</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="section-title">您需要的内容</block>
 </blocks>

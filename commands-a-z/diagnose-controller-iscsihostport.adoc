@@ -64,7 +64,7 @@ testID=cableDiagnostics
 
 有关详细信息，请参见以下内容：
 
- an iSCSI host port label,"确定iSCSI主机端口标签"
+<<确定iSCSI主机端口标签,"确定iSCSI主机端口标签">>
 
 
 

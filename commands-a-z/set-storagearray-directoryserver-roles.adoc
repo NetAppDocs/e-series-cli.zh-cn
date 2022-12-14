@@ -27,7 +27,7 @@ summary: 使用set storageArray directoryServer roles命令可以为指定目录
 
 
 
-== 您将需要什么
+== 您需要的内容
 
 可以映射以下角色：
 
