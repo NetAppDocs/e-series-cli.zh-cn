@@ -1,0 +1,54 @@
+---
+permalink: commands-a-z/show-check-vol-parity-job.html 
+sidebar: sidebar 
+keywords: show, check, volume, parity, job, 
+summary: show check volume parity Job命令可显示指定的检查卷奇偶校验作业及其状态。 
+---
+= 显示检查卷奇偶校验作业
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+。 `show check volume parity job` 命令可显示指定的检查卷奇偶校验作业及其状态。
+
+
+
+== 支持的阵列
+
+此命令可对任何单个存储阵列执行适用场景 操作、包括EF600和EF300阵列；前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在EF600和EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+show check volume parity job jobId=<job_id>;
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`jobId`
+ a| 
+检查卷奇偶校验作业的id。此值为必填项。
+
+|===
+
+
+== 最低固件级别
+
+11.80

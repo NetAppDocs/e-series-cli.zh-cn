@@ -30,6 +30,8 @@ link:../commands-a-z/show-diskpool.html["显示磁盘池"]
 
 link:../commands-a-z/start-diskpool-fullprovisioning.html["启动磁盘池完全配置"]
 
+link:../commands-a-z/start-diskpool-resourceprovisioning.html["启动磁盘池资源配置"]
+
 link:../commands-a-z/start-diskpool-locate.html["启动磁盘池定位"]
 
 link:../commands-a-z/stop-diskpool-locate.html["停止磁盘池定位"]
@@ -154,6 +156,8 @@ link:../commands-a-z/repair-volume-parity.html["修复卷奇偶校验"]
 
 link:../commands-a-z/repair-data-parity.html["修复数据奇偶校验"]
 
+link:../commands-a-z/save-check-vol-parity-job-errors.html["保存检查卷奇偶校验作业奇偶校验错误"]
+
 link:../commands-a-z/set-thin-volume-attributes.html["设置精简卷属性"]
 
 link:../commands-a-z/set-volumes.html["为磁盘池中的卷设置卷属性..."]
@@ -161,6 +165,8 @@ link:../commands-a-z/set-volumes.html["为磁盘池中的卷设置卷属性..."]
 link:../commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html["为卷组中的卷设置卷属性..."]
 
 link:../commands-a-z/set-volume-logicalunitnumber.html["设置卷映射"]
+
+link:../commands-a-z/show-check-vol-parity-jobs.html["显示检查卷奇偶校验作业"]
 
 link:../commands-a-z/show-volume.html["显示精简卷"]
 
@@ -172,7 +178,11 @@ link:../commands-a-z/show-volume-performancestats.html["显示卷性能统计信
 
 link:../commands-a-z/show-volume-reservations.html["显示卷预留"]
 
+link:../commands-a-z/start-check-vol-parity-job.html["启动检查卷奇偶校验作业"]
+
 link:../commands-a-z/start-volume-initialization.html["启动卷初始化"]
+
+link:../commands-a-z/stop-check-vol-parity-job.html["停止检查卷奇偶校验作业"]
 
 
 
@@ -201,6 +211,8 @@ link:../commands-a-z/start-volumegroup-defragment.html["启动卷组碎片整理
 link:../commands-a-z/start-volumegroup-export.html["启动卷组导出"]
 
 link:../commands-a-z/start-volumegroup-fullprovisioning.html["启动卷组完全配置"]
+
+link:../commands-a-z/start-volumegroup-resourceprovisioning.html["启动卷组资源配置"]
 
 link:../get-started/learn-about-volume-group-migration.html["了解卷组迁移(仅限命令行界面)"]
 

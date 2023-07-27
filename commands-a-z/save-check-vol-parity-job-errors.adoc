@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/save-check-vol-parity-job-errors.html 
+sidebar: sidebar 
+keywords: save, check, volume, parity, job, errors 
+summary: 'save check volume parity job"奇偶校验错误"命令可将检查卷奇偶校验作业记录的奇偶校验错误保存到指定文件。' 
+---
+= 保存检查卷奇偶校验作业奇偶校验错误
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+。 `save check volume parity job parity errors` 命令将检查卷奇偶校验作业记录的奇偶校验错误保存到指定文件。输出文件的写入格式与已弃用的check volume parity命令相同、因此可用作现有修复卷奇偶校验命令的输入。
+
+
+
+== 支持的阵列
+
+此命令可对任何单个存储阵列执行适用场景 操作、包括EF600和EF300阵列；前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在EF600和EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+save check volume parity job parityErrors jobId=<job_id> parityErrorFile=<parity_error_file>;
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`jobId`
+ a| 
+要检索和保存已记录奇偶校验错误的作业ID。此值为必填项。
+
+
+
+ a| 
+`参数错误文件`
+ a| 
+用户指定的文件、用于指示应将记录的奇偶校验错误保存在何处。此值为必填项。
+
+|===
+
+
+== 最低固件级别
+
+11.80

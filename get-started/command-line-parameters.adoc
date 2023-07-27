@@ -346,6 +346,13 @@ set session password=password
 
 
  a| 
+`-useLegacyTransferPort`
+ a| 
+用于将传输端口设置为 `8443` 而不是默认值 `443`。
+
+
+
+ a| 
 `-v`
  a| 
 显示与`-d`参数结合使用时配置文件中已知设备的当前全局状态。

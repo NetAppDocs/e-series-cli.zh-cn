@@ -352,6 +352,8 @@ entries:
       url: "/commands-a-z/save-alltrays-logfile.html"
     - title: 保存auditlog
       url: "/commands-a-z/save-auditlog.html"
+    - title: 保存检查卷奇偶校验作业奇偶校验错误
+      url: "/commands-a-z/save-check-vol-parity-job-errors.html"
     - title: 保存控制器阵列管理csr
       url: "/commands-a-z/save-controller-arraymanagementcsr.html"
     - title: 保存控制器arraymanagementsignedcertificate
@@ -632,6 +634,8 @@ entries:
       url: "/commands-a-z/show-certificates.html"
     - title: show cgsnapimage
       url: "/commands-a-z/show-cgsnapimage.html"
+    - title: 显示检查卷奇偶校验作业
+      url: "/commands-a-z/show-check-vol-parity-jobs.html"
     - title: 显示ConsistencyGroup
       url: "/commands-a-z/show-consistencygroup.html"
     - title: show controller arraymanagementsignedcertificate summary
@@ -766,6 +770,8 @@ entries:
       url: "/commands-a-z/start-asyncmirrorgroup-synchronize.html"
     - title: 启动cgsnapimage回滚
       url: "/commands-a-z/start-cgsnapimage-rollback.html"
+    - title: 启动检查卷奇偶校验作业
+      url: "/commands-a-z/start-check-vol-parity-job.html"
     - title: 启动控制器iscsihostport dhcprefresh
       url: "/commands-a-z/start-controller-iscsihostport-dhcprefresh.html"
     - title: 启动控制器
@@ -854,6 +860,8 @@ entries:
       url: "/commands-a-z/stop-cgsnapimage-rollback.html"
     - title: 停止cgsnapvolume
       url: "/commands-a-z/stop-cgsnapvolume.html"
+    - title: 停止检查卷奇偶校验作业
+      url: "/commands-a-z/stop-check-vol-parity-job.html"
     - title: 停止ConsistencyGroup pendingsnapimagecn丛
       url: "/commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html"
     - title: 停止diskpool locate

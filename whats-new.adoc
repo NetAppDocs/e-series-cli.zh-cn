@@ -25,13 +25,77 @@ summary: 本主题列出了最新版本的SANtricity System Manager命令行界�
 ====
 
 
-== SANtricity 11.70.5
+== SANtricity 11.80
+
+下表列出了对11.80版的CLI和脚本命令进行的更改。
+
+[cols="2*"]
+|===
+| 命令 | 问题描述 of Change 
+
+
+ a| 
+xref:./commands-a-z/save-check-vol-parity-job-errors.adoc[保存检查卷容量作业奇偶校验错误]
+ a| 
+已添加命令
+
+
+
+ a| 
+xref:./commands-a-z/start-check-vol-parity-job.adoc[启动检查卷奇偶校验作业]
+ a| 
+已添加命令
+
+
+
+ a| 
+xref:./commands-a-z/show-check-vol-parity-jobs.adoc[显示检查卷奇偶校验作业]
+ a| 
+已添加命令
+
+
+
+ a| 
+xref:./commands-a-z/show-check-vol-parity-job.adoc[显示检查卷奇偶校验作业]
+ a| 
+已添加命令
+
+
+
+ a| 
+xref:./commands-a-z/stop-check-vol-parity-job.adoc[停止检查卷奇偶校验作业]
+ a| 
+已添加命令
+
+
+
+ a| 
+xref:./get-started/command-line-parameters.adoc[原有命令行参数]
+ a| 
+已添加 `-useLegacyTransferPort` 参数。
+
+
+
+ a| 
+xref:./commands-a-z/autoconfigure-storagearray.adoc[自动配置存储阵列]
+ a| 
+已添加`blocksize`参数。
+
+
+
+ a| 
+xref:./commands-a-z/check-volume-parity.adoc[检查卷奇偶校验]
+ a| 
+已弃用命令。
+
+|===
+[]
+====
+=== SANtricity 11.70.5
 
 11.70.5版没有CLI或脚本命令更改。
 
-
-
-== SANtricity 11.70.4
+=== SANtricity 11.70.4
 
 下表列出了11.70.4版的命令行界面和脚本命令。
 
@@ -46,9 +110,7 @@ xref:./get-started/downloadable-smcli-parameters.adoc[Downloadble SMcli命令行
 已添加 `-t` 和 `-T` 多因素身份验证的访问令牌参数说明。
 
 |===
-
-
-== SANtricity 11.70.3
+=== SANtricity 11.70.3
 
 下表列出了11.70.3版的CLI和脚本命令的变更。
 
@@ -98,9 +160,7 @@ xref:./commands-a-z/create-diskpool.html[创建磁盘池]
 已更新`driveCount`参数问题描述。
 
 |===
-
-
-== SANtricity 11.70.2
+=== SANtricity 11.70.2
 
 下表列出了11.70.2版的命令行界面和脚本命令。
 
@@ -157,9 +217,7 @@ xref:./commands-a-z/start-snmptrapdestination.adoc[测试SNMP陷阱目标]
 添加了`username`和`engineid`参数。
 
 |===
-
-
-== SANtricity 11.70.1
+=== SANtricity 11.70.1
 
 下表列出了11.70.1版的命令行界面和脚本命令。
 
@@ -223,9 +281,7 @@ xref:./commands-a-z/recover-volume.adoc[恢复RAID卷]
 已添加`blocksize`参数。
 
 |===
-
-
-== SANtricity 11.70
+=== SANtricity 11.70
 
 下表列出了11.70版的CLI和脚本命令。
 
@@ -268,258 +324,4 @@ xref:./commands-a-z/recover-volume.adoc[恢复RAID卷]
 已添加`hostUnmapEnabled`参数。
 
 |===
-
-
-== SANtricity 11.63
-
-下表列出了11.63版的命令行界面和脚本命令的更改。
-
-[cols="2*"]
-|===
-| 命令 | 问题描述 of Change 
-
-
- a| 
-xref:./commands-a-z/start-storagearray-autosupport-manualdispatch.adoc[启动存储阵列AutoSupport 手动派遣]
- a| 
-已添加命令
-
-
-
- a| 
-xref:./commands-a-z/start-volumegroup-fullprovisioning.adoc[启动卷组完全配置]
- a| 
-已添加命令
-
-
-
- a| 
-xref:./commands-a-z/start-diskpool-fullprovisioning.adoc[启动磁盘池完全配置]
- a| 
-已添加命令
-
-
-
- a| 
-xref:./commands-a-z/repair-data-parity.adoc[修复数据奇偶校验]
- a| 
-已添加命令
-
-
-
- a| 
-xref:./commands-a-z/set-storagearray-resourceprovisionedvolumes.adoc[设置存储阵列资源配置的卷]
- a| 
-已添加命令
-
-
-
- a| 
-xref:./commands-a-z/create-mapping-volume.adoc[创建卷映射]
- a| 
-已添加`mapWaitPeriod`参数。
-
-
-
- a| 
-xref:./commands-a-z/show-storagearray.adoc[显示存储阵列]
- a| 
-已在`profile`参数结果下添加`资源配置卷`条目。
-
-
-
- a| 
-xref:./commands-a-z/create-diskpool.adoc[创建磁盘池]
- a| 
-已添加`resourceProvisioningCapable`参数。
-
-
-
- a| 
-xref:./commands-a-z/create-volumegroup.adoc[创建卷组]
- a| 
-已添加`resourceProvisioningCapable`参数。
-
-
-
- a| 
-xref:./commands-a-z/show-volumegroup.adoc[显示卷组]
- a| 
-在命令结果中添加了`resource-provisioned` information。
-
-
-
- a| 
-xref:./commands-a-z/create-raid-volume-automatic-drive-select.adoc[创建RAID卷(自动选择驱动器)]
- a| 
-已添加`resourceProvisioningCapable`参数。
-
-
-
- a| 
-xref:./commands-a-z/create-raid-volume-manual-drive-select.adoc[创建RAID卷(手动选择驱动器)]
- a| 
-已添加`resourceProvisioningCapable`参数。
-
-
-
- a| 
-xref:./commands-a-z/show-diskpool.adoc[显示磁盘池]
- a| 
-在命令结果中添加了`resource-provisioned` information。
-
-|===
-
-
-== SANtricity 11.62
-
-下表列出了11.62版的命令行界面和脚本命令。
-
-[cols="2*"]
-|===
-| 命令 | 问题描述 of Change 
-
-
- a| 
-xref:./commands-a-z/set-controller-hostport.adoc[设置控制器主机端口属性]
- a| 
-为`主机端口`参数添加了`物理`和`虚拟`值。
-
-|===
-
-
-== SANtricity 11.61及更低版本
-
-* 已将EF600平台添加为适用命令的受支持阵列。
-
-
-[cols="2*"]
-|===
-| 命令 | 问题描述 of Change 
-
-
- a| 
-xref:./commands-a-z/save-storagearray-supportdata.adoc[保存存储阵列支持数据]
- a| 
-已添加`object-bundle.json`数据类型。
-
-
-
- a| 
-xref:./commands-a-z/show-alldrives.adoc[显示驱动器]
- a| 
-增加了NVMe4K兼容性。
-
-
-
- a| 
-xref:./commands-a-z/activate-synchronous-mirroring.adoc[激活同步镜像]
- a| 
-增加了NVMe4K兼容性。
-
-
-
- a| 
-xref:./commands-a-z/recreate-storagearray-mirrorrepository.adoc[重新创建同步镜像存储库卷]
- a| 
-增加了NVMe4K兼容性。
-
-
-
- a| 
-xref:./commands-a-z/create-raid-volume-automatic-drive-select.adoc[创建RAID卷(自动选择驱动器)]
- a| 
-增加了NVMe4K兼容性。
-
-
-
- a| 
-xref:./commands-a-z/show-storagearray-autoconfiguration.adoc[显示存储阵列自动配置]
- a| 
-增加了NVMe4K兼容性。
-
-
-
- a| 
-xref:./commands-a-z/autoconfigure-storagearray.adoc[自动配置存储阵列]
- a| 
-增加了NVMe4K兼容性。
-
-
-
- a| 
-xref:./commands-a-z/create-diskpool.adoc[创建磁盘池]
- a| 
-增加了NVMe4K兼容性。
-
-
-
- a| 
-xref:./commands-a-z/create-volumegroup.adoc[创建卷组]
- a| 
-增加了NVMe4K兼容性。
-
-
-
- a| 
-xref:./commands-a-z/save-storagearray-autoloadbalancestatistics-file.adoc[保存自动负载平衡统计信息]
- a| 
-添加了"驱动器丢失主路径"注释
-
-
-
- a| 
-xref:./commands-a-z/set-storagearray-autoloadbalancingenable.adoc[将存储阵列设置为启用或禁用自动负载平衡]
- a| 
-添加了"驱动器丢失主路径"注释
-
-
-
- a| 
-xref:./commands-a-z/add-certificate-from-array.adoc[从阵列添加证书]
- a| 
-已添加命令
-
-
-
- a| 
-xref:./commands-a-z/add-certificate-from-file.adoc[从文件添加证书]
- a| 
-已添加命令
-
-
-
- a| 
-xref:./commands-a-z/delete-certificates.adoc[删除证书]
- a| 
-已添加命令
-
-
-
- a| 
-xref:./commands-a-z/show-certificates.adoc[显示证书]
- a| 
-已添加命令
-
-
-
- a| 
-xref:./commands-a-z/add-array-label.adoc[添加阵列标签]
- a| 
-已添加命令
-
-
-
- a| 
-xref:./commands-a-z/remove-array-label.adoc[删除阵列标签]
- a| 
-已添加命令
-
-
-
- a| 
-xref:./commands-a-z/show-array-label.adoc[显示阵列标签]
- a| 
-已添加命令
-
-|===
+====

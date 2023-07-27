@@ -67,22 +67,7 @@ capacity=_volumeCapacity_]
 [(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
 [newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
 [repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
-[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]
-[repositoryExpansionPolicy=(automatic|manual)]
-[cacheReadPrefetch=(TRUE | FALSE)]
-----
-[listing, subs="+macros"]
-----
-create volume diskPool=pass:quotes[_"diskPoolName"_
-userLabel="_volumeName_"
-capacity=_volumeCapacity_]
-[thinProvisioned=(TRUE | FALSE)]
-[owner=(a|b)]
-[mapping=(none|default)]
-[(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
-[newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
-[repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
-[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]]
+[warningThresholdPercent=pass:quotes][_warningThresholdPercentValue_]
 [repositoryExpansionPolicy=(automatic|manual)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 ----
@@ -235,6 +220,8 @@ NOTE: RAID1级卷不支持精简配置。
 为了在创建精简卷时获得最佳效果、存储库卷必须已存在或必须在现有磁盘池中创建。如果在创建精简卷时未指定某些可选参数、则存储管理软件将尝试创建存储库卷。最理想的候选卷是已存在且在大小要求范围内的存储库卷。下一个最理想的候选卷是在磁盘池可用范围内创建的新存储库卷。
 
 不能在卷组中为精简卷创建存储库卷。
+
+EF300或EF600不支持精简配置卷。
 
 
 

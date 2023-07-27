@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/start-check-vol-parity-job.html 
+sidebar: sidebar 
+keywords: start, check, volume, parity, job 
+summary: 'start check volume parity job"命令可在给定卷上启动新的检查卷奇偶校验操作。' 
+---
+= 启动检查卷奇偶校验作业
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+。 `start check volume parity job` 命令将在给定卷上启动新的检查卷奇偶校验操作。
+
+
+
+== 支持的阵列
+
+此命令可对任何单个存储阵列执行适用场景 操作、包括EF600和EF300阵列；前提是安装了所有SMcli软件包。
+
+
+
+== 角色
+
+要在EF600和EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+
+
+
+== 语法
+
+[listing, subs="+macros"]
+----
+start check volume[<volume_label>] parity job
+(startingLba=<start_lba> endingLba=<end_lba> scanPriority=<scan_priority> repairParityErrors=<true | false>
+repairMediaErrors=<true | false>);
+----
+
+
+== Parameters
+
+|===
+| 参数 | Description 
+
+
+ a| 
+`startingLba`
+ a| 
+将开始奇偶校验扫描的卷逻辑块地址。默认值为 `0`。
+
+
+
+ a| 
+`endingLba`
+ a| 
+奇偶校验扫描将停止的卷逻辑块地址。默认值为 `maximum volume lba`。
+
+
+
+ a| 
+`scanPriority`
+ a| 
+奇偶校验扫描优先级。默认值为 `medium`
+
+
+
+ a| 
+`repairParityErrors`
+ a| 
+确定是否自动尝试修复奇偶校验扫描期间检测到的奇偶校验错误。默认值为 `true`。
+
+
+
+ a| 
+`repairMediaErrors`
+ a| 
+确定是否自动尝试修复奇偶校验扫描期间检测到的介质错误。默认值为 `true`。
+
+|===
+
+
+== 最低固件级别
+
+11.80

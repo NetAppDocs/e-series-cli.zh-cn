@@ -368,6 +368,8 @@ link:../commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html["保存�
 
 link:../commands-a-z/save-auditlog.html["保存审核日志记录"]
 
+link:../commands-a-z/save-check-vol-parity-job-errors.html["保存检查卷奇偶校验作业奇偶校验错误"]
+
 link:../commands-a-z/save-controller-nvsram-file.html["保存控制器NVSRAM"]
 
 link:../commands-a-z/save-drivechannel-faultdiagnostics-file.html["保存驱动器通道故障隔离诊断状态"]
@@ -582,6 +584,8 @@ link:../commands-a-z/show-storagearray-revocationchecksettings.html["显示证�
 
 link:../commands-a-z/show-array-label.html["显示阵列标签"]
 
+link:../commands-a-z/show-check-vol-parity-jobs.html["显示检查卷奇偶校验作业"]
+
 link:../commands-a-z/show-consistencygroup.html["显示一致性组"]
 
 link:../commands-a-z/show-cgsnapimage.html["显示一致性组快照映像"]
@@ -698,6 +702,8 @@ link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["指
 
 link:../commands-a-z/start-storagearray-ocspresponderurl-test.html["启动OCSP服务器URL测试"]
 
+link:../commands-a-z/start-check-vol-parity-job.html["启动检查卷奇偶校验作业"]
+
 link:../commands-a-z/start-cgsnapimage-rollback.html["启动一致性组快照回滚"]
 
 link:../commands-a-z/start-controller.html["启动控制器跟踪"]
@@ -755,6 +761,8 @@ link:../commands-a-z/start-volumegroup-import.html["启动卷组导入"]
 link:../commands-a-z/start-volumegroup-locate.html["启动卷组定位"]
 
 link:../commands-a-z/start-volume-initialization.html["启动卷初始化"]
+
+link:../commands-a-z/stop-check-vol-parity-job.html["停止检查卷奇偶校验作业"]
 
 link:../commands-a-z/stop-cgsnapimage-rollback.html["停止一致性组快照回滚"]
 

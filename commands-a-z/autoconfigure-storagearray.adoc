@@ -51,6 +51,7 @@ pass:quotes[[readAheadMultiplier=_multiplierValue_]]
 [securityType=(none | capable | enabled)]
 [secureDrives=(fips | fde)]
 [dataAssurance=(none | enabled)]
+[blockSize=(512 | 4096)]
 ----
 
 
@@ -178,6 +179,13 @@ pass:quotes[[readAheadMultiplier=_multiplierValue_]]
 请将此参数与`securityType`参数结合使用。如果为`securityType`参数指定`none`、则会忽略`secureDrives`参数的值、因为非安全卷组不需要指定安全驱动器类型。
 
 ====
+
+
+ a| 
+`块大小`
+ a| 
+已创建卷的块大小(以字节为单位)。支持的值为 `512` 和 `4096`。
+
 |===
 
 
