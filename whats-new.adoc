@@ -89,13 +89,15 @@ xref:./commands-a-z/check-volume-parity.adoc[检查卷奇偶校验]
 已弃用命令。
 
 |===
-[]
-====
-=== SANtricity 11.70.5
 
-11.70.5版没有CLI或脚本命令更改。
 
-=== SANtricity 11.70.4
+== 4d73148eba8bbf93563afef1a810a39e
+
+11.70.5版没有CLI和脚本命令更改。
+
+
+
+== 06d2539958ee4762f25ee6e06e44b9f1
 
 下表列出了11.70.4版的命令行界面和脚本命令。
 
@@ -110,7 +112,9 @@ xref:./get-started/downloadable-smcli-parameters.adoc[Downloadble SMcli命令行
 已添加 `-t` 和 `-T` 多因素身份验证的访问令牌参数说明。
 
 |===
-=== SANtricity 11.70.3
+
+
+== e5b376b9bdbfe1612d578d30462ed6ff
 
 下表列出了11.70.3版的CLI和脚本命令的变更。
 
@@ -160,7 +164,9 @@ xref:./commands-a-z/create-diskpool.html[创建磁盘池]
 已更新`driveCount`参数问题描述。
 
 |===
-=== SANtricity 11.70.2
+
+
+== 3cffe633df330392f4d88b8478c9390b
 
 下表列出了11.70.2版的命令行界面和脚本命令。
 
@@ -217,7 +223,9 @@ xref:./commands-a-z/start-snmptrapdestination.adoc[测试SNMP陷阱目标]
 添加了`username`和`engineid`参数。
 
 |===
-=== SANtricity 11.70.1
+
+
+== cfafd61e53ff8b90ff59654a31683d33
 
 下表列出了11.70.1版的命令行界面和脚本命令。
 
@@ -281,7 +289,9 @@ xref:./commands-a-z/recover-volume.adoc[恢复RAID卷]
 已添加`blocksize`参数。
 
 |===
-=== SANtricity 11.70
+
+
+== 474034f7e02f357e3878ae2514a2b3fd
 
 下表列出了11.70版的CLI和脚本命令。
 
@@ -324,4 +334,3 @@ xref:./commands-a-z/recover-volume.adoc[恢复RAID卷]
 已添加`hostUnmapEnabled`参数。
 
 |===
-====
