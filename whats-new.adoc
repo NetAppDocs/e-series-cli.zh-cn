@@ -35,7 +35,7 @@ summary: 本主题列出了最新版本的SANtricity System Manager命令行界�
 
 
  a| 
-xref:./commands-a-z/save-check-vol-parity-job-errors.adoc[保存检查卷容量作业奇偶校验错误]
+xref:./commands-a-z/save-check-vol-parity-job-errors.adoc[保存检查卷奇偶校验作业奇偶校验错误]
  a| 
 已添加命令
 
@@ -91,13 +91,13 @@ xref:./commands-a-z/check-volume-parity.adoc[检查卷奇偶校验]
 |===
 
 
-== 4d73148eba8bbf93563afef1a810a39e
+== SANtricity 11.70.5
 
 11.70.5版没有CLI和脚本命令更改。
 
 
 
-== 06d2539958ee4762f25ee6e06e44b9f1
+== SANtricity 11.70.4
 
 下表列出了11.70.4版的命令行界面和脚本命令。
 
@@ -114,7 +114,7 @@ xref:./get-started/downloadable-smcli-parameters.adoc[Downloadble SMcli命令行
 |===
 
 
-== e5b376b9bdbfe1612d578d30462ed6ff
+== SANtricity 11.70.3
 
 下表列出了11.70.3版的CLI和脚本命令的变更。
 
@@ -166,7 +166,7 @@ xref:./commands-a-z/create-diskpool.html[创建磁盘池]
 |===
 
 
-== 3cffe633df330392f4d88b8478c9390b
+== SANtricity 11.70.2
 
 下表列出了11.70.2版的命令行界面和脚本命令。
 
@@ -225,7 +225,7 @@ xref:./commands-a-z/start-snmptrapdestination.adoc[测试SNMP陷阱目标]
 |===
 
 
-== cfafd61e53ff8b90ff59654a31683d33
+== SANtricity 11.70.1
 
 下表列出了11.70.1版的命令行界面和脚本命令。
 
@@ -291,7 +291,7 @@ xref:./commands-a-z/recover-volume.adoc[恢复RAID卷]
 |===
 
 
-== 474034f7e02f357e3878ae2514a2b3fd
+== SANtricity 11.70
 
 下表列出了11.70版的CLI和脚本命令。
 
