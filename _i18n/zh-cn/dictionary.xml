@@ -4053,7 +4053,6 @@
   <block id="cd0e1bf7bec3124852b329e7ddbf676c" category="paragraph">IPV4Address|IPv6Address</block>
   <block id="3b129c5535bfd1b293ee522199b2647b" category="summary">start drive erase命令会擦除一个或多个驱动器中的所有数据。</block>
   <block id="5c7cd3a54ac60bada240ddcb36cb2b2f" category="paragraph">`s启动驱动器擦除`命令可擦除一个或多个驱动器中的所有数据。</block>
-  <block id="8a6ff4179a3940cccf4dc20ba85a1162" category="paragraph">此命令将适用场景 单个E2800、E5700、EF600或EF300阵列。它可以在E2700和E5600存储阵列上运行。</block>
   <block id="a40cdbeba07769d11e789eb761201ae7" category="paragraph">只有在要永久删除驱动器上的所有数据时、才运行此命令。如果驱动器已启用安全保护、则`sStart drive erase`命令选项将执行加密擦除、并将驱动器的安全属性重置回支持安全保护的状态。</block>
   <block id="2531efef7e4f6d3357daf24da936c35a" category="paragraph">擦除操作无法撤消。使用此命令时、请确保选择正确的驱动器。</block>
   <block id="6ae797a72c66de004194304b30f25119" category="paragraph">驱动器列表不能包含存储阵列中的所有驱动器、否则命令将被拒绝。</block>
@@ -7546,4 +7545,5 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">此命令将适用场景 单个E2800、E5700、EF600或EF300阵列。它不能在E2700和E5600存储阵列上运行。</block>
 </blocks>
