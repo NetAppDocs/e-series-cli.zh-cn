@@ -6160,7 +6160,6 @@
   <block id="d27ee9db41cb355edea349ea7588c692" category="paragraph">`newCapacity`</block>
   <block id="8ec6fac1bb3dd6db9c73855881642036" category="paragraph">此参数可增加精简卷的虚拟容量。虚拟容量是卷将向映射到卷的主机报告的值。如果值小于或等于现有容量、则会出现发生原因 错误。大小的单位为`字节`、`KB`、`MB`、`GB`或`TB`。</block>
   <block id="4bd944c067cd0308263d9df1c820d71f" category="paragraph">最小虚拟容量为32 MB。</block>
-  <block id="b306bb1dc4b136b774d5f8dca7910774" category="paragraph">最大虚拟容量为63 TB。</block>
   <block id="e167788620b4089b203eb07b9e11ba76" category="paragraph">`repositoryMaxCapacity"`</block>
   <block id="c25c025f154c8960a89c48b38d090c3d" category="paragraph">此参数用于设置存储库卷的最大容量。此值不得小于存储库卷的物理容量。如果新值导致容量减少到低于警告阈值的级别、则此命令将生成错误。</block>
   <block id="6e1e474416e0564ab880c5863366af19" category="paragraph">命令`repositoryMaxCapacity`与`repositoryExpansionPolicy=automatic`配合使用。</block>
@@ -6171,8 +6170,6 @@
   <block id="f1ab280b8906396f9d0a560168414811" category="paragraph">命令`addRepositoryCapacity`可与`repositoryExpansionPolicy=manual`配合使用。</block>
   <block id="de44d9b0c50726b618b8207ce1ec73ab" category="paragraph">`*主机报告策略*`</block>
   <block id="948966fb14713f2284165893e91b093c" category="paragraph">此参数用于更改向主机报告精简卷的方式。有效值为`standard`或`thin`。</block>
-  <block id="52157289efd480729928e4e0118c38e6" category="paragraph">63 TB</block>
-  <block id="c1edd650c09defc6ca8d0aaf67803ddc" category="paragraph">64 TB</block>
   <block id="8252060fadb0366cba7cd1c3d9b88cc7" category="summary">download storageArray driveFirmware file命令可将固件映像下载到存储阵列中的所有驱动器。</block>
   <block id="9e56a4a70a6df59a0704a6194d9f0e16" category="doc">下载存储阵列驱动器固件</block>
   <block id="79d0244851982761ba330d1eb5c8b49d" category="paragraph">`dload storageArray driveFirmware file`命令可将固件映像下载到存储阵列中的所有驱动器。</block>
@@ -7546,4 +7543,5 @@
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">此命令将适用场景 单个E2800、E5700、EF600或EF300阵列。它不能在E2700和E5600存储阵列上运行。</block>
+  <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">最大虚拟容量为256 TB。</block>
 </blocks>

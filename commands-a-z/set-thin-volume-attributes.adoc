@@ -93,7 +93,7 @@ volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
 
 最小虚拟容量为32 MB。
 
-最大虚拟容量为63 TB。
+最大虚拟容量为256 TB。
 
 
 
@@ -168,7 +168,7 @@ volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
  a| 
 最大虚拟容量
  a| 
-63 TB
+256 TB
 
 
 
@@ -182,7 +182,7 @@ volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
  a| 
 最大物理容量
  a| 
-64 TB
+257 TB
 
 |===
 精简卷支持标准卷执行的所有操作、但以下情况除外：
