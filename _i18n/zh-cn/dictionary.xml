@@ -7544,4 +7544,5 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">此命令将适用场景 单个E2800、E5700、EF600或EF300阵列。它不能在E2700和E5600存储阵列上运行。</block>
   <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">最大虚拟容量为256 TB。</block>
+  <block id="85e8092ad24869d134ad6af40b479c96" category="sidebar">欢迎使用SANtricity系统管理器嵌入式命令行界面用户帮助、您可以在其中了解如何使用命令行界面(CLI)配置、监控和调整存储阵列。"</block>
 </blocks>
