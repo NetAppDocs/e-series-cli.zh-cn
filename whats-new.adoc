@@ -25,6 +25,23 @@ summary: 本主题列出了最新版本的SANtricity System Manager命令行界�
 ====
 
 
+== SANtricity 11.81
+
+下表列出了对11.81版的CLI和脚本命令进行的更改。
+
+[cols="2*"]
+|===
+| 命令 | 问题描述 of Change 
+
+
+ a| 
+xref:./get-started/downloadable-smcli-parameters.adoc#identify-Devices[识别设备]
+ a| 
+已添加 `identifyDevices` 参数。
+
+|===
+
+
 == SANtricity 11.80
 
 下表列出了对11.80版的CLI和脚本命令进行的更改。

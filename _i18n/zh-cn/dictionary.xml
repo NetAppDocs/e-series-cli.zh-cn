@@ -5023,11 +5023,6 @@
   <block id="aa10cbdddfaa9b241492306fc663004c" category="paragraph">`地址`</block>
   <block id="81467412741bcb83b3995cc18b1516d9" category="paragraph">"域名"|IPv4Address|IPv6Address</block>
   <block id="d0ddb28e638271963e281c74aa6164ff" category="paragraph">如果指定了域名、则还必须配置DNS服务器、以允许控制器解析服务器IP地址。</block>
-  <block id="5f13d4f79dcde55f34ef328e9338aba4" category="paragraph">`KeyIdentifier``KeyType`</block>
-  <block id="764c2b587e12f15a3e09f6b9eac104d7" category="paragraph">或者、这些参数可提供用于启用NTP身份验证的关键凭据：</block>
-  <block id="29bb257c3542b33e69d33ea7fc33c433" category="list-text">`key Identifier`是一个介于0到65535之间的整数。</block>
-  <block id="01e68e6855a7e29f6658f124c09009fd" category="list-text">`KeyType`是以下选项之一：none、SHA1、SH224、SHA256、sh384或SHA512。</block>
-  <block id="f6434eb840c71208dfb72ef5c786d39e" category="list-text">`密码短语`是十六进制数字(0-9、允许a-f)(长度恰好为40位、输入为字符串字形)或字母数字字符串(长度最多为20字节)。</block>
   <block id="a1f3afaef8deadb0480d323937491c5a" category="paragraph">8.42添加了用于NTP身份验证的关键凭据参数。</block>
   <block id="6b975d7e3a0158d41f798db9ebc7665d" category="summary">create snapGroup命令将创建一个新的快照组以及关联的存储库卷。</block>
   <block id="dc6cbd29e6aaab91b2a92d369c5e5a32" category="doc">创建快照组</block>
@@ -6518,7 +6513,6 @@
   <block id="5388c504a5adecf71c7c88e13a75a2bc" category="paragraph"><block ref="5388c504a5adecf71c7c88e13a75a2bc" category="inline-link-macro-rx"></block></block>
   <block id="13e26b8fa55eca651252e74cc22ca8a8" category="paragraph"><block ref="13e26b8fa55eca651252e74cc22ca8a8" category="inline-link-macro-rx"></block></block>
   <block id="b618091fab8ba81a2d7825c6dd871932" category="paragraph"><block ref="b618091fab8ba81a2d7825c6dd871932" category="inline-link-macro-rx"></block></block>
-  <block id="2703ec3e21c52f00ef1fdb6211a17fb5" category="paragraph"><block ref="2703ec3e21c52f00ef1fdb6211a17fb5" category="inline-link-macro-rx"></block></block>
   <block id="c8324b99fd0ae7e4d262f7ad6fc5b428" category="paragraph"><block ref="c8324b99fd0ae7e4d262f7ad6fc5b428" category="inline-link-macro-rx"></block></block>
   <block id="5e3d5953db77c176dfbd744f2a4d2933" category="paragraph"><block ref="5e3d5953db77c176dfbd744f2a4d2933" category="inline-link-macro-rx"></block></block>
   <block id="189115fcec4dd11c1e3edee24940c599" category="paragraph"><block ref="189115fcec4dd11c1e3edee24940c599" category="inline-link-macro-rx"></block></block>
@@ -7341,7 +7335,6 @@
   <block id="b6c9cb32de0a61002f039efec80a465c" category="paragraph">SANtricity OS 11.60版可以直接通过SANtricity 系统管理器下载和安装基于http的命令行界面版本(也称为"Secure CLI"或SMcli)。此可下载版本的SMcli可从EF600、EF300、E5700、EF570、E2800、 和EF280控制器。要在SANtricity 系统管理器中下载SMCLI、请选择*设置*&gt;*系统*和*加载项*&gt;*命令行界面*。</block>
   <block id="75842716a65060950b20cba161cbac95" category="admonition">要运行命令行界面命令的管理系统必须具有Java Runtime Environment (JRE) 8及更高版本。</block>
   <block id="c3369045597873cd151e0a9b94edab23" category="inline-xref-macro">原有命令行参数</block>
-  <block id="720d9a5bd635c70358cdcb41b1eaefaf" category="paragraph">与先前版本的SMcli一样、可通过SANtricity 系统管理器下载的SMcli具有一组唯一的参数。有关在SANtricity OS 11.53及更早版本中使用命令行参数的信息、请参见 <block ref="55493e98e602a03e07f56f1acb2fb353" category="inline-xref-macro-rx"></block></block>
   <block id="1a98f49f191845835d6fd3e13eb29812" category="section-title">多因素身份验证</block>
   <block id="e228e60d948488385c1b528cc75ed77d" category="paragraph">如果启用了SAML (安全断言标记语言)、则CLI只能使用访问令牌。如果未启用SAML、则可以使用用户名/密码或访问令牌。可以通过SANtricity 系统管理器生成访问令牌。</block>
   <block id="e88aeb63b8ab6fc616194c065b4c2b62" category="paragraph"><block ref="b7cc4b6b2b8c0f37377b5cc259385de0" prefix="" category="inline-code"></block></block>
@@ -7545,4 +7538,23 @@
   <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">此命令将适用场景 单个E2800、E5700、EF600或EF300阵列。它不能在E2700和E5600存储阵列上运行。</block>
   <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">最大虚拟容量为256 TB。</block>
   <block id="85e8092ad24869d134ad6af40b479c96" category="sidebar">欢迎使用SANtricity系统管理器嵌入式命令行界面用户帮助、您可以在其中了解如何使用命令行界面(CLI)配置、监控和调整存储阵列。"</block>
+  <block id="c4f2e9f91e3e5a0d9fb8f8728ed63376" category="paragraph">与先前版本的SMcli一样、可通过SANtricity 系统管理器下载的SMcli具有一组唯一的参数。有关在SANtricity OS 11.53及更早版本中使用命令行参数的信息、请参见 <block ref="f6644819b412d8968161178a2ccec029" category="inline-link-macro-rx"></block>。</block>
+  <block id="2115a9072c5575f3300b4b18e5722de6" category="section-title">识别设备</block>
+  <block id="90f4cf9a1fcd3d43e57768f9bb55bbfb" category="paragraph">使用以下命令行参数可以显示主机可见的所有适用设备的信息。</block>
+  <block id="222ae10a38daa5038e857b83e1adb270" category="admonition">从SANtricity 11.81版开始、SMCli<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 参数将取代以前通过SMdevices工具提供的功能。</block>
+  <block id="64ce8fcd5ac05bd3132098b5581a2dcf" category="paragraph"><block ref="35d5ed698aa483d3174ea619db10c0ac" prefix="" category="inline-code"></block></block>
+  <block id="f53cecbe90c0e9f04dc66481adf123c6" category="paragraph">查找与存储阵列关联的所有SCSI本机块设备。对于找到的每个设备、会报告各种信息、例如本机操作系统专用设备名称、关联的存储阵列、卷名称、LUN信息等</block>
+  <block id="312574efd0c8e7ddeea92ab871822aed" category="paragraph">有关的示例、请参见以下内容<block ref="14993f95e0d6fc04f9966b0c368a7ed6" prefix=" " category="inline-code"></block> 参数。</block>
+  <block id="edc9f0a5a5d57797bf68e37364743831" category="listing-title">Linux</block>
+  <block id="aea23489ce3aa9b6406ebb28e0cda430" category="listing-title">Windows</block>
+  <block id="94f04537971d7a4a561c607ec55952a2" category="section-title">其他注意事项</block>
+  <block id="ba151d8fe1acd0cb9eca1b6945962e62" category="list-text">仅与运行基于SCSI的主机接口的x86－64平台的Linux和Windows操作系统兼容。</block>
+  <block id="aaeaddd5c8faa1ad9f766c53197d7ab2" category="list-text">不支持基于NVMe的主机接口。</block>
+  <block id="fb52873edf9c97b7281409c640b5ed20" category="list-text">。<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 参数不会在操作系统级别进行发生原因重新扫描。它会迭代操作系统发现的现有设备。</block>
+  <block id="9c4b22635677ff419bec86d3f3219927" category="list-text">您必须具有足够的用户权限才能运行<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 命令：</block>
+  <block id="dbb8d2fd09a59e1ab8494de138ceffdb" category="list-text">这包括能够从操作系统本机块设备中读取数据并执行SCSI查询命令。</block>
+  <block id="5b1cc65d11915b727018c6056792dcef" category="section-title">SANtricity 11.81</block>
+  <block id="a92322756f07d387c173b27babcdad72" category="paragraph">下表列出了对11.81版的CLI和脚本命令进行的更改。</block>
+  <block id="559b1de3f22ee41aed01495562ee7836" category="paragraph"><block ref="559b1de3f22ee41aed01495562ee7836" category="inline-xref-macro-rx"></block></block>
+  <block id="5fe9c86e85a56fcbfe366c1ef482deb0" category="paragraph">已添加<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 参数。</block>
 </blocks>

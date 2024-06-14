@@ -48,7 +48,7 @@ summary: 'set controller NTPServers命令用于设置控制器的NTP设置、以
 [listing]
 ----
 
-set controller(a|b) NTPServers=(disabled|auto|(Address1 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()] [Address2 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()]]))
+set controller(a|b) NTPServers=(disabled|auto|(Address1 [Address2]))
 ----
 
 
@@ -99,20 +99,6 @@ set controller(a|b) NTPServers=(disabled|auto|(Address1 [keyIdentifier=integerLi
 如果指定了域名、则还必须配置DNS服务器、以允许控制器解析服务器IP地址。
 
 ====
-
-
- a| 
-`KeyIdentifier``KeyType`
-
-`密码短语`
- a| 
-或者、这些参数可提供用于启用NTP身份验证的关键凭据：
-
-* `key Identifier`是一个介于0到65535之间的整数。
-* `KeyType`是以下选项之一：none、SHA1、SH224、SHA256、sh384或SHA512。
-* `密码短语`是十六进制数字(0-9、允许a-f)(长度恰好为40位、输入为字符串字形)或字母数字字符串(长度最多为20字节)。
-
-
 |===
 
 
@@ -122,9 +108,9 @@ set controller(a|b) NTPServers=(disabled|auto|(Address1 [keyIdentifier=integerLi
 ----
 set controller[a] NTPServers=disabled;
 set controller[a] NTPServers=auto;
-set controller[a] NTPServers=("0.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase="SomePassword1" "1.us.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
-set controller[b] NTPServers=(192.168.1.105 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1" "1.us.pool.ntp.org");
-set controller[b] NTPServers=(set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
+set controller[a] NTPServers=("0.pool.ntp.org" "1.us.pool.ntp.org");
+set controller[b] NTPServers=(192.168.1.105 "1.us.pool.ntp.org");
+set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334);
 ----
 
 
