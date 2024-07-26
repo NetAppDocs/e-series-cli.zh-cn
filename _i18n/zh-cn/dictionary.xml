@@ -5485,10 +5485,8 @@
   <block id="1097d50d308460fb1b50f829463b876f" category="summary">start IOCLog命令可生成主机与控制器之间数据传输的IOC日志的转储。</block>
   <block id="919fa20b8039fd3ffcb53ad9127283b5" category="doc">启动输入输出控制器(IOC)转储</block>
   <block id="e2a4209d7a80b7a32f66acbe47207ad8" category="paragraph">使用`sStart IOCLog`命令可转储主机和控制器之间数据传输的IOC日志。</block>
-  <block id="fe7eb245accdce547a982eb646ece918" category="paragraph">控制器标识为"A"或"b"。每个控制器最多可以有四个主机通道；每个通道都通过1到4之间的数字进行唯一标识。</block>
   <block id="2f913fbc5a6df0de0781c7c00fae36a5" category="paragraph">`控制器-通道标识符`</block>
   <block id="e9d09ac70bb8b56b87f52d05d9da4a80" category="paragraph">此参数用于指定生成IOC转储的控制器和主机通道。有效控制器标识符为`a`或`b`、其中`a`是插槽A中的控制器、`b`是插槽B中的控制器主机通道具有数字标识符。将控制器标识符和主机通道标识符括在方括号([])中。</block>
-  <block id="d6fe14f8578eb7f33d338520ef786011" category="paragraph">有效控制器标识符和主机通道值为`A1`、`A2`、`A3`、`A4`、`B1`、 `B2`、`B3`、`b4`。</block>
   <block id="7946e37020b5107527be39f587dc55cc" category="paragraph">如果不指定控制器、则存储管理软件将返回语法错误。</block>
   <block id="6120a057c1cb2b10bd56b6d682b9840b" category="paragraph">`覆盖`</block>
   <block id="8157bf4577dade54ef928afcd935e033" category="paragraph">此参数会导致新的IOC日志转储覆盖现有转储。要覆盖现有转储、请将此参数设置为`true`。默认值为`false`。</block>
@@ -7557,4 +7555,6 @@
   <block id="a92322756f07d387c173b27babcdad72" category="paragraph">下表列出了对11.81版的CLI和脚本命令进行的更改。</block>
   <block id="559b1de3f22ee41aed01495562ee7836" category="paragraph"><block ref="559b1de3f22ee41aed01495562ee7836" category="inline-xref-macro-rx"></block></block>
   <block id="5fe9c86e85a56fcbfe366c1ef482deb0" category="paragraph">已添加<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 参数。</block>
+  <block id="8d3df8e4a86e0915f0d07f8e7a26b030" category="paragraph">控制器标识为"A"或"b"。每个控制器最多可以有四个主机通道；每个通道都通过1到8之间的数字进行唯一标识。</block>
+  <block id="f6d06651df499131aa8d5acf7a129e3f" category="paragraph">有效的控制器标识符和主机通道值为<block ref="8a8bb7cd343aa2ad99b7d762030857a2" prefix=" " category="inline-code"></block>、<block ref="693a9fdd4c2fd0700968fba0d07ff3c0" prefix=" " category="inline-code"></block><block ref="9d607a663f3e9b0a90c3c8d4426640dc" prefix=" " category="inline-code"></block>、<block ref="894f782a148b33af1e39a0efed952d69" prefix=" " category="inline-code"></block>、、<block ref="32cfe6c19200b67afb7c3d0e1c43eadb" prefix=" " category="inline-code"></block><block ref="f74dd50cfec0f8549406fee6191d2f8d" prefix=" " category="inline-code"></block><block ref="c692562238d8c12c32434c50b96d56ae" prefix=" " category="inline-code"></block>、<block ref="68c42382c8b93fc29c2fcb6a444aeda5" prefix=" " category="inline-code"></block>、、<block ref="edbab45572c72a5d9440b40bcc0500c0" prefix=" " category="inline-code"></block>、<block ref="fbfba2e45c2045dc5cab22a5afe83d9d" prefix=" " category="inline-code"></block><block ref="7a6f150b83091ce20c89368641f9a137" prefix=" " category="inline-code"></block><block ref="3dfe563103ab11bec75bb5081e7a1dbe" prefix=" " category="inline-code"></block>、<block ref="2283335d8d12b21001439091e74f5028" prefix=" " category="inline-code"></block>、、<block ref="528953727ef3a4e1c441c6078534c39b" prefix=" " category="inline-code"></block>、<block ref="d8708ecb9a1e7ba172c83d8360c57e7d" prefix=" " category="inline-code"></block><block ref="75d99404a02e2bc993a6bac34c60d679" prefix=" " category="inline-code"></block>或。</block>
 </blocks>
