@@ -1397,7 +1397,6 @@
   <block id="76694dff9e3c1da79e1d9ff988db3e81" category="doc">创建异步镜像组</block>
   <block id="c44dd0e3f8151fa698bb2b478c236671" category="paragraph">`create asyncMirrorGroup`命令可在本地存储阵列和远程存储阵列上创建一个新的空异步镜像组。</block>
   <block id="7ea865a72caf912f877a2443ec100fcf" category="paragraph">此命令会对任何单个存储阵列执行适用场景 操作、但有一些限制。如果您在E2700或E5600阵列上运行命令、则没有任何限制。</block>
-  <block id="3e9fd63261e518fc6aa4b5e69f8f3834" category="paragraph">如果您在E2800或E5700阵列上运行命令、则客户端类型必须设置为`symbol`。如果客户端类型设置为`https`、则不会执行此命令。</block>
   <block id="23b9c3a34e5076326273d8f14df384a5" category="paragraph">要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。</block>
   <block id="44adbed47d8c3d285276ded0978c9005" category="paragraph">异步镜像组是一个容器、可以容纳多个镜像对、以便将其作为一个实体进行管理。您可以创建异步镜像组来定义组中所有镜像对的同步设置。异步镜像组中的每个镜像对共享相同的同步设置、主角色和二级角色以及写入模式。</block>
   <block id="c9d558e8767f68776aa9bce24eadea9c" category="paragraph">异步镜像组与用于镜像的本地存储阵列和远程存储阵列相关联。本地存储阵列是异步镜像组的主端、而远程存储阵列是异步镜像组的二级端。添加到本地存储阵列上异步镜像组的所有卷在镜像关系中都具有主角色。随后、添加到远程存储阵列上异步镜像组的所有卷都会在镜像关系中保留二级角色。</block>
@@ -7471,7 +7470,6 @@
   <block id="962d9ad1b8030cfc38372c70a910a150" category="paragraph">此命令用于适用场景任何单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。</block>
   <block id="620a3709ded9e8d65119f943b821804a" category="paragraph">要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有支持管理员角色。</block>
   <block id="1bbe4f0d1be16abbdd83a481a65ca5a4" category="paragraph">11.80增加了EF600和EF300阵列支持</block>
-  <block id="a477516db1bcb6e305b3dcf84ce294c2" category="paragraph">如果在E2800、E5700、EF600或EF300阵列上运行命令、则客户端类型必须设置为<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block>。如果客户端类型设置为、则不会执行此命令<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block>。</block>
   <block id="b5686fd94e2c11d0beb5597a3520313c" category="summary">show check volume parity Job命令可显示指定的检查卷奇偶校验作业及其状态。</block>
   <block id="dd6daf5faf9779e778db769f3be87c3e" category="paragraph">。<block ref="444d9d2a89ab0f7e0925c167387212b0" prefix=" " category="inline-code"></block> 命令可显示指定的检查卷奇偶校验作业及其状态。</block>
   <block id="26dd5ebc9516419ec6866f88343d77bc" category="paragraph"><block ref="7143244908eefa9a01f826fcd8ecb03d" prefix="" category="inline-code"></block></block>
@@ -7506,7 +7504,6 @@
   <block id="8787ce4b8a4c03ba45431f367412472f" category="summary">停止检查卷奇偶校验作业命令可停止正在进行的检查卷奇偶校验作业。</block>
   <block id="28d62c9a6bee1cfdb574a22ef875004f" category="paragraph">。<block ref="e375a2dea1356a7fa1ccb75cb2608251" prefix=" " category="inline-code"></block> 命令用于停止正在进行的检查卷奇偶校验作业。</block>
   <block id="5b4abcaacf5de9ef06f2361d8ed99ee8" category="paragraph">要停止的检查卷奇偶校验作业对应的作业ID。此值为必填项。</block>
-  <block id="96a29fbb29b6b974b913d1533c75e23a" category="paragraph">如果在E2800、E5700、EF600和EF300阵列上运行命令、则客户端类型必须设置为<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block>。如果客户端类型设置为、则不会执行此命令<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block>。</block>
   <block id="fc3bb4c64d686e2af46c9c6ab9cbe52c" category="paragraph"><block ref="ab1f19425d80842e646857a8f89eeecb" prefix="" category="inline-code"></block></block>
   <block id="850782176356c5fe7366cf2f766cb110" category="paragraph">用于将传输端口设置为<block ref="7e6b20d014d1c659e4eaf20dc2dcd7eb" prefix=" " category="inline-code"></block> 而不是默认值<block ref="13f3cf8c531952d72e5847c4183e6910" prefix=" " category="inline-code"></block>。</block>
   <block id="5a726fa69132fec2b565c201f259a2b6" category="sidebar">保存检查卷奇偶校验作业奇偶校验错误</block>
@@ -7557,4 +7554,5 @@
   <block id="5fe9c86e85a56fcbfe366c1ef482deb0" category="paragraph">已添加<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 参数。</block>
   <block id="8d3df8e4a86e0915f0d07f8e7a26b030" category="paragraph">控制器标识为"A"或"b"。每个控制器最多可以有四个主机通道；每个通道都通过1到8之间的数字进行唯一标识。</block>
   <block id="f6d06651df499131aa8d5acf7a129e3f" category="paragraph">有效的控制器标识符和主机通道值为<block ref="8a8bb7cd343aa2ad99b7d762030857a2" prefix=" " category="inline-code"></block>、<block ref="693a9fdd4c2fd0700968fba0d07ff3c0" prefix=" " category="inline-code"></block><block ref="9d607a663f3e9b0a90c3c8d4426640dc" prefix=" " category="inline-code"></block>、<block ref="894f782a148b33af1e39a0efed952d69" prefix=" " category="inline-code"></block>、、<block ref="32cfe6c19200b67afb7c3d0e1c43eadb" prefix=" " category="inline-code"></block><block ref="f74dd50cfec0f8549406fee6191d2f8d" prefix=" " category="inline-code"></block><block ref="c692562238d8c12c32434c50b96d56ae" prefix=" " category="inline-code"></block>、<block ref="68c42382c8b93fc29c2fcb6a444aeda5" prefix=" " category="inline-code"></block>、、<block ref="edbab45572c72a5d9440b40bcc0500c0" prefix=" " category="inline-code"></block>、<block ref="fbfba2e45c2045dc5cab22a5afe83d9d" prefix=" " category="inline-code"></block><block ref="7a6f150b83091ce20c89368641f9a137" prefix=" " category="inline-code"></block><block ref="3dfe563103ab11bec75bb5081e7a1dbe" prefix=" " category="inline-code"></block>、<block ref="2283335d8d12b21001439091e74f5028" prefix=" " category="inline-code"></block>、、<block ref="528953727ef3a4e1c441c6078534c39b" prefix=" " category="inline-code"></block>、<block ref="d8708ecb9a1e7ba172c83d8360c57e7d" prefix=" " category="inline-code"></block><block ref="75d99404a02e2bc993a6bac34c60d679" prefix=" " category="inline-code"></block>或。</block>
+  <block id="d67b41e45a16f6e51b2d5c893efb6386" category="paragraph">E2800、E5700、EF600和EF300平台不支持此命令。</block>
 </blocks>
