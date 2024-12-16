@@ -7,10 +7,13 @@ summary: CLI命令采用命令包装器的形式、并在包装器中嵌入一�
 = CLI命令的结构
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
-CLI命令采用命令包装器的形式、并在包装器中嵌入一些元素。CLI命令由以下元素组成：
+[role="lead"]
+CLI命令采用命令包装器的形式、并在包装器中嵌入一些元素。
+
+CLI命令包含以下元素：
 
 * 使用术语`SMcli`标识的命令包装程序
 * 存储阵列标识符

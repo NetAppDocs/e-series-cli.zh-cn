@@ -7,7 +7,7 @@ summary: set tray命令用于设置存储阵列中控制器托盘、控制器驱
 = 设置托盘标识
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ summary: set tray命令用于设置存储阵列中控制器托盘、控制器驱
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set tray pass:quotes[["_serialNumber_"]] pass:quotes[id=_trayID_]
 ----

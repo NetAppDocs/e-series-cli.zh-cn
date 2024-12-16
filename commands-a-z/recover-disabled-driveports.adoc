@@ -7,7 +7,7 @@ summary: recover disabled drivePorts命令可恢复已禁用的驱动器端口�
 = 恢复已禁用的驱动器端口
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: recover disabled drivePorts命令可恢复已禁用的驱动器端口�
 
 == 支持的阵列
 
-此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。
 
 
 
@@ -29,7 +29,7 @@ summary: recover disabled drivePorts命令可恢复已禁用的驱动器端口�
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 recover disabled drivePorts;
 ----

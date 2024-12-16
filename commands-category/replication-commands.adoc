@@ -7,8 +7,11 @@ summary: 复制命令
 = 复制命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+以下复制命令列表适用于您的E系列存储系统。
 
 
 

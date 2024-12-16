@@ -7,7 +7,7 @@ summary: download storageArray keyManagementCertificate命令可在存储阵列�
 = 安装存储阵列外部密钥管理证书
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: download storageArray keyManagementCertificate命令可在存储阵列�
 
 == 支持的阵列
 
-此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+此命令适用于单个E4000、E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
 
 
 
@@ -38,10 +38,9 @@ summary: download storageArray keyManagementCertificate命令可在存储阵列�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
-
-pass:quotes[download storageArray keyManagementClientCertificate certificateType=(client|server) file="_filename_"]
+pass:quotes[download storageArray keyManagementClientCertificate certificateType=(client|server) file="_filename_" [privateKeyFile = "keyFileName"]]
 ----
 
 
@@ -63,6 +62,13 @@ pass:quotes[download storageArray keyManagementClientCertificate certificateType
 `文件`
  a| 
 用于指定客户端签名证书或服务器根/中间CA证书。此文件必须采用PEM/DER格式。
+
+
+
+ a| 
+`privateKeyFile`
+ a| 
+用于下载专用密钥和已签名证书。 `privateKeyFile`参数必须与值一起使用 `certificateType=client`。
 
 |===
 

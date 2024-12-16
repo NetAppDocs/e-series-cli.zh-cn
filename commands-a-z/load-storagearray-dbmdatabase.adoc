@@ -7,7 +7,7 @@ summary: 'load storageArray dbmDatabase命令可通过从文件或缓存中检�
 = 加载存储阵列DBM数据库
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: 'load storageArray dbmDatabase命令可通过从文件或缓存中检�
 
 == 支持的阵列
 
-此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
 
 
 
@@ -37,7 +37,7 @@ summary: 'load storageArray dbmDatabase命令可通过从文件或缓存中检�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 load storageArray dbmDatabase
 pass:quotes[((file="_filename_" validator="_validatorValue_") | sourceLocation=onboard)]

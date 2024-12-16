@@ -7,7 +7,7 @@ summary: 'start diskPool resourcegroup Provisioning命令可在给定磁盘池�
 = 启动磁盘池资源配置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ summary: 'start diskPool resourcegroup Provisioning命令可在给定磁盘池�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 start diskPoolpass:quotes[[_diskPoolName_]] resourceProvisioning
 ----

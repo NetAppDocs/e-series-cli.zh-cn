@@ -7,7 +7,7 @@ summary: 使用smcli -autosupportConfig测试命令发送测试消息以测试Au
 = 测试AutoSupport 配置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -37,7 +37,7 @@ summary: 使用smcli -autosupportConfig测试命令发送测试消息以测试Au
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 SMcli -autoSupportConfig test reply-toEmail<address>
 ----

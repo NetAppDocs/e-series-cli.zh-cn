@@ -7,7 +7,7 @@ summary: 使用Add certificate from array命令可以从阵列获取证书并将
 = 从阵列添加证书
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: 使用Add certificate from array命令可以从阵列获取证书并将
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 pass:quotes[_ipAddress1 ipAddress2_  trust localCertificate]

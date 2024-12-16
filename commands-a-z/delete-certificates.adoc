@@ -7,7 +7,7 @@ summary: 使用Delete certificates命令可以从命令行界面软件包信任�
 = 删除证书
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: 使用Delete certificates命令可以从命令行界面软件包信任�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 delete localCertificate all | alias pass:quotes[_alias_]
 ----

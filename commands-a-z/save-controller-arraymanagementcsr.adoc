@@ -7,7 +7,7 @@ summary: 'save controller arrayManagementCSR命令会为控制器生成证书签
 = 生成Web服务器证书签名请求(CSR)
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: 'save controller arrayManagementCSR命令会为控制器生成证书签
 
 == 支持的阵列
 
-此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+此命令适用于单个E4000、E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
 
 
 
@@ -35,7 +35,7 @@ CSR必须由证书颁发机构(CA)签名。生成的签名证书安装在控制�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 save controller [(a|b)] arrayManagementCSR
@@ -47,6 +47,7 @@ save controller [(a|b)] arrayManagementCSR
      locality=pass:quotes["_cityOrLocality_"]
      [stateProvince=pass:quotes["_stateOrRegion_"]]
      country=pass:quotes["_string_"]
+     keySize=["2048 | 3072 | 4096 "]
      file=pass:quotes["_filename_"]
 ----
 
@@ -118,6 +119,13 @@ save controller [(a|b)] arrayManagementCSR
 `国家或地区`
  a| 
 用于指定国家/地区的两位数ISO (国际标准化组织)代码、例如美国。
+
+
+
+ a| 
+`keySize`
+ a| 
+用于为服务器的密钥大小指定、 `3072`或 `4096`值 `2048`。如果未选择密钥大小、则默认密钥大小为3072。
 
 
 

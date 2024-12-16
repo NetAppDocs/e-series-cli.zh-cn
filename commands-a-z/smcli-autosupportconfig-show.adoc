@@ -7,7 +7,7 @@ summary: smcli -autosupportConfig show命令可显示管理域的AutoSupport 捆
 = 显示AutoSupport 捆绑包收集设置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -52,14 +52,14 @@ summary: smcli -autosupportConfig show命令可显示管理域的AutoSupport 捆
 ====
 [NOTE]
 ====
-此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E2800或E5700存储阵列。
+此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E4000、E2800或E5700存储阵列。
 
 ====
 
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 SMcli -autoSupportConfig show
 ----

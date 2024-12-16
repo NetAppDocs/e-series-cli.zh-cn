@@ -7,7 +7,7 @@ summary: 'set ssdCache命令可通过删除固态磁盘(SSD)来减少SSD缓存�
 = 从SSD缓存中删除驱动器
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,19 +17,19 @@ summary: 'set ssdCache命令可通过删除固态磁盘(SSD)来减少SSD缓存�
 
 == 支持的阵列
 
-此命令用于适用场景任何单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有支持管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有支持管理员角色。
 
 
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set ssdCache pass:quotes[[_ssdCacheName_]]
 removeDrives=pass:quotes[(_trayID1_,]pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1 ... trayIDn_],pass:quotes[[_drawerIDn,_]]pass:quotes[_slotIDn_])

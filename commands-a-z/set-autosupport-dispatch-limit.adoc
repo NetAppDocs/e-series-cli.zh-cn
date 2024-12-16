@@ -1,0 +1,68 @@
+---
+permalink: commands-a-z/set-autosupport-dispatch-limit.html 
+sidebar: sidebar 
+keywords: Autosupport, bundle, dispatch, delivery type, size 
+summary: 为不同的交付类型设置AutoSupport捆绑包和派单的最大大小。 
+---
+= 设置AutoSupport派单大小限制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ `set storageArray autoSupport dispatchSizeLimit`为不同的交付类型设置AutoSupport捆绑包和派单的最大大小。
+
+通过此命令、用户可以根据其电子邮件服务器支持的内容配置电子邮件大小。较大的大小可降低支持包被截断的可能性。
+
+
+NOTE: 除非NetApp支持部门指示、否则用户通常不应配置HTTPS大小。
+
+
+
+== 支持的阵列
+
+此命令适用于单个E4000、E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+
+
+
+== 角色
+
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+
+
+
+== 语法
+
+[source, cli, subs="+macros"]
+----
+
+set storageArray autoSupport dispatchSizeLimit (https=(<sizeInBytes>|unlimited)|email=(<sizeInBytes>|unlimited));
+----
+
+
+== Parameters
+
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+`https`
+ a| 
+最大HTTPS派单大小(以字节为单位)。如果未配置最大大小、则默认值为50 Mib。值"unlimited (无限制)"或0表示不允许限制大小。允许的最小大小为2 Mib。
+
+
+
+ a| 
+`email`
+ a| 
+最大电子邮件(SMTP)传送大小(以字节为单位)。如果未配置最大大小、则默认值为5 Mib。值"unlimited (无限制)"或0表示不允许限制大小。允许的最小大小为2 Mib。
+
+|===
+
+
+== 最低固件级别
+
+8.90

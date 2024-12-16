@@ -7,7 +7,7 @@ summary: start drive erase命令会擦除一个或多个驱动器中的所有数
 = 启动驱动器擦除
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: start drive erase命令会擦除一个或多个驱动器中的所有数
 
 == 支持的阵列
 
-此命令将适用场景 单个E2800、E5700、EF600或EF300阵列。它不能在E2700和E5600存储阵列上运行。
+此命令适用于单个E4000、E2800、E5700、EF600或EF300阵列。它不能在E2700和E5600存储阵列上运行。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
 
 
 
@@ -40,7 +40,7 @@ summary: start drive erase命令会擦除一个或多个驱动器中的所有数
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 start drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]] | drivespass:quotes[[_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_]] erase
 ----

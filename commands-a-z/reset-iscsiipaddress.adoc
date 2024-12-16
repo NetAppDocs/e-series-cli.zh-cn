@@ -7,7 +7,7 @@ summary: reset iscsiIpAddress命令可重置远程存储阵列的IP地址、以�
 = 重置iSCSI IP地址
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,14 +21,14 @@ summary: reset iscsiIpAddress命令可重置远程存储阵列的IP地址、以�
 
 [NOTE]
 ====
-E2800、E5700、EF600和EF300平台不支持此命令。
+E4000、E2800、E5700、EF600和EF300平台不支持此命令。
 
 ====
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+不适用
 
 
 
@@ -46,7 +46,7 @@ IP地址已更改的存储阵列会向与配置为通过iSCSI连接进行镜像�
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 reset (remoteStorageArrayName="storageArrayName" | remoteStorageArrayWwid=<wwID>)
 iscsiIpAddress

@@ -2,13 +2,20 @@
 permalink: get-started/formatting-cli-commands.html 
 sidebar: sidebar 
 keywords: format, rules, cli, commands 
-summary: 在Windows、Linux或Solaris操作系统上运行CLI命令和脚本命令时、需要特别注意名称或标签中使用的双引号。 
+summary: 根据输入的值或名称、CLI命令会强制实施某些格式规则。 
 ---
 = CLI命令的格式规则
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+根据输入的值或名称、CLI命令会强制实施某些格式规则。
+
+
+
+== CLI格式规则
 
 在Windows、Linux或Solaris操作系统上运行CLI命令和脚本命令时、需要特别注意名称或标签中使用的双引号("")。
 

@@ -7,7 +7,7 @@ summary: 使用smcli -autosupportLog命令可以查看AutoSupport 日志文件�
 = 捕获或查看AutoSupport 日志
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: 使用smcli -autosupportLog命令可以查看AutoSupport 日志文件�
 
 == 支持的阵列
 
-此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E2800或E5700存储阵列。
+此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E4000、E2800或E5700存储阵列。
 
 
 
@@ -38,7 +38,7 @@ summary: 使用smcli -autosupportLog命令可以查看AutoSupport 日志文件�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -autoSupportLog pass:quotes[(all|-n "_storageArrayName_" | -w "_wwID_")]
 pass:quotes[inputArchive=_n_] pass:quotes[outputLog=_filename_]

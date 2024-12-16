@@ -2,13 +2,16 @@
 permalink: get-started/usage-guidelines.html 
 sidebar: sidebar 
 keywords: script command, guidelines 
-summary: 此列表提供了在命令行上写入脚本命令的准则。 
+summary: 编写脚本命令时、请遵循以下准则。 
 ---
 = 脚本命令准则
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+编写脚本命令时、请遵循以下准则。
 
 此列表提供了在命令行上写入脚本命令的准则：
 

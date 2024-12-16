@@ -7,7 +7,7 @@ summary: set event alert命令可通过禁用或启用与特定可更改事件�
 = 设置事件警报筛选
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -55,7 +55,7 @@ set event alert命令行界面命令可用于单个存储阵列。在存储阵�
 
 == 用于阻止事件警报的语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set blockEventAlert pass:quotes[_eventType_]
 ----
@@ -63,7 +63,7 @@ set blockEventAlert pass:quotes[_eventType_]
 
 == 取消阻止事件警报的语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set unBlockEventAlert pass:quotes[_eventType_]
 ----

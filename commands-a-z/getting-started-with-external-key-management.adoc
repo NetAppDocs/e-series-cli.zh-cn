@@ -7,7 +7,7 @@ summary: 安全密钥是一个字符串、在存储阵列中启用了安全保�
 = 外部密钥管理入门
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

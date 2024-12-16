@@ -7,8 +7,11 @@ summary: 警报配置命令
 = 警报配置命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+以下警报配置命令列表适用于您的E系列存储系统。
 
 
 

@@ -7,7 +7,7 @@ summary: 身份验证要求用户使用分配的登录凭据访问系统。每�
 = 身份验证入门
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

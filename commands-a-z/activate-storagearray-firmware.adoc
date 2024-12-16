@@ -7,7 +7,7 @@ summary: activate storageArray firmware命令可激活先前下载到存储阵�
 = 激活存储阵列固件
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: activate storageArray firmware命令可激活先前下载到存储阵�
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 activate storageArray firmware
 [healthCheckMelOverride=(TRUE | FALSE)]

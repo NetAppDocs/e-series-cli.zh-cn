@@ -7,8 +7,11 @@ summary: storage monitor人事命令
 = storage monitor人事命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+以下存储监控人员命令列表适用于您的E系列存储系统。
 
 link:../commands-a-z/show-storagearray-usersession.html["显示存储阵列用户会话"]
 

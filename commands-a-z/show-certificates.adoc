@@ -7,7 +7,7 @@ summary: 使用Show certificates命令可以查看CLI软件包信任存储上安
 = 显示证书
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: 使用Show certificates命令可以查看CLI软件包信任存储上安
 
 == 支持的阵列
 
-此命令用于对EF600存储阵列执行适用场景。
+此命令用于对EF600和EF300存储阵列执行适用场景。
 
 
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 show localCertificate all | alias alias
 ----

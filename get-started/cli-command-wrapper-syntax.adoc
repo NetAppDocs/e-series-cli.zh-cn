@@ -7,10 +7,15 @@ summary: 本节列出了命令行界面命令包装程序的一般语法形式�
 = CLI命令包装器语法
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
+[role="lead"]
 本节列出了命令行界面命令包装程序的一般语法形式。下表列出了CLI命令包装器语法中使用的约定。
+
+
+
+== CLI命令包装程序语法的约定
 
 [cols="2*"]
 |===

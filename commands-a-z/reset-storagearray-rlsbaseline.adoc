@@ -7,7 +7,7 @@ summary: 'reset storageArray RLSbaseline命令可将所有RLS计数设置为0、
 = 重置存储阵列RLS基线
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,19 +17,19 @@ summary: 'reset storageArray RLSbaseline命令可将所有RLS计数设置为0、
 
 == 支持的阵列
 
-此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 reset storageArray RLSBaseline
 ----

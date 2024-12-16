@@ -4,10 +4,10 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, maintenance, window, individual, E2800, E5700, arrays 
 summary: set storageArray autosupportMaintenanceWindow命令用于打开或关闭AutoSupport 维护窗口功能。 
 ---
-= 启用或禁用AutoSupport 维护窗口(对于单个E2800或E5700阵列)
+= 启用或禁用AutoSupport维护窗口
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -19,19 +19,19 @@ summary: set storageArray autosupportMaintenanceWindow命令用于打开或关�
 
 == 支持的阵列
 
-此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+此命令适用于单个E4000、E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
 
 
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 set storageArray autoSupportMaintenanceWindow (enable | disable)
     emailAddresses=("emailAddress1" "emailAddress2" ...)

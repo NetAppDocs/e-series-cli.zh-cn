@@ -7,7 +7,7 @@ summary: set iserTarget命令用于定义iSER目标的属性。
 = 设置iSER目标
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -34,7 +34,7 @@ summary: set iserTarget命令用于定义iSER目标的属性。
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set iserTarget pass:quotes[["_userLabel_"]]
 authenticationMethod=(none | chap) |

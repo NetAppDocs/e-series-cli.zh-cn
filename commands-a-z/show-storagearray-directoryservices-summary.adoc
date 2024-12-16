@@ -7,7 +7,7 @@ summary: show storageArray DirectoryServices summary命令可显示目录服务�
 = 显示存储阵列目录服务摘要
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,21 +17,20 @@ summary: show storageArray DirectoryServices summary命令可显示目录服务�
 
 == 支持的阵列
 
-此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+此命令适用于单个E4000、E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
 
 
 
 == 语法
 
-[listing]
+[source, cli]
 ----
-
 show storageArray directoryServices summary
 ----
 

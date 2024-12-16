@@ -7,7 +7,7 @@ summary: 'create storageArray securityKey命令可为具有全磁盘加密(Full 
 = 创建存储阵列安全密钥
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: 'create storageArray securityKey命令可为具有全磁盘加密(Full 
 
 == 支持的阵列
 
-如果启用了外部密钥管理、则此命令仅适用于E2800、E5700、EF600和EF300阵列。如果启用了内部密钥管理、则只要安装了所有SMcli软件包、命令适用场景 any individual storage array即可。
+如果启用了外部密钥管理、则此命令仅适用于E4000、E2800、E5700、EF600和EF300阵列。如果启用了内部密钥管理、则只要安装了所有SMcli软件包、命令适用场景 any individual storage array即可。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
 
 
 
@@ -37,7 +37,7 @@ summary: 'create storageArray securityKey命令可为具有全磁盘加密(Full 
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create storageArray securityKey
 [keyIdentifier=pass:quotes[_"keyIdentifierString"_]]

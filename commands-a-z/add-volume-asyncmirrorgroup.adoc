@@ -7,7 +7,7 @@ summary: add volume asyncMirrorGroup命令可将主卷添加到异步镜像组�
 = 将卷添加到异步镜像组
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,14 +21,14 @@ summary: add volume asyncMirrorGroup命令可将主卷添加到异步镜像组�
 
 [NOTE]
 ====
-E2800、E5700、EF600和EF300平台不支持此命令。
+E4000、E2800、E5700、EF600和EF300平台不支持此命令。
 
 ====
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+不适用
 
 
 
@@ -40,7 +40,7 @@ E2800、E5700、EF600和EF300平台不支持此命令。
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[add volume="_volumeName_" asyncMirrorGroup="_asyncMirrorGroupName_"
 remotePassword="_password_"

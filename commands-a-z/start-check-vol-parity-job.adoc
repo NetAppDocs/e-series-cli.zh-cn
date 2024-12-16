@@ -7,7 +7,7 @@ summary: 'start check volume parity job"命令可在给定卷上启动新的检�
 = 启动检查卷奇偶校验作业
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ summary: 'start check volume parity job"命令可在给定卷上启动新的检�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 start check volume[<volume_label>] parity job
 (startingLba=<start_lba> endingLba=<end_lba> scanPriority=<scan_priority> repairParityErrors=<true | false>

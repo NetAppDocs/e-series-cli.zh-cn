@@ -25,6 +25,51 @@ summary: 本主题列出了最新版本的SANtricity System Manager命令行界�
 ====
 
 
+== SANtricity 11.90
+
+下表列出了对11.90版的CLI和脚本命令进行的更改。
+
+[cols="2*"]
+|===
+| 命令 | 问题描述 of Change 
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-autosupport-dispatch-limit.html["设置AutoSupport派单大小限制"]
+ a| 
+已添加命令
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/save-controller-arraymanagementcsr.html["保存控制器array管理CSR"]
+ a| 
+已添加 `KeySize`参数。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-email-smtp-delivery-method.html["设置电子邮件(SMTP)传送方法"]
+ a| 
+已添加 `destinationAddress`参数。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/show-storagearray-autosupport.html#examples["显示AutoSupport设置"]
+ a| 
+在命令的示例输出中添加了派单大小限制和目标电子邮件地址。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/download-storagearray-keymanagementcertificate.html["下载存储阵列密钥管理证书"]
+ a| 
+已添加 `privateKeyFile`参数。
+
+|===
+
+
 == SANtricity 11.81
 
 下表列出了对11.81版的CLI和脚本命令进行的更改。
@@ -35,7 +80,7 @@ summary: 本主题列出了最新版本的SANtricity System Manager命令行界�
 
 
  a| 
-xref:./get-started/downloadable-smcli-parameters.adoc#identify-Devices[识别设备]
+https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parameters.html#identify-devices["识别设备"]
  a| 
 已添加 `identifyDevices` 参数。
 

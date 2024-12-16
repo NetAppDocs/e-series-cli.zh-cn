@@ -7,9 +7,10 @@ summary: 重复语法元素是一个常规的参数和选项类别、可在脚�
 = 重复语法元素
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
+[role="lead"]
 重复语法元素是一个常规的参数和选项类别、可在脚本命令中使用。下表列出了重复语法元素中使用的约定。
 
 [cols="2*"]

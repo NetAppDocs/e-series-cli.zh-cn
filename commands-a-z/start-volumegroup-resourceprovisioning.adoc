@@ -7,7 +7,7 @@ summary: 'start VolumeGroup resourceProvisioning命令可对给定卷组启用�
 = 启动卷组资源配置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ summary: 'start VolumeGroup resourceProvisioning命令可对给定卷组启用�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[start volumeGroup[_volumeGroupName_]] resourceProvisioning
 ----

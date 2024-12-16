@@ -7,7 +7,7 @@ summary: reset storageArray hostPortStatissBaseline命令可重置存储阵列�
 = 重置存储阵列主机端口统计信息基线
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: reset storageArray hostPortStatissBaseline命令可重置存储阵列�
 
 == 支持的阵列
 
-此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+此命令适用于单个E4000、E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。
 
 
 
@@ -38,7 +38,7 @@ summary: reset storageArray hostPortStatissBaseline命令可重置存储阵列�
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 
 reset storageArray hostPortStatisticsBaseline type=(ISCSI| ISER | SRP | NVMEOF)

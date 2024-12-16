@@ -7,7 +7,7 @@ summary: smcli alertTest命令会向Windows事件日志和所有已配置的系�
 = 测试警报
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -32,7 +32,7 @@ summary: smcli alertTest命令会向Windows事件日志和所有已配置的系�
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 SMcli -alertTest
 ----

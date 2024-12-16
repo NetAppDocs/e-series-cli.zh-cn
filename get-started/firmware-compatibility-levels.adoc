@@ -2,15 +2,18 @@
 permalink: get-started/firmware-compatibility-levels.html 
 sidebar: sidebar 
 keywords: firmware, compatibility, levels 
-summary: 脚本命令和命令参数不会在所有版本的控制器固件下运行。 
+summary: 以下各节中的脚本命令列出了可运行脚本命令的最低固件级别。 
 ---
 = 固件兼容性级别
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
-脚本命令和命令参数不会在所有版本的控制器固件下运行。以下各节中的脚本命令列出了可运行脚本命令的最低固件级别。在脚本命令中、固件级别列在标题`Minimum Firmware Levels下。` 此列表介绍如何解读有关固件级别的信息。
+[role="lead"]
+以下各节中的脚本命令列出了可运行脚本命令的最低固件级别。
+
+脚本命令和命令参数不会在所有版本的控制器固件下运行。在脚本命令中、固件级别列在标题`Minimum Firmware Levels下。` 此列表介绍如何解读有关固件级别的信息。
 
 * 如果脚本命令未列出最低控制器固件级别、则脚本命令以及与该脚本命令关联的所有参数均可在任何级别的控制器固件下运行。
 * 如果控制器固件编号没有任何解释性信息、则表示控制器固件级别为适用场景 整个脚本命令以及该脚本命令的所有参数。

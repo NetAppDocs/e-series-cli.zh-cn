@@ -7,7 +7,7 @@ summary: 'save check volume parity job"奇偶校验错误"命令可将检查卷�
 = 保存检查卷奇偶校验作业奇偶校验错误
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ summary: 'save check volume parity job"奇偶校验错误"命令可将检查卷�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 save check volume parity job parityErrors jobId=<job_id> parityErrorFile=<parity_error_file>;
 ----

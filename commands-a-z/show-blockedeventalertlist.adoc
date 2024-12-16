@@ -7,7 +7,7 @@ summary: 'show blockedEventAlertList命令可返回当前已被set blockEventAle
 = 显示阻止的事件
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -32,7 +32,7 @@ summary: 'show blockedEventAlertList命令可返回当前已被set blockEventAle
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 show blockedEventAlertList
 ----

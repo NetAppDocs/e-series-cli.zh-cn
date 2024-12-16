@@ -7,7 +7,7 @@ summary: show array label命令可返回有关是否已定义存储阵列标签�
 = 显示阵列标签
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: show array label命令可返回有关是否已定义存储阵列标签�
 
 == 支持的阵列
 
-此命令用于对EF600存储阵列执行适用场景。
+此命令用于对EF600和EF300存储阵列执行适用场景。
 
 
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[show storageArrayLabel label _userDefinedString_]
 show storageArrayLabel all

@@ -7,7 +7,7 @@ summary: set emailAlert命令可将电子邮件配置为向指定的技术支持
 = 配置电子邮件警报设置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,15 +17,14 @@ summary: set emailAlert命令可将电子邮件配置为向指定的技术支持
 
 == 支持的阵列
 
-此命令用于适用场景 E2800、E5700、EF600和EF300存储阵列。但是、对于E2700或E5600阵列、您可以将命令用作smcli命令、而不是脚本命令。在这种情况下、命令适用场景 管理域中的所有阵列。
+此命令适用于E4000、E2800、E5700、EF600和EF300存储阵列。但是、对于E2700或E5600阵列、您可以将命令用作smcli命令、而不是脚本命令。在这种情况下、命令适用场景 管理域中的所有阵列。
 
 
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
-
 set emailAlert
     serverAddress=pass:quotes["_serverAddress_"] |
     serverEncryption=pass:quotes[_none_ | _smtps_ | _starttls_ |]

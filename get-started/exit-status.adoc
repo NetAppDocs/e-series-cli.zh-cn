@@ -2,15 +2,20 @@
 permalink: get-started/exit-status.html 
 sidebar: sidebar 
 keywords: exit, status 
-summary: 此表列出了可能返回的退出状态以及每个状态的含义。 
+summary: 执行的命令将返回退出状态。此表列出了可能返回的退出状态以及每个状态的含义。 
 ---
 = 退出状态
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
-此表列出了可能返回的退出状态以及每个状态的含义。
+[role="lead"]
+执行的命令将返回退出状态。下表列出了可能返回的退出状态以及每个状态的含义。
+
+
+
+== 退出状态定义
 
 [cols="3*"]
 |===

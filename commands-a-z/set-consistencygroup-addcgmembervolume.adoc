@@ -7,7 +7,7 @@ summary: set ConsistencyGroup addCGMemberVolume命令可将新的基础卷作为
 = 将成员添加到一致性组
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: set ConsistencyGroup addCGMemberVolume命令可将新的基础卷作为
 
 == 支持的阵列
 
-此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
@@ -35,7 +35,7 @@ summary: set ConsistencyGroup addCGMemberVolume命令可将新的基础卷作为
 
 == 用于现有存储库卷的语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 set consistencyGroup ["consistencyGroupName"]
@@ -46,7 +46,7 @@ repositoryVolume=pass:quotes["_volumeGroupName_"]
 
 == 在卷组中创建新存储库卷时使用的语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
@@ -57,7 +57,7 @@ repositoryVolume=pass:quotes[("_volumeGroupName_"] capacity=pass:quotes[_capacit
 
 == 在磁盘池中创建新存储库卷时使用的语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 set consistencyGroup pass:quotes[["_consistencyGroupName_"]]

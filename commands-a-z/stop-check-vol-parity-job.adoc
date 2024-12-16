@@ -7,7 +7,7 @@ summary: 停止检查卷奇偶校验作业命令可停止正在进行的检查�
 = 停止检查卷奇偶校验作业
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ summary: 停止检查卷奇偶校验作业命令可停止正在进行的检查�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 stop check volume parity job jobId=<job_id>;
 ----

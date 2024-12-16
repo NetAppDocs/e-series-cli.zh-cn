@@ -2,13 +2,16 @@
 permalink: get-started/structure-of-a-script-command.html 
 sidebar: sidebar 
 keywords: structure, script command 
-summary: 所有脚本命令的结构均如下。 
+summary: 为确保成功执行、必须使用正确的结构编写脚本命令。 
 ---
 = 脚本命令的结构
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+为确保成功执行、必须使用正确的结构编写脚本命令。
 
 所有脚本命令的结构均如下：
 

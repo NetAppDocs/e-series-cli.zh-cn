@@ -7,7 +7,7 @@ summary: smcli -supportbundle schedule命令可创建或删除在一个或多个
 = 计划自动支持包收集配置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -28,7 +28,7 @@ summary: smcli -supportbundle schedule命令可创建或删除在一个或多个
 
 == 创建每日/每周计划的语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -supportBundle schedule enable
 pass:quotes[(all | _storageArrayName_)]
@@ -42,7 +42,7 @@ pass:quotes[data=_pathName_]
 
 == 创建每月/每年计划的语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -supportBundle schedule enable
 pass:quotes[(all | _storageArrayName_)]
@@ -65,7 +65,7 @@ pass:quotes[data=_pathName_]
 此命令将完全删除存储阵列的计划。要重新开始保存支持包信息、您需要创建一个新计划。
 
 ====
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -supportBundle schedule disable
 pass:quotes[(all|_storageArrayName_)]

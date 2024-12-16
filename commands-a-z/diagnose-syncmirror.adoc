@@ -7,7 +7,7 @@ summary: di诊断SyncMirror 命令用于测试已启用同步镜像功能的存�
 = 诊断同步镜像
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: di诊断SyncMirror 命令用于测试已启用同步镜像功能的存�
 
 == 支持的阵列
 
-此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800和E5700阵列、前提是已安装所有SMClu软件包。
 
 
 
 == 角色
 
-要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+要在E4000、E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
@@ -38,7 +38,7 @@ summary: di诊断SyncMirror 命令用于测试已启用同步镜像功能的存�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[diagnose syncMirror (_primary [primaryVolumeName_]] |pass:quotes[primaries ["_primaryVolumeName1_]" ... pass:quotes[_"primaryVolumeNameN"_]])
 testID=connectivity

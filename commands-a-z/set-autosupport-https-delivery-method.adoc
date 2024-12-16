@@ -1,13 +1,13 @@
 ---
-permalink: commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html 
+permalink: commands-a-z/set-autosupport-https-delivery-method.html 
 sidebar: sidebar 
-keywords: 'Specify AutoSupport HTTP(S) delivery method (for individual E2800 or E5700 arrays)' 
+keywords: 'Specify AutoSupport HTTP(S) delivery method' 
 summary: 'set storageArray AutoSupport deliveryMethod命令用于设置将AutoSupport 消息发送到HTTP (S)的传送方法。' 
 ---
-= 指定AutoSupport HTTP (S)交付方法(适用于单个E2800或E5700阵列)
+= 指定AutoSupport HTTP (S)传送方法
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,25 +17,22 @@ summary: 'set storageArray AutoSupport deliveryMethod命令用于设置将AutoSu
 
 == 支持的阵列
 
-此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+此命令适用于单个E4000、E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。
 
 
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
-set storageArray autoSupport deliveryMethod={HTTP | HTTPS}
-   {direct | proxyConfigScript=pass:quotes["_proxyConfigScriptUrl_"] |
-proxyServer hostAddress=pass:quotes[_address_] portNumber=pass:quotes[_portNumber_]
- [userName=pass:quotes["_username_"] password=pass:quotes["_password_"]]}
+set storageArray autoSupport deliveryMethod=email mailRelayServer="mail.example.com" senderEmail="sender@example.com"
 ----
 
 
@@ -52,7 +49,6 @@ proxyServer hostAddress=pass:quotes[_address_] portNumber=pass:quotes[_portNumbe
 允许用户指定AutoSupport 收集的交付方法。有效选项包括：
 
 * email
-* HTTP
 * HTTPS
 
 

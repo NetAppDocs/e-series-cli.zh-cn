@@ -7,7 +7,7 @@ summary: 'create SyncMirror 命令可为同步远程镜像对同时创建主卷�
 = 创建同步镜像
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,14 +21,14 @@ summary: 'create SyncMirror 命令可为同步远程镜像对同时创建主卷�
 
 [NOTE]
 ====
-E2800、E5700、EF600和EF300平台不支持此命令。
+E4000、E2800、E5700、EF600和EF300平台不支持此命令。
 
 ====
 
 
 == 角色
 
-要在E2800或E5700storage阵列上执行此命令、您必须具有存储管理员角色。
+不适用
 
 
 
@@ -43,7 +43,7 @@ E2800、E5700、EF600和EF300平台不支持此命令。
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create syncMirror primary=pass:quotes[_"primaryVolumeName_"
 secondary="_secondaryVolumeName_"

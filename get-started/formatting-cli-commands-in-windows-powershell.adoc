@@ -7,10 +7,13 @@ summary: Windows PowerShell是一个交互式脚本Shell、可用于访问命令
 = Windows PowerShell中CLI命令的格式规则
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
-Windows PowerShell是一个交互式脚本Shell、可用于访问命令行工具。Windows PowerShell在Windows命令提示符处进行了改进、提供了一组更强大的命令和脚本功能。您可以在Windows PowerShell中运行所有命令行界面和脚本命令；但是、Windows PowerShell具有一些独特的格式要求。这些要求如下：
+[role="lead"]
+Windows PowerShell是一个交互式脚本Shell、可用于访问命令行工具。
+
+Windows PowerShell在Windows命令提示符处进行了改进、提供了一组更强大的命令和脚本功能。您可以在Windows PowerShell中运行所有命令行界面和脚本命令；但是、Windows PowerShell具有一些独特的格式要求。这些要求如下：
 
 * 以句点和正斜杠(./)开头的所有SMcli命令
 * 必须将SMcli包装程序标识为扩展名为.exe的可执行命令(smcli.exe)

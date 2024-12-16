@@ -7,7 +7,7 @@ summary: set controller命令用于打开或关闭控制器托盘或控制器驱
 = 设置允许控制器维护操作指示符
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -34,7 +34,7 @@ summary: set controller命令用于打开或关闭控制器托盘或控制器驱
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 set controller [(a| b)]
 serviceAllowedIndicator=(on | off)

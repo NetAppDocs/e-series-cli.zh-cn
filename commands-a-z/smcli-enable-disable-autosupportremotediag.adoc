@@ -7,7 +7,7 @@ summary: smcli enable_disable autosupportRemotediag命令用于打开或关闭Au
 = 在EMW管理域级别启用或禁用AutoSupport 远程诊断功能(仅限SMcli)
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: smcli enable_disable autosupportRemotediag命令用于打开或关闭Au
 
 == 支持的阵列
 
-此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E2800或E5700存储阵列。
+此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E4000、E2800或E5700存储阵列。
 
 
 
@@ -46,7 +46,7 @@ summary: smcli enable_disable autosupportRemotediag命令用于打开或关闭Au
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 SMcli enable|disable autoSupportRemoteDiag
 ----

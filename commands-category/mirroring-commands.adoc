@@ -7,8 +7,11 @@ summary: 镜像命令
 = 镜像命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+以下镜像命令列表适用于E系列存储系统。
 
 
 

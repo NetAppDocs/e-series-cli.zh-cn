@@ -7,7 +7,7 @@ summary: 使用添加阵列标签命令可以使用用户定义的标签向配�
 = 添加阵列标签
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -28,7 +28,7 @@ summary: 使用添加阵列标签命令可以使用用户定义的标签向配�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 pass:quotes[ _Address1 Address2_ add storageArrayLabel label _userDefinedString_]

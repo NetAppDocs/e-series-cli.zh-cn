@@ -7,7 +7,7 @@ summary: 'set diskPool命令可向磁盘池(动态容量扩展或DCE)添加容�
 = 设置磁盘池(修改磁盘池)
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: 'set diskPool命令可向磁盘池(动态容量扩展或DCE)添加容�
 
 == 支持的阵列
 
-此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
@@ -35,7 +35,7 @@ summary: 'set diskPool命令可向磁盘池(动态容量扩展或DCE)添加容�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set diskPool pass:quotes[[_diskPoolName_]]
 (addDrives=pass:quotes[[_trayID1_,_drawerID1_,_slotID1_ ... _trayIDn_,_drawerIDn_,_slotIDn_]] |

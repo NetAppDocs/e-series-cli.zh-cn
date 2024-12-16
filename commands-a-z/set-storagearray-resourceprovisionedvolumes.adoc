@@ -7,7 +7,7 @@ summary: 'set storageArray resourcesProvisionedVolumes命令可禁用DULBE"功�
 = 设置存储阵列资源配置的卷
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ summary: 'set storageArray resourcesProvisionedVolumes命令可禁用DULBE"功�
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 set storageArray resourceProvisionedVolumes=(enable|disable)
 ----

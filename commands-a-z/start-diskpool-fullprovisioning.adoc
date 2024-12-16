@@ -7,7 +7,7 @@ summary: start diskPool fullProvisioning命令可对磁盘池中的所有卷启�
 = 启动磁盘池完全配置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ summary: start diskPool fullProvisioning命令可对磁盘池中的所有卷启�
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 start diskPool[diskPoolName] fullProvisioning [disableResourceProvisioning=(TRUE | FALSE)]
 ----

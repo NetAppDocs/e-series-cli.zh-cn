@@ -7,7 +7,7 @@ summary: set storageArray命令用于定义存储阵列的属性。
 = 设置存储阵列
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: set storageArray命令用于定义存储阵列的属性。
 
 == 支持的阵列
 
-此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
@@ -38,7 +38,7 @@ summary: set storageArray命令用于定义存储阵列的属性。
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 set storageArray
 ([autoLoadBalancingEnable=(TRUE | FALSE)]|
@@ -49,7 +49,6 @@ set storageArray
 [autoSupportRemoteDiag (enable |disable)]|
 [cacheBlockSize=cacheBlockSizeValue]|
 [cacheFlushStart=cacheFlushStartSize]|
-[cacheFlushStop=cacheFlushStopSize]|
 [cacheMirrorDataAssuranceCheckEnable=(TRUE | FALSE)]|
 [controllerHealthImageAllowOverWrite]|
 [defaultHostType=("hostTypeName" |"hostTypeIdentifier")] |
@@ -60,13 +59,13 @@ set storageArray
 [icmpPingResponse=(TRUE | FALSE)]|
 [isnsIPV4ConfigurationMethod isns IPv4 Config Method Parameters]|
 [isnsIPv6Address=ipAddress]|
-[isnsListeningPort=listeningPortIPAddress]]|
+[isnsListeningPort=listeningPortIPAddress]|
 [isnsRegistration=(TRUE | FALSE)]|
 [learnCycleDate learn cycle parameters]|
 [localUsername=local user name parameters]|
 [loginBanner file="path_to_login_banner"]|
 [managementInterface restOnly={true | false}]|
-[mediaScanRate=(disabled | 1-30)]|
+[mediaScanRate=(disabled | 1-210)]|
 [odxEnabled=(TRUE | FALSE)]|
 [password="password"]|
 [passwordLength=<INTEGER>]|
@@ -306,7 +305,7 @@ set storageArray
  a| 
 `mediaScanRate`
  a| 
-运行介质扫描的天数。有效值为`d已标记`、用于关闭介质扫描；或`1`天至`30`天、其中`1`天是最快的扫描速率、`30`天是最慢的扫描速率。除`dis标记`或`1`到`30`以外的值不允许介质扫描正常运行。
+运行介质扫描的天数。有效值为 `disabled`，用于关闭介质扫描，或者 `1`按天到 `210`天，其中 `1`日是最快的扫描速率，日是最慢的扫描速率 `210`。除或 `1`至以外的 `210`值 `disabled`不允许介质扫描正常工作。
 
 
 

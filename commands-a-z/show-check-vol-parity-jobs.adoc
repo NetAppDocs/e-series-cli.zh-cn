@@ -7,7 +7,7 @@ summary: show check volume parity jobs命令可显示所有检查卷奇偶校验
 = 显示检查卷奇偶校验作业
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ summary: show check volume parity jobs命令可显示所有检查卷奇偶校验
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 show check volume parity jobs;
 ----

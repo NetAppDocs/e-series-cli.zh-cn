@@ -7,7 +7,7 @@ summary: show allDrives命令可返回有关存储阵列中驱动器的信息。
 = 显示驱动器
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: show allDrives命令可返回有关存储阵列中驱动器的信息。
 
 == 支持的阵列
 
-此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
@@ -43,7 +43,7 @@ summary: show allDrives命令可返回有关存储阵列中驱动器的信息。
 ** 固件级别
 
 
-* 有关SSD驱动器使用寿命的信息(此信息仅适用于E2800和E5700/EF570、如果阵列不包含SSD驱动器、则不会显示此信息)：
+* 有关SSD驱动器使用寿命的信息(如果阵列不包含SSD驱动器、则不会显示此信息)：
 +
 ** 平均擦除计数。
 ** 剩余的备用块。
@@ -71,7 +71,7 @@ NVMe驱动器的制造日期信息不可用。
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 show ((allDrives
 [driveMediaType=(HDD | SSD | unknown | allMedia)] |

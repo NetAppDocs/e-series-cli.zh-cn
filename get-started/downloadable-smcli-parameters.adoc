@@ -2,19 +2,22 @@
 permalink: get-started/downloadable-smcli-parameters.html 
 sidebar: sidebar 
 keywords: downloadable, smcli, command line, parameters, identify, devices, SAML, multifactor, authentication, https, certificate, array, 
-summary: 'SANtricity OS 11.60版支持直接通过SANtricity 系统管理器下载和安装基于http的命令行界面版本(也称为安全命令行界面或SMcli)。' 
+summary: 'SANtricity OS 11.60及更高版本支持直接通过SANtricity系统管理器下载和安装基于http的命令行界面版本(也称为安全命令行界面或SMCli)。' 
 ---
 = 可下载的SMcli命令行参数
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+SANtricity OS 11.60及更高版本支持直接通过SANtricity系统管理器下载和安装基于http的命令行界面版本(也称为"安全命令行界面"或SMCli)。
 
 
 
 == 11.60及更高版本的可下载SMcli命令行参数
 
-SANtricity OS 11.60版可以直接通过SANtricity 系统管理器下载和安装基于http的命令行界面版本(也称为"Secure CLI"或SMcli)。此可下载版本的SMcli可从EF600、EF300、E5700、EF570、E2800、 和EF280控制器。要在SANtricity 系统管理器中下载SMCLI、请选择*设置*>*系统*和*加载项*>*命令行界面*。
+SMClI的可下载版本可用于E4000、EF600、EF300、E5700、EF570、E2800和EF280控制器。要在SANtricity系统管理器中下载SMCli,请选择*Settings**System*和*Add-ones**Command Line Interface*。
 
 
 NOTE: 要运行命令行界面命令的管理系统必须具有Java Runtime Environment (JRE) 8及更高版本。

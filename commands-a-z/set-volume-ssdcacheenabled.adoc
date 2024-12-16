@@ -7,7 +7,7 @@ summary: set volume ssdCacheTM Enabled命令可使用SSD缓存功能为特定卷
 = 为卷设置SSD缓存
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: set volume ssdCacheTM Enabled命令可使用SSD缓存功能为特定卷
 
 == 支持的阵列
 
-此命令用于适用场景任何单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。
+此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有支持管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有支持管理员角色。
 
 
 
@@ -40,7 +40,7 @@ summary: set volume ssdCacheTM Enabled命令可使用SSD缓存功能为特定卷
 
 == 适用于标准卷的语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set volume (pass:quotes[[_volumeName_]] | <"WWID">) ssdCacheEnabled=(TRUE | FALSE)
 ----
@@ -48,7 +48,7 @@ set volume (pass:quotes[[_volumeName_]] | <"WWID">) ssdCacheEnabled=(TRUE | FALS
 
 == 适用于快照卷的语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set snapVolume pass:quotes[["_snapVolumeName_"]] ssdCacheEnabled=(TRUE | FALSE)
 ----
@@ -56,7 +56,7 @@ set snapVolume pass:quotes[["_snapVolumeName_"]] ssdCacheEnabled=(TRUE | FALSE)
 
 == 适用于一致性组快照卷的语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set cgSnapVolume pass:quotes[["_cgSnapVolumeName_"]] ssdCacheEnabled=(TRUE | FALSE)
 ----

@@ -2,13 +2,18 @@
 permalink: commands-category/e2800-e5700-ef600-and-ef300-commands.html 
 sidebar: sidebar 
 keywords: commands, cache, file, array, certificate, autoconfigure, storage array 
-summary: E2800、E5700、EF600和EF300命令 
+summary: E4000、E2800、E5700、EF600和EF300命令 
 ---
-= E2800、E5700、EF600和EF300命令
+= E4000、E2800、E5700、EF600和EF300命令
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
+
+[role="lead"]
+以下命令列表适用于E4000、E2800、E5700、EF600和EF300系统。
+
+
+
+= E4000、E2800、E5700、EF600和EF300命令
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["激活异步镜像"]
 
@@ -214,11 +219,11 @@ link:../commands-a-z/smcli-enable-autosupportfeature.html["在EMW管理域级别
 
 link:../commands-a-z/enable-or-disable-autosupport-individual-arrays.html["启用或禁用AutoSupport (所有单个阵列)"]
 
-link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["启用或禁用AutoSupport 维护窗口(对于单个E2800或E5700阵列)"]
+link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["启用或禁用AutoSupport维护窗口"]
 
 link:../commands-a-z/smcli-enable-disable-autosupportondemand.html["在EMW...上启用或禁用AutoSupport OnDemand功能"]
 
-link:../commands-a-z/set-storagearray-autosupportondemand.html["启用或禁用AutoSupport OnDemand功能(对于单个E2800或E5700阵列)"]
+link:../commands-a-z/set-storagearray-autosupportondemand.html["启用或禁用AutoSupport OnDemand功能"]
 
 link:../commands-a-z/smcli-enable-disable-autosupportremotediag.html["要启用或禁用AutoSupport 按需远程诊断功能、请访问..."]
 
@@ -306,7 +311,7 @@ link:../commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html["重置�
 
 link:../commands-a-z/smcli-autosupportschedule-reset.html["重置AutoSupport 消息收集计划"]
 
-link:../commands-a-z/reset-storagearray-autosupport-schedule.html["重置AutoSupport 消息收集计划(适用于单个E2800或E5700阵列)"]
+link:../commands-a-z/reset-storagearray-autosupport-schedule.html["重置AutoSupport 消息收集计划"]
 
 link:../commands-a-z/reset-controller.html["重置控制器"]
 
@@ -346,7 +351,7 @@ link:../commands-a-z/resume-ssdcache.html["恢复SSD缓存"]
 
 link:../commands-a-z/resume-syncmirror.html["恢复同步镜像"]
 
-link:../commands-a-z/save-storagearray-autosupport-log.html["检索AutoSupport 日志(对于单个E2800或E5700阵列)"]
+link:../commands-a-z/save-storagearray-autosupport-log.html["检索AutoSupport 日志"]
 
 link:../commands-a-z/save-storagearray-keymanagementcertificate.html["检索已安装的外部密钥管理证书"]
 
@@ -424,7 +429,9 @@ link:../commands-a-z/set-asyncmirrorgroup.html["设置异步镜像组"]
 
 link:../commands-a-z/set-auditlog.html["设置审核日志设置"]
 
-link:../commands-a-z/set-storagearray-autosupport-schedule.html["设置AutoSupport 消息收集计划(适用于单个E2800或E5700阵列)"]
+link:../commands-a-z/set-autosupport-dispatch-limit.html["设置AutoSupport派单大小限制"]
+
+link:../commands-a-z/set-storagearray-autosupport-schedule.html["设置AutoSupport 消息收集计划"]
 
 link:../commands-a-z/set-storagearray-revocationchecksettings.html["设置证书撤消检查设置"]
 
@@ -696,9 +703,9 @@ link:../commands-a-z/smcli-autosupportconfig.html["指定AutoSupport 交付方�
 
 link:../commands-a-z/start-asyncmirrorgroup-synchronize.html["启动异步镜像同步"]
 
-link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["指定电子邮件(SMTP)交付方法(对于单个E2800或E5700阵列)"]
+link:../commands-a-z/set-email-smtp-delivery-method.html["指定电子邮件(SMTP)传送方法"]
 
-link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["指定AutoSupport HTTP (S)交付方法(适用于单个E2800或E5700阵列)"]
+link:../commands-a-z/set-autosupport-https-delivery-method.html["指定AutoSupport HTTP (S)传送方法"]
 
 link:../commands-a-z/start-storagearray-ocspresponderurl-test.html["启动OCSP服务器URL测试"]
 
@@ -812,7 +819,7 @@ link:../commands-a-z/suspend-syncmirror-primaries.html["暂停同步镜像"]
 
 link:../commands-a-z/diagnose-asyncmirrorgroup.html["测试异步镜像组连接"]
 
-link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["测试AutoSupport 传输设置(适用于单个E2800或E5700阵列)"]
+link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["测试AutoSupport 传送设置"]
 
 link:../commands-a-z/start-emailalert-test.html["测试电子邮件警报配置"]
 

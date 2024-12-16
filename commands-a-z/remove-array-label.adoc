@@ -7,7 +7,7 @@ summary: 使用Remove array label命令可以删除存储阵列的用户定义�
 = 删除阵列标签
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: 使用Remove array label命令可以删除存储阵列的用户定义�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 delete storageArrayLabel label pass:quotes[_userDefinedString_]
 delete storageArrayLabel all

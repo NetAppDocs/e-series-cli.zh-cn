@@ -7,7 +7,7 @@ summary: di诊断asyncMirrorGroup命令用于测试本地存储阵列与与异�
 = 测试异步镜像组连接
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,20 +21,20 @@ summary: di诊断asyncMirrorGroup命令用于测试本地存储阵列与与异�
 
 [NOTE]
 ====
-E2800、E5700、EF600和EF300平台不支持此命令。
+E4000、E2800、E5700、EF600和EF300平台不支持此命令。
 
 ====
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+不适用
 
 
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[diagnose asyncMirrorGroup [_asyncMirrorGroupName_]]
 testID=(all | connectivity | latency | bandwidth | portConnections)

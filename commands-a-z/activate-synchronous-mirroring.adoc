@@ -7,7 +7,7 @@ summary: activate storageArray feature命令可激活同步镜像功能并创建
 = 激活同步镜像
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: activate storageArray feature命令可激活同步镜像功能并创建
 
 == 支持的阵列
 
-此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800和E5700阵列、 只要安装了所有SMcli软件包、
+此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800和E5700阵列、前提是已安装所有SMClu软件包。
 
 
 
 == 角色
 
-要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
+要在E4000、E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
@@ -47,7 +47,7 @@ summary: activate storageArray feature命令可激活同步镜像功能并创建
 
 == 语法(用户定义的驱动器)
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 activate storageArray feature=syncMirror
 repositoryRAIDLevel=(0 |1 | 3 | 5 | 6)
@@ -59,7 +59,7 @@ repositoryDrives=pass:quotes[(_trayID1_],pass:quotes[[_drawerID1,_]pass:quotes[_
 [drawerLossProtect=(TRUE | FALSE)]
 [dataAssurance=(none | enabled)]
 ----
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 activate storageArray feature=syncMirror
 repositoryRAIDLevel=(0 |1 | 5 | 6)
@@ -73,7 +73,7 @@ repositoryDrives=pass:quotes[_(trayID1,_]pass:quotes[[_drawerID1_,]]pass:quotes[
 
 == 语法(用户定义的卷组)
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 activate storageArray feature=syncMirror
 repositoryVolumeGroup=pass:quotes[_volumeGroupName_]
@@ -83,7 +83,7 @@ repositoryVolumeGroup=pass:quotes[_volumeGroupName_]
 
 == 语法(用户定义的驱动器数)
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 activate storageArray feature=syncMirror
 repositoryRAIDLevel=(1 | 3 | 5 | 6)
@@ -93,7 +93,7 @@ repositoryDriveCount=pass:quotes[_numberOfDrives_]
 [drawerLossProtect=(TRUE | FALSE)]
 [dataAssurance=(none | enabled)]
 ----
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 activate storageArray feature=syncMirror
 repositoryRAIDLevel=(1 | 5 | 6)

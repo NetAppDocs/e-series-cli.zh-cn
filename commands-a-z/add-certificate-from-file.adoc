@@ -7,7 +7,7 @@ summary: 使用从文件添加证书命令可以从文件中获取证书并将�
 = 从文件添加证书
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: 使用从文件添加证书命令可以从文件中获取证书并将�
 
 == 语法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[trust localCertificate file _filename_ alias user _specified alias_]
 ----

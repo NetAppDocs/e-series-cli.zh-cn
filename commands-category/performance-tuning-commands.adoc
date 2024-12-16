@@ -7,8 +7,11 @@ summary: 性能调整命令
 = 性能调整命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+以下性能调整命令列表适用于您的E系列存储系统。
 
 
 

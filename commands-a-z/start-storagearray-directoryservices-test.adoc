@@ -7,7 +7,7 @@ summary: start storageArray DirectoryServices test命令可检查与所有已配
 = 测试存储阵列目录服务器
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: start storageArray DirectoryServices test命令可检查与所有已配
 
 == 支持的阵列
 
-此命令用于适用场景 单个E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
+此命令适用于单个E4000、E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。
 
 
 
 == 角色
 
-要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。
 
 
 
@@ -35,9 +35,8 @@ summary: start storageArray DirectoryServices test命令可检查与所有已配
 
 == 语法
 
-[listing]
+[source, cli]
 ----
-
 start storageArray directoryServices test
 ----
 

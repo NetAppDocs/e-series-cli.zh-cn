@@ -7,7 +7,7 @@ summary: start VolumeGroup fullProvisioning命令可对磁盘池中的所有卷�
 = 启动卷组完全配置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ summary: start VolumeGroup fullProvisioning命令可对磁盘池中的所有卷�
 
 == 语法
 
-[listing]
+[source, cli]
 ----
 start volumeGroup[volumeGroupName] fullProvisioning [disableResourceProvisioning=(TRUE | FALSE)]
 ----
