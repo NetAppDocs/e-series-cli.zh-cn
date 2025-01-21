@@ -3076,7 +3076,6 @@
   <block id="393e0e962c18bb9902a7b505f4795d88" category="paragraph">用于在System Manager中设置超时、以便在指定时间后断开用户的非活动会话。</block>
   <block id="9cd2c4a736609c872b659ec8f0f81c17" category="paragraph">打开或关闭存储阵列的VMware vStorage API阵列架构(VAAI)</block>
   <block id="d088930721693a65d59f92b69b7a1a65" category="paragraph">除了`isnssRegistration`之外、使用此命令时、您可以指定一个或多个可选参数。</block>
-  <block id="b8a27435b63207164489e175a608261a" category="section-title">Auto Support数据</block>
   <block id="6fbf4b60b0cd4dd67ba1febddba8dee6" category="paragraph">启用后、`set storageArray autosupportConfig`命令会在每次检测到严重重大事件日志(MEL)事件时返回存储阵列的所有配置和状态信息。配置和状态信息以对象图形的形式返回。对象图形包含存储阵列的所有相关逻辑和物理对象及其关联状态信息。</block>
   <block id="7cf3236cfa030bb0624e61dedbe4115c" category="paragraph">`set storageArray autosupportConfig`命令可通过以下方式收集配置和状态信息：</block>
   <block id="f5a46ee44f2a39219ad0cb7b3b8cb232" category="list-text">每72小时自动收集一次配置和状态信息。配置和状态信息将保存到存储阵列zip归档文件中。归档文件具有用于管理归档文件的时间戳。</block>
@@ -6738,7 +6737,6 @@
   <block id="3062f0a6ca05824bc819258606821f49" category="paragraph"><block ref="3062f0a6ca05824bc819258606821f49" category="inline-link-macro-rx"></block></block>
   <block id="baac6899c2f24ea5d0bdd61aea74c4e6" category="section-title">与证书相关的外部密钥管理命令</block>
   <block id="8491937ed3d0194167968b9cad3209d1" category="paragraph"><block ref="8491937ed3d0194167968b9cad3209d1" category="inline-link-macro-rx"></block></block>
-  <block id="7aa544bbf9280961acfdcfa2d71984cb" category="summary">自动支持命令</block>
   <block id="788a0a0737156f6df5e8987a7fb89831" category="section-title">适用于E2700和E5600的AutoSupport 捆绑包收集命令</block>
   <block id="e9d7f9c9ee1489e3f615c622c9279f50" category="paragraph"><block ref="e9d7f9c9ee1489e3f615c622c9279f50" category="inline-link-macro-rx"></block></block>
   <block id="174de654995d2038f77ba29a971d3a08" category="inline-link-macro">要启用或禁用AutoSupport OnDemand远程诊断功能、请访问...</block>
@@ -7555,8 +7553,6 @@
   <block id="59ed469f8c0fb1e7540b9c5e0e274379" category="paragraph"><block ref="59ed469f8c0fb1e7540b9c5e0e274379" category="inline-link-macro-rx"></block></block>
   <block id="ca611b7f5b98899a7abee91397e031fa" category="paragraph">以下警报配置命令列表适用于您的E系列存储系统。</block>
   <block id="478f3d35dcc84bea1a78b7ac21781c63" category="paragraph">以下阵列配置命令列表适用于您的E系列存储系统。</block>
-  <block id="27a16d7fcbdb2e5222cbb08871982f58" category="paragraph">以下是可用于E系列存储系统的auto support命令列表。</block>
-  <block id="3debeae67dbeb507c3cb1a41e3d15efe" category="section-title">适用于E4000、EF300、EF400、E2800和E5700的AutoSupport命令</block>
   <block id="b9aa6488935866e17a533f7cb9907f95" category="paragraph"><block ref="b9aa6488935866e17a533f7cb9907f95" category="inline-link-macro-rx"></block></block>
   <block id="48dd72449a509b862d1dbc2e5df66c1d" category="paragraph"><block ref="48dd72449a509b862d1dbc2e5df66c1d" category="inline-link-macro-rx"></block></block>
   <block id="91791fe8747c000ea0ee9806ad0b2697" category="paragraph">以下是可用于E系列存储系统的命令的完整列表。</block>
@@ -7616,4 +7612,8 @@
   <block id="d8e44ec6283b9e1b03ebe13f2b9bf377" category="sidebar">设置电子邮件SMTP传送方法</block>
   <block id="27ed3c2f0cc271f3ffd55cef1621928d" category="sidebar">SANtricity系统管理器11.9.</block>
   <block id="ece14770330886bc2d41238acbfe48aa" category="sidebar">SANtricity统一管理器7.</block>
+  <block id="d0a774826d0463e72211475dbf19c749" category="section-title">AutoSupport数据</block>
+  <block id="e12f84520db4494b5d41a3376aaf2efe" category="summary">AutoSupport命令</block>
+  <block id="f92f6d9fbe12679709b79badc45794e4" category="paragraph">以下AutoSupport命令列表适用于E系列存储系统。</block>
+  <block id="3668b2be3ec33e7453152c010b5ad26a" category="section-title">适用于E4000、EF300、EF400、E2800和E5700的AutoSupport命令</block>
 </blocks>

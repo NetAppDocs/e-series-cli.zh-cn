@@ -436,7 +436,7 @@ set storageArray
 
 
 
-== Auto Support数据
+== AutoSupport数据
 
 [NOTE]
 ====
