@@ -47,7 +47,7 @@ link:../commands-a-z/save-storagearray-supportdata.html["保存存储阵列支�
 
 
 
-== 适用于E4000、EF300、EF400、E2800和E5700的AutoSupport命令
+== 适用于E4000、EF300、EF600、E2800和E5700的AutoSupport命令
 
 link:../commands-a-z/set-autosupport-dispatch-limit.html["设置AutoSupport派单大小限制"]
 

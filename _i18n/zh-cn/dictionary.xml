@@ -7573,7 +7573,6 @@
   <block id="0c691b598eb5dcf4dbe4aee57abd7fce" category="paragraph">CLI下的详细错误报告工作原理如下：</block>
   <block id="7ab16c582be12bf2ea6a9bcbf26ef849" category="summary">SANtricity OS 11.60及更高版本支持直接通过SANtricity系统管理器下载和安装基于http的命令行界面版本(也称为安全命令行界面或SMCli)。</block>
   <block id="3bcaed463dcace2a5d7df8ac788e2faa" category="paragraph">SANtricity OS 11.60及更高版本支持直接通过SANtricity系统管理器下载和安装基于http的命令行界面版本(也称为"安全命令行界面"或SMCli)。</block>
-  <block id="326cbd85dc5f285361de38f20d31c9df" category="paragraph">SMClI的可下载版本可用于E4000、EF600、EF300、E5700、EF570、E2800和EF280控制器。要在SANtricity系统管理器中下载SMCli,请选择*Settings**System*和*Add-ones**Command Line Interface*。</block>
   <block id="afbe36b824d95e989a52e9001491c721" category="summary">执行的命令将返回退出状态。此表列出了可能返回的退出状态以及每个状态的含义。</block>
   <block id="4e0440694d3b4fa172c69a3cac707e21" category="paragraph">执行的命令将返回退出状态。下表列出了可能返回的退出状态以及每个状态的含义。</block>
   <block id="20b10ae58c66c5b5927a513b2111c0c0" category="section-title">退出状态定义</block>
@@ -7615,5 +7614,6 @@
   <block id="d0a774826d0463e72211475dbf19c749" category="section-title">AutoSupport数据</block>
   <block id="e12f84520db4494b5d41a3376aaf2efe" category="summary">AutoSupport命令</block>
   <block id="f92f6d9fbe12679709b79badc45794e4" category="paragraph">以下AutoSupport命令列表适用于E系列存储系统。</block>
-  <block id="3668b2be3ec33e7453152c010b5ad26a" category="section-title">适用于E4000、EF300、EF400、E2800和E5700的AutoSupport命令</block>
+  <block id="7cfe927cc93acde3fd26ff2626d6a30c" category="section-title">适用于E4000、EF300、EF600、E2800和E5700的AutoSupport命令</block>
+  <block id="4446202efb248928e4f489743b194e56" category="paragraph">SMClI的可下载版本可用于E4000、EF600、EF300、E5700、EF570、E2800、EF280、EF300C和EF600C控制器。要在SANtricity系统管理器中下载SMCli,请选择*Settings**System*和*Add-ones**Command Line Interface*。</block>
 </blocks>

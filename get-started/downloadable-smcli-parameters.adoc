@@ -17,7 +17,7 @@ SANtricity OS 11.60及更高版本支持直接通过SANtricity系统管理器下
 
 == 11.60及更高版本的可下载SMcli命令行参数
 
-SMClI的可下载版本可用于E4000、EF600、EF300、E5700、EF570、E2800和EF280控制器。要在SANtricity系统管理器中下载SMCli,请选择*Settings**System*和*Add-ones**Command Line Interface*。
+SMClI的可下载版本可用于E4000、EF600、EF300、E5700、EF570、E2800、EF280、EF300C和EF600C控制器。要在SANtricity系统管理器中下载SMCli,请选择*Settings**System*和*Add-ones**Command Line Interface*。
 
 
 NOTE: 要运行命令行界面命令的管理系统必须具有Java Runtime Environment (JRE) 8及更高版本。
