@@ -3,7 +3,7 @@ indexpage:
   title: SANtricity System Manager命令
   summary: 介绍SANtricity 命令的语法和用法。
   keywords: santricity, syntax, commands, user assistance
-  lead: 欢迎使用SANtricity系统管理器嵌入式命令行界面用户帮助、您可以在其中了解如何使用命令行界面(CLI)配置、监控和调整存储阵列。"
+  lead: 欢迎使用SANtricity系统管理器嵌入式命令行界面用户帮助、在此可以了解如何使用命令行界面(CLI)配置、监控和调整存储阵列。
   tiles:
   - title: 入门
     links:
