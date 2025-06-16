@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, tray, firmware, file, command, environmental, service, module, array, role, context 
 summary: 'download tray firmware file命令可下载环境服务模块(ESM)固件。' 
 ---
-= 下载环境卡固件
+= 下载环境卡固件 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

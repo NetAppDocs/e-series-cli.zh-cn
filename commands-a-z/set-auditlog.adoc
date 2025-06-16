@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, audit log 
 summary: set audiitLog命令用于配置审核日志设置。 
 ---
-= 设置审核日志设置
+= 设置审核日志设置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

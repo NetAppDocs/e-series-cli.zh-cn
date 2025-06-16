@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, group, export, dependencies 
 summary: show VolumeGroup exportDependences命令可显示卷组中要从一个存储阵列移动到另一个存储阵列的驱动器的依赖关系列表。 
 ---
-= 显示卷组导出依赖关系
+= 显示卷组导出依赖关系 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, snapshot, volume 
 summary: revive snapVolume命令会将指定的快照卷强制设置为最佳状态。 
 ---
-= 恢复快照卷
+= 恢复快照卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, map 
 summary: 'set volume logicalUnitNumber命令用于定义卷与主机或主机组之间的逻辑单元号(LUN)或命名空间ID (NSID)映射。' 
 ---
-= 设置卷映射
+= 设置卷映射 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

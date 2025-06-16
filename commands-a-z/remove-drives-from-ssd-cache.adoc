@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, drives, ssd, cache 
 summary: 'set ssdCache命令可通过删除固态磁盘(SSD)来减少SSD缓存的容量。' 
 ---
-= 从SSD缓存中删除驱动器
+= 从 SSD 缓存中删除驱动器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

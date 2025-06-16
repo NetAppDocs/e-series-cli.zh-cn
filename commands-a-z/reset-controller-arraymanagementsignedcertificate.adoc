@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, installed, signed, certificate 
 summary: reset controller arrayManagementSignedCertificate命令可重置控制器上安装的签名证书和根/中间证书。所有根证书和中间证书以及任何已签名证书都将替换为一个自签名证书。 
 ---
-= 重置已安装的签名证书
+= 重置已安装的签名证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

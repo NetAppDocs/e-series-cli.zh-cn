@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, hostport, command, host, port, identification 
 summary: delete hostPort命令可删除主机端口标识。 
 ---
-= 删除主机端口
+= 删除主机端口 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

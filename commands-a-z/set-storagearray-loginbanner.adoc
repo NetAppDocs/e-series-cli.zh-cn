@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, login, banner 
 summary: 使用set storageArray loginbanner命令可以上传要用作登录横幅的文本文件。横幅文本可以包含建议通知和同意消息、在用户在SANtricity System Manager中建立会话之前或在用户运行命令之前、这些通知和同意消息会提供给用户。 
 ---
-= 设置存储阵列登录横幅
+= 设置存储阵列登录横幅 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

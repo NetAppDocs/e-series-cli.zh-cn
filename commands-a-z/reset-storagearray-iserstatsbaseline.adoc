@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, iser, baseline 
 summary: reset storageArray iserStatsBaseline命令会将存储阵列的iSER基线重置为0。 
 ---
-= 重置存储阵列iSER基线
+= 重置存储阵列 iSER 基线 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

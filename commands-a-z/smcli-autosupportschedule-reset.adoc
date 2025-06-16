@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, autosupport, message, collection, schedule 
 summary: smcli autosupportSchedule reset命令可重置发送AutoSupport 消息的每日和每周时间以及每周日期。您可以接受管理软件生成的默认随机值、也可以使用此命令指定值。 
 ---
-= 重置AutoSupport 消息收集计划
+= 重置 AutoSupport 消息收集计划 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

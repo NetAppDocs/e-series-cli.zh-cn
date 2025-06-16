@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive channel, fault, isolation, diagnostics 
 summary: start driveChannel faultDiagnostics命令运行驱动器通道故障隔离诊断并存储结果。 
 ---
-= 启动驱动器通道故障隔离诊断
+= 启动驱动器通道故障隔离诊断 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

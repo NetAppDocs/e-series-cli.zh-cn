@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, asynchronous, mirror, group 
 summary: remove volume asyncMirrorGroup命令可从现有异步镜像组中删除成员卷。 
 ---
-= 从异步镜像组中删除卷
+= 从异步镜像组中删除卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

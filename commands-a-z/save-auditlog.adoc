@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, audit log, records 
 summary: 保存审核日志命令可检索审核日志记录。 
 ---
-= 保存审核日志记录
+= 保存审计日志记录 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

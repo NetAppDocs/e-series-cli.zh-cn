@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, asynchronous, mirror, groups 
 summary: show asyncMirrorGroup summary命令可显示一个或多个异步镜像组的配置信息。 
 ---
-= 显示异步镜像组
+= 显示异步镜像组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

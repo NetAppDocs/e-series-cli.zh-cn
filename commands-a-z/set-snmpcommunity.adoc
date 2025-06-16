@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmp, community 
 summary: 'set snmpCommunity命令可为现有简单网络管理协议(Simple Network Management Protocol、SNMP)社区创建一个新名称。' 
 ---
-= 更新SNMP社区
+= 更新 SNMP 社区 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

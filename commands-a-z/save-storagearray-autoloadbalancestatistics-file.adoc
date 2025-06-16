@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, auto-load, balance, statistics 
 summary: save storageArray autodelloadBalanceStatistics file命令可自动平衡I/O工作负载、并确保在两个控制器之间动态管理和平衡来自主机的传入I/O流量。 
 ---
-= 保存自动负载平衡统计信息
+= 保存自动负载平衡统计数据 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

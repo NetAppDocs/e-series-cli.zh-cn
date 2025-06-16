@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, disk pool 
 summary: create diskPool命令会根据指定参数创建新的磁盘池。 
 ---
-= 创建磁盘池
+= 创建磁盘池 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, channel, locate 
 summary: stop driveChannel locate命令用于关闭由start driveChannel locate命令打开的驱动器托盘上的指示灯。 
 ---
-= 停止驱动器通道定位
+= 停止驱动器通道定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

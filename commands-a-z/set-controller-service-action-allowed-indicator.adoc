@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller, service, action, allowed, indicator 
 summary: set controller命令用于打开或关闭控制器托盘或控制器驱动器托盘中的控制器上的允许服务操作指示灯 
 ---
-= 设置允许控制器维护操作指示符
+= 设置控制器服务操作允许指示器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

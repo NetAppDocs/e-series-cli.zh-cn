@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, syslog, command, servers, configuration, alerts, array, support, role 
 summary: delete syslog命令可从系统日志配置中删除一个或多个服务器、以使其不再接收警报。 
 ---
-= 删除系统日志服务器
+= 删除系统日志服务器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

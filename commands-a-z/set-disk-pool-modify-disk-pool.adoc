@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, disk pool, modify 
 summary: 'set diskPool命令可向磁盘池(动态容量扩展或DCE)添加容量或更改整个磁盘池的控制器所有权。' 
 ---
-= 设置磁盘池(修改磁盘池)
+= 设置磁盘池（修改磁盘池）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

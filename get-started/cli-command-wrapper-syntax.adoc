@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cli, command, wrapper, syntax 
 summary: 本节列出了命令行界面命令包装程序的一般语法形式。 
 ---
-= CLI命令包装器语法
+= 了解 SANtricity CLI 命令包装器语法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

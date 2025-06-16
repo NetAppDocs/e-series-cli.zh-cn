@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snapimage, command, snapshot, images, group, support, array, roles 
 summary: delete SnapImage命令可从快照组中删除一个或多个快照映像。 
 ---
-= 删除快照映像
+= 删除快照映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

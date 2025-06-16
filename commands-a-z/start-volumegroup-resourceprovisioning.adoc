@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, resource, provision 
 summary: 'start VolumeGroup resourceProvisioning命令可对给定卷组启用资源配置、并对卷组中的每个卷启动资源配置启用异步操作。资源配置要求卷组中的所有驱动器都支持NVMe的DULBE"功能。' 
 ---
-= 启动卷组资源配置
+= 启动卷组资源配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

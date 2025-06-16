@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: generate, key, management, certificate, sign, request, csr 
 summary: save storageArray keyManagementClientCSR命令会请求为存储阵列生成一个CSR、您可以将其保存到文件中。 
 ---
-= 生成密钥管理证书签名请求(CSR)
+= 生成密钥管理证书签名请求 (CSR) - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

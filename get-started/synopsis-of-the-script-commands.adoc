@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: synopsis, script commands 
 summary: '由于您可以使用脚本命令定义和管理存储阵列的不同方面(例如主机拓扑、驱动器配置、控制器配置、卷定义和卷组定义)、因此实际命令数量非常庞大。' 
 ---
-= 脚本命令摘要
+= 了解 SANtricity CLI 脚本命令
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, icmp, response 
 summary: set storageArray icmpPingResponse命令将返回会话和连接的可协商设置的默认值、这些值表示存储阵列协商的起点。 
 ---
-= 设置存储阵列ICMP响应
+= 设置存储阵列 ICMP 响应 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

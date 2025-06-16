@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: rename, ssd, cache 
 summary: set ssdCache命令可更改SSD缓存的名称。 
 ---
-= 重命名SSD缓存
+= 重命名 SSD 缓存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

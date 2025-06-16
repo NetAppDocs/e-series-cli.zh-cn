@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, trusted, certificate, command, remove, specified, installed, web, servers 
 summary: delete storageArray trustedCertificate命令可从阵列的Web服务器中删除指定用户安装的CA证书。 
 ---
-= 删除已安装的可信CA证书
+= 删除已安装的受信任 CA 证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

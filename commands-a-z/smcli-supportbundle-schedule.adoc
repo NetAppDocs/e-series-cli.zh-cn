@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: schedule, automatic, support, bundle, collection, configuration 
 summary: smcli -supportbundle schedule命令可创建或删除在一个或多个存储阵列上保存支持包的计划。您可以在支持包中收集系统和配置信息、以便将这些信息传输给技术支持以进行分析和诊断。 
 ---
-= 计划自动支持包收集配置
+= 安排自动支持包收集配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, volume, parity 
 summary: check volume parity命令会检查卷的奇偶校验和介质错误、然后将检查结果写入文件。 
 ---
-= 检查卷奇偶校验
+= 检查卷奇偶校验 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, ssd, cache, performance, model 
 summary: stop ssdCache performanceModeling命令可停止性能建模操作并显示SSD缓存的性能建模数据。 
 ---
-= 停止SSD缓存性能建模
+= 停止 SSD 缓存性能建模 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

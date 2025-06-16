@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, tray, configuration, settings, commands, factory, default, drive, array, specific, storage, roles, support 
 summary: download tray configurationsettings命令可将出厂默认设置下载到存储阵列中的所有驱动器托盘或存储阵列中的特定驱动器托盘。 
 ---
-= 下载托盘配置设置
+= 下载托盘配置设置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, time 
 summary: set storageArray time命令可通过将控制器时钟与运行此命令的主机的时钟同步来设置存储阵列中两个控制器上的时钟。 
 ---
-= 设置存储阵列时间
+= 设置存储阵列时间 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

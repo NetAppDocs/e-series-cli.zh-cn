@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, volume, group 
 summary: revive VolumeGroup命令会将指定卷组及其关联的故障驱动器强制设置为最佳状态。 
 ---
-= 恢复卷组
+= 恢复卷组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, asynchronous, mirror, group 
 summary: create asyncMirrorGroup命令可在本地存储阵列和远程存储阵列上创建一个新的空异步镜像组。 
 ---
-= 创建异步镜像组
+= 创建异步镜像组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

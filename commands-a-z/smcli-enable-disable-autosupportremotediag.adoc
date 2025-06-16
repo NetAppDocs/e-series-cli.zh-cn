@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, remote, diagnostics, feature, emw, management, domain, level, smcli 
 summary: smcli enable_disable autosupportRemotediag命令用于打开或关闭AutoSupport 远程诊断功能。通过此功能、技术支持可以请求支持数据以远程诊断问题。 
 ---
-= 在EMW管理域级别启用或禁用AutoSupport 远程诊断功能(仅限SMcli)
+= 在 EMW 管理域级别启用或禁用 AutoSupport 远程诊断功能（仅限 SMcli）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

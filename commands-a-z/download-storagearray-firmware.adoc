@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, storage, array, firmware, command, downloads, optionally, values, controllers, role, context, parameter 
 summary: 'download storageArray firmware命令可下载存储阵列控制器的固件以及NVSRAM值(可选)。' 
 ---
-= 下载存储阵列固件/NVSRAM
+= 下载存储阵列固件/NVSRAM - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

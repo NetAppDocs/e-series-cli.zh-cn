@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: activate, storage array, firmware, syntax, parameter, minimum, level 
 summary: activate storageArray firmware命令可激活先前下载到存储阵列中控制器上待定配置区域的固件。 
 ---
-= 激活存储阵列固件
+= 激活存储阵列固件 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

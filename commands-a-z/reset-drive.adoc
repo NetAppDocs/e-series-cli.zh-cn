@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, drive 
 summary: reset drive命令会对卷组或磁盘池中的驱动器重新加电、以帮助恢复行为不一致或不最佳的驱动器。 
 ---
-= 重置驱动器
+= 重置驱动器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

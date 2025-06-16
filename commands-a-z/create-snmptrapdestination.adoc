@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, snmp, trap, destination 
 summary: 'create snmpTrapDestination命令将创建一个新的简单网络管理协议(Simple Network Management Protocol、SNMP)陷阱目标。陷阱目标是用于接收陷阱消息的SNMP管理器。' 
 ---
-= 注册SNMP陷阱目标
+= 注册 SNMP 陷阱目标 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

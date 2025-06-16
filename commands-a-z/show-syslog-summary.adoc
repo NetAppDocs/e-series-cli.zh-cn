@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, syslog, configuration 
 summary: show syslog summary命令可显示系统日志警报配置信息。 
 ---
-= 显示系统日志配置
+= 显示系统日志配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

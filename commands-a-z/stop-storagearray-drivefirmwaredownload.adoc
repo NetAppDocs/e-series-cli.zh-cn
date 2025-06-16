@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, drive, firmware, download 
 summary: stop storageArray driveFirmwareDownload命令可停止将固件下载到存储阵列中的驱动器、该下载是使用download storageArray driveFirmware命令启动的。 
 ---
-= 停止存储阵列驱动器固件下载
+= 停止存储阵列驱动器固件下载 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

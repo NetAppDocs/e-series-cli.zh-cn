@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, email, alert, set 
 summary: set emailAlert命令可将电子邮件配置为向指定的技术支持或组织发送电子邮件。电子邮件警报包含事件摘要、有关受影响存储的详细信息以及客户联系信息。 
 ---
-= 配置电子邮件警报设置
+= 配置电子邮件警报设置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

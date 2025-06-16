@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, group 
 summary: set VolumeGroup命令用于定义卷组的属性。 
 ---
-= 设置卷组
+= 设置卷组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

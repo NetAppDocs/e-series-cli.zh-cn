@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: increase, capacity, volume, disk pool, volume, group 
 summary: start increaseVolumeCapacity volume命令可增加磁盘池或卷组中标准卷或存储库卷的容量。 
 ---
-= 增加磁盘池或卷组中卷的容量
+= 增加磁盘池或卷组中卷的容量 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: script command, guidelines 
 summary: 编写脚本命令时、请遵循以下准则。 
 ---
-= 脚本命令准则
+= 了解 SANtricity CLI 脚本命令指南
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

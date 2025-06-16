@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: authentication, users, access, system, assign, login credentials, associated, profile, include, specific, role, access, permissions, start 
 summary: 身份验证要求用户使用分配的登录凭据访问系统。每个用户登录都与一个用户配置文件相关联、该配置文件包含特定角色和访问权限。 
 ---
-= 身份验证入门
+= 身份验证入门 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

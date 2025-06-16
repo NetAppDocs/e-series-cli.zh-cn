@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, syslog, configuration 
 summary: clear syslog configuration命令可清除系统日志警报信息。 
 ---
-= 清除系统日志配置
+= 清除系统日志配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

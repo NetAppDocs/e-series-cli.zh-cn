@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, initiator 
 summary: set initiator命令用于更新启动程序对象。 
 ---
-= 设置启动程序
+= 设置启动器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

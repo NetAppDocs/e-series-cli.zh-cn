@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, firmware, inventory 
 summary: save storageArray firmwareInventory命令可将报告保存到存储阵列上当前运行的所有固件的文件中。 
 ---
-= 保存存储阵列固件清单
+= 保存存储阵列固件清单 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

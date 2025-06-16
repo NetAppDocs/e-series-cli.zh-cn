@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, drive channel, statistics 
 summary: show driveChannel stats命令可显示驱动器通道的累积数据传输以及错误信息。 
 ---
-= 显示驱动器通道统计信息
+= 显示驱动器通道统计信息 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

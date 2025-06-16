@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, group, media, scan 
 summary: set snapGroup mediaScan Enabled命令可对快照组运行介质扫描。 
 ---
-= 设置Snapshot组介质扫描
+= 设置快照组介质扫描 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

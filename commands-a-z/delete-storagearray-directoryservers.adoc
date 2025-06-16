@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, directory, servers, command, allow, directory, role 
 summary: 使用delete storageArray directoryServers命令可以删除一个或多个目录服务器。 
 ---
-= 删除存储阵列目录服务器
+= 删除存储阵列目录服务器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

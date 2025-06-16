@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: structure, script command 
 summary: 为确保成功执行、必须使用正确的结构编写脚本命令。 
 ---
-= 脚本命令的结构
+= 了解 SANtricity CLI 脚本命令的结构
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

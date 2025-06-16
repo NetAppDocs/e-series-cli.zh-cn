@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, action, progress 
 summary: show volume actionPro出口 命令可返回有关卷操作的信息、以及在卷上执行长时间运行的操作所完成的长时间运行操作的数量。 
 ---
-= 显示卷操作进度
+= 显示卷操作进度 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

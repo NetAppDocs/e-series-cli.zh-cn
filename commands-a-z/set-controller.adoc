@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller 
 summary: set controller命令用于定义控制器的属性。 
 ---
-= 设置控制器
+= 设置控制器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

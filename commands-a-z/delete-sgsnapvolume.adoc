@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delte, snapvolume, command, snapshot, consistency, group, optionally, repository, members 
 summary: delete sgSnapVolume命令可删除一致性组的快照卷。您也可以选择删除存储库成员。 
 ---
-= 删除一致性组快照卷
+= 删除一致性组快照卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

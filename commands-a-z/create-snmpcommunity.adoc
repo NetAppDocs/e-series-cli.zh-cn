@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, snmp, community 
 summary: 'create snmpCommunity命令可创建一个新的简单网络管理协议(Simple Network Management Protocol、SNMP)社区和社区名称字符串、并将新社区注册为SNMP代理的已知实体。如果尝试注册的新社区与现有社区名称相同、则此尝试将被拒绝、并且固件将返回错误消息。' 
 ---
-= 注册SNMP社区
+= 注册 SNMP 社区 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, internal, storage, array, security key 
 summary: set storageArray securityKey命令用于设置整个存储阵列用于实施驱动器安全功能的安全密钥。 
 ---
-= 设置内部存储阵列安全密钥
+= 设置内部存储阵列安全密钥 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, unconfigured, initiators 
 summary: show storageArray unconfiguredInitiators命令可返回存储阵列检测到但尚未配置到存储阵列拓扑中的启动程序列表。 
 ---
-= 显示未配置的启动程序
+= 显示未配置的启动器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, certificate, revocation, check, set 
 summary: '使用set storageArray revocationCheckSettings命令可以启用或禁用撤消检查、并配置联机证书状态协议(Online Certificate Status Protocol、OCSP)服务器。' 
 ---
-= 设置证书撤消检查设置
+= 设置证书吊销检查设置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

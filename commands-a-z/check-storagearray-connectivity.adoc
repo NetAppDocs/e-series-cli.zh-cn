@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, storage array, connectivity 
 summary: check storageArray connectivity命令可验证本地存储阵列和远程存储阵列是否具有通信路径、并显示本地和远程存储阵列之间的连接详细信息。 
 ---
-= 检查存储阵列连接
+= 检查存储阵列连接 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

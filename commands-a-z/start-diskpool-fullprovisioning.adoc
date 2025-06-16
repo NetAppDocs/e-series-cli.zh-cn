@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, disk pool, full, provision 
 summary: start diskPool fullProvisioning命令可对磁盘池中的所有卷启动完全配置操作、并可选择禁用磁盘池上的资源配置。 
 ---
-= 启动磁盘池完全配置
+= 启动磁盘池完整配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

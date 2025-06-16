@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, server, refresh 
 summary: set storageArray isnssServerRefresh命令可刷新iSNS服务器的网络地址信息。 
 ---
-= 设置存储阵列iSNS服务器刷新
+= 设置存储阵列 iSNS 服务器刷新 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

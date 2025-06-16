@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, group 
 summary: 在输入一组未分配的驱动器时、create VolumeGroup命令会创建一个可用容量卷组或一个包含一个卷的卷组。 
 ---
-= 创建卷组
+= 创建卷组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

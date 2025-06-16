@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, copy 
 summary: set volumeCopy target命令用于定义卷副本对的属性。 
 ---
-= 设置卷副本
+= 设置卷副本 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

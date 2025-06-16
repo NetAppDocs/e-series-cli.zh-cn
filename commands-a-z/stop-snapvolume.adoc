@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, snapshot, volume 
 summary: stop snapVolume命令可停止快照卷操作。 
 ---
-= 停止Snapshot卷
+= 停止快照卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

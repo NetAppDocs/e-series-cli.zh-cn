@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, audit, log, summary 
 summary: show audiitLog summary命令可显示审核日志摘要信息。 
 ---
-= 显示审核日志摘要
+= 显示审核日志摘要 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

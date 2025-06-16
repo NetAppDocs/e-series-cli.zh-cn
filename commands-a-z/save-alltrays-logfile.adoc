@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, tray log 
 summary: save all托 盘logfile命令可将日志感知数据保存到文件中。 
 ---
-= 保存托盘日志
+= 保存托盘日志 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

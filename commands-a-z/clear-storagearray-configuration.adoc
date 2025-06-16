@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, configuration 
 summary: clear storageArray configuration命令可清除整个存储阵列配置或部分存储阵列配置、或者仅清除卷组和卷配置。 
 ---
-= 清除存储阵列配置
+= 清除存储阵列配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

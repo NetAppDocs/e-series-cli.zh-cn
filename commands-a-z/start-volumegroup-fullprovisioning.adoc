@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, full provision 
 summary: start VolumeGroup fullProvisioning命令可对磁盘池中的所有卷启动完全配置操作、并可选择禁用卷组上的资源配置。 
 ---
-= 启动卷组完全配置
+= 启动卷组完全配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

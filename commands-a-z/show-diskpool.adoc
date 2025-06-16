@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, disk pool 
 summary: show diskPool命令可返回有关磁盘池的信息。 
 ---
-= 显示磁盘池
+= 显示磁盘池 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

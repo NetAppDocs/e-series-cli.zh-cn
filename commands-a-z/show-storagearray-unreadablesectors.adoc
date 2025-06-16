@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, unreadable, sectors 
 summary: show storageArray unreadableSectors命令可返回一个表、其中列出了存储阵列中无法读取的所有扇区的地址。 
 ---
-= 显示存储阵列无法读取的扇区
+= 显示存储阵列不可读扇区 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

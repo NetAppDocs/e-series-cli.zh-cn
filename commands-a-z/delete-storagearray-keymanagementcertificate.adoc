@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, key, management, certificate, command, remove, install, external 
 summary: delete storageArray keyManagementCertificate命令可从存储阵列中删除已安装的外部密钥管理证书。 
 ---
-= 删除已安装的外部密钥管理证书
+= 删除已安装的外部密钥管理证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

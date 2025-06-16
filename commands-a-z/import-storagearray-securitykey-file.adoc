@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import, storage, array, security, file, command, unlock, disk, encryption, context, syntax, firmware level, role, context 
 summary: 'import storageArray securityKey file命令可解锁已从一个存储阵列移至另一个存储阵列的一个或多个全磁盘加密(Full Disk Encryption、FDE)驱动器。' 
 ---
-= 导入存储阵列安全密钥
+= 导入存储阵列安全密钥 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

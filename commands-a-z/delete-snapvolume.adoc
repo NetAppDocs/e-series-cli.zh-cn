@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snapvolume, command, snapshot, volume, optionally, associate, repository, members 
 summary: delete snapVolume命令可删除快照卷以及关联的快照存储库成员。 
 ---
-= 删除Snapshot卷
+= 删除快照卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

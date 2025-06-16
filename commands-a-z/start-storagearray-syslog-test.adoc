@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, syslog, test 
 summary: 使用start storageArray syslog test命令可以测试存储阵列与系统日志服务器之间的通信。 
 ---
-= 启动存储阵列系统日志测试
+= 启动存储阵列系统日志测试 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

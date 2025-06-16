@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, thin, volume 
 summary: show volume命令可返回指定精简卷的扩展历史记录或已用容量。 
 ---
-= 显示精简卷
+= 显示精简卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller, ntp 
 summary: 'set controller NTPServers命令用于设置控制器的NTP设置、以便控制器可以使用SNTP (简单网络时间协议)自动将时钟与外部主机同步。' 
 ---
-= 设置控制器NTP设置
+= 设置控制器 NTP 设置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

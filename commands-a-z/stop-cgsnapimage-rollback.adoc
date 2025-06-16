@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, consistency, group, snapshot, rollback 
 summary: stop cgSnapImage rollback命令用于停止对快照一致性组中的基础卷进行回滚操作。 
 ---
-= 停止一致性组快照回滚
+= 停止一致性组快照回滚 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

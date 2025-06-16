@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: capture, view, autosupport, log 
 summary: 使用smcli -autosupportLog命令可以查看AutoSupport 日志文件。此文件提供有关状态、传输活动历史记录以及在传送AutoSupport 消息期间遇到的任何错误的信息。此日志可用于所有支持AutoSupport和支持AutoSupport的存储阵列。 
 ---
-= 捕获或查看AutoSupport 日志
+= 捕获或查看 AutoSupport 日志 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

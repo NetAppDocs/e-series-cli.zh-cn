@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, rls, baseline 
 summary: 'reset storageArray RLSbaseline命令可将所有RLS计数设置为0、从而重置所有设备的读取链路状态(RLS)基线。' 
 ---
-= 重置存储阵列RLS基线
+= 重置存储阵列 RLS 基线 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

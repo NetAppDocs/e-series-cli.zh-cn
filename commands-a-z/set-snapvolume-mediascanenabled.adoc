@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, volume, media, scan 
 summary: set snapVolume mediaScan Enabled命令可对用于快照卷的驱动器运行介质扫描。 
 ---
-= 设置Snapshot卷介质扫描
+= 设置快照卷介质扫描 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

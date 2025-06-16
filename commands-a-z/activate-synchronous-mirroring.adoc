@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: activate, synchronous mirroring, supported arrays, roles, context, syntax, parameters, data assurance management, minimum firmware level 
 summary: activate storageArray feature命令可激活同步镜像功能并创建镜像存储库卷。 
 ---
-= 激活同步镜像
+= 激活同步镜像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

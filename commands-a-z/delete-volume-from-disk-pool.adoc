@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, command, normal, thin, disk pool, roles, support 
 summary: delete volume命令可从磁盘池中删除普通卷或精简卷。 
 ---
-= 从磁盘池中删除卷
+= 从磁盘池中删除卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

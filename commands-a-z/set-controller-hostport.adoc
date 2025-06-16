@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller, host, port, properties 
 summary: set controller hostPort命令可更改以下类型主机端口的网络属性：iSCSI、iSER、基于InfiniBand的NVMe和基于RoCE的NVMe。属性更改包括IPv4和IPv6属性、端口速度和最大帧有效负载。 
 ---
-= 设置控制器主机端口属性
+= 设置控制器主机端口属性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

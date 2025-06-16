@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, ssd, cache, locate 
 summary: 'stop ssdCache locate命令可关闭由start ssdCache locate命令打开的固态磁盘(SSD)上的指示灯。' 
 ---
-= 停止SSD缓存定位
+= 停止 SSD 缓存定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

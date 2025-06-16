@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, iscsi, ip address 
 summary: reset iscsiIpAddress命令可重置远程存储阵列的IP地址、以便重新与本地存储阵列建立连接。 
 ---
-= 重置iSCSI IP地址
+= 重置 iSCSI IP 地址 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: volume, group, migration, learn, data, access, export, import, component 
 summary: 通过卷组迁移、您可以导出卷组、以便将卷组导入到其他存储阵列。您还可以导出卷组、以便脱机存储数据。 
 ---
-= 了解卷组迁移
+= 了解 SANtricity 软件中的卷组迁移
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

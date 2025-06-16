@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, snapshot, images, consistency, group 
 summary: stop ConsistencyGroup pendingSnapImageCreation命令可停止要在快照一致性组上创建的所有待定快照映像。 
 ---
-= 停止一致性组上的待定快照映像
+= 停止一致性组上的待处理快照映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

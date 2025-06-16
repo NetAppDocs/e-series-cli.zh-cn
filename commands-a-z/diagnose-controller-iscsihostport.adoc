@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, controller, hostport, command, diagnostic, tests, copper, cable, host, interface, cards, support, roles 
 summary: diag controller iscsiHostPort命令可对iSCSI主机接口卡和控制器之间的铜缆运行诊断测试。 
 ---
-= 诊断控制器iSCSI主机缆线
+= 诊断控制器 iSCSI 主机电缆 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: load, storage array, database, command, management 
 summary: 'load storageArray dbmDatabase命令可通过从文件或缓存中检索数据库管理(DBM)数据库映像。' 
 ---
-= 加载存储阵列DBM数据库
+= 加载存储阵列 DBM 数据库 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, server, listen, port 
 summary: set storageArray isnssListeningPort命令用于设置iSNS服务器侦听端口。 
 ---
-= 设置存储阵列iSNS服务器侦听端口
+= 设置存储阵列 iSNS 服务器侦听端口 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

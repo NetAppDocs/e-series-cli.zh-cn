@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, repository, consistency 
 summary: check repositoryConsistency命令可根据对指定对象底层存储库卷中数据的分析生成报告。 
 ---
-= 检查存储库一致性
+= 检查存储库一致性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

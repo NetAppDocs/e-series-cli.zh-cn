@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, configuration, database, diagnostic 
 summary: stop storageArray configDbDiagnostic命令用于停止诊断测试、以验证由start storageArray configDbDiagnostic命令启动的控制器固件中的配置数据库。 
 ---
-= 停止存储阵列配置数据库诊断
+= 停止存储阵列配置数据库诊断 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

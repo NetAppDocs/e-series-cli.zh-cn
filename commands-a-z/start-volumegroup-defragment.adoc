@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, defragment 
 summary: start VolumeGroup defragment命令可对指定的卷组启动碎片整理操作。 
 ---
-= 启动卷组碎片整理
+= 启动卷组碎片整理 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

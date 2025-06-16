@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, snapshot, image, rollback 
 summary: stop SnapImage rollback命令可停止由start SnapImage rollback命令启动的快照映像回滚操作。 
 ---
-= 停止快照映像回滚
+= 停止快照映像回滚 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, event log 
 summary: clear storageArray EventLog命令可通过删除事件日志缓冲区中的数据来清除存储阵列中的事件日志。 
 ---
-= 清除存储阵列事件日志
+= 清除存储阵列事件日志 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

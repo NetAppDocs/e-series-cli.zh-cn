@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, consistency, group, snapshot, rollback 
 summary: start cgSnapImage rollback命令可对快照一致性组中的成员基础卷启动回滚操作。 
 ---
-= 启动一致性组快照回滚
+= 启动一致性组快照回滚 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

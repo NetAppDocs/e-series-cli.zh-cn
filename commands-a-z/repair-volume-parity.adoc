@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: repair, volume, parity 
 summary: repair volume parity命令可修复卷上的奇偶校验错误。 
 ---
-= 修复卷奇偶校验
+= 修复卷奇偶校验 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

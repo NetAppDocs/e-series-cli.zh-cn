@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, storagearray, down, values, controller, support, role, command, array 
 summary: download storageArray NVSRAM命令可下载存储阵列控制器的NVSRAM值。 
 ---
-= 下载存储阵列NVSRAM
+= 下载存储阵列 NVSRAM - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

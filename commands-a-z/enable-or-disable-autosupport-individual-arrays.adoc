@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, enable, disable, autosupport, feature, storage, array, possible, transit, messages, technical, support, site, capable, automatically, prepare, collect, data, remote, troubleshooting, problem, analysis 
 summary: '此命令可为存储阵列启用或禁用AutoSupport (ASUP)功能、并可将消息传输到技术支持站点。启用ASUP功能后、支持ASUP的存储阵列将自动准备好收集支持相关数据并将其发送给技术支持。然后、可以使用这些数据进行远程故障排除和问题分析。' 
 ---
-= 启用或禁用AutoSupport (所有单个阵列)
+= 启用或禁用 AutoSupport（所有单个阵列）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

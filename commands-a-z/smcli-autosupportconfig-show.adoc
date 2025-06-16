@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, autosupport, bundle, collection, set 
 summary: smcli -autosupportConfig show命令可显示管理域的AutoSupport 捆绑包收集设置。这些设置适用于管理域中已启用AutoSupport 的所有存储阵列。 
 ---
-= 显示AutoSupport 捆绑包收集设置
+= 显示 AutoSupport 捆绑包收集设置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

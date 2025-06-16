@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, snapshot, volume 
 summary: resume snapVolume命令可恢复已停止的快照卷操作。 
 ---
-= 恢复快照卷
+= 恢复快照卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

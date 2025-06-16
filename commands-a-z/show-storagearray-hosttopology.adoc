@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, host, topology 
 summary: show storageArray hostTopology命令可返回存储分区拓扑、主机类型标签以及主机存储阵列的主机类型索引。 
 ---
-= 显示存储阵列主机拓扑
+= 显示存储阵列主机拓扑 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

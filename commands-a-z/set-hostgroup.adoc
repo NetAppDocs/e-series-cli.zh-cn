@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host, group 
 summary: set hostGroup命令可重命名主机组。 
 ---
-= 设置主机组
+= 设置主机组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

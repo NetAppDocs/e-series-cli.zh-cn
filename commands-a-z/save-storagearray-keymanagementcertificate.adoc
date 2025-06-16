@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, external, key management, certificate 
 summary: save storageArray keyManagementCertificate命令可检索已安装的证书。 
 ---
-= 检索已安装的外部密钥管理证书
+= 检索已安装的外部密钥管理证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

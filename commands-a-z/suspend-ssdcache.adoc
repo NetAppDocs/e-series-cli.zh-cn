@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: suspend, ssd cache 
 summary: suspend ssdCache命令会暂时停止对使用SSD缓存的所有卷的缓存。 
 ---
-= 暂停SSD缓存
+= 暂停 SSD 缓存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

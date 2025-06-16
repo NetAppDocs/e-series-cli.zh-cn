@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, group, command, entire, associated, support, role 
 summary: delete VolumeGroup命令可删除整个卷组及其关联的卷。 
 ---
-= 删除卷组
+= 删除卷组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

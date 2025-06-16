@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, controller, health, image 
 summary: 'show storageArray controllerHealthImage命令可显示控制器缓存上控制器运行状况映像的详细信息(如果有控制器运行状况映像)、以及支持控制器运行状况映像的存储阵列上的控制器运行状况映像。' 
 ---
-= 显示存储阵列控制器运行状况映像
+= 显示存储阵列控制器运行状况图像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

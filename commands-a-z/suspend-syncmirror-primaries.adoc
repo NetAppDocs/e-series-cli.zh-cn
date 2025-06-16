@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: suspend, synchronous, mirror 
 summary: suspend SyncMirror 主节点命令可暂停同步镜像操作。 
 ---
-= 暂停同步镜像
+= 暂停同步镜像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

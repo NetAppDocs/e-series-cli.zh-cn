@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, host, port 
 summary: 'create hostPort命令可在主机总线适配器(HBA)或主机通道适配器(HCA)上创建新的主机端口标识。' 
 ---
-= 创建主机端口
+= 创建主机端口 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

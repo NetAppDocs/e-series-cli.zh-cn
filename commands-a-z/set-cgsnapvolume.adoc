@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, consistency, group, snapshot, volume 
 summary: set cgSnapVolume命令可为一致性组的快照卷创建一个唯一名称。 
 ---
-= 设置一致性组快照卷
+= 设置一致性组快照卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

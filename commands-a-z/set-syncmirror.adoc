@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, synchronous, mirror 
 summary: set SyncMirror 命令用于定义远程镜像对的属性。 
 ---
-= 设置同步镜像
+= 设置同步镜像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

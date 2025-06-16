@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, import 
 summary: start VolumeGroup import命令可将卷组移至完整状态、以使新引入的卷组可供其新存储阵列使用。 
 ---
-= 启动卷组导入
+= 启动卷组导入 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

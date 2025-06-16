@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: specify, autosupport, delivery, method 
 summary: smcli -autosupportConfig命令可设置发送AutoSupport 消息的方法。 
 ---
-= 指定AutoSupport 交付方法
+= 指定 AutoSupport 交付方法 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

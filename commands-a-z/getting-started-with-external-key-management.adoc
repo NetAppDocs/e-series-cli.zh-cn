@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security, key, string, characters, shared, secure, drives, controllers, storage, array, external, management, maintain, server 
 summary: 安全密钥是一个字符串、在存储阵列中启用了安全保护的驱动器和控制器之间共享。使用外部密钥管理时、您可以在密钥管理服务器上创建和维护安全密钥 
 ---
-= 外部密钥管理入门
+= 外部密钥管理入门 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

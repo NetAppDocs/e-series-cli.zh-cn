@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, replace 
 summary: stop drive replace命令用于停止由set drive命令或replace drive命令启动的数据复制操作、并输入copyDrive用户输入。 
 ---
-= 停止驱动器更换
+= 停止驱动器更换 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

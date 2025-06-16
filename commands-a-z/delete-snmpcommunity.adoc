@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snmpcommunity, command, existing, simple, network, management, protocol, community, previously, create, effective, unregister, trap, destination, associate, remove 
 summary: 'delete snmpCommunity命令可删除先前使用create snmpCommunity命令创建并注册的现有简单网络管理协议(Simple Network Management Protocol、SNMP)社区。删除SNMP社区会有效地取消注册该社区。此外、还会删除与该社区关联的任何陷阱目标。' 
 ---
-= 取消注册SNMP社区
+= 取消注册 SNMP 社区 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, synchronous, mirror, volume, synchronization, progress 
 summary: show SyncMirror synchronizationProprogress命令可返回同步镜像配置中主卷与二级卷之间的数据同步进度。 
 ---
-= 显示同步镜像卷同步进度
+= 显示同步镜像卷同步进度 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

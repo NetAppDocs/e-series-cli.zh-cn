@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, copy, source, candidates 
 summary: show volumeCopy sourceCandidates命令可返回有关可用作卷复制操作源的候选卷的信息。此命令适用于Snapshot卷副本对。 
 ---
-= 显示卷副本源候选项
+= 显示卷复制源候选 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

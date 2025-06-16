@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, initiator, command, specific, object, supported, array, role 
 summary: delete iscsiInitiator命令可删除特定的iSCSI启动程序对象。 
 ---
-= 删除iSCSI启动程序
+= 删除 iSCSI 启动器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

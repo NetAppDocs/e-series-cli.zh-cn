@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host, port 
 summary: set hostPort命令用于更改主机端口的属性。 
 ---
-= 设置主机端口
+= 设置主机端口 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

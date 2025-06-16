@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency group, snapshot, volume 
 summary: create cgSnapVolume命令可为一致性组中的基础卷中的特定映像创建一个快照卷。 
 ---
-= 创建一致性组快照卷
+= 创建一致性组快照卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

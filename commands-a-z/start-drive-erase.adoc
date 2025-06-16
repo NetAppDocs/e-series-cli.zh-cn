@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, erase 
 summary: start drive erase命令会擦除一个或多个驱动器中的所有数据。 
 ---
-= 启动驱动器擦除
+= 开始驱动器擦除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -42,7 +42,7 @@ summary: start drive erase命令会擦除一个或多个驱动器中的所有数
 
 [source, cli, subs="+macros"]
 ----
-start drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]] | drivespass:quotes[[_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_]] erase
+start (drive [trayID,[drawerID,]slotID] | drives[trayID1,[drawerID1,]slotID1 ... trayIDn,[drawerIDn,]slotIDn]) erase
 ----
 
 

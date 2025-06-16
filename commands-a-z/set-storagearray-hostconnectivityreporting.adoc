@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, host, connectivity, report 
 summary: set storageArray hostConnectivityResporting命令用于启用或禁用控制器上的主机连接报告。 
 ---
-= 启用或禁用主机连接报告
+= 启用或禁用主机连接报告 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

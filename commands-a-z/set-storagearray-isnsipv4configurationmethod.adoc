@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, server, ipv4, address 
 summary: 'set storageArray isnssIPv4ConfigurationMethod命令用于设置IPv4 Internet存储名称服务(iSNS)的配置方法和地址。' 
 ---
-= 设置存储阵列iSNS服务器IPv4地址
+= 设置存储阵列 iSNS 服务器 IPv4 地址 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

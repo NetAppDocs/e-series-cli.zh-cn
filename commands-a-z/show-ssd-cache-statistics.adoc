@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, ssd, cache, statistics 
 summary: show ssdCache命令可显示有关SSD缓存使用情况的数据。 
 ---
-= 显示SSD缓存统计信息
+= 显示 SSD 缓存统计信息 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

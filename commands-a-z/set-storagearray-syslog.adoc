@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, storage, array, syslog, configuration 
 summary: 使用set storageArray syslog命令可以更改系统日志服务器地址、协议或端口号。 
 ---
-= 更新存储阵列系统日志配置
+= 更新存储阵列 syslog 配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

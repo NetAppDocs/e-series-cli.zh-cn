@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, drive 
 summary: revive drive命令可强制指定驱动器处于最佳状态。 
 ---
-= 恢复驱动器
+= 恢复驱动器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

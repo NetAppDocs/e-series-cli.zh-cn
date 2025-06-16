@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, synchronous, mirroring 
 summary: 'create SyncMirror 命令可为同步远程镜像对同时创建主卷和二级卷。此命令还会设置写入模式(同步写入模式或异步写入模式)和同步优先级。' 
 ---
-= 创建同步镜像
+= 创建同步镜像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

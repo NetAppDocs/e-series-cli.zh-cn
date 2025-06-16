@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, autosupport, delivery, set, individual, E2800, E5700, arrays 
 summary: start storageArray AutoSupport deliveryTest命令会发送一条示例AutoSupport 捆绑包收集消息、以便您可以使用指定的传输参数测试与目标技术支持系统的连接。 
 ---
-= 测试AutoSupport 传送设置
+= 测试 AutoSupport 交付设置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

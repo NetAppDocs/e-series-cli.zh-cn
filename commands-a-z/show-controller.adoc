@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, controller 
 summary: show controller命令可返回有关控制器的信息。 
 ---
-= 显示控制器
+= 显示控制器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

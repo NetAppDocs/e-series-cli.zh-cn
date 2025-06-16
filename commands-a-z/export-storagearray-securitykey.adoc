@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: export, storage, array, security, key, command, save, drive, securitykey, file, context, role 
 summary: export storageArray securityKey命令可将驱动器安全密钥保存到文件中。 
 ---
-= 导出存储阵列安全密钥
+= 导出存储阵列安全密钥 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

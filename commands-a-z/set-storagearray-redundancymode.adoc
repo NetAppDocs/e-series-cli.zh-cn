@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, redundancy, mode 
 summary: set storageArray redundancyMode命令可将存储阵列的冗余模式设置为单工或双工。 
 ---
-= 设置存储阵列冗余模式
+= 设置存储阵列冗余模式 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, iscsi, host, port, network, properties 
 summary: set controller iscsiHostPort命令用于更改主机端口的网络属性、包括IPv4和IPv6属性、端口速度和最大帧有效负载。 
 ---
-= 设置iSCSI主机端口网络连接属性
+= 设置 iSCSI 主机端口网络属性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

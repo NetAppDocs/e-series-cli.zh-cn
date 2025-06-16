@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, controller, nvsram 
 summary: show controller NVSRAM命令可返回有关NVSRAM字节值的信息。 
 ---
-= 显示控制器NVSRAM
+= 显示控制器 NVSRAM - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

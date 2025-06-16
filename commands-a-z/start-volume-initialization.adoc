@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, initialization 
 summary: start volume initialize命令用于开始格式化存储阵列中的卷。 
 ---
-= 启动卷初始化
+= 启动卷初始化 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

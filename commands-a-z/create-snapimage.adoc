@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, snapshot, image 
 summary: create SnapImage命令可在一个或多个现有快照组中创建新的快照映像。 
 ---
-= 创建快照映像
+= 创建快照映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

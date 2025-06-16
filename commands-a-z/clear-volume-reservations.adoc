@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, volume, reservations 
 summary: clear volume reservations命令可清除永久性卷预留。 
 ---
-= 清除卷预留
+= 清除卷预留 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, locate 
 summary: start VolumeGroup locate命令可通过闪烁驱动器上的指示灯来标识逻辑分组在一起以构成指定卷组的驱动器。 
 ---
-= 启动卷组定位
+= 启动卷组定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

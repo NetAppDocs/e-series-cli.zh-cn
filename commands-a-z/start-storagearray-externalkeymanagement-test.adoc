@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, external key, management, communication 
 summary: 'start storageArray externalKeyManagement测试命令使用已配置的凭据(证书、KMIP服务器的地址和KMIP端口号)验证存储阵列是否能够与外部KMIP服务器通信。' 
 ---
-= 测试外部密钥管理通信
+= 测试外部密钥管理通信 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

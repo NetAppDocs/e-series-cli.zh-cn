@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, drive channel, statistics 
 summary: clear allDriveChannels stats命令可重置所有驱动器通道的统计信息。 
 ---
-= 清除驱动器通道统计信息
+= 清除驱动器通道统计信息 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

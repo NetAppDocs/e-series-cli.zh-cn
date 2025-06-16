@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recur, syntax, elements 
 summary: 重复语法元素是一个常规的参数和选项类别、可在脚本命令中使用。 
 ---
-= 重复语法元素
+= 了解重复的 SANtricity CLI 语法元素
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, ssd, cache 
 summary: 'create ssdCache命令使用固态磁盘(SSD)为存储阵列创建读取缓存。' 
 ---
-= 创建SSD缓存
+= 创建 SSD 缓存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, array, label 
 summary: show array label命令可返回有关是否已定义存储阵列标签或所有现有存储阵列标签的信息。 
 ---
-= 显示阵列标签
+= 显示阵列标签 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

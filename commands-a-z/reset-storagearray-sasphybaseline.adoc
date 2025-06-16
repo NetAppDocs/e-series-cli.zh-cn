@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, sas, phy, baseline 
 summary: 'reset storageArray SASPHYBaseline命令可重置所有设备的SAS物理层(SAS PHY)基线、并从.csv文件中删除错误列表。' 
 ---
-= 重置存储阵列SAS PHY基线
+= 重置存储阵列 SAS PHY 基线 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

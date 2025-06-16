@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drawer, service, action, allowed, indicator 
 summary: 设置托盘抽盒命令用于打开或关闭用于存放驱动器的抽盒上的允许服务操作指示灯。 
 ---
-= 设置允许执行抽盒维护操作指示符
+= 设置抽屉服务操作允许指示器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, consistency, group 
 summary: delete ConsistencyGroup命令可删除快照一致性组。 
 ---
-= 删除一致性组
+= 删除一致性组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

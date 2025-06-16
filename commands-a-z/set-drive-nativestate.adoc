@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, foreign, drive, native 
 summary: 'set drive nativeState命令可将缺少的(外部)驱动器重新添加到其原始卷组中、并使其成为新存储阵列中卷组的一部分。' 
 ---
-= 将外部驱动器设置为原生
+= 将外部驱动器设置为本机驱动器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, asynchronous, mirror, group, statistics 
 summary: save storageArray arvmStats asyncMirrorGroup命令可将同步统计信息保存到异步镜像组中一个或多个成员卷的文件中。 
 ---
-= 保存异步镜像组统计信息
+= 保存异步镜像组统计信息 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

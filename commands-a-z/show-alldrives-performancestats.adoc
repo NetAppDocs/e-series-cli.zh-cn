@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, drive, performance, statistics 
 summary: show allDrives performanceStats命令可返回有关驱动器性能的信息。 
 ---
-= 显示驱动器性能统计信息
+= 显示驱动器性能统计数据 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, configuration 
 summary: save storageArray configuration命令用于创建一个脚本文件、您可以使用该脚本文件重新创建当前存储阵列卷配置。 
 ---
-= 保存存储阵列配置
+= 保存存储阵列配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

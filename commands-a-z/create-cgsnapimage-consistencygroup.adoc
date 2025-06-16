@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency group, snapshot image 
 summary: 他create cgSnapImage ConsistencyGroup命令会为属于快照一致性组的每个基础卷创建一个新的快照映像。 
 ---
-= 创建一致性组快照映像
+= 创建一致性组快照映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

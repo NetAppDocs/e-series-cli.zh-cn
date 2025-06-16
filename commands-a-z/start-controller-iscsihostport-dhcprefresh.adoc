@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, iscsi, dhcp, refresh 
 summary: start controller iscsiHostPort dhcpRefresh命令用于刷新iSCSI接口的DHCP参数。 
 ---
-= 启动iSCSI DHCP刷新
+= 启动 iSCSI DHCP 刷新-SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, syslog, set 
 summary: set syslog命令用于配置系统日志警报信息。您可以将事件监控器配置为在发生可警报事件时向系统日志服务器发送警报。 
 ---
-= 配置系统日志设置
+= 配置系统日志设置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

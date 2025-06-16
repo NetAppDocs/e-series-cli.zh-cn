@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, server, certificate, sign, request, csr 
 summary: 'save controller array命令行 界面命令可检索控制器的已安装服务器证书签名请求(CSR)、以便您可以查看证书详细信息。' 
 ---
-= 检索已安装的服务器证书
+= 检索已安装的服务器证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

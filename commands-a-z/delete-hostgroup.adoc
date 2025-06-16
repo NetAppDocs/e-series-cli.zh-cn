@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, hostgroup, command, support, role 
 summary: delete hostGroup命令可删除主机组。 
 ---
-= 删除主机组
+= 删除主机组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

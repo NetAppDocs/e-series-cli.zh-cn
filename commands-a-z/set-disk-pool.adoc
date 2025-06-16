@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, disk pool 
 summary: set diskPool命令可根据指定参数设置与磁盘池关联的属性。 
 ---
-= 设置磁盘池
+= 设置磁盘池 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

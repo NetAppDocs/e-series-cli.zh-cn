@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset ,storage, array, diagnostic, data 
 summary: reset storageArray diagnosticData命令可重置包含存储阵列诊断数据的NVSRAM。 
 ---
-= 重置存储阵列诊断数据
+= 重置存储阵列诊断数据 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

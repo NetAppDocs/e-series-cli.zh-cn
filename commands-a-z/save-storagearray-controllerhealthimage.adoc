@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, controller, health, image 
 summary: 对于支持控制器运行状况映像功能的存储阵列、save storageArray controllerHealthImage命令会将控制器运行状况映像保存到主机上的指定文件中。 
 ---
-= 保存存储阵列控制器运行状况映像
+= 保存存储阵列控制器运行状况映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

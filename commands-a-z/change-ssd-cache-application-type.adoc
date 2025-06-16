@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ssd cache application type 
 summary: set ssdCache命令可更改与SSD缓存关联的应用程序类型。应用程序类型可以是Web服务器、数据库或多媒体。更改应用程序类型会更改SSD缓存底层卷的块大小、子块大小、读取阈值时填充以及写入阈值时填充。 
 ---
-= 更改SSD缓存应用程序类型
+= 更改 SSD 缓存应用程序类型 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

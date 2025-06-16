@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, consistency, group, snapshot, volume 
 summary: stop cgSnapVolume命令用于停止创建一致性组快照卷的写时复制操作。 
 ---
-= 停止一致性组快照卷
+= 停止一致性组快照卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

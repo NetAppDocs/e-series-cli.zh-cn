@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, raid, volume, automatic, drive, select 
 summary: create volume命令可在存储阵列中的驱动器之间创建一个卷组、并在卷组中创建一个新卷。存储阵列控制器可选择要包含在卷中的驱动器。 
 ---
-= 创建RAID卷(自动选择驱动器)
+= 创建 RAID 卷（自动驱动器选择）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

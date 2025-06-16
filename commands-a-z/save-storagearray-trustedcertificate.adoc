@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, trusted, ca, certificates 
 summary: save storageArray trustedCertificate命令检索已为阵列安装的受信任CA证书。检索到的文件包含从阵列的Web服务器请求的任何CA证书。 
 ---
-= 检索已安装的可信CA证书
+= 检索已安装的受信任 CA 证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

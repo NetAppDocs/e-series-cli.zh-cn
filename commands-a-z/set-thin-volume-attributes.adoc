@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, thin, volume, attributes 
 summary: set volume命令用于定义精简卷的属性。 
 ---
-= 设置精简卷属性
+= 设置精简卷属性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, disk pool, locate 
 summary: start diskPool locate命令可通过闪烁驱动器上的指示灯来标识逻辑分组在一起以构成指定磁盘池的驱动器。 
 ---
-= 启动磁盘池定位
+= 启动磁盘池定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

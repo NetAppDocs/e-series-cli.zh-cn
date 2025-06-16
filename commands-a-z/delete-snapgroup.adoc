@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snapgroup, command, entire, snapshot, group, option, associate, repository, volume 
 summary: delete snapGroup命令用于整个快照组以及可选的关联存储库卷。 
 ---
-= 删除快照组
+= 删除快照组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

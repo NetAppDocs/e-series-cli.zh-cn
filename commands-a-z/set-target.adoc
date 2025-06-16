@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, target, properties 
 summary: set target命令用于更改iSCSI/iSER目标的属性、包括身份验证方法和别名。 
 ---
-= 设置目标属性
+= 设置目标属性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

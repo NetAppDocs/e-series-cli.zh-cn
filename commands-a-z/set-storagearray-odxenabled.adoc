@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, odx 
 summary: 'set storageArray odxEnabled命令用于打开或关闭存储阵列的卸载数据传输(Offloaded Data Transfer、ODX)。' 
 ---
-= 启用或禁用 ODX
+= 启用或禁用 ODX - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

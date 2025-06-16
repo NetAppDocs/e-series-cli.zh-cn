@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, controller, trusted, certificate, command, install, web, servers, validate, array, roles, context 
 summary: download controller trustedCertificate命令可在控制器的Web服务器上安装可信CA证书、以验证LDAP服务器签名的证书。 
 ---
-= 安装可信CA证书
+= 安装受信任的 CA 证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

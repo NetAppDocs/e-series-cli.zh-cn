@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, array, label 
 summary: 使用Remove array label命令可以删除存储阵列的用户定义标签。 
 ---
-= 删除阵列标签
+= 删除阵列标签 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

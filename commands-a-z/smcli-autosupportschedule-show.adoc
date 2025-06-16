@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, autosupport, message, collection, schedule 
 summary: smcli -autosupportSchedule show命令可显示收集和处理每日和每周AutoSupport 消息的计划。 
 ---
-= 显示AutoSupport 消息收集计划
+= 显示 AutoSupport 消息收集计划 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

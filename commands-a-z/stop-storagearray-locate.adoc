@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, locate 
 summary: stop storageArray locate命令用于关闭存储阵列上由start storageArray locate命令打开的指示灯。 
 ---
-= 停止存储阵列定位
+= 停止存储阵列定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

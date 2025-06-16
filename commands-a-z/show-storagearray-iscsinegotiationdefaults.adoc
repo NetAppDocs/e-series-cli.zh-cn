@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, negotiation, defaults 
 summary: show storageArray iscsiNegotiationDefault命令可返回有关受启动程序-目标协商影响的连接级别设置的信息。 
 ---
-= 显示存储阵列协商默认值
+= 显示存储阵列协商默认值 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, service, action, allowed, indicator 
 summary: set drive serviceAllowedindicator命令用于打开或关闭驱动器托盘中支持允许服务操作指示灯功能的驱动器上的允许服务操作指示灯。 
 ---
-= 设置允许执行的驱动器维护操作指示符
+= 设置驱动器服务操作允许指示器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

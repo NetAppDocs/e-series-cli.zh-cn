@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, snapshot, image, rollback 
 summary: start SnapImage rollback命令可为一组快照映像启动回滚操作。 
 ---
-= 启动快照映像回滚
+= 启动快照映像回滚 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

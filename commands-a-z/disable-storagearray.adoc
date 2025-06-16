@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disable, storage, array, command, storage, feature 
 summary: disable storageArray命令可禁用存储阵列功能。 
 ---
-= 禁用存储阵列功能
+= 禁用存储阵列功能 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

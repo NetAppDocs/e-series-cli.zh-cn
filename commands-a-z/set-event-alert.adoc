@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, event, alert, filter 
 summary: set event alert命令可通过禁用或启用与特定可更改事件相关的通知来管理警报事件通知。要阻止有关特定可更改事件的通知、请将其阻止。要启用有关特定可更改事件的通知、请取消阻止该事件。 
 ---
-= 设置事件警报筛选
+= 设置事件警报过滤 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

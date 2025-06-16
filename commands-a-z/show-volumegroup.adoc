@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, group 
 summary: show VolumeGroup命令可返回有关卷组的信息。 
 ---
-= 显示卷组
+= 显示卷组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

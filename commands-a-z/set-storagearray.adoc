@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array 
 summary: set storageArray命令用于定义存储阵列的属性。 
 ---
-= 设置存储阵列
+= 设置存储阵列 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, snapshot, volume 
 summary: create snapVolume命令可为基础卷的快照映像创建具有读写功能的快照卷。 
 ---
-= 创建Snapshot卷
+= 创建快照卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

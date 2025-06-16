@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, iscsi, target, properties 
 summary: set iscsiTarget命令用于定义iSCSI目标的属性。 
 ---
-= 设置iSCSI目标属性
+= 设置 iSCSI 目标属性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

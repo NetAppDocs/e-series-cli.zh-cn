@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, fips, drive, security, identifier 
 summary: set drive securityID命令用于将FIPS驱动器重置回原始制造商设置。 
 ---
-= 设置FIPS驱动器安全标识符
+= 设置 FIPS 驱动器安全标识符 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

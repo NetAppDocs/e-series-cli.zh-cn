@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, lun map 
 summary: 'remove lunMapping命令可从一个或多个卷中删除逻辑单元号(LUN)或命名空间ID (NSID)映射。' 
 ---
-= 删除卷LUN映射
+= 删除卷 LUN 映射 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

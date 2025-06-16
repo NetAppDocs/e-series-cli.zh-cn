@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, disk pool, locate 
 summary: stop diskPool locate命令用于关闭由start diskPool locate命令打开的驱动器上的指示灯。 
 ---
-= 停止磁盘池定位
+= 停止磁盘池定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

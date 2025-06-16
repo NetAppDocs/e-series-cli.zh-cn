@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, copy 
 summary: remove volumeCopy target命令可删除卷副本对。 
 ---
-= 删除卷副本
+= 删除卷副本 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

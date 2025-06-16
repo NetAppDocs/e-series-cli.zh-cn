@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, asynchronous mirroring, fault 
 summary: 'clear asyncMirrorFault命令可从一个或多个异步镜像组以及一个或多个异步镜像组成员卷清除异步镜像"粘性"故障。' 
 ---
-= 清除异步镜像故障
+= 清除异步镜像故障 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

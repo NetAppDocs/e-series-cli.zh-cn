@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, tray, positions 
 summary: set storageArray TrayPos件 命令用于定义托盘在存储阵列中的位置。输入此命令时、必须将所有托盘都包含在存储阵列中。 
 ---
-= 设置存储阵列托盘位置
+= 设置存储阵列托盘位置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

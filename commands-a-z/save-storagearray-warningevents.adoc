@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, events 
 summary: save storageArray warningEvents命令可将事件从主要事件日志保存到文件中。 
 ---
-= 保存存储阵列事件
+= 保存存储阵列事件 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

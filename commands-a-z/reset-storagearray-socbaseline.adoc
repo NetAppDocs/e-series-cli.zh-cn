@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, soc, baseline 
 summary: 'reset storageArray SOCBaseline命令可重置通过控制器访问的所有片上交换机(SOC)设备的基线。' 
 ---
-= 重置存储阵列SOC基线
+= 重置存储阵列 SOC 基线 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

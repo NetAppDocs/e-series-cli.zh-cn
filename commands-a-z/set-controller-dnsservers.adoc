@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller, dns 
 summary: 'set controller DNSServers命令用于更新控制器的域名系统(Domain Name System、DNS)设置。DNS用于解析控制器和网络时间协议(NTP)服务器的完全限定域名。' 
 ---
-= 设置控制器DNS设置
+= 设置控制器 DNS 设置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

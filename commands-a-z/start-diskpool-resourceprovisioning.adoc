@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, disk pool, resource, provision 
 summary: 'start diskPool resourcegroup Provisioning命令可在给定磁盘池上启用资源配置、并对磁盘池中的每个卷启动资源配置启用异步操作。资源配置要求磁盘池中的所有驱动器都支持NVMe的DULBE"功能。' 
 ---
-= 启动磁盘池资源配置
+= 启动磁盘池资源配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

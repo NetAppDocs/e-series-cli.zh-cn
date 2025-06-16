@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, snapshot, group, snapshot, images 
 summary: stop pendingSnapImageCreation命令可取消要在快照或快照一致性组上创建的所有待定快照映像。 
 ---
-= 停止快照组待定快照映像
+= 停止快照组待处理的快照映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

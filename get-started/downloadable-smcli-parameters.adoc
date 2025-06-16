@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: downloadable, smcli, command line, parameters, identify, devices, SAML, multifactor, authentication, https, certificate, array, 
 summary: 'SANtricity OS 11.60及更高版本支持直接通过SANtricity系统管理器下载和安装基于http的命令行界面版本(也称为安全命令行界面或SMCli)。' 
 ---
-= 可下载的SMcli命令行参数
+= 了解可下载的 SANtricity Secure CLI (SMcli) 参数
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

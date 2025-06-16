@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, sas, phy, counts 
 summary: 'save storageArray ssphyCounts命令可将SAS物理层(SAS PHY)计数器保存到文件中。' 
 ---
-= 保存存储阵列SAS PHY计数
+= 保存存储阵列 SAS PHY 计数 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

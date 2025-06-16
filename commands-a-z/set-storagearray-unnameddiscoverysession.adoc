@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, unnamed, discovery, session 
 summary: 使用set storageArray unnamedDiscoverySession命令可以使存储阵列参与未命名的发现会话。 
 ---
-= 设置存储阵列未命名的发现会话
+= 设置存储阵列未命名发现会话 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

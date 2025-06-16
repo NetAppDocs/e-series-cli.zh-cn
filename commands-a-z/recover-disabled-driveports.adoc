@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recover, disable, drive ports 
 summary: recover disabled drivePorts命令可恢复已禁用的驱动器端口。 
 ---
-= 恢复已禁用的驱动器端口
+= 恢复禁用的驱动器端口 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

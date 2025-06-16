@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: firmware, compatibility, levels 
 summary: 以下各节中的脚本命令列出了可运行脚本命令的最低固件级别。 
 ---
-= 固件兼容性级别
+= 了解 SANtricity CLI 固件兼容性级别
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

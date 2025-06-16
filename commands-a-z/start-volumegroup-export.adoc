@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, export 
 summary: start VolumeGroup export命令可将卷组移至已导出状态。 
 ---
-= 启动卷组导出
+= 启动卷组导出 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

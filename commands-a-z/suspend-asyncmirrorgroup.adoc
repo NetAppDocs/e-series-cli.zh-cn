@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: suspend, asynchronous, mirror, group 
 summary: suspend asyncMirrorGroup命令会在异步镜像组级别暂停所有镜像对上的数据同步。 
 ---
-= 暂停异步镜像组
+= 暂停异步镜像组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

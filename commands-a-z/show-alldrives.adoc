@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, drive 
 summary: show allDrives命令可返回有关存储阵列中驱动器的信息。 
 ---
-= 显示驱动器
+= 显示驱动器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

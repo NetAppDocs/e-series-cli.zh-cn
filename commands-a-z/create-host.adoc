@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, host 
 summary: create host命令将创建一个新主机。 
 ---
-= 创建主机
+= 创建主机 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

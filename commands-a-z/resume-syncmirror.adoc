@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, synchronous, mirroring 
 summary: resume SyncMirror 命令可恢复已暂停的同步镜像操作。 
 ---
-= 恢复同步镜像
+= 恢复同步镜像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, consistency, group, attributes 
 summary: set ConsistencyGroup命令用于定义快照一致性组的属性。 
 ---
-= 设置一致性组属性
+= 设置一致性组属性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

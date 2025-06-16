@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, state 
 summary: set drive operationalState命令可将驱动器设置为故障状态。 
 ---
-= 设置驱动器状态
+= 设置驱动器状态 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

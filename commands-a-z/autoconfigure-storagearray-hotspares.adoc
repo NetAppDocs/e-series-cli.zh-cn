@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: autoconfigure, storage, array, hot spares, supported, roles, syntax, parameters, minimum firmware level 
 summary: autosConfigure storageArray hotspares命令可自动定义和配置存储阵列中的热备用磁盘。您可以随时运行此命令。此命令可为存储阵列提供最佳热备用磁盘覆盖范围。 
 ---
-= 自动配置存储阵列热备件
+= 自动配置存储阵列热备用 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, tray, identification 
 summary: set tray命令用于设置存储阵列中控制器托盘、控制器驱动器托盘或驱动器托盘的托盘ID。 
 ---
-= 设置托盘标识
+= 设置托盘识别 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

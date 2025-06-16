@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snmp, communities 
 summary: 'show allSnmpCommunities命令可返回有关为存储阵列定义的简单网络管理协议(Simple Network Management Protocol、SNMP)社区的信息。SNMP社区是一系列设备、例如路由器、交换机、打印机、存储设备、 组合在一起、用于管理和监控设备。' 
 ---
-= 显示SNMP社区
+= 显示 SNMP 社区 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, enable, disable, automatic, load, balance 
 summary: set storageArray autodelloadBalancingEnable命令用于启用或禁用自动负载平衡功能。 
 ---
-= 将存储阵列设置为启用或禁用自动负载平衡
+= 设置存储阵列以启用或禁用自动负载平衡 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, controller, battery, learn, cycle 
 summary: set storageArray learnCycleDate控制器命令用于设置控制器电池学习周期。 
 ---
-= 设置存储阵列控制器电池学习周期
+= 设置存储阵列控制器电池学习周期 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

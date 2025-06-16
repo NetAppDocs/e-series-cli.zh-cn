@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, audit, log, records 
 summary: delete Audit日志命令会删除审核日志中的部分或全部记录。 
 ---
-= 删除审核日志记录
+= 删除审计日志记录 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

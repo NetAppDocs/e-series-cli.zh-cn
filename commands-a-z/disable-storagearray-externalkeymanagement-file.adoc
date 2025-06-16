@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disable, storage, array, external, management, file, command, disable, security, key, full, disk, encryption, drives 
 summary: disable storageArray externalKeyManagement file命令会对具有全磁盘加密驱动器的存储阵列禁用外部安全密钥管理。 
 ---
-= 禁用外部安全密钥管理
+= 禁用外部安全密钥管理 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

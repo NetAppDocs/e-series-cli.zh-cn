@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, raid, volume, free, extent, based, select 
 summary: create volume命令会在卷组的可用空间中创建卷。 
 ---
-= 创建RAID卷(基于可用块区的选择)
+= 创建 RAID 卷（基于可用范围的选择）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

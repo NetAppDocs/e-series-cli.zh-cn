@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: legacy, command line, parameters 
 summary: SANtricity OS 11.40版为具有嵌入式Web服务的E2800和E5700控制器引入了使用安全HTTPS协议在命令行上进行交互的功能。这些控制器可以选择使用符号协议进行命令行交互。 
 ---
-= 原有命令行参数
+= 了解旧版 SANtricity CLI 命令行参数
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

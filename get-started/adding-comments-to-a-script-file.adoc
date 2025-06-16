@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, comments, script file 
 summary: 脚本引擎会查找某些字符或命令以显示注释。您可以通过三种方式向脚本文件添加注释。 
 ---
-= 向脚本文件添加注释
+= 向 SANtricity CLI 脚本文件添加注释
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

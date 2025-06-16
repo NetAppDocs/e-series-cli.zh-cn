@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, signed, certificate 
 summary: show controller arrayManagementSignedCertificate summary命令可显示指定控制器的当前签名证书摘要。 
 ---
-= 显示签名证书
+= 显示签名证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

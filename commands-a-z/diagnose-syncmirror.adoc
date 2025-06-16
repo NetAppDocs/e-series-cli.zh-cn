@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, syncmirror, command, test, connection, specified, primary, volumes, mirror, storage, array, synchronous, feature, enabled 
 summary: di诊断SyncMirror 命令用于测试已启用同步镜像功能的存储阵列上指定主卷与镜像卷之间的连接。 
 ---
-= 诊断同步镜像
+= 诊断同步镜像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

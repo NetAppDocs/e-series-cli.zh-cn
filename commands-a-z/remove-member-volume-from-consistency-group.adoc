@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, member, volume, consistency group 
 summary: set ConsistencyGroup命令可从现有快照一致性组中删除成员卷。 
 ---
-= 从一致性组中删除成员卷
+= 从一致性组中删除成员卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

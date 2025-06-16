@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, user, session 
 summary: 使用set storageArray userSession命令可以在System Manager中设置超时、以便在指定时间后断开用户的非活动会话。 
 ---
-= 设置存储阵列用户会话
+= 设置存储阵列用户会话 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

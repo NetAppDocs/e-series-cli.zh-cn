@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, resource, provisioned, volumes 
 summary: 'set storageArray resourcesProvisionedVolumes命令可禁用DULBE"功能。' 
 ---
-= 设置存储阵列资源配置的卷
+= 设置存储阵列资源配置卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, registration 
 summary: '使用set storageArray isnssRegistration命令可以列出IPv4或IPv6 Internet存储名称服务(iSNS)服务器上的存储阵列。' 
 ---
-= 设置存储阵列iSNS注册
+= 设置存储阵列 iSNS 注册 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

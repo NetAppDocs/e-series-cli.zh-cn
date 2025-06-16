@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, volume, copy 
 summary: stop volumeCopy target source命令可停止卷复制操作。此命令适用于Snapshot卷副本对。 
 ---
-= 停止卷复制
+= 停止卷复制 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

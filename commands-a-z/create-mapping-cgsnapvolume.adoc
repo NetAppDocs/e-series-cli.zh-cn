@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency, group, snapshot, volume, map 
 summary: create mapping cgSnapVolume命令用于创建从一致性组快照卷到主机或主机组的逻辑映射。 
 ---
-= 创建一致性组快照卷映射
+= 创建一致性组快照卷映射 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

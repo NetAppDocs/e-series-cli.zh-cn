@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, initialize 
 summary: start drive initialize命令用于启动驱动器初始化。 
 ---
-= 启动驱动器初始化
+= 启动驱动器初始化 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmp, mib, system, group, variables 
 summary: 'set snmpSystemVariables命令用于更改简单网络管理协议(Simple Network Management Protocol、SNMP)的系统变量。' 
 ---
-= 更新SNMP MIB II系统组变量
+= 更新 SNMP MIB II 系统组变量 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

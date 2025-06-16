@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, dbm, validator, information, file 
 summary: 'save storageArray dbmValidatorInfo命令可将存储阵列的数据库管理(DBM)验证信息保存在XML文件中。' 
 ---
-= 保存存储阵列DBM验证程序信息文件
+= 保存存储阵列 DBM 验证器信息文件 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

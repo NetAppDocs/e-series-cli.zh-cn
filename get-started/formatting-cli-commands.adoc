@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: format, rules, cli, commands 
 summary: 根据输入的值或名称、CLI命令会强制实施某些格式规则。 
 ---
-= CLI命令的格式规则
+= SANtricity CLI 命令的格式规则
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

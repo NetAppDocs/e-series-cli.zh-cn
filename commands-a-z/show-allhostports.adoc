@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, host, ports 
 summary: show allHostPorts命令可返回有关已配置主机端口的信息。 
 ---
-= 显示主机端口
+= 显示主机端口 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

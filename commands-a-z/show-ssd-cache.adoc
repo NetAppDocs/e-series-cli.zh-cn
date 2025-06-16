@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, ssd, cache 
 summary: show ssdCache命令可显示有关SSD缓存的信息。 
 ---
-= 显示SSD缓存
+= 显示 SSD 缓存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

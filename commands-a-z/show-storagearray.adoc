@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array 
 summary: show storageArray命令可返回有关存储阵列的配置信息。 
 ---
-= 显示存储阵列
+= 显示存储阵列 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

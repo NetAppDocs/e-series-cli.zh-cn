@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, storage, array, drive, firmware, command, images, roles, supported 
 summary: download storageArray driveFirmware file命令可将固件映像下载到存储阵列中的所有驱动器。 
 ---
-= 下载存储阵列驱动器固件
+= 下载存储阵列驱动器固件 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

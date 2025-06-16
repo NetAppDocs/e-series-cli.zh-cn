@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, cache, mirror, data, assurance, check, enable 
 summary: show storageArray cacheMirrorDataAssuranceCheckEnable命令可返回缓存镜像数据保证检查功能的启用状态。 
 ---
-= show storage array cache mirror data assurance check enable
+= 显示存储阵列缓存镜像数据保证检查启用 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

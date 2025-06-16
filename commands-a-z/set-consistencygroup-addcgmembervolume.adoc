@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, member, consistency, group 
 summary: set ConsistencyGroup addCGMemberVolume命令可将新的基础卷作为成员添加到现有一致性组中。 
 ---
-= 将成员添加到一致性组
+= 向一致性组添加成员 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: repair, data, parity 
 summary: 修复数据奇偶校验命令可修复数据奇偶校验错误。 
 ---
-= 修复数据奇偶校验
+= 修复数据奇偶校验 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

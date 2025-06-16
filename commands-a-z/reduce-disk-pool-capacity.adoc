@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reduce, disk pool, capacity 
 summary: set diskPool命令可通过从池中逻辑删除驱动器来减少磁盘池的容量。 
 ---
-= 减少磁盘池容量
+= 减少磁盘池容量 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

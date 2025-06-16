@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, tray, service, action, allowed, indicator 
 summary: 'set tray serviceAllowedindicator命令用于打开或关闭电源风扇箱、互连电池箱或环境服务模块(ESM)箱上的"Service Action Allowedindicator"指示灯。' 
 ---
-= 设置允许托盘维护操作指示符
+= 设置托盘服务操作允许指示器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

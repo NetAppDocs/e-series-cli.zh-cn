@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host, channel 
 summary: set hostChannel命令用于定义主机通道的环路ID。 
 ---
-= 设置主机通道
+= 设置主机通道 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

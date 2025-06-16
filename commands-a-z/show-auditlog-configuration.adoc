@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, audit log, configuration 
 summary: show audiitLog configuration命令可显示存储阵列的审核日志配置设置。 
 ---
-= 显示审核日志配置
+= 显示审计日志配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

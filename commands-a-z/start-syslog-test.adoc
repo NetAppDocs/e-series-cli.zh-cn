@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, syslog, configuration 
 summary: start syslog test命令会发送一条示例消息以测试系统日志配置。 
 ---
-= 测试系统日志配置
+= 测试系统日志配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, configuration, database, diagnostic 
 summary: start storageArray configDbDiagnostic命令会对配置数据库运行一致性检查。 
 ---
-= 启动存储阵列配置数据库诊断
+= 启动存储阵列配置数据库诊断 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

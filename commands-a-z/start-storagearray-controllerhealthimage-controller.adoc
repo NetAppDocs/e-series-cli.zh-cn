@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, controller, health, image 
 summary: start storageArray controllerHealthImage controller命令可在支持控制器运行状况映像功能的存储阵列上生成存储阵列控制器运行状况映像。 
 ---
-= 启动存储阵列控制器运行状况映像
+= 启动存储阵列控制器运行状况映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

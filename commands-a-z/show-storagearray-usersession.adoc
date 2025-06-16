@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, storage, array, user, session 
 summary: 使用show storageArray userSession命令可以查看System Manager的会话超时期限。 
 ---
-= 显示存储阵列用户会话
+= 显示存储阵列用户会话 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, ssd, cache, volume 
 summary: set volume ssdCacheTM Enabled命令可使用SSD缓存功能为特定卷启用或禁用缓存。 
 ---
-= 为卷设置SSD缓存
+= 为卷设置 SSD 缓存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

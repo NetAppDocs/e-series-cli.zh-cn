@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: initialize, thin volume 
 summary: start volume initialize命令用于初始化或重新初始化精简卷。 
 ---
-= 初始化精简卷
+= 初始化精简卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

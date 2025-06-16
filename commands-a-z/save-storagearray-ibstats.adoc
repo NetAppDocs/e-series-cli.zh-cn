@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, infiniband, statistics 
 summary: save storageArray ibStats命令可将存储阵列的InfiniBand性能统计信息保存到文件中。 
 ---
-= 保存存储阵列InfiniBand统计信息
+= 保存存储阵列 InfiniBand 统计信息 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

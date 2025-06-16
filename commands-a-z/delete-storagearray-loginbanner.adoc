@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, loginbanner, command, allow, login, banner, text, file, upload, save, role 
 summary: 使用delete storageArray loginbanner命令可以删除先前上传并保存的登录横幅文本文件。 
 ---
-= 删除存储阵列登录横幅
+= 删除存储阵列登录横幅 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

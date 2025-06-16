@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, recovery, mode 
 summary: clear storageArray recoveryMode命令可强制存储阵列退出恢复模式。 
 ---
-= 清除存储阵列恢复模式
+= 清除存储阵列恢复模式 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

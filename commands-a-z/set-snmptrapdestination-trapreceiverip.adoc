@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmp, trap, destination 
 summary: set snmpTrapDestination trap接收方IP命令用于打开或关闭为SNMP陷阱目标发送身份验证失败消息的功能。如果SNMP代理从SNMP管理器收到消息、但消息包含无效的社区名称或用户名、则会失败。 
 ---
-= 更新SNMP陷阱目标
+= 更新 SNMP 陷阱目标 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

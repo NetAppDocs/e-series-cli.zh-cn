@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, host, port, statistics, baseline 
 summary: reset storageArray hostPortStatissBaseline命令可重置存储阵列主机端口统计信息基线。 
 ---
-= 重置存储阵列主机端口统计信息基线
+= 重置存储阵列主机端口统计信息基线 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

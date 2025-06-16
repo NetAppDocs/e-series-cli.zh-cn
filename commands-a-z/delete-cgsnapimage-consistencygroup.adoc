@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, consistency, group, snapshot, image 
 summary: delete cgSnapImage ConsistencyGroup命令可删除一致性组中的快照映像。 
 ---
-= 删除一致性组快照映像
+= 删除一致性组快照映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

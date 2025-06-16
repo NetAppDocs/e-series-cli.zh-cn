@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, hot spare 
 summary: set drive hotspare命令会将一个或多个驱动器分配或取消分配为热备用驱动器。 
 ---
-= 设置驱动器热备用磁盘
+= 设置驱动器热备用 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

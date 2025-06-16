@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, storage, array, management, key, certificate, command, intall, external, support, role 
 summary: download storageArray keyManagementCertificate命令可在存储阵列上安装外部密钥管理证书。 
 ---
-= 安装存储阵列外部密钥管理证书
+= 安装存储阵列外部密钥管理证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

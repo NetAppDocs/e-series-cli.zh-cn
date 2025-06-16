@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, read-only, snapshot, volume, read/write, volume 
 summary: set snapVolume convertToReadWrite命令可将只读卷快照卷更改为读/写卷快照卷。 
 ---
-= 将只读Snapshot卷设置为读/写卷
+= 将只读快照卷设置为读/写卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, channel, locate 
 summary: start driveChannel locate命令可通过打开与驱动器通道连接的驱动器托盘的指示灯来标识连接到特定驱动器通道的驱动器托盘。 
 ---
-= 启动驱动器通道定位
+= 启动驱动器通道定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

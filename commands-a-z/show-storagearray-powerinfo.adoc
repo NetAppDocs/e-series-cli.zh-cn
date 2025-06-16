@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, power, information 
 summary: show storageArray powerInfo命令可返回有关整个存储阵列以及存储阵列中每个托盘所消耗的电量的信息。 
 ---
-= 显示存储阵列电源信息
+= 显示存储阵列电源信息 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

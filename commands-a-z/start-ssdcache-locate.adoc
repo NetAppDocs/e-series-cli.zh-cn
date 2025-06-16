@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, ssd, cache, locate 
 summary: 'start ssdCache locate命令可通过闪烁SSD上的指示灯来识别逻辑分组在一起形成SSD缓存的固态磁盘(SSD)。' 
 ---
-= 启动SSD缓存定位
+= 启动 SSD 缓存定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

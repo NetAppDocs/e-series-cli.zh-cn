@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, synchronous, mirror 
 summary: remove SyncMirror 命令可删除远程镜像对中主卷与二级卷之间的镜像关系。 
 ---
-= 删除同步镜像
+= 删除同步镜像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

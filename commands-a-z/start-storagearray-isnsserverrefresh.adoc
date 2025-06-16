@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, isns, server, refresh 
 summary: start storageArray isnssServerRefresh命令将刷新iSNS服务器的网络地址信息。 
 ---
-= 启动存储阵列iSNS服务器刷新
+= 启动存储阵列 iSNS 服务器刷新 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

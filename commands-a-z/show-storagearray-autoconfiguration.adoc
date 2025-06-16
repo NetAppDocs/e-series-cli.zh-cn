@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, auto, configuration 
 summary: show storageArray autosconfiguration命令显示了运行autoConfigure storageArray命令时存储阵列创建的默认自动配置。 
 ---
-= 显示存储阵列自动配置
+= 显示存储阵列自动配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

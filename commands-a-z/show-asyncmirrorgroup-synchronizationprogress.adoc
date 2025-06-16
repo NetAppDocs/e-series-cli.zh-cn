@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, asynchronous, mirror, group, synchronization, progress 
 summary: show asyncMirrorGroup synchronizationProprogress命令可显示在本地和远程存储阵列之间定期同步异步镜像组的进度。 
 ---
-= 显示异步镜像组同步进度
+= 显示异步镜像组同步进度 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

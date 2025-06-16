@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, channel, fault, isolation, diagnostics 
 summary: stop driveChannel faultDiagnostics命令用于停止驱动器通道故障隔离诊断、从而在启动驱动器通道故障隔离诊断命令完成之前停止该命令。 
 ---
-= 停止驱动器通道故障隔离诊断
+= 停止驱动器通道故障隔离诊断 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

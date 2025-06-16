@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, soc, counts 
 summary: save storageArray SOCCounts命令可将SOC错误统计信息保存到文件中。 
 ---
-= 保存存储阵列SOC计数
+= 保存存储阵列 SOC 计数 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

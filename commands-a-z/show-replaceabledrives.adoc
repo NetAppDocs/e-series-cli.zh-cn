@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, replaceable, drives 
 summary: show replaceableDrives命令可显示存储阵列中的所有可更换驱动器。 
 ---
-= 显示可更换驱动器
+= 显示可更换驱动器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

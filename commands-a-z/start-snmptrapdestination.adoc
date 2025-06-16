@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, snmp, trap, destination 
 summary: 'start snmpTrapDestination命令用于测试特定简单网络管理协议(Simple Network Management Protocol、SNMP)社区或用户的陷阱接收器连接和标识。此命令通过向陷阱接收方发送陷阱消息来测试陷阱目标。' 
 ---
-= 测试SNMP陷阱目标
+= 测试 SNMP 陷阱目标 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

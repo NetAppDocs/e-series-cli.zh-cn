@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, emw, management, domain, level, smcli 
 summary: 'smcli enable autosupportFeature命令可为所有受管存储阵列启用AutoSupport (ASUP)功能、并可将消息传输到技术支持站点。启用ASUP功能后、任何支持ASUP的存储阵列都会自动准备好收集支持相关数据并将其发送给技术支持。然后、可以使用这些数据进行远程故障排除和问题分析。' 
 ---
-= 在EMW管理域级别启用或禁用AutoSupport (仅限SMcli)
+= 在 EMW 管理域级别启用或禁用 AutoSupport (仅限 SMcli) - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

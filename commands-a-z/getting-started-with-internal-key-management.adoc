@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security key, string, characters, secure enabled, drive, controllers, storage, array, internal, key, management, create, maintain, persistent, memory 
 summary: 安全密钥是一个字符串、在存储阵列中启用了安全保护的驱动器和控制器之间共享。使用内部密钥管理时、您可以在控制器的永久性内存上创建和维护安全密钥。 
 ---
-= 开始使用内部密钥管理
+= 内部密钥管理入门 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

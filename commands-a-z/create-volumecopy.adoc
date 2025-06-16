@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, copy 
 summary: create volumeCopy命令用于创建卷副本并启动卷副本操作。此命令适用于Snapshot映像卷副本对。 
 ---
-= 创建卷副本
+= 创建卷副本 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

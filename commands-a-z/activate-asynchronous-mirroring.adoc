@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: activate, asynchronous, mirroring 
 summary: activate storageArray feature命令可激活异步镜像功能。 
 ---
-= 激活异步镜像
+= 激活异步镜像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, storage, array, syslog, configuration 
 summary: 使用create storageArray syslog命令可以将审核日志归档到外部系统日志服务器。在存储阵列和系统日志服务器之间建立连接后、审核日志会自动保存到系统日志服务器。 
 ---
-= 创建存储阵列系统日志配置
+= 创建存储阵列 syslog 配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

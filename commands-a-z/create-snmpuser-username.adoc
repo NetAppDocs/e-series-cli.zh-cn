@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, snmpv3 usm, user 
 summary: 'create snmpUser username命令可创建一个新的简单网络管理协议(Simple Network Management Protocol、SNMP)用户、并将此新用户注册为SNMP代理的已知实体。如果尝试使用与现有用户相同的名称和引擎ID注册新用户、则此操作将被拒绝。' 
 ---
-= 注册SNMPv3 USM用户
+= 注册 SNMPv3 USM 用户 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

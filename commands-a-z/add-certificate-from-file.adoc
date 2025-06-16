@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add certificate file, supported arrays, syntax, parameters, minimum firmware level 
 summary: 使用从文件添加证书命令可以从文件中获取证书并将其添加到CLI软件包的信任存储中。添加的证书仅供命令行界面软件包使用。 
 ---
-= 从文件添加证书
+= 从文件添加证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

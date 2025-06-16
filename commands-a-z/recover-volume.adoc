@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recover, raid, volume 
 summary: recover volume命令将使用给定属性创建RAID卷、而不会初始化驱动器上的任何用户数据区域。 
 ---
-= 恢复RAID卷
+= 恢复 RAID 卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

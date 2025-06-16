@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, performance, statistics 
 summary: show volume performanceStats命令可返回有关卷性能的信息。 
 ---
-= 显示卷性能统计信息
+= 显示卷性能统计数据 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, tray, locate 
 summary: start tray locate命令可通过打开指示灯来定位托盘。 
 ---
-= 启动托盘定位
+= 启动托盘定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

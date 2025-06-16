@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, volumegroup, security, command, non secure, volume, group 
 summary: enable VolumeGroup security命令可将非安全卷组转换为安全卷组。 
 ---
-= 启用卷组安全性
+= 启用卷组安全性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

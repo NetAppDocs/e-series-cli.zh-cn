@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, raid, volume, manual, drive, select 
 summary: create volume命令可创建一个新的卷组和卷、并可用于指定卷的驱动器。 
 ---
-= 创建RAID卷(手动选择驱动器)
+= 创建 RAID 卷（手动选择驱动器）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

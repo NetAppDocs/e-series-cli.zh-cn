@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, synchronous, mirror, synchronization 
 summary: start SyncMirror primary synchronize命令用于启动同步镜像同步。 
 ---
-= 启动同步镜像同步
+= 启动同步镜像同步 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

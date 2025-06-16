@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snmp, mib ii, system, group, variables 
 summary: 'show snmpSystemVariables命令可返回有关简单网络管理协议(Simple Network Management Protocol、SNMP)系统变量的信息。系统变量保存在管理信息库II (Management Information Base II、MIB-II)数据库中。' 
 ---
-= 显示SNMP MIB II系统组变量
+= 显示 SNMP MIB II 系统组变量 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

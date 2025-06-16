@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add volume, asynchronous, mirror group, supported arrays, roles, context, syntax, parameter, minimum firmware level 
 summary: add volume asyncMirrorGroup命令可将主卷添加到异步镜像组。 
 ---
-= 将卷添加到异步镜像组
+= 将卷添加到异步镜像组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

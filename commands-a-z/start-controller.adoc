@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, controller, trace 
 summary: start controller命令将启动一项操作、将调试跟踪信息保存到压缩文件中。 
 ---
-= 启动控制器跟踪
+= 启动控制器跟踪 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

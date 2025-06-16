@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, autosupport, message, collection, schedule 
 summary: reset storageArray AutoSupport schedule命令可将AutoSupport 消息发送回管理软件生成的随机值的每日和每周时间以及每周天数重置为。 
 ---
-= 重置AutoSupport 消息收集计划
+= 重置 AutoSupport 消息收集计划 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

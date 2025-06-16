@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add drives ssd cache, supported arrays, syntax, parameters, minimum firmware level 
 summary: 'set ssdCache命令可通过添加更多固态磁盘(SSD)来增加现有SSD缓存的容量。' 
 ---
-= 将驱动器添加到SSD缓存
+= 将驱动器添加到 SSD 缓存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

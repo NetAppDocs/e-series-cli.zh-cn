@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, ca, certificates 
 summary: save controller caCertificate命令可从指定控制器检索已安装的CA证书。检索到的证书中包括从控制器的Web服务器请求的任何CA证书。 
 ---
-= 检索已安装的CA证书
+= 检索已安装的 CA 证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

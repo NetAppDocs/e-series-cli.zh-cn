@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, asynchronous mirror group, consistency 
 summary: check asyncMirrorGroup repositoryConsistency命令可根据对指定异步镜像组的底层存储库卷中数据的分析生成报告。 
 ---
-= 检查异步镜像组一致性
+= 检查异步镜像组一致性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, command, tests, possible, communication, problems, local, storage, array, remote, asynchronous, mirror, group 
 summary: di诊断asyncMirrorGroup命令用于测试本地存储阵列与与异步镜像组关联的远程存储阵列之间可能存在的通信问题。 
 ---
-= 测试异步镜像组连接
+= 测试异步镜像组连接 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

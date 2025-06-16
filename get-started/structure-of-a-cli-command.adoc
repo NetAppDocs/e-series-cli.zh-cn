@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: structure, cli, commands 
 summary: CLI命令采用命令包装器的形式、并在包装器中嵌入一些元素。 
 ---
-= CLI命令的结构
+= 了解 SANtricity CLI 命令的结构
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

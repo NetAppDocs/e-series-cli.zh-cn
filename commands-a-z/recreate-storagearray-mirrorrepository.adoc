@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recreate, synchronous, mirror, repository, volume 
 summary: 'recreate storageArray mirrorRepository命令可使用为先前镜像存储库卷定义的参数创建新的同步镜像存储库卷(也称为镜像存储库卷)。' 
 ---
-= 重新创建同步镜像存储库卷
+= 重新创建同步镜像存储库卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

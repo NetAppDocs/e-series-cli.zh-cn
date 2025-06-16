@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, attributes, disk pool 
 summary: set volumes命令用于定义磁盘池中卷的属性。 
 ---
-= 为磁盘池中的卷设置卷属性
+= 设置磁盘池中卷的卷属性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

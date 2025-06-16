@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, copy, target, candidates 
 summary: show volumeCopy source targetCandidates命令可返回有关可用作卷复制操作目标的候选卷的信息。此命令适用于Snapshot卷副本对。 
 ---
-= 显示卷副本目标候选项
+= 显示卷复制目标候选 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

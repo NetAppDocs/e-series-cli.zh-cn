@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: name, conventions 
 summary: 对于CLI命令中使用的名称、必须遵循特定规则。 
 ---
-= 命名约定
+= 了解 SANtricity CLI 命名约定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

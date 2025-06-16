@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, host group 
 summary: create hostGroup命令将创建一个新的主机组。 
 ---
-= 创建主机组
+= 创建主机组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

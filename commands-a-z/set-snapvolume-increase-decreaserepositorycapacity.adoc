@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, volume, repository, capacity 
 summary: set snapVolume increase/decreposeRepositoryCapacity命令可增加或减少快照卷存储库卷的容量。 
 ---
-= 设置Snapshot卷存储库卷容量
+= 设置快照卷存储库卷容量 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

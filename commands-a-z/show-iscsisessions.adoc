@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, current, iscsi, sessions 
 summary: show iscsiSessions命令可返回有关iSCSI启动程序或iSCSI目标的iSCSI会话的信息。 
 ---
-= 显示当前iSCSI会话
+= 显示当前 iSCSI 会话 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

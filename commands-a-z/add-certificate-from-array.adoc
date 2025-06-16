@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add certificate array, supported, syntax, parameters, minimum firmware level 
 summary: 使用Add certificate from array命令可以从阵列获取证书并将其添加到CLI软件包的信任存储中。添加的证书仅供命令行界面软件包使用。 
 ---
-= 从阵列添加证书
+= 从阵列添加证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

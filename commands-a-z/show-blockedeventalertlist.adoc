@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, blocked, events 
 summary: 'show blockedEventAlertList命令可返回当前已被set blockEventAlert命令阻止的事件列表。此列表中的事件不会发送您使用警报终端和参数(即电子邮件、系统日志和陷阱通知)配置的任何通知。' 
 ---
-= 显示阻止的事件
+= 显示阻止的事件 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

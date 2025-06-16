@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, tray, locate 
 summary: stop tray locate命令用于关闭由start tray locate命令打开的托盘上的指示灯。 
 ---
-= 停止托盘定位
+= 停止托盘定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

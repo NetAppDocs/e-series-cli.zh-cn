@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host 
 summary: set host命令可将主机分配给主机组或将主机移动到其他主机组。 
 ---
-= 设置主机
+= 设置主机 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

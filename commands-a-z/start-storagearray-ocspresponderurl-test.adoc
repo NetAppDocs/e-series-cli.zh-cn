@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, ocsp, server, url, test 
 summary: 'start storageArray ocspResponderUrl测试命令会检查与联机证书状态协议(Online Certificate Status Protocol、OCSP)服务器的指定URL的连接是否已打开。' 
 ---
-= 启动OCSP服务器URL测试
+= 启动 OCSP 服务器 URL 测试 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, volume, distribution 
 summary: 'reset storageArray volumeDistribution命令可将所有卷重新分配(移动)到其首选控制器。' 
 ---
-= 重置存储阵列卷分布
+= 重置存储阵列卷分布 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

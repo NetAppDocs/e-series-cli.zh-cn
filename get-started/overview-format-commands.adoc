@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: overview, cli 
 summary: 命令行界面（ CLI ）是一种软件应用程序，可用于配置和监控存储阵列。 
 ---
-= CLI概述
+= 了解 SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

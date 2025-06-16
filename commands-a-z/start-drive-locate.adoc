@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, locate 
 summary: start drive locate命令可通过打开驱动器上的指示灯来定位驱动器。 
 ---
-= 启动驱动器定位
+= 启动驱动器定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

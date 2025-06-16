@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, volume, unreadable, sectors 
 summary: clear volume unreadableSectors命令可清除一个或多个卷中无法读取的扇区信息。 
 ---
-= 清除卷不可读扇区
+= 清除卷不可读扇区 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

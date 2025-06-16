@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, iscsi, initiator 
 summary: set iscsiInitiator命令用于设置iSCSI启动程序的属性。 
 ---
-= 设置iSCSI启动程序
+= 设置 iSCSI 启动器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

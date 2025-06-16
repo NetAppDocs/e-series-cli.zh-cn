@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, synchronous, mirroring status 
 summary: check SyncMirror 命令将返回远程镜像卷的状态。使用此命令可确定何时远程镜像卷的状态变为最佳状态。 
 ---
-= 检查同步镜像状态
+= 检查同步镜像状态 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

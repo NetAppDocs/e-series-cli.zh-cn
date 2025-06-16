@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, check, volume, parity, job 
 summary: 'start check volume parity job"命令可在给定卷上启动新的检查卷奇偶校验操作。' 
 ---
-= 启动检查卷奇偶校验作业
+= 启动检查卷奇偶校验作业 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

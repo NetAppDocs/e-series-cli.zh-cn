@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, reconstruction 
 summary: start drive reconstruct命令将开始重建驱动器。 
 ---
-= 启动驱动器重建
+= 开始驱动器重建 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

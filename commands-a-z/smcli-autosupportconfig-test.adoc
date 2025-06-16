@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, autosupport, configuration 
 summary: 使用smcli -autosupportConfig测试命令发送测试消息以测试AutoSupport 配置。此命令在管理域上运行。存储管理软件会在管理域中选择一个支持自动支持的阵列、以便在测试消息中包含样本数据。 
 ---
-= 测试AutoSupport 配置
+= 测试 AutoSupport 配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

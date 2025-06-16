@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, controller, health, image, allow, overwrite 
 summary: set storageArray controllerHealthImageAllowOverWrite命令可在控制器上设置一个标志、以允许新的控制器运行状况映像覆盖支持控制器运行状况映像功能的存储阵列上的现有控制器运行状况映像。 
 ---
-= 设置存储阵列控制器运行状况映像允许覆盖
+= 设置存储阵列控制器运行状况映像允许覆盖 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

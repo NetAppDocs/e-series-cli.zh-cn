@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, autosupport, manual, dispatch 
 summary: start storageArray AutoSupport manualdispatch命令可为支持包启动完整的支持包和ASUP派单。 
 ---
-= 启动存储阵列AutoSupport 手动派遣
+= 启动存储阵列 AutoSupport 手动调度 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

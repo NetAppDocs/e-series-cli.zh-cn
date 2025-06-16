@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, iscsi, baseline 
 summary: reset storageArray iscsiStatsBaseline命令可将存储阵列的iSCSI基线重置为0。 
 ---
-= 重置存储阵列iSCSI基线
+= 重置存储阵列 iSCSI 基线 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

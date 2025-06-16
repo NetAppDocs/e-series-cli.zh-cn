@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, incomplete, asynchronous, mirror, pair, group 
 summary: remove asyncMirrorGroup命令可删除存储阵列上的一个孤立镜像对卷。 
 ---
-= 从异步镜像组中删除不完整的异步镜像对
+= 从异步镜像组中删除不完整的异步镜像对 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

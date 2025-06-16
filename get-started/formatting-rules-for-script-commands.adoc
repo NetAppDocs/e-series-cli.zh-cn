@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: format, rules, script, commands 
 summary: 每个脚本命令问题描述 末尾的注释部分介绍了特定脚本命令特有的语法。 
 ---
-= 脚本命令的格式规则
+= SANtricity CLI 脚本命令的格式规则
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

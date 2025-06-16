@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, diskpool, security, command, convert, non secure, diskpool, support, arrays, role, context 
 summary: enable diskPool security命令可将非安全磁盘池转换为安全磁盘池。 
 ---
-= 启用磁盘池安全性
+= 启用磁盘池安全 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

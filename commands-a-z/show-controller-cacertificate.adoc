@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, installed, root, intermediate, ca, certificates, summary 
 summary: show controller caCertificate命令可显示指定控制器中已安装的CA证书摘要。在执行delete controller caCertificate命令之前、可以使用此命令、以便您知道要删除的证书的别名。 
 ---
-= 显示已安装的根/中间CA证书摘要
+= 显示已安装的根 / 中间 CA 证书摘要 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

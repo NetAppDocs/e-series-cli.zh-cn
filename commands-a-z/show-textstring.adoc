@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, str 
 summary: show textstring命令显示脚本文件中的一个文本字符串。此命令与MS-DOS和UNIX中的echo命令类似。 
 ---
-= 显示字符串
+= 显示字符串 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

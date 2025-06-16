@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, read only, snapshot, volume 
 summary: create snapVolume命令可为基础卷的快照映像创建只读快照卷。要将只读快照卷更改为读/写卷、请使用set snapVolume convertToReadWrite命令。 
 ---
-= 创建只读Snapshot卷
+= 创建只读快照卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

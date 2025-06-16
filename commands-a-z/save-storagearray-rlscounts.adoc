@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, rls, counts 
 summary: 'save storageArray RLSCounts命令可将读取链路状态(RLS)计数器保存到文件中。' 
 ---
-= 保存存储阵列RLS计数
+= 保存存储阵列 RLS 计数 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmpv3, usm, user 
 summary: 'set snmpUser username命令可更新现有的简单网络管理协议(Simple Network Management Protocol、SNMP) USM用户。如果只有一个用户具有要更改的USM用户名、则此用户名会使用用户名进行标识。如果多个用户具有相同的用户名和不同的引擎ID、则会使用用户名和引擎ID来标识此用户。' 
 ---
-= 更新SNMPv3 USM用户
+= 更新 SNMPv3 USM 用户 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

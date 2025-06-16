@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, asynchronous, mirror, group 
 summary: set asyncMirrorGroup命令可更改异步镜像组主端的控制器所有者在执行初始同步或重新同步时使用的同步设置和警告阈值。 
 ---
-= 设置异步镜像组
+= 设置异步镜像组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

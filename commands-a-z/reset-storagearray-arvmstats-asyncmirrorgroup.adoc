@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, asynchronous, mirror group, statistics 
 summary: reset storageArray arvmStats asyncMirrorGroup命令会将异步镜像组中一个或多个成员卷的同步统计信息重置为相对0。 
 ---
-= 重置异步镜像组统计信息
+= 重置异步镜像组统计信息 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

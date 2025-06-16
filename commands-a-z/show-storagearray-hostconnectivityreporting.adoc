@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, host, connectivity, report 
 summary: show storageArray hostConnectivityReporting命令可返回主机连接报告功能的启用状态。 
 ---
-= 显示存储阵列主机连接报告
+= 显示存储阵列主机连接报告 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, ssd, cache 
 summary: resume ssdCache命令将重新启动使用SSD缓存的所有卷的缓存、此缓存是使用suspend ssdCache命令临时停止的。 
 ---
-= 恢复SSD缓存
+= 恢复 SSD 缓存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, controller, datatransfer, command, revive, quiesced, running, diagnostics, role, syntax, parameter, firmware level 
 summary: enable controller dataTransfer命令可对运行诊断时已暂停的控制器进行恢复。 
 ---
-= 启用控制器数据传输
+= 启用控制器数据传输 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

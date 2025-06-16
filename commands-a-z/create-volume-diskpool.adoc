@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, disk pool 
 summary: create volume diskPool命令可在现有磁盘池中创建新的标准RAID卷或精简卷。 
 ---
-= 在磁盘池中创建卷
+= 在磁盘池中创建卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

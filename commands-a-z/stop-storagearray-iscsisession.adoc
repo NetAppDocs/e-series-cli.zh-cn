@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, iscsi session 
 summary: stop storageArray iscsiSession命令可强制终止存储阵列iSCSI会话。 
 ---
-= 停止存储阵列iSCSI会话
+= 停止存储阵列 iSCSI 会话 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

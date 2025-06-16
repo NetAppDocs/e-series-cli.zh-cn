@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: exit, status 
 summary: 执行的命令将返回退出状态。此表列出了可能返回的退出状态以及每个状态的含义。 
 ---
-= 退出状态
+= 了解 SANtricity CLI 退出状态
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

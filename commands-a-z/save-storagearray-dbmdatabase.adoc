@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, dbm, database 
 summary: save storageArray dbmDatabase命令可将RAID配置数据或所有数据备份到主机上的文件中。您可以指定多个数据位置和控制器。 
 ---
-= 保存存储阵列DBM数据库
+= 保存存储阵列 DBM 数据库 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

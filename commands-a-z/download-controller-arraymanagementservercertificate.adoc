@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, controller, array, management, server, certificate, command, install 
 summary: download controller arrayManagementServerCertificate命令可在控制器上安装服务器证书。 
 ---
-= 安装服务器签名证书
+= 安装服务器签名证书 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

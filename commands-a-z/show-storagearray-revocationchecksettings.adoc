@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, certificate, revocation, check, set 
 summary: 使用show storageArray revocationCheckSettings命令可以查看存储阵列的证书撤消设置。 
 ---
-= 显示证书撤消检查设置
+= 显示证书吊销检查设置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

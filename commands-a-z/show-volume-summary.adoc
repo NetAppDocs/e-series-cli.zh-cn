@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume 
 summary: show volume summary命令可返回有关卷的信息。 
 ---
-= 显示卷
+= 显示音量 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

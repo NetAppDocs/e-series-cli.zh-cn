@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, directory, server, role, map 
 summary: 使用set storageArray directoryServer roles命令可以为指定目录服务器定义角色映射。这些角色映射用于对尝试执行各种SMcli命令的用户进行身份验证。 
 ---
-= 设置存储阵列目录服务器角色映射
+= 设置存储阵列目录服务器角色映射 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

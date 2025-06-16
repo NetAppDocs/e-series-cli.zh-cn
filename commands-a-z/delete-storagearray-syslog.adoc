@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, syslog, command, allow, delete, specified, configuration, storing, audit, logs, role 
 summary: 使用delete storageArray syslog命令可以删除用于存储审核日志的指定系统日志配置。 
 ---
-= 删除存储阵列系统日志配置
+= 删除存储阵列 syslog 配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

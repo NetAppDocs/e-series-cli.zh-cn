@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, input, output, controller, ioc, dump 
 summary: start IOCLog命令可生成主机与控制器之间数据传输的IOC日志的转储。 
 ---
-= 启动输入输出控制器(IOC)转储
+= 启动输入输出控制器 (IOC) 转储 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

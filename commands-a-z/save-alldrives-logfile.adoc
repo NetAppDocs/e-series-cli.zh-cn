@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, drive log 
 summary: save allDrives logfile命令可将驱动器日志保存到文件中。 
 ---
-= 保存驱动器日志
+= 保存驱动器日志 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

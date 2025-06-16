@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, controller 
 summary: reset controller命令用于重置控制器、并对I/O操作造成中断。 
 ---
-= 重置控制器
+= 重置控制器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

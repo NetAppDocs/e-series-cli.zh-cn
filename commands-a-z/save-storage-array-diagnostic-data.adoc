@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, diagnostic, data 
 summary: 'save storageArray diagnosticData命令可将控制器或环境服务模块(ESM)中的存储阵列诊断数据保存到文件中。' 
 ---
-= 保存存储阵列诊断数据
+= 保存存储阵列诊断数据 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

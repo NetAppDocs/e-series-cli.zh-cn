@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, host 
 summary: delete host命令可删除一个或多个主机。 
 ---
-= 删除主机
+= 删除主机 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

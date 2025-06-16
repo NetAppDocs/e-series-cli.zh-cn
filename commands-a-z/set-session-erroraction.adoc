@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, session 
 summary: set session errorAction命令用于定义当前脚本引擎会话的运行方式。 
 ---
-= 设置会话
+= 设置会话 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

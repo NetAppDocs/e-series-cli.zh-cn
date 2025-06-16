@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, asynchronous, mirror group 
 summary: delete asyncMirrorGroup命令可从本地存储阵列和远程存储阵列中删除一个或多个异步镜像组。 
 ---
-= 删除异步镜像组
+= 删除异步镜像组 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

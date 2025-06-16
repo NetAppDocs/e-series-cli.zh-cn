@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: establish, asynmirror, volume, asynchronous, mirrored, remote, storage, array, secondary, existing 
 summary: 使用establish asyncMirror volume命令可通过向现有异步镜像组添加二级卷来完成远程存储阵列上的异步镜像对。 
 ---
-= 建立异步镜像对
+= 建立异步镜像对 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

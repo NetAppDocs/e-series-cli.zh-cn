@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, server, ipv6, address 
 summary: set storageArray isnssIPv6Address命令用于设置iSNS服务器的IPv6地址。 
 ---
-= 设置存储阵列iSNS服务器IPv6地址
+= 设置存储阵列 iSNS 服务器 IPv6 地址 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

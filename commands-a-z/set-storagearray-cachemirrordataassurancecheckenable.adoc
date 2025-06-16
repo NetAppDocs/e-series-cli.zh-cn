@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, enable, disable, cache, mirror, data, assurance, check 
 summary: 使用set storageArray cacheMirrorDataAssuranceCheckEnable命令可以启用或禁用缓存镜像数据保证检查。 
 ---
-= 设置存储阵列以启用或禁用缓存镜像数据保证检查
+= 设置存储阵列以启用或禁用缓存镜像数据保证检查 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

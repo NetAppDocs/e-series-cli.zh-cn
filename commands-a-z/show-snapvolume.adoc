@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snapshot, volumes 
 summary: show snapVolume命令可返回有关一个或多个快照卷的信息。 
 ---
-= 显示Snapshot卷
+= 显示快照卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

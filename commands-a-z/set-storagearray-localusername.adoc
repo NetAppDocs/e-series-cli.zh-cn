@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, local, user, password, symbol 
 summary: 使用set storageArray localUsername命令和set storageArray symbolE命令可以为特定角色设置本地用户名密码或符号密码。 
 ---
-= 设置存储阵列本地用户密码或符号密码
+= 设置存储阵列本地用户密码或 SYMbol 密码 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, dbm, database 
 summary: show storageArray dbmDatabase命令可检索并显示存储阵列的板载备份位置的元数据。如果存在多个备份位置、则会显示每个位置的元数据。 
 ---
-= 显示存储阵列DBM数据库
+= 显示存储阵列 DBM 数据库 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

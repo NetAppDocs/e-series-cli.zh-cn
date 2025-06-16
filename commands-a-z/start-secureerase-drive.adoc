@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, fde, secure, drive, erase 
 summary: 'start secureErase drive命令会擦除一个或多个全磁盘加密(Full Disk Encryption、FDE)驱动器中的所有数据、以便可以重复使用这些数据作为FDE驱动器。' 
 ---
-= 启动FDE安全驱动器擦除
+= 启动 FDE 安全驱动器擦除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

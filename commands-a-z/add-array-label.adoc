@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add array label, supported, syntax, parameters, minimum firmware level 
 summary: 使用添加阵列标签命令可以使用用户定义的标签向配置中添加存储阵列。这样、以后的命令便可按用户定义的标签而非IP地址或主机名来处理存储阵列。 
 ---
-= 添加阵列标签
+= 添加阵列标签 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
