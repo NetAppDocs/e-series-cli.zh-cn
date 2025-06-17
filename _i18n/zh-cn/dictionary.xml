@@ -8052,4 +8052,15 @@
   <block id="912cc2f8fec83a8f0f502fa5d8213432" category="doc">了解 SANtricity CLI 脚本命令的结构</block>
   <block id="7749a7749c067a57803053149311ba25" category="doc">了解 SANtricity CLI 脚本命令</block>
   <block id="7aa1a554fa97ed75a945661977f56a71" category="doc">了解 SANtricity CLI 脚本命令指南</block>
+  <block id="1058acabad7d380a159f7b360e998541" category="doc">删除存储阵列目录服务器角色映射 - SANtricity CLI</block>
+  <block id="750f2015aa86d9041032b6e31b016ffc" category="doc">检索 AutoSupport 日志 - SANtricity CLI</block>
+  <block id="e909f921f058925e1cabf0382134a409" category="doc">指定电子邮件 (SMTP) 传送方法 - SANtricity CLI</block>
+  <block id="13b29b369627a8762d659707e2c88c98" category="doc">设置 AutoSupport 消息收集计划 - SANtricity CLI</block>
+  <block id="79c21ee853268bd1efb1f43b08cd1fbb" category="doc">启用或禁用 AutoSupport OnDemand 功能 - SANtricity CLI</block>
+  <block id="f66c4f8f0cfa6e1e6f26f715e81f5256" category="doc">启用或禁用 AutoSupport 远程诊断功能 - SANtricity CLI</block>
+  <block id="ed9c4e8c83c471f9760e56566de86f3b" category="doc">设置存储阵列目录服务器 - SANtricity CLI</block>
+  <block id="6d088a164106b426d7a263dc45b921e5" category="doc">设置存储阵列管理界面 - SANtricity CLI</block>
+  <block id="689cb466298a6f4a3ed62c1390e5efa5" category="doc">在重建时设置存储阵列 PQ 验证 - SANtricity CLI</block>
+  <block id="e35c8154d8766fae2d703fd86691dd17" category="doc">显示存储阵列目录服务摘要 - SANtricity CLI</block>
+  <block id="9c2c5321d557134684387393df84bc13" category="doc">测试存储阵列目录服务器 - SANtricity CLI</block>
 </blocks>

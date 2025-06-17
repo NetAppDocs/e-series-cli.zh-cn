@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, management, interface 
 summary: set storageArray managementInterface命令用于更改控制器的管理接口。更改管理接口类型以在存储阵列与其管理软件之间实施机密性、或者访问外部工具。 
 ---
-= 设置存储阵列管理接口
+= 设置存储阵列管理界面 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

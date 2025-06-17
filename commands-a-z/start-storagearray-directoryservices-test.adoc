@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, storage, array, directory, server 
 summary: start storageArray DirectoryServices test命令可检查与所有已配置目录服务器的通信并验证服务器域配置。 
 ---
-= 测试存储阵列目录服务器
+= 测试存储阵列目录服务器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, storage array, directory, server, role, mapping 
 summary: remove storageArray directoryServer命令可删除为指定目录服务器定义的角色映射。 
 ---
-= 删除存储阵列目录服务器角色映射
+= 删除存储阵列目录服务器角色映射 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

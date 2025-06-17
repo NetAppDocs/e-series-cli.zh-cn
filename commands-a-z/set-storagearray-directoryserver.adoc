@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, directory, server 
 summary: set storageArray directoryServer命令用于更新目录服务器配置。 
 ---
-= 设置存储阵列目录服务器
+= 设置存储阵列目录服务器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, directory, services, summary 
 summary: show storageArray DirectoryServices summary命令可显示目录服务配置摘要。 
 ---
-= 显示存储阵列目录服务摘要
+= 显示存储阵列目录服务摘要 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
