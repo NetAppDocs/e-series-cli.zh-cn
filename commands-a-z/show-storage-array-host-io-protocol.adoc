@@ -43,4 +43,4 @@ show storageArray hostIoProtocolInfo;
 
 == 最低固件级别
 
-12.0
+12.00

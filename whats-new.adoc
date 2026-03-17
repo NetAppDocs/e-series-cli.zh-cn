@@ -25,9 +25,9 @@ summary: 本主题列出了最新版本的SANtricity System Manager命令行界�
 ====
 
 
-== SANtricity 12.0
+== SANtricity 12.00
 
-下表列出了对 12.0 版 CLI 和脚本命令所做的更改。
+下表列出了对 12.00 版 CLI 和脚本命令所做的更改。
 
 [cols="2*"]
 |===
