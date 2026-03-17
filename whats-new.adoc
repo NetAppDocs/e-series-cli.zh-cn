@@ -25,6 +25,44 @@ summary: 本主题列出了最新版本的SANtricity System Manager命令行界�
 ====
 
 
+== SANtricity 12.0
+
+下表列出了对 12.0 版 CLI 和脚本命令所做的更改。
+
+[cols="2*"]
+|===
+| 命令 | 问题描述 of Change 
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-host-io-protocol.html["设置存储阵列主机 I/O 协议"]
+ a| 
+已添加命令。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/show-storage-array-host-io-protocol.html["显示存储阵列主机 I/O 协议信息"]
+ a| 
+已添加命令。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/start-storagearray-externalkeymanagement-test.html["测试外部密钥管理通信"]
+ a| 
+在命令输出中添加了测试 KMS 通信结果。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-managementinterface.html["设置存储阵列管理接口"]
+ a| 
+已删除命令。
+
+|===
+
+
 == SANtricity 11.90
 
 下表列出了对11.90版的CLI和脚本命令进行的更改。
@@ -214,14 +252,14 @@ xref:./commands-a-z/start-volumegroup-fullprovisioning.adoc[启动卷组完全�
 
 
  a| 
-xref:./commands-a-z/recreate-storagearray-securitykey.html[重新创建外部安全密钥]
+xref:./commands-a-z/recreate-storagearray-securitykey.adoc[重新创建外部安全密钥]
  a| 
 已添加`dDeleteOldKey`参数。
 
 
 
  a| 
-xref:./commands-a-z/create-diskpool.html[创建磁盘池]
+xref:./commands-a-z/create-diskpool.adoc[创建磁盘池]
  a| 
 已更新`driveCount`参数问题描述。
 

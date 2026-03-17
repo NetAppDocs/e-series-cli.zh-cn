@@ -99,6 +99,8 @@ link:../commands-a-z/reset-storagearray-hostportstatisticsbaseline.html["重置�
 
 link:../commands-a-z/save-storagearray-hostportstatistics.html["保存存储阵列主机端口统计信息"]
 
+link:../commands-a-z/set-storagearray-host-io-protocol.html["设置存储阵列主机 I/O 协议"]
+
 link:../commands-a-z/set-controller-hostport.html["设置控制器主机端口属性"]
 
 link:../commands-a-z/set-target.html["设置目标属性"]
@@ -108,6 +110,8 @@ link:../commands-a-z/set-controller-iscsihostport.html["设置iSCSI主机端口�
 link:../commands-a-z/set-iscsiinitiator.html["设置iSCSI启动程序"]
 
 link:../commands-a-z/show-storagearray-unconfigurediscsiinitiators.html["显示存储阵列未配置的iSCSI启动程序"]
+
+link:../commands-a-z/show-storage-array-host-io-protocol.html["显示存储阵列主机 I/O 协议"]
 
 link:../commands-a-z/show-storagearray-unconfiguredinitiators.html["显示未配置的启动程序"]
 

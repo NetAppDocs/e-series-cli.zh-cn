@@ -21,4 +21,4 @@ summary: 命令行界面（ CLI ）是一种软件应用程序，可用于配置
 
 您的E系列存储系统可能无法使用本文档中介绍的某些软件功能。有关可用功能的问题、请联系您的客户代表。
 
-CLI是SANtricity 存储管理器软件的一项功能。
+CLI 是 SANtricity System Manager 软件的一项功能。

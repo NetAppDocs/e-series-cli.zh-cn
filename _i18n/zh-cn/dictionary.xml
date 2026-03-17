@@ -376,7 +376,6 @@
   <block id="43fc05846dc9a6463afd1a669e1e6af3" category="paragraph">通过CLI、您可以直接访问脚本引擎、该引擎是存储管理软件中的一个实用程序。脚本引擎运行用于配置和管理存储阵列的命令。脚本引擎通过脚本文件或直接从命令行读取命令、并执行命令指示的操作。</block>
   <block id="3ab8d5bf5932f687f0670270fa3cf437" category="paragraph">脚本命令用于配置和管理存储阵列。脚本命令与命令行界面命令不同。您可以输入单个脚本命令、也可以运行脚本命令文件。输入单个脚本命令时、您可以将此脚本命令嵌入到CLI命令中。运行脚本命令文件时、您可以在命令行界面命令中嵌入文件名。</block>
   <block id="155d01e6206b0910227f88561d2675bf" category="paragraph">您的E系列存储系统可能无法使用本文档中介绍的某些软件功能。有关可用功能的问题、请联系您的客户代表。</block>
-  <block id="ab2307dc857f6a7ccdbed0391d1f8d0a" category="paragraph">CLI是SANtricity 存储管理器软件的一项功能。</block>
   <block id="a756bcc5185086b47d7c3f4c343e3b89" category="doc">脚本命令准则</block>
   <block id="80e9d60e2926365dfd876497329f1728" category="paragraph">此列表提供了在命令行上写入脚本命令的准则：</block>
   <block id="1fdcd0e53c86070c975139e3c6ff054d" category="list-text">所有命令都必须以分号(`；`)结尾。</block>
@@ -848,8 +847,6 @@
   <block id="1a2e5a82588de3119624b0d7cbca73cc" category="paragraph">8.40</block>
   <block id="6d43cb3c696995e6401895eb7f796367" category="summary">在输入一组未分配的驱动器时、create VolumeGroup命令会创建一个可用容量卷组或一个包含一个卷的卷组。</block>
   <block id="9033a3ccdba951bc32dcae4625771ad8" category="paragraph">输入一组未分配的驱动器时、`create VolumeGroup`命令将创建一个可用容量卷组或一个包含一个卷的卷组。</block>
-  <block id="493b94633ddc6a0787d6f81edce51389" category="paragraph">此命令将适用场景 任意单个存储阵列、包括E2700、E5600、E2800、E5700、 EF600和EF300阵列、前提是安装了所有SMcli软件包。</block>
-  <block id="0ac29acf0d9d736c28e41361a4dd4086" category="paragraph">要在E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。</block>
   <block id="a537046f5a9794596cc0de6721bc7156" category="paragraph">要分配给要创建的卷组的驱动器。对于大容量驱动器托盘、请指定驱动器的托盘ID值、抽盒ID值和插槽ID值。对于低容量驱动器托盘、请指定驱动器的托盘ID值和插槽ID值。托盘ID值为`0`到`99`。抽盒ID值为`1`到`5`。</block>
   <block id="27827eafe545a4ec5a6f65bbefb700f1" category="paragraph">`raidLevel`</block>
   <block id="d79eb7b9cb0d7237808dcdd9400420ea" category="paragraph">包含卷的卷组的RAID级别。有效值为`0`、`1`、`3`、`5`或`6`。</block>
@@ -878,7 +875,6 @@
   <block id="04a89f6222559bcfd96ade14020414dc" category="list-text">`capable`—卷组和卷可以设置安全设置、但尚未启用安全性。</block>
   <block id="33cc045aa5e80c8b261c3b7ec5363106" category="list-text">`enabled`—卷组和卷已启用安全性。</block>
   <block id="22bbe7cc6b304b85470bc52a030df23d" category="paragraph">`resourceProvisioningCapable`</block>
-  <block id="ca1a46dc2dc2b5162ee71f85f2908d8c" category="paragraph">用于指定是否启用资源配置功能的设置。要禁用资源配置、请将此参数设置为`false`。默认值为`true`。</block>
   <block id="25b49016b88e4b8ba70e5ccf70308d23" category="section-title">驱动器和卷组</block>
   <block id="549f85288cdf8090735073dfe97943ed" category="paragraph">卷组是一组驱动器、这些驱动器由存储阵列中的控制器逻辑分组在一起。卷组中的驱动器数量是RAID级别和控制器固件的限制。创建卷组时、请遵循以下准则：</block>
   <block id="135d47fb44c28bb4a8373b3ccb13b5fb" category="list-text">从固件版本7.10开始、您可以创建一个空卷组、以便预留容量供日后使用。</block>
@@ -1879,8 +1875,6 @@
   <block id="3d9bdef2e7abec1617d66c49ac79224a" category="paragraph">使用`_start storageArray AutoSupport deliveryTest_`命令发送测试消息、以验证是否已正确设置您的交付方法。</block>
   <block id="1a4e509a921af1d26cf3a82537a2783b" category="summary">start VolumeGroup resourceProvisioning命令可对给定卷组启用资源配置、并对卷组中的每个卷启动资源配置启用异步操作。资源配置要求卷组中的所有驱动器都支持NVMe的DULBE"功能。</block>
   <block id="7710f4628a58f181c0098dfeaa5522f9" category="paragraph">`sstart VolumeGroup resourcesProvisioning`命令可在给定卷组上启用资源配置、并对卷组中的每个卷启动资源配置启用异步操作。资源配置要求卷组中的所有驱动器都支持NVMe的DULBE"功能。</block>
-  <block id="51d14daebf47942cba93531e75da6df2" category="paragraph">此命令可对任何单个存储阵列执行适用场景 操作、包括EF600和EF300阵列；前提是安装了所有SMcli软件包。</block>
-  <block id="e3d98f0701b3ce54eae2021e986f589c" category="paragraph">要在EF600和EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。</block>
   <block id="e937f5b811c52d80b38da404f68bb9bf" category="paragraph">要在卷组上禁用资源配置、请使用带有选项的full provisioning命令禁用资源配置。如果所有驱动器均支持DULBE"且存储阵列的`resourceProvisionedVolumes`设置为`true`、则在创建卷组时将配置资源。</block>
   <block id="568a1c4dfd0ebaa9f2ae968fffd64a4e" category="paragraph">`volumeGroupName`</block>
   <block id="da1d163125a598ebfee2a7be9377074f" category="paragraph">要启用资源配置功能的卷组。将卷组名称用方括号([])括起来。</block>
@@ -1964,7 +1958,6 @@
   <block id="2b4eebf5cddedcb415d099d436cddc4b" category="paragraph">如果快照组为空或包含快照映像、则可以将其删除。快照组中的所有快照映像都会与快照组一起删除。如果快照组中的任何现有快照映像具有关联的快照卷、则每个快照卷都会停止并与快照映像断开连接。删除快照组时、关联的存储库卷也会被删除。默认情况下、存储库卷中的所有成员卷都保留为未使用的未映射标准卷。要删除成员卷、请将`dDeleteRepositoryMembers`参数设置为`true`、或者不要使用此参数。要保留成员卷、请将`deleteRepositoryMembers`参数设置为`false`。</block>
   <block id="3ac2ae2f311b9a99c93e008865d43ee3" category="summary">使用Remove array label命令可以删除存储阵列的用户定义标签。</block>
   <block id="f7c4d1638cca8e35298b6279e814c1ad" category="paragraph">使用`Remove array label`命令可以删除存储阵列的用户定义标签。</block>
-  <block id="2d7a70f29e27325f9061fc060147f639" category="paragraph">此命令用于对EF600和EF300存储阵列执行适用场景。</block>
   <block id="93292b886dea7281a41d0b1f15f0c656" category="paragraph">`userDefinedString`</block>
   <block id="a04a6d8e349cb879fdb3cb5a0d615020" category="paragraph">用于为存储阵列指定用户定义的标签。</block>
   <block id="fad8c1abc737c1d4b9a7f989ea897957" category="paragraph">8.60</block>
@@ -2155,7 +2148,6 @@
   <block id="88402f398309648d99632dd84f695988" category="list-text">此计划将于2014年5月10日5：10结束</block>
   <block id="c0d8694e265ecd1c02d1c658f8f52afb" category="summary">set storageArray resourcesProvisionedVolumes命令可禁用DULBE"功能。</block>
   <block id="ea5873faa3a54e14ad5b394046f4bcab" category="paragraph">使用`set storageArray resourcedVolumes`命令可禁用DULBEe功能。</block>
-  <block id="798cf5ce29a58c7b25e71c588600bc90" category="paragraph">要在EF600和EF300存储阵列上执行此命令、您必须具有存储管理员角色。</block>
   <block id="9916db1fb324eddbd8009e84252ebe31" category="paragraph">资源配置是一项可用功能、可用于快速初始化大型卷。</block>
   <block id="425013f9affebdfd307a15b3b0d92bba" category="paragraph">资源配置卷是SSD卷组或池中的厚卷、在创建卷时会分配(分配给卷)驱动器容量、但会取消分配(取消映射)驱动器块。对于资源配置的卷、不会进行有时间限制的后台初始化。而是在首次写入条带中的卷块时初始化每个RAID条带</block>
   <block id="e361db30b1320387a5a06de717cc2672" category="paragraph">只有SSD卷组和池支持资源配置的卷、其中组或池中的所有驱动器都支持NVMe已取消分配或未写入逻辑块错误启用(DULBE")错误恢复功能。创建资源配置的卷时、分配给该卷的所有驱动器块都会进行取消分配(未映射)。取消分配块可以延长SSD的使用寿命并提高最大写入性能。性能提升因驱动器型号和容量而异。</block>
@@ -3213,7 +3205,6 @@
   <block id="c970bec1629f871f237c6878071d884f" category="paragraph">`set storageArray odxEnabled`命令可为存储阵列启用或禁用卸载数据传输(Offloaded Data Transfer、ODX)。</block>
   <block id="eff39fcee33d70dce8145b0e779812a0" category="paragraph">存储阵列随附的ODX已打开。如果您不想运行ODX、或者ODX导致存储阵列出现问题、请使用此命令关闭ODX。唯一受影响的存储阵列是运行命令的存储阵列。</block>
   <block id="3a912690ececcbe120b969bd8fc69966" category="paragraph">用于打开或关闭ODX的设置。要打开ODX、请将此参数设置为`true`。要关闭ODX、请将此参数设置为`false`。默认设置是打开ODX。</block>
-  <block id="a27439d41e4d1da74ea84fd8ec69c6d6" category="paragraph">ODX可以在不使用缓冲读取和缓冲写入操作的情况下传输数据、并且不需要主机直接参与数据传输操作。如果未启用ODX、则数据将从源存储读取到主机、然后从主机写入到目标存储。启用ODX后、数据传输操作由存储基础架构直接管理。数据直接从源存储移动到目标存储、而无需通过主机。</block>
   <block id="7fd394b3aba1a459257a5bc772eedaf5" category="summary">create volume命令可创建一个新的卷组和卷、并可用于指定卷的驱动器。</block>
   <block id="ba13f7f543c37e1bd1e647a55d5220e3" category="paragraph">使用`create volume`命令可创建新的卷组和卷、并可指定卷的驱动器。</block>
   <block id="b51a39717fa2ac17232fba7903c63d30" category="paragraph">要分配给要创建的卷的驱动器。对于大容量驱动器托盘、请指定驱动器的托盘ID值、抽盒ID值和插槽ID值。对于低容量驱动器托盘、请指定驱动器的托盘ID值和插槽ID值。托盘ID值为`0`到`99`。抽盒ID值为`1`到`5`。</block>
@@ -3646,7 +3637,6 @@
   <block id="da22f440facb3666eaabf9ad3aa39429" category="paragraph">如果驱动器属于存储阵列中的卷组、则将其视为原生。如果驱动器不属于存储阵列中的卷组、或者无法使用卷组中要传输到新存储阵列的驱动器导入该驱动器、则该驱动器将视为外部驱动器。后一个故障会在新存储阵列上创建一个不完整的卷组。</block>
   <block id="dc285ce81bf0530aebeda687aec339c9" category="paragraph">仅将此操作用于紧急恢复：需要将一个或多个驱动器从外部驱动器状态更改为其原始卷组中的原生 状态时。</block>
   <block id="62856a7f1916d7319c95c63c31bc889f" category="paragraph">*可能的数据损坏或数据丢失*-如果出于先前所述的其他原因使用此命令、可能会导致数据丢失而不发出通知。</block>
-  <block id="e550583407050aac7add146f54c875ba" category="paragraph">所有插槽ID最大值均为24。插槽ID值从0或1开始、具体取决于托盘型号。与E2800、E5700、EF600和EF300控制器兼容的驱动器托盘的插槽ID编号从0开始。与E2700和E5600控制器兼容的驱动器托盘的插槽ID编号从1开始。</block>
   <block id="9c17a4a2cdf0912f4d9331b0b4e75592" category="paragraph">用于选择所有驱动器的设置。</block>
   <block id="6a61ed4a17f493246b07eb150243fc94" category="summary">reset storageArray SASPHYBaseline命令可重置所有设备的SAS物理层(SAS PHY)基线、并从.csv文件中删除错误列表。</block>
   <block id="aaddc8458e2ec4db4bc4354e46056f40" category="doc">重置存储阵列SAS PHY基线</block>
@@ -4463,7 +4453,6 @@
   <block id="10a61ca5e06c94732fd7b2b0d309ce36" category="paragraph">您可能需要在存储阵列上禁用自动负载平衡、原因如下：</block>
   <block id="8217b6cf459810a77b151eeab55af7e7" category="list-text">您不希望自动更改特定卷的控制器所有权以平衡工作负载。</block>
   <block id="d44be56633d0f5b5cc74cae0e83ceb99" category="list-text">您正在高度调整的环境中运行、在此环境中、负载分布会有针对性地进行设置、以便在控制器之间实现特定的分布。</block>
-  <block id="3122c046dc8cba068a03aa68a1ac7240" category="paragraph">在SANtricity 存储管理器中、选择*存储阵列*&gt;*配置*&gt;*自动负载平衡*菜单选项、以便为单个存储阵列启用或禁用自动负载平衡功能。</block>
   <block id="5e085fb4c29ff4949db8d7841016a93a" category="paragraph">在SANtricity 系统管理器中、选择*设置*&gt;*系统*、向下滚动到*其他设置*部分、单击E*启用/禁用自动负载平衡*链接、然后选中*启用/禁用自动负载平衡*复选框以对单个存储阵列启用或禁用此功能。</block>
   <block id="ad7f2b132a88e6ddf059d269897b9f7a" category="summary">reset storageArray RLSbaseline命令可将所有RLS计数设置为0、从而重置所有设备的读取链路状态(RLS)基线。</block>
   <block id="15de7c826924b8e353c35af3cc957d9d" category="doc">重置存储阵列RLS基线</block>
@@ -7242,7 +7231,6 @@
   <block id="2d30e328ae4f6dcf3d38d3968d0319a6" category="sidebar">暂停SyncMirror 主节点</block>
   <block id="16c09c2705a79763c9682b2f80400d1a" category="sidebar">验证storageArray安全密钥</block>
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">按类别显示命令</block>
-  <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">如果未先执行中列出的步骤、请勿执行这些步骤 <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
   <block id="9effc9edc3686486aaacfb6caa40aee6" category="paragraph"><block ref="9effc9edc3686486aaacfb6caa40aee6" category="inline-link-macro-rx"></block></block>
   <block id="ab21a9218cf2507b606b474a8958d92d" category="section-title">11.60及更高版本的可下载SMcli命令行参数</block>
   <block id="75842716a65060950b20cba161cbac95" category="admonition">要运行命令行界面命令的管理系统必须具有Java Runtime Environment (JRE) 8及更高版本。</block>
@@ -7322,8 +7310,6 @@
   <block id="183bf6a11cdfba8a784da30f0b6fe98e" category="paragraph"><block ref="183bf6a11cdfba8a784da30f0b6fe98e" category="inline-xref-macro-rx"></block></block>
   <block id="15be8376d068bc8b336d134596e6b779" category="paragraph"><block ref="15be8376d068bc8b336d134596e6b779" category="inline-xref-macro-rx"></block></block>
   <block id="b8a49e0477f4912fed8b11000c163cd5" category="paragraph"><block ref="b8a49e0477f4912fed8b11000c163cd5" category="inline-xref-macro-rx"></block></block>
-  <block id="b36598cc51fefae2fc91706fd03c8eef" category="paragraph"><block ref="b36598cc51fefae2fc91706fd03c8eef" category="inline-xref-macro-rx"></block></block>
-  <block id="6d75466b80c625b48fc8ba8590e96c95" category="paragraph"><block ref="6d75466b80c625b48fc8ba8590e96c95" category="inline-xref-macro-rx"></block></block>
   <block id="f66791a36a8e67b4d2634d7f1e8c68c5" category="paragraph">下表列出了11.70.2版的命令行界面和脚本命令。</block>
   <block id="b0712e32c143076d1b1765d28c4ff86d" category="paragraph"><block ref="b0712e32c143076d1b1765d28c4ff86d" category="inline-xref-macro-rx"></block></block>
   <block id="4e932b7c5213821b7cad243423b94008" category="paragraph"><block ref="4e932b7c5213821b7cad243423b94008" category="inline-xref-macro-rx"></block></block>
@@ -7389,7 +7375,6 @@
   <block id="8ebe5bb4f19a0865e0dca0fc02a8ad6a" category="paragraph">11.80</block>
   <block id="8fe6e97510e09ec53b4d8934ee3aa8d2" category="paragraph">EF300或EF600不支持精简配置卷。</block>
   <block id="7d4fdfb752f88986444792e93b73869f" category="paragraph">已创建卷的块大小(以字节为单位)。支持的值为<block ref="10a7cdd970fe135cf4f7bb55c0e3b59f" prefix=" " category="inline-code"></block> 和<block ref="f7efa4f864ae9b88d43527f4b14f750f" prefix=" " category="inline-code"></block>。</block>
-  <block id="43553b7327b1a67ac5cd1a8f34257215" category="paragraph">所有插槽ID最大值均为24。插槽ID值从0或1开始、具体取决于托盘型号。与E2800、E5700、EF600和EF300控制器兼容的驱动器托盘的插槽ID编号从0开始。与E2700和E5600控制器兼容的驱动器托盘的插槽ID编号从1开始。</block>
   <block id="08117640ccc49245e4b0a9cfe59d3d24" category="summary">show check volume parity jobs命令可显示所有检查卷奇偶校验作业及其状态。</block>
   <block id="5419272dcf0119b1498b0ee6cd83a7d7" category="paragraph">。<block ref="892bb8e3c297dc4bbfaa485b428ef7c7" prefix=" " category="inline-code"></block> 命令可显示所有检查卷奇偶校验作业及其状态。</block>
   <block id="697582c632d5495c3bdf4f125d6e44ad" category="list-text">状态(如最佳、已降级、故障、缺失)</block>
@@ -7461,30 +7446,17 @@
   <block id="8d3df8e4a86e0915f0d07f8e7a26b030" category="paragraph">控制器标识为"A"或"b"。每个控制器最多可以有四个主机通道；每个通道都通过1到8之间的数字进行唯一标识。</block>
   <block id="f6d06651df499131aa8d5acf7a129e3f" category="paragraph">有效的控制器标识符和主机通道值为<block ref="8a8bb7cd343aa2ad99b7d762030857a2" prefix=" " category="inline-code"></block>、<block ref="693a9fdd4c2fd0700968fba0d07ff3c0" prefix=" " category="inline-code"></block><block ref="9d607a663f3e9b0a90c3c8d4426640dc" prefix=" " category="inline-code"></block>、<block ref="894f782a148b33af1e39a0efed952d69" prefix=" " category="inline-code"></block>、、<block ref="32cfe6c19200b67afb7c3d0e1c43eadb" prefix=" " category="inline-code"></block><block ref="f74dd50cfec0f8549406fee6191d2f8d" prefix=" " category="inline-code"></block><block ref="c692562238d8c12c32434c50b96d56ae" prefix=" " category="inline-code"></block>、<block ref="68c42382c8b93fc29c2fcb6a444aeda5" prefix=" " category="inline-code"></block>、、<block ref="edbab45572c72a5d9440b40bcc0500c0" prefix=" " category="inline-code"></block>、<block ref="fbfba2e45c2045dc5cab22a5afe83d9d" prefix=" " category="inline-code"></block><block ref="7a6f150b83091ce20c89368641f9a137" prefix=" " category="inline-code"></block><block ref="3dfe563103ab11bec75bb5081e7a1dbe" prefix=" " category="inline-code"></block>、<block ref="2283335d8d12b21001439091e74f5028" prefix=" " category="inline-code"></block>、、<block ref="528953727ef3a4e1c441c6078534c39b" prefix=" " category="inline-code"></block>、<block ref="d8708ecb9a1e7ba172c83d8360c57e7d" prefix=" " category="inline-code"></block><block ref="75d99404a02e2bc993a6bac34c60d679" prefix=" " category="inline-code"></block>或。</block>
   <block id="2bc4f5f65d530be66960542e14f46660" category="paragraph">此命令仅适用于基于光纤通道的异步镜像。</block>
-  <block id="761f226704fa8b9a2ea64701b36a66e1" category="paragraph">此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。</block>
   <block id="4818a1577bb873e9a1bea01f94e168fb" category="paragraph">此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800和E5700阵列、前提是已安装所有SMClu软件包。</block>
   <block id="4ec343cf7b1916cb714cf2eed7cc2a56" category="paragraph">要在E4000、E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。</block>
-  <block id="076b233b5a4449b721cbb8368f8fb958" category="paragraph">要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有支持管理员角色。</block>
-  <block id="0a5727fb9e4cceadd91fbb0916297759" category="paragraph">E4000、E2800、E5700、EF600和EF300平台不支持此命令。</block>
   <block id="4cd285c149380629899b809a1fcfca80" category="paragraph">此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。</block>
-  <block id="fa3f8ed858d04e74dad152ab5070b1ec" category="paragraph">要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。</block>
-  <block id="d28f85e4921c2290b1849d9ca24381a1" category="paragraph">要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。</block>
-  <block id="4808830345a823114a0ff2909f8a5d34" category="paragraph">此命令适用于单个E4000、E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。</block>
-  <block id="2ef945e8385c3b3383dd40b9f20b81c9" category="paragraph">要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有安全管理员角色。</block>
-  <block id="5a55cb40d8562db2ade7e87c8407da61" category="paragraph">如果启用了外部密钥管理、则此命令仅适用于E4000、E2800、E5700、EF600和EF300阵列。如果启用了内部密钥管理、则只要安装了所有SMcli软件包、命令适用场景 any individual storage array即可。</block>
   <block id="b4089211682b23edd69e88a53d0dea73" category="paragraph">要在E4000、E2800或E5700存储阵列上执行此命令、您必须具有存储管理员或支持管理员角色。</block>
   <block id="96fbedb8e23ee770715d64868d91f512" category="paragraph"><block ref="3a1fe391cfcf9c718d5bc02bf3a7ff87" prefix="" category="inline-code"></block></block>
   <block id="8f786c6665f112a9ec42e4921247dfaf" category="paragraph">用于下载专用密钥和已签名证书。<block ref="3a1fe391cfcf9c718d5bc02bf3a7ff87" prefix=" " category="inline-code"></block>参数必须与值一起使用<block ref="71cc3f1d4dc205619a9d8134cb1e6c5d" prefix=" " category="inline-code"></block>。</block>
-  <block id="5c12358ddfa7bc3dbacf8a9e26ff15f7" category="paragraph">如果启用了外部密钥管理、则此命令仅适用于E4000、E2800、E5700、EF600和EF300阵列。如果启用了内部密钥管理、则只要安装了所有SMcli软件包、命令适用场景 any individual storage array即可。</block>
-  <block id="c65db51b73509a7f00c37eaba7ab2a29" category="paragraph">如果启用了外部密钥管理、则此命令仅适用于E4000、E2800、E5700、EF600或EF300阵列。如果启用了内部密钥管理、则只要安装了所有SMcli软件包、命令适用场景 any individual storage array即可。</block>
-  <block id="f46b3f4800a69abecf156a53124b25a1" category="paragraph">要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或存储监控角色。</block>
   <block id="672bddf25a5148ad89f2d0de107bf704" category="paragraph">此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800和E5700阵列、前提是已安装所有SMClu软件包。</block>
   <block id="e127d5ca4333d5b79c57c2b351704e07" category="paragraph"><block ref="2496da2f393859299e91ec0dcf920087" prefix="" category="inline-code"></block></block>
   <block id="4b2b7d34e1c9c58df14d668116c7e27a" category="paragraph">用于为服务器的密钥大小指定、<block ref="be767243ca8f574c740fb4c26cc6dceb" prefix=" " category="inline-code"></block>或<block ref="f7efa4f864ae9b88d43527f4b14f750f" prefix=" " category="inline-code"></block>值<block ref="051928341be67dcba03f0e04104d9047" prefix=" " category="inline-code"></block>。如果未选择密钥大小、则默认密钥大小为3072。</block>
   <block id="2f16a4e1f295aafddbecc5b08af16dfa" category="summary">save controller array命令行 界面命令可检索控制器的已安装服务器证书签名请求(CSR)、以便您可以查看证书详细信息。</block>
   <block id="41f378e1ae526513ccf1b18f5ef2e8cd" category="paragraph"><block ref="1de7a3761ee490eb69b0d5dd1bc9f0c5" prefix=" " category="inline-code"></block>命令检索控制器的已安装服务器证书签名请求(CSR)、以便您可以查看证书详细信息。</block>
-  <block id="7f838bc9deec658242ceadefd99b3992" category="paragraph">要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。但是、此命令与LDAP参数的使用仅限于具有安全管理员角色的用户。</block>
-  <block id="f0e9f8c4af25d5525e5279cfcef7f2f1" category="paragraph">要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或安全管理员角色。</block>
   <block id="52907868d469a177418995e68ae532d1" category="summary">为不同的交付类型设置AutoSupport捆绑包和派单的最大大小。</block>
   <block id="da0a49824cfffdf78423229085d4c3e9" category="doc">设置AutoSupport派单大小限制</block>
   <block id="8827ec62bb9ef8459dad00c458fbe0a7" category="paragraph"><block ref="2da3a20c3f29f91772c0863129cf682b" prefix=" " category="inline-code"></block>为不同的交付类型设置AutoSupport捆绑包和派单的最大大小。</block>
@@ -7498,16 +7470,9 @@
   <block id="98df893211013e4bedd978a6731f31a9" category="doc">指定AutoSupport HTTP (S)传送方法</block>
   <block id="245aed6426acccf934bd6a10b9ad9de7" category="paragraph"><block ref="5c1ab9389f47f48fe5b3f7e85e114264" prefix="" category="inline-code"></block></block>
   <block id="88210d391247e39637e08468431d164c" category="paragraph">发送AutoSupport派单的电子邮件地址。可以多次提供此参数、以便将派单发送到多个地址。</block>
-  <block id="162df76e61114a9bc1095cea2e1e989f" category="paragraph">此命令适用于E4000、E2800、E5700、EF600和EF300存储阵列。但是、对于E2700或E5600阵列、您可以将命令用作smcli命令、而不是脚本命令。在这种情况下、命令适用场景 管理域中的所有阵列。</block>
-  <block id="43c3a57d07f46965c77984bf6d190860" category="paragraph">要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员、支持管理员、安全管理员或存储监控角色。</block>
-  <block id="980650206e421df11ba972784e263d5e" category="paragraph">只要安装了所有SMCLI软件包、此命令就适用于任何单个存储阵列、包括E4000、2700、E5600、E2800、E5700、EF600和EF300阵列。</block>
   <block id="f67115ecdc36bb812b11a0ffbd6afb0c" category="doc">启用或禁用AutoSupport维护窗口</block>
-  <block id="9f3cf5bf61b5f1c707c6850bc8b41cd9" category="paragraph">此命令适用于单个E4000、E2800、E5700、EF600或EF300存储阵列。它不能在E2700或E5600存储阵列上运行。</block>
-  <block id="0963d08ec539961ce732d53f279fde56" category="paragraph">要在E4000、2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。</block>
   <block id="904d825f949c4d18e91d96fe2b4cccb7" category="paragraph">运行介质扫描的天数。有效值为<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block>，用于关闭介质扫描，或者<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>按天到<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block>天，其中<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>日是最快的扫描速率，日是最慢的扫描速率<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block>。除或<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>至以外的<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block>值<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block>不允许介质扫描正常工作。</block>
   <block id="2fe5dde43e76b44ed3412b7f72a2ec67" category="list-text">有关SSD驱动器使用寿命的信息(如果阵列不包含SSD驱动器、则不会显示此信息)：</block>
-  <block id="fd979bea5528b4b653c26b7095b2585b" category="paragraph">要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员或支持管理员或存储监控器角色。</block>
-  <block id="5b07c4793f70ad68331f8bbc6375b6a2" category="paragraph">此命令适用于E4000、E2800、E5700、EF600和EF300存储阵列。</block>
   <block id="e0edf8f3e094504eb3aad1bcfa63b7a4" category="paragraph">要在E4000、E2800或E5700存储阵列上执行此命令、您必须具有存储管理员或存储监控器角色。</block>
   <block id="2ddf6adc2ffbbed684ed33c230aba7a4" category="paragraph">此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E4000、E2800或E5700存储阵列。</block>
   <block id="c0af9350de0f363c5a29eca79351e85f" category="paragraph">此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E4000、E2800或E5700存储阵列。</block>
@@ -8063,4 +8028,67 @@
   <block id="689cb466298a6f4a3ed62c1390e5efa5" category="doc">在重建时设置存储阵列 PQ 验证 - SANtricity CLI</block>
   <block id="e35c8154d8766fae2d703fd86691dd17" category="doc">显示存储阵列目录服务摘要 - SANtricity CLI</block>
   <block id="9c2c5321d557134684387393df84bc13" category="doc">测试存储阵列目录服务器 - SANtricity CLI</block>
+  <block id="f1458dfe0156e178d063fffb0b355082" category="paragraph">此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。</block>
+  <block id="6635f83938e82bc8676e415cc739ad24" category="paragraph">要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。</block>
+  <block id="8f00905cb7ba3940ea55da3a0649515c" category="paragraph">此命令适用于 EF600、EF300、EF50 和 EF80 存储阵列。</block>
+  <block id="b5688d019a222ed30ed22462db820c7a" category="paragraph">要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Support Admin 角色。</block>
+  <block id="603e6b6fce48db9c00c02f28f6e1084d" category="paragraph">E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 平台不支持此命令。</block>
+  <block id="7fdc059c711dc4aa7656bec95b155570" category="paragraph">要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。</block>
+  <block id="d484cf3b6cdf19ede69a359211870b4c" category="paragraph">此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。</block>
+  <block id="072cbb224b14d7d563dbaeee33c9dcdb" category="paragraph">所有插槽 ID 最大值为 24。插槽 ID 值从 0 或 1 开始，具体视托盘型号而定。与 E2800、E5700、EF600、EF300、EF50 和 EF80 控制器兼容的驱动器托盘的插槽 ID 编号从 0 开始。与 E2700 和 E5600 控制器兼容的驱动器托盘的插槽 ID 编号从 1 开始。</block>
+  <block id="4945e6169379454c2fe7e86a083f4650" category="paragraph">如果将此参数设置为<block ref="c0d83f0b82a6b30de8811e69e6d95c61" prefix=" " category="inline-code"></block>，则将仅使用支持 DULBE 的驱动器来创建磁盘池或卷组。如果参数设置为<block ref="946003f97ccc52d5d3b54ac0ec31bbfc" prefix=" " category="inline-code"></block>或未提供，则不执行 DULBE 功能检查。如果为卷组或磁盘池选择的所有驱动器都支持 DULBE，则存储阵列级别标志将确定是否将卷组或磁盘池创建为资源调配。</block>
+  <block id="55cab4509665f273f7c44474fce83285" category="paragraph">要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。</block>
+  <block id="edd0291f2e16a8bc7c9430623d2baa35" category="paragraph">如果启用了外部密钥管理，则此命令仅适用于 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列。如果启用了内部密钥管理，则该命令适用于任何单个存储阵列，前提是所有 SMcli 包都已安装。</block>
+  <block id="052bc51a74599d1aef7c689c67bda706" category="paragraph">如果启用了外部密钥管理，则此命令仅适用于 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 阵列。如果启用了内部密钥管理，则该命令适用于任何单个存储阵列，前提是所有 SMcli 包都已安装。</block>
+  <block id="5b2b2ba5c38b735bedd01dd6b7a47a10" category="paragraph">要在 E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。</block>
+  <block id="b48ff6704d566bc3f9e6d92ed5905e02" category="paragraph">要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Storage Monitor 角色。</block>
+  <block id="ada72b7218199fcaf70f8afa707f7bb5" category="paragraph">此命令适用于任何单个存储阵列，包括 EF600、EF300、EF50 和 EF80 阵列；只要安装了所有 SMcli 包。</block>
+  <block id="90e25734afa06f8db0ee1a7321dc86a6" category="paragraph">要在 EF600、EF300、EF50 和 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。</block>
+  <block id="557d199997f55869a004b844f0c59b25" category="paragraph">要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。但是，将此命令与 LDAP 参数一起使用仅限于具有 Security Admin 角色的用户。</block>
+  <block id="513f5294900031c5964fcbf868b59f9f" category="paragraph">要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Security Admin 角色。</block>
+  <block id="7026a775b2ba39eb0f51ddb5728687dc" category="paragraph">此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。</block>
+  <block id="fc4e87b143b42128823a24a7cf01e8ea" category="paragraph">所有插槽 ID 最大值为 24。插槽 ID 值从 0 或 1 开始，具体视托盘型号而定。与 E2800、E5700、EF600、EF300、EF50 和 EF80 控制器兼容的驱动器托盘的插槽 ID 编号从 0 开始。与 E2700 和 E5600 控制器兼容的驱动器托盘的插槽 ID 编号从 1 开始。</block>
+  <block id="9054de2b6a754e07f05e9e69a6faac77" category="paragraph">此命令适用于 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。但是，您可以将此命令用作 E2700 或 E5600 阵列的 SMcli 命令，而不是脚本命令。在这种情况下，该命令适用于管理域中的所有阵列。</block>
+  <block id="682cb8daf0b7eb2ccd4b398d43ba82bb" category="paragraph">此命令适用于任何单个存储阵列，包括 E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。</block>
+  <block id="e2fe8749741801b7e5e9acfcf68625d3" category="paragraph">要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin、Support Admin、Security Admin 或 Storage Monitor 角色。</block>
+  <block id="135e7f05b5a80028ab17a34e0c15e6db" category="paragraph">此命令适用于任何单个存储阵列，包括 E4000、2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。</block>
+  <block id="88d98337f3d4b9c813cb3a46deea6644" category="summary">set storageArray hostIoProtocol 命令在存储阵列级别配置主机 I/O 协议</block>
+  <block id="5802de4ead66c595cdb0ce72973b18c2" category="doc">设置存储阵列主机 I/O 协议 - SANtricity CLI</block>
+  <block id="d13da51d358cffe624beb9300684e1e6" category="paragraph">该<block ref="777e8152565ada0c3a16a8b8868d3bc6" prefix=" " category="inline-code"></block>命令在存储阵列级别配置主机 I/O 协议。</block>
+  <block id="36212b3014245fb1e729ddc31e4ff763" category="paragraph"><block ref="777e8152565ada0c3a16a8b8868d3bc6" prefix="" category="inline-code"></block></block>
+  <block id="aff266832a5aa34647a402c2095b347f" category="paragraph">允许您指定要用于存储阵列的主机 I/O 协议。有效选项为：FC、ISCSI、ISER、nvmeIb、nvmeFc、nvmeRoce、SAS 或 SRP。</block>
+  <block id="195863009ffa903e83ad7fd7e7db63b1" category="paragraph">12.0</block>
+  <block id="18cec728afa90cbfc8c9587fe229cdc9" category="admonition">从 SANtricity 12.0 开始，此命令将被删除，因为存储阵列将始终在<block ref="a8172f9966e53474dd873f0dbdf427b2" prefix=" " category="inline-code"></block>模式下运行。</block>
+  <block id="1727ed989c7f4287136d81d78aeb960e" category="paragraph">不适用。</block>
+  <block id="dd91b573b380dac94dc1f2ddbc34f95e" category="paragraph">ODX 提供了一种无需使用缓冲读取和缓冲写入操作即可传输数据的方法，并且不需要主机直接参与数据传输操作。未启用 ODX 时，将数据从源存储读取到主机，然后从主机写入目标存储。启用 ODX 后，数据传输操作由存储基础设施直接管理。数据直接从源存储移动到同一阵列中的目标存储，绕过主机。</block>
+  <block id="f52bb2576426b38ae1623297e50f54fb" category="paragraph">要在 E4000、2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。</block>
+  <block id="0110920bc6a519ef2a443b84713239ae" category="paragraph">要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 或 Storage Monitor 角色。</block>
+  <block id="6522f06d72bd9ed5a98704211222570f" category="summary">show storageArray hostIoProtocolInformation 命令显示有关特定存储阵列的 I/O 协议设置的信息。</block>
+  <block id="30355f130890e35ca642ec20bd17f3c9" category="doc">显示存储阵列主机 I/O 协议信息 - SANtricity CLI</block>
+  <block id="cb118bbc70d791b9469a575577b2aefe" category="paragraph">该 <block ref="a308c90c11e9795c80746daf2f7fe34d" prefix=" " category="inline-code"></block> 命令显示有关特定存储阵列的 I/O 协议设置的信息。</block>
+  <block id="a66f4caa7df92b8826bf6476345258fe" category="paragraph">此命令适用于 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。</block>
+  <block id="20b2eaf64e5131632b89c872747ebaaa" category="paragraph">要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。</block>
+  <block id="529c6b5226ce3cbcfbd7a63cd78196a8" category="paragraph">当存储阵列能够与外部密钥管理服务器通信时，以下示例显示了命令的输出。输出包括密钥管理服务器、客户端证书和服务器证书的状态。</block>
+  <block id="b2289f45959bc5dd068ec87f21fe210a" category="paragraph">在未先执行 <block ref="83837700f50f9958c28e587392a24278" category="inline-xref-macro-rx"></block> 中列出的步骤之前，请勿执行这些步骤</block>
+  <block id="60989f5a2558386ddb4c2559384e95bd" category="paragraph">要在 EF600、EF300、EF50 和 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。</block>
+  <block id="1660e94baa2e7fa520e456d40eca4831" category="inline-link-macro">设置存储阵列主机 I/O 协议</block>
+  <block id="f0888fb3aa312077dce57036c8135bd9" category="paragraph"><block ref="f0888fb3aa312077dce57036c8135bd9" category="inline-link-macro-rx"></block></block>
+  <block id="baa909145cb669e385ef78f654ff4722" category="inline-link-macro">显示存储阵列主机 I/O 协议</block>
+  <block id="58530a0009c8cc999005ce98a138d938" category="paragraph"><block ref="58530a0009c8cc999005ce98a138d938" category="inline-link-macro-rx"></block></block>
+  <block id="eb20bd68d51ddb7d412e8786688d5d9e" category="paragraph">CLI 是 SANtricity System Manager 软件的一项功能。</block>
+  <block id="be43ea6917c922321b76286fc855b28a" category="section-title">SANtricity 12.0</block>
+  <block id="160e51ef785e785be752dfd8326b229a" category="paragraph">下表列出了对 12.0 版 CLI 和脚本命令所做的更改。</block>
+  <block id="91211127bc342537dd67ab9a6314a5a6" category="inline-link">设置存储阵列主机 I/O 协议</block>
+  <block id="52655bee7facdcf1b5306b5469555402" category="paragraph"><block ref="52655bee7facdcf1b5306b5469555402" category="inline-link-rx"></block></block>
+  <block id="4dec79ab819ec52648ee90d15be1f390" category="paragraph">已添加命令。</block>
+  <block id="ed71bb5211290e88ed7206400f7940ff" category="inline-link">显示存储阵列主机 I/O 协议信息</block>
+  <block id="f91cb053d56091917222661ede88efc7" category="paragraph"><block ref="f91cb053d56091917222661ede88efc7" category="inline-link-rx"></block></block>
+  <block id="dbe80fab80517a2b25c4bbb4e4dce430" category="paragraph"><block ref="dbe80fab80517a2b25c4bbb4e4dce430" category="inline-link-rx"></block></block>
+  <block id="586a7e2316e2d3d1c8205410c34c2a6b" category="paragraph">在命令输出中添加了测试 KMS 通信结果。</block>
+  <block id="110858530dad34efb40d59e6ff21a78b" category="paragraph"><block ref="110858530dad34efb40d59e6ff21a78b" category="inline-link-rx"></block></block>
+  <block id="eccb5442bea7872d32768d562584db8e" category="paragraph">已删除命令。</block>
+  <block id="77bbf46ed60fb3f4f7f0535a4fb7d116" category="paragraph"><block ref="77bbf46ed60fb3f4f7f0535a4fb7d116" category="inline-xref-macro-rx"></block></block>
+  <block id="9e0e2266a81338fbfaf354427a1629c8" category="paragraph"><block ref="9e0e2266a81338fbfaf354427a1629c8" category="inline-xref-macro-rx"></block></block>
+  <block id="777e8152565ada0c3a16a8b8868d3bc6" category="sidebar">设置 storageArray hostIoProtocol</block>
+  <block id="a308c90c11e9795c80746daf2f7fe34d" category="sidebar">显示 storageArray hostIoProtocolInformation</block>
 </blocks>

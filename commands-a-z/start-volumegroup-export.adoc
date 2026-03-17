@@ -17,13 +17,13 @@ summary: start VolumeGroup export命令可将卷组移至已导出状态。
 
 == 支持的阵列
 
-此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。
+此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
 == 角色
 
-要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令、您必须具有存储管理员角色。
+要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
@@ -33,7 +33,7 @@ summary: start VolumeGroup export命令可将卷组移至已导出状态。
 
 [CAUTION]
 ====
-如果未先执行中列出的步骤、请勿执行这些步骤 xref:../get-started/learn-about-volume-group-migration.html[了解卷组迁移。]
+在未先执行 xref:../get-started/learn-about-volume-group-migration.adoc[了解卷组迁移。] 中列出的步骤之前，请勿执行这些步骤
 
 ====
 [NOTE]

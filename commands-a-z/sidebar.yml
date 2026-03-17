@@ -528,6 +528,8 @@ entries:
       url: "/commands-a-z/set-storagearray-externalkeymanagement.html"
     - title: 设置storageArray hostconnectivitireporting
       url: "/commands-a-z/set-storagearray-hostconnectivityreporting.html"
+    - title: 设置 storageArray hostIoProtocol
+      url: "/commands-a-z/set-storagearray-host-io-protocol.html"
     - title: 设置storageArray icmppingresponse
       url: "/commands-a-z/set-storagearray-icmppingresponse.html"
     - title: 设置storageArray isnsipv4configurationmethod
@@ -686,6 +688,8 @@ entries:
       url: "/commands-a-z/show-storagearray-directoryservices-summary.html"
     - title: 显示storageArray hostconnectivitireporting
       url: "/commands-a-z/show-storagearray-hostconnectivityreporting.html"
+    - title: 显示 storageArray hostIoProtocolInformation
+      url: "/commands-a-z/show-storage-array-host-io-protocol.html"
     - title: show storageArray主机拓扑
       url: "/commands-a-z/show-storagearray-hosttopology.html"
     - title: show storageArray iscsinfodefaults
