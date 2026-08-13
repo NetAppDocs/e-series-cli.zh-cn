@@ -15,12 +15,14 @@ summary: 使用从文件添加证书命令可以从文件中获取证书并将�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于 EF600、EF300、EF50 和 EF80 存储阵列。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -29,6 +31,7 @@ pass:quotes[trust localCertificate file _filename_ alias user _specified alias_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -50,6 +53,7 @@ pass:quotes[trust localCertificate file _filename_ alias user _specified alias_]
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.60

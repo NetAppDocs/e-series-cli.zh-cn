@@ -15,18 +15,21 @@ summary: 'set ssdCache命令可通过删除固态磁盘(SSD)来减少SSD缓存�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Support Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -36,6 +39,7 @@ removeDrives=pass:quotes[(_trayID1_,]pass:quotes[[_drawerID1_,]]pass:quotes[_slo
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -61,12 +65,14 @@ removeDrives=pass:quotes[(_trayID1_,]pass:quotes[[_drawerID1_,]]pass:quotes[_slo
 |===
 
 
+[[notes]]
 == 注释：
 
 您不能使用此命令从SSD缓存中删除所有SSD；SSD缓存中必须至少保留一个SSD。如果要完全删除SSD缓存、请改用`delete ssdCache`命令。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.84.接受采取后续行动

@@ -15,18 +15,21 @@ summary: di诊断SyncMirror 命令用于测试已启用同步镜像功能的存�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800和E5700阵列、前提是已安装所有SMClu软件包。
 
 
 
+[[roles]]
 == 角色
 
 要在E4000、E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -36,6 +39,7 @@ summary: di诊断SyncMirror 命令用于测试已启用同步镜像功能的存�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -45,6 +49,7 @@ testID=connectivity
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -74,6 +79,7 @@ testID=connectivity
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.10

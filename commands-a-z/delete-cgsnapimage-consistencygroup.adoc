@@ -15,18 +15,21 @@ summary: delete cgSnapImage ConsistencyGroup命令可删除一致性组中的快
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -38,6 +41,7 @@ pass:quotes[[deleteCount=_numberOfSnapImages_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -77,6 +81,7 @@ pass:quotes[[deleteCount=_numberOfSnapImages_]
 |===
 
 
+[[notes]]
 == 注释：
 
 如果无法删除一致性组中所有相关成员卷的快照映像、则此操作将失败、并且不会删除任何快照映像。
@@ -85,6 +90,7 @@ pass:quotes[[deleteCount=_numberOfSnapImages_]
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

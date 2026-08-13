@@ -15,24 +15,28 @@ summary: show storageArray命令可返回有关存储阵列的配置信息。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Storage Monitor 角色。
 
 
 
+[[context]]
 == 环境
 
 这些参数将返回存储阵列中组件和功能的值列表。您可以输入包含一个或多个参数的命令。如果输入不带任何参数的命令、则会显示整个存储阵列配置文件(与输入`*配置文件*`参数时的信息相同)。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -47,6 +51,7 @@ cacheMirrorDataAssuranceCheckEnable | hostConnectivityReporting]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -235,6 +240,7 @@ profile.txt"
 |===
 
 
+[[notes]]
 == 注释：
 
 `profile`参数可显示有关存储阵列的详细信息。此信息显示在一个显示监视器的多个屏幕上。要查看所有信息、可能需要增加显示缓冲区的大小。由于此信息非常详细、因此您可能需要将此参数的输出保存到文件中。要将输出保存到文件中、请运行`show storageArray`命令、如本示例所示。
@@ -376,6 +382,7 @@ volume name: JCG_Remote_MirrorMenuTests
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 5.00会添加`defaultHostType`参数。

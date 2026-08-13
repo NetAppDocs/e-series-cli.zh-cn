@@ -15,24 +15,28 @@ summary: 'start diskPool resourcegroup Provisioning命令可在给定磁盘池�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 EF600、EF300、EF50 和 EF80 阵列；只要安装了所有 SMcli 包。
 
 
 
+[[roles]]
 == 角色
 
 要在 EF600、EF300、EF50 和 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 要在磁盘池上禁用资源配置、请使用带有选项的full provisioning命令禁用资源配置。如果所有驱动器均支持DULBE"且存储阵列的`resourceProvisionedVolumes`设置为`true`、则在创建磁盘池时将配置资源。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -41,6 +45,7 @@ start diskPoolpass:quotes[[_diskPoolName_]] resourceProvisioning
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -56,6 +61,7 @@ start diskPoolpass:quotes[[_diskPoolName_]] resourceProvisioning
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 11.73.

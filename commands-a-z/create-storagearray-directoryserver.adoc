@@ -15,18 +15,21 @@ summary: 使用create storageArray directoryServer命令可以添加新的目录
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -43,6 +46,7 @@ create storageArray directoryServer
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -123,6 +127,7 @@ create storageArray directoryServer
 |===
 
 
+[[examples]]
 == 示例
 
 [listing]

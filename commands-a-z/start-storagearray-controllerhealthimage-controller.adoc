@@ -15,18 +15,21 @@ summary: start storageArray controllerHealthImage controller命令可在支持�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -43,6 +46,7 @@ summary: start storageArray controllerHealthImage controller命令可在支持�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -51,6 +55,7 @@ start storageArray controllerHealthImage controller [(a|b)]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -66,12 +71,14 @@ start storageArray controllerHealthImage controller [(a|b)]
 |===
 
 
+[[notes]]
 == 注释：
 
 此命令强制选定控制器将其核心数据转储到缓存。使用`save storageArray controllerHealthImage`命令将缓存数据的副本保存到主机文件中。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

@@ -15,18 +15,21 @@ summary: check SyncMirror 命令将返回远程镜像卷的状态。使用此命
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800和E5700阵列、前提是已安装所有SMClu软件包。
 
 
 
+[[roles]]
 == 角色
 
 要在E4000、E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -36,6 +39,7 @@ summary: check SyncMirror 命令将返回远程镜像卷的状态。使用此命
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ check syncMirror localVolume pass:quotes[[_volumeName_]] optimalStatus timeout=p
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -65,6 +70,7 @@ check syncMirror localVolume pass:quotes[[_volumeName_]] optimalStatus timeout=p
 |===
 
 
+[[notes]]
 == 注释：
 
 此命令将一直等待、直到状态变为最佳或超时间隔到期为止。运行异步同步镜像实用程序时、请使用此命令。

@@ -15,6 +15,7 @@ summary: 阵列配置命令
 
 
 
+[[cache-mirror-data-assurance-commands]]
 == 缓存镜像数据保证命令
 
 link:../commands-a-z/set-storagearray-cachemirrordataassurancecheckenable.html["设置存储阵列以启用或禁用缓存镜像数据"]
@@ -23,6 +24,7 @@ link:../commands-a-z/show-storagearray-cachemirrordataassurancecheckenable.html[
 
 
 
+[[controller-commands]]
 == 控制器命令
 
 link:../commands-a-z/clear-alldrivechannels-stats.html["清除驱动器通道统计信息"]
@@ -73,6 +75,7 @@ link:../commands-a-z/stop-drivechannel-locate.html["停止驱动器通道定位"
 
 
 
+[[controller-health-image-commands]]
 == controller health image命令
 
 link:../commands-a-z/save-storagearray-controllerhealthimage.html["保存存储阵列控制器运行状况映像"]
@@ -85,6 +88,7 @@ link:../commands-a-z/start-storagearray-controllerhealthimage-controller.html["�
 
 
 
+[[controller-host-port-configuration-commands]]
 == controller host port configuration命令
 
 link:../commands-a-z/create-hostport.html["创建主机端口"]
@@ -117,6 +121,7 @@ link:../commands-a-z/show-storagearray-unconfiguredinitiators.html["显示未配
 
 
 
+[[drive-commands]]
 == 驱动器命令
 
 link:../commands-a-z/download-drive-firmware.html["下载驱动器固件"]
@@ -165,6 +170,7 @@ link:../commands-a-z/stop-drive-locate.html["停止驱动器定位"]
 
 
 
+[[feature-management-commands]]
 == 功能管理命令
 
 link:../commands-a-z/disable-storagearray.html["禁用存储阵列功能"]
@@ -177,6 +183,7 @@ link:../commands-a-z/show-storagearray.html["显示存储阵列"]
 
 
 
+[[input-output-controller-ioc-dump-commands]]
 == 输入输出控制器(IOC)转储命令
 
 link:../commands-a-z/save-ioclog.html["保存输入输出控制器(IOC)转储"]
@@ -185,6 +192,7 @@ link:../commands-a-z/start-ioclog.html["启动输入输出控制器(IOC)转储"]
 
 
 
+[[misbehaving-drive-mbd-commands]]
 == 运行异常的驱动器(MBD)命令
 
 link:../commands-a-z/replace-drive-replacementdrive.html["更换驱动器"]
@@ -197,6 +205,7 @@ link:../commands-a-z/stop-drive-replace.html["停止驱动器更换"]
 
 
 
+[[offloaded-data-transfer-odx-commands]]
 == 卸载数据传输(Offloaded Data Transfer、ODX)命令
 
 link:../commands-a-z/set-storagearray-odxenabled.html["启用或禁用 ODX"]
@@ -207,18 +216,21 @@ link:../commands-a-z/show-storagearray-odxsetting.html["显示存储阵列ODX设
 
 
 
+[[repository-volume-analysis-commands]]
 == 存储库卷分析命令
 
 link:../commands-a-z/check-repositoryconsistency.html["检查存储库一致性"]
 
 
 
+[[session-commands]]
 == 会话命令
 
 link:../commands-a-z/set-session-erroraction.html["设置会话"]
 
 
 
+[[storage-array-commands]]
 == storage array命令
 
 link:../commands-a-z/activate-storagearray-firmware.html["激活存储阵列固件"]
@@ -383,6 +395,7 @@ link:../commands-a-z/validate-storagearray-securitykey.html["验证存储阵列�
 
 
 
+[[tray-commands]]
 == 托盘命令
 
 link:../commands-a-z/download-tray-firmware-file.html["下载环境卡固件"]
@@ -405,6 +418,7 @@ link:../commands-a-z/stop-tray-locate.html["停止托盘定位"]
 
 
 
+[[uncategorized-commands]]
 == 未分类的命令
 
 link:../commands-a-z/recover-sasport-miswire.html["恢复SAS端口连线错误"]

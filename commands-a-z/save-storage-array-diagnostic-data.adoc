@@ -15,18 +15,21 @@ summary: 'save storageArray diagnosticData命令可将控制器或环境服务�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 您可以稍后查看文件内容。您也可以将此文件发送给技术支持以供进一步查看。
@@ -40,6 +43,7 @@ summary: 'save storageArray diagnosticData命令可将控制器或环境服务�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -49,6 +53,7 @@ file=pass:quotes["_filename_"]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -75,12 +80,14 @@ file=pass:quotes["_filename_"]
 |===
 
 
+[[notes]]
 == 注释：
 
 在7.77之前的版本中、用户选项为`ESM`而不是`tray`。从7.77开始、`托盘`更换`ESM`。仍然支持使用`ESM`、但为了与未来版本最佳兼容、请将`ESM`更换为`托盘`。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.16

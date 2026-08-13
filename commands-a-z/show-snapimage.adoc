@@ -15,18 +15,21 @@ summary: show snapImage命令可返回有关用户先前创建的快照映像的
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax-for-showing-a-specific-snapshot-image]]
 == 显示特定快照映像的语法
 
 [source, cli, subs="+macros"]
@@ -37,6 +40,7 @@ snapImages pass:quotes[["_snapImageName1_" ... "_snapImageNamen_"]])
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -91,6 +95,7 @@ snapImages pass:quotes[["_snapImageName1_" ... "_snapImageNamen_"]])
 |===
 
 
+[[notes]]
 == 注释：
 
 快照映像的名称包含两个部分、并用冒号(：)分隔：
@@ -119,6 +124,7 @@ show snapImages ["snapGroup1:12345 snapGroup2:newest snapGroup3:oldest"];
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

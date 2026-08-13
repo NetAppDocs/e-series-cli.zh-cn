@@ -15,18 +15,21 @@ summary: reset controller命令用于重置控制器、并对I/O操作造成中�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -41,6 +44,7 @@ summary: reset controller命令用于重置控制器、并对I/O操作造成中�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -49,6 +53,7 @@ reset controller [(a|b)]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -63,12 +68,14 @@ reset controller [(a|b)]
 |===
 
 
+[[notes]]
 == 注释：
 
 接收reset controller命令的控制器将重置指定的控制器。例如、如果将reset controller命令发送到控制器A以请求重置控制器A、则控制器A将通过软重新启动自行重新启动。如果将reset controller命令发送到控制器A以请求重置控制器B、则控制器A会将控制器B置于重置状态、然后将控制器B从重置状态中释放、即硬重新启动。在某些产品中、软重新启动只会重置IOC芯片。硬重新启动会重置控制器中的IOC和扩展器芯片。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 5.20

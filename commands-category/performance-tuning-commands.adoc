@@ -15,6 +15,7 @@ summary: 性能调整命令
 
 
 
+[[automatic-load-balancing-commands]]
 == 自动负载平衡命令
 
 link:../commands-a-z/save-storagearray-autoloadbalancestatistics-file.html["保存自动负载平衡统计信息"]
@@ -23,6 +24,7 @@ link:../commands-a-z/set-storagearray-autoloadbalancingenable.html["将存储阵
 
 
 
+[[ssd-cache-commands]]
 == SSD缓存命令
 
 link:../commands-a-z/add-drives-to-ssd-cache.html["将驱动器添加到SSD缓存"]

@@ -26,6 +26,7 @@ summary: smcli -supportbundle schedule命令可创建或删除在一个或多个
 
 
 
+[[syntax-for-creating-a-dailyweekly-schedule]]
 == 创建每日/每周计划的语法
 
 [source, cli, subs="+macros"]
@@ -40,6 +41,7 @@ pass:quotes[data=_pathName_]
 ----
 
 
+[[syntax-for-creating-a-monthlyyearly-schedule]]
 == 创建每月/每年计划的语法
 
 [source, cli, subs="+macros"]
@@ -58,6 +60,7 @@ pass:quotes[data=_pathName_]
 ----
 
 
+[[syntax-for-removing-a-schedule]]
 == 删除计划的语法
 
 [NOTE]
@@ -72,6 +75,7 @@ pass:quotes[(all|_storageArrayName_)]
 ----
 
 
+[[parameters]]
 == Parameters
 
 下表列出了每日/每周计划的参数。
@@ -332,6 +336,7 @@ file="C:\Program Files\CLI\sup\data.txt"
 |===
 
 
+[[notes]]
 == 注释：
 
 使用`all`参数为所有存储阵列设置通用计划时、将删除各个存储阵列的计划。如果为所有存储阵列设置了计划、则新发现的存储阵列将遵循相同的计划。如果为所有存储阵列设置了计划、然后为单个存储阵列设置了计划、则新发现的存储阵列将不会定义计划。
@@ -383,6 +388,7 @@ weekNumber=First dayOfWeek=Friday
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

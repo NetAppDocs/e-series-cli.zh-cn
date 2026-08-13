@@ -15,18 +15,21 @@ summary: start driveChannel faultDiagnostics命令运行驱动器通道故障隔
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -36,6 +39,7 @@ summary: start driveChannel faultDiagnostics命令运行驱动器通道故障隔
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -54,6 +58,7 @@ pass:quotes[timeout=_timeInterval_]]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -128,6 +133,7 @@ pass:quotes[timeout=_timeInterval_]]
 |===
 
 
+[[notes]]
 == 注释：
 
 您可以输入多种类型的设备进行测试、并且可以输入多种类型的测试来运行。
@@ -140,6 +146,7 @@ pass:quotes[timeout=_timeInterval_]]
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.15

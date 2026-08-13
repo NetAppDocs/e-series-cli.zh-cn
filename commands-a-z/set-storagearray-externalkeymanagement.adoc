@@ -15,18 +15,21 @@ summary: set storageArray externalKeyManagement命令用于配置外部密钥管
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -36,6 +39,7 @@ summary: set storageArray externalKeyManagement命令用于配置外部密钥管
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -45,6 +49,7 @@ serverPort=pass:quotes[_portNumber_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -67,6 +72,7 @@ serverPort=pass:quotes[_portNumber_]
 |===
 
 
+[[example]]
 == 示例
 
 [listing]
@@ -77,6 +83,7 @@ SMcli -n Array1 -c "set storageArray externalKeyManagement serverAddress=192.0.2
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.40

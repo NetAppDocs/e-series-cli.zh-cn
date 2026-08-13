@@ -15,18 +15,21 @@ summary: create volume命令会在卷组的可用空间中创建卷。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -47,6 +50,7 @@ userLabel="_volumeName"_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -161,6 +165,7 @@ userLabel="_volumeName"_]
 |===
 
 
+[[notes]]
 == 注释：
 
 您可以对名称使用字母数字字符、连字符和下划线的任意组合。名称最多可以包含30个字符。
@@ -171,6 +176,7 @@ userLabel="_volumeName"_]
 
 
 
+[[segment-size]]
 == 区块大小
 
 区块大小决定了在将数据写入下一个驱动器之前控制器在卷中的单个驱动器上写入的数据块数。每个数据块存储512字节的数据。数据块是最小的存储单元。分段的大小决定了其包含的数据块数。例如、一个8 KB区块可容纳16个数据块。64 KB区块可容纳128个数据块。
@@ -181,6 +187,7 @@ userLabel="_volumeName"_]
 
 
 
+[[usage-hint]]
 == 使用提示
 
 [NOTE]
@@ -220,12 +227,14 @@ enabled
 |===
 
 
+[[cache-read-prefetch]]
 == 缓存读取预取
 
 缓存读取预取允许控制器将其他数据块复制到缓存中、同时控制器将主机请求的数据块从驱动器读取并复制到缓存中。此操作增加了从缓存满足未来数据请求的可能性。对于使用顺序数据传输的多媒体应用程序来说、缓存读取预取非常重要。`cachedReadPrefetch`参数的有效值为`true`或`false`。默认值为`true`。
 
 
 
+[[security-type]]
 == 安全类型
 
 使用`securityType`参数指定存储阵列的安全设置。
@@ -242,6 +251,7 @@ enabled
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.10添加`dssPreAllocate`参数。

@@ -15,18 +15,21 @@ summary: 使用delete storageArray syslog命令可以删除用于存储审核日
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -35,6 +38,7 @@ delete storageArray syslog (allServers | id="<id>")
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -57,6 +61,7 @@ delete storageArray syslog (allServers | id="<id>")
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.42

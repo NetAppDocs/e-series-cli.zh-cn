@@ -15,18 +15,21 @@ summary: save storageArray supportData命令可将存储阵列的支持相关信
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 下表列出了可收集的支持数据类型。
@@ -475,6 +478,7 @@ X-header数据文件
 |===
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -490,6 +494,7 @@ csbTimeStamp=pass:quotes[_hh:mm_]]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -514,12 +519,14 @@ csbTimeStamp=pass:quotes[_hh:mm_]]
 |===
 
 
+[[notes]]
 == 注释：
 
 从固件级别7.86开始、文件扩展名必须为 `.7z`。如果您运行的固件版本早于7.86、则文件扩展名必须为 `.zip`。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.80添加`force`参数。

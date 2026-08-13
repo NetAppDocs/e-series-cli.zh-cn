@@ -15,18 +15,21 @@ summary: activate storageArray feature命令可激活同步镜像功能并创建
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800和E5700阵列、前提是已安装所有SMClu软件包。
 
 
 
+[[roles]]
 == 角色
 
 要在E4000、E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
+[[context]]
 == 环境
 
 使用此命令时、可以通过以下三种方式之一定义镜像存储库卷：
@@ -45,6 +48,7 @@ summary: activate storageArray feature命令可激活同步镜像功能并创建
 ====
 
 
+[[syntax-user-defined-drives]]
 == 语法(用户定义的驱动器)
 
 [source, cli, subs="+macros"]
@@ -71,6 +75,7 @@ repositoryDrives=pass:quotes[_(trayID1,_]pass:quotes[[_drawerID1_,]]pass:quotes[
 ----
 
 
+[[syntax-user-defined-volume-group]]
 == 语法(用户定义的卷组)
 
 [source, cli, subs="+macros"]
@@ -81,6 +86,7 @@ repositoryVolumeGroup=pass:quotes[_volumeGroupName_]
 ----
 
 
+[[syntax-user-defined-number-of-drives]]
 == 语法(用户定义的驱动器数)
 
 [source, cli, subs="+macros"]
@@ -105,6 +111,7 @@ repositoryDriveCount=pass:quotes[_numberOfDrives_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -195,6 +202,7 @@ freeCapacityArea=2
 |===
 
 
+[[notes]]
 == 注释：
 
 `repositoryDrives`参数既支持高容量驱动器托盘、也支持低容量驱动器托盘。高容量驱动器托盘具有用于容纳驱动器的抽盒。抽盒滑出驱动器托盘、以便可以访问驱动器。低容量驱动器托盘没有抽屉。对于大容量驱动器托盘、您必须指定驱动器托盘的标识符(ID)、抽盒ID以及驱动器所在插槽的ID。对于低容量驱动器托盘、只需指定驱动器托盘的ID以及驱动器所在插槽的ID即可。对于低容量驱动器托盘、确定驱动器位置的另一种方法是指定驱动器托盘的ID、将抽盒的ID设置为`0`、并指定驱动器所在插槽的ID。
@@ -211,6 +219,7 @@ freeCapacityArea=2
 
 
 
+[[data-assurance-management]]
 == 数据保证管理
 
 数据保证(Data Assurance、DA)功能可提高整个存储系统的数据完整性。通过DA、存储阵列可以检查在主机和驱动器之间移动数据时可能发生的错误。启用此功能后、存储阵列会向卷中的每个数据块附加错误检查代码(也称为循环冗余检查或CRC)。移动数据块后、存储阵列会使用这些CRC代码来确定传输期间是否发生任何错误。可能损坏的数据既不会写入磁盘、也不会返回到主机。
@@ -226,6 +235,7 @@ freeCapacityArea=2
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.10增加了RAID级别6功能。

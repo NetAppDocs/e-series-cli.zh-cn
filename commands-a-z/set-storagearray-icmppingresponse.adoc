@@ -15,18 +15,21 @@ summary: set storageArray icmpPingResponse命令将返回会话和连接的可�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -35,6 +38,7 @@ set storageArray icmpPingResponse=(TRUE | FALSE)
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -50,12 +54,14 @@ set storageArray icmpPingResponse=(TRUE | FALSE)
 |===
 
 
+[[notes]]
 == 注释：
 
 网络中的操作系统使用Internet控制消息协议(Internet Control Message Protocol、ICMP)发送错误消息、测试数据包以及与IP相关的信息消息、例如、请求的服务不可用或无法访问主机或路由器。ICMP response命令可发送ICMP回显请求消息并接收ICMP回显响应消息、以确定主机是否可访问以及数据包往返于该主机所需的时间。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.10.

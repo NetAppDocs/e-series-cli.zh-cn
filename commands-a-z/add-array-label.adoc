@@ -15,6 +15,7 @@ summary: 使用添加阵列标签命令可以使用用户定义的标签向配�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 [NOTE]
@@ -26,6 +27,7 @@ summary: 使用添加阵列标签命令可以使用用户定义的标签向配�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -35,6 +37,7 @@ pass:quotes[ _Address1 Address2_ add storageArrayLabel label _userDefinedString_
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -61,6 +64,7 @@ pass:quotes[ _Address1 Address2_ add storageArrayLabel label _userDefinedString_
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.60

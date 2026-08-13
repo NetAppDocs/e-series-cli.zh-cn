@@ -15,18 +15,21 @@ summary: 'set controller NTPServers命令用于设置控制器的NTP设置、以
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 启用此功能后、控制器会定期查询已配置的NTP服务器、然后使用结果更新其内部时间时钟。如果只有一个控制器启用了NTP、则备用控制器会定期将其时钟与启用了NTP的控制器同步。如果这两个控制器均未启用NTP、则这些控制器会定期同步各自的时钟。
@@ -43,6 +46,7 @@ summary: 'set controller NTPServers命令用于设置控制器的NTP设置、以
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -51,6 +55,7 @@ set controller(a|b) NTPServers=(disabled|auto|(Address1 [Address2]))
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -101,6 +106,7 @@ set controller(a|b) NTPServers=(disabled|auto|(Address1 [Address2]))
 |===
 
 
+[[examples]]
 == 示例
 
 [listing]
@@ -113,6 +119,7 @@ set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334);
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.25

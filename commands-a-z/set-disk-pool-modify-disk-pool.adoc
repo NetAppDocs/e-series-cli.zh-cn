@@ -15,24 +15,28 @@ summary: 'set diskPool命令可向磁盘池(动态容量扩展或DCE)添加容�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 这两项操作是互斥的。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ addCapacity=pass:quotes[(_diskPoolCapacity_))]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -85,6 +90,7 @@ addCapacity=pass:quotes[(_diskPoolCapacity_))]
 |===
 
 
+[[notes]]
 == 注释：
 
 在添加新驱动器时、磁盘池中已有的卷将保持联机状态并可用于I/O操作。在添加容量之前、磁盘池必须处于完成状态。如果磁盘池未处于complete状态、请在添加新驱动器之前运行`set diskPool complete`命令。
@@ -95,6 +101,7 @@ addCapacity=pass:quotes[(_diskPoolCapacity_))]
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

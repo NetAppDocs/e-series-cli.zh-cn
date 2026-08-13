@@ -27,6 +27,7 @@ summary: 以下各节中的脚本命令列出了可运行脚本命令的最低�
 ====
 
 
+[[examples-of-firmware-compatibility-levels]]
 == 固件兼容性级别示例
 
 `create hostGroup`命令包含以下部分。

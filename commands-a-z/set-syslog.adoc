@@ -15,18 +15,21 @@ summary: set syslog命令用于配置系统日志警报信息。您可以将事�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 * 系统日志服务器地址必须可用。此地址可以是完全限定域名、IPv4地址或IPv6地址。
@@ -35,6 +38,7 @@ summary: set syslog命令用于配置系统日志警报信息。您可以将事�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -47,6 +51,7 @@ set syslog [defaultFacility=pass:quotes[_facilityNumber_]]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -94,6 +99,7 @@ set syslog [defaultFacility=pass:quotes[_facilityNumber_]]
 |===
 
 
+[[examples]]
 == 示例
 
 [listing]
@@ -108,6 +114,7 @@ SMcli completed successfully.
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.40

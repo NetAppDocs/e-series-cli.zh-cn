@@ -15,18 +15,21 @@ summary: save IOCLog命令可将存储阵列中控制器的IOC转储保存到主
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -35,6 +38,7 @@ save IOCLog [file=pass:quotes["_filename_"]]
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -56,6 +60,7 @@ file="C:\Array Backups\IOCcoredump1.7z"
 |===
 
 
+[[notes]]
 == 注释：
 
 此命令从两个控制器检索IOC转储日志数据和IOC转储元数据。使用7zip文件格式将检索到的数据归档并压缩到一个文件中、该文件名由您选择。7zip归档文件包含以下内容：
@@ -74,6 +79,7 @@ file="C:\Array Backups\IOCcoredump1.7z"
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.20

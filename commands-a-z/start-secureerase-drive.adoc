@@ -15,18 +15,21 @@ summary: 'start secureErase drive命令会擦除一个或多个全磁盘加密(F
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 只有当FDE驱动器不再属于安全卷组或磁盘池、或者安全密钥未知时、才运行此命令。
@@ -38,6 +41,7 @@ summary: 'start secureErase drive命令会擦除一个或多个全磁盘加密(F
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -46,6 +50,7 @@ summary: 'start secureErase drive命令会擦除一个或多个全磁盘加密(F
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -70,12 +75,14 @@ summary: 'start secureErase drive命令会擦除一个或多个全磁盘加密(F
 |===
 
 
+[[notes]]
 == 注释：
 
 控制器固件会创建一个锁定、用于限制对FDE驱动器的访问。FDE驱动器的状态称为"安全功能"。创建安全密钥时、状态将设置为安全已启用、从而限制对存储阵列中所有FDE驱动器的访问。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.40

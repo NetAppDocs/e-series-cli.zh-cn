@@ -15,18 +15,21 @@ summary: start volume initialize命令用于初始化或重新初始化精简卷
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 此操作取决于所使用的参数：
@@ -42,6 +45,7 @@ summary: start volume initialize命令用于初始化或重新初始化精简卷
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -53,6 +57,7 @@ pass:quotes[[diskPool=_diskPoolName_ capacity=_capacityValue_]]
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -111,6 +116,7 @@ pass:quotes[[diskPool=_diskPoolName_ capacity=_capacityValue_]]
 |===
 
 
+[[notes]]
 == 注释：
 
 如果未使用`volume`参数指定卷、则此命令将重置存储库中的元数据、并实际上导致精简卷在主机中显示为空。如果使用`*卷*`参数指定卷、则该卷将被新创建的卷替换、如果使用`existingRepositoryLabel`参数指定了一个卷、则该卷将被现有卷替换。如果您使用`existingRepositoryLabel`参数指定位于其他磁盘池中的现有卷、则精简卷将所有权更改为新磁盘池。
@@ -168,6 +174,7 @@ pass:quotes[[diskPool=_diskPoolName_ capacity=_capacityValue_]]
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

@@ -15,12 +15,14 @@ summary: set iscsiTarget命令用于定义iSCSI目标的属性。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
@@ -32,6 +34,7 @@ summary: set iscsiTarget命令用于定义iSCSI目标的属性。
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -43,6 +46,7 @@ targetAlias=pass:quotes["_userLabel_"]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -79,6 +83,7 @@ targetAlias=pass:quotes["_userLabel_"]
 |===
 
 
+[[notes]]
 == 注释：
 
 质询握手身份验证协议(CHAP)是一种对连接对等方进行身份验证的协议。CHAP基于共享_secret_的对等方。机密是一种类似于密码的安全密钥。
@@ -304,6 +309,7 @@ Z
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.10.

@@ -15,18 +15,21 @@ summary: create diskPool命令会根据指定参数创建新的磁盘池。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列、前提是已安装所有SMClu软件包。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 您可以通过输入要用于磁盘池的驱动器列表或驱动器类型来创建磁盘池。
@@ -38,6 +41,7 @@ summary: create diskPool命令会根据指定参数创建新的磁盘池。
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -62,6 +66,7 @@ driveType=(fibre | SATA | SAS | NVMe4K))
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -222,6 +227,7 @@ driveType=(fibre | SATA | SAS | NVMe4K))
 |===
 
 
+[[notes]]
 == 注释：
 
 每个磁盘池名称必须唯一。您可以对用户标签使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。用户标签最多可以包含30个字符。
@@ -232,6 +238,7 @@ driveType=(fibre | SATA | SAS | NVMe4K))
 
 
 
+[[drives]]
 == 驱动器
 
 使用`driveType`参数时、将使用该驱动器类型的所有未分配驱动器来创建磁盘池。如果要限制在磁盘池中通过`driveType`参数找到的驱动器数、可以使用`driveCount`参数指定驱动器数。只有在使用`driveType`参数时、才能使用`driveCount`参数。
@@ -242,6 +249,7 @@ driveType=(fibre | SATA | SAS | NVMe4K))
 
 
 
+[[disk-pool-alert-thresholds]]
 == 磁盘池警报阈值
 
 每个磁盘池都有两个逐渐严重的警报级别、用于在磁盘池的存储容量接近全满时通知用户。警报阈值是磁盘池中已用容量占总可用容量的百分比。警报如下：
@@ -254,6 +262,7 @@ driveType=(fibre | SATA | SAS | NVMe4K))
 
 
 
+[[disk-pool-background-operations]]
 == 磁盘池后台操作
 
 磁盘池支持以下后台操作：
@@ -275,6 +284,7 @@ driveType=(fibre | SATA | SAS | NVMe4K))
 
 
 
+[[security-type]]
 == 安全类型
 
 使用`securityType`参数指定存储阵列的安全设置。
@@ -291,12 +301,14 @@ driveType=(fibre | SATA | SAS | NVMe4K))
 
 
 
+[[secure-drives]]
 == 保护驱动器
 
 支持安全的驱动器可以是全磁盘加密(Full Disk Encryption、FDE)驱动器、也可以是联邦信息处理标准(Federal Information Processing Standard、FIPS)驱动器。使用`secureDrives`参数指定要使用的安全驱动器类型。可以使用的值为`FIPS`和`FDE`。
 
 
 
+[[example-command]]
 == 命令示例
 
 [listing]
@@ -305,6 +317,7 @@ create diskPool driveType=SAS userLabel="FIPS_Pool" driveCount=11 securityType=c
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

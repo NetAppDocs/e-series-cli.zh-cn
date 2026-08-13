@@ -15,18 +15,21 @@ summary: reset storageArray diagnosticData命令可重置包含存储阵列诊�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 此命令不会删除诊断数据。此命令将"需要注意"状态替换为"诊断数据可用"状态。捕获新数据后、系统会自动重新写入旧诊断数据。控制器重新启动时、包含诊断数据的内存也会被清除。在重置诊断数据之前、请使用`save storageArray diagnosticData`命令将诊断数据保存到文件中。
@@ -38,6 +41,7 @@ summary: reset storageArray diagnosticData命令可重置包含存储阵列诊�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -46,12 +50,14 @@ reset storageArray diagnosticData
 ----
 
 
+[[parameters]]
 == Parameters
 
 无
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.16

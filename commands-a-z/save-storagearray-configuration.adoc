@@ -15,18 +15,21 @@ summary: save storageArray configuration命令用于创建一个脚本文件、�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。但是，将此命令与 LDAP 参数一起使用仅限于具有 Security Admin 角色的用户。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -36,6 +39,7 @@ summary: save storageArray configuration命令用于创建一个脚本文件、�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -48,6 +52,7 @@ save storageArray configuration file=pass:quotes["_filename_"]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -102,12 +107,14 @@ save storageArray configuration file=pass:quotes["_filename_"]
 |===
 
 
+[[notes]]
 == 注释：
 
 使用此命令时、您可以为全局设置、卷配置设置、主机拓扑或LUN映射指定参数的任意组合。如果要输入所有设置、请使用`allConfig`参数。您必须使用`allConfig`参数或其他四个参数中的一个或多个参数。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.10

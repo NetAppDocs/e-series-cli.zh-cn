@@ -15,18 +15,21 @@ summary: set snapVolume increase/decreposeRepositoryCapacity命令可增加或�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax-for-increasing-capacity]]
 == 增加容量的语法
 
 [source, cli, subs="+macros"]
@@ -38,6 +41,7 @@ repositoryVolumes=pass:quotes[(_diskPoolName_)] [capacity=pass:quotes[_capacityV
 ----
 
 
+[[syntax-for-decreasing-capacity]]
 == 降低容量的语法
 
 [source, cli, subs="+macros"]
@@ -47,6 +51,7 @@ count=pass:quotes[_numberOfVolumes_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -101,6 +106,7 @@ count=pass:quotes[_numberOfVolumes_]
 |===
 
 
+[[notes]]
 == 注释：
 
 您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
@@ -117,6 +123,7 @@ Snapshot组存储库卷必须满足以下各项的总和所需的最小容量：
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

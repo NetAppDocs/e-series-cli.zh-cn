@@ -15,18 +15,21 @@ summary: start VolumeGroup fullProvisioning命令可对磁盘池中的所有卷�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 EF600、EF300、EF50 和 EF80 阵列；只要安装了所有 SMcli 包。
 
 
 
+[[roles]]
 == 角色
 
 要在 EF600、EF300、EF50 和 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 资源配置功能可以使大部分驱动器块保持未分配状态、从而延长SSD的使用寿命并提高写入性能。资源配置的卷是SSD卷组或池中的厚卷、其中会分配(分配给卷)驱动器容量、但在创建卷期间会取消分配(取消映射)驱动器块。根据需要分配驱动器块以完成主机写入IO。主机取消映射操作可以将驱动器块恢复为未分配状态。资源配置还消除了有时间限制的后台初始化、从而可以快速初始化大型卷。
@@ -37,6 +40,7 @@ summary: start VolumeGroup fullProvisioning命令可对磁盘池中的所有卷�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -45,6 +49,7 @@ start volumeGroup[volumeGroupName] fullProvisioning [disableResourceProvisioning
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -72,6 +77,7 @@ start volumeGroup[volumeGroupName] fullProvisioning [disableResourceProvisioning
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 11.72.

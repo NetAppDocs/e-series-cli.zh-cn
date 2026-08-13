@@ -15,23 +15,26 @@ summary: 'create SyncMirror 命令可为同步远程镜像对同时创建主卷�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令会对任何单个存储阵列执行适用场景 操作、但有一些限制。如果您在E2700或E5600阵列上运行命令、则没有任何限制。
 
 [NOTE]
 ====
-E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 平台不支持此命令。
+E4000、E2800、E5700、EF600 和 EF300 平台不支持此命令。
 
 ====
 
 
+[[roles]]
 == 角色
 
 不适用
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -41,6 +44,7 @@ E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 平台不支持此命令�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -59,6 +63,7 @@ remoteStorageArrayWwn="_wwID_")]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -147,6 +152,7 @@ remoteStorageArrayWwn="_wwID_")]
 |===
 
 
+[[notes]]
 == 注释：
 
 您可以对名称使用字母数字字符、连字符和下划线的任意组合。名称最多可以包含30个字符。
@@ -161,6 +167,7 @@ remoteStorageArrayWwn="_wwID_")]
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.10

@@ -15,18 +15,21 @@ summary: create hostGroup命令将创建一个新的主机组。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -35,6 +38,7 @@ create hostGroup userLabel=pass:quotes[_"hostGroupName"_]
 ----
 
 
+[[parameter]]
 == 参数
 
 |===
@@ -49,6 +53,7 @@ create hostGroup userLabel=pass:quotes[_"hostGroupName"_]
 |===
 
 
+[[notes]]
 == 注释：
 
 主机组是一个可选的拓扑元素、如果要指定一组共享对相同卷的访问的主机、则可以定义该元素。主机组是一个逻辑实体。只有当您有两个或更多主机可以共享对相同卷的访问时、才能定义主机组。
@@ -57,6 +62,7 @@ create hostGroup userLabel=pass:quotes[_"hostGroupName"_]
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 5.20

@@ -15,12 +15,14 @@ summary: smcli -autosupportConfig命令可设置发送AutoSupport 消息的方�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E4000、E2800或E5700存储阵列。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -36,6 +38,7 @@ summary: smcli -autosupportConfig命令可设置发送AutoSupport 消息的方�
 
 
 
+[[syntax-for-smtp-delivery-method]]
 == SMTP传送方法的语法
 
 [source, cli]
@@ -45,6 +48,7 @@ mailRelayServer=<mailRelayServerName> senderMail=<senderEmailAddress>
 ----
 
 
+[[parameters-for-the-smtp-delivery-method]]
 == SMTP传送方法的参数
 
 [cols="2*"]
@@ -74,6 +78,7 @@ mailRelayServer=<mailRelayServerName> senderMail=<senderEmailAddress>
 |===
 
 
+[[syntax-for-httphttps-delivery-methods]]
 == HTTP/HTTPS传送方法的语法
 
 [listing]
@@ -84,6 +89,7 @@ hostAddress:<address>portNumber=<portNumber> [userName=<userName>password=<passw
 ----
 
 
+[[parameters-for-the-httphttps-delivery-methods]]
 == HTTP/HTTPS传送方法的参数
 
 下表列出了HTTP/HTTPS传输方法的参数。
@@ -150,12 +156,14 @@ ProxyServer的主机IP地址。
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.25
 
 
 
+[[examples]]
 == 示例
 
 [listing]
@@ -172,6 +180,7 @@ userName=user password=0987654321
 ----
 
 
+[[verification]]
 == 验证
 
 使用`SMcli -autosupportConfig test`命令发送测试消息、以验证您的交付方法是否设置正确。

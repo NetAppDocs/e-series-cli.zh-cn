@@ -15,12 +15,14 @@ summary: 使用smcli -autosupportConfig测试命令发送测试消息以测试Au
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E2800或E5700存储阵列。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -35,6 +37,7 @@ summary: 使用smcli -autosupportConfig测试命令发送测试消息以测试Au
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -43,6 +46,7 @@ SMcli -autoSupportConfig test reply-toEmail<address>
 ----
 
 
+[[parameters]]
 == Parameters
 
 下表列出了用于发送AutoSupport 测试消息的参数。
@@ -67,12 +71,14 @@ SMcli -autoSupportConfig test reply-toEmail<address>
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.25
 
 
 
+[[example-of-testing-using-httphttps-delivery]]
 == 使用HTTP/HTTPS交付进行测试的示例
 
 以下是使用HTTP或HTTPS传送类型时使用此命令的示例、您不会指定要传送的电子邮件地址。
@@ -86,6 +92,7 @@ SMcli completed successfully.
 ----
 
 
+[[example-of-testing-using-smtp-delivery]]
 == 使用SMTP传送进行测试的示例
 
 以下是使用此命令的示例。使用SMTP传送方法时、您可以使用`reply-toEmail`参数指定目标地址。

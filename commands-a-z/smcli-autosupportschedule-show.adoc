@@ -15,12 +15,14 @@ summary: smcli -autosupportSchedule show命令可显示收集和处理每日和�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E4000、E2800或E5700存储阵列。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -38,6 +40,7 @@ summary: smcli -autosupportSchedule show命令可显示收集和处理每日和�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -46,18 +49,21 @@ SMcli -autoSupportSchedule show
 ----
 
 
+[[parameters]]
 == Parameters
 
 无
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.25
 
 
 
+[[example]]
 == 示例
 
 输出将显示首选时间范围、然后显示每日和每周计划。

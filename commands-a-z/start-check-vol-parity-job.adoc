@@ -15,18 +15,21 @@ summary: 'start check volume parity job"命令可在给定卷上启动新的检�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 EF600、EF300、EF50 和 EF80 阵列；只要安装了所有 SMcli 包。
 
 
 
+[[roles]]
 == 角色
 
 要在 EF600、EF300、EF50 和 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -37,6 +40,7 @@ repairMediaErrors=<true | false>);
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -79,6 +83,7 @@ repairMediaErrors=<true | false>);
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 11.80

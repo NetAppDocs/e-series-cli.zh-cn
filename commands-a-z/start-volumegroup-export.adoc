@@ -15,18 +15,21 @@ summary: start VolumeGroup export命令可将卷组移至已导出状态。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 然后、您可以删除构成卷组的驱动器、并将这些驱动器重新安装到其他存储阵列中。
@@ -43,6 +46,7 @@ summary: start VolumeGroup export命令可将卷组移至已导出状态。
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -51,6 +55,7 @@ pass:quotes[start volumeGroup [_volumeGroupName_]] export
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -66,6 +71,7 @@ pass:quotes[start volumeGroup [_volumeGroupName_]] export
 |===
 
 
+[[notes]]
 == 注释：
 
 此命令成功后、您可以运行`sStart VolumeGroup import`命令完成将卷组移至完整状态的操作、从而使卷组可供新存储阵列使用。
@@ -76,6 +82,7 @@ pass:quotes[start volumeGroup [_volumeGroupName_]] export
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.10.

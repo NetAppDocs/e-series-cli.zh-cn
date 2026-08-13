@@ -15,18 +15,21 @@ summary: recopy volumeCopy target命令使用现有卷副本对重新启动卷�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -45,6 +48,7 @@ summary: recopy volumeCopy target命令使用现有卷副本对重新启动卷�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -56,6 +60,7 @@ recopy volumeCopy target [targetName]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -91,12 +96,14 @@ recopy volumeCopy target [targetName]
 |===
 
 
+[[notes]]
 == 注释：
 
 复制优先级用于定义在源卷和卷副本对的目标卷之间复制数据所使用的系统资源量。如果选择最高优先级、则卷副本将使用最多的系统资源来执行卷复制、从而降低主机数据传输的性能。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.10

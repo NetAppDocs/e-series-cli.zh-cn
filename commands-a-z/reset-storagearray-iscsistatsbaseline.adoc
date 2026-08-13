@@ -15,12 +15,14 @@ summary: reset storageArray iscsiStatsBaseline命令可将存储阵列的iSCSI�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800和E5700阵列、前提是已安装所有SMClu软件包。
 
 
 
+[[roles]]
 == 角色
 
 要在E4000、E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
@@ -32,6 +34,7 @@ summary: reset storageArray iscsiStatsBaseline命令可将存储阵列的iSCSI�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -40,18 +43,21 @@ reset storageArray iscsiStatsBaseline
 ----
 
 
+[[parameters]]
 == Parameters
 
 无
 
 
 
+[[notes]]
 == 注释：
 
 此命令会将存储阵列中两个控制器的基线重置为0。重置这两个控制器基线的目的是帮助确保控制器计数在控制器之间同步。如果一个控制器重置、但第二个控制器未重置、则主机会收到控制器不同步的通知。主机将通过随统计信息报告的时间戳来获得通知。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.10.

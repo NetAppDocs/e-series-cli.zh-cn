@@ -15,24 +15,28 @@ summary: diag controller命令可对控制器运行诊断测试。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 诊断测试包括环回测试、在这些测试中、数据会写入驱动器并从驱动器中读取。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ pass:quotes[[patternFile="_filename_"]]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -88,6 +93,7 @@ pass:quotes[[patternFile="_filename_"]]
 |===
 
 
+[[notes]]
 == 注释：
 
 运行数据回路测试时、您可以选择指定包含数据模式的文件。如果未指定文件、则控制器固件将提供默认模式。
@@ -112,6 +118,7 @@ One or more controller discrete lines failed the diagnostic test.
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.10增加了读取测试、写入测试和数据环路测试。

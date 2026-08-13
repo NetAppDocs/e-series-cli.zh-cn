@@ -15,18 +15,21 @@ summary: 'set controller DNSServers命令用于更新控制器的域名系统(Do
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 开始之前、请确保：
@@ -47,6 +50,7 @@ summary: 'set controller DNSServers命令用于更新控制器的域名系统(Do
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -55,6 +59,7 @@ set controller[a] DNSServers=(auto|(Address1 [Address2]))
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -84,6 +89,7 @@ IPV4Address|IPv6Address
 |===
 
 
+[[examples]]
 == 示例
 
 [listing]
@@ -96,6 +102,7 @@ set controller[b] DNSServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 192.168.1.
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.25

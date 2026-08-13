@@ -15,18 +15,21 @@ summary: '使用set storageArray revocationCheckSettings命令可以启用或禁
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 OCSP服务器会检查证书颁发机构(CA)在其计划的到期日期之前是否已撤销任何证书。如果CA颁发的证书不正确或私钥受到影响、您可能需要启用撤消检查。
@@ -40,6 +43,7 @@ OCSP服务器会检查证书颁发机构(CA)在其计划的到期日期之前是
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -48,6 +52,7 @@ set storageArray revocationCheckSettings ([revocationCheckEnable = boolean] &| [
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -75,6 +80,7 @@ set storageArray revocationCheckSettings ([revocationCheckEnable = boolean] &| [
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.42

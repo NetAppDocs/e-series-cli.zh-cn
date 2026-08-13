@@ -15,18 +15,21 @@ summary: start VolumeGroup import命令可将卷组移至完整状态、以使�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 在运行此命令之前、卷组必须处于已导出或已强制状态。成功运行命令后、卷组将正常运行。
@@ -38,6 +41,7 @@ summary: start VolumeGroup import命令可将卷组移至完整状态、以使�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -46,6 +50,7 @@ pass:quotes[start volumeGroup [_volumeGroupName_]] import
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -61,6 +66,7 @@ pass:quotes[start volumeGroup [_volumeGroupName_]] import
 |===
 
 
+[[notes]]
 == 注释：
 
 在导入操作中、与功能(同步镜像、卷副本、映射和持久预留)特别相关的更高级别卷将被删除。
@@ -69,6 +75,7 @@ pass:quotes[start volumeGroup [_volumeGroupName_]] import
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.10.

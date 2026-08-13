@@ -15,18 +15,21 @@ summary: check volume parity命令会检查卷的奇偶校验和介质错误、�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -41,6 +44,7 @@ check volume pass:quotes[[_volumeName_]] parity
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -105,12 +109,14 @@ check volume pass:quotes[[_volumeName_]] parity
 |===
 
 
+[[notes]]
 == 注释：
 
 对于非常大的单卷LUN或命名空间、起始逻辑块地址和结束逻辑块地址非常有用。在非常大的单个卷LUN或命名空间上运行卷奇偶校验检查可能需要很长时间。通过定义数据块的起始地址和结束地址、您可以缩短完成卷奇偶校验检查所需的时间。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 11.80—此命令已弃用。

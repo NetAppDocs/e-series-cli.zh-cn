@@ -15,6 +15,7 @@ SANtricity OS 11.60及更高版本支持直接通过SANtricity系统管理器下
 
 
 
+[[11-60-and-newer-downloadable-smcli-command-line-parameters]]
 == 11.60及更高版本的可下载SMcli命令行参数
 
 SMClI的可下载版本可用于E4000、EF600、EF300、E5700、EF570、E2800、EF280、EF300C和EF600C控制器。要在SANtricity系统管理器中下载SMCli,请选择*Settings**System*和*Add-ones**Command Line Interface*。
@@ -26,6 +27,7 @@ NOTE: 要运行命令行界面命令的管理系统必须具有Java Runtime Envi
 
 
 
+[[multifactor-authentication]]
 === 多因素身份验证
 
 如果启用了SAML (安全断言标记语言)、则CLI只能使用访问令牌。如果未启用SAML、则可以使用用户名/密码或访问令牌。可以通过SANtricity 系统管理器生成访问令牌。
@@ -83,6 +85,7 @@ NOTE: 要运行命令行界面命令的管理系统必须具有Java Runtime Envi
 |===
 
 
+[[general-https-mode-command-line-parameters]]
 === 常规https模式命令行参数
 
 可下载的SMcli仅支持https模式。以下是https模式常用的命令行参数。
@@ -177,6 +180,7 @@ NOTE: 有关使用本地存储的标签管理存储阵列的追加信息 、请�
 |===
 
 
+[[managing-stored-arrays]]
 === 管理存储的阵列
 
 您可以使用以下命令行参数通过本地存储的标签管理存储的阵列。
@@ -184,6 +188,7 @@ NOTE: 有关使用本地存储的标签管理存储阵列的追加信息 、请�
 
 NOTE: 本地存储的标签可能与SANtricity 系统管理器下显示的实际存储阵列名称不匹配。
 
+[[managearrays]]
 [cols="2*"]
 |===
 | 参数 | 定义 
@@ -228,6 +233,7 @@ NOTE: 本地存储的标签可能与SANtricity 系统管理器下显示的实际
 NOTE: 添加本地存储的标签时、SMcli不会与存储阵列联系。
 
 |===
+[[storedcertificates]]
 [cols="2*"]
 |===
 | 参数 | 定义 
@@ -282,6 +288,7 @@ NOTE: 添加本地存储的标签时、SMcli不会与存储阵列联系。
 |===
 
 
+[[identify-devices]]
 === 识别设备
 
 使用以下命令行参数可以显示主机可见的所有适用设备的信息。
@@ -289,6 +296,7 @@ NOTE: 添加本地存储的标签时、SMcli不会与存储阵列联系。
 
 NOTE: 从SANtricity 11.81版开始、SMCli `identifyDevices` 参数将取代以前通过SMdevices工具提供的功能。
 
+[[identifyDevices]]
 [cols="2*"]
 |===
 | 参数 | 定义 

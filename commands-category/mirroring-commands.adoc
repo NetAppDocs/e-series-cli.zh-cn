@@ -15,6 +15,7 @@ summary: 镜像命令
 
 
 
+[[asynchronous-mirroring-commands]]
 == 异步镜像命令
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["激活异步镜像"]
@@ -61,6 +62,7 @@ link:../commands-a-z/diagnose-asyncmirrorgroup.html["测试异步镜像组连接
 
 
 
+[[synchronous-mirroring-commands]]
 == 同步镜像命令
 
 link:../commands-a-z/activate-synchronous-mirroring.html["激活同步镜像"]

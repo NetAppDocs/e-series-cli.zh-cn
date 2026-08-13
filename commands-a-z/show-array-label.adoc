@@ -15,12 +15,14 @@ summary: show array label命令可返回有关是否已定义存储阵列标签�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于 EF600、EF300、EF50 和 EF80 存储阵列。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -30,6 +32,7 @@ show storageArrayLabel all
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -45,6 +48,7 @@ show storageArrayLabel all
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.60

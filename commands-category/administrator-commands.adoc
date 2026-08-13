@@ -15,6 +15,7 @@ summary: storage、Security和Support管理员命令
 
 
 
+[[storage-administrators-commands]]
 == 存储管理员命令
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["激活异步镜像"]
@@ -727,6 +728,7 @@ link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["更新SNMP陷�
 
 
 
+[[support-administrators-commands]]
 == 支持管理员命令
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["激活异步镜像"]
@@ -851,6 +853,7 @@ link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["更新SNMP陷�
 
 
 
+[[security-administrators-commands]]
 == 安全管理员命令
 
 link:../commands-a-z/create-storagearray-directoryserver.html["创建存储阵列目录服务器"]

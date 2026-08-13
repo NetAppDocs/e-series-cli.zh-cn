@@ -15,18 +15,21 @@ summary: set storageArray securityKey命令用于设置整个存储阵列用于�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 如果将存储阵列中任何支持安全的驱动器分配给安全卷组或磁盘池、则该驱动器将使用安全密钥启用安全性。在设置安全密钥之前、您必须使用`create storageArray securityKey`命令创建安全密钥。
@@ -38,6 +41,7 @@ summary: set storageArray securityKey命令用于设置整个存储阵列用于�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -46,12 +50,14 @@ set storageArray securityKey
 ----
 
 
+[[parameters]]
 == Parameters
 
 无
 
 
 
+[[notes]]
 == 注释：
 
 支持安全的驱动器具有可加快加密处理速度的硬件、每个驱动器都有一个唯一的驱动器密钥。在将支持安全的驱动器添加到安全卷组之前、该驱动器的行为与任何其他驱动器相同、此时、支持安全的驱动器将变为已启用安全保护的驱动器。
@@ -60,6 +66,7 @@ set storageArray securityKey
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.50

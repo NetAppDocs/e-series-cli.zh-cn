@@ -15,18 +15,21 @@ summary: set ssdCache命令可更改SSD缓存的名称。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Support Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -35,6 +38,7 @@ set ssdCache pass:quotes[[_old_ssdCacheName_]] userLabel=pass:quotes[_"new_ssdCa
 ----
 
 
+[[parameter]]
 == 参数
 
 |===
@@ -56,6 +60,7 @@ SSD缓存的新名称。请将此名称用双引号("")括起来。您可以对�
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.84.接受采取后续行动

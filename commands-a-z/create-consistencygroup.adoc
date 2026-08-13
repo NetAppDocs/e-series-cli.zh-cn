@@ -15,18 +15,21 @@ summary: create ConsistencyGroup命令将创建一个新的空一致性组、该
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -41,6 +44,7 @@ create consistencyGroup userLabel=pass:quotes[_"consistencyGroupName"_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -90,6 +94,7 @@ create consistencyGroup userLabel=pass:quotes[_"consistencyGroupName"_]
 |===
 
 
+[[notes]]
 == 注释：
 
 一致性组是一个逻辑实体、可用于批量管理添加到集合中的所有快照映像。一致性组是指对其快照映像具有共同一致性要求或依赖关系的快照组的集合。您为此集合创建和使用的任何快照映像都必须根据一致性依赖关系进行管理。
@@ -104,12 +109,14 @@ create consistencyGroup userLabel=pass:quotes[_"consistencyGroupName"_]
 
 
 
+[[auto-delete]]
 == 自动删除
 
 您可以将每个快照组配置为自动删除其快照映像、以使快照组中的快照映像总数保持在或低于最大映像数。如果快照组中的快照映像数达到最大限制、则每当在快照组中创建新的快照映像时、`autodeleteLimit`参数都会自动删除快照映像。`autodeleteLimit`参数将删除快照组中最早的快照映像、直到达到使用参数定义的最大映像数为止。这样就可以释放存储库容量、以便可以使用它来满足其余Snapshot映像的持续写时复制要求。
 
 
 
+[[scheduling-snapshot-images-in-a-consistency-group]]
 == 计划一致性组中的快照映像
 
 使用`enableSchedule`参数和`sschedule`参数可以计划快照。使用这些参数、您可以计划每日、每周或每月(按天或日期)创建快照。`enableSchedule`参数用于启用或禁用快照计划功能。启用计划时、您可以使用`schedule`参数来定义快照的发生时间。
@@ -972,6 +979,7 @@ enableSchedule=true schedule timeZone="America/Chicago"
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

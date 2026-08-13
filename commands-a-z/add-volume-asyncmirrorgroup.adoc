@@ -15,29 +15,33 @@ summary: add volume asyncMirrorGroup命令可将主卷添加到异步镜像组�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令会对任何单个存储阵列执行适用场景 操作、但有一些限制。如果您在E2700或E5600阵列上运行命令、则没有任何限制。
 
 [NOTE]
 ====
-E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 平台不支持此命令。
+E4000、E2800、E5700、EF600 和 EF300 平台不支持此命令。
 
 ====
 
 
+[[roles]]
 == 角色
 
 不适用
 
 
 
+[[context]]
 == 环境
 
 此命令仅在包含要添加主卷的异步镜像组的本地存储阵列上有效。异步镜像组具有一个存储库卷、用于保存异步镜像组中所有时间点映像的数据。异步镜像组中的每个主卷在远程存储阵列上都有一个相应的镜像卷。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -50,6 +54,7 @@ repositoryVolume=pass:quotes[(_diskPoolName_] pass:quotes[[capacity=_capacityVal
 ----
 
 
+[[parameter]]
 == 参数
 
 |===
@@ -110,6 +115,7 @@ repositoryVolume=pass:quotes[(_diskPoolName_] pass:quotes[[capacity=_capacityVal
 |===
 
 
+[[notes]]
 == 注释：
 
 * 必须在要用于镜像活动的本地和远程存储阵列上启用和激活异步镜像功能。
@@ -119,6 +125,7 @@ repositoryVolume=pass:quotes[(_diskPoolName_] pass:quotes[[capacity=_capacityVal
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.84.接受采取后续行动

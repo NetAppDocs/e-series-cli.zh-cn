@@ -15,18 +15,21 @@ summary: export storageArray securityKey命令可将驱动器安全密钥保存�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 如果启用了外部密钥管理，则此命令仅适用于 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列。如果启用了内部密钥管理，则该命令适用于任何单个存储阵列，前提是所有 SMcli 包都已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 从一个存储阵列导出密钥文件时、该密钥可以导入到另一个存储阵列中。这样、您可以在存储阵列之间移动支持安全功能的驱动器。
@@ -38,6 +41,7 @@ summary: export storageArray securityKey命令可将驱动器安全密钥保存�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -48,6 +52,7 @@ pass:quotes[file="_fileName_"]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -79,6 +84,7 @@ file="C:\Program Files\CLI\sup\drivesecurity.slk"
 |===
 
 
+[[notes]]
 == 注释：
 
 要将驱动器移动到的存储阵列中的驱动器容量必须等于或大于要导入的驱动器。
@@ -102,6 +108,7 @@ file="C:\Program Files\CLI\sup\drivesecurity.slk"
 ====
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.40

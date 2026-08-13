@@ -15,12 +15,14 @@ summary: save storageArray ibStats命令可将存储阵列的InfiniBand性能统
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
@@ -32,6 +34,7 @@ summary: save storageArray ibStats命令可将存储阵列的InfiniBand性能统
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -41,6 +44,7 @@ file=pass:quotes["_filename_"]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -74,12 +78,14 @@ file=pass:quotes["_filename_"]
 |===
 
 
+[[notes]]
 == 注释：
 
 如果自控制器开始日期以来未重置InfiniBand基线统计信息、则开始日期的时间为默认基线时间。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.32

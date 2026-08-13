@@ -15,24 +15,28 @@ summary: create SnapImage命令可在一个或多个现有快照组中创建新�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 在创建快照映像之前、必须先至少有一个快照组、您可以将该快照映像放置到该快照组中。要创建快照组、请使用`create snapGroup`命令。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -42,6 +46,7 @@ snapGroups=("_snapGroupName1"... "snapGroupNamen_"))]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -68,6 +73,7 @@ snapGroups=("_snapGroupName1"... "snapGroupNamen_"))]
 |===
 
 
+[[notes]]
 == 注释：
 
 您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
@@ -78,6 +84,7 @@ snapGroups=("_snapGroupName1"... "snapGroupNamen_"))]
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

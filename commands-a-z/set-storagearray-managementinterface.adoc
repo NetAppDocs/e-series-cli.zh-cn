@@ -18,18 +18,21 @@ NOTE: 从 SANtricity 12.00 开始，此命令将被删除，因为存储阵列�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -38,6 +41,7 @@ set storageArray managementInterface restOnly={true | false}
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -57,6 +61,7 @@ set storageArray managementInterface restOnly={true | false}
 |===
 
 
+[[examples]]
 == 示例
 
 [listing]
@@ -68,6 +73,7 @@ SMcli completed successfully.
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 不适用。

@@ -15,24 +15,28 @@ summary: 'create ssdCache命令使用固态磁盘(SSD)为存储阵列创建读�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Support Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 使用高性能SSD缓存读取数据可提高应用程序I/O性能和响应时间、并在不同工作负载之间持续提高性能、尤其是对于高IOP工作负载。SSD缓存可以最大限度地利用昂贵的快速SSD。除了控制器DRAM中的主缓存之外、SSD缓存也起作用。使用控制器缓存时、数据会在主机读取后存储在DRAM中。使用SSD缓存时、数据将从用户指定的基础卷复制、然后缓存在SSD上。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ drives=pass:quotes[_(trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1 .
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -88,6 +93,7 @@ drives=pass:quotes[_(trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1 .
 |===
 
 
+[[notes]]
 == 注释：
 
 您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
@@ -100,6 +106,7 @@ drives=pass:quotes[_(trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1 .
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.84.接受采取后续行动

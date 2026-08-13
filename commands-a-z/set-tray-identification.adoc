@@ -15,24 +15,28 @@ summary: set tray命令用于设置存储阵列中控制器托盘、控制器驱
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 此命令仅适用于具有可通过控制器固件设置的托盘ID的控制器托盘、控制器驱动器托盘或驱动器托盘。对于使用交换机设置了托盘ID的控制器托盘、控制器驱动器托盘或驱动器托盘、不能使用此命令。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -41,6 +45,7 @@ set tray pass:quotes[["_serialNumber_"]] pass:quotes[id=_trayID_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -78,6 +83,7 @@ set tray pass:quotes[["_serialNumber_"]] pass:quotes[id=_trayID_]
 |===
 
 
+[[notes]]
 == 注释：
 
 此命令最初支持CE6998控制器托盘CE6998-series控制器托盘可以连接到各种驱动器托盘、包括托盘ID由交换机设置的驱动器托盘。将CE6998-series控制器托盘连接到托盘ID由交换机设置的驱动器托盘时、控制器托盘的托盘ID有效值为`80`到`99`。此范围可避免与连接的驱动器托盘所使用的托盘ID冲突。

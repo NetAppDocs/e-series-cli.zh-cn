@@ -15,12 +15,14 @@ summary: 'show blockedEventAlertList命令可返回当前已被set blockEventAle
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令仅适用于E2700和E5600存储阵列。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -30,6 +32,7 @@ summary: 'show blockedEventAlertList命令可返回当前已被set blockEventAle
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -38,6 +41,7 @@ show blockedEventAlertList
 ----
 
 
+[[example]]
 == 示例
 
 输出中的每个被阻止事件都有一行、以十六进制格式列出事件类型、然后列出事件的问题描述。以下是输出示例：
@@ -51,12 +55,14 @@ Script execution complete.
 ----
 
 
+[[parameters]]
 == Parameters
 
 无
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.10

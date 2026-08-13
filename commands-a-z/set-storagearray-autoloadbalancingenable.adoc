@@ -15,18 +15,21 @@ summary: set storageArray autodelloadBalancingEnable命令用于启用或禁用�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -35,6 +38,7 @@ set storageArray autoLoadBalancingEnable=(TRUE | FALSE)
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -57,6 +61,7 @@ set storageArray autoLoadBalancingEnable=(TRUE | FALSE)
 |===
 
 
+[[what-is-automatic-load-balancing]]
 == 什么是自动负载平衡？
 
 自动负载平衡功能可以随着时间的推移对负载变化做出动态响应、并自动调整卷控制器所有权、以便在工作负载在控制器之间移动时更正任何负载不平衡问题、从而改进了I/O资源管理。
@@ -71,6 +76,7 @@ set storageArray autoLoadBalancingEnable=(TRUE | FALSE)
 
 
 
+[[enabling-and-disabling-automatic-load-balancing]]
 == 启用和禁用自动负载平衡
 
 默认情况下、SANtricity OS (控制器软件) 8.30或更高版本附带的所有存储阵列都会启用自动负载平衡。Linux、Windows和VMware多路径驱动程序可以使用自动负载平衡功能。如果将控制器从SANtricity OS (控制器软件) 8.25或更早版本升级到8.30或更高版本、则默认情况下、存储阵列会禁用自动负载平衡。
@@ -85,6 +91,7 @@ set storageArray autoLoadBalancingEnable=(TRUE | FALSE)
 
 
 
+[[examples]]
 == 示例
 
 [listing]
@@ -100,6 +107,7 @@ SMcli completed successfully.
 ====
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.30

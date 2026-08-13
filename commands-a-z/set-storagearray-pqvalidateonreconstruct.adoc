@@ -15,18 +15,21 @@ summary: set storageArray pqValidateOnReconstruct命令可在重建时设置存�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 这种配置具有双奇偶校验的适用场景 磁盘池和RAID 6卷组。在这种情况下、驱动器发生故障时、卷组或磁盘池中仍存在冗余、因此可以在重建期间检查数据和奇偶校验一致性。如果在重建期间发现不一致、并且为卷启用了数据保证、则可以确定不一致的原因、以便可以使用其余驱动器重建数据。如果启用了此功能、但未为卷启用数据保证、或者无法将不一致性隔离到单个驱动器、则要重建的块将标记为不可读。
@@ -35,6 +38,7 @@ summary: set storageArray pqValidateOnReconstruct命令可在重建时设置存�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -43,6 +47,7 @@ set storageArray pqValidateOnReconstruct (enable | disable) driveMediaType=(hdd 
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -77,6 +82,7 @@ set storageArray pqValidateOnReconstruct (enable | disable) driveMediaType=(hdd 
 |===
 
 
+[[example-with-drive-media-type-specified-as-hard-disk-drives]]
 == 驱动器介质类型指定为硬盘驱动器的示例
 
 [listing]
@@ -88,6 +94,7 @@ SMcli completed successfully.
 ----
 
 
+[[example-with-drive-media-type-specified-as-solid-state-drives]]
 == 驱动器介质类型指定为固态驱动器的示例
 
 [listing]
@@ -99,6 +106,7 @@ SMcli completed successfully.
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.42

@@ -15,24 +15,28 @@ summary: 'show storageArray lunMappings命令可从存储阵列配置文件中�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Storage Monitor 角色。
 
 
 
+[[context]]
 == 环境
 
 始终显示默认组LUN或NSID映射。如果运行此命令时没有任何参数、则此命令将返回所有LUN或NSID映射。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -42,6 +46,7 @@ hostgroup pass:quotes[["_hostGroupName_"]])
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -64,6 +69,7 @@ hostgroup pass:quotes[["_hostGroupName_"]])
 |===
 
 
+[[notes]]
 == 注释：
 
 此命令将返回与此示例类似的主机拓扑信息。
@@ -78,6 +84,7 @@ Access Volume 7   A,B         Default Group  Optimal
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.10

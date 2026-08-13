@@ -15,24 +15,28 @@ summary: set storageArray autosupportOnDemand命令用于打开或关闭AutoSupp
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 启用此功能之前、必须先在存储阵列上启用AutoSupport 功能。启用此功能后、您接下来可以启用AutoSupport 远程诊断功能(如果需要)。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -41,6 +45,7 @@ set storageArray autoSupportOnDemand (enable | disable)
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -56,6 +61,7 @@ set storageArray autoSupportOnDemand (enable | disable)
 |===
 
 
+[[examples]]
 == 示例
 
 [listing]
@@ -67,6 +73,7 @@ SMcli completed successfully.
 ----
 
 
+[[verification]]
 == 验证
 
 使用`show storageArray AutoSupport`命令查看是否已启用此功能。显示的输出的前两行显示了AutoSupport 功能的启用状态、后跟AutoSupport OnDemand功能：
@@ -79,6 +86,7 @@ The AutoSupport Remote Diagnostics feature is enabled on this storage array.
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.40

@@ -15,18 +15,21 @@ summary: 'remove lunMapping命令可从一个或多个卷中删除逻辑单元�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -36,6 +39,7 @@ remove (volume pass:quotes[[_"volumeName"_]] | accessVolume) lunMapping
 ----
 
 
+[[syntax-for-removing-lun-or-nsid-mapping-from-more-than-one-volume-lun-or-nsid-mapping]]
 == 从多个卷LUN或NSID映射中删除LUN或NSID映射的语法
 
 [source, cli, subs="+macros"]
@@ -45,6 +49,7 @@ lunMapping
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -109,6 +114,7 @@ lunMapping
 |===
 
 
+[[notes]]
 == 注释：
 
 访问卷是SAN环境中用于存储管理软件与存储阵列控制器之间通信的卷。访问卷使用LUN或NSID地址并占用20 MB的存储空间、而这些空间不可用于应用程序数据存储。只有带内受管存储阵列才需要访问卷。
@@ -122,6 +128,7 @@ lunMapping
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.10

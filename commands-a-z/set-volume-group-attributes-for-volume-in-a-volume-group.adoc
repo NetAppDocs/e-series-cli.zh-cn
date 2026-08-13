@@ -15,18 +15,21 @@ summary: set volume命令用于定义卷组中卷的属性。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 您可以使用大多数参数为一个或多个卷定义属性。您还可以使用某些参数仅为一个卷定义属性。语法定义将进行分隔、以显示哪些参数适用于多个卷、哪些参数仅适用于一个卷。
@@ -38,6 +41,7 @@ summary: set volume命令用于定义卷组中卷的属性。
 ====
 
 
+[[syntax-applicable-to-one-or-more-volumes]]
 == 适用于一个或多个卷的语法
 
 [source, cli, subs="+macros"]
@@ -135,6 +139,7 @@ reservedFutureOption1=(TRUE | FALSE)
 ----
 
 
+[[syntax-applicable-to-only-one-volume]]
 == 语法仅适用于一个卷
 
 [source, cli, subs="+macros"]
@@ -170,6 +175,7 @@ preReadRedundancyCheck=(TRUE | FALSE)
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -375,6 +381,7 @@ preReadRedundancyCheck=(TRUE | FALSE)
 |===
 
 
+[[notes]]
 == 注释：
 
 主机I/O错误可能会导致卷组包含32个以上的卷。此操作还可能会导致内部控制器重新启动、因为此操作完成前的超时期限已到期。如果遇到此问题描述 、请暂停主机I/O、然后重试此操作。
@@ -391,12 +398,14 @@ preReadRedundancyCheck=(TRUE | FALSE)
 
 
 
+[[add-capacity-add-drives-and-segment-size]]
 == 添加容量、添加驱动器和区块大小
 
 设置`addCapacity`参数、`addDrives`参数或`segmentSize`参数将启动一个无法停止的长时间运行操作。这些长时间运行的操作在后台执行、不会阻止您运行其他命令。要显示长时间运行的操作的进度、请使用`show volume actionProprogress`命令。
 
 
 
+[[cache-flush-modifier]]
 == 缓存刷新修饰符
 
 此表列出了缓存刷新修饰符的有效值。
@@ -524,24 +533,28 @@ preReadRedundancyCheck=(TRUE | FALSE)
 ====
 
 
+[[cache-without-battery-enabled]]
 == 未启用电池的缓存
 
 如果控制器电池已完全放电、未充满电或不存在、则不使用电池进行写入缓存可以继续写入缓存。如果在没有不间断电源(UPS)或其他备份电源的情况下将此参数设置为`true`、则在存储阵列电源出现故障时可能会丢失数据。如果禁用了写入缓存、则此参数不起作用。
 
 
 
+[[modification-priority]]
 == 修改优先级
 
 修改优先级用于定义修改卷属性时使用的系统资源量。如果选择最高优先级、则卷修改会使用最多的系统资源、从而降低主机数据传输的性能。
 
 
 
+[[cache-read-prefetch]]
 == 缓存读取预取
 
 使用`cacheReadPrefetch`参数、控制器可以将其他数据块复制到缓存中、同时控制器可以将主机请求的数据块从驱动器读取并复制到缓存中。此操作增加了从缓存满足未来数据请求的可能性。对于使用顺序数据传输的多媒体应用程序来说、缓存读取预取非常重要。您使用的存储阵列配置设置决定了控制器读取到缓存中的其他数据块的数量。`cachedReadPrefetch`参数的有效值为`true`或`false`。
 
 
 
+[[segment-size]]
 == 区块大小
 
 区块大小决定了在将数据写入下一个驱动器之前控制器在卷中的单个驱动器上写入的数据块数。每个数据块存储512字节的数据。数据块是最小的存储单元。分段的大小决定了其包含的数据块数。例如、一个8 KB区块可容纳16个数据块。64 KB区块可容纳128个数据块。
@@ -554,6 +567,7 @@ preReadRedundancyCheck=(TRUE | FALSE)
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 5.00会添加`addCapacity`参数。

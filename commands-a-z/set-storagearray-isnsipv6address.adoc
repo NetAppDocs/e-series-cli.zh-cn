@@ -15,18 +15,21 @@ summary: set storageArray isnssIPv6Address命令用于设置iSNS服务器的IPv6
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -35,6 +38,7 @@ set storageArray isnsIPv6Address=pass:quotes[_ipAddress_]
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -50,12 +54,14 @@ set storageArray isnsIPv6Address=pass:quotes[_ipAddress_]
 |===
 
 
+[[notes]]
 == 注释：
 
 iSNS协议有助于在TCP/IP网络上自动发现、管理和配置iSCSI设备和光纤通道设备。iSNS可提供与光纤通道网络中的服务相当的智能存储发现和管理服务、从而使商用IP网络能够以与存储区域网络类似的容量运行。iSNS还可以模拟光纤通道网络服务以及管理iSCSI设备和光纤通道设备、从而有助于实现IP网络和光纤通道网络的无缝集成。iSNS可在包含iSCSI设备、光纤通道设备或任意组合的任何存储网络中提供价值。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.10.

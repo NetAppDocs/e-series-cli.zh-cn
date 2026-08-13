@@ -15,24 +15,28 @@ summary: 'create hostPort命令可在主机总线适配器(HBA)或主机通道�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 主机端口标识是一个软件值、用于表示控制器的物理HBA或HCA主机端口。如果没有正确的主机端口标识、控制器将无法从主机端口接收指令或数据。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ userLabel="_portLabel"_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -90,6 +95,7 @@ HBA或HCA主机端口的8字节全球通用标识符(World Wide Identifier、WWI
 |===
 
 
+[[notes]]
 == 注释：
 
 HBA主机端口或HCA主机端口是主机总线适配器或主机计算机中的主机通道适配器上的物理连接。通过HBA主机端口或HCA主机端口、主机可以访问存储阵列中的卷。如果HBA或HCA只有一个物理连接(一个主机端口)、则术语主机端口和主机总线适配器或主机通道适配器是同义词。
@@ -98,6 +104,7 @@ HBA主机端口或HCA主机端口是主机总线适配器或主机计算机中�
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 5.20

@@ -15,24 +15,28 @@ summary: start diskPool locate命令可通过闪烁驱动器上的指示灯来�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 (使用`stop diskPool locate`命令关闭驱动器上的指示灯。)
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -41,6 +45,7 @@ start diskPool pass:quotes[[_diskPoolName_]] locate
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -56,6 +61,7 @@ start diskPool pass:quotes[[_diskPoolName_]] locate
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

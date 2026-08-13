@@ -15,24 +15,28 @@ summary: start controller iscsiHostPort dhcpRefresh命令用于刷新iSCSI接口
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 如果接口的配置方法未设置为DHCP、则操作步骤 将返回错误。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -41,6 +45,7 @@ start controller [(a|b)] iscsiHostPort [portLabel] dhcpRefresh
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -67,6 +72,7 @@ start controller [(a|b)] iscsiHostPort [portLabel] dhcpRefresh
 |===
 
 
+[[identifying-an-iscsi-host-port-label]]
 == 确定iSCSI主机端口标签
 
 您必须为主机端口指定一个标签。请按照以下步骤指定主机端口标签：
@@ -116,12 +122,14 @@ iscsiHostPort[3]
 ====
 
 
+[[notes]]
 == 注释：
 
 此操作将结束此门户的iSCSI连接、并临时关闭此门户。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.10.

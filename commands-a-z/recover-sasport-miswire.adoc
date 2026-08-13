@@ -15,18 +15,21 @@ summary: recover sasPort miswire命令告知控制器已采取更正操作、以
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 然后、控制器可以重新启用任何因检测到连线错误而被禁用的SAS端口。更正任何SAS连线错误情况后、运行此命令。
@@ -41,6 +44,7 @@ SAS连线错误的情况可能为以下情况之一：
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -49,12 +53,14 @@ recover sasPort miswire
 ----
 
 
+[[parameters]]
 == Parameters
 
 无
 
 
 
+[[notes]]
 == 注释：
 
 如果检测到连线错误、则控制器固件将报告以下内容：
@@ -82,6 +88,7 @@ recover sasPort miswire
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.10

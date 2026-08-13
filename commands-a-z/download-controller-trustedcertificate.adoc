@@ -15,24 +15,28 @@ summary: download controller trustedCertificate命令可在控制器的Web服务
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 只有在对证书签名的CA不为人熟知或不受信任时、才执行此操作。命令将在两个控制器上安装CA证书。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -41,6 +45,7 @@ pass:quotes[download storageArray trustedCertificate [alias=_string_]] pass:quot
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -62,6 +67,7 @@ pass:quotes[download storageArray trustedCertificate [alias=_string_]] pass:quot
 |===
 
 
+[[examples]]
 == 示例
 
 [listing]
@@ -76,6 +82,7 @@ SMcli completed successfully.
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.40

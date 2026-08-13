@@ -35,6 +35,7 @@ SMcli可以在`* https*`模式下运行、从而提供额外的安全功能。
 
 
 
+[[operations-requiring-a-password-https-client-mode-trusted-certificate-is-installed-on-the-array]]
 == 需要密码的操作、 `https` 客户端模式下、受信任证书安装在阵列上
 
 在以下示例中、提供了用户名和密码选项、并在阵列上安装了可信证书。
@@ -53,6 +54,7 @@ SMcli completed successfully.
 ----
 
 
+[[operations-requiring-a-password-https-client-mode-no-trusted-certificate-is-installed-on-the-array]]
 == 需要密码的操作、 `https` 客户端模式下、阵列上未安装可信证书
 
 在以下示例中、提供了用户名和密码选项、但阵列上未安装可信证书、并且未使用`-k`选项。此示例显示了返回的输出。
@@ -68,6 +70,7 @@ SMcli failed.
 ----
 
 
+[[operations-requiring-a-password-https-client-mode-no-trusted-certificate-installed-but-using-k-for-self-signed-certificate]]
 == 需要密码的操作、 `https` 客户端模式、未安装可信证书、但对自签名证书使用-k
 
 在以下示例中、与前面的示例一样、提供了用户名和密码选项、但阵列上未安装可信证书。但是、在这种情况下、会使用`-k`选项来使用自签名证书。
@@ -100,6 +103,7 @@ SMcli completed successfully.
 ----
 
 
+[[read-only-operations-symbol-client-mode]]
 == 只读操作、 `symbol` 客户端模式
 
 在此示例中、在`*符号*`客户端模式下、不提供用户名或密码。此操作仅针对只读操作成功完成。
@@ -127,6 +131,7 @@ SMcli completed successfully.
 ----
 
 
+[[read-only-operations-http-client-mode]]
 == 只读操作、http客户端模式
 
 在以下示例中、也可以使用只读操作、但在`* https *`客户端模式下、需要提供用户名和密码以及`-k`来接受自签名证书。`* https*`客户端模式需要密码、即使只读操作也是如此。

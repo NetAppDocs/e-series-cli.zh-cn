@@ -15,24 +15,28 @@ summary: set session errorAction命令用于定义当前脚本引擎会话的运
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin、Support Admin、Security Admin 或 Storage Monitor 角色。
 
 
 
+[[context]]
 == 环境
 
 在此命令中、会话是指运行命令的持续时间。此命令不会永久设置存储阵列的参数。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -52,6 +56,7 @@ performanceMonitorIterations=iterationValue
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -103,6 +108,7 @@ performanceMonitorIterations=iterationValue
 |===
 
 
+[[notes]]
 == 注释：
 
 使用此命令时、您可以指定一个或多个可选参数。
@@ -113,6 +119,7 @@ performanceMonitorIterations=iterationValue
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 5.20

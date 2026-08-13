@@ -15,6 +15,7 @@ summary: 本节列出了命令行界面命令包装程序的一般语法形式�
 
 
 
+[[conventions-for-cli-command-wrapper-syntax]]
 == CLI命令包装程序语法的约定
 
 [cols="2*"]
@@ -70,6 +71,7 @@ summary: 本节列出了命令行界面命令包装程序的一般语法形式�
 ====
 
 
+[[example-in-https-client-mode]]
 == https客户端模式的示例
 
 以下示例演示了中所述的`https` client mode命令行参数 xref:command-line-parameters.adoc[命令行参数]。
@@ -86,6 +88,7 @@ Controller B host-name-or-IP-address)  -u username -p password -c "commands;" [-
 ====
 
 
+[[examples-in-symbol-client-mode]]
 == 符号客户端模式的示例
 
 以下示例演示了中所述的`symbol` client mode命令行参数 xref:command-line-parameters.adoc[命令行参数]。

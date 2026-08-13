@@ -15,12 +15,14 @@ summary: smcli autosupportSchedule reset命令可重置发送AutoSupport 消息�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E4000、E2800或E5700存储阵列。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -36,6 +38,7 @@ summary: smcli autosupportSchedule reset命令可重置发送AutoSupport 消息�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -46,6 +49,7 @@ SMcli -autoSupportSchedule reset | (dailyTime=<startTime>-<endTime>
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -82,12 +86,14 @@ SMcli -autoSupportSchedule reset | (dailyTime=<startTime>-<endTime>
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.25
 
 
 
+[[example]]
 == 示例
 
 [listing]
@@ -99,6 +105,7 @@ dayOfWeek=[Monday Thursday Friday] weeklyTime=2:00am-3:00am
 
 
 
+[[verification]]
 == 验证
 
 使用`Smcli -autosupportSchedule show`命令查看管理域中由此产生的计划更改。

@@ -15,18 +15,21 @@ summary: show volume performanceStats命令可返回有关卷性能的信息。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Storage Monitor 角色。
 
 
 
+[[context]]
 == 环境
 
 对于存储阵列中的每个卷、此命令将返回以下信息：
@@ -53,6 +56,7 @@ summary: show volume performanceStats命令可返回有关卷性能的信息。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -62,6 +66,7 @@ volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]]) performanceStats
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -102,6 +107,7 @@ volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]]) performanceStats
 |===
 
 
+[[notes]]
 == 注释：
 
 在运行`show volume performanceStat`命令之前、请运行`set session performanceMonitorInterval`命令和`set session performanceMonitorIterations`命令以定义收集统计信息的频率。
@@ -127,6 +133,7 @@ Date/Time: 11/6/12 10:00: 34 AM - Polling interval in seconds: 5
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.10

@@ -15,18 +15,21 @@ summary: show allHostPorts命令可返回有关已配置主机端口的信息。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 对于连接到存储阵列的所有主机端口、此命令将返回以下信息：
@@ -38,6 +41,7 @@ summary: show allHostPorts命令可返回有关已配置主机端口的信息。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -46,12 +50,14 @@ show allHostPorts
 ----
 
 
+[[parameters]]
 == Parameters
 
 无
 
 
 
+[[notes]]
 == 注释：
 
 此命令将返回与此示例类似的HBA主机端口信息。
@@ -65,6 +71,7 @@ HOST PORT IDENTIFIER     HOST PORT NAME  HOST TYPE
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 5.40

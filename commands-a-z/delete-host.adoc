@@ -15,18 +15,21 @@ summary: delete host命令可删除一个或多个主机。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -35,6 +38,7 @@ delete host pass:quotes[[_hostName_]]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -49,12 +53,14 @@ delete host pass:quotes[[_hostName_]]
 |===
 
 
+[[notes]]
 == 注释：
 
 主机是指连接到存储阵列并通过主机上的主机端口访问存储阵列上的卷的计算机。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 5.20

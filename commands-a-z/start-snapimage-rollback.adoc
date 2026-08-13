@@ -15,18 +15,21 @@ summary: start SnapImage rollback命令可为一组快照映像启动回滚操�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 基础卷的内容会立即更改、以便与选定快照映像卷的时间点内容匹配。成功完成回滚操作后、基础卷将立即可用于读/写请求。要停止快照映像回滚操作、请使用`stop rollback SnapImage`命令。
@@ -40,6 +43,7 @@ summary: start SnapImage rollback命令可为一组快照映像启动回滚操�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -48,6 +52,7 @@ pass:quotes[start snapImage ["_snapImageName_"]] rollback
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -76,6 +81,7 @@ pass:quotes[start snapImage ["_snapImageName_"]] rollback
 |===
 
 
+[[notes]]
 == 注释：
 
 快照映像的名称包含两个部分、并用冒号(：)分隔：
@@ -98,6 +104,7 @@ start snapImage ["snapGroup1:newest"]rollback;
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

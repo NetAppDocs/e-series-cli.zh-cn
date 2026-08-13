@@ -15,6 +15,7 @@ summary: 根据输入的值或名称、CLI命令会强制实施某些格式规�
 
 
 
+[[cli-format-rules]]
 == CLI格式规则
 
 在Windows、Linux或Solaris操作系统上运行CLI命令和脚本命令时、需要特别注意名称或标签中使用的双引号("")。

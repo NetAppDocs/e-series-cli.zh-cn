@@ -15,18 +15,21 @@ summary: clear storageArray configuration命令可清除整个存储阵列配置
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 使用此命令执行以下操作之一：
@@ -43,6 +46,7 @@ summary: clear storageArray configuration命令可清除整个存储阵列配置
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -55,6 +59,7 @@ clear storageArray configuration factoryReset
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -102,6 +107,7 @@ clear storageArray configuration factoryReset
 |===
 
 
+[[notes]]
 == 注释：
 
 使用此命令、您可以通过多种不同方式清除存储阵列的配置。清除卷组的存储阵列后、恢复模式将自动启动。在恢复模式下、板载(缓存)备份(如果平台上存在)会保留下来。当存储阵列处于恢复模式时、您可以选择从基于主机的备份文件或板载(缓存)备份之一还原存储阵列配置。
@@ -126,6 +132,7 @@ SMcli -A -n pass:quotes[_storageArrayName_]
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.10添加了以下参数：

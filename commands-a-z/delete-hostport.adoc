@@ -15,18 +15,21 @@ summary: delete hostPort命令可删除主机端口标识。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 此标识是一个软件值、表示控制器的物理主机端口。通过删除此标识、控制器将无法再识别主机端口中的指令和数据。
@@ -38,6 +41,7 @@ summary: delete hostPort命令可删除主机端口标识。
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -46,6 +50,7 @@ delete hostPort [hostPortName]
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -61,12 +66,14 @@ delete hostPort [hostPortName]
 |===
 
 
+[[notes]]
 == 注释：
 
 主机端口是指位于主机计算机中的主机适配器上的物理连接。通过主机端口、主机可以访问存储阵列中的卷。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 5.20

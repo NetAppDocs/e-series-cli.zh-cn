@@ -8091,4 +8091,8 @@
   <block id="c9f4c41100461402ef108c1e6ccc6adf" category="paragraph"><block ref="c9f4c41100461402ef108c1e6ccc6adf" category="inline-link-rx"></block></block>
   <block id="aff9d49ee54e3ad13ffa0735d2a02e5a" category="section-title">SANtricity 12.00</block>
   <block id="84dbef0be771e89569bcfffb6b44a589" category="paragraph">下表列出了对 12.00 版 CLI 和脚本命令所做的更改。</block>
+  <block id="761f226704fa8b9a2ea64701b36a66e1" category="paragraph">此命令适用于任何单个存储阵列，包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列，前提是所有SMcli软件包均已安装。</block>
+  <block id="fa3f8ed858d04e74dad152ab5070b1ec" category="paragraph">要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令，必须具有Storage Admin角色。</block>
+  <block id="0a5727fb9e4cceadd91fbb0916297759" category="paragraph">E4000、E2800、E5700、EF600 和 EF300 平台不支持此命令。</block>
+  <block id="d28f85e4921c2290b1849d9ca24381a1" category="paragraph">要在 E4000、E2800、E5700、EF600 或 EF300 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。</block>
 </blocks>

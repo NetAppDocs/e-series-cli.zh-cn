@@ -15,18 +15,21 @@ summary: enable storageArray externalKeyManagement file命令可为具有全磁�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -36,6 +39,7 @@ summary: enable storageArray externalKeyManagement file命令可为具有全磁�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -47,6 +51,7 @@ pass:quotes[saveFile=_(TRUE | FALSE)_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -85,6 +90,7 @@ file="C:\Program Files\CLI\sup\drivesecurity.slk"
 |===
 
 
+[[notes]]
 == 注释：
 
 您的密码短语必须满足以下条件：
@@ -103,6 +109,7 @@ file="C:\Program Files\CLI\sup\drivesecurity.slk"
 ====
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.40

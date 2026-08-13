@@ -15,6 +15,7 @@ summary: activate storageArray firmware命令可激活先前下载到存储阵�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -24,6 +25,7 @@ activate storageArray firmware
 ----
 
 
+[[parameter]]
 == 参数
 
 |===
@@ -42,6 +44,7 @@ activate storageArray firmware
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.10会添加`healthCheckMelOverride`参数。

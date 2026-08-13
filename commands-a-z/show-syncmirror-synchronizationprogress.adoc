@@ -15,18 +15,21 @@ summary: show SyncMirror synchronizationProprogress命令可返回同步镜像�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800和E5700阵列、前提是已安装所有SMClu软件包。
 
 
 
+[[roles]]
 == 角色
 
 要在E4000、E2800或E5700存储阵列上执行此命令、您必须具有存储管理员或存储监控器角色。
 
 
 
+[[context]]
 == 环境
 
 此命令将进度显示为已完成的数据同步百分比。
@@ -38,6 +41,7 @@ summary: show SyncMirror synchronizationProprogress命令可返回同步镜像�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -47,6 +51,7 @@ localVolumes pass:quotes[[_volumeName1_... _volumeNameN_]]) synchronizationProgr
 ----
 
 
+[[parameter]]
 == 参数
 
 [cols="2*"]
@@ -80,6 +85,7 @@ localVolumes pass:quotes[[_volumeName1_... _volumeNameN_]]) synchronizationProgr
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 5.40

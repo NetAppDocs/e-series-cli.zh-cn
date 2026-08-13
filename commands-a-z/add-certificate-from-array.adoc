@@ -15,12 +15,14 @@ summary: 使用Add certificate from array命令可以从阵列获取证书并将
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于 EF600、EF300、EF50 和 EF80 存储阵列。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -30,6 +32,7 @@ pass:quotes[_ipAddress1 ipAddress2_  trust localCertificate]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -44,6 +47,7 @@ pass:quotes[_ipAddress1 ipAddress2_  trust localCertificate]
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.60

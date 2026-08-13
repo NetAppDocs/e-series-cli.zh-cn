@@ -25,6 +25,7 @@ summary: 本主题列出了最新版本的SANtricity System Manager命令行界�
 ====
 
 
+[[santricity-12-00]]
 == SANtricity 12.00
 
 下表列出了对 12.00 版 CLI 和脚本命令所做的更改。
@@ -63,6 +64,7 @@ https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-managem
 |===
 
 
+[[santricity-11-90]]
 == SANtricity 11.90
 
 下表列出了对11.90版的CLI和脚本命令进行的更改。
@@ -108,6 +110,7 @@ https://docs.netapp.com/us-en/e-series-cli/commands-a-z/download-storagearray-ke
 |===
 
 
+[[santricity-11-81]]
 == SANtricity 11.81
 
 下表列出了对11.81版的CLI和脚本命令进行的更改。
@@ -125,6 +128,7 @@ https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parame
 |===
 
 
+[[santricity-11-80]]
 == SANtricity 11.80
 
 下表列出了对11.80版的CLI和脚本命令进行的更改。
@@ -191,12 +195,14 @@ xref:./commands-a-z/check-volume-parity.adoc[检查卷奇偶校验]
 |===
 
 
+[[santricity-11-70-5]]
 == SANtricity 11.70.5
 
 11.70.5版没有CLI和脚本命令更改。
 
 
 
+[[santricity-11-70-4]]
 == SANtricity 11.70.4
 
 下表列出了11.70.4版的命令行界面和脚本命令。
@@ -214,6 +220,7 @@ xref:./get-started/downloadable-smcli-parameters.adoc[Downloadble SMcli命令行
 |===
 
 
+[[santricity-11-70-3]]
 == SANtricity 11.70.3
 
 下表列出了11.70.3版的CLI和脚本命令的变更。
@@ -266,6 +273,7 @@ xref:./commands-a-z/create-diskpool.adoc[创建磁盘池]
 |===
 
 
+[[santricity-11-70-2]]
 == SANtricity 11.70.2
 
 下表列出了11.70.2版的命令行界面和脚本命令。
@@ -325,6 +333,7 @@ xref:./commands-a-z/start-snmptrapdestination.adoc[测试SNMP陷阱目标]
 |===
 
 
+[[santricity-11-70-1]]
 == SANtricity 11.70.1
 
 下表列出了11.70.1版的命令行界面和脚本命令。
@@ -391,6 +400,7 @@ xref:./commands-a-z/recover-volume.adoc[恢复RAID卷]
 |===
 
 
+[[santricity-11-70]]
 == SANtricity 11.70
 
 下表列出了11.70版的CLI和脚本命令。

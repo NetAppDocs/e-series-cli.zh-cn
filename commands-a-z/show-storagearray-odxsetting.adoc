@@ -15,18 +15,21 @@ summary: 'show storageArray odxsetting命令可返回存储阵列上卸载数据
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Storage Monitor 角色。
 
 
 
+[[context]]
 == 环境
 
 此命令的设置可以是以下设置之一：
@@ -39,6 +42,7 @@ summary: 'show storageArray odxsetting命令可返回存储阵列上卸载数据
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -47,12 +51,14 @@ show storageArray odxsetting
 ----
 
 
+[[parameters]]
 == Parameters
 
 无
 
 
 
+[[notes]]
 == 注释：
 
 此命令将返回与此示例类似的ODX和VAAI信息。
@@ -65,6 +71,7 @@ vaaiEnabled True | False | Inconsistent | Unknown
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.20

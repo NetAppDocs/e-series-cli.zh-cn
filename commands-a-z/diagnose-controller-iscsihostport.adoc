@@ -15,24 +15,28 @@ summary: diag controller iscsiHostPort命令可对iSCSI主机接口卡和控制�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 您可以对选定端口或所有端口运行诊断。这些端口必须能够支持缆线诊断。如果端口不支持缆线诊断、则会返回错误。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -43,6 +47,7 @@ testID=cableDiagnostics
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -76,6 +81,7 @@ testID=cableDiagnostics
 |===
 
 
+[[identifying-an-iscsi-host-port-label]]
 == 确定iSCSI主机端口标签
 
 您必须为主机端口指定一个标签。请按照以下步骤指定主机端口标签：
@@ -124,6 +130,7 @@ iscsiHostPort[3]
 ====
 
 
+[[notes]]
 == 注释：
 
 运行缆线诊断测试时、固件将返回以下信息：
@@ -156,6 +163,7 @@ iscsiHostPort[3]
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.77

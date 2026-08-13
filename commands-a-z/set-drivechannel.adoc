@@ -15,18 +15,21 @@ summary: set driveChannel命令用于定义驱动器通道的执行方式。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -36,6 +39,7 @@ status=(optimal | degraded)
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -58,12 +62,14 @@ status=(optimal | degraded)
 |===
 
 
+[[notes]]
 == 注释：
 
 使用`optimal`选项将已降级的驱动器通道移回最佳状态。如果驱动器通道出现问题、并且存储阵列需要更多时间进行数据传输、请使用`degraded`选项。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.10

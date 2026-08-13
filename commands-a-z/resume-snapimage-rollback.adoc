@@ -15,18 +15,21 @@ summary: resume SnapImage rollback命令可恢复已进入暂停状态的回滚�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 由于处理错误、回滚操作可能会进入暂停状态、从而导致存储阵列出现需要引起注意的情况。
@@ -40,6 +43,7 @@ summary: resume SnapImage rollback命令可恢复已进入暂停状态的回滚�
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -48,6 +52,7 @@ resume snapImage pass:quotes[[_snapImageName_]] rollback
 ----
 
 
+[[parameter]]
 == 参数
 
 |===
@@ -75,6 +80,7 @@ resume snapImage pass:quotes[[_snapImageName_]] rollback
 |===
 
 
+[[notes]]
 == 注释：
 
 快照映像的名称包含两个部分、并用冒号(：)分隔：
@@ -91,6 +97,7 @@ resume snapImage ["snapgroup1:12345"] rollback;
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

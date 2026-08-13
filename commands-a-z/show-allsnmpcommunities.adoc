@@ -15,18 +15,21 @@ summary: 'show allSnmpCommunities命令可返回有关为存储阵列定义的�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 或 Storage Monitor 角色。
 
 
 
+[[context]]
 == 环境
 
 返回的信息包括：
@@ -38,6 +41,7 @@ summary: 'show allSnmpCommunities命令可返回有关为存储阵列定义的�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -49,6 +53,7 @@ snmpCommunities pass:quotes[[_snmpCommunityName1_ ... _snmpCommunityNameN_]])
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -90,6 +95,7 @@ snmpCommunities pass:quotes[[_snmpCommunityName1_ ... _snmpCommunityNameN_]])
 |===
 
 
+[[notes]]
 == 注释：
 
 SNMP支持管理器和受管设备所属的一个或多个_communities_。SNMP请求在通过网络传递的数据包中包含一个_community string_、该数据包充当粗略的密码。SNMP代理可以使用无法识别的社区字符串拒绝GET或SET请求。从代理发送到管理器的陷阱通知也包含社区字符串。
@@ -116,6 +122,7 @@ DETAILS
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.30

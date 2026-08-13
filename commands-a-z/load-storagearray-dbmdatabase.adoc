@@ -15,18 +15,21 @@ summary: 'load storageArray dbmDatabase命令可通过从文件或缓存中检�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Security Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 此命令会将存储阵列DBM数据库还原为使用`save storageArray dbmDatabase`命令捕获数据库映像时所存在的精确配置。文件中的数据包括RAID配置、卷组和磁盘池的数据。
@@ -35,6 +38,7 @@ summary: 'load storageArray dbmDatabase命令可通过从文件或缓存中检�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -46,6 +50,7 @@ pass:quotes[((file="_filename_" validator="_validatorValue_") | sourceLocation=o
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -99,12 +104,14 @@ pass:quotes[((file="_filename_" validator="_validatorValue_") | sourceLocation=o
 |===
 
 
+[[notes]]
 == 注释：
 
 根据数据库映像的大小、还原数据库可能需要长达30分钟的时间。只有在控制器上完成所有加载数据库映像的操作之后、主机软件才会显示控制器处于最佳状态。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.75

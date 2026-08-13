@@ -15,12 +15,14 @@ summary: smcli -autosupportConfig show命令可显示管理域的AutoSupport 捆
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令将一次性适用场景 管理域中的所有E2700和E5600存储阵列。它不适用于E2800或E5700存储阵列。
 
 
 
+[[context]]
 == 环境
 
 此命令的命令输出显示以下配置信息：
@@ -43,6 +45,7 @@ summary: smcli -autosupportConfig show命令可显示管理域的AutoSupport 捆
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -57,6 +60,7 @@ summary: smcli -autosupportConfig show命令可显示管理域的AutoSupport 捆
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -65,18 +69,21 @@ SMcli -autoSupportConfig show
 ----
 
 
+[[parameters]]
 == Parameters
 
 无
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.25
 
 
 
+[[example-output-for-the-activation-statuses]]
 == 激活状态的输出示例
 
 [listing]
@@ -87,6 +94,7 @@ The AutoSupport Remote Diagnostics feature is de-activated on this storage manag
 ----
 
 
+[[example-output-for-the-smtp-delivery-method]]
 == SMTP传送方法的输出示例
 
 [listing]
@@ -98,6 +106,7 @@ Sender email address:  user@netapp.com
 ----
 
 
+[[example-output-for-the-http-or-https-delivery-method-with-a-direct-connection]]
 == 直接连接的HTTP或HTTPS交付方法的示例输出
 
 [listing]
@@ -108,6 +117,7 @@ Connection:  Direct
 ----
 
 
+[[example-output-for-the-http-delivery-method-with-a-proxy-connection]]
 == 具有代理连接的HTTP交付方法的示例输出
 
 [listing]
@@ -121,6 +131,7 @@ Password: **********
 ----
 
 
+[[example-output-for-the-http-delivery-method-with-an-automatic-proxy-configuration-script-pac]]
 == 使用自动代理配置脚本(PAC)的HTTP交付方法的示例输出
 
 [listing]
@@ -130,6 +141,7 @@ Script location: http://esgweb.eng.netapp.com/~user/proxy.pac
 ----
 
 
+[[example-output-for-array-table-all-delivery-methods]]
 == 数组表的输出示例(所有交付方法)
 
 [listing]

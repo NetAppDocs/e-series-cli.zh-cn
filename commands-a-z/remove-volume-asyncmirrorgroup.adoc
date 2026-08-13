@@ -15,18 +15,21 @@ summary: remove volume asyncMirrorGroup命令可从现有异步镜像组中删�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
-此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
+此命令适用于任何单个存储阵列，包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列，前提是所有SMcli软件包均已安装。
 
 
 
+[[roles]]
 == 角色
 
-要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令，必须具有Storage Admin角色。
 
 
 
+[[context]]
 == 环境
 
 您也可以从异步镜像组中删除存储库卷成员。
@@ -35,6 +38,7 @@ summary: remove volume asyncMirrorGroup命令可从现有异步镜像组中删�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ remove volume pass:quotes[[_"volumeName"_]] asyncMirrorGroup=pass:quotes[_"async
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -72,6 +77,7 @@ remove volume pass:quotes[[_"volumeName"_]] asyncMirrorGroup=pass:quotes[_"async
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.84.接受采取后续行动

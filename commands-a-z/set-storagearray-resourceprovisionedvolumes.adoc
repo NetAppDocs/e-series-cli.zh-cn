@@ -15,18 +15,21 @@ summary: 'set storageArray resourcesProvisionedVolumes命令可禁用DULBE"功�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 EF600、EF300、EF50 和 EF80 阵列；只要安装了所有 SMcli 包。
 
 
 
+[[roles]]
 == 角色
 
 要在 EF600、EF300、EF50 和 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 资源配置是一项可用功能、可用于快速初始化大型卷。
@@ -37,6 +40,7 @@ summary: 'set storageArray resourcesProvisionedVolumes命令可禁用DULBE"功�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -45,6 +49,7 @@ set storageArray resourceProvisionedVolumes=(enable|disable)
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -65,6 +70,7 @@ set storageArray resourceProvisionedVolumes=(enable|disable)
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.63

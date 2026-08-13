@@ -15,6 +15,7 @@ summary: 卷配置命令
 
 
 
+[[disk-pool-commands]]
 == disk pool命令
 
 link:../commands-a-z/create-diskpool.html["创建磁盘池"]
@@ -41,6 +42,7 @@ link:../commands-a-z/stop-diskpool-locate.html["停止磁盘池定位"]
 
 
 
+[[host-topology-commands]]
 == 主机拓扑命令
 
 link:../commands-a-z/create-host.html["创建主机"]
@@ -69,6 +71,7 @@ link:../commands-a-z/show-storagearray-hosttopology.html["显示存储阵列主�
 
 
 
+[[internet-storage-name-service-isns-commands]]
 == Internet存储名称服务(iSNS)命令
 
 link:../commands-a-z/set-storagearray.html["设置存储阵列"]
@@ -87,6 +90,7 @@ link:../commands-a-z/start-storagearray-isnsserverrefresh.html["启动存储阵�
 
 
 
+[[iscsi-extension-for-rdma-iser-commands]]
 == 用于RDMA (iSER)命令的iSCSI扩展
 
 link:../commands-a-z/reset-storagearray-iserstatsbaseline.html["重置存储阵列iSER基线"]
@@ -97,6 +101,7 @@ link:../commands-a-z/set-isertarget.html["设置iSER目标"]
 
 
 
+[[iscsi-commands]]
 == iSCSI命令
 
 link:../commands-a-z/create-iscsiinitiator.html["创建iSCSI启动程序"]
@@ -125,6 +130,7 @@ link:../commands-a-z/stop-storagearray-iscsisession.html["停止存储阵列iSCS
 
 
 
+[[volume-commands]]
 == volume命令
 
 link:../commands-a-z/check-volume-parity.html["检查卷奇偶校验"]
@@ -189,6 +195,7 @@ link:../commands-a-z/stop-check-vol-parity-job.html["停止检查卷奇偶校验
 
 
 
+[[volume-group-commands]]
 == volume group命令
 
 link:../commands-a-z/create-volumegroup.html["创建卷组"]

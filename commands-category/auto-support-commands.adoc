@@ -15,6 +15,7 @@ summary: AutoSupport命令
 
 
 
+[[autosupport-bundle-collection-commands-for-the-e2700-and-e5600]]
 == 适用于E2700和E5600的AutoSupport 捆绑包收集命令
 
 link:../commands-a-z/smcli-autosupportlog.html["捕获或查看AutoSupport 日志"]
@@ -39,6 +40,7 @@ link:../commands-a-z/smcli-autosupportconfig-test.html["测试AutoSupport 配置
 
 
 
+[[autosupport-commands-for-all-storage-arrays]]
 == 适用于所有存储阵列的AutoSupport 命令
 
 link:../commands-a-z/enable-or-disable-autosupport-individual-arrays.html["启用或禁用AutoSupport (单个阵列、仅适用于E2800和E5700阵列)"]
@@ -47,6 +49,7 @@ link:../commands-a-z/save-storagearray-supportdata.html["保存存储阵列支�
 
 
 
+[[autosupport-commands-for-the-e4000-ef300-ef600-e2800-e5700]]
 == 适用于E4000、EF300、EF600、E2800和E5700的AutoSupport命令
 
 link:../commands-a-z/set-autosupport-dispatch-limit.html["设置AutoSupport派单大小限制"]

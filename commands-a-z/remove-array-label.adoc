@@ -15,12 +15,14 @@ summary: 使用Remove array label命令可以删除存储阵列的用户定义�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于 EF600、EF300、EF50 和 EF80 存储阵列。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -30,6 +32,7 @@ delete storageArrayLabel all
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -44,6 +47,7 @@ delete storageArrayLabel all
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.60

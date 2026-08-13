@@ -15,18 +15,21 @@ summary: resume SyncMirror 命令可恢复已暂停的同步镜像操作。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800和E5700阵列、前提是已安装所有SMClu软件包。
 
 
 
+[[roles]]
 == 角色
 
 要在E4000、E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -36,6 +39,7 @@ summary: resume SyncMirror 命令可恢复已暂停的同步镜像操作。
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -46,6 +50,7 @@ primaries pass:quotes[[_volumeName1 ... volumeNameN_]])
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -85,12 +90,14 @@ primaries pass:quotes[[_volumeName1 ... volumeNameN_]])
 |===
 
 
+[[notes]]
 == 注释：
 
 如果将`writeConsistency`参数设置为`true`、则卷必须位于一个或多个写入一致性组中。此命令将恢复包含卷的所有写入一致性组。例如、如果卷A、B和C位于写入一致性组中、并且它们具有远程对等项A`'、B`'和C`'、则`rebrume SyncMirror volume ["A"] writeConsistency=true`命令将恢复A-A`、B-B`'和C-C`。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.10

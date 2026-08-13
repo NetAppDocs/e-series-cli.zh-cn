@@ -15,18 +15,21 @@ summary: 'set storageArray AutoSupport deliveryMethod命令用于设置将AutoSu
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -36,6 +39,7 @@ mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"] dest
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -81,6 +85,7 @@ mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"] dest
 |===
 
 
+[[examples]]
 === 示例
 
 [listing]
@@ -92,12 +97,14 @@ SMcli completed successfully.
 ----
 
 
+[[verification]]
 === 验证
 
 使用`_start storageArray AutoSupport deliveryTest_`命令发送测试消息、以验证是否已正确设置您的交付方法。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.40

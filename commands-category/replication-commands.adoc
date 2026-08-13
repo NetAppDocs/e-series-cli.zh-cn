@@ -15,6 +15,7 @@ summary: 复制命令
 
 
 
+[[consistency-group-commands]]
 == 一致性组命令
 
 link:../commands-a-z/set-consistencygroup-addcgmembervolume.html["将成员添加到一致性组"]
@@ -55,12 +56,14 @@ link:../commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html["停止
 
 
 
+[[repository-volume-analysis-commands]]
 == 存储库卷分析命令
 
 link:../commands-a-z/check-repositoryconsistency.html["检查存储库一致性"]
 
 
 
+[[snapshot-group-commands]]
 == snapshot group命令
 
 link:../commands-a-z/create-snapgroup.html["创建快照组"]
@@ -85,6 +88,7 @@ link:../commands-a-z/stop-pendingsnapimagecreation.html["停止快照组待定�
 
 
 
+[[snapshot-image-commands]]
 == snapshot image命令
 
 link:../commands-a-z/create-snapimage.html["创建快照映像"]
@@ -101,6 +105,7 @@ link:../commands-a-z/stop-snapimage-rollback.html["停止快照映像回滚"]
 
 
 
+[[snapshot-volume-commands]]
 == snapshot volume命令
 
 link:../commands-a-z/create-read-only-snapshot-volume.html["创建只读Snapshot卷"]
@@ -129,6 +134,7 @@ link:../commands-a-z/stop-snapvolume.html["停止Snapshot卷"]
 
 
 
+[[volume-copy-commands]]
 == volume copy命令
 
 link:../commands-a-z/create-volumecopy.html["创建卷副本"]

@@ -15,18 +15,21 @@ summary: set SyncMirror 命令用于定义远程镜像对的属性。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列、包括E4000、E2700、E5600、E2800和E5700阵列、前提是已安装所有SMClu软件包。
 
 
 
+[[roles]]
 == 角色
 
 要在E2800或E5700存储阵列上执行此命令、您必须具有存储管理员角色。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -36,6 +39,7 @@ summary: set SyncMirror 命令用于定义远程镜像对的属性。
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -51,6 +55,7 @@ localVolumes pass:quotes[[_volumeName1 ... volumeNameN_]])
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -135,6 +140,7 @@ localVolumes pass:quotes[[_volumeName1 ... volumeNameN_]])
 |===
 
 
+[[notes]]
 == 注释：
 
 使用此命令时、您可以指定一个或多个可选参数。
@@ -145,6 +151,7 @@ localVolumes pass:quotes[[_volumeName1 ... volumeNameN_]])
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.10

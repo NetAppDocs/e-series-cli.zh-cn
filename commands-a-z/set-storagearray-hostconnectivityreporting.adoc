@@ -15,18 +15,21 @@ summary: set storageArray hostConnectivityResporting命令用于启用或禁用�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -35,6 +38,7 @@ set storageArray hostConnectivityReporting (enable | disable)
 ----
 
 
+[[context]]
 == 环境
 
 在存储阵列上启用主机连接报告后、存储阵列会持续监控存储阵列控制器与已配置主机之间的连接、如果连接因主机松动、损坏或缺少电缆或其他问题而中断、则会向您发出警报。如果在存储阵列上指定的主机类型不正确(可能会导致故障转移问题)、您也会收到通知。
@@ -56,12 +60,14 @@ set storageArray hostConnectivityReporting (enable | disable)
 ====
 
 
+[[parameters]]
 == Parameters
 
 无
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.42新命令参数。

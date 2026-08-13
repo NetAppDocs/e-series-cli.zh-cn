@@ -15,18 +15,21 @@ summary: set controller hostPort命令可更改以下类型主机端口的网络
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -36,6 +39,7 @@ summary: set controller hostPort命令可更改以下类型主机端口的网络
 ====
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -71,6 +75,7 @@ set controller [(a|b)] hostPort ["portLabel"[, "physical"|"virtual"]]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -303,6 +308,7 @@ set controller [(a|b)] hostPort ["portLabel"[, "physical"|"virtual"]]
 |===
 
 
+[[parameter-support-by-host-port-type]]
 == 按主机端口类型提供参数支持
 
 参数支持因主机端口类型(iSCSI、iSER、基于InfiniBand的NVMe或基于RoCE的NVMe)而异、如下表所述：
@@ -595,6 +601,7 @@ set controller [(a|b)] hostPort ["portLabel"[, "physical"|"virtual"]]
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.41

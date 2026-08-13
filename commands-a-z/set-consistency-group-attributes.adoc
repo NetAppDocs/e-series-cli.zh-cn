@@ -15,18 +15,21 @@ summary: set ConsistencyGroup命令用于定义快照一致性组的属性。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -40,6 +43,7 @@ set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -90,6 +94,7 @@ set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
 |===
 
 
+[[notes]]
 == 注释：
 
 您可以对名称使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。名称最多可以包含30个字符。
@@ -100,12 +105,14 @@ set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
 
 
 
+[[auto-delete]]
 == 自动删除
 
 您可以将每个快照组配置为自动删除其快照映像、以使快照组中的快照映像总数保持在或低于最大映像数。如果快照组中的快照映像数达到最大限制、则每当在快照组中创建新的快照映像时、`autodeleteLimit`参数都会自动删除快照映像。`autodeleteLimit`参数将删除快照组中最早的快照映像、直到达到使用参数定义的最大映像数为止。以这种方式删除快照映像可释放存储库容量、以便可以使用它来满足其余快照映像的持续写入时复制要求。
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.83.

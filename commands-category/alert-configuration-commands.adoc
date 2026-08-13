@@ -15,6 +15,7 @@ summary: 警报配置命令
 
 
 
+[[embedded-snmp-configuration]]
 == 嵌入式SNMP配置
 
 link:../commands-a-z/create-snmpcommunity.html["注册SNMP社区"]
@@ -39,6 +40,7 @@ link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["更新SNMP陷�
 
 
 
+[[email-alert-configuration-e2700-or-e5600-arrays]]
 == 电子邮件警报配置—E2700或E5600阵列
 
 link:../commands-a-z/set-emailalert.html["配置电子邮件警报设置"]
@@ -51,6 +53,7 @@ link:../commands-a-z/smcli-alerttest.html["测试警报"]
 
 
 
+[[ssd-cache-commands]]
 == SSD缓存命令
 
 link:../commands-a-z/clear-emailalert-configuration.html["清除电子邮件警报配置"]
@@ -65,6 +68,7 @@ link:../commands-a-z/start-emailalert-test.html["测试电子邮件警报配置"
 
 
 
+[[syslog-configuration]]
 == 系统日志配置
 
 link:../commands-a-z/clear-syslog-configuration.html["清除系统日志配置"]

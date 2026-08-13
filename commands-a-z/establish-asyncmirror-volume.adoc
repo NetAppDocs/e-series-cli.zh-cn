@@ -15,18 +15,21 @@ summary: 使用establish asyncMirror volume命令可通过向现有异步镜像�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
-此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
+此命令适用于任何单个存储阵列，包括E4000、E2700、E5600、E2800、E5700、EF600和EF300阵列，前提是所有SMcli软件包均已安装。
 
 
 
+[[roles]]
 == 角色
 
-要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
+要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令，必须具有Storage Admin角色。
 
 
 
+[[context]]
 == 环境
 
 运行此命令之前、异步镜像组必须存在、并且主卷必须位于异步镜像组中。成功完成此命令后、将在主卷和二级卷之间启动异步镜像。
@@ -35,6 +38,7 @@ summary: 使用establish asyncMirror volume命令可通过向现有异步镜像�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -45,6 +49,7 @@ pass:quotes[primaryVolume="_primaryVolumeName_"]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -74,6 +79,7 @@ pass:quotes[primaryVolume="_primaryVolumeName_"]
 |===
 
 
+[[notes]]
 == 注释：
 
 异步镜像对由两个卷组成、一个是主卷、另一个是二级卷、这些卷包含相同数据的相同副本。镜像对是异步镜像组的一部分、它允许镜像对与异步镜像组中的任何其他镜像对同时同步。
@@ -84,6 +90,7 @@ pass:quotes[primaryVolume="_primaryVolumeName_"]
 
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.84.接受采取后续行动

@@ -15,12 +15,14 @@ summary: 使用Delete certificates命令可以从命令行界面软件包信任�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于 EF600、EF300、EF50 和 EF80 存储阵列。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -29,6 +31,7 @@ delete localCertificate all | alias pass:quotes[_alias_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -43,6 +46,7 @@ delete localCertificate all | alias pass:quotes[_alias_]
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.60

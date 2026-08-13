@@ -15,18 +15,21 @@ summary: clear syslog configuration命令可清除系统日志警报信息。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli]
@@ -35,12 +38,14 @@ clear syslog configuration
 ----
 
 
+[[parameters]]
 == Parameters
 
 无
 
 
 
+[[examples]]
 == 示例
 
 [listing]
@@ -52,6 +57,7 @@ SMcli completed successfully.
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.40

@@ -15,18 +15,21 @@ summary: 'set tray serviceAllowedindicator命令用于打开或关闭电源风�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 如果存储阵列不支持允许服务操作指示灯功能、则此命令将返回错误。如果存储阵列支持命令、但无法打开或关闭指示灯、则此命令将返回错误。
@@ -35,6 +38,7 @@ summary: 'set tray serviceAllowedindicator命令用于打开或关闭电源风�
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -50,6 +54,7 @@ serviceAllowedIndicator=(on | off)
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -114,12 +119,14 @@ ESM箱的"Service Action Allow"指示灯。有效的ESM箱标识符为`Left`、`
 |===
 
 
+[[notes]]
 == 注释：
 
 此命令最初是为CE6998控制器托盘定义的在推出CE6998控制器托盘之前发售的控制器托盘不支持此命令
 
 
 
+[[example]]
 == 示例
 
 此命令将打开托盘5中IP地址为155.155.155.155的左侧ESM的"Service Action Allow"指示灯。
@@ -131,6 +138,7 @@ ESM [left] serviceAllowedIndicator=on;"
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 6.14添加了以下参数：

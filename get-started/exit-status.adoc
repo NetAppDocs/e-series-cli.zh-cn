@@ -15,6 +15,7 @@ summary: 执行的命令将返回退出状态。此表列出了可能返回的�
 
 
 
+[[exit-status-definitions]]
 == 退出状态定义
 
 [cols="3*"]

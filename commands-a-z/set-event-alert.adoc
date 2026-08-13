@@ -15,12 +15,14 @@ summary: set event alert命令可通过禁用或启用与特定可更改事件�
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令仅适用于E2700和E5600存储阵列。
 
 
 
+[[context]]
 == 环境
 
 [NOTE]
@@ -30,6 +32,7 @@ summary: set event alert命令可通过禁用或启用与特定可更改事件�
 ====
 
 
+[[context]]
 == 环境
 
 定义存储阵列时、您可以配置警报并定义事件警报的管理方式。如果您已将存储阵列配置为发送警报、则在发生可更改的事件时、系统会向指定的收件人发送通知。此通知可以是以下一种或所有类型：
@@ -53,6 +56,7 @@ set event alert命令行界面命令可用于单个存储阵列。在存储阵�
 ====
 
 
+[[syntax-to-block-an-event-alert]]
 == 用于阻止事件警报的语法
 
 [source, cli, subs="+macros"]
@@ -61,6 +65,7 @@ set blockEventAlert pass:quotes[_eventType_]
 ----
 
 
+[[syntax-to-unblock-an-event-alert]]
 == 取消阻止事件警报的语法
 
 [source, cli, subs="+macros"]
@@ -69,6 +74,7 @@ set unBlockEventAlert pass:quotes[_eventType_]
 ----
 
 
+[[parameters]]
 == Parameters
 
 [cols="2*"]
@@ -86,6 +92,7 @@ set unBlockEventAlert pass:quotes[_eventType_]
 |===
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 8.10

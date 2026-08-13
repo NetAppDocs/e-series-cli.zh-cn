@@ -15,24 +15,28 @@ summary: autosConfigure storageArray命令可自动配置存储阵列。
 
 
 
+[[supported-arrays]]
 == 支持的阵列
 
 此命令适用于任何单个存储阵列，包括 E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50 和 EF80 阵列，前提是所有 SMcli 包均已安装。
 
 
 
+[[roles]]
 == 角色
 
 要在 E4000、E2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。
 
 
 
+[[context]]
 == 环境
 
 在输入`autosupport storageArray`命令之前、请运行`show storageArray autosconfiguration`命令。`sstorageArray autosconfiguration`命令以有效驱动器类型、RAID级别、卷信息和热备用信息列表的形式返回配置信息。(此列表对应于`autosConfigure storageArray`命令的参数。) 控制器会审核存储阵列、然后确定存储阵列可以支持的最高RAID级别以及最高效的RAID级别卷定义。如果返回的列表所述的配置是可接受的、则可以输入`autoConfigure storageArray`命令、而不使用任何参数。如果要修改配置、可以根据配置要求更改参数。您可以更改单个参数或所有参数。输入`autoConfigure storageArray`命令后、控制器将使用默认参数或您选择的参数设置存储阵列。
 
 
 
+[[syntax]]
 == 语法
 
 [source, cli, subs="+macros"]
@@ -55,6 +59,7 @@ pass:quotes[[readAheadMultiplier=_multiplierValue_]]
 ----
 
 
+[[parameters]]
 == Parameters
 
 |===
@@ -189,6 +194,7 @@ pass:quotes[[readAheadMultiplier=_multiplierValue_]]
 |===
 
 
+[[drives-and-volume-groups]]
 == 驱动器和卷组
 
 卷组是一组驱动器、这些驱动器由存储阵列中的控制器逻辑分组在一起。卷组中的驱动器数量是RAID级别和控制器固件的限制。创建卷组时、请遵循以下准则：
@@ -310,6 +316,7 @@ RAID 0
 |===
 
 
+[[hot-spares]]
 == 热备件
 
 对于卷组、保护数据的一个重要策略是将存储阵列中的可用驱动器分配为热备用驱动器。热备用磁盘是指不包含任何数据的驱动器、在RAID 1、RAID 3、RAID 5或RAID 6卷组中的驱动器发生故障时、该驱动器在存储阵列中充当备用磁盘。热备用磁盘会为存储阵列添加另一个冗余级别。
@@ -336,6 +343,7 @@ RAID 0
 
 
 
+[[segment-size]]
 == 区块大小
 
 区块大小决定了在将数据写入下一个驱动器之前控制器在卷中的单个驱动器上写入的数据块数。每个数据块存储512字节的数据。数据块是最小的存储单元。分段的大小决定了其包含的数据块数。例如、一个8 KB区块可容纳16个数据块。64 KB区块可容纳128个数据块。
@@ -346,12 +354,14 @@ RAID 0
 
 
 
+[[cache-read-prefetch]]
 == 缓存读取预取
 
 缓存读取预取允许控制器将其他数据块复制到缓存中、同时控制器将主机请求的数据块从驱动器读取并复制到缓存中。此操作增加了从缓存满足未来数据请求的可能性。对于使用顺序数据传输的多媒体应用程序来说、缓存读取预取非常重要。`cachedReadPrefetch`参数的有效值为`true`或`false`。默认值为`true`。
 
 
 
+[[security-type]]
 == 安全类型
 
 使用`securityType`参数指定存储阵列的安全设置。
@@ -368,12 +378,14 @@ RAID 0
 
 
 
+[[secure-drives]]
 == 保护驱动器
 
 支持安全的驱动器可以是全磁盘加密(Full Disk Encryption、FDE)驱动器、也可以是联邦信息处理标准(Federal Information Processing Standard、FIPS)驱动器。使用`secureDrives`参数指定要使用的安全驱动器类型。可以使用的值为`FIPS`和`FDE`。
 
 
 
+[[example-command]]
 == 命令示例
 
 [listing]
@@ -382,6 +394,7 @@ autoConfigure storageArray securityType=capable secureDrives=fips;
 ----
 
 
+[[minimum-firmware-level]]
 == 最低固件级别
 
 7.10增加了RAID级别6功能并消除了热备用磁盘限制。
