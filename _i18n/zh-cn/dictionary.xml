@@ -8095,4 +8095,8 @@
   <block id="fa3f8ed858d04e74dad152ab5070b1ec" category="paragraph">要在E4000、E2800、E5700、EF600或EF300存储阵列上执行此命令，必须具有Storage Admin角色。</block>
   <block id="0a5727fb9e4cceadd91fbb0916297759" category="paragraph">E4000、E2800、E5700、EF600 和 EF300 平台不支持此命令。</block>
   <block id="d28f85e4921c2290b1849d9ca24381a1" category="paragraph">要在 E4000、E2800、E5700、EF600 或 EF300 存储阵列上执行此命令，必须具有 Storage Admin 或 Support Admin 角色。</block>
+  <block id="eae2e5eb79bc312f455a69dcdb128d40" category="paragraph">此命令适用于单个 EF50 或 EF80 存储阵列，前提是所有 SMcli 软件包均已安装。</block>
+  <block id="c540831e3a9e23851bfed87fe9daa839" category="paragraph">要在 EF50 或 EF80 存储阵列上执行此命令，必须具有 Support Admin 角色。</block>
+  <block id="3aaeeffd59a60bb91c9bd0ba462a25c0" category="paragraph">此命令适用于E4000、EF50或EF80存储阵列，前提是所有SMcli软件包均已安装。</block>
+  <block id="2c7b4ae92e40349e885951530fef1b89" category="paragraph">要在 E4000、EF50 或 EF80 存储阵列上执行此命令，必须具有 Support Admin 角色。</block>
 </blocks>
