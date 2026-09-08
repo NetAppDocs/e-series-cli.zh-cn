@@ -645,7 +645,6 @@
   <block id="4f04a7af789c17ab2a8fcd1be1daaa08" category="list-text">确认您要继续导入操作步骤。</block>
   <block id="8776f8b398fc1f838fd8d340a76be74a" category="section-title">不可导入的组件</block>
   <block id="c1bfb4cd89f37e5c56d6839fe43e4f45" category="paragraph">某些组件无法在导入卷组操作步骤 期间导入。这些组件将在操作步骤 期间删除：</block>
-  <block id="5b00308b71dce0428ac39f3dd1fddebf" category="summary">名称最多可以包含30个字符。</block>
   <block id="12e6d0dc88f359dcf5383de2e7e9270d" category="doc">命名约定</block>
   <block id="aa0dba7a8177abb22592fe6535b2f319" category="list-text">您可以对以下组件的名称使用字母数字字符、连字符和下划线的任意组合：</block>
   <block id="a390959c210a5bb0121c5a6ddb212a48" category="list-text">存储阵列</block>
@@ -1112,7 +1111,6 @@
   <block id="13a5c724a01932fb25dc47cff9a0842d" category="paragraph">`cachedReadPrefetch`</block>
   <block id="41e3b3490e8364b1c8b8d78ce558f1bf" category="paragraph">用于打开或关闭缓存读取预取的设置。要关闭缓存读取预取、请将此参数设置为`false`。要启用缓存读取预取、请将此参数设置为`true`。</block>
   <block id="fa0ce0a81b4649424b523e003edde11f" category="paragraph">设置要在磁盘池中创建的卷的RAID级别。要指定RAID1、请设置为`1`。要指定RAID6、请设置为`6`。如果未设置RAID级别、则默认情况下会对磁盘池使用RAID6。</block>
-  <block id="e8c798bee03f9fc48d86d3187fec510a" category="paragraph">每个卷名称必须唯一。您可以对用户标签使用字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。用户标签最多可以包含30个字符。</block>
   <block id="567799174afaea6bae404eb0d756d448" category="paragraph">对于精简卷、`capacity`参数用于指定卷的虚拟容量、而`repositoryCapacity`参数用于指定创建为存储库卷的卷的容量。使用`existingRepositoryLabel`参数指定现有未使用的存储库卷、而不是创建新卷。</block>
   <block id="77788cd84650ddc55455c0a8fdbac04d" category="paragraph">为了在创建精简卷时获得最佳效果、存储库卷必须已存在或必须在现有磁盘池中创建。如果在创建精简卷时未指定某些可选参数、则存储管理软件将尝试创建存储库卷。最理想的候选卷是已存在且在大小要求范围内的存储库卷。下一个最理想的候选卷是在磁盘池可用范围内创建的新存储库卷。</block>
   <block id="f16c372a173f9cbd48a660f4eb189439" category="paragraph">不能在卷组中为精简卷创建存储库卷。</block>
@@ -2279,7 +2277,6 @@
   <block id="61d7330b4e95acd575f02a3b2ee3c73a" category="paragraph">`URL`</block>
   <block id="c650fad92344b462dcb68953aabfc9b9" category="paragraph">OCSP服务器URL的文字字符串。</block>
   <block id="75f51bfef86211d22df7cdc3e49f0ed8" category="paragraph">如果未指定URL、则此命令将使用证书撤消设置中的OCSP响应程序URL。</block>
-  <block id="8d2da3fc2b8c5b0255a99d3ec326186e" category="summary">set storageArray pqValidateOnReconstruct命令可在重建时设置存储阵列的P/Q验证状态。启用此功能后、将使用data+P和data+Q重建数据、并在确定如何继续之前检查结果的一致性。</block>
   <block id="7c115b65d57d4134de20f83ad0dddb80" category="doc">在reconstruct上设置存储阵列PQ验证</block>
   <block id="5b2d2fd7714fa99c9205b344f4c3b620" category="paragraph">`set storageArray pqValidateOnReconstruct`命令可在重建时设置存储阵列的P/Q验证状态。启用此功能后、将使用data+P和data+Q重建数据、并在确定如何继续之前检查结果的一致性。</block>
   <block id="f7b49d738f89f1e20476843cbc0ab811" category="paragraph">这种配置具有双奇偶校验的适用场景 磁盘池和RAID 6卷组。在这种情况下、驱动器发生故障时、卷组或磁盘池中仍存在冗余、因此可以在重建期间检查数据和奇偶校验一致性。如果在重建期间发现不一致、并且为卷启用了数据保证、则可以确定不一致的原因、以便可以使用其余驱动器重建数据。如果启用了此功能、但未为卷启用数据保证、或者无法将不一致性隔离到单个驱动器、则要重建的块将标记为不可读。</block>
@@ -2294,7 +2291,6 @@
   <block id="c2175400b52a9a9aebaea38f243f27ea" category="list-text">`allMedia`表示您要在存储阵列中的所有介质上设置验证状态。</block>
   <block id="298d3fd378de2f49463734ea02461d98" category="section-title">驱动器介质类型指定为硬盘驱动器的示例</block>
   <block id="7fdcc2048c3db60b50ed9e93c5fcc49a" category="section-title">驱动器介质类型指定为固态驱动器的示例</block>
-  <block id="1c77eaff860e37803cc5ca3c3c881983" category="summary">show blockedEventAlertList命令可返回当前已被set blockEventAlert命令阻止的事件列表。此列表中的事件不会发送您使用警报终端和参数(即电子邮件、系统日志和陷阱通知)配置的任何通知。</block>
   <block id="eb580f5de1def8cbb208f462f2d0bb9e" category="doc">显示阻止的事件</block>
   <block id="127d2048269471576d40c0dbafb5b3ac" category="paragraph">`show blockedEventAlertList`命令可返回当前已被`set blockEventAlert`命令阻止的事件列表。此列表中的事件不会发送您使用警报终端和参数(即电子邮件、系统日志和陷阱通知)配置的任何通知。</block>
   <block id="fb83f82cf0b806fa6ead243b9060c019" category="paragraph">输出中的每个被阻止事件都有一行、以十六进制格式列出事件类型、然后列出事件的问题描述。以下是输出示例：</block>
@@ -2616,9 +2612,7 @@
   <block id="f7c7888d42761b1842fec253a12255ab" category="list-text">`default`—快照映像存储库卷将写入任何具有空间的卷组。</block>
   <block id="4e8deada589e1b244a07929c2fb1e321" category="paragraph">要获得最佳性能、请使用`sameAsSource`选项。</block>
   <block id="725b2002f765d40c3931c1c138873935" category="paragraph">您必须将`copyType`参数与`repositoryGroupPreference`参数结合使用。</block>
-  <block id="0b96ebb6bc2c17931297bb42ae92fdd6" category="paragraph">您可以对名称使用字母数字字符、发生的事件和下划线的任意组合。名称最多可以包含30个字符。</block>
   <block id="8c30d2438c1439840bac4ad622fb913b" category="paragraph">复制优先级用于定义在源卷和卷副本对的目标卷之间复制数据所使用的系统资源量。如果选择最高优先级、则卷副本将使用最多的系统资源来执行卷复制、从而降低主机数据传输的性能。</block>
-  <block id="fef563ac437ffe92676ddb5f4870b392" category="summary">smcli enable_disable autosupportRemotediag命令用于打开或关闭AutoSupport 远程诊断功能。通过此功能、技术支持可以请求支持数据以远程诊断问题。</block>
   <block id="d696d59ee6929514ea1ab9ef31828954" category="paragraph">命令`Smcli enable_disable autosupportRemoteDiag`用于打开或关闭AutoSupport 远程诊断功能。通过此功能、技术支持可以请求支持数据以远程诊断问题。</block>
   <block id="a7dcc0992cb74c432e1e0f6a766c5185" category="paragraph">此命令会影响管理域中所有支持ASUP的存储阵列。</block>
   <block id="0d9ea4e8fdd29724752b9a7c688f0e2a" category="paragraph">启用此功能之前、请先在管理域上启用AutoSupport 功能、然后再启用AutoSupport OnDemand功能。</block>
@@ -3344,19 +3338,10 @@
   <block id="205dde83b9564fc6b64de227847b8271" category="paragraph">`svolume performanceStats`命令可返回有关卷性能的信息。</block>
   <block id="d8557f2abd71b35af6e0db1bcf4abc1d" category="paragraph">对于存储阵列中的每个卷、此命令将返回以下信息：</block>
   <block id="54c8f716ac4004ec32db2fe1d3f5d881" category="list-text">存储阵列</block>
-  <block id="9a9410d89e3aedce48647a59ed153b9f" category="list-text">IOS/s总数</block>
   <block id="f71b29da6de1b30cad6507864f0c2b21" category="list-text">读取%</block>
   <block id="0189cd985050e2cf9d7e51dc53d55398" category="list-text">主读取缓存命中%</block>
   <block id="c0115dfcf2c34f5dca91133d8a480a16" category="list-text">主写入缓存命中%</block>
   <block id="54d70f47f3a520fb827c2aa77706c287" category="list-text">SSD缓存命中率</block>
-  <block id="3b0536b14dd4d8829dab61183c2573d5" category="list-text">当前MBs</block>
-  <block id="663178f42dd93dd5def9778e03a289d5" category="list-text">最大MBs/s</block>
-  <block id="cce1d5444d11a557c3d0a9793b0cb9f1" category="list-text">当前IOS/s</block>
-  <block id="40d7fa90c94bd859372295ad1748dcee" category="list-text">最大IOS/s</block>
-  <block id="71923d5afcfb8e53e087a50d251be328" category="list-text">最小IOS/s</block>
-  <block id="fa9529562122b7b0b2d1c1b41c70722c" category="list-text">平均IOS/s</block>
-  <block id="ab233a6043aa5029e204d7ffb7925d08" category="list-text">最小MBs/s</block>
-  <block id="6f1c953ac7cc289772028d618d6670d9" category="list-text">平均MBs /秒</block>
   <block id="0e959a4e09e878a915a677a94bfe1cf3" category="list-text">当前IO延迟</block>
   <block id="2f742096d563e8d2dc249c3223443cef" category="list-text">最大IO延迟</block>
   <block id="636cb44ad0c80b3ed014702e2f5874d8" category="list-text">最小IO延迟</block>
@@ -4832,7 +4817,6 @@
   <block id="c338b0b86371253c618f2b1a8d2b4891" category="paragraph">`delete sgSnapVolume`命令可删除一致性组的快照卷。您也可以选择删除存储库成员。</block>
   <block id="efac5228930c9336acee8d630cd5868a" category="paragraph">要删除的一致性组快照卷的名称。将一致性组快照卷的名称用双引号("")括在方括号([])内。</block>
   <block id="a3216dc2158a24c847d7655e884b7d22" category="paragraph">用于保存或删除成员卷的参数。要保存成员卷、请将此参数设置为`true`。要删除成员卷、请将此参数设置为`false`。默认值为`true`。</block>
-  <block id="274253af5ce8a8c243654dddb36b9ddf" category="summary">set controller hostPort命令可更改以下类型主机端口的网络属性：iSCSI、iSER、基于InfiniBand的NVMe和基于RoCE的NVMe。属性更改包括IPv4和IPv6属性、端口速度和最大帧有效负载。</block>
   <block id="363c772dcd24117cfec42f0067361b63" category="paragraph">`set controller hostPort`命令可更改以下类型主机端口的网络属性：iSCSI、iSER、基于InfiniBand的NVMe和基于RoCE的NVMe。属性更改包括IPv4和IPv6属性、端口速度和最大帧有效负载。</block>
   <block id="3c4898dd6737fe8d54b16846ccb57746" category="paragraph">此命令将替换已弃用的 <block ref="a58b47921e5dcb71d619222e96c78503" category="inline-xref-macro-rx"></block> 命令：</block>
   <block id="86a547cb364a6d472cd6c06e8878c3ea" category="paragraph">用于指定要为其定义属性的控制器。</block>
@@ -5409,7 +5393,6 @@
   <block id="8a5a166f792b85b1fabebd39dc2bad00" category="doc">设置存储阵列ICMP响应</block>
   <block id="48231c27e0491caa636f47dbe8614c83" category="paragraph">`set storageArray icmpPingResponse`命令可返回会话和连接的可协商设置的默认值、这些值表示存储阵列协商的起点。</block>
   <block id="ee560057f648beda238dcde093c87236" category="paragraph">网络中的操作系统使用Internet控制消息协议(Internet Control Message Protocol、ICMP)发送错误消息、测试数据包以及与IP相关的信息消息、例如、请求的服务不可用或无法访问主机或路由器。ICMP response命令可发送ICMP回显请求消息并接收ICMP回显响应消息、以确定主机是否可访问以及数据包往返于该主机所需的时间。</block>
-  <block id="3592ecf46309dcf32cb89f2107cc4621" category="summary">smcli enable_disable autosupportOnDemand命令用于打开或关闭AutoSupport OnDemand功能。此功能允许技术支持协调AutoSupport 数据传输、并允许他们请求重新传输缺失的支持数据。</block>
   <block id="72baddf41cff9398012aeac0d348747e" category="doc">在EMW管理域级别启用或禁用AutoSupport OnDemand功能(仅限SMcli)</block>
   <block id="03d70a2c84d82939eeed7eced3bb3355" category="paragraph">`Smcli enable_disable autosupportOnDemand`命令可打开或关闭AutoSupport OnDemand功能。此功能允许技术支持协调AutoSupport 数据传输、并允许他们请求重新传输缺失的支持数据。</block>
   <block id="063a9f43e7ad9f7450fcf77aa8f0ebc8" category="paragraph">启用此功能之前、必须先在管理域上启用AutoSupport 功能。启用此功能后、您接下来可以启用AutoSupport 远程诊断功能(如果需要)。默认情况下、启用AutoSupport OnDemand功能后、AutoSupport 远程诊断功能处于启用状态。</block>
@@ -6062,7 +6045,6 @@
   <block id="19952d7c1173f6fdb061b8cc45ac0f8a" category="paragraph">您可以将存储库卷放置在所选的卷组或磁盘池中。您无需将存储库卷与其他存储库卷位于同一位置。要将存储库卷放置在您选择的卷组或磁盘池中、请使用`repositoryVolume`参数并确定卷组或磁盘池以及存储库卷的大小。以下是此命令用法的示例：</block>
   <block id="bc17856d9c5b0558e696334ce4d637d3" category="paragraph">在此示例中、"[.code]``12``"是现有卷组或现有磁盘池的名称。capacity参数用于定义存储库卷组所需的大小。</block>
   <block id="3ec049132550fbb0c37a1649bacc6c28" category="paragraph">在卷组或磁盘池中创建新存储库卷时、必须在卷组名称和容量或磁盘池名称和容量周围使用圆括号。</block>
-  <block id="83e4d405c1f2771868395ef32d205dc5" category="summary">set snapVolume convertToReadWrite命令可将只读卷快照卷更改为读/写卷快照卷。</block>
   <block id="1a77ae19fc978265379011542f82cca9" category="doc">将只读Snapshot卷设置为读/写卷</block>
   <block id="d945b68969c6196140c398d2cb9d0be7" category="paragraph">使用`set snapVolume convertToReadWrite`命令可将只读卷的快照卷更改为读/写卷的快照卷。</block>
   <block id="74383b0492ee50521d99db58462a8ac7" category="paragraph">您也可以使用此命令为读/写卷确定新的存储库卷、或者为存储库卷设置全限制警告级别。</block>
@@ -8055,7 +8037,6 @@
   <block id="5802de4ead66c595cdb0ce72973b18c2" category="doc">设置存储阵列主机 I/O 协议 - SANtricity CLI</block>
   <block id="d13da51d358cffe624beb9300684e1e6" category="paragraph">该<block ref="777e8152565ada0c3a16a8b8868d3bc6" prefix=" " category="inline-code"></block>命令在存储阵列级别配置主机 I/O 协议。</block>
   <block id="36212b3014245fb1e729ddc31e4ff763" category="paragraph"><block ref="777e8152565ada0c3a16a8b8868d3bc6" prefix="" category="inline-code"></block></block>
-  <block id="aff266832a5aa34647a402c2095b347f" category="paragraph">允许您指定要用于存储阵列的主机 I/O 协议。有效选项为：FC、ISCSI、ISER、nvmeIb、nvmeFc、nvmeRoce、SAS 或 SRP。</block>
   <block id="1727ed989c7f4287136d81d78aeb960e" category="paragraph">不适用。</block>
   <block id="dd91b573b380dac94dc1f2ddbc34f95e" category="paragraph">ODX 提供了一种无需使用缓冲读取和缓冲写入操作即可传输数据的方法，并且不需要主机直接参与数据传输操作。未启用 ODX 时，将数据从源存储读取到主机，然后从主机写入目标存储。启用 ODX 后，数据传输操作由存储基础设施直接管理。数据直接从源存储移动到同一阵列中的目标存储，绕过主机。</block>
   <block id="f52bb2576426b38ae1623297e50f54fb" category="paragraph">要在 E4000、2800、E5700、EF600、EF300、EF50 或 EF80 存储阵列上执行此命令，必须具有 Storage Admin 角色。</block>
@@ -8099,4 +8080,37 @@
   <block id="c540831e3a9e23851bfed87fe9daa839" category="paragraph">要在 EF50 或 EF80 存储阵列上执行此命令，必须具有 Support Admin 角色。</block>
   <block id="3aaeeffd59a60bb91c9bd0ba462a25c0" category="paragraph">此命令适用于E4000、EF50或EF80存储阵列，前提是所有SMcli软件包均已安装。</block>
   <block id="2c7b4ae92e40349e885951530fef1b89" category="paragraph">要在 E4000、EF50 或 EF80 存储阵列上执行此命令，必须具有 Support Admin 角色。</block>
+  <block id="30f637bb78f054ba274e7fe3dd810627" category="paragraph">您可以为名称使用任何字母数字字符、连字符和下划线的组合。标准卷和精简卷名称最多可包含 60 个字符。</block>
+  <block id="5ae4782adea181a0d1e64b8c4b495b47" category="admonition">标准和精简卷名的字符限制为60个字符。卷名可以包含字母数字字符、下划线(_)、连字符(-)和井号(#)的任意组合。</block>
+  <block id="21464790afef410d035fd404225d294f" category="paragraph">您可以为名称使用任何字母数字字符、连字符和下划线的组合。标准卷和精简卷名称最多可包含 60 个字符；所有其他组件名称最多可包含 30 个字符。</block>
+  <block id="72cdd2ed512cd33e389f0cb2906ef5e9" category="paragraph">您可以对名称使用任何字母数字字符、下划线 (_)、连字符 (-) 和井号 (#) 的组合。标准卷和精简卷名称最多可包含 60 个字符；所有其他组件名称最多可包含 30 个字符。</block>
+  <block id="2f2b2d30efa93a06297737282f08ecb6" category="paragraph">每个卷名称必须是唯一的。您可以为用户标签使用任何字母数字字符、下划线 (_)、连字符 (-) 和井号 (#) 的组合。标准卷和精简卷名称最多可包含 60 个字符。</block>
+  <block id="e1b911cefd3d4b80427b5d7a292ac64e" category="summary">set controller hostPort 命令更改以下类型的主机端口的网络属性：iSCSI、iSER、NVMe over InfiniBand 和 NVMe over RoCE。属性更改包括 IPv4 和 IPv6 属性、端口速度和最大帧负载。</block>
+  <block id="bc55248fc9cde5a7472469aea43e7aa7" category="summary">set snapVolume convertToReadWrite 命令将作为只读卷的快照卷更改为作为读写卷的快照卷。</block>
+  <block id="a65c92ddfbb6a5d393ffae77cc92712e" category="paragraph">允许您指定要用于存储阵列的主机 I/O 协议。有效选项为：FC、ISCSI、ISER、nvmeIb、nvmeFc、nvmeRoce、nvmeTcp、SAS 或 SRP。</block>
+  <block id="2871fbf8ee55a6f0ebb4abc8f588e2ca" category="summary">set storageArray pqValidateOnReconstruct 命令在重建时设置存储阵列 P/Q 验证状态。启用此功能后，将使用数据 P 和数据 Q 重建数据，并在确定如何继续之前检查结果的一致性。</block>
+  <block id="f94b1d82c42c29fb9932f84b35074a39" category="paragraph">启用 DULBE 后，无法在卷上设置镜像。要使用镜像，请将<block ref="ed19f91614a6fffb8d8a8acdad06da4b" prefix=" " category="inline-code"></block>设置为<block ref="0aaa87422396fdd678498793b6d5250e" prefix=" " category="inline-code"></block>。</block>
+  <block id="6840ec2efffba70e14827339c863c1fd" category="summary">show blockedEventAlertList 命令返回当前被 set blockEventAlert 命令阻止的事件列表。此列表中的事件是不会发送您使用警报终端和参数配置的任何通知的事件，即电子邮件、系统日志和陷阱通知。</block>
+  <block id="00cc465faaae7b07daee25c9dcd0f797" category="list-text">总IO</block>
+  <block id="8afc116b7c0b893ee77be00b4d6c6afa" category="list-text">当前 MB/秒</block>
+  <block id="7cef665a890768dd25b9d23b0fa91f3e" category="list-text">最大 MB/秒</block>
+  <block id="5d5c3bdab72cde95393cd07825385e08" category="list-text">当前 IO/秒</block>
+  <block id="55a100481cb54d2f29da99f03a39ae4b" category="list-text">最大 IOs/秒</block>
+  <block id="e37ca7c683db444b390889cbb574a1d1" category="list-text">最小 IOs/sec</block>
+  <block id="7a78e983a7fd5193587c79e7d6d80ccf" category="list-text">平均 IO/秒</block>
+  <block id="5a88c7b601de8727fdc6fa570d879f17" category="list-text">最小 MB/秒</block>
+  <block id="bc6a0dcadfe013ccf720fe7b5e917bfb" category="list-text">平均MB/秒</block>
+  <block id="4773014efbb55b207215d3206977c6eb" category="summary">SMcli enable disable autoSupportOnDemand 命令打开或关闭 AutoSupport OnDemand 功能。此功能允许技术支持协调 AutoSupport 数据传输，并允许他们请求重新传输缺失的支持数据。</block>
+  <block id="7aca99d75f15ae3176740b681b118857" category="summary">SMcli enable disable autoSupportRemoteDiag 命令可打开或关闭 AutoSupport 远程诊断功能。此功能使技术支持人员能够请求支持数据以远程诊断问题。</block>
+  <block id="d673045571bd2a923fafba708a25c885" category="list-text">标准卷和精简卷名称最多可包含 60 个字符。所有其他组件名称最多可包含 30 个字符。</block>
+  <block id="f80b87e5f0d09910810a904407fb6c13" category="section-title">SANtricity 12.10</block>
+  <block id="f4dd2ac2564ee169bd2142813b0816a2" category="paragraph">下表列出了对 12.10 版的 CLI 和脚本命令所做的更改。</block>
+  <block id="19d76595cbb087fe6ab780404c8fc5ab" category="paragraph">向命令添加了<block ref="9c2b0fa9b24defbb5d7ae0e1caa12847" prefix=" " category="inline-code"></block>选项。</block>
+  <block id="28bd42af30433fbec681386041871b3c" category="paragraph"><block ref="28bd42af30433fbec681386041871b3c" category="inline-link-rx"></block></block>
+  <block id="c3f1c5f3fa2468e21a0fcb3b00010f77" category="paragraph">该<block ref="084b91a7aa6610a04582f105860debfd" prefix=" " category="inline-code"></block>参数的字符限制从 30 个字符增加到 60 个字符。</block>
+  <block id="da2c58010d069455a6d91f692d030c42" category="admonition">如果<block ref="084b91a7aa6610a04582f105860debfd" prefix=" " category="inline-code"></block>参数超过 30 个字符，则不支持从 SANtricity 12.10 降级到早期版本。</block>
+  <block id="969e663a111570835165e5a2b76efe1c" category="paragraph"><block ref="969e663a111570835165e5a2b76efe1c" category="inline-link-rx"></block></block>
+  <block id="204c4f0eef528252142e28de7139691f" category="paragraph"><block ref="204c4f0eef528252142e28de7139691f" category="inline-link-rx"></block></block>
+  <block id="4a28200df770471ba49b299dd85762a2" category="paragraph"><block ref="4a28200df770471ba49b299dd85762a2" category="inline-link-rx"></block></block>
+  <block id="d894761ef5b92b18f8cb36c96472dfd6" category="paragraph"><block ref="d894761ef5b92b18f8cb36c96472dfd6" category="inline-link-rx"></block></block>
 </blocks>

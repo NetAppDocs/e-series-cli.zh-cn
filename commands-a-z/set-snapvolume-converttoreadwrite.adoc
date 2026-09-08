@@ -1,8 +1,8 @@
 ---
 permalink: commands-a-z/set-snapvolume-converttoreadwrite.html 
 sidebar: sidebar 
-keywords: set, read-only, snapshot, volume, read/write, volume 
-summary: set snapVolume convertToReadWrite命令可将只读卷快照卷更改为读/写卷快照卷。 
+keywords: set, read-only, snapshot, volume, read, write, volume 
+summary: set snapVolume convertToReadWrite 命令将作为只读卷的快照卷更改为作为读写卷的快照卷。 
 ---
 = 将只读快照卷设置为读/写卷 - SANtricity CLI
 :allow-uri-read: 

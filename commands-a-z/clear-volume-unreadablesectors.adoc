@@ -76,4 +76,4 @@ volumes pass:quotes[[_"volumeName1" ... "volumeNameN"_]]) unreadableSectors
 [[notes]]
 == 注释：
 
-您可以对名称使用字母数字字符、连字符和下划线的任意组合。名称最多可以包含30个字符。
+您可以为名称使用任何字母数字字符、连字符和下划线的组合。标准卷和精简卷名称最多可包含 60 个字符。

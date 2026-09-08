@@ -25,6 +25,74 @@ summary: 本主题列出了最新版本的SANtricity System Manager命令行界�
 ====
 
 
+[[santricity-12-10]]
+== SANtricity 12.10
+
+下表列出了对 12.10 版的 CLI 和脚本命令所做的更改。
+
+[cols="2*"]
+|===
+| 命令 | 问题描述 of Change 
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-host-io-protocol.html["设置存储阵列主机 I/O 协议"]
+ a| 
+向命令添加了 `nvmeTcp`选项。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-raid-volume-automatic-drive-select.html["创建RAID卷(自动选择驱动器)"]
+ a| 
+该 `userLabel`参数的字符限制从 30 个字符增加到 60 个字符。
+
+
+NOTE: 如果 `userLabel`参数超过 30 个字符，则不支持从 SANtricity 12.10 降级到早期版本。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-raid-volume-free-extent-based-select.html["创建RAID卷(基于可用块区的选择)"]
+ a| 
+该 `userLabel`参数的字符限制从 30 个字符增加到 60 个字符。
+
+
+NOTE: 如果 `userLabel`参数超过 30 个字符，则不支持从 SANtricity 12.10 降级到早期版本。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-raid-volume-manual-drive-select.html["创建RAID卷(手动选择驱动器)"]
+ a| 
+该 `userLabel`参数的字符限制从 30 个字符增加到 60 个字符。
+
+
+NOTE: 如果 `userLabel`参数超过 30 个字符，则不支持从 SANtricity 12.10 降级到早期版本。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-volume-diskpool.html["在磁盘池中创建卷"]
+ a| 
+该 `userLabel`参数的字符限制从 30 个字符增加到 60 个字符。
+
+
+NOTE: 如果 `userLabel`参数超过 30 个字符，则不支持从 SANtricity 12.10 降级到早期版本。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/recover-volume.html["恢复RAID卷"]
+ a| 
+该 `userLabel`参数的字符限制从 30 个字符增加到 60 个字符。
+
+
+NOTE: 如果 `userLabel`参数超过 30 个字符，则不支持从 SANtricity 12.10 降级到早期版本。
+
+|===
+
+
 [[santricity-12-00]]
 == SANtricity 12.00
 

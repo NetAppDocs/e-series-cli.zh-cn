@@ -35,19 +35,19 @@ summary: show volume performanceStats命令可返回有关卷性能的信息。
 对于存储阵列中的每个卷、此命令将返回以下信息：
 
 * 存储阵列
-* IOS/s总数
+* 总IO
 * 读取%
 * 主读取缓存命中%
 * 主写入缓存命中%
 * SSD缓存命中率
-* 当前MBs
-* 最大MBs/s
-* 当前IOS/s
-* 最大IOS/s
-* 最小IOS/s
-* 平均IOS/s
-* 最小MBs/s
-* 平均MBs /秒
+* 当前 MB/秒
+* 最大 MB/秒
+* 当前 IO/秒
+* 最大 IOs/秒
+* 最小 IOs/sec
+* 平均 IO/秒
+* 最小 MB/秒
+* 平均MB/秒
 * 当前IO延迟
 * 最大IO延迟
 * 最小IO延迟

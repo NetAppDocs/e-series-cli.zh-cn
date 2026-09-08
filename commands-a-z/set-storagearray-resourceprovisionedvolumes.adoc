@@ -67,6 +67,11 @@ set storageArray resourceProvisionedVolumes=(enable|disable)
 更改此值时、仅会显示将来创建的适用场景 卷组和池。它不会更改任何现有卷组和池的值。
 
 ====
+[NOTE]
+====
+启用 DULBE 后，无法在卷上设置镜像。要使用镜像，请将 `resourceProvisionedVolumes`设置为 `disable`。
+
+====
 |===
 
 

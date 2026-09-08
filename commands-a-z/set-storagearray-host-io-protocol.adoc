@@ -34,7 +34,7 @@ summary: set storageArray hostIoProtocol 命令在存储阵列级别配置主机
 
 [source, cli, subs="+macros"]
 ----
-set storageArray hostIoProtocol={"FC" | "ISCSI" | "ISER" | "nvmeIb" | "nvmeFc" | "nvmeRoce" | "SAS" | "SRP"}
+set storageArray hostIoProtocol={"FC" | "ISCSI" | "ISER" | "nvmeIb" | "nvmeFc" | "nvmeRoce" | "nvmeTcp" | "SAS" | "SRP"}
 ----
 
 
@@ -49,7 +49,7 @@ set storageArray hostIoProtocol={"FC" | "ISCSI" | "ISER" | "nvmeIb" | "nvmeFc" |
  a| 
 `set storageArray hostIoProtocol`
  a| 
-允许您指定要用于存储阵列的主机 I/O 协议。有效选项为：FC、ISCSI、ISER、nvmeIb、nvmeFc、nvmeRoce、SAS 或 SRP。
+允许您指定要用于存储阵列的主机 I/O 协议。有效选项为：FC、ISCSI、ISER、nvmeIb、nvmeFc、nvmeRoce、nvmeTcp、SAS 或 SRP。
 
 |===
 
