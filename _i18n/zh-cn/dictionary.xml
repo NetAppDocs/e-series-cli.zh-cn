@@ -7533,8 +7533,6 @@
   <block id="5d41ad4f145ade32f5e478932b6efea5" category="sidebar">设置AutoSupport派单大小限制</block>
   <block id="d941967741f1767955be20b5fca52617" category="sidebar">设置AutoSupport https交付方法</block>
   <block id="d8e44ec6283b9e1b03ebe13f2b9bf377" category="sidebar">设置电子邮件SMTP传送方法</block>
-  <block id="27ed3c2f0cc271f3ffd55cef1621928d" category="sidebar">SANtricity系统管理器11.9.</block>
-  <block id="ece14770330886bc2d41238acbfe48aa" category="sidebar">SANtricity统一管理器7.</block>
   <block id="d0a774826d0463e72211475dbf19c749" category="section-title">AutoSupport数据</block>
   <block id="e12f84520db4494b5d41a3376aaf2efe" category="summary">AutoSupport命令</block>
   <block id="f92f6d9fbe12679709b79badc45794e4" category="paragraph">以下AutoSupport命令列表适用于E系列存储系统。</block>
@@ -8113,4 +8111,7 @@
   <block id="204c4f0eef528252142e28de7139691f" category="paragraph"><block ref="204c4f0eef528252142e28de7139691f" category="inline-link-rx"></block></block>
   <block id="4a28200df770471ba49b299dd85762a2" category="paragraph"><block ref="4a28200df770471ba49b299dd85762a2" category="inline-link-rx"></block></block>
   <block id="d894761ef5b92b18f8cb36c96472dfd6" category="paragraph"><block ref="d894761ef5b92b18f8cb36c96472dfd6" category="inline-link-rx"></block></block>
+  <block id="c29eb02b88654bce89e8c5c981ac048d" category="paragraph">此命令适用于单个 E4000、E2800、E5700、EF600、EF300、EF50 和 EF80 存储阵列。不适用于 E2700 或 E5600 存储阵列。</block>
+  <block id="ac91efa472c36c5704769a1e6a7a0be6" category="sidebar">SANtricity System Manager 12.10</block>
+  <block id="12552cabe7cc02a88100da5f5c4c0b2d" category="sidebar">SANtricity Unified Manager 8</block>
 </blocks>
